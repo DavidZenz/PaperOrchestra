@@ -1,0 +1,883 @@
+{
+  "evidence_type": "controlled fixtures executing actual pinned upstream controller; all model/tool/PDF effects mocked",
+  "upstream_commit": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+  "refinement": [
+    {
+      "scenario": "increase_then_drop_revert",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 6,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "refined_paper_v1",
+        "refined_paper_v2"
+      ],
+      "generation_calls": 2,
+      "peer_review_calls": 3,
+      "format_review_calls": 1,
+      "decisions": {
+        "v1": {
+          "round": 1,
+          "agent_plan": {
+            "plan": 1
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 6.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 0.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 0.0,
+          "outcome": "ACCEPTED_SCORE_INCREASE"
+        },
+        "v2": {
+          "round": 2,
+          "agent_plan": {
+            "plan": 2
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 6.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 0.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 0.0,
+          "outcome": "REJECTED_SCORE_DECREASE"
+        }
+      },
+      "format_decisions": {},
+      "selected_tex_fixture": "candidate tex 1",
+      "selected_pdf_fixture_bytes": "candidate tex 1",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpu9hrh2lu\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpu9hrh2lu/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpu9hrh2lu/refined_paper_v1.pdf\n >> Generating snapshots for v1...\n >> Score Analysis v1:\n    Overall: 5.0 -> 6.0\n    Sub-axes Gain: +0.0 | Drop: -0.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> SUCCESS: Overall Score increased! Progressing to next iteration...\n\n=== Refinement Iteration 2/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpu9hrh2lu/refined_paper_v2.pdf\n >> Generating snapshots for v2...\n >> Score Analysis v2:\n    Overall: 6.0 -> 5.0\n    Sub-axes Gain: +0.0 | Drop: -0.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> STOP: Overall Score decreased. Reverting to previous iteration.\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 6.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpu9hrh2lu/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "tie_degradation_revert",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 1,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "refined_paper_v1"
+      ],
+      "generation_calls": 1,
+      "peer_review_calls": 2,
+      "format_review_calls": 1,
+      "decisions": {
+        "v1": {
+          "round": 1,
+          "agent_plan": {
+            "plan": 1
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 1.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": -1.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 1.0,
+          "outcome": "REJECTED_DEGRADATION"
+        }
+      },
+      "format_decisions": {},
+      "selected_tex_fixture": "baseline tex",
+      "selected_pdf_fixture_bytes": "baseline tex",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpjcca_o2m\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpjcca_o2m/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpjcca_o2m/refined_paper_v1.pdf\n >> Generating snapshots for v1...\n >> Score Analysis v1:\n    Overall: 5.0 -> 5.0\n    Sub-axes Gain: +0.0 | Drop: -1.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': -1.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> STOP: Overall same, but sub-axes degraded (Drop > Gain). Reverting.\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpjcca_o2m/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "tie_balanced_accept",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 1,
+          "Clarity": 3,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 4,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "refined_paper_v1",
+        "refined_paper_v2"
+      ],
+      "generation_calls": 2,
+      "peer_review_calls": 3,
+      "format_review_calls": 1,
+      "decisions": {
+        "v1": {
+          "round": 1,
+          "agent_plan": {
+            "plan": 1
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 1.0,
+            "Clarity": 3.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": -1.0,
+            "Clarity": 1.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 1.0,
+          "total_drop": 1.0,
+          "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+        },
+        "v2": {
+          "round": 2,
+          "agent_plan": {
+            "plan": 2
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 1.0,
+            "Clarity": 3.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 4.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 1.0,
+            "Clarity": -1.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 1.0,
+          "total_drop": 1.0,
+          "outcome": "REJECTED_SCORE_DECREASE"
+        }
+      },
+      "format_decisions": {},
+      "selected_tex_fixture": "candidate tex 1",
+      "selected_pdf_fixture_bytes": "candidate tex 1",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpmgbcjtaz\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpmgbcjtaz/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpmgbcjtaz/refined_paper_v1.pdf\n >> Generating snapshots for v1...\n >> Score Analysis v1:\n    Overall: 5.0 -> 5.0\n    Sub-axes Gain: +1.0 | Drop: -1.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': -1.0, 'Clarity': 1.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...\n\n=== Refinement Iteration 2/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpmgbcjtaz/refined_paper_v2.pdf\n >> Generating snapshots for v2...\n >> Score Analysis v2:\n    Overall: 5.0 -> 4.0\n    Sub-axes Gain: +1.0 | Drop: -1.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 1.0, 'Clarity': -1.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> STOP: Overall Score decreased. Reverting to previous iteration.\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpmgbcjtaz/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "neutral_cap_three",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "refined_paper_v1",
+        "refined_paper_v2",
+        "refined_paper_v3"
+      ],
+      "generation_calls": 3,
+      "peer_review_calls": 4,
+      "format_review_calls": 1,
+      "decisions": {
+        "v1": {
+          "round": 1,
+          "agent_plan": {
+            "plan": 1
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 0.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 0.0,
+          "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+        },
+        "v2": {
+          "round": 2,
+          "agent_plan": {
+            "plan": 2
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 0.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 0.0,
+          "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+        },
+        "v3": {
+          "round": 3,
+          "agent_plan": {
+            "plan": 3
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 0.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 0.0,
+          "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+        }
+      },
+      "format_decisions": {},
+      "selected_tex_fixture": "candidate tex 3",
+      "selected_pdf_fixture_bytes": "candidate tex 3",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpblwuhbro\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpblwuhbro/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpblwuhbro/refined_paper_v1.pdf\n >> Generating snapshots for v1...\n >> Score Analysis v1:\n    Overall: 5.0 -> 5.0\n    Sub-axes Gain: +0.0 | Drop: -0.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...\n\n=== Refinement Iteration 2/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpblwuhbro/refined_paper_v2.pdf\n >> Generating snapshots for v2...\n >> Score Analysis v2:\n    Overall: 5.0 -> 5.0\n    Sub-axes Gain: +0.0 | Drop: -0.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...\n\n=== Refinement Iteration 3/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpblwuhbro/refined_paper_v3.pdf\n >> Generating snapshots for v3...\n >> Score Analysis v3:\n    Overall: 5.0 -> 5.0\n    Sub-axes Gain: +0.0 | Drop: -0.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpblwuhbro/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "compile_failure_consumes_round",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        },
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 6,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "refined_paper_v1",
+        "refined_paper_v2",
+        "refined_paper_v3"
+      ],
+      "generation_calls": 3,
+      "peer_review_calls": 2,
+      "format_review_calls": 1,
+      "decisions": {
+        "v2": {
+          "round": 2,
+          "agent_plan": {
+            "plan": 2
+          },
+          "scores_before": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 5.0,
+            "Confidence": 3.0
+          },
+          "scores_after": {
+            "Originality": 2.0,
+            "Quality": 2.0,
+            "Clarity": 2.0,
+            "Significance": 2.0,
+            "Soundness": 2.0,
+            "Presentation": 2.0,
+            "Contribution": 2.0,
+            "Overall": 6.0,
+            "Confidence": 3.0
+          },
+          "deltas": {
+            "Originality": 0.0,
+            "Quality": 0.0,
+            "Clarity": 0.0,
+            "Significance": 0.0,
+            "Soundness": 0.0,
+            "Presentation": 0.0,
+            "Contribution": 0.0
+          },
+          "total_gain": 0.0,
+          "total_drop": 0.0,
+          "outcome": "ACCEPTED_SCORE_INCREASE"
+        }
+      },
+      "format_decisions": {},
+      "selected_tex_fixture": "candidate tex 2",
+      "selected_pdf_fixture_bytes": "candidate tex 2",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp6_tn_rio\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp6_tn_rio/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> Compilation Failed. Retrying with previous version...\n\n=== Refinement Iteration 2/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> New PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp6_tn_rio/refined_paper_v2.pdf\n >> Generating snapshots for v2...\n >> Score Analysis v2:\n    Overall: 5.0 -> 6.0\n    Sub-axes Gain: +0.0 | Drop: -0.0\n    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}\n >> SUCCESS: Overall Score increased! Progressing to next iteration...\n\n=== Refinement Iteration 3/3 ===\n >> calling Refinement Agent...\n >> Compiling new draft...\n >> Compilation Failed. Retrying with previous version...\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 6.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp6_tn_rio/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "empty_output_stops",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft"
+      ],
+      "generation_calls": 1,
+      "peer_review_calls": 1,
+      "format_review_calls": 1,
+      "decisions": {},
+      "format_decisions": {},
+      "selected_tex_fixture": "baseline tex",
+      "selected_pdf_fixture_bytes": "baseline tex",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpadn7kizk\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpadn7kizk/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Error: No LaTeX generated.\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpadn7kizk/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "generation_exception_stops",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft"
+      ],
+      "generation_calls": 1,
+      "peer_review_calls": 1,
+      "format_review_calls": 1,
+      "decisions": {},
+      "format_decisions": {},
+      "selected_tex_fixture": "baseline tex",
+      "selected_pdf_fixture_bytes": "baseline tex",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp5feul_6e\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp5feul_6e/initial_draft.pdf\n >> Generating snapshots for V0...\n\n=== Refinement Iteration 1/3 ===\n >> calling Refinement Agent...\n >> Error during refinement loop: fixture provider error\nTraceback (most recent call last):\n  File \"/Users/davidzenz/PaperOrchestra/paper-orchestra/vendor/methods/agents/content_refinement_agent.py\", line 293, in run\n    response_dict = call_gemini_with_contents(\n        contents=[\n    ...<7 lines>...\n        result_parsing_func=parse_gemini_json_latex_response,\n    )\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.2/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py\", line 1176, in __call__\n    return self._mock_call(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.2/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py\", line 1180, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.2/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py\", line 1241, in _execute_mock_call\n    raise effect\nRuntimeError: fixture provider error\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> No critical formatting issues found. Breaking loop.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp5feul_6e/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "format_accept_compile_only",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "formatted_candidate_v1"
+      ],
+      "generation_calls": 1,
+      "peer_review_calls": 1,
+      "format_review_calls": 1,
+      "decisions": {},
+      "format_decisions": {
+        "v1": {
+          "outcome": "ACCEPTED_COMPILE_SUCCESS",
+          "formatting_feedback": {
+            "other_issues": [
+              "fixture spacing issue"
+            ]
+          }
+        }
+      },
+      "selected_tex_fixture": "formatted tex fixture",
+      "selected_pdf_fixture_bytes": "formatted tex fixture",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp0706o5je\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp0706o5je/initial_draft.pdf\n >> Generating snapshots for V0...\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> [VLM] Found formatting issues. Calling Gemini to fix...\n >> Formatting iteration 1 compiled successfully.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmp0706o5je/final_refined_paper.pdf\n"
+    },
+    {
+      "scenario": "format_compile_failure_revert",
+      "input_reviews": [
+        {
+          "Originality": 2,
+          "Quality": 2,
+          "Clarity": 2,
+          "Significance": 2,
+          "Soundness": 2,
+          "Presentation": 2,
+          "Contribution": 2,
+          "Overall": 5,
+          "Confidence": 3,
+          "Summary": "review"
+        }
+      ],
+      "compile_order": [
+        "initial_draft",
+        "formatted_candidate_v1"
+      ],
+      "generation_calls": 1,
+      "peer_review_calls": 1,
+      "format_review_calls": 1,
+      "decisions": {},
+      "format_decisions": {
+        "v1": {
+          "outcome": "REJECTED_COMPILE_FAILURE",
+          "formatting_feedback": {
+            "other_issues": [
+              "fixture spacing issue"
+            ]
+          }
+        }
+      },
+      "selected_tex_fixture": "baseline tex",
+      "selected_pdf_fixture_bytes": "baseline tex",
+      "controller_stdout": " >> Work directory: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpnanlvll9\n\n=== Initial Baseline Review ===\n >> Initial PDF saved to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpnanlvll9/initial_draft.pdf\n >> Generating snapshots for V0...\n >> Generating snapshots for format v0...\n >> Starting dedicated formatting loop...\n\n=== Formatting Iteration 1/1 ===\n >> [VLM] Found formatting issues. Calling Gemini to fix...\n >> Formatting iteration 1 failed to compile. Skipping.\n >> Process Complete. Final Score: 5.0, Final PDF at: /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpnanlvll9/final_refined_paper.pdf\n"
+    }
+  ],
+  "pipeline": [
+    {
+      "scenario": "parallel_branch_join",
+      "success": true,
+      "events": [
+        "outline",
+        "literature-start",
+        "plot-start",
+        "plot-end",
+        "literature-end",
+        "section",
+        "refinement"
+      ],
+      "outline_attempts": 1,
+      "handoff_assertions": "Actual controller copied artifacts; fake section/refinement workers assert every expected input and branch join.",
+      "controller_stdout": "[DEBUG] Starting run_literature_agent\n[DEBUG] Starting run_plotting_agent\n[DEBUG] Finished run_plotting_agent\n[DEBUG] Finished run_literature_agent\n >> Copying final PDF from  /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpw6evrejs/run/content_refinement_workdir/final_refined_paper.pdf to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpw6evrejs/run/final_paper.pdf...\n\n >> Final PDF saved to:\n /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpw6evrejs/run/final_paper.pdf\n"
+    },
+    {
+      "scenario": "paper_retry_third_success",
+      "success": true,
+      "events": [
+        "outline",
+        "outline",
+        "outline",
+        "literature-start",
+        "literature-end",
+        "section",
+        "refinement"
+      ],
+      "outline_attempts": 3,
+      "handoff_assertions": "Actual controller copied artifacts; fake section/refinement workers assert every expected input and branch join.",
+      "controller_stdout": "[Try 1/3] EXCEPTION in perform_writeup:\nTraceback (most recent call last):\n  File \"/Users/davidzenz/PaperOrchestra/paper-orchestra/vendor/methods/paper_writer.py\", line 97, in write_single_paper\n    outline_agent.run(\n    ~~~~~~~~~~~~~~~~~^\n        idea_file=idea_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        output_filepath=outline_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/davidzenz/PaperOrchestra/tests/test_upstream_conformance.py\", line 422, in run\n    raise RuntimeError(\"transient outline failure\")\nRuntimeError: transient outline failure\n\nTry again now...\n[Try 2/3] EXCEPTION in perform_writeup:\nTraceback (most recent call last):\n  File \"/Users/davidzenz/PaperOrchestra/paper-orchestra/vendor/methods/paper_writer.py\", line 97, in write_single_paper\n    outline_agent.run(\n    ~~~~~~~~~~~~~~~~~^\n        idea_file=idea_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        output_filepath=outline_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/davidzenz/PaperOrchestra/tests/test_upstream_conformance.py\", line 422, in run\n    raise RuntimeError(\"transient outline failure\")\nRuntimeError: transient outline failure\n\nTry again now...\n >> Copying final PDF from  /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpvt9go7k8/run/content_refinement_workdir/final_refined_paper.pdf to /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpvt9go7k8/run/final_paper.pdf...\n\n >> Final PDF saved to:\n /var/folders/1l/t8mktk5j58g75tthg0q79qhw0000gn/T/tmpvt9go7k8/run/final_paper.pdf\n"
+    },
+    {
+      "scenario": "paper_retry_exhaustion",
+      "success": false,
+      "events": [
+        "outline",
+        "outline",
+        "outline"
+      ],
+      "outline_attempts": 3,
+      "handoff_assertions": "Actual controller copied artifacts; fake section/refinement workers assert every expected input and branch join.",
+      "controller_stdout": "[Try 1/3] EXCEPTION in perform_writeup:\nTraceback (most recent call last):\n  File \"/Users/davidzenz/PaperOrchestra/paper-orchestra/vendor/methods/paper_writer.py\", line 97, in write_single_paper\n    outline_agent.run(\n    ~~~~~~~~~~~~~~~~~^\n        idea_file=idea_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        output_filepath=outline_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/davidzenz/PaperOrchestra/tests/test_upstream_conformance.py\", line 422, in run\n    raise RuntimeError(\"transient outline failure\")\nRuntimeError: transient outline failure\n\nTry again now...\n[Try 2/3] EXCEPTION in perform_writeup:\nTraceback (most recent call last):\n  File \"/Users/davidzenz/PaperOrchestra/paper-orchestra/vendor/methods/paper_writer.py\", line 97, in write_single_paper\n    outline_agent.run(\n    ~~~~~~~~~~~~~~~~~^\n        idea_file=idea_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        output_filepath=outline_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/davidzenz/PaperOrchestra/tests/test_upstream_conformance.py\", line 422, in run\n    raise RuntimeError(\"transient outline failure\")\nRuntimeError: transient outline failure\n\nTry again now...\n[Try 3/3] EXCEPTION in perform_writeup:\nTraceback (most recent call last):\n  File \"/Users/davidzenz/PaperOrchestra/paper-orchestra/vendor/methods/paper_writer.py\", line 97, in write_single_paper\n    outline_agent.run(\n    ~~~~~~~~~~~~~~~~~^\n        idea_file=idea_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        output_filepath=outline_file_path,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/davidzenz/PaperOrchestra/tests/test_upstream_conformance.py\", line 422, in run\n    raise RuntimeError(\"transient outline failure\")\nRuntimeError: transient outline failure\n\nWriteup failed after 3! Stop here.\n"
+    }
+  ],
+  "ensemble": {
+    "individual_reviews": [
+      {
+        "Originality": 2,
+        "Quality": 2,
+        "Clarity": 2,
+        "Significance": 2,
+        "Soundness": 2,
+        "Presentation": 2,
+        "Contribution": 2,
+        "Overall": 4,
+        "Confidence": 3,
+        "Summary": "review"
+      },
+      {
+        "Originality": 2,
+        "Quality": 2,
+        "Clarity": 2,
+        "Significance": 2,
+        "Soundness": 2,
+        "Presentation": 2,
+        "Contribution": 2,
+        "Overall": 6,
+        "Confidence": 3,
+        "Summary": "review"
+      },
+      {
+        "Originality": 2,
+        "Quality": 2,
+        "Clarity": 2,
+        "Significance": 2,
+        "Soundness": 2,
+        "Presentation": 2,
+        "Contribution": 2,
+        "Overall": 8,
+        "Confidence": 3,
+        "Summary": "review"
+      }
+    ],
+    "chair_input_overall": 10,
+    "final_aggregate": {
+      "Originality": 2,
+      "Quality": 2,
+      "Clarity": 2,
+      "Significance": 2,
+      "Soundness": 2,
+      "Presentation": 2,
+      "Contribution": 2,
+      "Overall": 6,
+      "Confidence": 3,
+      "Summary": "chair fixture",
+      "Decision": "Reject"
+    },
+    "call_count": 4,
+    "call_sequence": [
+      "peer-reviewer",
+      "peer-reviewer",
+      "peer-reviewer",
+      "area-chair"
+    ],
+    "controller_stdout": "Start paper reviewing using model: `test-model`\nGenerating ensemble review 1/3...\nGenerating ensemble review 2/3...\nGenerating ensemble review 3/3...\n"
+  },
+  "transport_retry": {
+    "result": {
+      "raw_response": "{\"recovered\":true}",
+      "parsed_response": {
+        "recovered": true
+      }
+    },
+    "sleep_calls": [
+      5
+    ],
+    "trace": "controlled-runtime/trace.jsonl",
+    "controller_stdout": "Warning: Gemini API call failed on attempt 1 of 5. Error: Parsed response is None, Here is the raw response:\ninvalid JSON fixture\nRetrying in 0 seconds...\nWarning: Gemini API call failed on attempt 2 of 5. Error: Parsed response is None, Here is the raw response:\nsecond invalid fixture\nRetrying in 5 seconds...\n"
+  }
+}

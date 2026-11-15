@@ -1,0 +1,55 @@
+{
+  "section_name": "Regression through the origin and additive correction of fixed predictions",
+  "candidates": [
+    {
+      "title": "Remember to Correct the Bias When Using Deep Learning for Regression!",
+      "year": 2023,
+      "reason": "Closest direct match: estimates an additive output bias while retaining the remaining model parameters. Its residual-mean correction specializes to c=mean(y-2x)=3 on the supplied observations. This correspondence establishes no external-model limitation or future-data guarantee. Published in KI\u2013K\u00fcnstliche Intelligenz; DOI: 10.1007/s13218-023-00801-0."
+    },
+    {
+      "title": "Regression through the Origin",
+      "year": 2003,
+      "reason": "Influential teaching paper explaining zero-intercept restrictions, their normal equations, and evaluation. Directly contextualizes the retained baseline 2x. Regression through the origin does not generally imply constant residuals; the residual of 3 follows specifically from the supplied y=2x+3. Published in Teaching Statistics; DOI: 10.1111/1467-9639.00136."
+    },
+    {
+      "title": "Fitting Regression Models with No Intercept Term",
+      "year": 1977,
+      "reason": "Classic treatment of appropriate applications and pitfalls of no-intercept regression. Relevant to explaining the baseline's intercept restriction, while distinguishing estimation of regression slopes from the supplied calculation, which holds the slope at 2 and estimates only an additive correction. Published in Journal of Quality Technology; DOI: 10.1080/00224065.1977.11980770."
+    },
+    {
+      "title": "Leverage and Regression through the Origin",
+      "year": 1983,
+      "reason": "Analyzes the relationship between intercept and no-intercept models using augmented-data leverage. Provides precise context for imposing a zero intercept without asserting that such models universally leave constant errors. Its model-comparison formulation differs from retaining the supplied prediction rule unchanged. Published in The American Statistician; DOI: 10.1080/00031305.1983.10482728."
+    },
+    {
+      "title": "Generalized Linear Models",
+      "year": 1972,
+      "reason": "Foundational likelihood and score-equation treatment underlying residual balance when an intercept is estimated. Our specialization of its Normal identity-link formulation to the transformed responses y-2x gives intercept-only least squares and the residual mean. The five-point example is this specialization, not an example reported by the authors. Published in JRSS Series A; DOI: 10.2307/2344614."
+    },
+    {
+      "title": "Intercept corrections and structural change",
+      "year": 1996,
+      "reason": "Influential analysis of additive forecast adjustments based on recent residuals or their averages while retaining model coefficients. Closely related to residual-mean correction, although its dynamic forecasting and structural-change setting extends beyond the supplied same-observation calculation. Published in Journal of Applied Econometrics, volume 11, pages 475\u2013494."
+    },
+    {
+      "title": "Bias regularization in neural network models for general insurance pricing",
+      "year": 2020,
+      "reason": "Develops post-training corrections that restore aggregate prediction balance, including adjustment of the output intercept. Relevant to estimating a constant after fitting the remaining prediction structure. Its canonical-link formulation requires attention to the scale of adjustment; a link-scale intercept shift need not be additive on the response scale. Published in European Actuarial Journal; DOI: 10.1007/s13385-019-00215-z."
+    },
+    {
+      "title": "The balance property in insurance pricing",
+      "year": 2026,
+      "reason": "Recent focused treatment whose simple post-processing method shifts one intercept while retaining all slope coefficients and matching weighted observed and predicted totals. Its balance equation reduces algebraically to a residual-mean correction under an identity link and equal weights. Published in Scandinavian Actuarial Journal, first online September 2025; DOI: 10.1080/03461238.2025.2552909."
+    },
+    {
+      "title": "A Novel Approach to Forecasting After Large Forecast Errors",
+      "year": 2026,
+      "reason": "Recent treatment explicitly using forecast-origin errors as intercept corrections with unchanged parameter estimates. Relevant conceptual context for adjusting a retained prediction rule, while distinguishing a one-time additive correction from subsequent detection and updating of trends. Published in Journal of Forecasting, first online October 2025; DOI: 10.1002/for.70062."
+    },
+    {
+      "title": "The Balance Property: The Constrained Case, with a View on Risk Sharing",
+      "year": 2026,
+      "reason": "June 2026 theoretical preprint extending balance-correction analysis. Section 4.2 explicitly isolates an intercept shift with all remaining coefficients fixed, making it directly relevant current context. Its broader constrained-refitting analysis is separate from the supplied residual-mean calculation, and aggregate balance does not imply individually constant residuals. arXiv:2606.07276."
+    }
+  ]
+}

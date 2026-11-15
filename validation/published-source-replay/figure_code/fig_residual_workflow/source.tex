@@ -1,0 +1,254 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+
+\definecolor{charcoal}{HTML}{26323D}
+\definecolor{slate}{HTML}{46515D}
+\definecolor{observationfill}{HTML}{F1F4F7}
+\definecolor{observationborder}{HTML}{8A9CAC}
+\definecolor{baselinefill}{HTML}{EDF4FA}
+\definecolor{baselineborder}{HTML}{547A9C}
+\definecolor{amberfill}{HTML}{FFF4DE}
+\definecolor{ochre}{HTML}{C78B24}
+\definecolor{correctedfill}{HTML}{EAF5EF}
+\definecolor{correctedborder}{HTML}{4D8B67}
+\definecolor{evaluationfill}{HTML}{F4F5F7}
+\definecolor{evaluationborder}{HTML}{6B7280}
+
+% Account for the standalone border when setting the final 3:2 canvas.
+\newdimen\CanvasWidth
+\newdimen\CanvasHeight
+\CanvasWidth=22.4cm
+\CanvasHeight=\dimexpr2\CanvasWidth/3-10pt/3\relax
+
+\begin{document}
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  text=charcoal,
+  panel/.style={
+    rectangle,
+    rounded corners=2.5mm,
+    line width=1pt,
+    inner sep=0pt,
+    outer sep=0pt
+  },
+  computation/.style={
+    panel,
+    minimum width=4.45cm,
+    minimum height=3.60cm
+  },
+  heading/.style={
+    font=\sffamily\bfseries\fontsize{11}{13}\selectfont,
+    align=center,
+    inner sep=0pt,
+    outer sep=0pt
+  },
+  mathematics/.style={
+    font=\fontsize{10.5}{12.6}\selectfont,
+    align=center,
+    inner sep=0pt,
+    outer sep=0pt
+  },
+  main mathematics/.style={
+    mathematics,
+    font=\fontsize{11}{13.2}\selectfont
+  },
+  supporting/.style={
+    font=\sffamily\fontsize{9.5}{11.5}\selectfont,
+    align=center,
+    inner sep=0pt,
+    outer sep=0pt
+  },
+  connector/.style={
+    draw=slate,
+    line width=1.1pt,
+    line cap=butt,
+    line join=miter,
+    -{Triangle[length=2.2mm,width=1.7mm]}
+  },
+  correction connector/.style={
+    connector,
+    draw=ochre,
+    line width=1.5pt
+  },
+  arrow label/.style={
+    font=\sffamily\fontsize{9.5}{11.5}\selectfont,
+    align=center,
+    fill=white,
+    draw=none,
+    rounded corners=0pt,
+    inner xsep=1.5pt,
+    inner ysep=1pt,
+    outer sep=0pt
+  }
+]
+
+\path[fill=white,draw=none,use as bounding box]
+  (-2mm,{\dimexpr-29mm-\CanvasHeight/2\relax})
+  rectangle
+  ({\dimexpr-2mm+\CanvasWidth\relax},
+   {\dimexpr-29mm+\CanvasHeight/2\relax});
+
+% Observations: both inner boxes remain inside their shared container.
+\node[
+  panel,
+  draw=observationborder,
+  fill=observationfill,
+  minimum width=4.50cm,
+  minimum height=8.85cm
+] (observations) at (2.25,-1.775) {};
+
+\node[heading] at (2.25,2.04) {Five observed pairs};
+\node[mathematics] at (2.25,1.34)
+  {$\mathcal D=\{(x_i,y_i)\}_{i=1}^{5}$};
+
+\node[
+  panel,
+  draw=observationborder,
+  fill=white,
+  minimum width=3.90cm,
+  minimum height=2.30cm
+] (input) at (2.25,-0.45) {};
+
+\node[heading] at (2.25,0.07) {Input};
+\node[mathematics] at (2.25,-0.87)
+  {$\mathbf{x}=(-2,-1,0,1,2)$};
+
+\node[
+  panel,
+  draw=observationborder,
+  fill=white,
+  minimum width=3.90cm,
+  minimum height=2.90cm
+] (target) at (2.25,-4.40) {};
+
+\node[heading] at (2.25,-3.47) {Target};
+\node[main mathematics] at (2.25,-4.25)
+  {$y_i=2x_i+3$};
+\node[mathematics] at (2.25,-5.12)
+  {$\mathbf{y}=(-1,1,3,5,7)$};
+
+% Upper computation row.
+\node[
+  computation,
+  draw=baselineborder,
+  fill=baselinefill
+] (baseline) at (7.475,0) {};
+
+\node[heading] at (7.475,1.04) {Fixed baseline};
+\node[main mathematics] at (7.475,0.12)
+  {$\displaystyle\widehat{y}^{(0)}_i=2x_i$};
+\node[mathematics] at (7.475,-0.92)
+  {$\widehat{\mathbf{y}}^{(0)}=(-4,-2,0,2,4)$};
+
+\node[
+  computation,
+  draw=correctedborder,
+  fill=correctedfill
+] (corrected) at (14.025,0) {};
+
+\node[heading] at (14.025,1.04) {Corrected prediction};
+\node[main mathematics] at (14.025,0.12)
+  {$\displaystyle\widehat{y}_i=2x_i+b$};
+\node[mathematics] at (14.025,-0.92)
+  {$\widehat{\mathbf{y}}=(-1,1,3,5,7)$};
+
+% Lower computation row; the clear row gap is 1.20 cm.
+\node[
+  computation,
+  draw=ochre,
+  fill=amberfill
+] (residuals) at (7.475,-4.80) {};
+
+\node[heading] at (7.475,-3.73) {Observed residuals};
+\node[mathematics] at (7.475,-4.76)
+  {$r_i=y_i-\widehat{y}^{(0)}_i=y_i-2x_i$};
+\node[mathematics] at (7.475,-5.83)
+  {$\mathbf{r}=(3,3,3,3,3)$};
+
+\node[
+  computation,
+  draw=ochre,
+  fill=amberfill,
+  line width=1.2pt
+] (mean) at (14.025,-4.80) {};
+
+\node[heading] at (14.025,-3.77) {Mean residual};
+\node[supporting] at (14.025,-4.38) {Scalar correction};
+\node[main mathematics] at (14.025,-5.32)
+  {$\displaystyle b=\frac{1}{5}\sum_{i=1}^{5}r_i=3$};
+
+% Evaluation height follows its compact content stack.
+\node[
+  panel,
+  draw=evaluationborder,
+  fill=evaluationfill,
+  minimum width=4.95cm,
+  minimum height=4.65cm
+] (evaluation) at (19.525,-0.525) {};
+
+\node[heading,text width=4.25cm] at (19.525,1.13)
+  {Evaluate on the same\\five observations};
+
+\node[mathematics] at (19.525,0.18)
+  {$\{(\widehat{y}_i,y_i)\}_{i=1}^{5}$};
+
+\node[mathematics] at (19.525,-0.84)
+  {$\operatorname{MSE}_{\mathcal D}
+    =\tfrac{1}{5}\sum_{i=1}^{5}(y_i-\widehat{y}_i)^2$};
+
+\node[supporting,text width=4.15cm] at (19.525,-2.02)
+  {Same $\mathcal D$ used\\to compute $b$.};
+
+% Explicit input and target dependencies.
+\draw[connector]
+  (input.east) -- (5.25,-0.45);
+\node[arrow label,anchor=south] at (4.875,-0.35) {$x_i$};
+
+\draw[connector]
+  (target.east) -- (5.25,-4.40);
+\node[arrow label,anchor=south] at (4.875,-4.30) {$y_i$};
+
+% Baseline contributes separately to subtraction and corrected prediction.
+\draw[connector]
+  (baseline.south) -- (residuals.north);
+\node[arrow label,anchor=west] at (7.63,-2.40) {$2x_i$};
+
+\draw[connector]
+  (baseline.east) -- (corrected.west);
+\node[arrow label,anchor=south] at (10.75,0.13) {$2x_i$};
+
+% Amber pathway: observed residuals, their average, then scalar correction.
+\draw[correction connector]
+  (residuals.east) -- (mean.west);
+\node[arrow label,anchor=south] at (10.75,-4.57)
+  {Average five\\residuals};
+
+\draw[correction connector]
+  (mean.north) -- (corrected.south);
+\node[arrow label,anchor=west] at (14.18,-2.40) {$b=3$};
+
+% Prediction enters evaluation at the upper-row height.
+\draw[connector]
+  (corrected.east) -- (17.05,0);
+\node[arrow label,anchor=south] at (16.65,0.13)
+  {$\widehat{y}_i$};
+
+% Shared observations use a separate, unobstructed lower routing lane.
+\draw[connector]
+  (observations.south)
+  -- (2.25,-7.45)
+  -- (19.525,-7.45)
+  -- (evaluation.south);
+
+\node[arrow label,anchor=south] at (10.85,-7.31)
+  {Same five observed pairs $\mathcal D$};
+
+\node[supporting,text=slate] at (11,-8.20)
+  {Finite calculation on these five observations only; no evidence of predictive generalization.};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,352 @@
+{
+  "status": "completed",
+  "upstream_commit": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+  "agent_attempts": 65,
+  "completed_agent_attempts": 65,
+  "unique_sessions": 65,
+  "process_launches": 65,
+  "roles": {
+    "runtime-probe": 1,
+    "outline": 1,
+    "figure-planner": 2,
+    "figure-stylist": 2,
+    "literature-discovery": 21,
+    "ggplot2-visualizer": 4,
+    "figure-critic": 6,
+    "tikz-visualizer": 4,
+    "literature-synthesis": 1,
+    "figure-captioner": 2,
+    "section-writer": 1,
+    "peer-reviewer": 12,
+    "area-chair": 4,
+    "content-or-format-editor": 3,
+    "format-reviewer": 1
+  },
+  "ensembles": 4,
+  "failed_review_ensembles": [],
+  "live_searches": 21,
+  "semantic_scholar_statuses": {
+    "429": 114,
+    "200": 1
+  },
+  "handoffs": [
+    {
+      "from": "literature_agent_output/outline_v1.json",
+      "to": "outline.json",
+      "hash_equal": true
+    },
+    {
+      "from": "literature_agent_output/updated_template.tex",
+      "to": "latex_writeup/template.tex",
+      "hash_equal": true
+    },
+    {
+      "from": "literature_agent_output/references.bib",
+      "to": "latex_writeup/references.bib",
+      "hash_equal": true
+    },
+    {
+      "from": "latex_writeup/raw_draft_paper.tex",
+      "to": "content_refinement_workdir/raw_draft_paper.tex",
+      "hash_equal": true
+    }
+  ],
+  "aggregate_score_checks": [
+    {
+      "file": "review_v0.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v1.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v2.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v3.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "frozen_build": {
+    "launch_sha256": "8eaf7371f56354cab08b016d6508f9745a696f83cdea8e88c7662d2dc4035039",
+    "snapshot_sha256": "8eaf7371f56354cab08b016d6508f9745a696f83cdea8e88c7662d2dc4035039",
+    "finish_sha256": "8eaf7371f56354cab08b016d6508f9745a696f83cdea8e88c7662d2dc4035039",
+    "snapshot_matches": true,
+    "unchanged": true,
+    "currently_installed_sha256": "8eaf7371f56354cab08b016d6508f9745a696f83cdea8e88c7662d2dc4035039",
+    "currently_installed_matches": true
+  },
+  "parallel_plot_branch": true,
+  "selected_figures": [
+    {
+      "figure_id": "fig_intercept_error",
+      "backend": "ggplot2",
+      "source": "figure_sources/2d0b5e5b99364a3c85791d3e4bc0b610/source.R",
+      "source_hash_valid": true,
+      "pdf_hash_valid": true,
+      "preview_handoff_valid": true,
+      "section_writer_received": true,
+      "worker_invocations": 4,
+      "code_generated_by_worker": true,
+      "renderer_inputs_valid": true
+    },
+    {
+      "figure_id": "fig_residual_workflow",
+      "backend": "tikz",
+      "source": "figure_sources/ffbaa274ed3f459a9578874478418d16/source.tex",
+      "source_hash_valid": true,
+      "pdf_hash_valid": true,
+      "preview_handoff_valid": true,
+      "section_writer_received": true,
+      "worker_invocations": 4,
+      "code_generated_by_worker": true,
+      "renderer_inputs_valid": true
+    }
+  ],
+  "revision_decisions": [
+    {
+      "version": "v1",
+      "total_gain": 1.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+    },
+    {
+      "version": "v2",
+      "total_gain": 0.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+    },
+    {
+      "version": "v3",
+      "total_gain": 0.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+    }
+  ],
+  "format_decisions": [],
+  "evidence_valid": true,
+  "errors": [],
+  "warnings": []
+}

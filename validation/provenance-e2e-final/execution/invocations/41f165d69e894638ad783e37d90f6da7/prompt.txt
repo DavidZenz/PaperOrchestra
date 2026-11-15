@@ -1,0 +1,24 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+You are an expert statistical plot illustrator. Write code to generate high-quality statistical plots based on user requests.
+
+Use R with ggplot2 to generate a statistical plot based on the following detailed description: Create fig_intercept_error in R using ggplot2 as a publication-ready scatter plot containing exactly three recorded results. Initialize the complete dataset explicitly as data.frame(b = c(0, 1.5, 3), mse = c(9, 2.25, 0)). Map numeric b to horizontal position and numeric mse to vertical position. Plot exactly (0, 9), (1.5, 2.25), and (3, 0). Do not include connecting lines, fitted curves, interpolation, uncertainty intervals, additional observations, observation-level data, or MAE values.
+
+Render directly on a 9 × 6 inch landscape canvas. Export as lossless PNG using ggsave(filename = 'fig_intercept_error.png', plot = fig_intercept_error, width = 9, height = 6, units = 'in', dpi = 300, bg = 'white'). Verify that the saved image measures exactly 2700 × 1800 pixels with a 3:2 aspect ratio. Do not stretch, crop, or resample the supplied JPEG to obtain these dimensions. Inspect the final export for clipping and overlap.
+
+Use white plot and panel backgrounds and DejaVu Sans throughout. Set outer margins to 18 pt top, 24 pt right, 16 pt bottom, and 18 pt left.
+
+Use geom_point() with shape 21, size 4.2, stroke 0.6, fill #0072B2, outline #004A73, and full opacity. Draw markers above the grid. Marker appearance must not encode another variable.
+
+Label the horizontal axis 'Added intercept correction b' and the vertical axis 'Mean squared error'. Keep both scales linear and continuous. Set horizontal breaks exactly at 0, 1.5, and 3, displayed as those strings. Set vertical breaks at 0, 2.25, 4.5, 6.75, and 9, without unnecessary trailing zeros. Use horizontal viewing limits of −0.35 to 3.35 and vertical viewing limits of −0.6 to 10.2, with no additional expansion. The space below zero provides marker clearance and does not represent negative MSE measurements.
+
+Render axis titles at 13 pt, regular weight, in #222222, with 10 pt separation from tick labels. Render tick labels horizontally at 11 pt in #222222. Draw bottom and left axis lines in #6B7280 with 0.4 mm linewidth and outward ticks of 3 pt with 0.35 mm linewidth. Omit top and right borders. Show only horizontal major gridlines at the specified vertical ticks, using #E5E7EB and 0.3 mm linewidth. Omit vertical and minor gridlines.
+
+Annotate the points with the exact strings '(0, 9)', '(1.5, 2.25)', and '(3, 0)'. Place their anchors at (0, 9.45), (1.5, 2.70), and (3, 0.45), respectively. Use horizontal centering and bottom alignment, equivalent to hjust = 0.5 and vjust = 0 in geom_text(). Use 12 pt regular text in #1F2937, converting point sizes to the geometry's native units as needed. Keep labels clearly separated from markers.
+
+Render the title as 'Recorded Mean Squared Error\nat Three Intercept Corrections', with the indicated deliberate line break. Use 16 pt bold DejaVu Sans in #111827, align the title with the left edge of the plotting panel, and leave 12 pt below it. Do not display a legend.
+
+Do not render a caption, footnote, or explanatory paragraph within the image. Keep this manuscript caption separate: 'Three recorded corrections evaluated on the same five synthetic observations used to determine the correction. No stochastic repetitions or held-out evaluation.'
+
+Communicate only the three recorded arithmetic results, without claims about unmeasured corrections or predictive generalization.
+Return R code only. Define the final ggplot object as p. Do not save files: the rendering wrapper exports p to PDF and JPEG. Use only base R and ggplot2, with built-in serif, sans or mono font families. Use the supplied numeric data exactly; do not simulate or invent observations. Do not install packages or download data. The runtime sets set.seed(0). Requested canvas aspect ratio: 4:3. Code:

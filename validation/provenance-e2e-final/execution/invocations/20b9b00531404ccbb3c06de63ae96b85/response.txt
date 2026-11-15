@@ -1,0 +1,237 @@
+```json
+{
+  "addressed_weaknesses": [
+    "Defined the contribution as an answer-keyed instructional exercise connecting observation-level arithmetic, optimality arguments, and evaluation dependencies.",
+    "Specified three targeted reasoning errors and added diagnostic prompts with explicit answer criteria without claiming measured learning gains.",
+    "Strengthened the algebraic distinction between mean-based and median-based corrections and between minimization and exact fit.",
+    "Clarified that the three recorded offsets provide arithmetic and reproducibility checks."
+  ],
+  "integrated_answers": [
+    "Explained the instructional role of each representation and the connections learners must justify.",
+    "Added a written diagnostic assessing understanding of optimality, exact fit, objective-specific minimizers, and target reuse.",
+    "Derived the squared-error difference between mean and median corrections without introducing additional observations."
+  ],
+  "actions_taken": [
+    "Revised the Abstract, Introduction, Related Work, and Conclusion around the concrete teaching artifact.",
+    "Distinguished candidate corrections from the selected correction in Section 3.1.",
+    "Preserved the squared-error decomposition, exact-fit condition, median argument, observation table, and executable calculation.",
+    "Added explanation-based assessment prompts and answer criteria to Section 4.2.",
+    "Preserved every recorded observation and error value, both supplied figure images, and the complete visible figure provenance section.",
+    "Added no experiments, datasets, citations, or replacement figure recipes."
+  ]
+}
+```
+
+```latex
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This teaching note connects residual arithmetic, intercept fitting, and the interpretation of empirical error using five synthetic observations. A fixed baseline \(2x\) has residual \(3\) at every observation, so adding \(3\) reproduces the targets. An observation table, squared-error decomposition, executable calculation, and two figures provide complementary checks. Answer-keyed prompts distinguish optimality from exact fit, objective-specific minimizers from their coincident values, and reported errors from the target observations that determine them.
+\end{abstract}
+
+\section{Introduction}
+
+The intended audience is learners familiar with averages and elementary algebra who are beginning residual-based error analysis. The sequence targets three possible confusions: assuming that minimization guarantees zero error, treating mean and median corrections as interchangeable, and interpreting an error value without tracing how its targets were used.
+
+The contribution is a fully specified exercise with explicit criteria for a correct explanation. Each observation can be followed through baseline prediction, residual formation, correction, and evaluation. Rows, algebra, code, and target dependencies describe the same calculation; the diagnostic prompts require connections between them. The equation \(y_i=2x_i+3\) defines the five supplied target values.
+
+\section{Related Work}
+
+Intercept fitting asks which constant to add while keeping slope \(2\) fixed. Residual analysis identifies the remaining error and the condition for exact fit. Evaluation tracing identifies the observations used to determine the correction and its reported errors.
+
+The instructional sequence coordinates these questions through checkable evidence: rows establish the residuals, the decomposition establishes squared-error optimality, the pairing argument identifies an absolute-error minimizer, and the diagram locates the uses of the targets. The three recorded offsets provide arithmetic checks within this sequence.
+
+\section{Method}
+
+\subsection{Finite Setting and Residual-Mean Correction}
+
+Table~\ref{tab:observations} contains the complete supplied observations. With fixed baseline \(\widehat y_i^{(0)}=2x_i\), define residuals and candidate corrected predictions by
+\[
+r_i=y_i-\widehat y_i^{(0)},\qquad
+\widehat y_i(b)=2x_i+b.
+\]
+The selected correction is
+\[
+b_\star=\frac{1}{5}\sum_{i=1}^{5}r_i=3,\qquad
+\widehat y_i^{\,\mathrm{corr}}=\widehat y_i(b_\star).
+\]
+Every residual is \(3\), so this correction reproduces every target.
+Figure~\ref{fig:residual_workflow} traces the calculation, labeling the selected correction \(b=3\).
+
+\begin{table}[!htbp]
+\centering
+\caption{Complete observations and derived residuals. Adding \(b=3\) reproduces each target.}
+\label{tab:observations}
+\begin{tabular}{rrrrr}
+\toprule
+\(x_i\) & \(y_i\) & \(2x_i\) & \(r_i\) &
+\(\widehat y_i^{\,\mathrm{corr}}\) \\
+\midrule
+-2 & -1 & -4 & 3 & -1 \\
+-1 &  1 & -2 & 3 &  1 \\
+ 0 &  3 &  0 & 3 &  3 \\
+ 1 &  5 &  2 & 3 &  5 \\
+ 2 &  7 &  4 & 3 &  7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_residual_workflow.jpg}
+\caption{Calculation dependencies. Identical residuals determine \(b=3\). The separate target-to-evaluation path shows that the same five observations also supply the reported errors.}
+\label{fig:residual_workflow}
+\end{figure}
+
+\subsection{Squared and Absolute Error}
+
+For a finite residual vector \(r_1,\ldots,r_n\), let
+\(\bar r=n^{-1}\sum_i r_i\). Expanding around its mean gives
+\begin{align*}
+\operatorname{MSE}(b)
+&=\frac{1}{n}\sum_{i=1}^{n}(r_i-b)^2\\
+&=\frac{1}{n}\sum_{i=1}^{n}(r_i-\bar r)^2
+  +(b-\bar r)^2,\\
+\operatorname{MSE}(0)-\operatorname{MSE}(\bar r)
+&=\bar r^{\,2}.
+\end{align*}
+The cross term vanishes because \(\sum_i(r_i-\bar r)=0\).
+The nonnegative final term establishes that \(b=\bar r\) minimizes
+squared error. The minimum equals the centered squared residual
+average, which is zero precisely when every residual equals \(\bar r\).
+Any residual variability makes this minimum positive. Optimality
+and exact fit therefore require separate justifications.
+
+For absolute error, order five residuals as
+\(r_{(1)}\leq\cdots\leq r_{(5)}\).
+The distances to \(r_{(1)}\) and \(r_{(5)}\) have minimum sum
+throughout their intervening interval; the same holds for
+\(r_{(2)}\) and \(r_{(4)}\).
+The median \(m=r_{(3)}\) lies in both intervals and makes its own
+distance zero. Hence it minimizes
+\(\operatorname{MAE}(b)=5^{-1}\sum_i|r_i-b|\).
+The squared-error decomposition also gives
+\[
+\operatorname{MSE}(m)-\operatorname{MSE}(\bar r)
+=(m-\bar r)^2.
+\]
+Thus unequal mean and median values select different optimal
+constants for the two objectives. For the supplied constant
+residual vector, both equal \(3\).
+
+\section{Experiments}
+
+\subsection{Calculation Setup and Reproducibility}
+
+One deterministic base R calculation evaluates offsets \(b=0,1.5,3\)
+on the five observations. The following code reproduces the selected
+correction and recorded error table.
+
+\begingroup
+\small
+\begin{verbatim}
+x <- c(-2, -1, 0, 1, 2)
+y <- c(-1, 1, 3, 5, 7)
+r <- y - 2*x
+b <- mean(r)
+offsets <- c(0, 1.5, b)
+print(data.frame(
+  b = offsets,
+  MAE = sapply(offsets, function(a) mean(abs(r - a))),
+  MSE = sapply(offsets, function(a) mean((r - a)^2))))
+\end{verbatim}
+\endgroup
+
+\subsection{Recorded Errors and Interpretation}
+
+For these observations,
+\[
+\operatorname{MAE}(b)=|3-b|,
+\qquad
+\operatorname{MSE}(b)=(3-b)^2.
+\]
+Table~\ref{tab:errors} records the values. The intermediate offset
+halves every residual and quarters MSE.
+Figure~\ref{fig:intercept_error} plots precisely these three checks
+of the arithmetic; the decomposition establishes optimality.
+
+A prediction and its corresponding target are distinct inputs to
+an error calculation. In Figure~\ref{fig:residual_workflow}, the
+targets enter both residual averaging and final comparison.
+Accordingly, the recorded scores quantify agreement on the
+correction observations. Constant residuals explain the zero:
+their centered squared residual average vanishes. Tracing target
+use explains which observations support that score.
+
+\paragraph{Diagnostic prompts and answer criteria.}
+The exercise asks learners to explain:
+(i) why \(b=3\) is optimal and why its error is zero;
+(ii) which residual summaries minimize the two objectives and why
+they agree here; and
+(iii) which observations supply each target-dependent step in
+Figure~\ref{fig:residual_workflow}.
+A complete answer must identify the nonnegative
+\((b-\bar r)^2\) term and the vanishing centered residuals;
+identify the mean and median using the respective arguments;
+and trace both target paths to the same five rows.
+These criteria assess the explanations accompanying the numerical
+answers.
+
+\begin{table}[!htbp]
+\centering
+\caption{Recorded errors on the five correction observations.}
+\label{tab:errors}
+\begin{tabular}{rrr}
+\toprule
+Added \(b\) & Mean absolute error & Mean squared error \\
+\midrule
+0   & 3   & 9 \\
+1.5 & 1.5 & 2.25 \\
+3   & 0   & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.78\linewidth]{figures/fig_intercept_error.jpg}
+\caption{Recorded MSE at the three evaluated offsets. Each point summarizes the five observations in Table~\ref{tab:observations}, which also determine the selected correction \(b=3\).}
+\label{fig:intercept_error}
+\end{figure}
+
+\section{Conclusion}
+
+The note supplies a checkable calculation and explicit explanation
+criteria. The resulting exercise connects row-level residuals,
+objective-specific minimizers, the condition for exact fit, and
+the target dependencies underlying the recorded errors.
+
+% PAPER_ORCHESTRA_PROVENANCE_BEGIN
+\clearpage
+\section*{Figure source provenance}
+The files below are the exact sources that produced the embedded figure previews. Paths are relative to this manuscript's source directory. The accompanying \texttt{figure\char95{}provenance.json} records all artifact checksums.\par
+\medskip\noindent\textbf{Figure~\ref{fig:intercept_error} (\texttt{fig\char95{}intercept\char95{}error.jpg}).}\par
+\noindent R/ggplot2 source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}source.R}.\par
+\noindent Source SHA256: \texttt{d2164cac\allowbreak{}bb40ae27\allowbreak{}2e285dd0\allowbreak{}123744ce\allowbreak{}d626b06c\allowbreak{}00bd67f9\allowbreak{}d17f1f86\allowbreak{}6a3da3f4}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}render.json}.\par
+\noindent Exact export wrapper: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}worker.R}.\par
+\noindent Wrapper SHA256: \texttt{6cb2b073\allowbreak{}27277f63\allowbreak{}fafbb553\allowbreak{}cd4f1f12\allowbreak{}c0f85bec\allowbreak{}37a49f3f\allowbreak{}a765da16\allowbreak{}a26b58ba}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}sessionInfo.txt}.\par
+\medskip\noindent\textbf{Figure~\ref{fig:residual_workflow} (\texttt{fig\char95{}residual\char95{}workflow.jpg}).}\par
+\noindent LaTeX/TikZ source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}source.tex}.\par
+\noindent Source SHA256: \texttt{6f198c75\allowbreak{}4d86c280\allowbreak{}d502725d\allowbreak{}53a58390\allowbreak{}58bbbc68\allowbreak{}480fa50e\allowbreak{}e82d1dd3\allowbreak{}0cc77e65}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}render.json}.\par
+% PAPER_ORCHESTRA_PROVENANCE_END
+\end{document}
+```

@@ -1,0 +1,359 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+
+\definecolor{ink}{HTML}{1F2937}
+\definecolor{slate}{HTML}{334155}
+\definecolor{inputfill}{HTML}{EAF3FB}
+\definecolor{inputedge}{HTML}{829DB4}
+\definecolor{baselinefill}{HTML}{EEF2F6}
+\definecolor{baselineedge}{HTML}{8795A5}
+\definecolor{residualfill}{HTML}{FFF3DA}
+\definecolor{residualedge}{HTML}{B49B63}
+\definecolor{correctionfill}{HTML}{E7F3EF}
+\definecolor{correctionedge}{HTML}{6B9D92}
+\definecolor{correctionarrow}{HTML}{227C70}
+\definecolor{evaluationfill}{HTML}{F1EFF6}
+\definecolor{evaluationedge}{HTML}{9892A5}
+
+\newcommand{\heading}[1]{%
+  {\sffamily\fontsize{9.5}{11}\selectfont\bfseries #1}%
+}
+\newcommand{\labelfont}{\sffamily\fontsize{9}{10.5}\selectfont}
+
+\newsavebox{\InputMath}
+\newsavebox{\TargetMath}
+\newsavebox{\BaselineMath}
+\newsavebox{\ResidualMath}
+\newsavebox{\MeanMath}
+\newsavebox{\CorrectedMath}
+\newsavebox{\ComparisonMath}
+\newsavebox{\EvaluationMath}
+
+\newsavebox{\InputBody}
+\newsavebox{\TargetBody}
+\newsavebox{\BaselineBody}
+\newsavebox{\ResidualBody}
+\newsavebox{\MeanBody}
+\newsavebox{\CorrectedBody}
+\newsavebox{\EvaluationBody}
+\newsavebox{\AverageLabel}
+
+\newlength{\ColumnA}
+\newlength{\ColumnB}
+\newlength{\ColumnC}
+\newlength{\ColumnD}
+\newlength{\AverageGap}
+\newlength{\SmallGap}
+\newlength{\DiagramWidth}
+\newlength{\RequiredWidth}
+\newlength{\UpperHeight}
+\newlength{\LowerHeight}
+\newlength{\TemporaryHeight}
+\newlength{\RowSeparation}
+\newlength{\ChannelY}
+\newlength{\XA}
+\newlength{\XB}
+\newlength{\XC}
+\newlength{\XD}
+
+% Measure complete typeset blocks, including aligned continuation lines.
+% The additional 5.2 mm supplies 2.6 mm horizontal padding on each side.
+\newcommand{\columnwidth}[3]{%
+  \setlength{#1}{\wd#2}%
+  \ifdim\wd#3>#1
+    \setlength{#1}{\wd#3}%
+  \fi
+  \addtolength{#1}{5.2mm}%
+}
+\newcommand{\includeheight}[2]{%
+  \setlength{\TemporaryHeight}{%
+    \dimexpr\ht#2+\dp#2+4.8mm\relax}%
+  \ifdim\TemporaryHeight>#1
+    \setlength{#1}{\TemporaryHeight}%
+  \fi
+}
+
+\begin{document}
+\color{ink}
+\sffamily
+\fontsize{10}{12}\selectfont
+
+\sbox{\InputMath}{%
+  $\displaystyle \mathbf{x}=(-2,-1,0,1,2)$}
+
+\sbox{\TargetMath}{%
+  $\displaystyle
+  \begin{gathered}
+    \mathbf{y}=2\mathbf{x}+3\cdot\mathbf{1}_5\\[0.6mm]
+    \mathbf{y}=(-1,1,3,5,7)\\[0.8mm]
+    \textstyle\mathbf{1}_5=(1,1,1,1,1)
+  \end{gathered}$}
+
+\sbox{\BaselineMath}{%
+  $\displaystyle
+  \begin{aligned}
+    \widehat{\mathbf{y}}^{(0)}&=2\mathbf{x}\\[0.6mm]
+                            &=(-4,-2,0,2,4)
+  \end{aligned}$}
+
+\sbox{\ResidualMath}{%
+  $\displaystyle
+  \begin{gathered}
+    \mathbf{r}=\mathbf{y}-2\mathbf{x}\\[0.6mm]
+    \mathbf{r}=(3,3,3,3,3)
+  \end{gathered}$}
+
+\sbox{\MeanMath}{%
+  $\displaystyle b=\frac{1}{5}\sum_{i=1}^{5}r_i=3$}
+
+\sbox{\CorrectedMath}{%
+  $\displaystyle
+  \begin{aligned}
+    \widehat{\mathbf{y}}^{\,\mathrm{corr}}
+      &=2\mathbf{x}+b\cdot\mathbf{1}_5\\[0.6mm]
+    \widehat{\mathbf{y}}^{\,\mathrm{corr}}
+      &=(-1,1,3,5,7)
+  \end{aligned}$}
+
+\sbox{\ComparisonMath}{%
+  $\displaystyle
+    \mathbf{y}\quad\text{vs.}\quad
+    \widehat{\mathbf{y}}^{\,\mathrm{corr}}$}
+
+\sbox{\EvaluationMath}{%
+  $\displaystyle
+  \begin{aligned}
+    \mathrm{MSE}
+      &=\frac{1}{5}\sum_{i=1}^{5}
+        \left(y_i-\widehat y_i^{\,\mathrm{corr}}\right)^2\\[0.5mm]
+      &=0
+  \end{aligned}$}
+
+\sbox{\InputBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Input observations}\\[1.2mm]
+    \usebox{\InputMath}
+  \end{tabular}}
+
+\sbox{\TargetBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Observed targets}\\[1.2mm]
+    \usebox{\TargetMath}
+  \end{tabular}}
+
+\sbox{\BaselineBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Fixed baseline}\\[1.2mm]
+    \usebox{\BaselineMath}
+  \end{tabular}}
+
+\sbox{\ResidualBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Observed residuals}\\[1.2mm]
+    \usebox{\ResidualMath}
+  \end{tabular}}
+
+\sbox{\MeanBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Mean residual}\\[1.2mm]
+    \usebox{\MeanMath}
+  \end{tabular}}
+
+\sbox{\CorrectedBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Corrected prediction}\\[1.2mm]
+    \usebox{\CorrectedMath}
+  \end{tabular}}
+
+\sbox{\EvaluationBody}{%
+  \begin{tabular}{@{}c@{}}
+    \heading{Evaluate on the same}\\[-0.3mm]
+    \heading{five observations}\\[1.2mm]
+    \usebox{\ComparisonMath}\\[1.1mm]
+    \usebox{\EvaluationMath}
+  \end{tabular}}
+
+\sbox{\AverageLabel}{%
+  \labelfont
+  \begin{tabular}{@{}c@{}}
+    average\\[-0.3mm]
+    residuals
+  \end{tabular}}
+
+\columnwidth{\ColumnA}{\InputBody}{\TargetBody}
+\columnwidth{\ColumnB}{\BaselineBody}{\ResidualBody}
+\columnwidth{\ColumnC}{\MeanBody}{\MeanBody}
+\columnwidth{\ColumnD}{\CorrectedBody}{\EvaluationBody}
+
+% Reserve measured label width plus clearance from both neighboring nodes.
+\setlength{\AverageGap}{\dimexpr\wd\AverageLabel+3.4mm\relax}
+
+% Approximately 18 cm overall, including the standalone border.
+% Expand only if the measured mathematics requires additional room.
+\setlength{\DiagramWidth}{\dimexpr18cm-10pt\relax}
+\setlength{\RequiredWidth}{%
+  \dimexpr\ColumnA+\ColumnB+\ColumnC+\ColumnD
+  +\AverageGap+11mm\relax}
+\ifdim\RequiredWidth>\DiagramWidth
+  \setlength{\DiagramWidth}{\RequiredWidth}
+\fi
+\setlength{\SmallGap}{%
+  \dimexpr\DiagramWidth-\ColumnA-\ColumnB-\ColumnC-\ColumnD
+  -\AverageGap\relax}
+\divide\SmallGap by 2
+
+\setlength{\XA}{\dimexpr\ColumnA/2\relax}
+\setlength{\XB}{%
+  \dimexpr\ColumnA+\SmallGap+\ColumnB/2\relax}
+\setlength{\XC}{%
+  \dimexpr\ColumnA+\SmallGap+\ColumnB+\AverageGap
+  +\ColumnC/2\relax}
+\setlength{\XD}{\dimexpr\DiagramWidth-\ColumnD/2\relax}
+
+\setlength{\UpperHeight}{0pt}
+\includeheight{\UpperHeight}{\InputBody}
+\includeheight{\UpperHeight}{\BaselineBody}
+\includeheight{\UpperHeight}{\CorrectedBody}
+
+\setlength{\LowerHeight}{0pt}
+\includeheight{\LowerHeight}{\TargetBody}
+\includeheight{\LowerHeight}{\ResidualBody}
+\includeheight{\LowerHeight}{\MeanBody}
+\includeheight{\LowerHeight}{\EvaluationBody}
+
+% Keep the closest upper/lower boundaries clearly separated.
+\setlength{\RowSeparation}{%
+  \dimexpr\UpperHeight/2+\LowerHeight/2+5.5mm\relax}
+\setlength{\ChannelY}{%
+  \dimexpr-\RowSeparation-\LowerHeight/2-5.8mm\relax}
+
+\begin{tikzpicture}[
+  panel/.style={
+    rectangle,
+    rounded corners=2mm,
+    line width=0.7pt,
+    inner xsep=2.6mm,
+    inner ysep=2.4mm,
+    outer sep=0.35pt,
+    align=center,
+    text=ink
+  },
+  supplied/.style={
+    panel,fill=inputfill,draw=inputedge
+  },
+  fixed/.style={
+    panel,fill=baselinefill,draw=baselineedge
+  },
+  residual/.style={
+    panel,fill=residualfill,draw=residualedge
+  },
+  corrected/.style={
+    panel,fill=correctionfill,draw=correctionedge
+  },
+  evaluation/.style={
+    panel,fill=evaluationfill,draw=evaluationedge
+  },
+  dependency/.style={
+    line width=0.9pt,
+    -{Latex[length=1.9mm,width=1.25mm]},
+    shorten <=0.35pt,
+    shorten >=0.35pt,
+    line cap=round,
+    line join=round
+  },
+  slate arrow/.style={dependency,draw=slate},
+  teal arrow/.style={dependency,draw=correctionarrow},
+  edge label/.style={
+    font=\labelfont,
+    text=ink,
+    fill=white,
+    inner xsep=0.6mm,
+    inner ysep=0.25mm,
+    outer sep=0pt,
+    align=center
+  }
+]
+
+\node[supplied,minimum width=\ColumnA]
+  (input) at (\XA,0) {\usebox{\InputBody}};
+
+\node[supplied,minimum width=\ColumnA]
+  (targets) at (\XA,-\RowSeparation) {\usebox{\TargetBody}};
+
+\node[fixed,minimum width=\ColumnB]
+  (baseline) at (\XB,0) {\usebox{\BaselineBody}};
+
+\node[residual,minimum width=\ColumnB]
+  (residuals) at (\XB,-\RowSeparation) {\usebox{\ResidualBody}};
+
+\node[corrected,minimum width=\ColumnC]
+  (mean) at (\XC,-\RowSeparation) {\usebox{\MeanBody}};
+
+\node[corrected,minimum width=\ColumnD]
+  (prediction) at (\XD,0) {\usebox{\CorrectedBody}};
+
+\node[evaluation,minimum width=\ColumnD]
+  (evaluate) at (\XD,-\RowSeparation) {\usebox{\EvaluationBody}};
+
+% 1. Supplied inputs to the fixed baseline.
+\draw[slate arrow]
+  (input.east) -- (baseline.west);
+
+% 2. Fixed baseline to observed residuals.
+\draw[slate arrow]
+  (baseline.south) -- (residuals.north);
+
+% 3. Supplied targets to observed residuals.
+\draw[slate arrow]
+  (targets.east) -- (residuals.west);
+
+% 4. Residuals to their scalar mean.
+\draw[teal arrow]
+  (residuals.east) --
+  node[edge label,above=1.5mm] {\usebox{\AverageLabel}}
+  (mean.west);
+
+% 5. Baseline contribution across the open upper third column.
+\draw[slate arrow]
+  (baseline.east) --
+  node[edge label,above=1.5mm] {$2\mathbf{x}$}
+  (prediction.west);
+
+% 6. Separate correction contribution, below the baseline dependency.
+\coordinate (correction-port) at ([yshift=-5mm]prediction.west);
+\coordinate (correction-elbow) at (mean.north |- correction-port);
+\draw[teal arrow,rounded corners=1.1mm]
+  (mean.north) -- (correction-elbow) --
+  node[edge label,below=1.5mm] {$b=3$}
+  (correction-port);
+
+% 7. Corrected predictions to evaluation.
+\draw[slate arrow]
+  (prediction.south) -- (evaluate.north);
+
+% 8. Independent target-data route beneath every lower-row node.
+\coordinate (channel-level) at (0,\ChannelY);
+\draw[slate arrow,rounded corners=1.1mm]
+  (targets.south) --
+  (targets.south |- channel-level) --
+  node[edge label,below=1.5mm] (target-route-label)
+    {observed targets: same five points}
+  (evaluate.south |- channel-level) --
+  (evaluate.south);
+
+\coordinate (diagram-center) at
+  (\dimexpr\DiagramWidth/2\relax,0);
+\node[
+  anchor=north,
+  inner sep=0pt,
+  outer sep=0pt,
+  font=\sffamily\fontsize{9}{11}\selectfont,
+  text=ink,
+  align=center
+] at
+  ($ (diagram-center |- target-route-label.south)+(0,-2mm) $)
+  {The correction is computed and evaluated on these same five observations.};
+
+\end{tikzpicture}
+\end{document}

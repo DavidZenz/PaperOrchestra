@@ -1,0 +1,55 @@
+{
+  "section_name": "Additive-constant prediction correction under squared error (live web search; direct Google access unavailable)",
+  "candidates": [
+    {
+      "title": "Skill Scores Based on the Mean Square Error and Their Relationships to the Correlation Coefficient",
+      "year": 1988,
+      "reason": "Influential Monthly Weather Review paper decomposing squared error into components including unconditional mean bias. Provides the theoretical context for removing an additive offset while preserving forecast variation. Applied to the supplied observations, the residual mean is 3 and centering removes their entire recorded error. [Publisher source](https://doi.org/10/fc7mxd)."
+    },
+    {
+      "title": "Intercept Corrections and Structural Change",
+      "year": 1996,
+      "reason": "Foundational Journal of Applied Econometrics treatment of additive forecast adjustments based on recent residuals, including averaged errors. Directly relevant to estimating an intercept correction while retaining an existing model. Its structural-change and future-forecast setting distinguishes it from the supplied same-observation calculation. [University repository](https://wrap.warwick.ac.uk/id/eprint/18269/)."
+    },
+    {
+      "title": "Calibrated Surface Temperature Forecasts from the Canadian Ensemble Prediction System Using Bayesian Model Averaging",
+      "year": 2007,
+      "reason": "Monthly Weather Review paper explicitly defines a correction using each model's average training error and separately describes full regression calibration. The mean-error correction is a direct formulation of adding mean(observed minus predicted) to fixed predictions; only this component is relevant to the teaching example. [Publisher source](https://journals.ametsoc.org/view/journals/mwre/135/4/mwr3347.1.xml)."
+    },
+    {
+      "title": "Strengths and Weaknesses of MOS, Running-Mean Bias Removal, and Kalman Filter Techniques for Improving Model Forecasts over the Western United States",
+      "year": 2007,
+      "reason": "Established Weather and Forecasting study explicitly describing adjustment of existing forecasts by their recent mean error. Its running-mean component closely matches residual-mean correction while retaining the underlying prediction model. The moving calibration window extends the supplied single-offset formulation. [Publisher source](https://journals.ametsoc.org/view/journals/wefo/22/6/2007waf2006084_1.xml)."
+    },
+    {
+      "title": "A panel data approach to economic forecasting: The bias-corrected average forecast",
+      "year": 2009,
+      "reason": "Journal of Econometrics paper retaining equal forecast-combination weights while estimating an additive bias correction from historical errors. Directly relevant to correcting a fixed composite prediction rule under an MSE objective. Its panel and asymptotic assumptions provide conceptual context without establishing anything about the supplied five observations. [Publisher source](https://www.sciencedirect.com/science/article/pii/S0304407609000177)."
+    },
+    {
+      "title": "Bias Correction for Global Ensemble Forecast",
+      "year": 2012,
+      "reason": "Influential operational forecasting treatment estimating first-moment error and applying it additively to existing forecasts. It includes climate-mean correction and an exponentially weighted error average. These formulations clarify the relationship between a pooled residual mean and adaptive offsets estimated separately by location and forecast lead. [Publisher source](https://doi.org/10.1175/WAF-D-11-00011.1)."
+    },
+    {
+      "title": "Best Practices for Postprocessing Ensemble Climate Forecasts. Part I: Selecting Appropriate Recalibration Methods",
+      "year": 2016,
+      "reason": "Journal of Climate paper explicitly includes unconditional mean adjustment with the forecast coefficient fixed at one and no trend adjustment. This restricted formulation closely matches f(x)+c. Its broader parameter framework helps distinguish a constant intercept correction from slope, trend, and variance recalibration. [Publisher source](https://doi.org/10.1175/JCLI-D-15-0868.1)."
+    },
+    {
+      "title": "Comparing and Combining Deterministic Surface Temperature Postprocessing Methods over the United States",
+      "year": 2021,
+      "reason": "Monthly Weather Review treatment explicitly defines a recursively averaged forecast-error correction for a single prediction system and evaluates squared-error-related accuracy. Relevant for understanding how fixed-model residual correction can operate sequentially. Its calibration and later validation periods also clarify the scope of the supplied same-observation correction. [Author's institutional copy](https://repository.library.noaa.gov/view/noaa/45318/noaa_45318_DS1.pdf)."
+    },
+    {
+      "title": "Diagnosing Errors in Climate Forecast Models Using Forced Autoregressive Models",
+      "year": 2025,
+      "reason": "Recent Journal of Advances in Modeling Earth Systems paper explicitly minimizes E[(observation-forecast-b(X))^2] and derives the conditional mean residual as the optimal additive correction. Restricting b to a constant connects this formulation to the supplied residual mean of 3. Its richer correction models are relevant only as conceptual context. [Published paper](https://repository.library.noaa.gov/view/noaa/73012/noaa_73012_DS1.pdf)."
+    },
+    {
+      "title": "A Novel Approach to Forecasting After Large Forecast Errors",
+      "year": 2026,
+      "reason": "Recent Journal of Forecasting treatment, published before the cutoff, using forecast errors as intercept corrections while initially retaining existing parameter estimates. It distinguishes impulse, location-shift, and trend adjustments. Directly relevant to the fixed-rule correction principle, while addressing sequential forecasting rather than the supplied deterministic same-observation example. [Publisher source](https://onlinelibrary.wiley.com/doi/10.1002/for.70062)."
+    }
+  ]
+}

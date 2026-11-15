@@ -1,0 +1,29 @@
+Create **fig_intercept_error** in **R using ggplot2** as a discrete scatter plot titled **“Recorded Mean Squared Error at Three Intercept Corrections”**. The figure should present the three recorded arithmetic results clearly, with no connecting lines, interpolation, fitted curves, uncertainty intervals, or additional observations.
+
+Use the following complete plotting dataset:
+
+| Added correction b: x-coordinate | Mean squared error: y-coordinate | Point label |
+|---:|---:|:---|
+| 0 | 9 | `(0, 9)` |
+| 1.5 | 2.25 | `(1.5, 2.25)` |
+| 3 | 0 | `(3, 0)` |
+
+**Variable mapping and geometry:** Map the numeric variable `b` to horizontal position and the numeric variable `mse` to vertical position. Initialize the recorded data explicitly as `data.frame(b = c(0, 1.5, 3), mse = c(9, 2.25, 0))`. Use a continuous horizontal scale so that the equal spacing between corrections 0, 1.5, and 3 is preserved. Draw exactly three markers, centered at the coordinates listed above. Marker color and size should remain constant; neither represents an additional variable. Do not plot the five underlying observations or the MAE values, since this figure specifically compares the recorded MSE values against the added correction.
+
+**Canvas and layout:** Use a white, landscape canvas measuring **9 × 6 inches**, equivalent to **2700 × 1800 pixels at 300 dpi** when exported as a raster image. Set both the plot and panel backgrounds to **#FFFFFF**. Use outer margins of **18 pt at the top, 24 pt at the right, 16 pt at the bottom, and 18 pt at the left**. Keep the plot uncluttered, with enough space above each marker for its coordinate label.
+
+**Markers:** Use `geom_point()` with **shape 21**, **size 4.2**, and **stroke 0.6** in ggplot2’s native parameter units. Give every marker a blue fill of **#0072B2** and a darker blue outline of **#004A73**, with full opacity. This provides a visible boundary around each point, including the point at MSE = 0. Draw markers above the grid.
+
+**Axes:** Label the horizontal axis **“Added intercept correction b”** and the vertical axis **“Mean squared error”**. Display horizontal ticks at exactly **0, 1.5, and 3**, formatted as those strings. Display vertical ticks at **0, 2.25, 4.5, 6.75, and 9**. These vertical ticks are scale references, not additional measurements. Use viewing limits of **−0.35 to 3.35** horizontally and **−0.6 to 10.2** vertically, with no additional scale expansion. The small padding below zero prevents the zero-error marker from being clipped; no negative MSE observations are present.
+
+Render axis titles in **13 pt**, regular-weight **DejaVu Sans**, colored **#222222**. Render tick labels in **11 pt** using the same font and color. Keep all tick labels horizontal. Separate each axis title from its tick labels by **10 pt**. Use axis lines colored **#6B7280** with **0.4 mm** linewidth and outward ticks measuring **3 pt**, colored **#6B7280** with **0.35 mm** linewidth. Omit top and right panel borders.
+
+**Point annotations:** Label all three points with their exact coordinate strings: **“(0, 9)”**, **“(1.5, 2.25)”**, and **“(3, 0)”**. Center each label horizontally over its marker and shift it upward by **0.45 vertical data units**. These offsets apply only to text; marker coordinates remain unchanged. Use **12 pt**, regular-weight **DejaVu Sans** in **#1F2937**. Do not round 2.25 or add trailing decimal zeros.
+
+**Grid and typography:** Show solid horizontal major gridlines at the specified vertical ticks, colored **#E5E7EB** with **0.3 mm** linewidth. Omit vertical gridlines and all minor gridlines. Render the exact figure title in **16 pt bold DejaVu Sans**, colored **#111827**, left-aligned with the plotting panel, with **12 pt** of space below it. Do not display a legend, because there is only one series and no variable mapped to hue.
+
+Place the following caption beneath the plot, left-aligned, in **10 pt DejaVu Sans**, colored **#4B5563**, with **12 pt** of separation from the horizontal axis title:
+
+“Three recorded corrections evaluated on the same five synthetic observations used to determine the correction. No stochastic repetitions or held-out evaluation.”
+
+The resulting figure should make the recorded comparison directly readable: **MSE is 9 at b = 0, 2.25 at b = 1.5, and 0 at b = 3**. The zero value describes this finite calculation on the supplied observations; the figure should make no claim about unmeasured corrections or predictive generalization.

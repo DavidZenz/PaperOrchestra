@@ -1,0 +1,245 @@
+{
+  "status": "completed",
+  "upstream_commit": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+  "agent_attempts": 34,
+  "completed_agent_attempts": 34,
+  "unique_sessions": 34,
+  "process_launches": 34,
+  "roles": {
+    "runtime-probe": 1,
+    "outline": 1,
+    "literature-discovery": 15,
+    "literature-synthesis": 1,
+    "section-writer": 1,
+    "peer-reviewer": 9,
+    "area-chair": 3,
+    "content-or-format-editor": 2,
+    "format-reviewer": 1
+  },
+  "ensembles": 3,
+  "failed_review_ensembles": [],
+  "live_searches": 15,
+  "semantic_scholar_statuses": {
+    "429": 95,
+    "200": 10
+  },
+  "handoffs": [
+    {
+      "from": "literature_agent_output/outline_v1.json",
+      "to": "outline.json",
+      "hash_equal": true
+    },
+    {
+      "from": "literature_agent_output/updated_template.tex",
+      "to": "latex_writeup/template.tex",
+      "hash_equal": true
+    },
+    {
+      "from": "literature_agent_output/references.bib",
+      "to": "latex_writeup/references.bib",
+      "hash_equal": true
+    },
+    {
+      "from": "latex_writeup/raw_draft_paper.tex",
+      "to": "content_refinement_workdir/raw_draft_paper.tex",
+      "hash_equal": true
+    }
+  ],
+  "aggregate_score_checks": [
+    {
+      "file": "review_v0.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 5,
+          "actual": 5,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v1.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v2.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "revision_decisions": [
+    {
+      "version": "v1",
+      "total_gain": 2.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_SCORE_INCREASE"
+    },
+    {
+      "version": "v2",
+      "total_gain": 0.0,
+      "total_drop": 1.0,
+      "outcome": "REJECTED_DEGRADATION"
+    }
+  ],
+  "format_decisions": [],
+  "evidence_valid": true,
+  "errors": [],
+  "warnings": []
+}

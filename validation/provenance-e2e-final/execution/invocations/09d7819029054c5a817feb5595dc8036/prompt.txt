@@ -1,0 +1,991 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+[UPSTREAM SYSTEM INSTRUCTION]
+Role: Senior AI Researcher.
+Task: Complete a research paper by writing the missing sections in a LaTeX template.
+
+You will be given a 'template.tex' file where some sections (e.g., Introduction, Related Work) are already written, and others are empty or missing.
+Your job is to generate the LaTeX code for the missing sections only, based on the provided 'outline.json', and merge them into the final document.
+
+INPUTS:
+* 'outline.json': Your MASTER PLAN. Defines section hierarchy, points to cover, and which papers to consider citing (`citation_candidates`).
+* 'idea.md': Technical details of the Methodology.
+* 'experimental_log.md': Raw data for tables and qualitative analysis for text.
+* 'citation_map.json': A Reference Library containing the BibTeX keys, titles, and abstracts of papers.
+* 'conference_guidelines.md': Formatting rules.
+* 'figures_list': Available figure files.
+
+CRITICAL INSTRUCTIONS:
+
+1. Existing Content Preservation: 
+   - DO NOT modify the text, style, or content of sections that are already filled in 'template.tex'. 
+   - Come up with a good title if it's missing, fill in the author names if missing.
+   - Keep the preamble (packages) exactly as is.
+
+2. Data & Tables:
+   - You are responsible for creating LaTeX tables.
+   - Extract numerical data directly from 'experimental_log.md'.
+   - Use the `booktabs` package format (\toprule, \midrule, \bottomrule).
+   - Do not hallucinate numbers. Use the exact values provided in the log.
+   - Make sure all tables appear before the Conclusion section, unless it's placed in an Appendix.
+
+3. Citations:
+   - The 'outline.json' provides a list of `citation_candidates` for specific subsections.
+   - You MUST use the exact keys found in `citation_map.json` (e.g., `\cite{Hu2021LoraLowrank}`).
+   - Content Enrichment: Read the `abstract` provided in `citation_map.json` for the papers you are citing. Use this context to write accurate, specific sentences about those works.
+
+4. Writing Content:
+   - Write the missing sections following the 'outline.json' structure.
+   - Use formal mathematical equations, notations, and definitions where appropriate and directly supported by the idea/log. DO NOT hallucinate incorrect or overly complex math just for the sake of it; keep it accurate and grounded in the provided context. Avoid overly colloquial summaries.
+   - Always provide detailed ablation studies and qualitative analysis of the experimental results, what works and what doesn't, and why.
+   - Nice to have: discuss the limitation and future work at the end.
+   - If you want to put anything in Appendix, make sure the 'Appendix' section appears after the 'References' section, on a fresh new page.
+
+5. Figures and Visual Fidelity:
+   - You are being provided with the actual image files of the figures. You MUST describe them faithfully and accurately. DO NOT hallucinate interpretations that contradict the visual evidence in the plots.
+   - Make sure to use ALL of the figures provided in 'figures_list'. Note: figures are stored in the 'figures/' subdirectory. IMPORTANT: use the exact filenames including their extensions (e.g., .png) in your \includegraphics commands.
+   - DO NOT merge or group multiple figures into one for display.
+   - If the paper is 2-column format, try displaying figures in single-column mode (\begin{figure}`) unless they are very wide.
+   - Ensure that all figures are correctly referenced in the text. 
+   - Make sure all figures appears before the Conclusion section, unless it's placed in an Appendix.
+   - You can refine the captions if necessary.
+   - Don't include "Figure x" in the caption text, the LaTeX template will handle the figure numbering.
+
+6. Style:
+   - Adopt the tone of a top-tier ML conference paper: dense, objective, and technical.
+   - Ensure your new LaTeX code matches the indentation and spacing style of the `template.tex`. Don't change the given style.
+
+OUTPUT FORMAT:
+- Return the full code for the completed 'template.tex'.
+- The sections that were previously empty should now be filled.
+- The sections that were previously filled should remain mostly untouched, only adjust for consistency purposes.
+- Wrap the code with ```latex content```.
+
+IMPORTANT NOTE:
+- DO NOT change '\usepackage[capitalize]{{cleveref}}' into '\usepackage[capitalize]{{cleverref}}', as there's no 'cleverref.sty'.
+- Ensure the LaTeX code compiles without errors, e.g. all the begin and end statements match correctly (e.g., \begin{figure*} must be closed with \end{figure*}, not \end{figure}).
+
+
+---
+### Strict Knowledge Isolation & Anonymity (CRITICAL)
+
+You MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results.
+Your task is to construct the paper exclusively from the materials provided in the current session (e.g., idea.md, experimental_log.md, figures, and other inputs). Treat these inputs as the only available source of information.
+
+#### Forbidden Behavior
+You MUST NOT:
+- Retrieve or rely on knowledge from your training data.
+- Attempt to recall or reconstruct any existing or published paper.
+- Use external facts, assumptions, or prior familiarity with the work.
+- Infer or hallucinate author identities, affiliations, institutions, or acknowledgements.
+- Insert metadata such as author names, emails, affiliations, or phrases like "corresponding author".
+
+#### Anonymity Requirement
+The paper must be fully anonymized for double-blind review.  
+Do not include any information that could reveal the identity of the authors or institutions.
+
+#### Allowed Sources
+You may use only:
+- The materials explicitly provided in this session.
+- Logical reasoning derived from those materials.
+
+#### Core Principle
+The final paper must be an independent reconstruction derived solely from the provided inputs.  
+This constraint is strict and overrides all other instructions.
+---
+
+
+
+Here are the input materials for the paper.
+
+--- INPUT: outline.json (Structure & Citation Candidates) ---
+{
+    "plotting_plan": [
+        {
+            "figure_id": "fig_intercept_error",
+            "title": "Recorded Mean Squared Error at Three Intercept Corrections",
+            "plot_type": "plot",
+            "data_source": "experimental_log.md",
+            "objective": "Create a discrete scatter plot using R/ggplot2 with added correction b on the horizontal axis and mean squared error on the vertical axis. Plot exactly the recorded pairs (0, 9), (1.5, 2.25), and (3, 0). Label the three values clearly. Show the finite arithmetic comparison without interpolation, additional observations, uncertainty intervals, or claims about predictive generalization.",
+            "aspect_ratio": "4:3",
+            "caption_plan": "Identify the five synthetic observations, state that the same observations determine and evaluate the correction, and explain that the figure contains only the three recorded error values.",
+            "reproducibility_plan": "The downstream figure workflow should retain the editable .R source, vector PDF, and manuscript-compatible preview. This invocation only specifies the figure; it does not generate files or launch workers."
+        },
+        {
+            "figure_id": "fig_residual_workflow",
+            "title": "Residual Mean Correction and Same-Observation Evaluation",
+            "plot_type": "diagram",
+            "data_source": "idea.md",
+            "objective": "Create a mathematical workflow schematic using LaTeX/TikZ. Show the supplied input x and target y, baseline prediction 2x, observed residual y-2x, mean residual b=3, corrected prediction 2x+b, and evaluation on the same five observations. Draw explicit dependencies from x to the baseline, from y and the baseline to the residual, from the residual to b, and from b and the baseline to the corrected prediction. Connect the observed targets and corrected predictions to evaluation. Use a compact arrangement with readable mathematical labels.",
+            "aspect_ratio": "16:9",
+            "caption_plan": "Explain that observed residuals supply the scalar correction and that evaluation reuses those observations. Present the diagram as an explanation of the computation, without treating it as additional experimental evidence.",
+            "reproducibility_plan": "The downstream figure workflow should retain the editable .tex source, vector PDF, and manuscript-compatible preview. Include only the computation specified in idea.md."
+        }
+    ],
+    "intro_related_work_plan": {
+        "shared_research_constraints": {
+            "source_boundary": "Use the supplied documents to define the calculation, measurements, and claims. The downstream literature stage may verify contextual references, but literature must not supply additional experimental results, author identities, novelty claims, or presumed properties of the demonstration.",
+            "publication_cutoff": "2026-11",
+            "candidate_counts": "Screen 10\u201320 macro-level papers for Introduction context and 30\u201350 technical papers for Related Work context. These are research-graph discovery targets, not required citation counts in the approximately 700\u20131000-word note. Do not pad the graph with irrelevant papers.",
+            "citation_separation": "Assign each discovered paper to exactly one tier. Introduction receives broad foundational and survey context; Related Work receives narrowly relevant technical treatments. Do not duplicate citations between the two sections.",
+            "graph_instructions": "Record each verified paper's bibliographic identity, publication date, tier, methodology cluster where applicable, supported contextual statement, and relationship to the supplied calculation. Distinguish literature-supported context from facts established directly by the five observations.",
+            "comparison_boundary": "The only measured comparisons are b=0, b=1.5, and b=3 from experimental_log.md. External literature is conceptual context, not an expanded competitor set."
+        },
+        "introduction_strategy": {
+            "target_paper_count": "10\u201320",
+            "hook_hypothesis": "A transparent finite example can make the relationship between a constant prediction offset, observed residuals, and reported error understandable. Search for broad educational and foundational support for this motivation without asserting an unverified real-world urgency.",
+            "problem_gap_hypothesis": "For exactly x=[-2,-1,0,1,2] with y=2x+3, the supplied baseline 2x omits the constant offset and has residual 3 at every observation. The note explains the resulting same-observation error correction. This is an explanatory gap within the teaching example, not a claimed unresolved research problem.",
+            "search_directions": [
+                "Find foundational discussions of prediction residuals and intercept terms in elementary regression; identify 3\u20135 foundational references within the 10\u201320-paper candidate pool.",
+                "Search for survey or review papers on teaching prediction error, residual interpretation, and transparent numerical examples.",
+                "Search for broad methodological discussions explaining why reproducible calculations and retained figure source code matter for inspecting reported numerical results.",
+                "Search for foundational or review discussions distinguishing error on observations used to determine a correction from evaluation on separate observations; use them only to motivate the scope restriction."
+            ],
+            "writing_boundary": "Keep the Introduction at the level of motivation and scope. Reserve exact correction procedures, technical limitations, and dependency citations for Method, Experiments, or Related Work.",
+            "citation_candidates": []
+        },
+        "related_work_strategy": {
+            "target_paper_count": "30\u201350",
+            "overview": "Investigate two technical context clusters that precede or explain the supplied arithmetic. Search recent relevant work published no later than 2026-11, while retaining only verified and directly useful references. Do not frame this teaching note as outperforming external methods or establishing a new algorithm.",
+            "subsections": [
+                {
+                    "subsection_title": "Fixed-Predictor Intercept Adjustment",
+                    "methodology_cluster": "Additive intercept correction with a fixed prediction rule",
+                    "sota_investigation_mission": "Screen approximately 15\u201325 technical papers or reports about estimating an additive constant while retaining a fixed prediction rule. Include recent treatments available through 2026-11 for conceptual context. Determine how their formulations relate to the supplied baseline 2x and residual mean, without adding empirical competitors or importing their results.",
+                    "limitation_hypothesis": "In the supplied calculation, retaining the baseline's zero intercept leaves a constant residual of 3. This limitation is established for the recorded baseline only; it must not be attributed to external methods without verified evidence.",
+                    "limitation_search_queries": [
+                        "\"fixed slope\" \"intercept\" \"mean residual\"",
+                        "\"regression through the origin\" \"constant residual\"",
+                        "\"additive constant\" \"prediction correction\" \"squared error\""
+                    ],
+                    "bridge_to_our_method": "The supplied calculation explicitly computes b=mean(y-2x)=3 and adds it to the fixed baseline. Describe this as an elementary instantiation of the contextual idea, without claiming novelty.",
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "Residual Correction and Evaluation Data Reuse",
+                    "methodology_cluster": "Residual-based output adjustment assessed on the observations supplying the adjustment",
+                    "sota_investigation_mission": "Screen approximately 15\u201325 technical papers or reports addressing residual-based adjustment and the interpretation of evaluation when observations are reused. Include recent relevant treatments through 2026-11. Investigate evaluation protocols conceptually; do not introduce additional datasets, benchmarks, or methods as measured competitors.",
+                    "limitation_hypothesis": "An adjustment determined from observed targets can attain zero error on those same observations without providing evidence about unseen observations. For this note, the limitation follows from the explicitly shared correction and evaluation data.",
+                    "limitation_search_queries": [
+                        "\"mean residual\" \"prediction correction\" \"same data\"",
+                        "\"additive correction\" \"in-sample error\"",
+                        "\"residual correction\" \"evaluation data reuse\""
+                    ],
+                    "bridge_to_our_method": "The calculation makes the data dependency explicit and reports only the measured finite errors. It does not resolve the absence of separate evaluation; the workflow diagram and discussion make that boundary visible.",
+                    "citation_candidates": []
+                }
+            ]
+        }
+    },
+    "section_plan": [
+        {
+            "section_title": "Abstract",
+            "latex_environment": "abstract",
+            "target_word_count": 80,
+            "document_constraints": {
+                "document_type": "Anonymous short technical teaching note",
+                "overall_word_range": "Approximately 700\u20131000 words",
+                "planned_word_count": "Approximately 900 words: 740 words of section prose, with approximately 160 words reserved for captions, table text, and concise verified references.",
+                "page_limit": "No numerical page limit is supplied. Do not invent one or derive a page allowance from a conference template.",
+                "layout": "Use the supplied single-column 11-point article with one-inch margins and the existing title.",
+                "required_elements": "Include exactly the two planned figures and the measured error table, with readable captions and no margin overflow.",
+                "appendix_policy": "No appendix is required; do not add an Appendix section.",
+                "anonymity": "Retain Anonymous and omit identifying author, institutional, contact, and acknowledgement information.",
+                "citation_policy": "Use only bibliography keys verified by the downstream literature stage. Citation hints are lookup instructions, not verified references."
+            },
+            "content_bullets": [
+                "State that idea.md defines a synthetic teaching demonstration with five observations, target y=2x+3, and fixed baseline 2x.",
+                "Summarize the residual-mean correction b=3 and the recorded change in mean squared error from 9 to 0.",
+                "State explicitly that the same observations determine and evaluate the correction.",
+                "Describe the contribution as an inspectable finite calculation with reproducible figures."
+            ],
+            "citation_hints": []
+        },
+        {
+            "section_title": "Introduction",
+            "latex_command": "\\section{Introduction}",
+            "target_word_count": 110,
+            "content_bullets": [
+                "Use the macro-level investigation strategy to motivate transparent residual calculations and reproducible reporting.",
+                "Introduce the exact five-point setting from idea.md and experimental_log.md, explaining that the baseline omits the supplied target's constant offset.",
+                "Identify the note's deliverables: the explicit arithmetic, recorded error comparison, and two reproducible visual explanations.",
+                "State that the note makes no claim of scientific novelty, benchmark superiority, or predictive generalization."
+            ],
+            "citation_hints": []
+        },
+        {
+            "section_title": "Related Work",
+            "latex_command": "\\section{Related Work}",
+            "target_word_count": 100,
+            "subsections": [
+                {
+                    "subsection_title": "Fixed-Predictor Intercept Adjustment",
+                    "target_word_count": 50,
+                    "content_bullets": [
+                        "Use verified technical references from the first Related Work cluster to contextualize adding a scalar offset to a fixed predictor.",
+                        "Relate that context directly to baseline 2x and correction mean(y-2x), without attributing novelty or undocumented failures to existing methods."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "Residual Correction and Evaluation Data Reuse",
+                    "target_word_count": 50,
+                    "content_bullets": [
+                        "Use verified references from the second cluster to explain the interpretation of evaluation on observations used to determine a correction.",
+                        "Connect this distinction to the shared five observations documented in experimental_log.md; preserve the absence of held-out evidence."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Method",
+            "latex_command": "\\section{Method}",
+            "target_word_count": 190,
+            "subsections": [
+                {
+                    "subsection_title": "Finite Setting and Residual-Mean Correction",
+                    "target_word_count": 100,
+                    "content_bullets": [
+                        "Specify x=[-2,-1,0,1,2], y=2x+3, and fixed prediction 2x exactly as supplied in idea.md and the observation table in experimental_log.md.",
+                        "Introduce an observation index only to express the five supplied values; derive y_i-2x_i=3 for every recorded observation.",
+                        "Write b=(1/5) sum_{i=1}^{5}(y_i-2x_i)=3 and corrected prediction 2x_i+b.",
+                        "Place fig_residual_workflow here and explain its explicit dependency from observed targets through residuals to the scalar correction.",
+                        "Identify the operation as a deterministic calculation without an optimizer or fitted architecture."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "Error Definitions and Finite Arithmetic",
+                    "target_word_count": 90,
+                    "content_bullets": [
+                        "Define mean absolute error as (1/5) sum_{i=1}^{5}|y_i-(2x_i+b)| and mean squared error as (1/5) sum_{i=1}^{5}[y_i-(2x_i+b)]^2.",
+                        "Substitute the supplied residual identity to explain the recorded values at b=0, 1.5, and 3.",
+                        "Show that b=3 reproduces all five supplied targets exactly. Present this as an algebraic consequence of the defined observations.",
+                        "Do not introduce unsupported loss terms, optimization procedures, asymptotic analysis, stochastic assumptions, or generalization guarantees."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Experiments",
+            "latex_command": "\\section{Experiments}",
+            "target_word_count": 190,
+            "subsections": [
+                {
+                    "subsection_title": "Calculation Setup and Reproducibility",
+                    "target_word_count": 80,
+                    "content_bullets": [
+                        "Describe experimental_log.md as one deterministic calculation implemented in base R on the five internally specified synthetic observations.",
+                        "Identify b=0 as the supplied baseline, b=1.5 as the recorded intermediate offset, and b=3 as the residual-mean correction. Do not describe these as external competing methods or optimizer trials.",
+                        "Specify R/ggplot2 for fig_intercept_error and LaTeX/TikZ for fig_residual_workflow, as required by idea.md.",
+                        "Plan retention of the exact editable figure sources, vector PDFs, and manuscript-compatible previews as separate reproducibility artifacts.",
+                        "Do not invent software versions, random seeds, hardware, execution times, or additional experiments."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "Recorded Errors and Interpretation",
+                    "target_word_count": 110,
+                    "content_bullets": [
+                        "Include the measured error table from experimental_log.md with columns added b, mean absolute error, and mean squared error, and rows (0,3,9), (1.5,1.5,2.25), and (3,0,0).",
+                        "Place fig_intercept_error alongside the discussion of the three recorded mean squared errors.",
+                        "Explain that the exact match at b=3 follows from the constant residual of 3 across these observations.",
+                        "State that no stochastic repetitions, external datasets, benchmarks, timing measurements, or held-out evaluations were performed.",
+                        "Explain that data reuse limits the interpretation to these five observations. The diagram explains the dependency and supplies no additional predictive evidence."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Conclusion",
+            "latex_command": "\\section{Conclusion}",
+            "target_word_count": 70,
+            "content_bullets": [
+                "Restate that the supplied residual mean is 3 and adding it to 2x exactly matches the five recorded targets.",
+                "Summarize the measured mean squared errors 9, 2.25, and 0 at the three recorded offsets.",
+                "Emphasize the teaching value of explicit arithmetic, visible data dependencies, and retained figure source code.",
+                "Close with the finite scope: these observations establish the calculation, while predictive behavior on other observations remains unevaluated."
+            ],
+            "citation_hints": []
+        }
+    ]
+}
+
+--- INPUT: citation_map.json (Reference Library) ---
+No citation data provided.
+
+--- INPUT: idea.md (Technical Method Details) ---
+# A finite intercept correction calculation with reproducible figures
+
+This is a synthetic teaching-note workflow demonstration, not a new scientific
+result. Five inputs x = [-2,-1,0,1,2] have targets y = 2x+3. A fixed predictor
+returns 2x. Compute the mean residual on these same points, b = mean(y-2x)=3,
+and add it to the predictions. The experimental log is the only measured data.
+There is no optimizer, architecture, external dataset, stochastic experiment,
+held-out evaluation or timing result. The calculation is implemented in base R.
+Scope all claims to these exact five observations; literature supplies context,
+not extra measurements or claims of novelty.
+
+Generate exactly two essential figures, with all source code retained:
+
+1. `fig_intercept_error`: a statistical plot, `plot_type` `plot`, from
+   `experimental_log.md`. Show the three measured MSE values at b=0,1.5,3.
+   Use R/ggplot2. This plot is evidence of the finite arithmetic only.
+2. `fig_residual_workflow`: a scientific schematic, `plot_type` `diagram`, from
+   `idea.md`. Show input x and target y; baseline 2x; residual y-2x; mean
+   residual b=3; corrected prediction 2x+b; evaluation on the same five points.
+   Indicate the data dependency from observed residuals to the scalar correction.
+   Use LaTeX/TikZ, mathematical labels, and no unrelated modules or experiments.
+
+No figures are supplied. Separate Codex workers must plan, style, generate code,
+critique the rendered figures, and write captions through the normal workflow.
+The flow diagram should make the computation understandable; it adds no evidence
+of predictive generalization. Native editable `.R` and `.tex` sources and their
+vector PDFs should be retained alongside the manuscript-compatible previews.
+
+
+--- INPUT: experimental_log.md (Raw Data for Tables) ---
+# Actual R calculation on five synthetic observations
+
+One deterministic calculation; no stochastic repetitions, optimizer, external dataset, benchmark, timing or held-out evaluation.
+The same observations determine and evaluate the correction. No other experiments were run.
+
+| x | y | baseline 2x | corrected 2x+3 |
+|---:|---:|---:|---:|
+| -2 | -1 | -4 | -1 |
+| -1 | 1 | -2 | 1 |
+| 0 | 3 | 0 | 3 |
+| 1 | 5 | 2 | 5 |
+| 2 | 7 | 4 | 7 |
+
+Correction b = mean(y - 2x) = 3.
+
+| Added b | Mean absolute error | Mean squared error |
+|---:|---:|---:|
+| 0 | 3 | 9 |
+| 1.5 | 1.5 | 2.25 |
+| 3 | 0 | 0 |
+
+Required generated statistical figure: fig_intercept_error. Plot the three recorded MSE values against b. No unmeasured points, uncertainty intervals or invented data.
+Code must be R/ggplot2. Keep this calculation reproducible and keep the numerical scope finite.
+
+
+--- INPUT: figures_list (Available Figure Files) ---
+### AVAILABLE FIGURES LIST
+Item 1:
+  - Filename: fig_intercept_error.jpg
+  - Caption: Three recorded corrections evaluated on the same five synthetic observations used to determine the correction. No stochastic repetitions or held-out evaluation.
+--------------------------------------------------
+Item 2:
+  - Filename: fig_residual_workflow.jpg
+  - Caption: Residual-mean correction for five synthetic observations with targets y = 2x + 3. The mean observed residual b = mean(y − 2x) = 3 is added to the fixed baseline prediction 2x. Evaluation on the same five observations used to compute the correction yields MSE = 0.
+--------------------------------------------------
+
+
+--- INPUT: conference_guidelines.md ---
+# Reproducible workflow demonstration
+
+Produce an anonymous short technical teaching note of approximately 700–1000 words
+with the supplied article headings. Keep claims within the finite synthetic
+calculation. Do not describe it as a novel algorithm or a benchmark result.
+No appendix is required. Include the generated MSE plot, generated residual-flow
+diagram and measured error table, with readable captions and no margin overflow.
+Use the existing single-column 11-point article with one-inch margins.
+Keep all author information anonymous. Cite only keys verified by the literature
+stage. The figure source code is retained as a separate reproducibility artifact.
+
+
+--- INPUT: template.tex (DO NOT CHANGE EXISTING TEXT. FILL MISSING SECTIONS.) ---
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+% Fill the abstract.
+\end{abstract}
+\section{Introduction}
+A finite numerical example can make the connection between a prediction offset, observed residuals, and reported error directly inspectable. When every prediction differs from its target by the same amount, the effect of adding a constant can be traced observation by observation. This note uses such a construction to explain what an intercept correction changes and what its measured error establishes. Its purpose is pedagogical: to present a transparent calculation with a clearly stated evaluation scope.
+
+The example contains exactly five inputs, \(x\in\{-2,-1,0,1,2\}\), with corresponding targets \(y=2x+3\). The fixed baseline returns \(2x\), retaining the coefficient of \(x\) in the target construction while omitting its constant term. Consequently, all five baseline predictions have the same residual. This deliberate simplicity isolates the effect of the missing offset: the recorded changes in error can be explained entirely through one additive scalar.
+
+The supplied deterministic calculation is implemented in base R and records three choices of that scalar. The baseline has mean squared error \(9\), while adding the observed mean residual of \(3\) gives mean squared error \(0\) on the five observations. An intermediate adjustment provides a further recorded comparison. These outcomes describe the arithmetic of this particular construction; they do not establish a new algorithm or a performance advantage over external methods.
+
+The explanatory contribution is to connect the fixed prediction rule, the observed residuals, the resulting correction, and the reported errors within one inspectable example. The scope of the evidence is equally central. The same five observations supply the correction and its evaluation, and no separate evaluation observations are recorded. The resulting zero error therefore establishes exact agreement on those observations. The note makes no empirical claim about predictive performance beyond them.
+
+\section{Related Work}
+The calculation connects two technical ideas: adjusting the intercept of a fixed prediction rule and interpreting error when the observations determining an adjustment also evaluate it. The discussion develops these connections directly from the supplied construction. Its measured comparisons are restricted to the three recorded offsets; no external method is evaluated.
+
+\subsection{Fixed-Predictor Intercept Adjustment}
+The prediction family considered here is
+\[
+\widehat{y}_b(x)=2x+b,
+\]
+where the coefficient of \(x\) remains fixed. For each recorded observation, the baseline residual is
+\[
+r_i=y_i-2x_i=3.
+\]
+Averaging these five residuals therefore gives the additive correction \(b=3\). This operation changes only the constant term. It involves no optimizer or architectural modification.
+
+The relationship between the correction and the reported errors follows directly from the construction. At each observation, the corrected residual is \(3-b\), so
+\[
+\operatorname{MAE}(b)=|3-b|,
+\qquad
+\operatorname{MSE}(b)=(3-b)^2.
+\]
+These identities explain the three recorded comparisons: \(b=0\) yields MAE \(3\) and MSE \(9\); \(b=1.5\) yields MAE \(1.5\) and MSE \(2.25\); and \(b=3\) yields zero for both measures. The identities are algebraic consequences of the five observations, not additional experimental measurements.
+
+This example thus illustrates additive adjustment under a deliberately fixed prediction rule. The baseline's error is attributable to its omitted constant for these observations. The calculation does not establish that other prediction rules have the same limitation, nor does it supply a comparison with other correction procedures.
+
+\subsection{Residual Correction and Evaluation Data Reuse}
+The correction depends on the observed targets through the residuals \(y_i-2x_i\). Those same targets then enter the error calculation for the corrected predictions. The dependency is explicit: observations determine residuals, residuals determine the scalar correction, and the corrected predictions are evaluated against the original observations.
+
+Because every residual equals \(3\), adding their mean removes the entire recorded discrepancy. Zero error is therefore fully explained by the supplied target relation and the reuse of these observations. It establishes exact agreement within this finite calculation. There is no held-out measurement from which to assess performance on separate observations.
+
+The intermediate offset also has a limited interpretation. It shows how a partial correction changes the two recorded error measures on the same five points. It does not add an independent evaluation or demonstrate robustness across datasets or repeated trials. Only one deterministic calculation is reported.
+
+The relevant evaluation distinction is consequently between inspecting the arithmetic on the correction observations and obtaining separate empirical evidence. This note provides the former. Making the dependency visible supports an accurate reading of the result while preserving the finite scope of the demonstration.
+\section{Method}
+% Fill the method.
+\section{Experiments}
+% Fill the experiments.
+\section{Conclusion}
+% Fill the conclusion.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
+**INSTRUCTION**: 
+1. Identify missing sections in `template.tex`.
+2. Generate LaTeX content for those sections based on `outline.json`.
+3. Construct tables using data from `experimental_log.md`.
+4. Insert figures using the filenames from the 'figures_list' input.
+5. Use citations from the Reference Library.
+6. Return the **full** compilable LaTeX file.
+
+
+[SELECTED FIGURE SOURCE PROVENANCE — USER-AUTHORIZED ADAPTATION]
+
+These exact worker sources produced the selected figure previews. Their copies are bundled beside the manuscript at the listed relative paths. Reference them; do not reconstruct, embed, rename or replace R/ggplot2 or TikZ figure recipes. Preserve numerical/algorithm discussion. The runtime maintains a visible Figure source provenance section before compilation and review; preserve that section and the supplied figure images. The manifest, source checksums and renderer inputs are authoritative.
+
+{
+  "schema_version": 1,
+  "policy": "selected-worker-code-v1",
+  "figures": [
+    {
+      "figure_id": "fig_intercept_error",
+      "image_path": "figures/fig_intercept_error.jpg",
+      "backend": "ggplot2",
+      "original_directory": "figure_sources/dbde6f9736a740f2b86d232ff005fd17",
+      "source": "figure_code/fig_intercept_error/source.R",
+      "source_sha256": "d2164cacbb40ae272e285dd0123744ced626b06c00bd67f9d17f1f866a3da3f4",
+      "preview_sha256": "bb877bcc650d17ffaba1c0b57232fd68fb0c7d89693e7975c0eb64710e18e6b3",
+      "files": {
+        "figure_code/fig_intercept_error/source.R": "d2164cacbb40ae272e285dd0123744ced626b06c00bd67f9d17f1f866a3da3f4",
+        "figure_code/fig_intercept_error/render.json": "ed675661a9c9b1b5cd7447fba9502ae76256b63bc9467535dfb77582bfbdb130",
+        "figure_code/fig_intercept_error/figure.pdf": "aa5b2daae4947353514d8244cbdf319bb492a789f4bddb4c23350d255845c4fd",
+        "figure_code/fig_intercept_error/preview.jpg": "bb877bcc650d17ffaba1c0b57232fd68fb0c7d89693e7975c0eb64710e18e6b3",
+        "figure_code/fig_intercept_error/worker.R": "6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba",
+        "figure_code/fig_intercept_error/sessionInfo.txt": "f8073055c2f9ee9c1ae02f85a5a33a981ddbd3e56d6181f5eea24cd8dc9957b8"
+      }
+    },
+    {
+      "figure_id": "fig_residual_workflow",
+      "image_path": "figures/fig_residual_workflow.jpg",
+      "backend": "tikz",
+      "original_directory": "figure_sources/759f443e84894e47a2895fafea4b63d7",
+      "source": "figure_code/fig_residual_workflow/source.tex",
+      "source_sha256": "6f198c754d86c280d502725d53a5839058bbbc68480fa50ee82d1dd30cc77e65",
+      "preview_sha256": "b773cc2a818d0d4df340303d102adfd3a42c99ee4fa7fd83da528045b3457565",
+      "files": {
+        "figure_code/fig_residual_workflow/source.tex": "6f198c754d86c280d502725d53a5839058bbbc68480fa50ee82d1dd30cc77e65",
+        "figure_code/fig_residual_workflow/render.json": "3f04c79ad5d385fe0d7381539a65a136302b2ef29c9882cf42dc3be444c93203",
+        "figure_code/fig_residual_workflow/figure.pdf": "933e053a2cb858500e219c91a40ea0e87add49ce2d2033f9d64f19ef4ef899d0",
+        "figure_code/fig_residual_workflow/preview.jpg": "b773cc2a818d0d4df340303d102adfd3a42c99ee4fa7fd83da528045b3457565"
+      }
+    }
+  ]
+}
+
+--- EXACT ARTIFACT: figure_code/fig_intercept_error/source.R; SHA256 d2164cacbb40ae272e285dd0123744ced626b06c00bd67f9d17f1f866a3da3f4 ---
+library(ggplot2)
+
+results <- data.frame(b = c(0, 1.5, 3), mse = c(9, 2.25, 0))
+
+manuscript_caption <- "Three recorded corrections evaluated on the same five synthetic observations used to determine the correction. No stochastic repetitions or held-out evaluation."
+
+fig_intercept_error <- ggplot(results, aes(x = b, y = mse)) +
+  geom_point(
+    shape = 21,
+    size = 4.2,
+    stroke = 0.6,
+    fill = "#0072B2",
+    colour = "#004A73",
+    alpha = 1
+  ) +
+  annotate(
+    "text",
+    x = c(0, 1.5, 3),
+    y = c(9.45, 2.70, 0.45),
+    label = c("(0, 9)", "(1.5, 2.25)", "(3, 0)"),
+    hjust = 0.5,
+    vjust = 0,
+    size = 12 * 25.4 / 72.27,
+    family = "sans",
+    fontface = "plain",
+    colour = "#1F2937"
+  ) +
+  scale_x_continuous(
+    breaks = c(0, 1.5, 3),
+    labels = c("0", "1.5", "3"),
+    expand = c(0, 0)
+  ) +
+  scale_y_continuous(
+    breaks = c(0, 2.25, 4.5, 6.75, 9),
+    labels = c("0", "2.25", "4.5", "6.75", "9"),
+    expand = c(0, 0)
+  ) +
+  coord_cartesian(
+    xlim = c(-0.35, 3.35),
+    ylim = c(-0.6, 10.2),
+    expand = FALSE
+  ) +
+  labs(
+    title = paste(
+      "Recorded Mean Squared Error",
+      "at Three Intercept Corrections",
+      sep = "\n"
+    ),
+    x = "Added intercept correction b",
+    y = "Mean squared error"
+  ) +
+  theme_classic(base_size = 11, base_family = "sans") +
+  theme(
+    plot.background = element_rect(fill = "white", colour = NA),
+    panel.background = element_rect(fill = "white", colour = NA),
+    panel.border = element_blank(),
+    panel.ontop = FALSE,
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(
+      colour = "#E5E7EB",
+      linewidth = 0.3
+    ),
+    panel.grid.minor = element_blank(),
+    axis.line = element_blank(),
+    axis.line.x.bottom = element_line(
+      colour = "#6B7280",
+      linewidth = 0.4
+    ),
+    axis.line.y.left = element_line(
+      colour = "#6B7280",
+      linewidth = 0.4
+    ),
+    axis.line.x.top = element_blank(),
+    axis.line.y.right = element_blank(),
+    axis.ticks = element_line(
+      colour = "#6B7280",
+      linewidth = 0.35
+    ),
+    axis.ticks.length = ggplot2::unit(3, "pt"),
+    axis.text = element_text(
+      size = 11,
+      face = "plain",
+      colour = "#222222",
+      angle = 0
+    ),
+    axis.title = element_text(
+      size = 13,
+      face = "plain",
+      colour = "#222222"
+    ),
+    axis.title.x = element_text(margin = margin(t = 10, unit = "pt")),
+    axis.title.y = element_text(margin = margin(r = 10, unit = "pt")),
+    plot.title.position = "panel",
+    plot.title = element_text(
+      family = "sans",
+      size = 16,
+      face = "bold",
+      colour = "#111827",
+      hjust = 0,
+      margin = margin(b = 12, unit = "pt")
+    ),
+    plot.margin = margin(t = 18, r = 24, b = 16, l = 18, unit = "pt"),
+    legend.position = "none"
+  )
+
+p <- fig_intercept_error
+
+--- EXACT ARTIFACT: figure_code/fig_intercept_error/worker.R; SHA256 6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba ---
+options(warn=1)
+set.seed(0)
+library(ggplot2)
+source("source.R", local=TRUE)
+if (!exists("p") || !inherits(p, "ggplot")) stop("source.R must define ggplot object p")
+ggsave("figure.pdf", plot=p, width=6.4, height=4.800000000000001, units="in", bg="white")
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")
+
+
+--- EXACT ARTIFACT: figure_code/fig_residual_workflow/source.tex; SHA256 6f198c754d86c280d502725d53a5839058bbbc68480fa50ee82d1dd30cc77e65 ---
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usetikzlibrary{arrows.meta,calc}
+
+\definecolor{ink}{HTML}{1F2937}
+\definecolor{slate}{HTML}{334155}
+\definecolor{correction}{HTML}{227C70}
+\definecolor{bluefill}{HTML}{EAF3FB}
+\definecolor{blueline}{HTML}{829DB4}
+\definecolor{baselinefill}{HTML}{EEF2F6}
+\definecolor{baselineline}{HTML}{8795A5}
+\definecolor{amberfill}{HTML}{FFF3DA}
+\definecolor{amberline}{HTML}{B49B63}
+\definecolor{tealfill}{HTML}{E7F3EF}
+\definecolor{tealline}{HTML}{6B9D92}
+\definecolor{evalfill}{HTML}{F1EFF6}
+\definecolor{evalline}{HTML}{9892A5}
+\definecolor{notegray}{HTML}{4B5563}
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\MathBlock}[1]{%
+  {\fontsize{10.5}{13}\selectfont
+   \mathsurround=0pt$\displaystyle #1$}}
+\newcommand{\Heading}[1]{%
+  {\sffamily\bfseries\fontsize{9.5}{11.4}\selectfont #1}}
+\newcommand{\PanelContent}[2]{%
+  \begin{tabular}{@{}c@{}}
+    \Heading{#1}\\[1.4mm]
+    \usebox{#2}
+  \end{tabular}}
+
+\newsavebox{\InputMath}
+\newsavebox{\TargetMath}
+\newsavebox{\OnesMath}
+\newsavebox{\BaselineMath}
+\newsavebox{\ResidualMath}
+\newsavebox{\MeanMath}
+\newsavebox{\CorrectedMath}
+\newsavebox{\CompareMath}
+\newsavebox{\MSEMath}
+
+\newsavebox{\InputPanel}
+\newsavebox{\TargetPanel}
+\newsavebox{\BaselinePanel}
+\newsavebox{\ResidualPanel}
+\newsavebox{\MeanPanel}
+\newsavebox{\CorrectedPanel}
+\newsavebox{\EvaluationPanel}
+\newsavebox{\AverageText}
+
+\newlength{\PanelPad}
+\setlength{\PanelPad}{2.3mm}
+
+\newlength{\ColA}
+\newlength{\ColB}
+\newlength{\ColC}
+\newlength{\ColD}
+\newlength{\GapAB}
+\newlength{\GapBC}
+\newlength{\GapCD}
+\newlength{\UpperH}
+\newlength{\LeftLowerH}
+\newlength{\MeanH}
+\newlength{\EvalH}
+\newlength{\LowerMaxH}
+\newlength{\RowSep}
+\newlength{\ChannelY}
+\newlength{\InkWidth}
+\newlength{\CanvasW}
+\newlength{\CanvasH}
+\newlength{\LeftMargin}
+\newlength{\xA}
+\newlength{\xB}
+\newlength{\xC}
+\newlength{\xD}
+
+% Measure the complete typeset content, including aligned continuation
+% lines, superscripts, headings, and mathematical spacing.
+\newcommand{\SetColumnWidth}[3]{%
+  \setlength{#1}{\wd#2}%
+  \ifdim\wd#3>#1\relax
+    \setlength{#1}{\wd#3}%
+  \fi
+  \addtolength{#1}{2\PanelPad}%
+}
+\newcommand{\IncludeContentHeight}[2]{%
+  \ifdim\dimexpr\ht#2+\dp#2+2\PanelPad\relax>#1\relax
+    \setlength{#1}{\dimexpr\ht#2+\dp#2+2\PanelPad\relax}%
+  \fi
+}
+
+\begin{document}
+\pagecolor{white}
+\color{ink}
+\fontsize{9.5}{11.4}\selectfont
+
+\sbox{\InputMath}{\MathBlock{
+  \mathbf{x}=(-2,-1,0,1,2)
+}}
+\sbox{\TargetMath}{\MathBlock{
+  \begin{gathered}
+    \mathbf{y}=2\mathbf{x}+3\,\mathbf{1}_5\\[1.5pt]
+    \mathbf{y}=(-1,1,3,5,7)
+  \end{gathered}
+}}
+\sbox{\OnesMath}{%
+  {\fontsize{9}{11}\selectfont
+   $\mathbf{1}_5=(1,1,1,1,1)$}}
+\sbox{\BaselineMath}{\MathBlock{
+  \begin{aligned}
+    \widehat{\mathbf{y}}^{(0)}&=2\mathbf{x}\\[1.5pt]
+                            &=(-4,-2,0,2,4)
+  \end{aligned}
+}}
+\sbox{\ResidualMath}{\MathBlock{
+  \begin{gathered}
+    \mathbf{r}=\mathbf{y}-2\mathbf{x}\\[1.5pt]
+    \mathbf{r}=(3,3,3,3,3)
+  \end{gathered}
+}}
+\sbox{\MeanMath}{\MathBlock{
+  b=\frac{1}{5}\sum_{i=1}^{5}r_i=3
+}}
+\sbox{\CorrectedMath}{\MathBlock{
+  \begin{aligned}
+    \widehat{\mathbf{y}}^{\,\mathrm{corr}}
+      &=2\mathbf{x}+b\,\mathbf{1}_5\\[1.5pt]
+    \widehat{\mathbf{y}}^{\,\mathrm{corr}}
+      &=(-1,1,3,5,7)
+  \end{aligned}
+}}
+\sbox{\CompareMath}{\MathBlock{
+  \mathbf{y}\quad\text{vs.}\quad
+  \widehat{\mathbf{y}}^{\,\mathrm{corr}}
+}}
+\sbox{\MSEMath}{\MathBlock{
+  \begin{aligned}
+    \mathrm{MSE}
+      &=\frac{1}{5}\sum_{i=1}^{5}
+        \left(y_i-\widehat y_i^{\,\mathrm{corr}}\right)^2\\[1.5pt]
+      &=0
+  \end{aligned}
+}}
+
+\sbox{\InputPanel}{%
+  \PanelContent{Input observations}{\InputMath}}
+\sbox{\TargetPanel}{%
+  \begin{tabular}{@{}c@{}}
+    \Heading{Observed targets}\\[1.4mm]
+    \usebox{\TargetMath}\\[1.0mm]
+    \usebox{\OnesMath}
+  \end{tabular}}
+\sbox{\BaselinePanel}{%
+  \PanelContent{Fixed baseline}{\BaselineMath}}
+\sbox{\ResidualPanel}{%
+  \PanelContent{Observed residuals}{\ResidualMath}}
+\sbox{\MeanPanel}{%
+  \PanelContent{Mean residual}{\MeanMath}}
+\sbox{\CorrectedPanel}{%
+  \PanelContent{Corrected prediction}{\CorrectedMath}}
+\sbox{\EvaluationPanel}{%
+  \begin{tabular}{@{}c@{}}
+    \Heading{\shortstack[c]{Evaluate on the same\\five observations}}
+      \\[1.3mm]
+    \usebox{\CompareMath}\\[1.3mm]
+    \usebox{\MSEMath}
+  \end{tabular}}
+\sbox{\AverageText}{%
+  {\sffamily\fontsize{9}{10.8}\selectfont
+   \shortstack[c]{average\\residuals}}}
+
+\SetColumnWidth{\ColA}{\InputPanel}{\TargetPanel}
+\SetColumnWidth{\ColB}{\BaselinePanel}{\ResidualPanel}
+\SetColumnWidth{\ColC}{\MeanPanel}{\MeanPanel}
+\SetColumnWidth{\ColD}{\CorrectedPanel}{\EvaluationPanel}
+
+\setlength{\GapAB}{5.5mm}
+\setlength{\GapCD}{5.5mm}
+% Label padding plus at least 1.5 mm clearance from both neighboring nodes.
+\setlength{\GapBC}{\dimexpr\wd\AverageText+4.2mm\relax}
+\ifdim\GapBC<16mm
+  \setlength{\GapBC}{16mm}
+\fi
+
+\setlength{\UpperH}{22.5mm}
+\IncludeContentHeight{\UpperH}{\InputPanel}
+\IncludeContentHeight{\UpperH}{\BaselinePanel}
+\IncludeContentHeight{\UpperH}{\CorrectedPanel}
+
+\setlength{\LeftLowerH}{27mm}
+\IncludeContentHeight{\LeftLowerH}{\TargetPanel}
+\IncludeContentHeight{\LeftLowerH}{\ResidualPanel}
+\setlength{\MeanH}{23mm}
+\IncludeContentHeight{\MeanH}{\MeanPanel}
+\setlength{\EvalH}{34mm}
+\IncludeContentHeight{\EvalH}{\EvaluationPanel}
+
+\setlength{\LowerMaxH}{\LeftLowerH}
+\ifdim\MeanH>\LowerMaxH
+  \setlength{\LowerMaxH}{\MeanH}
+\fi
+\ifdim\EvalH>\LowerMaxH
+  \setlength{\LowerMaxH}{\EvalH}
+\fi
+
+\setlength{\RowSep}{%
+  \dimexpr\UpperH/2+\LowerMaxH/2+5.5mm\relax}
+\setlength{\ChannelY}{%
+  \dimexpr-\RowSep-\LowerMaxH/2-5.5mm\relax}
+\setlength{\InkWidth}{%
+  \dimexpr\ColA+\GapAB+\ColB+\GapBC+\ColC+\GapCD+\ColD\relax}
+
+% Preserve the type sizes; expand the width if the measured content needs it.
+\setlength{\CanvasW}{18cm}
+\ifdim\InkWidth>\CanvasW
+  \setlength{\CanvasW}{\InkWidth}
+\fi
+% Including standalone's 5 pt border, the white page has a 16:9 ratio.
+\setlength{\CanvasH}{.5625\CanvasW}
+\addtolength{\CanvasH}{-4.375pt}
+\setlength{\LeftMargin}{\dimexpr\CanvasW/2-\InkWidth/2\relax}
+
+\setlength{\xA}{\dimexpr\LeftMargin+\ColA/2\relax}
+\setlength{\xB}{\dimexpr\LeftMargin+\ColA+\GapAB+\ColB/2\relax}
+\setlength{\xC}{%
+  \dimexpr\LeftMargin+\ColA+\GapAB+\ColB+\GapBC+\ColC/2\relax}
+\setlength{\xD}{\dimexpr\LeftMargin+\InkWidth-\ColD/2\relax}
+
+\begin{tikzpicture}[
+  panel/.style={
+    rectangle,
+    rounded corners=2mm,
+    line width=.7pt,
+    inner xsep=\PanelPad,
+    inner ysep=\PanelPad,
+    outer sep=0pt,
+    align=center,
+    text=ink
+  },
+  dependency/.style={
+    line width=.9pt,
+    line cap=round,
+    line join=round,
+    shorten <=.6pt,
+    shorten >=.6pt,
+    -{Latex[length=2mm,width=1.45mm]}
+  },
+  supplied/.style={dependency,draw=slate},
+  adjustment/.style={dependency,draw=correction},
+  edge label/.style={
+    font=\sffamily\fontsize{9}{10.8}\selectfont,
+    text=ink,
+    fill=white,
+    inner xsep=.6mm,
+    inner ysep=.35mm,
+    outer sep=0pt,
+    align=center
+  }
+]
+
+\node[panel,fill=bluefill,draw=blueline,
+      minimum width=\ColA,minimum height=\UpperH]
+  (input) at (\xA,0) {\usebox{\InputPanel}};
+
+\node[panel,fill=bluefill,draw=blueline,
+      minimum width=\ColA,minimum height=\LeftLowerH]
+  (targets) at (\xA,-\RowSep) {\usebox{\TargetPanel}};
+
+\node[panel,fill=baselinefill,draw=baselineline,
+      minimum width=\ColB,minimum height=\UpperH]
+  (baseline) at (\xB,0) {\usebox{\BaselinePanel}};
+
+\node[panel,fill=amberfill,draw=amberline,
+      minimum width=\ColB,minimum height=\LeftLowerH]
+  (residuals) at (\xB,-\RowSep) {\usebox{\ResidualPanel}};
+
+\node[panel,fill=tealfill,draw=tealline,
+      minimum width=\ColC,minimum height=\MeanH]
+  (mean) at (\xC,-\RowSep) {\usebox{\MeanPanel}};
+
+\node[panel,fill=tealfill,draw=tealline,
+      minimum width=\ColD,minimum height=\UpperH]
+  (corrected) at (\xD,0) {\usebox{\CorrectedPanel}};
+
+\node[panel,fill=evalfill,draw=evalline,
+      minimum width=\ColD,minimum height=\EvalH]
+  (evaluation) at (\xD,-\RowSep) {\usebox{\EvaluationPanel}};
+
+% 1. Supplied inputs to the fixed baseline.
+\draw[supplied] (input.east) -- (baseline.west);
+
+% 2. Baseline values used to calculate observed residuals.
+\draw[supplied] (baseline.south) -- (residuals.north);
+
+% 3. Observed targets used to calculate residuals.
+\draw[supplied] (targets.east) -- (residuals.west);
+
+% 4. Residual averaging.
+\draw[adjustment]
+  (residuals.east)
+  -- node[edge label,midway,above=1.5mm]
+       {\usebox{\AverageText}}
+  (mean.west);
+
+% 5. Baseline contribution to the corrected prediction.
+\draw[supplied]
+  ($(baseline.east)+(0,3.5mm)$)
+  -- node[edge label,midway,above=1.5mm]
+       {\MathBlock{2\mathbf{x}}}
+  ($(corrected.west)+(0,3.5mm)$);
+
+% 6. Scalar correction, entering through a separate lower left port.
+\draw[adjustment,rounded corners=1.6mm]
+  (mean.north)
+  -- (\xC,-5.5mm)
+  -- node[edge label,midway,above=1.5mm]
+       {\MathBlock{b=3}}
+  ($(corrected.west)+(0,-5.5mm)$);
+
+% 7. Corrected values passed to evaluation.
+\draw[supplied] (corrected.south) -- (evaluation.north);
+
+% 8. A dedicated channel carries the same observed targets to evaluation.
+\draw[supplied,rounded corners=1.8mm]
+  (targets.south)
+  -- (\xA,\ChannelY)
+  -- node[edge label,midway,below=1.5mm]
+       {observed targets: same five points}
+  (\xD,\ChannelY)
+  -- (evaluation.south);
+
+\node[
+  anchor=north,
+  inner sep=0pt,
+  outer sep=0pt,
+  text=notegray,
+  font=\sffamily\fontsize{9}{11}\selectfont
+] (scope) at (.5\CanvasW,{\ChannelY-7.8mm})
+  {The correction is computed and evaluated on these same five observations.};
+
+% Center the compact drawing and scope note on the white 16:9 canvas.
+\path
+  let \p1=($(input.north)!.5!(scope.south)$)
+  in coordinate (canvascenter) at (.5\CanvasW,\y1);
+
+\pgfresetboundingbox
+\path[use as bounding box]
+  ([xshift=-.5\CanvasW,yshift=-.5\CanvasH]canvascenter)
+  rectangle
+  ([xshift=.5\CanvasW,yshift=.5\CanvasH]canvascenter);
+
+\end{tikzpicture}
+\end{document}

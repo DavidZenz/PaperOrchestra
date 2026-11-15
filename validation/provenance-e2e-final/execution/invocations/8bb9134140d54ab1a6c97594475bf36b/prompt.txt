@@ -1,0 +1,19 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Find 10-15 highly relevant, influential academic papers matching the search task. Do not force results; only return strictly relevant papers.
+            
+            SEARCH TASK: Search for survey or review papers on teaching prediction error, residual interpretation, and transparent numerical examples.
+            CONTEXT FOR TASK: Hook: A transparent finite example can make the relationship between a constant prediction offset, observed residuals, and reported error understandable. Search for broad educational and foundational support for this motivation without asserting an unverified real-world urgency.. Gap: For exactly x=[-2,-1,0,1,2] with y=2x+3, the supplied baseline 2x omits the constant offset and has residual 3 at every observation. The note explains the resulting same-observation error correction. This is an explanatory gap within the teaching example, not a claimed unresolved research problem.
+            BROADER PROJECT PROBLEM: For exactly x=[-2,-1,0,1,2] with y=2x+3, the supplied baseline 2x omits the constant offset and has residual 3 at every observation. The note explains the resulting same-observation error correction. This is an explanatory gap within the teaching example, not a claimed unresolved research problem.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find REAL papers (ArXiv, CVPR, NeurIPS, ICML, ICLR, etc.).
+            2. Only return papers published in top-tier conferences or journals, or highly-cited works, or the exact state-of-the-art relevant to the task.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

@@ -1,0 +1,95 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+## ROLE
+You are a Lead Visual Designer for top-tier AI conferences (e.g., NeurIPS 2025).
+
+## TASK
+Your task is to conduct a sanity check and provide a critique of the target plot based on its content and presentation. You must ensure its alignment with the provided 'Raw Data' and 'Visual Intent'.
+
+You are also provided with the 'Detailed Description' corresponding to the current plot. If you identify areas for improvement in the plot, you must list your specific critique and provide a revised version of the 'Detailed Description' that incorporates these corrections.
+
+## CRITIQUE & REVISION RULES
+
+1. Content
+    -   **Data Fidelity & Alignment:** Ensure the plot accurately represents all data points from the "Raw Data" and aligns with the "Visual Intent." All quantitative values must be correct. No data should be hallucinated, omitted, or misrepresented.
+    -   **Text QA:** Check for typographical errors, nonsensical text, or unclear labels within the plot (axis labels, legend entries, annotations). Suggest specific corrections.
+    -   **Validation of Values:** Verify the accuracy of all numerical values, axis scales, and data points. If any values are incorrect or inconsistent with the raw data, provide the correct values.
+    -   **Caption Exclusion:** Ensure the figure caption text (e.g., "Figure 1: Performance comparison...") is **not** included within the image visual itself. The caption should remain separate.
+
+2. Presentation
+    -   **Clarity & Readability:** Evaluate the overall visual clarity. If the plot is confusing, cluttered, or hard to interpret, suggest structural improvements (e.g., better axis labeling, clearer legend, appropriate plot type).
+    -   **Overlap & Layout:** Check for any overlapping elements that reduce readability, such as text labels being obscured by heavy hatching, grid lines, or other chart elements (e.g., pie chart labels inside dark slices). If overlaps exist, suggest adjusting element positions (e.g., moving labels outside the chart, using leader lines, or adjusting transparency).
+    -   **Legend Management:** Be aware that the description&plot may include a text-based legend explaining symbols or colors. Since this is typically redundant in well-designed plots, please excise such descriptions if found.
+
+3. Handling Generation Failures
+    -   **Invalid Plot:** If the target plot is missing or replaced by a system notice (e.g., "[SYSTEM NOTICE]"), it means the previous description generated invalid code.
+    -   **Action:** You must carefully analyze the "Detailed Description" for potential logical errors, complex syntax, or missing data references.
+    -   **Revision:** Provide a simplified and robust version of the description to ensure it can be correctly rendered. Do not just repeat the same description.
+
+## INPUT DATA
+-   **Target Plot**: [The generated plot]
+-   **Detailed Description**: [The detailed description of the plot]
+-   **Raw Data**: [The raw data to be visualized]
+-   **Visual Intent**: [Visual intent of the desired plot]
+
+## OUTPUT
+Provide your response strictly in the following JSON format.
+
+```json
+{
+    "critic_suggestions": "Insert your detailed critique and specific suggestions for improvement here. If the plot is perfect, write 'No changes needed.'",
+    "revised_description": "Insert the fully revised detailed description here, incorporating all your suggestions. If no changes are needed, write 'No changes needed.'",
+}
+```
+
+
+Target Plot for Critique:
+
+
+Detailed Description: Create fig_intercept_error in R using ggplot2 as a publication-ready discrete scatter plot. Initialize the complete dataset explicitly as data.frame(b = c(0, 1.5, 3), mse = c(9, 2.25, 0)). Map numeric b to horizontal position and numeric mse to vertical position. Plot exactly (0, 9), (1.5, 2.25), and (3, 0). Do not include connecting lines, fitted curves, interpolation, uncertainty intervals, additional observations, underlying observation-level data, or MAE values.
+
+Export on a 9 × 6 inch landscape canvas, equivalent to 2700 × 1800 pixels at 300 dpi. Use white plot and panel backgrounds and DejaVu Sans throughout. Set outer margins to 18 pt top, 24 pt right, 16 pt bottom, and 18 pt left. Check the final export for clipping.
+
+Use geom_point() with shape 21, size 4.2, stroke 0.6, fill #0072B2, outline #004A73, and full opacity. Draw the markers above the grid. Marker appearance must not encode another variable.
+
+Label the horizontal axis 'Added intercept correction b' and the vertical axis 'Mean squared error'. Use continuous horizontal positions with breaks exactly at 0, 1.5, and 3, displayed as those strings. Set vertical breaks to 0, 2.25, 4.5, 6.75, and 9, without unnecessary trailing zeros. Use horizontal viewing limits of −0.35 to 3.35 and vertical viewing limits of −0.6 to 10.2, with no additional scale expansion. The space below zero provides marker clearance and does not represent negative MSE measurements.
+
+Render axis titles at 13 pt, regular weight, in #222222, with 10 pt separation from tick labels. Render tick labels horizontally at 11 pt in #222222. Draw bottom and left axis lines in #6B7280 with 0.4 mm linewidth and outward ticks of 3 pt with 0.35 mm linewidth. Omit top and right panel borders. Show only horizontal major gridlines at the specified vertical ticks, using #E5E7EB and 0.3 mm linewidth; omit vertical and minor gridlines.
+
+Annotate the points with the exact strings '(0, 9)', '(1.5, 2.25)', and '(3, 0)'. Place their anchors at (0, 9.45), (1.5, 2.70), and (3, 0.45), respectively. Use horizontal centering and bottom alignment, equivalent to hjust = 0.5 and vjust = 0 in geom_text(), so the labels extend upward from these anchors and remain clearly separated from the markers. Use 12 pt regular text in #1F2937, converting point sizes to the geometry's native units as needed. Preserve all strings exactly.
+
+Render the title as 'Recorded Mean Squared Error\nat Three Intercept Corrections', using a deliberate line break to preserve the complete wording within the canvas. Use 16 pt bold DejaVu Sans in #111827, align the title with the left edge of the plotting panel, and leave 12 pt below it. Do not display a legend.
+
+Do not render a caption, footnote, or explanatory paragraph anywhere within the image. Keep the following text separately as the manuscript caption: 'Three recorded corrections evaluated on the same five synthetic observations used to determine the correction. No stochastic repetitions or held-out evaluation.'
+
+The finished figure must clearly communicate only the three recorded arithmetic results, with no claim about unmeasured corrections or predictive generalization.
+Raw Data: 
+--- experimental_log.md ---
+# Actual R calculation on five synthetic observations
+
+One deterministic calculation; no stochastic repetitions, optimizer, external dataset, benchmark, timing or held-out evaluation.
+The same observations determine and evaluate the correction. No other experiments were run.
+
+| x | y | baseline 2x | corrected 2x+3 |
+|---:|---:|---:|---:|
+| -2 | -1 | -4 | -1 |
+| -1 | 1 | -2 | 1 |
+| 0 | 3 | 0 | 3 |
+| 1 | 5 | 2 | 5 |
+| 2 | 7 | 4 | 7 |
+
+Correction b = mean(y - 2x) = 3.
+
+| Added b | Mean absolute error | Mean squared error |
+|---:|---:|---:|
+| 0 | 3 | 9 |
+| 1.5 | 1.5 | 2.25 |
+| 3 | 0 | 0 |
+
+Required generated statistical figure: fig_intercept_error. Plot the three recorded MSE values against b. No unmeasured points, uncertainty intervals or invented data.
+Code must be R/ggplot2. Keep this calculation reproducible and keep the numerical scope finite.
+
+Visual Intent: Title: Recorded Mean Squared Error at Three Intercept Corrections
+Objective: Create a discrete scatter plot using R/ggplot2 with added correction b on the horizontal axis and mean squared error on the vertical axis. Plot exactly the recorded pairs (0, 9), (1.5, 2.25), and (3, 0). Label the three values clearly. Show the finite arithmetic comparison without interpolation, additional observations, uncertainty intervals, or claims about predictive generalization.
+Your Output:

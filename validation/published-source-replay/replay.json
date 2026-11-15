@@ -1,0 +1,29 @@
+{
+  "llm_calls": 0,
+  "published_source_root": "/Users/davidzenz/PaperOrchestra/output/pdf/manuscript",
+  "figures": [
+    {
+      "figure_id": "fig_intercept_error",
+      "command": [
+        "/opt/homebrew/opt/r/bin/Rscript",
+        "--vanilla",
+        "worker.R"
+      ],
+      "preview_identical": true,
+      "source_identical": true
+    },
+    {
+      "figure_id": "fig_residual_workflow",
+      "command": [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "source.tex"
+      ],
+      "preview_identical": true,
+      "source_identical": true
+    }
+  ],
+  "all_identical": true
+}

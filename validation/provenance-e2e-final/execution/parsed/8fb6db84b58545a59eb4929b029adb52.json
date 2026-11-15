@@ -1,0 +1,75 @@
+{
+  "section_name": "Additive correction and evaluation on reused observations",
+  "candidates": [
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Efron's JASA paper directly explains downward bias when observations serve both model fitting and accuracy assessment. It provides foundational context for interpreting zero error after a target-derived correction. [Paper](https://www.tandfonline.com/doi/abs/10.1080/01621459.1986.10478291)."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "This JASA paper distinguishes apparent error on fitted observations from prediction error on independent responses. Its optimism framework directly supports the note's distinction between correcting observed residuals and establishing predictive accuracy. [Paper](https://www.tandfonline.com/doi/abs/10.1198/016214504000000692)."
+    },
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Friedman's influential Annals of Statistics paper formalizes additive updates, including fitting residuals under squared loss. It supplies conceptual background for adding the observed residual of 3 to the baseline, without requiring boosting as an experimental competitor. [Paper](https://www.jstor.org/stable/2699986)."
+    },
+    {
+      "title": "Boosting With the L2 Loss: Regression and Classification",
+      "year": 2003,
+      "reason": "This JASA paper explicitly analyzes repeated residual fitting and its regularization properties. It connects additive residual adjustment with the distinction between improving observed fit and controlling predictive error. [Paper](https://www.tandfonline.com/doi/abs/10.1198/016214503000125)."
+    },
+    {
+      "title": "Generalized Additive Models",
+      "year": 2025,
+      "reason": "Wood's Annual Review of Statistics and Its Application treatment discusses partial-residual fitting, zero residual sums from interpolation, and cross-validation. It provides recent context for separating exact observed fit from predictive assessment; the supplied noiseless offset example remains much simpler. [Paper](https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-112723-034249)."
+    },
+    {
+      "title": "From Fixed-X to Random-X Regression: Bias-Variance Decompositions, Covariance Penalties, and Prediction Error Estimation",
+      "year": 2020,
+      "reason": "This JASA paper carefully distinguishes prediction at existing covariates with independent responses from prediction at new covariates. It helps prevent ambiguity between reusing the exact observed targets and statistical definitions of in-sample prediction error. [Paper](https://www.stat.cmu.edu/~ryantibs/papers/randomx-jasa.pdf)."
+    },
+    {
+      "title": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+      "year": 2024,
+      "reason": "Bates, Hastie, and Tibshirani's JASA paper clarifies the prediction-error quantities estimated by cross-validation and dependence arising from observation reuse. It supports precise conceptual discussion of what an evaluation protocol establishes. [Paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC11412612/)."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Stone's foundational JRSS Series B paper separates constructing a predictor from assessing its predictions using withheld observations. This directly contextualizes why evaluating the correction on its construction data supplies no independent predictive assessment. [Paper](https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1974.tb00994.x)."
+    },
+    {
+      "title": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year": 2010,
+      "reason": "This influential Statistics Surveys review distinguishes risk estimation from model selection and explains the theoretical scope of cross-validation procedures. It provides authoritative background for discussing evaluation protocols without adding benchmarks or measured competitors. [Paper](https://projecteuclid.org/journals/statistics-surveys/volume-4/issue-none/A-survey-of-cross-validation-procedures-for-model-selection/10.1214/09-SS054.pdf)."
+    },
+    {
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "year": 2010,
+      "reason": "This JMLR paper explains how optimizing a criterion on finite observations can bias subsequent performance evaluation. It supports the broader principle that data-dependent adjustment and assessment must be considered together. [Paper](https://www.jmlr.org/papers/v11/cawley10a.html)."
+    },
+    {
+      "title": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year": 2006,
+      "reason": "Varma and Simon's influential BMC Bioinformatics paper demonstrates optimism when the same cross-validation results guide tuning and report accuracy. It reinforces that target-dependent fitting steps belong inside the training portion of an evaluation procedure. [Paper](https://pubmed.ncbi.nlm.nih.gov/16504092/)."
+    },
+    {
+      "title": "Circular Analysis in Systems Neuroscience: The Dangers of Double Dipping",
+      "year": 2009,
+      "reason": "This influential Nature Neuroscience paper explains how data-dependent selection followed by analysis of the same observations can distort conclusions. Its independence argument offers closely related conceptual context for interpreting the reused correction and evaluation targets. [Paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC2841687/)."
+    },
+    {
+      "title": "The Reusable Holdout: Preserving Validity in Adaptive Data Analysis",
+      "year": 2015,
+      "reason": "This Science paper explains why adapting analyses to evaluation results can compromise holdout validity. It provides influential context for observation reuse and the conditions needed for predictive assessment, without requiring its proposed mechanism in the teaching example. [Paper](https://www.nematilab.info/bmijc/assets/091218_paper.pdf)."
+    },
+    {
+      "title": "Leakage and the Reproducibility Crisis in Machine-Learning-Based Science",
+      "year": 2023,
+      "reason": "Kapoor and Narayanan's influential Patterns paper documents how leakage produces overly optimistic evaluation and develops a taxonomy of evaluation failures. It supplies contemporary reporting context for explicitly identifying the shared correction and evaluation observations. [Paper](https://doi.org/10.1016/j.patter.2023.100804)."
+    }
+  ]
+}

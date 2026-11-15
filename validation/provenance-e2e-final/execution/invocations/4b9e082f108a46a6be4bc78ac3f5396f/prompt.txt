@@ -1,0 +1,47 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+Analyze the provided page images of a research paper for formatting issues.
+You must strictly follow the provided formatting guidelines and examples. Do not create rules based on your own assumptions or general knowledge if they are not explicitly supported by the guidelines or contradicted by the examples.
+
+You must output the status for EVERY SINGLE figure and table found in the paper, and then list any other text content or layout issues.
+Pay attention to column margins and page edges. Only report issues if a figure or table clearly overflows into the gutter or margin. Do not flag figures or tables that are simply filling the column width fully.
+
+Formatting Guidelines:
+# Reproducible workflow demonstration
+
+Produce an anonymous short technical teaching note of approximately 700–1000 words
+with the supplied article headings. Keep claims within the finite synthetic
+calculation. Do not describe it as a novel algorithm or a benchmark result.
+No appendix is required. Include the generated MSE plot, generated residual-flow
+diagram and measured error table, with readable captions and no margin overflow.
+Use the existing single-column 11-point article with one-inch margins.
+Keep all author information anonymous. Cite only keys verified by the literature
+stage. The figure source code is retained as a separate reproducibility artifact.
+
+
+Respond in JSON format with the following structure:
+```json
+{
+  "figure_and_tables": {
+    "Figure 1": {
+      "detected_issue": "The figure is too wide and spills into the right margin.",
+      "suggested_fix": "Use `[width=\\linewidth]` in `\\includegraphics` to scale the figure to the column width."
+    },
+    "Table 1": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    # ...
+  },
+  "other_issues": [
+    {
+      "page": "Integer (page number starting from 1)",
+      "element": "String ('Section x, Paragraph y' or other specific location details)",
+      "detected_issue": "String describing the layout or text content issue",
+      "suggested_fix": "String suggesting the fix"
+    },
+    # ...
+  ]
+}
+```

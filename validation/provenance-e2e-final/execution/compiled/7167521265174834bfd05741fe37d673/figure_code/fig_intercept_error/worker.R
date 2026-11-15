@@ -1,0 +1,7 @@
+options(warn=1)
+set.seed(0)
+library(ggplot2)
+source("source.R", local=TRUE)
+if (!exists("p") || !inherits(p, "ggplot")) stop("source.R must define ggplot object p")
+ggsave("figure.pdf", plot=p, width=6.4, height=4.800000000000001, units="in", bg="white")
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")

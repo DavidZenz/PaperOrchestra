@@ -1,0 +1,72 @@
+{
+  "status": "correction_completed",
+  "adaptation": "A004 exact selected-worker source references",
+  "parent_run": "/Users/davidzenz/PaperOrchestra/validation/installed-r-tikz-e2e",
+  "parent_tex_sha256": "69e82fd3ac16bd6c06252b6b299b28fc2ac2000cad55e1ccb4c83643a1814bf7",
+  "parent_pdf_sha256": "e0c9b506fab671497cc605cdc91f0f5fa90c982f9a4a45c57f387adcee035c87",
+  "llm_calls": 0,
+  "peer_review_calls": 0,
+  "removed_alternative_recipe_files": [
+    "fig_intercept_error.R",
+    "fig_residual_workflow.tex"
+  ],
+  "body_unchanged": true,
+  "final_tex_sha256": "8c1e8c7e8cc4b873a6fc9631ce35408a5737dbef4e842c557b5bf3d6dadb0957",
+  "final_pdf_sha256": "2459264781bdfabb1a0f9f5ef98e78de32f595fc41fde5d21a40f7b17a1152d8",
+  "render_command": [
+    "pdflatex",
+    "-no-shell-escape",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "final_paper.tex"
+  ],
+  "source_provenance": {
+    "schema_version": 1,
+    "policy": "selected-worker-code-v1",
+    "figures": [
+      {
+        "figure_id": "fig_intercept_error",
+        "image_path": "figures/fig_intercept_error.jpg",
+        "backend": "ggplot2",
+        "original_directory": "figure_sources/2d0b5e5b99364a3c85791d3e4bc0b610",
+        "source": "figure_code/fig_intercept_error/source.R",
+        "source_sha256": "279a7d4e7d20eb0a6abffb827f647ea3487b0c35e69e61975a2e4105a07dbaf4",
+        "preview_sha256": "0587dd3deb781b4865824259a228818ccfaa0a93adc1b11dfd6dab80eab296f2",
+        "files": {
+          "figure_code/fig_intercept_error/source.R": "279a7d4e7d20eb0a6abffb827f647ea3487b0c35e69e61975a2e4105a07dbaf4",
+          "figure_code/fig_intercept_error/render.json": "bef80fd37859c578d64a698a6bd59e415db447674f790419bd9a8a9585965cbb",
+          "figure_code/fig_intercept_error/figure.pdf": "c87d3470cacfe173a2bb828820927f35c62676ddc5e30ce3604cd22f86d967d5",
+          "figure_code/fig_intercept_error/preview.jpg": "0587dd3deb781b4865824259a228818ccfaa0a93adc1b11dfd6dab80eab296f2",
+          "figure_code/fig_intercept_error/worker.R": "6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba",
+          "figure_code/fig_intercept_error/sessionInfo.txt": "f8073055c2f9ee9c1ae02f85a5a33a981ddbd3e56d6181f5eea24cd8dc9957b8"
+        }
+      },
+      {
+        "figure_id": "fig_residual_workflow",
+        "image_path": "figures/fig_residual_workflow.jpg",
+        "backend": "tikz",
+        "original_directory": "figure_sources/ffbaa274ed3f459a9578874478418d16",
+        "source": "figure_code/fig_residual_workflow/source.tex",
+        "source_sha256": "0e593c805cefd9d6ce898527f7009807405f913ce88197b51715f01f592cbfee",
+        "preview_sha256": "39402fdf4b1e182030650f9846ac9c921a844e2c3b6f0f2c5ba653309236a9f1",
+        "files": {
+          "figure_code/fig_residual_workflow/source.tex": "0e593c805cefd9d6ce898527f7009807405f913ce88197b51715f01f592cbfee",
+          "figure_code/fig_residual_workflow/render.json": "35cb9137b37730279e0e29e5c69c922a3887752fe657c7498c73619dbfd4bc2f",
+          "figure_code/fig_residual_workflow/figure.pdf": "f3850f43640415321ef10eb1e1d49806308347d40b23af67bb79c3e934113ea4",
+          "figure_code/fig_residual_workflow/preview.jpg": "39402fdf4b1e182030650f9846ac9c921a844e2c3b6f0f2c5ba653309236a9f1"
+        }
+      }
+    ]
+  },
+  "note": "Requested source-reference correction of historical accepted manuscript. No new research review or full workflow execution claimed; original frozen run remains untouched.",
+  "pdf_checks": {
+    "pages": 6,
+    "first_five_pages_pixel_identical": true,
+    "source_paths_and_hashes_visible_and_copyable": true,
+    "manual_scientific_edits": false
+  },
+  "adapter_bundle_sha256": "3db6fc620c05a54ff9d6f7c8ab0464fd027b44b6000a6ee865507dda7cf27679",
+  "published_source_replay": "validation/published-source-replay/replay.json",
+  "validated_with_adapter_bundle_sha256": "735b4837fe9a5a8a521af16cc19634a55297e8297679e517addcbfd24d027026",
+  "updated_adapter_produces_identical_tex": true
+}

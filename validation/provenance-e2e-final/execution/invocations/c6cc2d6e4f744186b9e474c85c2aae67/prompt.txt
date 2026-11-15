@@ -1,0 +1,67 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+[UPSTREAM SYSTEM INSTRUCTION]
+Role: Senior AI Researcher.
+Task: Write the introduction and related work section of a paper.
+
+You will be given a 'template.tex', this is the initial skeleton we outlined for you. 
+Your job is to fill in two sections: Introduction and Related Work. Leave all the other sections untouched.
+
+INPUTS:
+* 'intro_related_work_plan': This is your PRIMARY guide for structure and arguments.
+* 'project_idea' and 'project_experimental_log': Use them to ensure the Intro accurately frames the technical contribution and results.
+* 'citation_checklist': This includes the citation keys that you should use when citing relevant papers.
+* 'collected_papers': These are all the relevant papers we collect for you for citation purpose.
+
+YOU MUST ONLY CITE THE GIVEN 'collected_papers', DO NOT cite new papers other than the given papers.
+
+CITATION REQUIREMENTS:
+- You have access to the abstract of 0 collected papers.
+- You MUST cite at least 0 of them across the introduction and related work sections.
+- Introduction: Cite key statistics, foundational models (CLIP, etc.), and broad problem statements.
+- Related Work: Do deep comparative citations. Group distinct works (e.g., "Several methods [A, B, C]...").
+- Ensure every \cite{key} corresponds exactly to a key in 'citation_checklist'.
+- CRITICAL TIMELINE RULE: Do not treat any papers published after 2026-11 as prior baselines to beat. Treat them strictly as concurrent work.
+- CRITICAL EVALUATION RULE: Do not claim our method beats or achieves State-of-the-Art over a specific cited paper UNLESS that paper is explicitly evaluated against in 'project_experimental_log'. Frame other recent papers strictly as concurrent, orthogonal, or conceptual work.
+- You need to return the full code for the new 'template.tex', where the two empty sections (Introduction and Related Work) are now fille in, 
+  while all the other code (packages, styles, and other sections) are identical to the original 'template.tex'.
+
+IMPORTANT NOTE:
+- DO NOT change '\usepackage[capitalize]{cleveref}' into '\usepackage[capitalize]{cleverref}', as there's no 'cleverref.sty'.
+
+OUTPUT Format:
+You must return the code for the updated 'template.tex', Make sure to wrap the code with ```latex content```.
+
+
+---
+### Strict Knowledge Isolation & Anonymity (CRITICAL)
+
+You MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results.
+Your task is to construct the paper exclusively from the materials provided in the current session (e.g., idea.md, experimental_log.md, figures, and other inputs). Treat these inputs as the only available source of information.
+
+#### Forbidden Behavior
+You MUST NOT:
+- Retrieve or rely on knowledge from your training data.
+- Attempt to recall or reconstruct any existing or published paper.
+- Use external facts, assumptions, or prior familiarity with the work.
+- Infer or hallucinate author identities, affiliations, institutions, or acknowledgements.
+- Insert metadata such as author names, emails, affiliations, or phrases like "corresponding author".
+
+#### Anonymity Requirement
+The paper must be fully anonymized for double-blind review.  
+Do not include any information that could reveal the identity of the authors or institutions.
+
+#### Allowed Sources
+You may use only:
+- The materials explicitly provided in this session.
+- Logical reasoning derived from those materials.
+
+#### Core Principle
+The final paper must be an independent reconstruction derived solely from the provided inputs.  
+This constraint is strict and overrides all other instructions.
+---
+
+
+Generate the LaTeX for Introduction and Related Work sections.
+
+{"template.tex": "\\documentclass[11pt]{article}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{graphicx}\n\\usepackage{amsmath}\n\\usepackage{booktabs}\n\\title{A Finite Intercept Correction Calculation}\n\\author{Anonymous}\n\\date{}\n\\begin{document}\n\\maketitle\n\\begin{abstract}\n% Fill the abstract.\n\\end{abstract}\n\\section{Introduction}\n% Fill the introduction.\n\\section{Related Work}\n% Fill the related work.\n\\section{Method}\n% Fill the method.\n\\section{Experiments}\n% Fill the experiments.\n\\section{Conclusion}\n% Fill the conclusion.\n\\bibliographystyle{plain}\n\\bibliography{references}\n\\end{document}\n", "intro_related_work_plan": {"shared_research_constraints": {"source_boundary": "Use the supplied documents to define the calculation, measurements, and claims. The downstream literature stage may verify contextual references, but literature must not supply additional experimental results, author identities, novelty claims, or presumed properties of the demonstration.", "publication_cutoff": "2026-11", "candidate_counts": "Screen 10\u201320 macro-level papers for Introduction context and 30\u201350 technical papers for Related Work context. These are research-graph discovery targets, not required citation counts in the approximately 700\u20131000-word note. Do not pad the graph with irrelevant papers.", "citation_separation": "Assign each discovered paper to exactly one tier. Introduction receives broad foundational and survey context; Related Work receives narrowly relevant technical treatments. Do not duplicate citations between the two sections.", "graph_instructions": "Record each verified paper's bibliographic identity, publication date, tier, methodology cluster where applicable, supported contextual statement, and relationship to the supplied calculation. Distinguish literature-supported context from facts established directly by the five observations.", "comparison_boundary": "The only measured comparisons are b=0, b=1.5, and b=3 from experimental_log.md. External literature is conceptual context, not an expanded competitor set."}, "introduction_strategy": {"target_paper_count": "10\u201320", "hook_hypothesis": "A transparent finite example can make the relationship between a constant prediction offset, observed residuals, and reported error understandable. Search for broad educational and foundational support for this motivation without asserting an unverified real-world urgency.", "problem_gap_hypothesis": "For exactly x=[-2,-1,0,1,2] with y=2x+3, the supplied baseline 2x omits the constant offset and has residual 3 at every observation. The note explains the resulting same-observation error correction. This is an explanatory gap within the teaching example, not a claimed unresolved research problem.", "search_directions": ["Find foundational discussions of prediction residuals and intercept terms in elementary regression; identify 3\u20135 foundational references within the 10\u201320-paper candidate pool.", "Search for survey or review papers on teaching prediction error, residual interpretation, and transparent numerical examples.", "Search for broad methodological discussions explaining why reproducible calculations and retained figure source code matter for inspecting reported numerical results.", "Search for foundational or review discussions distinguishing error on observations used to determine a correction from evaluation on separate observations; use them only to motivate the scope restriction."], "writing_boundary": "Keep the Introduction at the level of motivation and scope. Reserve exact correction procedures, technical limitations, and dependency citations for Method, Experiments, or Related Work.", "citation_candidates": []}, "related_work_strategy": {"target_paper_count": "30\u201350", "overview": "Investigate two technical context clusters that precede or explain the supplied arithmetic. Search recent relevant work published no later than 2026-11, while retaining only verified and directly useful references. Do not frame this teaching note as outperforming external methods or establishing a new algorithm.", "subsections": [{"subsection_title": "Fixed-Predictor Intercept Adjustment", "methodology_cluster": "Additive intercept correction with a fixed prediction rule", "sota_investigation_mission": "Screen approximately 15\u201325 technical papers or reports about estimating an additive constant while retaining a fixed prediction rule. Include recent treatments available through 2026-11 for conceptual context. Determine how their formulations relate to the supplied baseline 2x and residual mean, without adding empirical competitors or importing their results.", "limitation_hypothesis": "In the supplied calculation, retaining the baseline's zero intercept leaves a constant residual of 3. This limitation is established for the recorded baseline only; it must not be attributed to external methods without verified evidence.", "limitation_search_queries": ["\"fixed slope\" \"intercept\" \"mean residual\"", "\"regression through the origin\" \"constant residual\"", "\"additive constant\" \"prediction correction\" \"squared error\""], "bridge_to_our_method": "The supplied calculation explicitly computes b=mean(y-2x)=3 and adds it to the fixed baseline. Describe this as an elementary instantiation of the contextual idea, without claiming novelty.", "citation_candidates": []}, {"subsection_title": "Residual Correction and Evaluation Data Reuse", "methodology_cluster": "Residual-based output adjustment assessed on the observations supplying the adjustment", "sota_investigation_mission": "Screen approximately 15\u201325 technical papers or reports addressing residual-based adjustment and the interpretation of evaluation when observations are reused. Include recent relevant treatments through 2026-11. Investigate evaluation protocols conceptually; do not introduce additional datasets, benchmarks, or methods as measured competitors.", "limitation_hypothesis": "An adjustment determined from observed targets can attain zero error on those same observations without providing evidence about unseen observations. For this note, the limitation follows from the explicitly shared correction and evaluation data.", "limitation_search_queries": ["\"mean residual\" \"prediction correction\" \"same data\"", "\"additive correction\" \"in-sample error\"", "\"residual correction\" \"evaluation data reuse\""], "bridge_to_our_method": "The calculation makes the data dependency explicit and reports only the measured finite errors. It does not resolve the absence of separate evaluation; the workflow diagram and discussion make that boundary visible.", "citation_candidates": []}]}}, "project_idea": "# A finite intercept correction calculation with reproducible figures\n\nThis is a synthetic teaching-note workflow demonstration, not a new scientific\nresult. Five inputs x = [-2,-1,0,1,2] have targets y = 2x+3. A fixed predictor\nreturns 2x. Compute the mean residual on these same points, b = mean(y-2x)=3,\nand add it to the predictions. The experimental log is the only measured data.\nThere is no optimizer, architecture, external dataset, stochastic experiment,\nheld-out evaluation or timing result. The calculation is implemented in base R.\nScope all claims to these exact five observations; literature supplies context,\nnot extra measurements or claims of novelty.\n\nGenerate exactly two essential figures, with all source code retained:\n\n1. `fig_intercept_error`: a statistical plot, `plot_type` `plot`, from\n   `experimental_log.md`. Show the three measured MSE values at b=0,1.5,3.\n   Use R/ggplot2. This plot is evidence of the finite arithmetic only.\n2. `fig_residual_workflow`: a scientific schematic, `plot_type` `diagram`, from\n   `idea.md`. Show input x and target y; baseline 2x; residual y-2x; mean\n   residual b=3; corrected prediction 2x+b; evaluation on the same five points.\n   Indicate the data dependency from observed residuals to the scalar correction.\n   Use LaTeX/TikZ, mathematical labels, and no unrelated modules or experiments.\n\nNo figures are supplied. Separate Codex workers must plan, style, generate code,\ncritique the rendered figures, and write captions through the normal workflow.\nThe flow diagram should make the computation understandable; it adds no evidence\nof predictive generalization. Native editable `.R` and `.tex` sources and their\nvector PDFs should be retained alongside the manuscript-compatible previews.\n", "project_experimental_log": "# Actual R calculation on five synthetic observations\n\nOne deterministic calculation; no stochastic repetitions, optimizer, external dataset, benchmark, timing or held-out evaluation.\nThe same observations determine and evaluate the correction. No other experiments were run.\n\n| x | y | baseline 2x | corrected 2x+3 |\n|---:|---:|---:|---:|\n| -2 | -1 | -4 | -1 |\n| -1 | 1 | -2 | 1 |\n| 0 | 3 | 0 | 3 |\n| 1 | 5 | 2 | 5 |\n| 2 | 7 | 4 | 7 |\n\nCorrection b = mean(y - 2x) = 3.\n\n| Added b | Mean absolute error | Mean squared error |\n|---:|---:|---:|\n| 0 | 3 | 9 |\n| 1.5 | 1.5 | 2.25 |\n| 3 | 0 | 0 |\n\nRequired generated statistical figure: fig_intercept_error. Plot the three recorded MSE values against b. No unmeasured points, uncertainty intervals or invented data.\nCode must be R/ggplot2. Keep this calculation reproducible and keep the numerical scope finite.\n", "citation_checklist": [], "collected_papers": []}

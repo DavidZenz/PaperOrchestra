@@ -1,0 +1,153 @@
+{
+  "model_calls": 0,
+  "model_policy": {
+    "schema_version": 1,
+    "default_model": "fallback-fixture",
+    "upstream_model_map": {},
+    "profile": {},
+    "role_overrides": {
+      "peer-reviewer": "reviewer-fixture",
+      "area-chair": "chair-fixture",
+      "content-editor": "content-fixture",
+      "format-editor": "format-fixture"
+    },
+    "resolved_plan": [
+      {
+        "role": "runtime-probe",
+        "requested_model": "runtime-probe",
+        "model": "fallback-fixture",
+        "routing_role": "runtime-probe",
+        "group": null,
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "literature-discovery",
+        "requested_model": "gemini-3-flash-preview",
+        "model": "fallback-fixture",
+        "routing_role": "literature-discovery",
+        "group": "discovery",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "outline",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "outline",
+        "group": "writing",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "literature-synthesis",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "literature-synthesis",
+        "group": "writing",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "section-writer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "section-writer",
+        "group": "writing",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "content-editor",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "content-fixture",
+        "routing_role": "content-editor",
+        "group": "writing",
+        "selected_by": "role override: content-editor"
+      },
+      {
+        "role": "figure-retriever",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "figure-retriever",
+        "group": "figure_planning",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "figure-planner",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "figure-planner",
+        "group": "figure_planning",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "figure-stylist",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "figure-stylist",
+        "group": "figure_planning",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "ggplot2-visualizer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "ggplot2-visualizer",
+        "group": "figure_code",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "tikz-visualizer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "tikz-visualizer",
+        "group": "figure_code",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "figure-critic",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "figure-critic",
+        "group": "figure_review",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "figure-captioner",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "figure-captioner",
+        "group": "figure_review",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "peer-reviewer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "reviewer-fixture",
+        "routing_role": "peer-reviewer",
+        "group": "peer_review",
+        "selected_by": "role override: peer-reviewer"
+      },
+      {
+        "role": "area-chair",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "chair-fixture",
+        "routing_role": "area-chair",
+        "group": "meta_review",
+        "selected_by": "role override: area-chair"
+      },
+      {
+        "role": "format-reviewer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "fallback-fixture",
+        "routing_role": "format-reviewer",
+        "group": "formatting",
+        "selected_by": "--model fallback"
+      },
+      {
+        "role": "format-editor",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "format-fixture",
+        "routing_role": "format-editor",
+        "group": "formatting",
+        "selected_by": "role override: format-editor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+% Fill the abstract.
+\end{abstract}
+\section{Introduction}
+A finite numerical example can make the connection between a prediction offset, observed residuals, and reported error directly inspectable. When every prediction differs from its target by the same amount, the effect of adding a constant can be traced observation by observation. This note uses such a construction to explain what an intercept correction changes and what its measured error establishes. Its purpose is pedagogical: to present a transparent calculation with a clearly stated evaluation scope.
+
+The example contains exactly five inputs, \(x\in\{-2,-1,0,1,2\}\), with corresponding targets \(y=2x+3\). The fixed baseline returns \(2x\), retaining the coefficient of \(x\) in the target construction while omitting its constant term. Consequently, all five baseline predictions have the same residual. This deliberate simplicity isolates the effect of the missing offset: the recorded changes in error can be explained entirely through one additive scalar.
+
+The supplied deterministic calculation is implemented in base R and records three choices of that scalar. The baseline has mean squared error \(9\), while adding the observed mean residual of \(3\) gives mean squared error \(0\) on the five observations. An intermediate adjustment provides a further recorded comparison. These outcomes describe the arithmetic of this particular construction; they do not establish a new algorithm or a performance advantage over external methods.
+
+The explanatory contribution is to connect the fixed prediction rule, the observed residuals, the resulting correction, and the reported errors within one inspectable example. The scope of the evidence is equally central. The same five observations supply the correction and its evaluation, and no separate evaluation observations are recorded. The resulting zero error therefore establishes exact agreement on those observations. The note makes no empirical claim about predictive performance beyond them.
+
+\section{Related Work}
+The calculation connects two technical ideas: adjusting the intercept of a fixed prediction rule and interpreting error when the observations determining an adjustment also evaluate it. The discussion develops these connections directly from the supplied construction. Its measured comparisons are restricted to the three recorded offsets; no external method is evaluated.
+
+\subsection{Fixed-Predictor Intercept Adjustment}
+The prediction family considered here is
+\[
+\widehat{y}_b(x)=2x+b,
+\]
+where the coefficient of \(x\) remains fixed. For each recorded observation, the baseline residual is
+\[
+r_i=y_i-2x_i=3.
+\]
+Averaging these five residuals therefore gives the additive correction \(b=3\). This operation changes only the constant term. It involves no optimizer or architectural modification.
+
+The relationship between the correction and the reported errors follows directly from the construction. At each observation, the corrected residual is \(3-b\), so
+\[
+\operatorname{MAE}(b)=|3-b|,
+\qquad
+\operatorname{MSE}(b)=(3-b)^2.
+\]
+These identities explain the three recorded comparisons: \(b=0\) yields MAE \(3\) and MSE \(9\); \(b=1.5\) yields MAE \(1.5\) and MSE \(2.25\); and \(b=3\) yields zero for both measures. The identities are algebraic consequences of the five observations, not additional experimental measurements.
+
+This example thus illustrates additive adjustment under a deliberately fixed prediction rule. The baseline's error is attributable to its omitted constant for these observations. The calculation does not establish that other prediction rules have the same limitation, nor does it supply a comparison with other correction procedures.
+
+\subsection{Residual Correction and Evaluation Data Reuse}
+The correction depends on the observed targets through the residuals \(y_i-2x_i\). Those same targets then enter the error calculation for the corrected predictions. The dependency is explicit: observations determine residuals, residuals determine the scalar correction, and the corrected predictions are evaluated against the original observations.
+
+Because every residual equals \(3\), adding their mean removes the entire recorded discrepancy. Zero error is therefore fully explained by the supplied target relation and the reuse of these observations. It establishes exact agreement within this finite calculation. There is no held-out measurement from which to assess performance on separate observations.
+
+The intermediate offset also has a limited interpretation. It shows how a partial correction changes the two recorded error measures on the same five points. It does not add an independent evaluation or demonstrate robustness across datasets or repeated trials. Only one deterministic calculation is reported.
+
+The relevant evaluation distinction is consequently between inspecting the arithmetic on the correction observations and obtaining separate empirical evidence. This note provides the former. Making the dependency visible supports an accurate reading of the result while preserving the finite scope of the demonstration.
+\section{Method}
+% Fill the method.
+\section{Experiments}
+% Fill the experiments.
+\section{Conclusion}
+% Fill the conclusion.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

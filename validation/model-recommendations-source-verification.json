@@ -1,0 +1,640 @@
+{
+  "adapter_policy": {
+    "utils/gemini_utils.py": "All seven original function ASTs must match; top-level Codex transport initialization/wrapper allowed.",
+    "utils/llm_backend_utils.py": "Fully adapted transport module: existence checked, no upstream byte-equivalence claimed; see references/adaptations.md."
+  },
+  "checks": [
+    {
+      "actual": 1,
+      "expected": 1,
+      "kind": "lock_schema",
+      "ok": true,
+      "path": "upstream-lock.json"
+    },
+    {
+      "actual": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+      "expected": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+      "kind": "lock_commit",
+      "ok": true,
+      "path": "upstream-lock.json"
+    },
+    {
+      "actual": "https://github.com/google-research/paper-orchestra",
+      "expected": "https://github.com/google-research/paper-orchestra",
+      "kind": "lock_repository",
+      "ok": true,
+      "path": "upstream-lock.json"
+    },
+    {
+      "actual": "024fc69a59bda7522f04262a7c21cc918733033c71ccf5a9edd7c3c3ee8ddbe3",
+      "expected": "024fc69a59bda7522f04262a7c21cc918733033c71ccf5a9edd7c3c3ee8ddbe3",
+      "kind": "gemini_original_hash_anchor",
+      "ok": true,
+      "path": "utils/gemini_utils.py"
+    },
+    {
+      "actual": "c6dc3e5d36d85adaae931b8036327756c630cccb8f1dddc9d9282d1eb4c1a038",
+      "expected": "c6dc3e5d36d85adaae931b8036327756c630cccb8f1dddc9d9282d1eb4c1a038",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/agents/content_refinement_agent.py"
+    },
+    {
+      "actual": "b0eac8f21c6a3a93af07e32aa36eedff4e9ad31a228ea8fc2fd23884cc232128",
+      "expected": "b0eac8f21c6a3a93af07e32aa36eedff4e9ad31a228ea8fc2fd23884cc232128",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/agents/literature_review_agent.py"
+    },
+    {
+      "actual": "bc1724362938e5ed2ff96f509c0d0a6169c55461b0ab860bb9cd52a4a0d7e169",
+      "expected": "bc1724362938e5ed2ff96f509c0d0a6169c55461b0ab860bb9cd52a4a0d7e169",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/agents/outline_agent.py"
+    },
+    {
+      "actual": "5119de3077212f227aafde0659a87e582decfa950c0cf8e62da0238f87d310b0",
+      "expected": "5119de3077212f227aafde0659a87e582decfa950c0cf8e62da0238f87d310b0",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/agents/plotting_agent.py"
+    },
+    {
+      "actual": "747e150ee450a7ad6a9d50b6f4a31e20e643609d619e1183de7d28e83a6f015e",
+      "expected": "747e150ee450a7ad6a9d50b6f4a31e20e643609d619e1183de7d28e83a6f015e",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/agents/section_writing_agent.py"
+    },
+    {
+      "actual": "c9f7ef5a1d5f0f5befb72662912fc2e66127628bc320594984e6bc5a22ccf8a6",
+      "expected": "c9f7ef5a1d5f0f5befb72662912fc2e66127628bc320594984e6bc5a22ccf8a6",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/paper_writer.py"
+    },
+    {
+      "actual": "f2bf293617ec1f6f2b8a60e1d40f109f61f902d7d61226e123da10105d01f1f6",
+      "expected": "f2bf293617ec1f6f2b8a60e1d40f109f61f902d7d61226e123da10105d01f1f6",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/paper_writer_with_plotting.py"
+    },
+    {
+      "actual": "539c0584d8e85505a17495f9a646c1551201e5a1c95264464516b1fcc5ff6a59",
+      "expected": "539c0584d8e85505a17495f9a646c1551201e5a1c95264464516b1fcc5ff6a59",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/prompts/content_refinement_agent.py"
+    },
+    {
+      "actual": "bac340a9721f03dc53325317256bcf11c39b9168f22be49af8616a7f2de9d04b",
+      "expected": "bac340a9721f03dc53325317256bcf11c39b9168f22be49af8616a7f2de9d04b",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/prompts/format_agent.py"
+    },
+    {
+      "actual": "f77594cbf49bc2115acb8cf6b3ff53c3c143e01043a12a34d34ac7861eeda8c4",
+      "expected": "f77594cbf49bc2115acb8cf6b3ff53c3c143e01043a12a34d34ac7861eeda8c4",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/prompts/literature_review_agent.py"
+    },
+    {
+      "actual": "fb9d318dc432208cff41ee1fc340b920ca392e9db4da5dbc1d78a7493ebb2c5b",
+      "expected": "fb9d318dc432208cff41ee1fc340b920ca392e9db4da5dbc1d78a7493ebb2c5b",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/prompts/outline_agent.py"
+    },
+    {
+      "actual": "e222611a6f57708fe8a1b8fbee73ddcc5318eac774cd46f03478118345d3a383",
+      "expected": "e222611a6f57708fe8a1b8fbee73ddcc5318eac774cd46f03478118345d3a383",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "methods/prompts/section_writing_agent.py"
+    },
+    {
+      "actual": "7d1cf9326d68a5fe5a2744d1c284f3333e9781db99600ed3606cf01c7e00062b",
+      "expected": "7d1cf9326d68a5fe5a2744d1c284f3333e9781db99600ed3606cf01c7e00062b",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "autoraters/agent_review.py"
+    },
+    {
+      "actual": "ff356e2aa117b4aa7abbf3994a40ed6aa55982fc68990daf936c7f702a7ade23",
+      "expected": "ff356e2aa117b4aa7abbf3994a40ed6aa55982fc68990daf936c7f702a7ade23",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "utils/common_utils.py"
+    },
+    {
+      "actual": "a0ea73c1d1ec35179271badee185e97b75c6ba1870e7a57ea604e241d35cd37a",
+      "expected": "a0ea73c1d1ec35179271badee185e97b75c6ba1870e7a57ea604e241d35cd37a",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "utils/content_parsing_utils.py"
+    },
+    {
+      "actual": "72b19f8adda3b870bc797c30e1260331ce5e429c346e39b05a0ad932b858df9e",
+      "expected": "72b19f8adda3b870bc797c30e1260331ce5e429c346e39b05a0ad932b858df9e",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "utils/prompt_utils.py"
+    },
+    {
+      "actual": "4a16670a36b681094a7e446b1935a7542b8a538e9fa68baac5f5cde2ee38ef31",
+      "expected": "4a16670a36b681094a7e446b1935a7542b8a538e9fa68baac5f5cde2ee38ef31",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "utils/scholar_utils.py"
+    },
+    {
+      "actual": "1eddecba6a50f2ddd11b51492b26ca5a9bcd6d8301ffd74db428f5e51470ad0a",
+      "expected": "1eddecba6a50f2ddd11b51492b26ca5a9bcd6d8301ffd74db428f5e51470ad0a",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "utils/pdf_utils.py"
+    },
+    {
+      "actual": "ba6e069f393d299a50d08971ce15e6c4fc885e95c37e4ccb74e2d288b077112e",
+      "expected": "ba6e069f393d299a50d08971ce15e6c4fc885e95c37e4ccb74e2d288b077112e",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "utils/paper_banana_utils.py"
+    },
+    {
+      "actual": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "expected": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "kind": "vendor_sha256",
+      "ok": true,
+      "path": "LICENSE"
+    },
+    {
+      "actual": [
+        "call_gemini_with_contents",
+        "call_gemini_with_images",
+        "call_gemini_with_text_prompt",
+        "generate_image_with_gemini",
+        "parse_gemini_json_latex_response",
+        "parse_gemini_json_results",
+        "parse_gemini_latex_results"
+      ],
+      "expected": [
+        "call_gemini_with_contents",
+        "call_gemini_with_images",
+        "call_gemini_with_text_prompt",
+        "generate_image_with_gemini",
+        "parse_gemini_json_latex_response",
+        "parse_gemini_json_results",
+        "parse_gemini_latex_results"
+      ],
+      "kind": "gemini_function_names",
+      "ok": true,
+      "path": "utils/gemini_utils.py"
+    },
+    {
+      "actual": "1fde746c8c4e9483f8ad7536053b8adc637ff54e61435958887d2ce0c170303a",
+      "expected": "1fde746c8c4e9483f8ad7536053b8adc637ff54e61435958887d2ce0c170303a",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "parse_gemini_json_results"
+    },
+    {
+      "actual": "77489e95b1f89985eb4432677cc87fd66f0415af28f92d1e3b68b4b93534d06e",
+      "expected": "77489e95b1f89985eb4432677cc87fd66f0415af28f92d1e3b68b4b93534d06e",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "parse_gemini_latex_results"
+    },
+    {
+      "actual": "b4918ad77b324f295db2bdc10ab4003f6758ff50b845949e2ffe97b511b6a594",
+      "expected": "b4918ad77b324f295db2bdc10ab4003f6758ff50b845949e2ffe97b511b6a594",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "parse_gemini_json_latex_response"
+    },
+    {
+      "actual": "c48917bd4828365c10c9938231f5faeb86e29587c5309ce6b730f21f81c57367",
+      "expected": "c48917bd4828365c10c9938231f5faeb86e29587c5309ce6b730f21f81c57367",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "call_gemini_with_contents"
+    },
+    {
+      "actual": "4831c3f89a6ddca40018477445b52e626a9297e4962c01f8e5723e2bf4534cb5",
+      "expected": "4831c3f89a6ddca40018477445b52e626a9297e4962c01f8e5723e2bf4534cb5",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "call_gemini_with_text_prompt"
+    },
+    {
+      "actual": "5aca6f27079802fe9d26c45f5174c4d797f341c0d5188e870a8e9de12dfb73e9",
+      "expected": "5aca6f27079802fe9d26c45f5174c4d797f341c0d5188e870a8e9de12dfb73e9",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "call_gemini_with_images"
+    },
+    {
+      "actual": "b73c87e34b3397eb32dd34e9192f92257a2dcb84b4be149373ddbbe08fdb3703",
+      "expected": "b73c87e34b3397eb32dd34e9192f92257a2dcb84b4be149373ddbbe08fdb3703",
+      "kind": "gemini_function_ast",
+      "ok": true,
+      "path": "generate_image_with_gemini"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "kind": "adapted_module_exists",
+      "ok": true,
+      "path": "utils/llm_backend_utils.py"
+    },
+    {
+      "actual": "/Users/davidzenz/PaperOrchestra/upstream",
+      "expected": "/Users/davidzenz/PaperOrchestra/upstream",
+      "kind": "source_root",
+      "ok": true,
+      "path": "/Users/davidzenz/PaperOrchestra/upstream"
+    },
+    {
+      "actual": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+      "expected": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+      "kind": "source_commit",
+      "ok": true,
+      "path": "/Users/davidzenz/PaperOrchestra/upstream"
+    },
+    {
+      "actual": "c6dc3e5d36d85adaae931b8036327756c630cccb8f1dddc9d9282d1eb4c1a038",
+      "expected": "c6dc3e5d36d85adaae931b8036327756c630cccb8f1dddc9d9282d1eb4c1a038",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/agents/content_refinement_agent.py"
+    },
+    {
+      "actual": "c6dc3e5d36d85adaae931b8036327756c630cccb8f1dddc9d9282d1eb4c1a038",
+      "expected": "c6dc3e5d36d85adaae931b8036327756c630cccb8f1dddc9d9282d1eb4c1a038",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/agents/content_refinement_agent.py"
+    },
+    {
+      "actual": "b0eac8f21c6a3a93af07e32aa36eedff4e9ad31a228ea8fc2fd23884cc232128",
+      "expected": "b0eac8f21c6a3a93af07e32aa36eedff4e9ad31a228ea8fc2fd23884cc232128",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/agents/literature_review_agent.py"
+    },
+    {
+      "actual": "b0eac8f21c6a3a93af07e32aa36eedff4e9ad31a228ea8fc2fd23884cc232128",
+      "expected": "b0eac8f21c6a3a93af07e32aa36eedff4e9ad31a228ea8fc2fd23884cc232128",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/agents/literature_review_agent.py"
+    },
+    {
+      "actual": "bc1724362938e5ed2ff96f509c0d0a6169c55461b0ab860bb9cd52a4a0d7e169",
+      "expected": "bc1724362938e5ed2ff96f509c0d0a6169c55461b0ab860bb9cd52a4a0d7e169",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/agents/outline_agent.py"
+    },
+    {
+      "actual": "bc1724362938e5ed2ff96f509c0d0a6169c55461b0ab860bb9cd52a4a0d7e169",
+      "expected": "bc1724362938e5ed2ff96f509c0d0a6169c55461b0ab860bb9cd52a4a0d7e169",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/agents/outline_agent.py"
+    },
+    {
+      "actual": "5119de3077212f227aafde0659a87e582decfa950c0cf8e62da0238f87d310b0",
+      "expected": "5119de3077212f227aafde0659a87e582decfa950c0cf8e62da0238f87d310b0",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/agents/plotting_agent.py"
+    },
+    {
+      "actual": "5119de3077212f227aafde0659a87e582decfa950c0cf8e62da0238f87d310b0",
+      "expected": "5119de3077212f227aafde0659a87e582decfa950c0cf8e62da0238f87d310b0",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/agents/plotting_agent.py"
+    },
+    {
+      "actual": "747e150ee450a7ad6a9d50b6f4a31e20e643609d619e1183de7d28e83a6f015e",
+      "expected": "747e150ee450a7ad6a9d50b6f4a31e20e643609d619e1183de7d28e83a6f015e",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/agents/section_writing_agent.py"
+    },
+    {
+      "actual": "747e150ee450a7ad6a9d50b6f4a31e20e643609d619e1183de7d28e83a6f015e",
+      "expected": "747e150ee450a7ad6a9d50b6f4a31e20e643609d619e1183de7d28e83a6f015e",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/agents/section_writing_agent.py"
+    },
+    {
+      "actual": "c9f7ef5a1d5f0f5befb72662912fc2e66127628bc320594984e6bc5a22ccf8a6",
+      "expected": "c9f7ef5a1d5f0f5befb72662912fc2e66127628bc320594984e6bc5a22ccf8a6",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/paper_writer.py"
+    },
+    {
+      "actual": "c9f7ef5a1d5f0f5befb72662912fc2e66127628bc320594984e6bc5a22ccf8a6",
+      "expected": "c9f7ef5a1d5f0f5befb72662912fc2e66127628bc320594984e6bc5a22ccf8a6",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/paper_writer.py"
+    },
+    {
+      "actual": "f2bf293617ec1f6f2b8a60e1d40f109f61f902d7d61226e123da10105d01f1f6",
+      "expected": "f2bf293617ec1f6f2b8a60e1d40f109f61f902d7d61226e123da10105d01f1f6",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/paper_writer_with_plotting.py"
+    },
+    {
+      "actual": "f2bf293617ec1f6f2b8a60e1d40f109f61f902d7d61226e123da10105d01f1f6",
+      "expected": "f2bf293617ec1f6f2b8a60e1d40f109f61f902d7d61226e123da10105d01f1f6",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/paper_writer_with_plotting.py"
+    },
+    {
+      "actual": "539c0584d8e85505a17495f9a646c1551201e5a1c95264464516b1fcc5ff6a59",
+      "expected": "539c0584d8e85505a17495f9a646c1551201e5a1c95264464516b1fcc5ff6a59",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/prompts/content_refinement_agent.py"
+    },
+    {
+      "actual": "539c0584d8e85505a17495f9a646c1551201e5a1c95264464516b1fcc5ff6a59",
+      "expected": "539c0584d8e85505a17495f9a646c1551201e5a1c95264464516b1fcc5ff6a59",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/prompts/content_refinement_agent.py"
+    },
+    {
+      "actual": "bac340a9721f03dc53325317256bcf11c39b9168f22be49af8616a7f2de9d04b",
+      "expected": "bac340a9721f03dc53325317256bcf11c39b9168f22be49af8616a7f2de9d04b",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/prompts/format_agent.py"
+    },
+    {
+      "actual": "bac340a9721f03dc53325317256bcf11c39b9168f22be49af8616a7f2de9d04b",
+      "expected": "bac340a9721f03dc53325317256bcf11c39b9168f22be49af8616a7f2de9d04b",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/prompts/format_agent.py"
+    },
+    {
+      "actual": "f77594cbf49bc2115acb8cf6b3ff53c3c143e01043a12a34d34ac7861eeda8c4",
+      "expected": "f77594cbf49bc2115acb8cf6b3ff53c3c143e01043a12a34d34ac7861eeda8c4",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/prompts/literature_review_agent.py"
+    },
+    {
+      "actual": "f77594cbf49bc2115acb8cf6b3ff53c3c143e01043a12a34d34ac7861eeda8c4",
+      "expected": "f77594cbf49bc2115acb8cf6b3ff53c3c143e01043a12a34d34ac7861eeda8c4",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/prompts/literature_review_agent.py"
+    },
+    {
+      "actual": "fb9d318dc432208cff41ee1fc340b920ca392e9db4da5dbc1d78a7493ebb2c5b",
+      "expected": "fb9d318dc432208cff41ee1fc340b920ca392e9db4da5dbc1d78a7493ebb2c5b",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/prompts/outline_agent.py"
+    },
+    {
+      "actual": "fb9d318dc432208cff41ee1fc340b920ca392e9db4da5dbc1d78a7493ebb2c5b",
+      "expected": "fb9d318dc432208cff41ee1fc340b920ca392e9db4da5dbc1d78a7493ebb2c5b",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/prompts/outline_agent.py"
+    },
+    {
+      "actual": "e222611a6f57708fe8a1b8fbee73ddcc5318eac774cd46f03478118345d3a383",
+      "expected": "e222611a6f57708fe8a1b8fbee73ddcc5318eac774cd46f03478118345d3a383",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "methods/prompts/section_writing_agent.py"
+    },
+    {
+      "actual": "e222611a6f57708fe8a1b8fbee73ddcc5318eac774cd46f03478118345d3a383",
+      "expected": "e222611a6f57708fe8a1b8fbee73ddcc5318eac774cd46f03478118345d3a383",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "methods/prompts/section_writing_agent.py"
+    },
+    {
+      "actual": "7d1cf9326d68a5fe5a2744d1c284f3333e9781db99600ed3606cf01c7e00062b",
+      "expected": "7d1cf9326d68a5fe5a2744d1c284f3333e9781db99600ed3606cf01c7e00062b",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "autoraters/agent_review.py"
+    },
+    {
+      "actual": "7d1cf9326d68a5fe5a2744d1c284f3333e9781db99600ed3606cf01c7e00062b",
+      "expected": "7d1cf9326d68a5fe5a2744d1c284f3333e9781db99600ed3606cf01c7e00062b",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "autoraters/agent_review.py"
+    },
+    {
+      "actual": "ff356e2aa117b4aa7abbf3994a40ed6aa55982fc68990daf936c7f702a7ade23",
+      "expected": "ff356e2aa117b4aa7abbf3994a40ed6aa55982fc68990daf936c7f702a7ade23",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/common_utils.py"
+    },
+    {
+      "actual": "ff356e2aa117b4aa7abbf3994a40ed6aa55982fc68990daf936c7f702a7ade23",
+      "expected": "ff356e2aa117b4aa7abbf3994a40ed6aa55982fc68990daf936c7f702a7ade23",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/common_utils.py"
+    },
+    {
+      "actual": "a0ea73c1d1ec35179271badee185e97b75c6ba1870e7a57ea604e241d35cd37a",
+      "expected": "a0ea73c1d1ec35179271badee185e97b75c6ba1870e7a57ea604e241d35cd37a",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/content_parsing_utils.py"
+    },
+    {
+      "actual": "a0ea73c1d1ec35179271badee185e97b75c6ba1870e7a57ea604e241d35cd37a",
+      "expected": "a0ea73c1d1ec35179271badee185e97b75c6ba1870e7a57ea604e241d35cd37a",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/content_parsing_utils.py"
+    },
+    {
+      "actual": "72b19f8adda3b870bc797c30e1260331ce5e429c346e39b05a0ad932b858df9e",
+      "expected": "72b19f8adda3b870bc797c30e1260331ce5e429c346e39b05a0ad932b858df9e",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/prompt_utils.py"
+    },
+    {
+      "actual": "72b19f8adda3b870bc797c30e1260331ce5e429c346e39b05a0ad932b858df9e",
+      "expected": "72b19f8adda3b870bc797c30e1260331ce5e429c346e39b05a0ad932b858df9e",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/prompt_utils.py"
+    },
+    {
+      "actual": "a3bcaecf8289b050f764fe166e79197dbe24aed9828d63ca27256f3faa6d6742",
+      "expected": "a3bcaecf8289b050f764fe166e79197dbe24aed9828d63ca27256f3faa6d6742",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/scholar_utils.py"
+    },
+    {
+      "actual": "a3bcaecf8289b050f764fe166e79197dbe24aed9828d63ca27256f3faa6d6742",
+      "expected": "a3bcaecf8289b050f764fe166e79197dbe24aed9828d63ca27256f3faa6d6742",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/scholar_utils.py"
+    },
+    {
+      "actual": "30d4a6947ef249b39f357e941467271a85767b4e0a716df27e91451e803aa0e7",
+      "expected": "30d4a6947ef249b39f357e941467271a85767b4e0a716df27e91451e803aa0e7",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/pdf_utils.py"
+    },
+    {
+      "actual": "30d4a6947ef249b39f357e941467271a85767b4e0a716df27e91451e803aa0e7",
+      "expected": "30d4a6947ef249b39f357e941467271a85767b4e0a716df27e91451e803aa0e7",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/pdf_utils.py"
+    },
+    {
+      "actual": "b89caca598c5710b04819a5c86ffc158cec8ec31acf8a153cbdd87df3b4f0c58",
+      "expected": "b89caca598c5710b04819a5c86ffc158cec8ec31acf8a153cbdd87df3b4f0c58",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/paper_banana_utils.py"
+    },
+    {
+      "actual": "b89caca598c5710b04819a5c86ffc158cec8ec31acf8a153cbdd87df3b4f0c58",
+      "expected": "b89caca598c5710b04819a5c86ffc158cec8ec31acf8a153cbdd87df3b4f0c58",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/paper_banana_utils.py"
+    },
+    {
+      "actual": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "expected": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "LICENSE"
+    },
+    {
+      "actual": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "expected": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "LICENSE"
+    },
+    {
+      "actual": "024fc69a59bda7522f04262a7c21cc918733033c71ccf5a9edd7c3c3ee8ddbe3",
+      "expected": "024fc69a59bda7522f04262a7c21cc918733033c71ccf5a9edd7c3c3ee8ddbe3",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/gemini_utils.py"
+    },
+    {
+      "actual": "024fc69a59bda7522f04262a7c21cc918733033c71ccf5a9edd7c3c3ee8ddbe3",
+      "expected": "024fc69a59bda7522f04262a7c21cc918733033c71ccf5a9edd7c3c3ee8ddbe3",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/gemini_utils.py"
+    },
+    {
+      "actual": {
+        "call_gemini_with_contents": "c48917bd4828365c10c9938231f5faeb86e29587c5309ce6b730f21f81c57367",
+        "call_gemini_with_images": "5aca6f27079802fe9d26c45f5174c4d797f341c0d5188e870a8e9de12dfb73e9",
+        "call_gemini_with_text_prompt": "4831c3f89a6ddca40018477445b52e626a9297e4962c01f8e5723e2bf4534cb5",
+        "generate_image_with_gemini": "b73c87e34b3397eb32dd34e9192f92257a2dcb84b4be149373ddbbe08fdb3703",
+        "parse_gemini_json_latex_response": "b4918ad77b324f295db2bdc10ab4003f6758ff50b845949e2ffe97b511b6a594",
+        "parse_gemini_json_results": "1fde746c8c4e9483f8ad7536053b8adc637ff54e61435958887d2ce0c170303a",
+        "parse_gemini_latex_results": "77489e95b1f89985eb4432677cc87fd66f0415af28f92d1e3b68b4b93534d06e"
+      },
+      "expected": {
+        "call_gemini_with_contents": "c48917bd4828365c10c9938231f5faeb86e29587c5309ce6b730f21f81c57367",
+        "call_gemini_with_images": "5aca6f27079802fe9d26c45f5174c4d797f341c0d5188e870a8e9de12dfb73e9",
+        "call_gemini_with_text_prompt": "4831c3f89a6ddca40018477445b52e626a9297e4962c01f8e5723e2bf4534cb5",
+        "generate_image_with_gemini": "b73c87e34b3397eb32dd34e9192f92257a2dcb84b4be149373ddbbe08fdb3703",
+        "parse_gemini_json_latex_response": "b4918ad77b324f295db2bdc10ab4003f6758ff50b845949e2ffe97b511b6a594",
+        "parse_gemini_json_results": "1fde746c8c4e9483f8ad7536053b8adc637ff54e61435958887d2ce0c170303a",
+        "parse_gemini_latex_results": "77489e95b1f89985eb4432677cc87fd66f0415af28f92d1e3b68b4b93534d06e"
+      },
+      "kind": "source_gemini_ast_anchor",
+      "ok": true,
+      "path": "utils/gemini_utils.py"
+    },
+    {
+      "actual": {
+        "call_gemini_with_contents": "c48917bd4828365c10c9938231f5faeb86e29587c5309ce6b730f21f81c57367",
+        "call_gemini_with_images": "5aca6f27079802fe9d26c45f5174c4d797f341c0d5188e870a8e9de12dfb73e9",
+        "call_gemini_with_text_prompt": "4831c3f89a6ddca40018477445b52e626a9297e4962c01f8e5723e2bf4534cb5",
+        "generate_image_with_gemini": "b73c87e34b3397eb32dd34e9192f92257a2dcb84b4be149373ddbbe08fdb3703",
+        "parse_gemini_json_latex_response": "b4918ad77b324f295db2bdc10ab4003f6758ff50b845949e2ffe97b511b6a594",
+        "parse_gemini_json_results": "1fde746c8c4e9483f8ad7536053b8adc637ff54e61435958887d2ce0c170303a",
+        "parse_gemini_latex_results": "77489e95b1f89985eb4432677cc87fd66f0415af28f92d1e3b68b4b93534d06e"
+      },
+      "expected": {
+        "call_gemini_with_contents": "c48917bd4828365c10c9938231f5faeb86e29587c5309ce6b730f21f81c57367",
+        "call_gemini_with_images": "5aca6f27079802fe9d26c45f5174c4d797f341c0d5188e870a8e9de12dfb73e9",
+        "call_gemini_with_text_prompt": "4831c3f89a6ddca40018477445b52e626a9297e4962c01f8e5723e2bf4534cb5",
+        "generate_image_with_gemini": "b73c87e34b3397eb32dd34e9192f92257a2dcb84b4be149373ddbbe08fdb3703",
+        "parse_gemini_json_latex_response": "b4918ad77b324f295db2bdc10ab4003f6758ff50b845949e2ffe97b511b6a594",
+        "parse_gemini_json_results": "1fde746c8c4e9483f8ad7536053b8adc637ff54e61435958887d2ce0c170303a",
+        "parse_gemini_latex_results": "77489e95b1f89985eb4432677cc87fd66f0415af28f92d1e3b68b4b93534d06e"
+      },
+      "kind": "direct_gemini_function_comparison",
+      "ok": true,
+      "path": "utils/gemini_utils.py"
+    },
+    {
+      "actual": "c7c44033a10e2f0271c1d13d24344b3b344361fe3ae34e660445b387ad25a0fd",
+      "expected": "c7c44033a10e2f0271c1d13d24344b3b344361fe3ae34e660445b387ad25a0fd",
+      "kind": "source_committed_sha256",
+      "ok": true,
+      "path": "utils/llm_backend_utils.py"
+    },
+    {
+      "actual": "c7c44033a10e2f0271c1d13d24344b3b344361fe3ae34e660445b387ad25a0fd",
+      "expected": "c7c44033a10e2f0271c1d13d24344b3b344361fe3ae34e660445b387ad25a0fd",
+      "kind": "source_checkout_sha256",
+      "ok": true,
+      "path": "utils/llm_backend_utils.py"
+    }
+  ],
+  "counts": {
+    "gemini_functions_verified": 7,
+    "locked_files": 20,
+    "source_files_verified": 22,
+    "vendor_hashes_verified": 20
+  },
+  "expected_commit": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+  "failures": [],
+  "ok": true,
+  "repository": "https://github.com/google-research/paper-orchestra",
+  "schema_version": 1,
+  "skill_dir": "/Users/davidzenz/PaperOrchestra/paper-orchestra",
+  "source": {
+    "head": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+    "path": "/Users/davidzenz/PaperOrchestra/upstream",
+    "status": "verified"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "section_name": "Foundational support for restricting conclusions to same-observation error",
+  "candidates": [
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Efron's JASA paper directly explains the distinction between fitting and checking a model on the same observations versus predicting future observations. Supports labeling the example's reported reduction as same-observation error, without asserting stochastic bias in its deterministic arithmetic. [Publisher record](https://doi.org/10.1080/01621459.1986.10478291)."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Efron's JASA synthesis explicitly distinguishes fitted residual error from error against independently generated responses. Provides foundational terminology for explaining why correcting the five observed residuals does not itself constitute evaluation on separate observations. [Publisher record](https://doi.org/10.1198/016214504000000692)."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Stone's foundational JRSS Series B paper distinguishes constructing a predictor on one subsample from assessing its predictions on another, including regression examples. Supports the note's scope restriction without suggesting that its elementary offset correction is a research contribution. [Publisher record](https://doi.org/10.1111/j.2517-6161.1974.tb00994.x)."
+    },
+    {
+      "title": "A Leisurely Look at the Bootstrap, the Jackknife, and Cross-Validation",
+      "year": 1983,
+      "reason": "Efron and Gong's influential expository article in The American Statistician introduces statistical error estimation at an accessible mathematical level, including apparent error and prediction-rule assessment. Supplies educational background for distinguishing the worked correction from independent predictive evaluation. [Publisher record](https://doi.org/10.1080/00031305.1983.10483087)."
+    },
+    {
+      "title": "A survey of cross-validation procedures for model selection",
+      "year": 2010,
+      "reason": "Arlot and Celisse's influential Statistics Surveys review organizes cross-validation methods for risk estimation and model selection. Supports a brief explanation that assessing predictive performance involves a different objective and evaluation procedure from reducing residual error on the observations used for fitting. [Published review](https://doi.org/10.1214/09-SS054)."
+    },
+    {
+      "title": "The Relationship Between Variable Selection and Data Agumentation and a Method for Prediction",
+      "year": 1974,
+      "reason": "Allen's foundational Technometrics paper explains PRESS through predicting each observation using the other observations. Its explicit exclusion principle provides a regression-specific reference for distinguishing same-observation residual correction from assessment where the evaluated response was excluded from fitting. [Publisher record](https://doi.org/10.1080/00401706.1974.10489157)."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Efron's JASA paper distinguishes apparent error on a rule's training observations from expected error on future cases and explains cross-validation through observation deletion. Although primarily about classification, its foundational distinction supports only the teaching example's evaluation boundary. [Publisher record](https://doi.org/10.1080/01621459.1983.10477973)."
+    },
+    {
+      "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+      "year": 1995,
+      "reason": "Kohavi's highly influential IJCAI paper reviews accuracy estimation and compares cross-validation with bootstrap methods. Provides broad educational support for treating predictive accuracy assessment as distinct from performance measured on observations used to construct a predictor. [Author-hosted paper](https://ai.stanford.edu/~ronnyk/accEst.pdf)."
+    },
+    {
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "year": 2010,
+      "reason": "Cawley and Talbot's JMLR paper explains how optimizing a finite-sample evaluation criterion can affect subsequent performance assessment. Supports keeping correction determination and independent evaluation conceptually separate; its empirical findings should not be attributed to the noiseless five-point example. [Journal article](https://www.jmlr.org/beta/papers/v11/cawley10a.html)."
+    },
+    {
+      "title": "Bias in error estimation when using cross-validation for model selection",
+      "year": 2006,
+      "reason": "Varma and Simon's highly cited BMC Bioinformatics paper distinguishes error used to tune a classifier from error measured on independent test data. Offers a clear methodological analogy supporting the scope restriction, without requiring nested cross-validation for the supplied arithmetic demonstration. [Publisher article](https://doi.org/10.1186/1471-2105-7-91)."
+    }
+  ]
+}

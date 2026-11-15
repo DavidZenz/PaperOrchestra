@@ -1,0 +1,18 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Identify the SPECIFIC academic paper described by this hint: "research paper or technical report introducing 'R'".
+            
+            CONTEXT: Must-have citation for section covering: Describe experimental_log.md as one deterministic calculation implemented in base R on the five internally specified synthetic observations. Identify b=0 as the supplied baseline, b=1.5 as the recorded intermediate offset, and b=3 as the residual-mean correction. Do not describe these as external competing methods or optimizer trials. Specify R/ggplot2 for fig_intercept_error and LaTeX/TikZ for fig_residual_workflow, as required by idea.md. Plan retention of the exact editable figure sources, vector PDFs, and manuscript-compatible previews as separate reproducibility artifacts. Do not invent software versions, random seeds, hardware, execution times, or additional experiments.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find the EXACT title and year of this paper.
+            2. If the hint refers to a dataset, model architecture, or baseline (e.g., "research paper introducing..."), you MUST find the primary, original paper that introduced it.
+            3. Return EXACTLY 1 candidate paper that matches best.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

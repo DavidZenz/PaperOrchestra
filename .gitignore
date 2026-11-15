@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+/upstream/
+
+# Publish the final provenance run and its replay; keep older raw diagnostics local.
+/validation/*/
+!/validation/provenance-e2e-final/
+!/validation/provenance-e2e-final-replay/
+!/validation/published-source-replay/
+!/validation/controlled-runtime/
+/validation/*.png
+**/matplotlib-cache/
+
+# Manuscript source project is retained; local compilation/QA byproducts are not.
+/output/pdf/manuscript/qa-page-*.png
+/output/pdf/manuscript/compile.log
+/output/pdf/manuscript/final_paper.aux
+/output/pdf/manuscript/final_paper.log

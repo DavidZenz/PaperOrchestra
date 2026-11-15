@@ -1,0 +1,165 @@
+{
+  "model_calls": 0,
+  "model_policy": {
+    "schema_version": 1,
+    "default_model": null,
+    "upstream_model_map": {},
+    "profile": {
+      "schema_version": 1,
+      "name": "openai-balanced-2026-11-15",
+      "default": "gpt-6.1-sol",
+      "groups": {
+        "discovery": "gpt-6-luna",
+        "writing": "gpt-6.1-sol",
+        "figure_planning": "gpt-6.1-sol",
+        "figure_code": "gpt-6.1-sol",
+        "figure_review": "gpt-6.1-terra",
+        "peer_review": "gpt-6-astra",
+        "meta_review": "gpt-6-astra",
+        "formatting": "gpt-6.1-terra"
+      },
+      "roles": {
+        "runtime-probe": "gpt-6-luna"
+      }
+    },
+    "role_overrides": {},
+    "resolved_plan": [
+      {
+        "role": "runtime-probe",
+        "requested_model": "runtime-probe",
+        "model": "gpt-6-luna",
+        "routing_role": "runtime-probe",
+        "group": null,
+        "selected_by": "profile role: runtime-probe"
+      },
+      {
+        "role": "literature-discovery",
+        "requested_model": "gemini-3-flash-preview",
+        "model": "gpt-6-luna",
+        "routing_role": "literature-discovery",
+        "group": "discovery",
+        "selected_by": "profile group: discovery"
+      },
+      {
+        "role": "outline",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "outline",
+        "group": "writing",
+        "selected_by": "profile group: writing"
+      },
+      {
+        "role": "literature-synthesis",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "literature-synthesis",
+        "group": "writing",
+        "selected_by": "profile group: writing"
+      },
+      {
+        "role": "section-writer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "section-writer",
+        "group": "writing",
+        "selected_by": "profile group: writing"
+      },
+      {
+        "role": "content-editor",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "content-editor",
+        "group": "writing",
+        "selected_by": "profile group: writing"
+      },
+      {
+        "role": "figure-retriever",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "figure-retriever",
+        "group": "figure_planning",
+        "selected_by": "profile group: figure_planning"
+      },
+      {
+        "role": "figure-planner",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "figure-planner",
+        "group": "figure_planning",
+        "selected_by": "profile group: figure_planning"
+      },
+      {
+        "role": "figure-stylist",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "figure-stylist",
+        "group": "figure_planning",
+        "selected_by": "profile group: figure_planning"
+      },
+      {
+        "role": "ggplot2-visualizer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "ggplot2-visualizer",
+        "group": "figure_code",
+        "selected_by": "profile group: figure_code"
+      },
+      {
+        "role": "tikz-visualizer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "tikz-visualizer",
+        "group": "figure_code",
+        "selected_by": "profile group: figure_code"
+      },
+      {
+        "role": "figure-critic",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-terra",
+        "routing_role": "figure-critic",
+        "group": "figure_review",
+        "selected_by": "profile group: figure_review"
+      },
+      {
+        "role": "figure-captioner",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-terra",
+        "routing_role": "figure-captioner",
+        "group": "figure_review",
+        "selected_by": "profile group: figure_review"
+      },
+      {
+        "role": "peer-reviewer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6-astra",
+        "routing_role": "peer-reviewer",
+        "group": "peer_review",
+        "selected_by": "profile group: peer_review"
+      },
+      {
+        "role": "area-chair",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6-astra",
+        "routing_role": "area-chair",
+        "group": "meta_review",
+        "selected_by": "profile group: meta_review"
+      },
+      {
+        "role": "format-reviewer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-terra",
+        "routing_role": "format-reviewer",
+        "group": "formatting",
+        "selected_by": "profile group: formatting"
+      },
+      {
+        "role": "format-editor",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-terra",
+        "routing_role": "format-editor",
+        "group": "formatting",
+        "selected_by": "profile group: formatting"
+      }
+    ]
+  }
+}

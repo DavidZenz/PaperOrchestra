@@ -1,0 +1,55 @@
+{
+  "section_name": "Additive correction with fixed predictions: intercept adjustment and residual-mean estimation",
+  "candidates": [
+    {
+      "title": "Intercept corrections and structural change",
+      "year": 1996,
+      "reason": "Clements and Hendry's foundational treatment of additive intercept adjustments to model-based forecasts directly contextualizes retaining a prediction rule while correcting its level. In the supplied example alone, the adjustment is mean(y−2x)=3. [Journal of Applied Econometrics](https://wrap.warwick.ac.uk/id/eprint/18269/)."
+    },
+    {
+      "title": "Best Practices for Postprocessing Ensemble Climate Forecasts. Part I: Selecting Appropriate Recalibration Methods",
+      "year": 2016,
+      "reason": "Explicitly distinguishes unconditional mean adjustment from slope, trend, and variance recalibration through parameter restrictions. Its unit-coefficient mean-adjustment formulation closely matches estimating an additive constant while retaining existing predictions. [Journal of Climate](https://doi.org/10.1175/JCLI-D-15-0868.1)."
+    },
+    {
+      "title": "A panel data approach to economic forecasting: The bias-corrected average forecast",
+      "year": 2009,
+      "reason": "Issler and Lima retain equal forecast-combination weights and estimate an additive bias correction. This provides a direct formulation of correcting the level of an existing prediction rule; only that formulation is relevant here, without importing its forecasts or empirical findings. [Journal of Econometrics](https://www.sciencedirect.com/science/article/pii/S0304407609000177)."
+    },
+    {
+      "title": "Rationality and the Role of Judgement in Macroeconomic Forecasting",
+      "year": 1995,
+      "reason": "Clements examines intercept corrections applied to existing model forecasts. It supplies influential context for additive adjustments and distinguishes judgmental corrections from the teaching example's mechanically calculated residual mean. [The Economic Journal](https://academic.oup.com/ej/article-abstract/105/429/410/5158874)."
+    },
+    {
+      "title": "Some results on generalized difference estimation and generalized regression estimation for finite populations",
+      "year": 1976,
+      "reason": "Cassel, Särndal, and Wretman's classical generalized-difference framework connects predetermined predictions with an additive, sampling-weighted residual correction. Under simple random sampling, the correction to a population prediction mean becomes a sample residual mean. Its target is a population quantity rather than individual fitted values. [Biometrika](https://academic.oup.com/biomet/article-abstract/63/3/615/270941)."
+    },
+    {
+      "title": "Model-Assisted Survey Estimation with Modern Prediction Techniques",
+      "year": 2017,
+      "reason": "Breidt and Opsomer review prediction-based population estimation with residual corrections across classical and modern prediction methods. This provides authoritative context for the prediction-plus-correction decomposition and its sampling assumptions, beyond the supplied same-observation calculation. [Statistical Science](https://doi.org/10.1214/16-STS589)."
+    },
+    {
+      "title": "Prediction-powered inference",
+      "year": 2023,
+      "reason": "Its mean estimator explicitly adds the average labeled residual to the average prediction on unlabeled observations while retaining the prediction model. The residual correction is algebraically close to the supplied offset calculation, although its population-inference setting uses distinct data sources. [Science](https://www.stat.ubc.ca/~john/papers/AngelopoulosScience2023.pdf)."
+    },
+    {
+      "title": "Assumption-lean and data-adaptive post-prediction inference",
+      "year": 2025,
+      "reason": "Explicitly treats an independently trained prediction algorithm as a fixed black box and develops downstream corrections, including an outcome-mean example. Relevant for separating unchanged predictions from estimation adjustments; its adaptive weighting extends beyond the example's single additive constant. [Journal of Machine Learning Research](https://jmlr.org/papers/v26/24-0056.html)."
+    },
+    {
+      "title": "PPI++: Efficient Prediction-Powered Inference",
+      "year": 2026,
+      "reason": "Published in Annals of Applied Statistics in September 2026, following its 2023 preprint. Develops tuned corrections using an unchanged prediction model; the unit-tuning specialization retains the original prediction-plus-mean-residual structure. Useful recent context without introducing another empirical method into the example. [Paper](https://arxiv.org/html/2311.01453v2), [publication record](https://web.stanford.edu/~jduchi/publications.html)."
+    },
+    {
+      "title": "No Free Lunch: Non-Asymptotic Analysis of Prediction-Powered Inference",
+      "year": 2026,
+      "reason": "An ICML 2026 treatment of finite-sample mean estimation using model predictions and residual-based corrections. Supplies current conceptual context for distinguishing population estimation from the exact correction of five recorded observations; its external results need not enter the teaching calculation. [ICML proceedings](https://proceedings.mlr.press/v306/mani26b.html)."
+    }
+  ]
+}
