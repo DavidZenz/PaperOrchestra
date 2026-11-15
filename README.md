@@ -178,6 +178,10 @@ git -C upstream checkout ca1b3fa01c2970fc7cda32d16245db38d57b3f56
 python paper-orchestra/scripts/verify_upstream.py --source upstream
 ```
 
+Four tests are optional when the separate upstream checkout and older historical
+raw run are absent from a fresh clone. The complete development suite passes all
+183 tests; the clean publication export passes 179 with those four skips.
+
 The source verifier checks bundled hashes, the actual upstream Git commit and
 working files, and AST equality of the seven original parser/retry functions.
 The controller tests mock external effects; transport tests also launch labelled

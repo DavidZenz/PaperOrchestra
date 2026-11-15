@@ -47,3 +47,15 @@ bytes and recorded historical absolute paths are preserved.
 Git line-ending conversion is disabled so cloned evidence retains its checksum
 identity. Original upstream code, generated source and raw tool logs retain
 their whitespace rather than being reformatted for publication.
+
+Before pushing, a clean Git archive of the initial publication commit was
+extracted to a separate temporary directory. All 888 exported files matched the
+working files byte-for-byte. The suite discovered 183 tests and completed with
+179 passing, four optional skips and no failures in 23.210 seconds. The skips
+were the three actual-upstream-checkout checks and one older historical-run
+check, because those optional local directories are excluded from Git. The
+complete local suite and actual-upstream comparison passed separately above.
+The clean export reused the existing Python dependency environment and native
+R/TeX installations; it was not a fresh dependency-install test. See
+`publication-checks.json` and `publish-export-tests.log` for the input commit,
+tree hash, log hash and exact skip reasons. No new model calls were made.
