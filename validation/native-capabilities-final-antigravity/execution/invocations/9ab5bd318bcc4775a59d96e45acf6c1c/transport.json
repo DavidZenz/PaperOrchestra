@@ -1,0 +1,35 @@
+{
+  "backend": "antigravity",
+  "mode": "acp",
+  "command": [
+    "/opt/homebrew/bin/agy",
+    "--settings",
+    "{\"agentMode\":\"\",\"toolPermission\":\"request-review\",\"permissions\":{\"deny\":[\"command(*)\",\"unsandboxed(*)\",\"write_file(*)\",\"read_file(*)\",\"execute_url(*)\",\"mcp(*)\",\"read_url(*)\"],\"allow\":[]}}",
+    "acp",
+    "--process-per-session",
+    "--sandbox",
+    "--include-default-customizations=false",
+    "--agent",
+    "paper-orchestra-isolated-worker",
+    "--disable-telemetry",
+    "--log-file",
+    "/Users/davidzenz/PaperOrchestra/validation/native-capabilities-final-antigravity/execution/invocations/9ab5bd318bcc4775a59d96e45acf6c1c/acp-server.log"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\nRead the attached plot. Return only JSON {\"bar_B\":NUMBER}, giving the height of bar B. Do not use tools.",
+  "env": {},
+  "images": [
+    "/Users/davidzenz/PaperOrchestra/validation/native-capabilities-final-antigravity/execution/invocations/9ab5bd318bcc4775a59d96e45acf6c1c/attachment-0.png"
+  ],
+  "acp": {
+    "config_strategy": "session-options",
+    "model": "gemini-3.8-flash",
+    "effort": "medium",
+    "model_option": "model",
+    "effort_option": "thought_level",
+    "expected_mode": "default",
+    "allowed_search_tools": [],
+    "search_evidence": "native matched search_web query/status; result body is not emitted by ACP 1.5.9",
+    "agent_file": "/Users/davidzenz/PaperOrchestra/validation/native-capabilities-final-antigravity/execution/invocations/9ab5bd318bcc4775a59d96e45acf6c1c/.agents/agents/paper-orchestra-isolated-worker.md",
+    "agent_file_sha256": "b2c1c31ecee51a05bb5d1e836df543d2952b4a1f7b850ce89b460b5afbe717f1"
+  }
+}

@@ -1,0 +1,72 @@
+```json
+{
+  "section_name": "In-Sample Residual Correction and Evaluation Dependency",
+  "candidates": [
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Establishes foundational statistical theory on apparent error rate (in-sample error), proving that evaluating a prediction rule on the identical observations used to fit it produces an optimistic assessment that does not measure performance on independent observations."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Formalizes the covariance penalty definition of optimism, showing mathematically that evaluating an estimator on the exact data from which it was derived creates an evaluation dependency (positive covariance between targets and predictions) that artificially suppresses observed error."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal paper articulating why valid assessment of statistical prediction rules requires strictly separating the observations used to estimate parameters or residual corrections from those used to measure performance."
+    },
+    {
+      "title": "Circular Analysis in Systems Neuroscience: The Danger of Double Dipping",
+      "year": 2009,
+      "reason": "Analyzes the exact evaluation dependency occurring when data used for estimation or parameter selection are reused for performance evaluation, proving that apparent zero error or extreme fit statistics are circular artifacts rather than evidence of generalization."
+    },
+    {
+      "title": "Leakage and the Reproducibility Crisis in Machine Learning-Based Science",
+      "year": 2023,
+      "reason": "Categorizes evaluation dependencies and data leakage in predictive modeling, examining scenarios where correction steps or offset adjustments calculated on evaluation observations invalidate reported performance claims on unseen data."
+    },
+    {
+      "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+      "year": 2018,
+      "reason": "Demonstrates that estimating residual corrections and evaluating them on the same observations introduces severe in-sample bias, establishing cross-fitting to isolate residual estimation from evaluation."
+    },
+    {
+      "title": "The Reusable Holdout: Preserving Validity in Adaptive Data Analysis",
+      "year": 2015,
+      "reason": "Analyzes the mathematical breakdown of empirical validity when an analyst or algorithm estimates adjustments from sample data and evaluates them on that same sample, formalizing the resulting dependency."
+    },
+    {
+      "title": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year": 2010,
+      "reason": "Reviews the mathematical gap between empirical training (in-sample) error and generalization error, detailing why in-sample residual checks supply no valid measurement of performance on separate observations."
+    },
+    {
+      "title": "From Fixed-X to Random-X Regression: Bias-Variance Decompositions, Covariance Penalties, and Prediction Error",
+      "year": 2020,
+      "reason": "Distinguishes fixed-design in-sample error from out-of-sample prediction error, showing how fitting parameters to an observed sample measures only within-sample algebraic alignment rather than generalization to new observations."
+    },
+    {
+      "title": "Robust Residual Correction via Selective Deployment for Time Series Forecasting",
+      "year": 2026,
+      "reason": "Directly evaluates post-hoc residual correction architectures, analyzing how aggressive in-sample residual fitting yields apparent error reductions that fail to transfer to separate out-of-sample observations without independent validation."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Formulates generalized degrees of freedom and apparent error, proving that estimating an adjustment on observed points mechanically cancels in-sample residuals without providing evidence of genuine predictive capacity."
+    },
+    {
+      "title": "Submodel Selection and Evaluation in Regression",
+      "year": 1992,
+      "reason": "Contrasts in-sample residual metrics with out-of-sample evaluation in linear regression settings, demonstrating that in-sample residual reduction cannot be treated as a proxy for prediction accuracy."
+    },
+    {
+      "title": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year": 2006,
+      "reason": "Examines error estimation bias when parameter fitting and model assessment share observations, establishing that reusing evaluation data for parameter determination precludes valid performance assessment."
+    }
+  ]
+}
+```

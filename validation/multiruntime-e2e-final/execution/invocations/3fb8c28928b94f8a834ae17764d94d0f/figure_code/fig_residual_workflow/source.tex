@@ -1,0 +1,84 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+
+\definecolor{slate}{HTML}{374151}
+\definecolor{infill}{HTML}{DCE9F7}
+\definecolor{inborder}{HTML}{2563EB}
+\definecolor{tgfill}{HTML}{DCFCE7}
+\definecolor{tgborder}{HTML}{15803D}
+\definecolor{basefill}{HTML}{F3F4F6}
+\definecolor{baseborder}{HTML}{6B7280}
+\definecolor{resfill}{HTML}{FFEDD5}
+\definecolor{resborder}{HTML}{C2410C}
+\definecolor{meanfill}{HTML}{FEF3C7}
+\definecolor{meanborder}{HTML}{B45309}
+\definecolor{evfill}{HTML}{F3E8FF}
+\definecolor{evborder}{HTML}{7E22CE}
+
+\tikzset{
+  arr/.style={draw=slate, line width=0.7pt, -Stealth},
+  box/.style={rounded corners=2pt, line width=0.6pt, align=center,
+              font=\small, inner sep=3pt},
+  tiny/.style={font=\fontsize{7.5}{9}\selectfont}
+}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm, y=1cm]
+
+% ---------------- Row 1 ----------------
+\node[box, draw=inborder, fill=infill, text width=2.2cm] (input) at (1.2,7.6)
+  {$x_i$, $i=1,\dots,5$\\[1pt]{\footnotesize $x=(-2,-1,0,1,2)$}};
+\node[box, draw=tgborder, fill=tgfill, text width=2.2cm] (target) at (4.4,7.6)
+  {$y_i = 2x_i + 3$\\[1pt]{\footnotesize $(-1,1,3,5,7)$}};
+
+% ---------------- Row 2 ----------------
+\node[box, draw=baseborder, fill=basefill, text width=2.2cm] (baseline) at (1.2,5.2)
+  {Fixed predictor\\$\hat{y}_i^{(0)} = 2x_i$\\[1pt]{\footnotesize $(-4,-2,0,2,4)$}};
+\node[box, draw=resborder, fill=resfill, text width=2.2cm] (residual) at (4.4,5.2)
+  {$r_i = y_i - 2x_i$\\[1pt]{\footnotesize $(3,3,3,3,3)$}};
+
+% ---------------- Row 3 ----------------
+\node[box, draw=meanborder, fill=meanfill, line width=1.2pt] (meanres) at (4.4,2.7)
+  {$b = \frac{1}{5}\sum_{i=1}^{5} r_i = 3$};
+\node[box, draw=tgborder, fill=tgfill, text width=2.1cm, minimum height=11mm]
+  (corrected) at (7.55,2.7)
+  {$\hat{y}_i = 2x_i + b$\\[1pt]{\footnotesize $(-1,1,3,5,7)$}};
+\node[box, draw=evborder, fill=evfill, font=\footnotesize, text width=2.4cm,
+      minimum height=11mm, dash pattern=on 3pt off 2pt] (eval) at (10.55,2.7)
+  {Evaluate $\hat{y}_i$ against $y_i$\\on the same five $(x_i, y_i)$.};
+
+% ---------------- Arrows ----------------
+\draw[arr] (input.south) -- (baseline.north)
+  node[midway, right, font=\small] {$\times 2$};
+\draw[arr] (target.south) -- (residual.north)
+  node[midway, right, font=\small] {$+y_i$};
+\draw[arr] (baseline.east) -- (residual.west)
+  node[midway, above, font=\footnotesize] {$-2x_i$};
+
+% Primary data dependency (emphasized amber arrow)
+\draw[draw=meanborder, line width=1.2pt, -Stealth] (residual.south) -- (meanres.north)
+  node[midway, right=2pt, align=left, tiny] {mean over the\\observed residuals};
+
+% Additive correction
+\draw[arr] (meanres.east) -- (corrected.west)
+  node[midway, above, font=\small] {$+\,b$};
+
+% Baseline feed: drop, run along lower margin, rise into corrected prediction
+\draw[arr] (baseline.south) -- (1.2,1.0) -- (7.55,1.0) -- (corrected.south);
+\node[font=\small, anchor=north, inner sep=0] at (4.375,0.894) {$2x_i$};
+
+% Corrected prediction into evaluation
+\draw[arr] (corrected.east) -- (eval.west)
+  node[midway, above, font=\footnotesize] {$\hat{y}_i$};
+
+% Target ground truth: high channel above Row 2, vertical drop into evaluation
+\draw[draw=baseborder, line width=0.7pt, dashed, -Stealth] (target.east) -| (eval.north)
+  node[pos=0.75, right=2pt, font=\small] {$y_i$};
+
+% ---------------- Reuse callout ----------------
+\node[tiny, align=center, text width=2.4cm] at (10.55,1.6)
+  {Same five observations used\\to estimate $b$ and to score.};
+
+\end{tikzpicture}
+\end{document}

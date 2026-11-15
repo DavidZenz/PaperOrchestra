@@ -1,0 +1,321 @@
+{
+  "model_calls": 0,
+  "model_policy": {
+    "schema_version": 2,
+    "default_model": null,
+    "default_backend": null,
+    "default_effort": null,
+    "upstream_model_map": {},
+    "profile": {
+      "schema_version": 2,
+      "name": "mixed-runtime-example-2026-11-15",
+      "default": {
+        "backend": "codex",
+        "model": "gpt-6.1-sol",
+        "effort": "high"
+      },
+      "groups": {
+        "discovery": {
+          "backend": "antigravity",
+          "model": "gemini-4-hydrogen",
+          "effort": "medium"
+        },
+        "figure_planning": {
+          "backend": "claude-code",
+          "model": "claude-sonnet-5-5",
+          "effort": "medium"
+        },
+        "figure_code": {
+          "backend": "mistral-vibe",
+          "model": "zai-glm-5-3",
+          "effort": "high"
+        },
+        "figure_review": {
+          "backend": "antigravity",
+          "model": "gemini-4-argon",
+          "effort": "medium"
+        },
+        "peer_review": {
+          "backend": "claude-code",
+          "model": "claude-opus-5-5",
+          "effort": "high"
+        },
+        "meta_review": {
+          "backend": "codex",
+          "model": "gpt-6-astra",
+          "effort": "high"
+        },
+        "formatting": {
+          "backend": "claude-code",
+          "model": "claude-sonnet-5-5",
+          "effort": "medium"
+        }
+      },
+      "roles": {
+        "runtime-probe": {
+          "backend": "codex",
+          "model": "gpt-6-luna",
+          "effort": "low"
+        }
+      }
+    },
+    "role_overrides": {},
+    "resolved_plan": [
+      {
+        "role": "runtime-probe",
+        "requested_model": "runtime-probe",
+        "model": "gpt-6-luna",
+        "routing_role": "runtime-probe",
+        "group": null,
+        "selected_by": "profile role: runtime-probe",
+        "backend": "codex",
+        "effort": "low",
+        "execution_selected_by": {
+          "backend": "profile role: runtime-probe",
+          "model": "profile role: runtime-probe",
+          "effort": "profile role: runtime-probe"
+        }
+      },
+      {
+        "role": "literature-discovery",
+        "requested_model": "gemini-3-flash-preview",
+        "model": "gemini-4-hydrogen",
+        "routing_role": "literature-discovery",
+        "group": "discovery",
+        "selected_by": "profile group: discovery",
+        "backend": "antigravity",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: discovery",
+          "model": "profile group: discovery",
+          "effort": "profile group: discovery"
+        }
+      },
+      {
+        "role": "outline",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "outline",
+        "group": "writing",
+        "selected_by": "profile default",
+        "backend": "codex",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile default",
+          "model": "profile default",
+          "effort": "profile default"
+        }
+      },
+      {
+        "role": "literature-synthesis",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "literature-synthesis",
+        "group": "writing",
+        "selected_by": "profile default",
+        "backend": "codex",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile default",
+          "model": "profile default",
+          "effort": "profile default"
+        }
+      },
+      {
+        "role": "section-writer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "section-writer",
+        "group": "writing",
+        "selected_by": "profile default",
+        "backend": "codex",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile default",
+          "model": "profile default",
+          "effort": "profile default"
+        }
+      },
+      {
+        "role": "content-editor",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6.1-sol",
+        "routing_role": "content-editor",
+        "group": "writing",
+        "selected_by": "profile default",
+        "backend": "codex",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile default",
+          "model": "profile default",
+          "effort": "profile default"
+        }
+      },
+      {
+        "role": "figure-retriever",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "claude-sonnet-5-5",
+        "routing_role": "figure-retriever",
+        "group": "figure_planning",
+        "selected_by": "profile group: figure_planning",
+        "backend": "claude-code",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: figure_planning",
+          "model": "profile group: figure_planning",
+          "effort": "profile group: figure_planning"
+        }
+      },
+      {
+        "role": "figure-planner",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "claude-sonnet-5-5",
+        "routing_role": "figure-planner",
+        "group": "figure_planning",
+        "selected_by": "profile group: figure_planning",
+        "backend": "claude-code",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: figure_planning",
+          "model": "profile group: figure_planning",
+          "effort": "profile group: figure_planning"
+        }
+      },
+      {
+        "role": "figure-stylist",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "claude-sonnet-5-5",
+        "routing_role": "figure-stylist",
+        "group": "figure_planning",
+        "selected_by": "profile group: figure_planning",
+        "backend": "claude-code",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: figure_planning",
+          "model": "profile group: figure_planning",
+          "effort": "profile group: figure_planning"
+        }
+      },
+      {
+        "role": "ggplot2-visualizer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "zai-glm-5-3",
+        "routing_role": "ggplot2-visualizer",
+        "group": "figure_code",
+        "selected_by": "profile group: figure_code",
+        "backend": "mistral-vibe",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile group: figure_code",
+          "model": "profile group: figure_code",
+          "effort": "profile group: figure_code"
+        }
+      },
+      {
+        "role": "tikz-visualizer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "zai-glm-5-3",
+        "routing_role": "tikz-visualizer",
+        "group": "figure_code",
+        "selected_by": "profile group: figure_code",
+        "backend": "mistral-vibe",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile group: figure_code",
+          "model": "profile group: figure_code",
+          "effort": "profile group: figure_code"
+        }
+      },
+      {
+        "role": "figure-critic",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gemini-4-argon",
+        "routing_role": "figure-critic",
+        "group": "figure_review",
+        "selected_by": "profile group: figure_review",
+        "backend": "antigravity",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: figure_review",
+          "model": "profile group: figure_review",
+          "effort": "profile group: figure_review"
+        }
+      },
+      {
+        "role": "figure-captioner",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gemini-4-argon",
+        "routing_role": "figure-captioner",
+        "group": "figure_review",
+        "selected_by": "profile group: figure_review",
+        "backend": "antigravity",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: figure_review",
+          "model": "profile group: figure_review",
+          "effort": "profile group: figure_review"
+        }
+      },
+      {
+        "role": "peer-reviewer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "claude-opus-5-5",
+        "routing_role": "peer-reviewer",
+        "group": "peer_review",
+        "selected_by": "profile group: peer_review",
+        "backend": "claude-code",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile group: peer_review",
+          "model": "profile group: peer_review",
+          "effort": "profile group: peer_review"
+        }
+      },
+      {
+        "role": "area-chair",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "gpt-6-astra",
+        "routing_role": "area-chair",
+        "group": "meta_review",
+        "selected_by": "profile group: meta_review",
+        "backend": "codex",
+        "effort": "high",
+        "execution_selected_by": {
+          "backend": "profile group: meta_review",
+          "model": "profile group: meta_review",
+          "effort": "profile group: meta_review"
+        }
+      },
+      {
+        "role": "format-reviewer",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "claude-sonnet-5-5",
+        "routing_role": "format-reviewer",
+        "group": "formatting",
+        "selected_by": "profile group: formatting",
+        "backend": "claude-code",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: formatting",
+          "model": "profile group: formatting",
+          "effort": "profile group: formatting"
+        }
+      },
+      {
+        "role": "format-editor",
+        "requested_model": "gemini-3.1-pro-preview",
+        "model": "claude-sonnet-5-5",
+        "routing_role": "format-editor",
+        "group": "formatting",
+        "selected_by": "profile group: formatting",
+        "backend": "claude-code",
+        "effort": "medium",
+        "execution_selected_by": {
+          "backend": "profile group: formatting",
+          "model": "profile group: formatting",
+          "effort": "profile group: formatting"
+        }
+      }
+    ]
+  }
+}

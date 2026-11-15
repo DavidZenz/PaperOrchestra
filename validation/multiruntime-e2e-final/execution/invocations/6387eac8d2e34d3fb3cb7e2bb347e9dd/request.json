@@ -1,0 +1,39 @@
+{
+  "invocation": "6387eac8d2e34d3fb3cb7e2bb347e9dd",
+  "call": "04fbbc6632114369ad3d55b9237bd6cb",
+  "role": "area-chair",
+  "callsite": [
+    "agent_review.py:get_meta_review:200",
+    "agent_review.py:perform_review_agentreview:146",
+    "content_refinement_agent.py:_get_peer_review:90",
+    "content_refinement_agent.py:run:334",
+    "paper_writer_with_plotting.py:write_single_paper:234"
+  ],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gpt-6.1-sol",
+  "config": {
+    "system_instruction": "You are a very knowledgeable and experienced area chair at a top-tier machine learning conference.\nYou are in charge of meta-reviewing a paper that was reviewed by 3 reviewers.\nYour job is to aggregate the reviews into a single meta-review in the same format.\nYou are an inclusive area chair. You tend to hear from all reviewers' opinions and combine them with your own judgments to make the final decision.",
+    "temperature": 0.75
+  },
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "codex",
+  "transport_plan_sha256": "e8dc434bda8a9c64369644239141be08aa09e6b0c65904ce10449fd8f5b3ded6",
+  "prompt_sha256": "bdbaee9c586fce1a9ad93ed42bdcddba5834694762e862de07dfc47b7ef3e844",
+  "model_routing": {
+    "model": "gpt-6.1-sol",
+    "routing_role": "area-chair",
+    "group": "meta_review",
+    "selected_by": "profile group: meta_review",
+    "backend": "codex",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile group: meta_review",
+      "model": "profile group: meta_review",
+      "effort": "profile group: meta_review"
+    }
+  }
+}

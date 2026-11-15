@@ -1,0 +1,27 @@
+**Layout and canvas**
+- Pure white background (`#FFFFFF`), no frame or border around the whole figure.
+- Left-to-right flow in a grid of three columns and three rows, about 11 cm wide and 5 cm tall, scaled to `\columnwidth`.
+- All text in Computer Modern math mode at about 8–9 pt. Node and arrow labels use `\small`.
+- Nodes are rounded rectangles (`rounded corners=2pt`) with 0.6 pt borders and light fills. Arrows are 0.7 pt dark gray (`#374151`) with `-Stealth` tips.
+
+**Nodes (row 1 = data, row 2 = computation, row 3 = scalar and output)**
+
+1. **Input (top-left, column 1, row 1):** light blue fill (`#DCE9F7`), blue border (`#2563EB`). Label: $x_i$, $i=1,\dots,5$, with the values $x=(-2,-1,0,1,2)$ listed below in a single line.
+2. **Target (top, column 2, row 1):** light green fill (`#DCFCE7`), green border (`#15803D`). Label: $y_i = 2x_i+3$, with values $(-1,1,3,5,7)$.
+3. **Baseline (row 2, column 1):** neutral gray fill (`#F3F4F6`), gray border (`#6B7280`). Label: fixed predictor $\hat y_i^{(0)} = 2x_i$, with values $(-4,-2,0,2,4)$. An arrow labeled "$\times 2$" runs from the input node down to this node.
+4. **Residual (row 2, column 2):** light orange fill (`#FFEDD5`), orange border (`#C2410C`). Label: $r_i = y_i - 2x_i$, with values $(3,3,3,3,3)$. Two inbound arrows: one from the target node (above, labeled "$y_i$") and one from the baseline node (left, labeled "$2x_i$" and marked with a minus sign). The minus sign is shown as a small circled "−" on the junction.
+5. **Mean residual scalar (row 3, column 2):** the most prominent element. Amber fill (`#FEF3C7`), darker amber border (`#B45309`), 1.2 pt line width. Label: $b = \frac{1}{5}\sum_{i=1}^{5} r_i = 3$. Its position directly below the residual node makes the dependency visible.
+6. **Corrected prediction (row 3, column 3):** light green fill, matching the target palette, with a 0.6 pt border. Label: $\hat y_i = 2x_i + b$, with values $(-1,1,3,5,7)$.
+7. **Evaluation (row 2, column 4, right edge):** light lavender fill (`#F3E8FF`), purple border (`#7E22CE`), dashed line style. Label: "Evaluate $\hat y_i$ against $y_i$ on the same five $(x_i,y_i)$."
+
+**Connections and semantics**
+- **Data dependency (emphasized):** a thick amber arrow (1.0 pt, `#B45309`) runs from the residual node down to the mean-residual node. It is labeled "mean over the observed residuals," which makes the scalar correction visibly depend on the observations.
+- **Correction arrow:** a solid arrow from the mean-residual node to the corrected-prediction node, labeled "$+\,b$." A second arrow from the baseline node is routed as a thin gray elbow curve above the residual node, labeled "$2x_i$," and feeds into the corrected node. The elbow must not cross any box.
+- **Evaluation arrows:** a solid arrow from the corrected node to the evaluation node, labeled "$\hat y_i$." A dashed arrow from the target node runs along the top margin to the evaluation node, labeled "$y_i$."
+- **Reuse callout:** a small text annotation beneath the evaluation box in italic 7.5 pt reads "same five observations used to estimate $b$ and to score." This is the required identification of observation reuse. Do not add MSE numbers, held-out sets, or other experiments.
+
+**Constraints**
+- No figure title or caption text inside the image.
+- No optimizer, training stage, dataset icon, timing element, or unrelated module.
+- Every label is a LaTeX math expression, not an icon or pictogram.
+- Vector output (PDF) with native TikZ, and a raster preview at 300 dpi for the manuscript-compatible preview.

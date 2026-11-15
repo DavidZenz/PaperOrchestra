@@ -1,12 +1,12 @@
 ---
 name: paper-orchestra
-description: Run PaperOrchestra's research-paper writing workflow from an idea, experimental log, LaTeX template and figures using separate Codex agent processes, literature discovery, a reviewer ensemble and score-driven revisions. Use for an end-to-end PaperOrchestra paper run or conformance validation; requires a working Codex CLI and LaTeX tools.
+description: Run PaperOrchestra's paper-writing workflow with separate Codex, Claude Code, Antigravity or Mistral Vibe workers, literature search, a reviewer ensemble and score-driven revisions. Use for a PaperOrchestra paper run or conformance validation; requires authenticated native agent CLIs and LaTeX tools.
 ---
 
 # PaperOrchestra
 
 Execute the authors' pinned Python controller through the bundled runtime. Every
-model attempt launches a fresh `codex exec` process and independent session.
+model attempt launches a fresh native worker process and independent session.
 Do not write the paper yourself, replace the controller with role instructions,
 merge reviewers into one session, or fabricate missing agent/tool results.
 
@@ -17,9 +17,11 @@ The copied controller and prompts are checked by `upstream-lock.json`.
 ## Prepare the run
 
 Resolve this skill directory as `SKILL`. Use a Python environment containing
-`scripts/requirements.txt`, the authenticated `codex` CLI, `pdflatex`, and `bibtex`.
+`scripts/requirements.txt`, the selected authenticated native CLIs, `pdflatex`, and `bibtex`.
 Install dependencies into an isolated environment if needed; respect the host's
-execution permissions. The controller itself uses no Gemini or OpenAI API key.
+execution permissions. The controller itself uses no Gemini or OpenAI API key;
+each worker runtime uses its own existing authentication. Never copy
+authentication files into execution evidence.
 Semantic Scholar optionally uses `SEMANTIC_SCHOLAR_API_KEY` from the environment.
 
 Obtain the user's material directory, template directory, fresh output directory,
@@ -62,12 +64,18 @@ as `ggplot2-visualizer`, `tikz-visualizer`, `content-editor`, `format-editor` or
 selected peer-review model. Save the supplied choices to a JSON profile and use
 `--model-profile /absolute/models.json`. See
 [model selection](references/model-selection.md) for the schema and precedence.
-The optional `profiles/openai-balanced.json` provides dated OpenAI suggestions;
-use it only when the user selects it. Other providers require execution adapters
-not shipped by this skill; a model-name profile does not create such an adapter.
-Use IDs available to the user's Codex CLI/provider; do not invent availability or
+The optional dated profiles cover OpenAI/Codex, Claude Code, Antigravity,
+Mistral Vibe and Mistral-hosted GLM. Use a profile only when the user selects it.
+Schema 2 selects `backend`, `model` and native `effort` for each role/group;
+`--backend` and `--effort` supply shared fallbacks. Read
+[native runtimes and effort](references/native-runtimes.md) for interfaces,
+capability limits and recommendations before using a non-Codex backend.
+Use IDs available to the chosen runtime/account; do not invent availability or
 silently substitute a model. These settings select child models and do not
-change the parent chat model, reasoning effort or upstream sampling controls.
+change the parent chat model or upstream sampling controls. Explicit effort
+applies only to each dispatched worker; omitted settings inherit that runtime's
+configuration. Capture effort preferences with the model choice, offering the
+dated profile as a starting point rather than silently assigning it.
 
 Preview with `scripts/run.py --model-profile /absolute/models.json
 --show-model-plan`. This makes zero model calls. The driver remains noninteractive
@@ -84,12 +92,12 @@ python "$SKILL/scripts/run.py" --materials /absolute/materials \
   --template /absolute/template --output /absolute/new-output --cutoff YYYY-MM
 ```
 
-The driver first proves that a separate Codex session completes successfully.
+The driver first proves that the selected probe worker completes a fresh session.
 It then executes the authors' outline → literature → section-writing → content
 and formatting controller. Supplied figures are the upstream default.
 
 For generated figures, add `--use-plotting`. Statistical plots use R/ggplot2;
-scientific diagrams use LaTeX/TikZ. Each visualizer is a separate Codex invocation
+scientific diagrams use LaTeX/TikZ. Each visualizer is a separate native invocation
 that writes real source code. A local renderer executes that code and retains
 the `.R` or `.tex`, export wrapper, vector PDF, JPEG preview and tool/session
 metadata under `figure_sources/`. Do not substitute a raster-only result or a
@@ -118,7 +126,7 @@ fallback. To supply them, set `PAPER_ORCHESTRA_PAPERBANANA` to their directory.
 
 If a required separate process, live-search tool, R/TikZ renderer, PDF context or
 compilation capability fails, report the exact limitation. Never fall back to a
-single agent. The default runtime needs permission to launch child Codex
+single agent. The runtime needs permission to launch the chosen native worker
 processes and access its authentication/network; a sandbox-only probe may fail
 even when the desktop agent itself can execute. Ask for host escalation only
 when required by that host, with the concrete command and reason.
@@ -136,7 +144,9 @@ Check the exit status and `run.json`: only `completed` is a successful paper run
 manifest is not a successful result. Inspect `execution/trace.jsonl`, individual
 `execution/invocations/*/{request.json,prompt.txt,response.txt,events.jsonl}`,
 peer reviews and refinement worklogs. Fresh process/session evidence is required
-for every model call. Discovery must contain actual `web_search` events.
+for every model call. Discovery must contain an actual completed native search
+call/result, not merely prose claiming a search. ACP workers also retain both
+directions of `acp-wire.jsonl` and acknowledged model/effort/media inputs.
 
 Before its first model call, the driver snapshots the entire installed skill
 under `execution/skill_snapshot/` and records its content hash. It checks the

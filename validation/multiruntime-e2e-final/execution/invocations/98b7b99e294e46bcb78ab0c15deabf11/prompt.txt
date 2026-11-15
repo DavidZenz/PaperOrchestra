@@ -1,0 +1,107 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+## ROLE
+You are a Lead Visual Designer for top-tier AI conferences (e.g., NeurIPS 2025).
+
+## TASK
+Your task is to conduct a sanity check and provide a critique of the target diagram based on its content and presentation. You must ensure its alignment with the provided 'Methodology Section', 'Figure Caption'.
+
+You are also provided with the 'Detailed Description' corresponding to the current diagram. If you identify areas for improvement in the diagram, you must list your specific critique and provide a revised version of the 'Detailed Description' that incorporates these corrections.
+
+## CRITIQUE & REVISION RULES
+
+1. Content
+    -   **Fidelity & Alignment:** Ensure the diagram accurately reflects the method described in the "Methodology Section" and aligns with the "Figure Caption." Reasonable simplifications are allowed, but no critical components should be omitted or misrepresented. Also, the diagram should not contain any hallucinated content. Consistent with the provided methodology section & figure caption is always the most important thing.
+    -   **Text QA:** Check for typographical errors, nonsensical text, or unclear labels within the diagram. Suggest specific corrections.
+    -   **Validation of Examples:** Verify the accuracy of illustrative examples. If the diagram includes specific examples to aid understanding (e.g., molecular formulas, attention maps, mathematical expressions), ensure they are factually correct and logically consistent. If an example is incorrect, provide the correct version.
+    -   **Caption Exclusion:** Ensure the figure caption text (e.g., "Figure 1: Overview...") is **not** included within the image visual itself. The caption should remain separate.
+
+2. Presentation
+    -   **Clarity & Readability:** Evaluate the overall visual clarity. If the flow is confusing or the layout is cluttered, suggest structural improvements.
+    -   **Legend Management:** Be aware that the description&diagram may include a text-based legend explaining color coding. Since this is typically redundant, please excise such descriptions if found.
+
+** IMPORTANT: **
+Your Description should primarily be modifications based on the original description, rather than rewriting from scratch. If the original description has obvious problems in certain parts that require re-description, your description should be as detailed as possible. Semantically, clearly describe each element and their connections. Formally, include various details such as background, colors, line thickness, icon styles, etc. Remember: vague or unclear specifications will only make the generated figure worse, not better.
+
+## INPUT DATA
+-   **Target Diagram**: [The generated figure]
+-   **Detailed Description**: [The detailed description of the figure]
+-   **Methodology Section**: [Contextual content from the methodology section]
+-   **Figure Caption**: [Target figure caption]
+
+## OUTPUT
+Provide your response strictly in the following JSON format.
+
+```json
+{
+    "critic_suggestions": "Insert your detailed critique and specific suggestions for improvement here. If the diagram is perfect, write 'No changes needed.'",
+    "revised_description": "Insert the fully revised detailed description here, incorporating all your suggestions. If no changes are needed, write 'No changes needed.'",
+}
+```
+
+
+Target Diagram for Critique:
+
+
+Detailed Description: **Layout and canvas**
+- Pure white background (`#FFFFFF`), no frame or outer border.
+- Flow organized on a coherent 4-column, 3-row grid, approximately 11.5 cm wide and 5.5 cm tall, scaled to `\columnwidth`.
+- Typography: Computer Modern font throughout; math expressions in native math mode ($8$--$9\,\mathrm{pt}$); node and edge labels use `\small` or `\footnotesize`.
+- Node styling: Rounded rectangles (`rounded corners=2pt`) with $0.6\,\mathrm{pt}$ borders and soft pastel fills. Arrows are $0.7\,\mathrm{pt}$ dark slate gray (`#374151`) with `-Stealth` tips.
+
+**Nodes**
+1. **Input (Row 1, Column 1):** Soft blue fill (`#DCE9F7`), blue border (`#2563EB`). Label: $x_i$, $i=1,\dots,5$, with sample values $x = (-2, -1, 0, 1, 2)$ on a second line.
+2. **Target (Row 1, Column 2):** Soft green fill (`#DCFCE7`), green border (`#15803D`). Label: $y_i = 2x_i + 3$, with sample values $(-1, 1, 3, 5, 7)$ on a second line.
+3. **Baseline Predictor (Row 2, Column 1):** Neutral light gray fill (`#F3F4F6`), medium gray border (`#6B7280`). Label: Fixed predictor $\hat{y}_i^{(0)} = 2x_i$, with sample values $(-4, -2, 0, 2, 4)$. An arrow labeled '$\times 2$' runs vertically from the input node down into this node.
+4. **Residual (Row 2, Column 2):** Light orange fill (`#FFEDD5`), orange border (`#C2410C`). Label: $r_i = y_i - 2x_i$, with values $(3, 3, 3, 3, 3)$. Two inbound orthogonal arrows: one from the target node above entering the top anchor (labeled '$+y_i$'), and one from the baseline node entering the left anchor (labeled '$-2x_i$'). No overlapping circle glyphs over the arrowhead.
+5. **Mean Residual Scalar (Row 3, Column 2):** High visual prominence. Amber fill (`#FEF3C7`), dark amber border (`#B45309`), $1.2\,\mathrm{pt}$ line width. Label: $b = \frac{1}{5}\sum_{i=1}^{5} r_i = 3$.
+6. **Corrected Prediction (Row 3, Column 3):** Light green fill (`#DCFCE7`), green border (`#15803D`), $0.6\,\mathrm{pt}$ line width. Label: $\hat{y}_i = 2x_i + b$, with values $(-1, 1, 3, 5, 7)$. Vertically centered with Row 3.
+7. **Evaluation (Row 3, Column 4):** Horizontally aligned with Row 3 for planar flow, matched in vertical height to the corrected prediction box. Light lavender fill (`#F3E8FF`), purple border (`#7E22CE`), dashed border style (`dash pattern=on 3pt off 2pt`). Label: 'Evaluate $\hat{y}_i$ against $y_i$\\on the same five $(x_i, y_i)$.'
+
+**Connections and Semantics**
+- **Primary Data Dependency (Emphasized):** A thick, non-intersected amber arrow ($1.2\,\mathrm{pt}$, `#B45309`) runs vertically straight from the bottom of the residual node to the top of the mean residual scalar node. It is annotated on its right with: 'mean over the\\observed residuals' in $7.5\,\mathrm{pt}$ text.
+- **Additive Correction Arrow:** A solid horizontal arrow from the right of the mean residual node to the left of the corrected prediction node, labeled '$+\,b$'.
+- **Baseline Feed Routing (Non-crossing with padded label):** The arrow carrying $2x_i$ from the baseline predictor node drops vertically down from Row 2, runs horizontally along the lower margin below Row 3 (bypassing the amber dependency arrow completely underneath the $b$ box), and turns upward into the bottom anchor of the corrected prediction node. The label '$2x_i$' is centered below the horizontal bottom run with $3\,\mathrm{pt}$ padding rather than cramped against the vertical arrowhead.
+- **Evaluation Connections:**
+  - A solid horizontal arrow runs from the right anchor of the corrected prediction node directly into the left anchor of the evaluation node, labeled '$\hat{y}_i$'.
+  - A dashed gray orthogonal elbow arrow (`#6B7280`) emerges directly from the right side of the target node ($y_i$), travels along a clean high horizontal channel above Row 2 across to Column 4, and descends vertically straight into the top anchor of the evaluation node, labeled '$y_i$' along its vertical drop.
+- **Reuse Callout:** Directly beneath the evaluation node, an unhyphenated annotation in $7.5\,\mathrm{pt}$ text reads: 'Same five observations used\\to estimate $b$ and to score.' centered with no hyphenation.
+
+**Constraints**
+- No figure title, canvas borders, or caption text embedded inside the diagram visual.
+- No extraneous modules, training loops, optimizers, or held-out validation splits.
+- Strictly vector-ready TikZ specification using mathematical typography.
+Methodology Section: 
+--- idea_sparse.md ---
+# A finite intercept correction calculation with reproducible figures
+
+This is a synthetic teaching-note workflow demonstration, not a new scientific
+result. Five inputs x = [-2,-1,0,1,2] have targets y = 2x+3. A fixed predictor
+returns 2x. Compute the mean residual on these same points, b = mean(y-2x)=3,
+and add it to the predictions. The experimental log is the only measured data.
+There is no optimizer, architecture, external dataset, stochastic experiment,
+held-out evaluation or timing result. The calculation is implemented in base R.
+Scope all claims to these exact five observations; literature supplies context,
+not extra measurements or claims of novelty.
+
+Generate exactly two essential figures, with all source code retained:
+
+1. `fig_intercept_error`: a statistical plot, `plot_type` `plot`, from
+   `experimental_log.md`. Show the three measured MSE values at b=0,1.5,3.
+   Use R/ggplot2. This plot is evidence of the finite arithmetic only.
+2. `fig_residual_workflow`: a scientific schematic, `plot_type` `diagram`, from
+   `idea.md`. Show input x and target y; baseline 2x; residual y-2x; mean
+   residual b=3; corrected prediction 2x+b; evaluation on the same five points.
+   Indicate the data dependency from observed residuals to the scalar correction.
+   Use LaTeX/TikZ, mathematical labels, and no unrelated modules or experiments.
+
+No figures are supplied. Separate Codex workers must plan, style, generate code,
+critique the rendered figures, and write captions through the normal workflow.
+The flow diagram should make the computation understandable; it adds no evidence
+of predictive generalization. Native editable `.R` and `.tex` sources and their
+vector PDFs should be retained alongside the manuscript-compatible previews.
+
+Figure Caption: Title: Residual-Based Intercept Correction on the Same Five Observations
+Objective: Create a scientific schematic in LaTeX/TikZ with mathematical labels: input x and target y; baseline prediction 2x; residual y-2x; mean residual b=3; corrected prediction 2x+b; evaluation on the same five points. Explicitly connect the observed residuals to the scalar correction and identify reuse of the observations for evaluation. Keep the diagram readable within the supplied single-column article margins. Include no unrelated modules, training stages, or experiments. Retain editable .tex source, a vector PDF, and a manuscript-compatible preview as downstream reproducibility artifacts.
+Your Output:

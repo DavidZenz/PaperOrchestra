@@ -1,0 +1,70 @@
+{
+  "section_name": "Fixed Predictor Recalibration and Additive Residual Corrections",
+  "candidates": [
+    {
+      "title": "Prediction-Powered Inference",
+      "year": 2023,
+      "reason": "Formulates a rigorous inferential framework where a pre-trained black-box prediction rule is kept fixed, and an additive scalar correction equal to the sample mean of the residuals evaluated on a small labeled set is added to the predictions to guarantee unbiased estimation."
+    },
+    {
+      "title": "Validation and Updating of Predictive Logistic Regression Models: A Study on Sample Size and Shrinkage",
+      "year": 2004,
+      "reason": "Establishes formal model updating hierarchies, proving that when a pre-existing prediction rule maintains valid relative rankings but suffers from systematic bias, adjusting only the intercept (calibration-in-the-large) based on observed residuals addresses the offset without altering base predictor weights."
+    },
+    {
+      "title": "Calibration: The Achilles Heel of Predictive Analytics",
+      "year": 2019,
+      "reason": "Analyzes the calibration hierarchy in predictive modeling, showing how a fixed predictor exhibiting non-zero mean residual across instances corresponds to calibration-in-the-large error, which is resolved by estimating a scalar additive intercept correction."
+    },
+    {
+      "title": "Distribution-Free Predictive Inference for Regression",
+      "year": 2018,
+      "reason": "Introduces split conformal inference for regression where the underlying point predictor is kept fixed, and scalar corrections derived from empirical residual quantiles on holdout calibration data are added to adjust predictions with finite-sample coverage guarantees."
+    },
+    {
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year": 2018,
+      "reason": "Investigates post-hoc recalibration for regression models, demonstrating how fixed base predictor outputs can be corrected post-training using empirical residual distributions to eliminate systematic mean bias without retraining model parameters."
+    },
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Develops the foundational additive stage-wise framework where an initial fixed prediction (the baseline scalar mean) leaves a constant residual, and subsequent additive corrections are directly parameterized by minimizing empirical loss over observed residuals."
+    },
+    {
+      "title": "Distribution Calibration for Regression",
+      "year": 2019,
+      "reason": "Proposes post-hoc calibration methods for regression algorithms, addressing systematic location shifts and residual discrepancies by learning post-processing transformations while holding the original predictor fixed."
+    },
+    {
+      "title": "Conformalized Quantile Regression",
+      "year": 2019,
+      "reason": "Demonstrates how conformal calibration applies to pre-fitted fixed predictors, using scalar additive adjustments computed from calibration set residuals to correct for constant under- or over-prediction."
+    },
+    {
+      "title": "Detecting and Correcting for Label Shift with Black Box Predictors",
+      "year": 2018,
+      "reason": "Addresses domain shift where the base predictive rule is kept frozen, and distribution-level output shifts manifesting as systematic prediction errors are corrected via post-hoc adjustments evaluated on validation residuals."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Studies post-hoc recalibration techniques on frozen predictors, demonstrating that scalar and vector intercept adjustments to pre-calculated logit outputs systematically correct miscalibration without retraining model parameters."
+    },
+    {
+      "title": "Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods",
+      "year": 1999,
+      "reason": "Introduces post-hoc scaling of a fixed margin/prediction rule, fitting a scalar additive intercept and scale parameter over validation residuals while preserving the original decision boundaries."
+    },
+    {
+      "title": "Some Results on Generalized Difference Estimation and Generalized Regression Estimation for Finite Populations",
+      "year": 1976,
+      "reason": "Provides foundational theory for difference estimators in survey sampling, showing that when using a fixed auxiliary prediction rule, adding the sample mean residual yields an unbiased estimate whose variance depends directly on residual dispersion."
+    },
+    {
+      "title": "A Closed Testing Procedure to Select an Appropriate Method for Updating Prediction Models",
+      "year": 2008,
+      "reason": "Defines hypothesis testing procedures for model updating, formalizing the exact criteria under which updating only the scalar intercept (addressing mean residual bias) suffices versus adjusting the slope coefficients of a fixed model."
+    }
+  ]
+}

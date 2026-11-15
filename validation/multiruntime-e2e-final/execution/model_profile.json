@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "name": "finite-R-TikZ-mixed-native-validation",
+  "roles": {
+    "runtime-probe": {
+      "backend": "codex",
+      "model": "gpt-6-luna",
+      "effort": "low"
+    },
+    "literature-discovery": {
+      "backend": "antigravity",
+      "model": "gemini-3.8-flash",
+      "effort": "medium"
+    },
+    "outline": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "literature-synthesis": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "section-writer": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "content-editor": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "figure-retriever": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    },
+    "figure-planner": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    },
+    "figure-stylist": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    },
+    "ggplot2-visualizer": {
+      "backend": "mistral-vibe",
+      "model": "zai-glm-5-3",
+      "effort": "high"
+    },
+    "tikz-visualizer": {
+      "backend": "mistral-vibe",
+      "model": "zai-glm-5-3",
+      "effort": "high"
+    },
+    "figure-critic": {
+      "backend": "antigravity",
+      "model": "gemini-3.8-flash",
+      "effort": "medium"
+    },
+    "figure-captioner": {
+      "backend": "antigravity",
+      "model": "gemini-3.8-flash",
+      "effort": "medium"
+    },
+    "peer-reviewer": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high"
+    },
+    "area-chair": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "format-reviewer": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    },
+    "format-editor": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    }
+  }
+}

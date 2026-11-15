@@ -1,0 +1,43 @@
+{
+  "backend": "mistral-vibe",
+  "mode": "acp",
+  "command": [
+    "vibe-acp"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\nRead the attached plot. Return only JSON {\"bar_B\":NUMBER}, giving the height of bar B. Do not use tools.",
+  "env": {
+    "VIBE_DEFAULT_AGENT": "ask",
+    "VIBE_ENABLED_AGENTS": "[\"ask\"]",
+    "VIBE_ENABLE_SUBAGENTS": "false",
+    "VIBE_ENABLE_MCP": "false",
+    "VIBE_ENABLE_CONNECTORS": "false",
+    "VIBE_ENABLED_TOOLS": "[]",
+    "VIBE_DISABLED_TOOLS": "[\"*\"]",
+    "VIBE_DISABLED_SKILLS": "[\"*\"]",
+    "VIBE_INCLUDE_PROJECT_CONTEXT": "false",
+    "VIBE_OUTSIDE_WORKDIR": "deny",
+    "VIBE_SESSION_LOGGING__ENABLED": "false",
+    "VIBE_SESSION_LOGGING__GENERATE_TITLES": "false",
+    "VIBE_ENABLE_UPDATE_CHECKS": "false",
+    "VIBE_ENABLE_NOTIFICATIONS": "false",
+    "VIBE_ENABLE_TELEMETRY": "false",
+    "VIBE_EXPERIMENTS__ENABLE": "false",
+    "VIBE_OUTPUT_LIMIT_RETRIES": "0",
+    "VIBE_ACTIVE_MODEL": "mistral-large-4",
+    "VIBE_MODELS": "{\"mistral-large-4\": {\"alias\": \"mistral-large-4\", \"name\": \"mistral-large-4\", \"provider\": \"mistral\", \"supports_images\": true, \"thinking\": \"high\", \"thinking_levels\": [\"low\", \"medium\", \"high\"]}}"
+  },
+  "images": [
+    "/Users/davidzenz/PaperOrchestra/validation/native-capabilities-final-vibe/execution/invocations/570546d297614936b0e8784d197010ed/attachment-0.png"
+  ],
+  "acp": {
+    "config_strategy": "preconfigured",
+    "model": "mistral-large-4",
+    "effort": "high",
+    "model_option": "model",
+    "effort_option": "thinking",
+    "allowed_search_tools": [],
+    "allowed_auxiliary_tools": [],
+    "image_limit": 8,
+    "image_max_bytes": 10485760
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "backend": "claude-code",
+  "command": [
+    "claude",
+    "--print",
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--safe-mode",
+    "--restricted",
+    "--strict-mcp-config",
+    "--disable-slash-commands",
+    "--no-chrome",
+    "--no-session-persistence",
+    "--session-id",
+    "faa01639-d2c9-45fe-9173-da7a8d3d42ef",
+    "--tools",
+    "",
+    "--model",
+    "claude-haiku-5-5",
+    "--effort",
+    "medium"
+  ],
+  "stdin": "{\"type\": \"user\", \"message\": {\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\\n\\nReply exactly PAPER_ORCHESTRA_RUNTIME_OK. Use no tools.\"}]}}\n",
+  "env": {}
+}

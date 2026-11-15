@@ -1,0 +1,56 @@
+THOUGHT:
+I checked the arithmetic against the paper's own definitions. The inputs x = (-2,-1,0,1,2) give y = (-1,1,3,5,7) and baseline 2x = (-4,-2,0,2,4), so every baseline residual is 3. The mean residual is 3, and L(b) = (3-b)^2 gives 9, 2.25, and 0 at b = 0, 1.5, and 3. MAE(b) = |3-b| gives 3, 1.5, and 0, matching Table 2. The decomposition L(b) = V + (b - rbar)^2 with V = 0 is correct, and the claim that halfway correction quarters the excess above V (rather than total MSE) is also correct. The paper contains no numerical errors that I can find.
+
+The concern is what the example can demonstrate. All residuals are equal, so V = 0 and the optimum is exact by construction. The mean and median coincide, which means the note cannot show that they differ. Its stated teaching goal, distinguishing the mean and median objectives, is therefore not exercised. Only three values of b are evaluated, and the figure plots those three points. The median argument is correct in outline (pairing extremes, then the middle term) but compresses the uniqueness step, which needs an explicit strict inequality. The MAE halving claim is record-specific, and the paper's wording ("halves every corrected residual") reads as more general than it is until the later caveat. Section 4.2 makes a correct definitional point about new-observation error, but it has no held-out example. The reproduction path depends on external R and TikZ files that are not in the manuscript. The related-work section cites nothing, even though least squares, median (LAD) regression, and robust estimation are all standard.
+
+Overall, this is a correct, clearly organized teaching note, but its content is textbook-level and its synthetic example is degenerate. Its contribution is pedagogical rather than a research result, so it falls at the "marginal contribution" level. I recommend rejection from a research venue, with a note that a non-degenerate example and a fuller reproducibility account would make it a useful teaching resource.
+
+REVIEW JSON:
+```json
+{
+  "Summary": "The paper is a short teaching note on fixed-slope intercept correction. Targets follow y = 2x + 3 at five points x = -2,...,2, and the baseline predicts 2x. All baseline residuals equal 3, so the mean residual gives the least-squares intercept correction b = 3. The note derives the identity L(b) = V + (b - rbar)^2 for training MSE, where V is the residual variance term, and contrasts it with median-based MAE minimization. It reports training MSE values 9, 2.25, and 0 at corrections 0, 1.5, and 3, qualifies how halfway correction scales MSE and MAE, and distinguishes training error from error on a new observation. Figures show the residual workflow and the MSE-versus-b curve, and the note lists source files and checksums for reproduction.",
+  "Strengths": [
+    "All numerical claims check out: the residuals, mean, corrected predictions in Table 1, MSE values 9, 2.25, and 0, and MAE values 3, 1.5, and 0 in Table 2 are correct.",
+    "The variance decomposition L(b) = V + (b - rbar)^2 gives a clean, self-contained proof that the mean minimizes training MSE, and it correctly notes that V > 0 whenever the residuals are not all equal.",
+    "The qualification of halfway-correction scaling is accurate: the note states that halving the correction quarters only the excess MSE above V, not total MSE, and it flags that the MAE halving follows from the constant residuals in this record.",
+    "The paper separates the target used for fitting from the target used for scoring, and it states clearly that new-observation error uses its own target, which is a useful conceptual point for learners.",
+    "The manuscript identifies exact source files and SHA256 checksums for the figures, which supports inspectability."
+  ],
+  "Weaknesses": [
+    "The worked example is degenerate. All baseline residuals equal 3, so V = 0, the mean and median coincide, and the fit is exact. The example therefore cannot illustrate the mean-versus-median distinction that the learning objectives name, nor the V > 0 case that the text discusses.",
+    "Empirical evidence for optimality consists of three values of b. The parabola in Figure 2 is drawn through these three points, and the note does not show the minimum by any evaluation that could have failed.",
+    "The median argument in Section 3.2 is compressed. The step that the remaining term |r(3) - b| is uniquely minimized at r(3) needs an explicit strict inequality to establish uniqueness, and the claim that both pairwise intervals contain r(3) should be stated with the ordering that justifies it.",
+    "The MAE halving claim in Section 4.1 is stated as 'halves every corrected residual relative to b = 0', which reads as general. The general formula for MAE is not given, and the caveat that the result depends on constant residuals appears only afterward.",
+    "Section 4.2 says that training agreement and new-observation agreement 'concern different target values', but no held-out data or generalization analysis is presented. The note defines new-observation error without showing how the training-time correction performs on new data.",
+    "The reproduction path depends on R and TikZ files and a checksum manifest that are not part of the manuscript. The R commands appear only as prose in Section 4.1.",
+    "Related Work contains no citations. Least squares with a fixed slope, the mean-median optimality results, and median or LAD regression are all standard, and the note does not place its contribution relative to them.",
+    "The 'Figure source provenance' section, with wrapper scripts and session metadata, is administrative material placed in the paper body rather than in supplementary material."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "Can the authors add a non-degenerate example with unequal baseline residuals, so that the mean-versus-median distinction, the V > 0 case, and the MAE comparison are all exercised?",
+    "Can the general MAE scaling result for arbitrary residuals be stated and proved, or should the halving claim be restricted explicitly to constant-residual records?",
+    "Can the uniqueness step in the median argument be written with explicit strict inequalities, and can the pairwise interval containment be stated with the ordering that justifies it?",
+    "What held-out or cross-validation evidence supports the statement about new-observation error? If none is intended, can the claims about new observations be scoped down to the definition alone?",
+    "How does this note differ from standard textbook treatments of least-squares intercepts and median (LAD) regression, and which references should the related-work section cite?",
+    "Can the R commands from Section 4.1 be included in the manuscript or an appendix so that the calculation can be reproduced from the paper alone?"
+  ],
+  "Limitations": [
+    "The analysis uses one synthetic five-point dataset with constant residuals, so none of the conclusions extend to noisy, skewed, or larger datasets.",
+    "The note does not evaluate generalization, variance of the intercept estimate, or any finite-sample behavior beyond the trivial case, despite the 'Finite' framing.",
+    "The scope is restricted to a fixed slope. The note does not address joint estimation of slope and intercept or the effect of estimating the slope from data.",
+    "Reproducibility depends on external source files and checksums that are not included in the manuscript.",
+    "The work is purely pedagogical, and I see no societal or ethical implications."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 3,
+  "Contribution": 2,
+  "Overall": 3,
+  "Confidence": 4,
+  "Decision": "Reject"
+}
+```

@@ -119,8 +119,9 @@ def audit_model_policy(output, run, trace):
     checked = 0
     try:
         recorded = run["model_policy"]
-        policy = ModelPolicy(model=recorded["default_model"], model_map=recorded["upstream_model_map"],
-                             profile=recorded["profile"], role_models=recorded["role_overrides"])
+        from orchestra_execution import policy_from_snapshot, configured_default, validate_execution_profile
+        from orchestra_transports import validate_invocation_plan
+        policy = policy_from_snapshot(recorded)
         if recorded != policy.snapshot():
             raise ValueError("Resolved model plan differs from selected configuration")
         snapshot = output / "execution/model_profile.json"
@@ -130,7 +131,7 @@ def audit_model_policy(output, run, trace):
         if "model_profile_source" in run:
             source = output / "execution/model_profile.source.json"
             if (hashlib.sha256(source.read_bytes()).hexdigest() != run["model_profile_source"]["sha256"]
-                    or validate_profile(json.loads(source.read_bytes())) != policy.profile):
+                    or validate_execution_profile(json.loads(source.read_bytes())) != policy.profile):
                 raise ValueError("Original model profile snapshot differs from selected configuration")
         calls = {event["call"]:event for event in trace if event["event"] == "llm_call_start"}
         for event in trace:
@@ -148,16 +149,21 @@ def audit_model_policy(output, run, trace):
                 raise ValueError(f"Invocation model differs from selected role policy: {key}")
             if event.get("call") in calls and calls[event["call"]].get("routing_role") != route:
                 raise ValueError(f"Invocation model role differs from its original call: {key}")
-            effective = expected["model"] or "Codex configured default"
+            effective = expected["model"] or configured_default(expected.get("backend", "codex"))
             if event.get("effective_model") != effective or request.get("effective_model") != effective:
                 raise ValueError(f"Invocation effective model metadata differs: {key}")
             command = event["command"]
-            if expected["model"] is None:
+            if expected.get("backend", "codex") not in {"codex", "claude-code"}:
+                valid = True  # ACP model/effort ACKs and launch plan checked below.
+            elif expected["model"] is None:
                 valid = "--model" not in command
             else:
                 valid = command.count("--model") == 1 and command[command.index("--model") + 1] == expected["model"]
             if not valid:
                 raise ValueError(f"Invocation argv does not select the requested model: {key}")
+            plan_errors = validate_invocation_plan(output / "execution/invocations" / key, request, command, expected)
+            if plan_errors:
+                raise ValueError(f"Invocation native execution plan is invalid: {key}: {'; '.join(plan_errors)}")
             checked += 1
     except (ValueError, OSError, KeyError, TypeError, IndexError, AttributeError) as exc:
         errors.append(f"Model policy: {exc}")

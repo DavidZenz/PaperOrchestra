@@ -1,0 +1,421 @@
+{
+  "status": "completed",
+  "upstream_commit": "ca1b3fa01c2970fc7cda32d16245db38d57b3f56",
+  "agent_attempts": 65,
+  "completed_agent_attempts": 64,
+  "unique_sessions": 64,
+  "process_launches": 65,
+  "roles": {
+    "runtime-probe": 1,
+    "outline": 1,
+    "figure-planner": 2,
+    "figure-stylist": 2,
+    "ggplot2-visualizer": 2,
+    "figure-critic": 5,
+    "literature-discovery": 22,
+    "figure-captioner": 2,
+    "tikz-visualizer": 4,
+    "literature-synthesis": 1,
+    "section-writer": 1,
+    "peer-reviewer": 12,
+    "area-chair": 4,
+    "content-or-format-editor": 4,
+    "format-reviewer": 1
+  },
+  "worker_backends": {
+    "codex": 11,
+    "claude-code": 18,
+    "mistral-vibe": 6,
+    "antigravity": 29
+  },
+  "ensembles": 4,
+  "failed_review_ensembles": [],
+  "live_searches": 22,
+  "semantic_scholar_statuses": {
+    "429": 138,
+    "200": 3
+  },
+  "handoffs": [
+    {
+      "from": "literature_agent_output/outline_v1.json",
+      "to": "outline.json",
+      "hash_equal": true
+    },
+    {
+      "from": "literature_agent_output/updated_template.tex",
+      "to": "latex_writeup/template.tex",
+      "hash_equal": true
+    },
+    {
+      "from": "literature_agent_output/references.bib",
+      "to": "latex_writeup/references.bib",
+      "hash_equal": true
+    },
+    {
+      "from": "latex_writeup/raw_draft_paper.tex",
+      "to": "content_refinement_workdir/raw_draft_paper.tex",
+      "hash_equal": true
+    }
+  ],
+  "aggregate_score_checks": [
+    {
+      "file": "review_v0.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v1.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v2.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "review_v3.json",
+      "scores": [
+        {
+          "axis": "Originality",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Quality",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Clarity",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Significance",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "axis": "Soundness",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Presentation",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Contribution",
+          "expected": 2,
+          "actual": 2,
+          "ok": true
+        },
+        {
+          "axis": "Overall",
+          "expected": 3,
+          "actual": 3,
+          "ok": true
+        },
+        {
+          "axis": "Confidence",
+          "expected": 4,
+          "actual": 4,
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "frozen_build": {
+    "launch_sha256": "b770c9165b8fbba1b371c39115d9cb51de2f7740a1d11e9b145fc20423ff9a05",
+    "snapshot_sha256": "b770c9165b8fbba1b371c39115d9cb51de2f7740a1d11e9b145fc20423ff9a05",
+    "finish_sha256": "b770c9165b8fbba1b371c39115d9cb51de2f7740a1d11e9b145fc20423ff9a05",
+    "snapshot_matches": true,
+    "unchanged": true,
+    "currently_installed_sha256": "b770c9165b8fbba1b371c39115d9cb51de2f7740a1d11e9b145fc20423ff9a05",
+    "currently_installed_matches": true
+  },
+  "parallel_plot_branch": true,
+  "selected_figures": [
+    {
+      "figure_id": "fig_intercept_error",
+      "backend": "ggplot2",
+      "source": "figure_sources/264922fdb9c742c797cc3ad9d00fbe54/source.R",
+      "source_hash_valid": true,
+      "pdf_hash_valid": true,
+      "preview_handoff_valid": true,
+      "section_writer_received": true,
+      "worker_invocations": 2,
+      "code_generated_by_worker": true,
+      "renderer_inputs_valid": true
+    },
+    {
+      "figure_id": "fig_residual_workflow",
+      "backend": "tikz",
+      "source": "figure_sources/b874cf3b91534bdaa589032e65bbacc7/source.tex",
+      "source_hash_valid": true,
+      "pdf_hash_valid": true,
+      "preview_handoff_valid": true,
+      "section_writer_received": true,
+      "worker_invocations": 4,
+      "code_generated_by_worker": true,
+      "renderer_inputs_valid": true
+    }
+  ],
+  "manuscript_provenance": {
+    "enabled": true,
+    "policy": "selected-worker-code-v1",
+    "figures": [
+      {
+        "figure_id": "fig_intercept_error",
+        "source": "figure_code/fig_intercept_error/source.R",
+        "source_sha256": "189339846a19ff9afe13e24a7efe95cc4a83ec38a9778113caa8f8c92dd0589a",
+        "original_directory": "figure_sources/264922fdb9c742c797cc3ad9d00fbe54",
+        "selected_render_verified": true
+      },
+      {
+        "figure_id": "fig_residual_workflow",
+        "source": "figure_code/fig_residual_workflow/source.tex",
+        "source_sha256": "4e19b72bbe6333b3602153f3eab1b16ae392856ffa6a5527ea378e37911eb5fe",
+        "original_directory": "figure_sources/b874cf3b91534bdaa589032e65bbacc7",
+        "selected_render_verified": true
+      }
+    ],
+    "writer_requests_checked": 5,
+    "manuscript_results_checked": 5,
+    "compiled_manuscripts": [
+      {
+        "tex": "content_refinement_workdir/initial_draft.tex",
+        "tex_sha256": "67ab3a1ce5948628d91d79a44aa3292f2ab2c51284133e1c7c754a10e8edc454",
+        "source_snapshot": "execution/compiled/3b67fe68528f49b3a9b6a2570a109d39/source.tex"
+      },
+      {
+        "tex": "content_refinement_workdir/refined_paper_v1.tex",
+        "tex_sha256": "20498838750ef78ced8ee8d5f42dfda2ae1a3c9ae7f632f97e78eb2d04ec12fe",
+        "source_snapshot": "execution/compiled/81636dd9d3af49d3836e841a0209d319/source.tex"
+      },
+      {
+        "tex": "content_refinement_workdir/refined_paper_v2.tex",
+        "tex_sha256": "92f362ddb288112670198bc4a67f8ac6e8ee58e93a9553dde08635ba8a4a640d",
+        "source_snapshot": "execution/compiled/99ea0b09f0eb400ab1b898b600810bcd/source.tex"
+      },
+      {
+        "tex": "content_refinement_workdir/refined_paper_v3.tex",
+        "tex_sha256": "9e599a3c792ef8486e82e3511061a7ca39a90f502c7b327e95a1e17a822f1d43",
+        "source_snapshot": "execution/compiled/6523067f1f814387bcf08787116cf37a/source.tex"
+      },
+      {
+        "tex": "content_refinement_workdir/formatted_candidate_v1.tex",
+        "tex_sha256": "a8787097d12ea93d8e3444cac0de82d1c61fc3ba19af7200af0f3bb8434edd60",
+        "source_snapshot": "execution/compiled/bbc70a6a613b4aa88fab617b60d6c6b6/source.tex"
+      }
+    ],
+    "final_pdf_visible_references": true,
+    "final_pdf_selected_images_verified": true,
+    "manifest_sha256": "116f6f853dc893cbd598aea36dcf62f470a14b8b0734f771f41d8e1eb1773c86",
+    "valid": true
+  },
+  "model_policy": {
+    "enabled": true,
+    "attempts_checked": 65,
+    "valid": true
+  },
+  "revision_decisions": [
+    {
+      "version": "v1",
+      "total_gain": 1.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_SCORE_INCREASE"
+    },
+    {
+      "version": "v2",
+      "total_gain": 0.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+    },
+    {
+      "version": "v3",
+      "total_gain": 0.0,
+      "total_drop": 0.0,
+      "outcome": "ACCEPTED_NEUTRAL_IMPROVEMENT"
+    }
+  ],
+  "format_decisions": [
+    {
+      "version": "v1",
+      "outcome": "ACCEPTED_COMPILE_SUCCESS"
+    }
+  ],
+  "evidence_valid": true,
+  "errors": [],
+  "warnings": []
+}

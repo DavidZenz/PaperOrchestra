@@ -1,0 +1,23 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Fixed Predictors and Additive Offset Corrections}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Evaluation of Corrections Estimated from Observed Residuals}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Finite Observations and Residual Correction}{2}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Complete training record. Subtracting baseline predictions from targets gives the baseline residuals; adding their mean gives the corrected predictions.}}{2}{}\protected@file@percent }
+\newlabel{tab:observations}{{1}{2}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Least-Squares Equivalence and Error Calculation}{2}{}\protected@file@percent }
+\newlabel{sec:least_squares}{{3.2}{2}{}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Residual-to-offset workflow. Baseline predictions $2x_i$ are subtracted from targets to obtain $(3,3,3,3,3)$. Their mean supplies $b=3$, which is added to the baseline. Corrected predictions are scored against the same targets. The dashed target-to-evaluation path identifies this reuse as training evaluation.}}{3}{}\protected@file@percent }
+\newlabel{fig:residual_workflow}{{1}{3}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Deterministic Calculation and Recorded Results}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Recorded training errors. Every row scores the five observations in Table~\ref {tab:observations}.}}{4}{}\protected@file@percent }
+\newlabel{tab:errors}{{2}{4}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Visualization, Reproducibility, and Interpretation}{4}{}\protected@file@percent }
+\newlabel{sec:interpretation}{{4.2}{4}{}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Recorded training MSE against added intercept $b$. The points are $(0,9)$, $(1.5,2.25)$, and $(3,0)$. In this constant-residual record, halfway correction quarters total MSE and the fitted correction cancels every residual. Only recorded values are plotted.}}{5}{}\protected@file@percent }
+\newlabel{fig:intercept_error}{{2}{5}{}{figure.2}{}}
+\gdef \@abspage@last{6}

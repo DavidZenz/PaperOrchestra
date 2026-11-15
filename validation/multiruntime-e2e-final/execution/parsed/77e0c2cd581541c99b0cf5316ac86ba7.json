@@ -1,0 +1,70 @@
+{
+  "section_name": "Evaluation Dependencies and Held-Out Validation in Parameter Correction",
+  "candidates": [
+    {
+      "title": "Calibration: the Achilles heel of predictive analytics",
+      "year": 2019,
+      "reason": "Provides a comprehensive framework distinguishing calibration-in-the-large (the estimated intercept) evaluated on estimation cohorts from validation on separate observations, showing that apparent zero error on the estimation set provides no evidence of true calibration."
+    },
+    {
+      "title": "A closed testing procedure to select an appropriate method for updating prediction models",
+      "year": 2016,
+      "reason": "Investigates updating statistical predictors specifically via intercept recalibration and demonstrates why assessing model performance on the updating sample cannot substitute for validation on independent observations."
+    },
+    {
+      "title": "A calibration hierarchy for risk models was defined: from bad to good to extreme",
+      "year": 2016,
+      "reason": "Defines mean calibration (intercept matching) and details how estimating an adjustment term and evaluating it on the exact same data produces trivially perfect apparent calibration without measuring out-of-sample performance."
+    },
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Foundational mathematical analysis demonstrating that evaluating error on the identical observations used to fit parameters creates an evaluation dependency that underestimates true prediction error."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Formulates covariance penalties between predictions and outcomes when parameters (such as intercepts) are estimated in-sample, demonstrating why in-sample evaluation yields no measurement of generalization to separate observations."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "The seminal paper establishing the methodological necessity of strictly separating the observations used to estimate predictor parameters from those used to evaluate prediction performance."
+    },
+    {
+      "title": "Internal and external validation of predictive models: a simulation study of bias and precision in small samples",
+      "year": 2003,
+      "reason": "Demonstrates through simulation that evaluating fitted models on small development samples produces optimistic apparent performance that fails to reflect behavior on held-out or external samples."
+    },
+    {
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "year": 2010,
+      "reason": "Analyzes the statistical dependency introduced when parameters or offsets are evaluated on the data used to estimate them, explaining why held-out test data is necessary to measure true error."
+    },
+    {
+      "title": "Bias in error estimation when using cross-validation for model selection",
+      "year": 2006,
+      "reason": "Highlights that performing estimation or tuning steps without isolating held-out evaluation observations yields artificially low or zero apparent error, masking true prediction error."
+    },
+    {
+      "title": "A survey of cross-validation procedures for model selection",
+      "year": 2010,
+      "reason": "Provides a comprehensive survey analyzing the mathematical divergence between apparent empirical risk on estimation samples and true risk on independent, held-out observations."
+    },
+    {
+      "title": "Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD): Explanation and Elaboration",
+      "year": 2015,
+      "reason": "Establishes authoritative methodological reporting standards clarifying the distinction between apparent performance on development data and genuine performance on independent validation cohorts."
+    },
+    {
+      "title": "Leakage and the Reproducibility Crisis in Machine-Learning-Based Science",
+      "year": 2023,
+      "reason": "Examines pervasive data leakage and evaluation failure modes where post-hoc parameter corrections fitted on evaluation data invalidate claims of out-of-sample generalization."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Demonstrates that post-hoc intercept and temperature adjustments must be strictly evaluated on separate held-out datasets to avoid trivial apparent calibration."
+    }
+  ]
+}

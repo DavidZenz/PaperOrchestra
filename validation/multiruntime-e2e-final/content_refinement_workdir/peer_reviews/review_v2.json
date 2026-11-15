@@ -1,0 +1,45 @@
+{
+    "Summary": "The manuscript is a teaching note on additive intercept correction for a fixed-slope predictor. Five synthetic observations follow y = 2x + 3, while the baseline predicts 2x, giving constant residuals of 3. The note derives the least-squares correction as the mean residual through the decomposition L(b) = mean((r_i - rbar)^2) + (b - rbar)^2. It reports training-observation MAE and MSE for corrections b = 0, 1.5, and 3, and distinguishes these errors from errors on new observations. Tables, a workflow diagram, an error plot, and base R calculations support the pedagogical exposition.",
+    "Strengths": [
+        "All three reviewers confirm the correctness of the residuals, intercept correction, and reported MAE and MSE values.",
+        "The squared-error decomposition correctly establishes the mean residual as the unique optimal intercept correction for a fixed slope and identifies when the minimum error is zero.",
+        "The manuscript explicitly distinguishes training error from error on new observations and acknowledges that zero training error does not establish predictive accuracy.",
+        "The exposition is compact and generally clear, with consistent numerical examples and base R commands supporting verification of the calculations."
+    ],
+    "Weaknesses": [
+        "The central result is classical, and the manuscript does not establish sufficient methodological novelty, research insight, or broader significance for a top-tier machine learning research venue.",
+        "The sole worked example has identical residuals, so exact correction occurs by construction. It does not illustrate the positive residual error that generally remains after intercept fitting.",
+        "Despite emphasizing training versus predictive error, the manuscript provides no numerical held-out example demonstrating their difference.",
+        "The Related Work section lacks citations and does not establish connections to standard treatments of fixed-slope intercept estimation, offset models, or training and test error.",
+        "The statements that a halfway correction halves MAE and quarters MSE require qualification: these relationships hold for the constant-residual example and do not generally describe total error with varying residuals.",
+        "The treatment does not explain that the mean residual minimizes MSE whereas a median residual minimizes MAE in general.",
+        "The intended contribution and venue are insufficiently aligned: the manuscript presents an introductory teaching resource using research-paper framing, without evidence of educational effectiveness.",
+        "The terminology 'fitting-observation error' and overlapping uses of residual and error could be clarified using standard training or in-sample terminology."
+    ],
+    "Originality": 1,
+    "Quality": 2,
+    "Clarity": 3,
+    "Significance": 1,
+    "Questions": [
+        "What is the intended audience and venue, and what specific contribution does the manuscript claim beyond existing textbook treatments?",
+        "Can the authors provide a worked example with non-constant residuals, showing the fitted correction and a positive minimum training MSE?",
+        "Can the authors add held-out observations and compute their errors to demonstrate the distinction between training and predictive performance?",
+        "Can the authors qualify the halfway-correction claims and explain how the MSE-optimal mean differs from the MAE-optimal median?",
+        "Which standard references and existing teaching resources does this note build on, and what does its presentation add?",
+        "Can the authors standardize the residual and error terminology and clarify which reproduction materials are included with the submission?"
+    ],
+    "Limitations": [
+        "The worked evidence consists of five deterministic synthetic observations with constant residuals and a fixed slope. It does not establish performance under noise, outliers, model misspecification, or slope estimation.",
+        "Although the mathematical decomposition applies to arbitrary residuals under a fixed slope, the example does not demonstrate that generality or small-sample variability.",
+        "Zero training error is a consequence of the constructed targets; learners could mistake it for evidence of predictive accuracy despite the stated caveat.",
+        "The supplied reviews do not establish independent verification of all figure images and external provenance artifacts.",
+        "No substantive negative societal impacts or ethical concerns are identified; the primary foreseeable risk is educational misunderstanding."
+    ],
+    "Ethical Concerns": false,
+    "Soundness": 3,
+    "Presentation": 3,
+    "Contribution": 2,
+    "Overall": 3,
+    "Confidence": 4,
+    "Decision": "Reject"
+}

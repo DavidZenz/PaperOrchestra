@@ -1,0 +1,36 @@
+{
+  "invocation": "d990aabb6a3b448385ab4163ed5f1c4d",
+  "call": null,
+  "role": "literature-discovery",
+  "callsite": [],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gemini-3.8-flash",
+  "config": {
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "search_required": true,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "antigravity",
+  "transport_plan_sha256": "3c0bb254bdd4488a006ff93cb0608a081cf84ec88b574d645294ebb3ff2a3e18",
+  "prompt_sha256": "22c84873cd93aee85c89eed625c534f9e2c1d397c942c3e3452f4274b7df6bf8",
+  "model_routing": {
+    "model": "gemini-3.8-flash",
+    "routing_role": "literature-discovery",
+    "group": "discovery",
+    "selected_by": "--model fallback",
+    "backend": "antigravity",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "--backend fallback",
+      "model": "--model fallback",
+      "effort": "--effort fallback"
+    }
+  }
+}

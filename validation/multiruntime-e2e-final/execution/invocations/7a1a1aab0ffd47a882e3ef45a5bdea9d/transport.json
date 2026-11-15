@@ -1,0 +1,41 @@
+{
+  "backend": "mistral-vibe",
+  "mode": "acp",
+  "command": [
+    "vibe-acp"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\nYou are an expert scientific diagram illustrator. Generate high-quality scientific diagrams based on user requests.\n\nWrite a complete standalone LaTeX/TikZ document rendering the following detailed description: **Layout and canvas**\n- Pure white background (`#FFFFFF`), no frame or outer border.\n- Flow organized on a coherent 4-column, 3-row grid, approximately 11.5 cm wide and 5.5 cm tall, scaled to `\\columnwidth`.\n- Typography: Computer Modern font throughout; math expressions in native math mode ($8$--$9\\,\\mathrm{pt}$); node and edge labels use `\\small` or `\\footnotesize`.\n- Node styling: Rounded rectangles (`rounded corners=2pt`) with $0.6\\,\\mathrm{pt}$ borders and soft pastel fills. Arrows are $0.7\\,\\mathrm{pt}$ dark slate gray (`#374151`) with `-Stealth` tips.\n\n**Nodes**\n1. **Input (Row 1, Column 1):** Soft blue fill (`#DCE9F7`), blue border (`#2563EB`). Label: $x_i$, $i=1,\\dots,5$, with sample values $x = (-2, -1, 0, 1, 2)$ on a second line.\n2. **Target (Row 1, Column 2):** Soft green fill (`#DCFCE7`), green border (`#15803D`). Label: $y_i = 2x_i + 3$, with sample values $(-1, 1, 3, 5, 7)$ on a second line.\n3. **Baseline Predictor (Row 2, Column 1):** Neutral light gray fill (`#F3F4F6`), medium gray border (`#6B7280`). Label: Fixed predictor $\\hat{y}_i^{(0)} = 2x_i$, with sample values $(-4, -2, 0, 2, 4)$. An arrow labeled '$\\times 2$' runs vertically from the input node down into this node.\n4. **Residual (Row 2, Column 2):** Light orange fill (`#FFEDD5`), orange border (`#C2410C`). Label: $r_i = y_i - 2x_i$, with values $(3, 3, 3, 3, 3)$. Two inbound orthogonal arrows: one from the target node above entering the top anchor (labeled '$+y_i$'), and one from the baseline node entering the left anchor (labeled '$-2x_i$'). No overlapping circle glyphs over the arrowhead.\n5. **Mean Residual Scalar (Row 3, Column 2):** High visual prominence. Amber fill (`#FEF3C7`), dark amber border (`#B45309`), $1.2\\,\\mathrm{pt}$ line width. Label: $b = \\frac{1}{5}\\sum_{i=1}^{5} r_i = 3$.\n6. **Corrected Prediction (Row 3, Column 3):** Light green fill (`#DCFCE7`), green border (`#15803D`), $0.6\\,\\mathrm{pt}$ line width. Label: $\\hat{y}_i = 2x_i + b$, with values $(-1, 1, 3, 5, 7)$.\n7. **Evaluation (Row 3, Column 4):** Horizontally aligned with Row 3 for planar flow. Light lavender fill (`#F3E8FF`), purple border (`#7E22CE`), dashed border style (`dash pattern=on 3pt off 2pt`). Label: 'Evaluate $\\hat{y}_i$ against $y_i$\\\\on the same five $(x_i, y_i)$.'\n\n**Connections and Semantics**\n- **Primary Data Dependency (Emphasized):** A thick, non-intersected amber arrow ($1.2\\,\\mathrm{pt}$, `#B45309`) runs vertically straight from the bottom of the residual node to the top of the mean residual scalar node. It is annotated on its right with: 'mean over the\\\\observed residuals' in $7.5\\,\\mathrm{pt}$ text.\n- **Additive Correction Arrow:** A solid horizontal arrow from the right of the mean residual node to the left of the corrected prediction node, labeled '$+\\,b$'.\n- **Baseline Feed Routing (Non-crossing):** The arrow carrying $2x_i$ from the baseline predictor node drops vertically down from Row 2, runs horizontally along the lower margin below Row 3 (bypassing the amber dependency arrow completely underneath the $b$ box), and turns upward into the bottom anchor of the corrected prediction node, labeled '$2x_i$'. This preserves a planar layout with zero intersecting lines.\n- **Evaluation Connections:**\n  - A solid horizontal arrow runs from the right anchor of the corrected prediction node directly into the left anchor of the evaluation node, labeled '$\\hat{y}_i$'.\n  - A dashed gray orthogonal elbow arrow (`#6B7280`) emerges from the right side of the target node ($y_i$), travels horizontally along the upper margin above Row 2, and descends vertically straight into the top anchor of the evaluation node, labeled '$y_i$'.\n- **Reuse Callout:** Directly beneath the evaluation node, an unhyphenated annotation in $7.5\\,\\mathrm{pt}$ text reads: 'Same five observations used\\\\to estimate $b$ and to score.' centered with no hyphenation.\n\n**Constraints**\n- No figure title, canvas borders, or caption text embedded inside the diagram visual.\n- No extraneous modules, training loops, optimizers, or held-out validation splits.\n- Strictly vector-ready TikZ specification using mathematical typography.\nReturn LaTeX code only. Use \\documentclass[tikz,border=5pt]{standalone}, \\usepackage{amsmath} and any required standard TikZ libraries. The renderer is pdfLaTeX. Use its built-in TeX fonts; do not load fontspec, select system fonts, or require XeLaTeX/LuaLaTeX. Match the requested font style with a standard TeX serif, sans or mono family. Produce one diagram on one page, with no figure title or caption in the drawing. Use editable TikZ nodes, paths and math; do not embed external images, invoke shell commands, or download assets. Preserve the described scientific content and labels. Requested canvas aspect ratio: 3:2. Code:",
+  "env": {
+    "VIBE_DEFAULT_AGENT": "ask",
+    "VIBE_ENABLED_AGENTS": "[\"ask\"]",
+    "VIBE_ENABLE_SUBAGENTS": "false",
+    "VIBE_ENABLE_MCP": "false",
+    "VIBE_ENABLE_CONNECTORS": "false",
+    "VIBE_ENABLED_TOOLS": "[]",
+    "VIBE_DISABLED_TOOLS": "[\"*\"]",
+    "VIBE_DISABLED_SKILLS": "[\"*\"]",
+    "VIBE_INCLUDE_PROJECT_CONTEXT": "false",
+    "VIBE_OUTSIDE_WORKDIR": "deny",
+    "VIBE_SESSION_LOGGING__ENABLED": "false",
+    "VIBE_SESSION_LOGGING__GENERATE_TITLES": "false",
+    "VIBE_ENABLE_UPDATE_CHECKS": "false",
+    "VIBE_ENABLE_NOTIFICATIONS": "false",
+    "VIBE_ENABLE_TELEMETRY": "false",
+    "VIBE_EXPERIMENTS__ENABLE": "false",
+    "VIBE_OUTPUT_LIMIT_RETRIES": "0",
+    "VIBE_ACTIVE_MODEL": "zai-glm-5-3",
+    "VIBE_MODELS": "{\"zai-glm-5-3\": {\"alias\": \"zai-glm-5-3\", \"name\": \"zai-glm-5-3\", \"provider\": \"mistral\", \"supports_images\": false, \"thinking\": \"high\", \"thinking_levels\": [\"low\", \"high\", \"max\"]}}"
+  },
+  "images": [],
+  "acp": {
+    "config_strategy": "preconfigured",
+    "model": "zai-glm-5-3",
+    "effort": "high",
+    "model_option": "model",
+    "effort_option": "thinking",
+    "allowed_search_tools": [],
+    "allowed_auxiliary_tools": [],
+    "image_limit": 8,
+    "image_max_bytes": 10485760
+  }
+}

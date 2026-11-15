@@ -1,7 +1,7 @@
-"""Separate-process Codex transport for the pinned PaperOrchestra controller.
+"""Separate-process worker transport for the pinned PaperOrchestra controller.
 
 No agent role is executed by this Python process. It transports original prompts,
-attachments and tool requests to fresh Codex sessions and records their evidence.
+attachments and tool requests to fresh native sessions and records their evidence.
 """
 from __future__ import annotations
 
@@ -93,14 +93,15 @@ class Runtime:
     def __init__(self, trace_dir, *, model=None, model_map=None, timeout=600,
                  image_command=None, executor=None, plot_backend="ggplot2", diagram_backend="tikz",
                  rscript="Rscript", render_timeout=60, manuscript_provenance=False,
-                 model_profile=None, role_models=None):
+                 model_profile=None, role_models=None, backend=None, effort=None):
         self.root = Path(trace_dir).resolve()
         self.root.mkdir(parents=True, exist_ok=True)
         self.model = model
         self.model_map = model_map or {}
-        from orchestra_models import ModelPolicy
-        self.model_policy = ModelPolicy(model=model, model_map=model_map,
-                                        profile=model_profile, role_models=role_models)
+        from orchestra_execution import execution_policy
+        self.model_policy = execution_policy(model=model, model_map=model_map,
+                                             profile=model_profile, role_models=role_models,
+                                             backend=backend, effort=effort)
         self.timeout = timeout
         self.image_command = image_command
         self.executor = executor or self._execute
@@ -130,6 +131,14 @@ class Runtime:
         raise CapabilityError(message)
 
     def _execute(self, command, prompt, directory):
+        plan_path = directory / "transport.json"
+        if plan_path.is_file():
+            plan = json.loads(plan_path.read_text())
+            if plan["backend"] != "codex":
+                from orchestra_transports import execute_invocation
+                return execute_invocation(plan, directory, self.timeout,
+                    lambda pid:self.event("process_started", invocation=directory.name,
+                                           pid=pid, backend=plan["backend"]))
         # argv, never a shell. Fresh invocation, never exec resume/fork.
         with (directory / "events.jsonl").open("w") as out, (directory / "stderr.log").open("w") as err:
             process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=out,
@@ -234,46 +243,43 @@ class Runtime:
                 self.pending_search.add(search_key)
         selection = self.model_policy.resolve(_routing_role.get() or role, requested_model, legacy_role=role)
         effective_model = selection["model"]
+        from orchestra_execution import configured_default
+        from orchestra_transports import prepare_invocation, inspect_invocation
+        backend = selection.get("backend", "codex")
+        try:
+            plan = prepare_invocation(selection, prompt, images, search, directory)
+        except (ValueError, OSError) as exc:
+            self.unavailable(f"{backend} worker cannot accept this invocation: {exc}")
+        (directory / "transport.json").write_text(json.dumps(plan, indent=2))
         request = dict(invocation=invocation, call=_call_id.get(), role=role, callsite=callsite,
                        figure_id=figure_context.get(),
-                       requested_model=requested_model, effective_model=effective_model or "Codex configured default",
+                       requested_model=requested_model, effective_model=effective_model or configured_default(backend),
                        config=config, search_required=search, media=media, images=images,
+                       image_sha256={path:digest(path) for path in images}, backend=backend,
+                       transport_plan_sha256=digest(directory / "transport.json"),
                        prompt_sha256=digest(directory / "prompt.txt"), model_routing=selection, **provenance_fields)
         (directory / "request.json").write_text(json.dumps(request, indent=2, default=str))
-        command = ["codex", "exec", "--ephemeral", "--skip-git-repo-check", "--sandbox", "read-only",
-                   "--json", "--color", "never", "--cd", str(directory),
-                   "-o", str(directory / "response.txt")]
-        # No search for authors, reviewers, or editors. Discovery alone gets live search.
-        command.extend(["-c", 'web_search="live"' if search else 'web_search="disabled"'])
-        if effective_model:
-            command.extend(["--model", effective_model])
-        for image in images:
-            command.extend(["--image", image])
-        command.append("-")
+        command = plan["command"]
         self.event("agent_start", **request, command=command)
         try:
             raw = self.executor(command, prompt, directory)
             (directory / "response.txt").write_text(raw)
             events_path = directory / "events.jsonl"
-            events = []
-            if events_path.exists():
-                for line in events_path.read_text().split("\n"):
-                    try:
-                        events.append(json.loads(line))
-                    except ValueError:
-                        pass
-            sessions = [e["thread_id"] for e in events if e.get("type") == "thread.started"]
-            searched = executed_search(events)
-            failed_turn = any(e.get("type") in {"turn.failed", "error"} for e in events)
-            if failed_turn:
-                raise RuntimeError("Codex emitted a failed turn; inspect events.jsonl")
-            if self.executor == self._execute:
-                if len(sessions) != 1 or not any(e.get("type") == "turn.completed" for e in events):
-                    raise RuntimeError("Codex produced no single completed independent session evidence")
+            receipt = inspect_invocation(directory, request) if events_path.exists() else {
+                "sessions":[], "searched":False, "failed":False, "completed":False, "errors":[]}
+            sessions, searched = receipt["sessions"], receipt["searched"]
+            if receipt["failed"]:
+                raise RuntimeError(f"{backend} emitted a failed turn; inspect native events: " + "; ".join(receipt.get("errors", [])))
+            if self.executor == self._execute or backend != "codex":
+                if len(sessions) != 1 or not receipt["completed"]:
+                    raise RuntimeError(f"{backend} produced no single completed independent session evidence")
+                if receipt.get("response") is not None and receipt["response"] != raw:
+                    raise RuntimeError(f"{backend} native final response differs from its returned artifact")
                 with self.lock:
-                    if sessions[0] in self.sessions:
-                        raise RuntimeError("Codex reused an existing session")
-                    self.sessions.add(sessions[0])
+                    session_key = (backend, sessions[0])
+                    if session_key in self.sessions:
+                        raise RuntimeError(f"{backend} reused an existing session")
+                    self.sessions.add(session_key)
             if search and not searched:
                 self.event("search_evidence_missing", invocation=invocation, task=search_key)
                 raise RuntimeError("Discovery agent provided no completed live web_search execution evidence")
@@ -281,7 +287,7 @@ class Runtime:
                 with self.lock:
                     self.pending_search.discard(search_key)
             self.event("agent_end", invocation=invocation, role=role, sessions=sessions,
-                       searched=searched, response_sha256=digest(directory / "response.txt"))
+                       backend=backend, searched=searched, response_sha256=digest(directory / "response.txt"))
             return SimpleNamespace(text=raw)
         except Exception as exc:
             self.event("agent_error", invocation=invocation, error=str(exc))

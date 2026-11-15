@@ -1,0 +1,40 @@
+{
+  "Summary": "This is a short teaching note working through a five-observation example with targets y = 2x + 3 and a fixed-slope baseline of 2x. Every residual equals 3, so their mean gives the least-squares intercept correction b = 3. The note decomposes the fixed-slope least-squares objective into a constant term plus (b - mean residual)^2, reports MAE and MSE for b = 0, 1.5, and 3 (MSE 9, 2.25, 0), and distinguishes error on the fitting observations from error on new observations. It includes an observation table, a workflow diagram, an error plot, and provenance for the figure sources.",
+  "Strengths": [
+    "All reported numbers check out: the residuals are (3, 3, 3, 3, 3), the corrected column equals the targets, and the MAE and MSE values in Table 2 match |3 - b| and (3 - b)^2.",
+    "The decomposition L(b) = mean((r_i - rbar)^2) + (b - rbar)^2 is stated correctly, and the note correctly states that exact cancellation occurs only when every residual equals their mean.",
+    "It separates fitting-observation error from error on new observations and states explicitly that the zero reported here transfers to new data only if the new baseline residual is also 3.",
+    "The calculation is reproducible with a few base R lines, and the figure sources and checksums are provided.",
+    "The writing is clear, and the organization (table, decomposition, workflow, error plot) follows the stated learning objectives."
+  ],
+  "Weaknesses": [
+    "The main result, that the mean minimizes the sum of squared deviations, is a standard textbook fact, and the note adds little beyond a worked instance of it.",
+    "The example is degenerate: all residuals are identical, so the fitted correction removes all error by construction. The note never shows the case most useful for teaching intercept estimation, namely noisy residuals where the correction leaves nonzero error.",
+    "Although the paper emphasizes the gap between fitting error and predictive error, it provides no held-out or new observations and no numerical example of that gap.",
+    "The Experiments section reports a single hand-computed example rather than experiments. There is no variation in sample size, noise level, or model.",
+    "Related Work cites no literature and the paper has no reference list, so its connection to existing treatments of least squares, training versus test error, or teaching material is not established.",
+    "The paper is framed as a research submission, but as written it is a pedagogical exposition. The intended venue, audience, and claimed contribution are not stated consistently."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "What is the intended venue and audience? The text describes introductory learners, but the manuscript is framed as a research submission. Please state the contribution you claim.",
+    "How does the picture change when the residuals are noisy? Please report the fitted correction and both fitting-observation and held-out errors for a non-degenerate dataset.",
+    "Which prior treatments of least-squares intercept estimation, residual analysis, or training versus test error does this note build on, and how does it differ from them?",
+    "Is fitting-observation error the standard term for training error? If not, what does the new terminology add?"
+  ],
+  "Limitations": [
+    "The scope is five synthetic observations with constant residuals. The results say nothing about noisy data, multiple predictors, or an estimated slope.",
+    "The zero-error result is an artifact of the constructed record. Learners may over-read it, and the example itself does not guard against that misreading beyond a brief caveat.",
+    "The work is mathematical exposition with no data collection or deployment, so negative societal impact is negligible."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 3,
+  "Contribution": 2,
+  "Overall": 3,
+  "Confidence": 4,
+  "Decision": "Reject"
+}

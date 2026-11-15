@@ -1,0 +1,34 @@
+{
+  "invocation": "b545b9b197594cbc8b614344616e346d",
+  "call": "c9da9079ec4045e4b39c0577e205f743",
+  "role": "tikz-visualizer",
+  "callsite": [
+    "orchestra_visuals.py:generate_figure_visuals:147",
+    "plotting_agent.py:process_single_figure:155",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_residual_workflow",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "zai-glm-5-3",
+  "config": {},
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "mistral-vibe",
+  "transport_plan_sha256": "ef9e7bee77fa124101ec224e33eff172219eb96285122a5dca29b2bdf4378b53",
+  "prompt_sha256": "e8b78c647d9376f87493e2bc5aa8fa60cccc5813bd8929b3f3ceea9bd27e4ff2",
+  "model_routing": {
+    "model": "zai-glm-5-3",
+    "routing_role": "tikz-visualizer",
+    "group": "figure_code",
+    "selected_by": "profile group: figure_code",
+    "backend": "mistral-vibe",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile group: figure_code",
+      "model": "profile group: figure_code",
+      "effort": "profile group: figure_code"
+    }
+  }
+}

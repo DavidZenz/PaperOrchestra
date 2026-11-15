@@ -1,0 +1,70 @@
+{
+  "section_name": "Estimation of Scalar Additive Corrections Under Fixed Base Predictors",
+  "candidates": [
+    {
+      "title": "Validation and Updating of Predictive Logistic Regression Models: A Study on Sample Size and Shrinkage",
+      "year": 2004,
+      "reason": "Directly formalizes the hierarchy of model updating, proving that when the discriminatory power (slope) of an existing prediction rule is sound, fixing the slope to unity and estimating only a scalar intercept offset (recalibration-in-the-large) resolves systematic mean prediction errors while minimizing variance in small validation samples."
+    },
+    {
+      "title": "A Calibration Hierarchy for Risk Models Was Defined: From Magic to Compromise to Care",
+      "year": 2016,
+      "reason": "Establishes mean calibration (calibration-in-the-large) as the first level of predictive model validation, defining the regression model where the original predictor is entered with a fixed slope of 1 and an estimated scalar intercept isolates and corrects constant residual error across predictions."
+    },
+    {
+      "title": "The Evaluation of Economic Forecasts",
+      "year": 1969,
+      "reason": "Introduces the Mincer-Zarnowitz diagnostic framework, demonstrating that regressing observed outcomes against pre-existing forecasts under a fixed slope of 1 specifically isolates the scalar intercept offset corresponding to unconditional mean prediction error."
+    },
+    {
+      "title": "Improved Methods of Combining Forecasts",
+      "year": 1984,
+      "reason": "Analyzes the structural necessity of including a scalar constant term when evaluating or combining fixed forecasts, proving that omitting the scalar offset forces non-zero residual means whenever the base prediction omits an underlying additive shift."
+    },
+    {
+      "title": "Two Further Applications of a Model for Binary Data",
+      "year": 1958,
+      "reason": "Seminal foundation of logistic recalibration (Cox recalibration), establishing the method of using existing linear prediction scores with a fixed slope to estimate a scalar shift parameter that adjusts for baseline shift without re-estimating predictor coefficients."
+    },
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Documents the formal stage-wise minimization principle where an initial prediction rule is anchored by an optimal scalar offset minimizing empirical loss, and shows how successive additive adjustments target constant residual components while leaving earlier stages fixed."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Investigates post-hoc recalibration techniques on held-out validation sets, detailing how affine and scalar offset adjustments correct systematic prediction errors while freezing the underlying feature representations and base decision rules."
+    },
+    {
+      "title": "Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods",
+      "year": 1999,
+      "reason": "Derives Platt scaling as a post-hoc calibration step where a frozen uncalibrated prediction rule is transformed via a scalar slope and additive intercept, demonstrating how scalar parameter fitting on validation data corrects systematic score displacements."
+    },
+    {
+      "title": "Regression through the Origin",
+      "year": 2003,
+      "reason": "Analyzes the mathematical properties and risks of linear regression models lacking a constant term, demonstrating that omitting a scalar intercept when the true process contains a non-zero constant forces non-zero residual sums and biases error metrics."
+    },
+    {
+      "title": "Leverage and Regression through the Origin",
+      "year": 1983,
+      "reason": "Provides a rigorous mathematical treatment of residual structures and leverage when fitting slope-only models through the origin, documenting how an unmodelled constant term manifests directly as a uniform shift in prediction residuals."
+    },
+    {
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year": 2018,
+      "reason": "Extends post-hoc calibration to continuous regression models, showing that a fixed base model's systematic prediction errors can be adjusted via non-parametric or scalar validation-set residual corrections without altering base model parameters."
+    },
+    {
+      "title": "Beyond Temperature Scaling: Obtaining Well-Calibrated Multi-Class Probabilities with Dirichlet Calibration",
+      "year": 2019,
+      "reason": "Evaluates parameterizations of post-hoc calibration, dissecting how intercept and bias vectors in affine recalibration models capture and resolve constant offset errors observed in base predictor outputs."
+    },
+    {
+      "title": "Distribution-Free Predictive Inference for Regression",
+      "year": 2018,
+      "reason": "Formalizes conformal residual analysis for fixed regression models, proving that empirical residuals computed on calibration data can be translated into scalar offsets that guarantee coverage and unbiased error compensation under exchangeability."
+    }
+  ]
+}

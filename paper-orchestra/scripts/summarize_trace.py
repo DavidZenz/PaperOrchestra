@@ -9,6 +9,7 @@ import re
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "vendor"))
 
 
 def executed_search(events):
@@ -72,16 +73,39 @@ def summarize(output):
                 warnings.append({"invocation":key,"file":"events.jsonl","line":line_number,
                                  "issue":"Malformed raw event retained; excluded from proof",
                                  "line_sha256":hashlib.sha256(line.encode()).hexdigest()})
-        recorded_sessions = [e["thread_id"] for e in raw if e.get("type") == "thread.started"]
+        backend = start.get("backend", "codex")
+        receipt = None
+        if backend == "codex":
+            recorded_sessions = [e["thread_id"] for e in raw if e.get("type") == "thread.started"]
+            completed = any(e.get("type") == "turn.completed" for e in raw)
+            failed = any(e.get("type") in {"turn.failed", "error"} for e in raw)
+            searched = executed_search(raw)
+        else:
+            from orchestra_transports import inspect_invocation
+            try:
+                request_path = directory / "request.json"
+                request = json.loads(request_path.read_text()) if request_path.exists() else start
+                receipt = inspect_invocation(directory, request)
+                recorded_sessions = receipt["sessions"]
+                completed, failed, searched = receipt["completed"], receipt["failed"], receipt["searched"]
+                if receipt["backend"] != backend or receipt.get("errors"):
+                    errors.append(f"Invocation {key} has invalid native proof: {receipt.get('errors')}")
+                if receipt.get("response") != (directory / "response.txt").read_text():
+                    errors.append(f"Invocation {key} native final response differs from its artifact")
+                if request.get("images", []) != receipt.get("images_delivered", []):
+                    errors.append(f"Invocation {key} did not deliver all native image attachments")
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                errors.append(f"Invocation {key} native evidence could not be audited: {exc}")
+                recorded_sessions, completed, failed, searched = [], False, True, False
         if len(recorded_sessions) != 1 or recorded_sessions != event["sessions"]:
             errors.append(f"Invocation {key} has invalid independent session evidence")
-        if not any(e.get("type") == "turn.completed" for e in raw):
+        if not completed:
             errors.append(f"Invocation {key} did not complete a turn")
-        if any(e.get("type") in {"turn.failed", "error"} for e in raw):
+        if failed:
             errors.append(f"Invocation {key} contains a failed turn")
-        if start["search_required"] and not executed_search(raw):
+        if start["search_required"] and not searched:
             errors.append(f"Invocation {key} has no executed web_search event")
-        sessions.extend(recorded_sessions)
+        sessions.extend((backend, session) for session in recorded_sessions)
     if len(sessions) != len(set(sessions)):
         errors.append("Independent invocations reused a session")
     # PIDs can be reused by an OS over time; UUIDs/sessions establish identity.
@@ -318,6 +342,7 @@ def summarize(output):
             "agent_attempts": len(starts), "completed_agent_attempts":len(ends),
             "unique_sessions":len(set(sessions)), "process_launches":len(processes),
             "roles":dict(Counter(e["role"] for e in ends)),
+            "worker_backends":dict(Counter(starts[e["invocation"]].get("backend", "codex") for e in ends if e["invocation"] in starts)),
             "ensembles":len(reviews)//4,
             "failed_review_ensembles":failed_ensembles,
             "live_searches":sum(bool(e.get("searched")) for e in ends),

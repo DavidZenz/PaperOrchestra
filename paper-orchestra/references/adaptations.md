@@ -71,6 +71,76 @@ other providers and the Antigravity platform are explicitly advisory and need
 separately validated adapters. No scientific/domain prompt, manuscript format,
 upstream role, numerical rule, retry or stopping behavior changes in this update.
 
+**R025 — Native worker backends:** Codex remains the compatible default. Claude
+Code structured print mode and Antigravity/Mistral Vibe ACP now execute the same
+original role inputs in separate fresh processes/native sessions. A backend is
+explicitly selected, never guessed from a model name. The Python controller
+still owns all dependency edges, pools/joins, peers/chair, numerical means and
+revision/reversion/stopping decisions. Native agent system prompts, HTTP/tool
+loops and provider retry internals differ from the original Gemini API and from
+each other; equivalent manuscripts, call costs and scores are not promised.
+No backend's built-in multi-agent orchestrator is used.
+Claude's structured native 400/token-limit errors are reported in the existing
+helper's recognized nonretryable form, without echoing full provider error bodies;
+the copied retry function itself is unchanged.
+
+**R026 — Native effort and mixed profiles:** Optional schema-2 targets add
+`backend`, `model` and `effort` by group/role, with explicit field inheritance,
+native CLI/config settings and complete reusable snapshots. Schema-1 behavior is
+retained. Switching backend in an object requires explicit model and effort,
+which may be null to inherit that runtime's configuration. No effort translation
+or automatic downgrade occurs. ACP must acknowledge the actual selected
+model/effort before the prompt. Codex/Claude record their CLI flags; when native
+completion does not echo effort, observed effort remains null. Dated presets and
+their effort recommendations are unevaluated engineering choices. Separate
+authenticated runtime accounts may be mixed; no account/credit pooling or
+automatic quota fallback is added. This is inference configuration, not a
+scientific/domain prompt or manuscript-format adaptation.
+
+**R027 — Native worker isolation:** Claude disables customizations, MCP and
+skills through its native safe/restricted flags and exposes only WebSearch for
+discovery. Antigravity uses a scoped custom main agent, no subagents, and a
+per-session tool policy. Vibe uses process-local settings, its built-in ask
+agent, disabled subagents/skills/MCP and scoped connectors. Vibe's setters that
+could persist model/effort defaults are avoided. Background title generation and
+Vibe's extra output-limit rewriting loop are disabled. A discovery-only Vibe
+`search_tool_functions` catalog lookup is allowed as an exact read-only auxiliary
+operation; it is never accepted as completed search evidence. No global model or
+effort configuration is changed. Native client HTTP retries remain runtime
+internals, distinct from the unchanged five-attempt controller helper.
+
+**R028 — Native evidence and media:** Native event streams and both directions
+of ACP JSON-RPC are retained. Auditors independently reconstruct session/new,
+one prompt/end_turn, configuration acknowledgments, exact final message,
+inline image bytes and completed search call IDs; duplicate request/response IDs
+and session reuse fail. Session identity is qualified by backend. Vibe's native
+published connector `connector_web_search_web_search` maps to canonical event
+`connector_web_search.web_search`; legacy `web_search` remains recognized.
+Antigravity 1.5.9 emits an exact named/query-matched start and completed status
+without a search-result body, so its proof is native completion status, not a
+claim of a retained result payload. Final discovery output is still handed to
+the original parser/enrichment stage. Pre-prompt stale config notifications do
+not override later explicit ACKs; configuration drift during a prompt fails.
+ACP final assistant messages are selected by native message IDs when supplied,
+otherwise tool-boundary epochs; pre-search narration remains in raw evidence.
+Malformed raw stdout is retained and cannot satisfy protocol proof. Prior Codex
+evidence remains explicitly backward-auditable without invented native receipts.
+
+**R029 — Native image capability limits:** Antigravity uses ACP because its
+print-mode structured input is text-only. Vibe 3.1 ACP accepts at most eight
+images per message and 10 MiB per image; excess pages fail explicitly, never
+truncate. Its image jobs require an explicitly supported multimodal model so a
+different vision-helper model is not silently invoked. Mistral-hosted GLM 5.3 is
+text-only and is allowed for text roles; GLM 5.3 Flash accepts direct images.
+Known native effort levels are checked by model (Large 4 low/medium/high; Small
+4 off/high in Vibe; hosted GLM low/high/max). Unsupported configurations/media
+enter the capability-failure ledger even if upstream catches a stage error.
+All accepted PDF pages and the existing R/TikZ source workflow remain unchanged.
+The GLM starter profile uses Large 4 for discovery after a real GLM discovery
+turn completed search and then attempted forbidden shell access. The failed turn
+is retained, and no permission was broadened to turn it into a success. Base GLM
+remains available for text-only synthesis and R/TikZ code; Flash handles images.
+
 Stage/PDF/HTTP observer wrappers preserve their underlying return values and
 scientific control decisions. The separate R022 manuscript adapter changes
 effective LaTeX payloads before the controller consumes them, with original and
@@ -141,6 +211,8 @@ disclosed; preservation is not endorsement of their scientific advice.
 | D003 | Optional branch selection | Real demonstration uses the upstream default supplied-figure path. Generated-figure parallel branch is covered by controlled controller tests; no real diagram-tool run is claimed. |
 | D004 | Code-rendering demonstration input | A new finite R calculation supplies no figures and requests one numerical MSE plot and one residual-flow diagram. The normal outline/figure agents generate and critique both; it is a caller-input choice, not a prewritten outline or shortened search/revision rule. The earlier D003 supplied-figure run does not satisfy this new validation. |
 | D005 | Requested correction of an existing manuscript | A separate output directory retains the historical accepted manuscript's scientific body and selected images, removes its two model-written replacement recipes and adds exact-source references/copies using A004. This is an explicitly requested deterministic correction, with zero model calls or new peer reviews, not a replay of the old workflow or an extra upstream revision. The original frozen run and its scores/artifacts remain intact. |
+| D006 | Mixed-native validation model choices | The same finite R/TikZ paper fixture is used with an explicit four-runtime profile: Codex Sol for writing/chair, Claude Haiku for figure planning/peers/formatting, account-available Gemini 3.8 Flash for discovery/visual review, and Mistral-hosted GLM 5.3 for text-only R/TikZ source. These are bounded validation choices, distinct from the recommended Opus/Carbon quality profile. No model-quality equivalence, scientific novelty or altered controller loop is implied. Actual outcomes and any runtime limitations belong in the validation report. |
+| D007 | Native capability test fixture | Separate component probes use a three-bar R/ggplot2 fixture with saved source (heights 7,11,3), a fixed text reply and lookup of the original PaperOrchestra paper. Each check makes one direct native attempt, not a paper/controller run or shortened substitute for its retry logic. The original JSON parser handles native fenced responses. Initial diagnostics are retained without relabeling failures; only fresh final-build probes support current capability claims. |
 
 Validation fixtures use explicitly mocked model/tool responses to reach branch,
 retry, stopping and aggregation cases deterministically. They are never presented

@@ -1,0 +1,36 @@
+{
+  "invocation": "9c42e0ce3a684924b543273f26dec59b",
+  "call": null,
+  "role": "literature-discovery",
+  "callsite": [],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "claude-haiku-5-5",
+  "config": {
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "search_required": true,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "claude-code",
+  "transport_plan_sha256": "fb028ff43536ec22cb0a960a7158e921ad7504bf2cc3c16cdb76e9172a619c02",
+  "prompt_sha256": "22c84873cd93aee85c89eed625c534f9e2c1d397c942c3e3452f4274b7df6bf8",
+  "model_routing": {
+    "model": "claude-haiku-5-5",
+    "routing_role": "literature-discovery",
+    "group": "discovery",
+    "selected_by": "--model fallback",
+    "backend": "claude-code",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "--backend fallback",
+      "model": "--model fallback",
+      "effort": "--effort fallback"
+    }
+  }
+}

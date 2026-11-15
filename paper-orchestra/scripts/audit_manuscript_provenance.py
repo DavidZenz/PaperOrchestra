@@ -261,16 +261,27 @@ def audit(output, run, trace):
             raw = (directory / "response.txt").read_text()
             require(sha(directory / "response.txt") == end.get("response_sha256"), f"Original worker response changed: {call}")
             require(original_result.get("raw_response") == raw, f"Upstream raw channel differs from actual worker response: {call}")
-            native = []
-            for line in (directory / "events.jsonl").read_text().split("\n"):
-                if line.strip():
-                    try:
-                        native.append(json.loads(line))
-                    except ValueError:
-                        pass
-            messages = [item["item"].get("text") for item in native if item.get("type") == "item.completed"
-                        and item.get("item", {}).get("type") == "agent_message"]
-            require(messages and messages[-1] == raw, f"Actual native worker message differs from retained raw response: {call}")
+            request = json.loads((directory / "request.json").read_text())
+            backend = request.get("backend", "codex")
+            if backend == "codex":
+                native = []
+                for line in (directory / "events.jsonl").read_text().split("\n"):
+                    if line.strip():
+                        try:
+                            native.append(json.loads(line))
+                        except ValueError:
+                            pass
+                messages = [item["item"].get("text") for item in native if item.get("type") == "item.completed"
+                            and item.get("item", {}).get("type") == "agent_message"]
+                require(messages and messages[-1] == raw, f"Actual native worker message differs from retained raw response: {call}")
+            else:
+                from orchestra_transports import inspect_invocation
+                native = inspect_invocation(directory, request)
+                require(native.get("backend") == backend and native.get("completed")
+                        and not native.get("failed") and not native.get("errors"),
+                        f"Native worker did not complete successfully: {call}")
+                require(native.get("response") == raw,
+                        f"Actual native worker message differs from retained raw response: {call}")
             require(original_parse(raw, original_result.get("parsed_response")) == original_result.get("parsed_response"),
                     f"Upstream manuscript parse differs from original response: {call}")
             recomputed, details = transform_result(original_result, candidate_manifest)

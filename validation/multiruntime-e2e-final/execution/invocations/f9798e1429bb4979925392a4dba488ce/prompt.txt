@@ -1,0 +1,433 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+You are a LaTeX formatting expert. Your task is to fix the formatting issues identified in the feedback below.
+You must STRICTLY follow the provided formatting guidelines.
+CRITICAL: You are ONLY allowed to make formatting, layout, and spacing adjustments. You MUST NOT change any content, text, claims, data, or citations in the paper unless explicitly allowed by the feedback.
+
+--- CURRENT FORMATTING FEEDBACK ---
+{
+  "figure_and_tables": {
+    "Figure 1": {
+      "detected_issue": "The residual-to-offset workflow diagram has text overlapping its borders. In the purple evaluation box, the line 'five (x_i, y_i)' runs over the bottom edge of the box, and the annotation 'Same five observations used to estimate b and to score.' sits on top of that same edge and collides with the box text. The figure itself stays within the column margins.",
+      "suggested_fix": "Increase the node height or minimum height of the evaluation box (for example, `minimum height=` in TikZ) so all text fits inside it. Move the 'Same five observations...' annotation fully below the box with extra vertical spacing, or shorten the box label. Re-render and check that no text crosses a border."
+    },
+    "Figure 2": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    "Table 1": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    "Table 2": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    }
+  },
+  "other_issues": [
+    {
+      "page": 6,
+      "element": "Unnumbered section titled 'Figure source provenance' after the Conclusion",
+      "detected_issue": "The guidelines say no appendix is required and that the figure source code is retained as a separate reproducibility artifact. This appended section works as an appendix inside the manuscript and lists file paths and SHA256 checksums that the guidelines do not ask for.",
+      "suggested_fix": "Remove the section from the manuscript and keep the provenance details in the separate artifact (for example, `figure_provenance.json` or a README in the artifact directory). If a short pointer is needed, add one sentence in Section 4.2 that refers to the artifact."
+    },
+    {
+      "page": 6,
+      "element": "'Figure source provenance' section, entries for Figure 1 and Figure 2",
+      "detected_issue": "The entries are ordered Figure 2 first, then Figure 1, which is the reverse of the figure numbering used in the body of the paper.",
+      "suggested_fix": "If the section is kept, list the entries in figure-number order (Figure 1, then Figure 2)."
+    },
+    {
+      "page": 5,
+      "element": "Figure 2 page layout",
+      "detected_issue": "Figure 2 and its caption take up only the top part of the page, and the rest of the page is blank. This happens because the float was pushed to a new page.",
+      "suggested_fix": "Adjust float placement (for example, `[t]` or `[h]` options, or move the figure call to follow its first reference in Section 4.1) so the figure sits closer to the text that cites it and the page is filled more evenly."
+    }
+  ]
+}
+
+--- CONFERENCE GUIDELINES ---
+# Reproducible workflow demonstration
+
+Produce an anonymous short technical teaching note of approximately 700–1000 words
+with the supplied article headings. Keep claims within the finite synthetic
+calculation. Do not describe it as a novel algorithm or a benchmark result.
+No appendix is required. Include the generated MSE plot, generated residual-flow
+diagram and measured error table, with readable captions and no margin overflow.
+Use the existing single-column 11-point article with one-inch margins.
+Keep all author information anonymous. Cite only keys verified by the literature
+stage. The figure source code is retained as a separate reproducibility artifact.
+
+
+--- CURRENT LATEX SOURCE ---
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This teaching note connects residual arithmetic, fixed-slope intercept estimation, and training-error measurement through five synthetic observations. Targets follow $y=2x+3$, while the baseline predicts $2x$. The mean residual gives the least-squares correction $b=3$. Recorded corrections $0$, $1.5$, and $3$ yield mean squared errors $9$, $2.25$, and $0$. A squared-error decomposition explains both optimality and exact cancellation. The exposition distinguishes mean-based squared-error fitting from median-based absolute-error fitting, qualifies halfway-correction scaling, and traces how the same targets determine and evaluate the correction.
+\end{abstract}
+
+\section{Introduction}
+
+This note is a short technical teaching resource for a reproducible workflow demonstration. Its audience is introductory learners familiar with averages, absolute values, and squared errors. Its contribution is an inspectable sequence connecting an observation table, an intercept-fitting identity, executable calculations, and two complementary figures.
+
+The inputs are $x=(-2,-1,0,1,2)$, with targets $y_i=2x_i+3$ and baseline predictions $\hat y_i^{(0)}=2x_i$. Fixing the slope isolates one adjustable intercept. Every baseline residual equals $3$, making the arithmetic checkable observation by observation.
+
+The learning objectives are to derive the squared-error-optimal correction, distinguish the objectives minimized by a mean and a median, explain error scaling in this record, and identify the targets used for fitting and scoring.
+
+\section{Related Work}
+
+\subsection{Fixed Predictors and Additive Offset Corrections}
+
+The mathematical connection is between additive offset correction and fixed-slope intercept estimation. Writing predictions as $2x_i+b$ makes residual averaging exactly a least-squares intercept fit. Section~\ref{sec:least_squares} derives this identity and contrasts it with absolute-error minimization.
+
+The presentation places these identities beside the complete observation record and executable arithmetic. Its teaching contribution is this explicit organization of fitting and evaluation dependencies; the mathematical claims are established within the note.
+
+\subsection{Evaluation of Corrections Estimated from Observed Residuals}
+
+We use \emph{training error}, or \emph{in-sample error}, for scores computed on the observations used to estimate $b$. The targets enter both residual formation and scoring. Figure~\ref{fig:residual_workflow} traces this reuse. Error on a new observation is defined separately in Section~\ref{sec:interpretation}.
+
+\section{Method}
+
+\subsection{Finite Observations and Residual Correction}
+
+A residual is target minus prediction. We distinguish the \emph{baseline residual} $r_i$ from the \emph{corrected residual} $e_i(b)$:
+\[
+r_i=y_i-2x_i,
+\qquad
+e_i(b)=y_i-(2x_i+b)=r_i-b.
+\]
+Table~\ref{tab:observations} supplies the complete record. Its mean baseline residual is
+\[
+\bar r=\frac{1}{5}\sum_{i=1}^{5}r_i=3,
+\]
+giving fitted predictions $\hat y_i^{\mathrm{corr}}=2x_i+\bar r$.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Complete training record. Subtracting baseline predictions from targets gives the baseline residuals; adding their mean gives the corrected predictions.}
+    \label{tab:observations}
+    \begin{tabular}{rrrrr}
+        \toprule
+        \shortstack[r]{Input\\$x_i$} &
+        \shortstack[r]{Target\\$y_i$} &
+        \shortstack[r]{Baseline\\$2x_i$} &
+        \shortstack[r]{Baseline residual\\$r_i$} &
+        \shortstack[r]{Corrected\\$2x_i+3$} \\
+        \midrule
+        $-2$ & $-1$ & $-4$ & $3$ & $-1$ \\
+        $-1$ & $1$  & $-2$ & $3$ & $1$  \\
+        $0$  & $3$  & $0$  & $3$ & $3$  \\
+        $1$  & $5$  & $2$  & $3$ & $5$  \\
+        $2$  & $7$  & $4$  & $3$ & $7$  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Least-Squares Equivalence and Error Calculation}
+\label{sec:least_squares}
+
+The training mean squared error is
+\[
+L(b)=\operatorname{MSE}(b)
+=\frac{1}{5}\sum_{i=1}^{5}(r_i-b)^2.
+\]
+Writing $r_i-b=(r_i-\bar r)+(\bar r-b)$ and using
+$\sum_i(r_i-\bar r)=0$ gives
+\[
+L(b)=
+\underbrace{\frac{1}{5}\sum_{i=1}^{5}(r_i-\bar r)^2}_{V}
++(b-\bar r)^2.
+\]
+Thus $b=\bar r$ uniquely minimizes MSE, with minimum $V$. For any five nonconstant residuals, $V>0$: fitting removes their common offset but leaves their centered differences. Exact cancellation requires all residuals to coincide. Here they equal $3$, so $V=0$ and $L(3)=0$.
+
+Absolute error has a different optimum. Order the baseline residuals as
+$r_{(1)}\leq\cdots\leq r_{(5)}$. Then
+\[
+\operatorname{MAE}(b)=\frac{1}{5}\sum_{i=1}^{5}|r_i-b|
+\]
+is minimized at the median $r_{(3)}$. To see this, pair the extreme residuals and then the next two. Each pair's absolute-distance sum is minimized between its endpoints; both intervals contain $r_{(3)}$, which also uniquely minimizes the remaining term $|r_{(3)}-b|$. The mean and median coincide at $3$ in this record, so that correction minimizes both metrics.
+
+For the recorded observations,
+\[
+e_i(b)=3-b,\qquad
+\operatorname{MAE}(b)=|3-b|,\qquad
+\operatorname{MSE}(b)=(3-b)^2.
+\]
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_residual_workflow.jpg}
+    \caption{Residual-to-offset workflow. Baseline predictions $2x_i$ are subtracted from targets to obtain $(3,3,3,3,3)$. Their mean supplies $b=3$, which is added to the baseline. Corrected predictions are scored against the same targets. The dashed target-to-evaluation path identifies this reuse as training evaluation.}
+    \label{fig:residual_workflow}
+\end{figure}
+
+\section{Experiments}
+
+\subsection{Deterministic Calculation and Recorded Results}
+
+The recorded calculation uses base R. Enter the $x$ and $y$ columns of Table~\ref{tab:observations}, compute \verb|r <- y - 2*x| and \verb|mean(r)|, then evaluate
+\verb|mean(abs(r - b))| and \verb|mean((r - b)^2)|
+at each recorded correction.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Recorded training errors. Every row scores the five observations in Table~\ref{tab:observations}.}
+    \label{tab:errors}
+    \begin{tabular}{rrr}
+        \toprule
+        Added intercept $b$ & Mean absolute error & Mean squared error \\
+        \midrule
+        $0$   & $3$   & $9$    \\
+        $1.5$ & $1.5$ & $2.25$ \\
+        $3$   & $0$   & $0$    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Here the halfway correction $b=1.5$ halves every corrected residual relative to $b=0$, so MAE is halved and MSE is quartered. For arbitrary baseline residuals, the decomposition instead gives
+\[
+L(0)=V+\bar r^2,\qquad
+L(\bar r/2)=V+\frac{\bar r^2}{4}.
+\]
+Halfway correction therefore quarters the excess MSE above $V$, rather than generally quartering total MSE. Halving MAE likewise requires separate justification; it follows here from the constant residuals.
+
+\subsection{Visualization, Reproducibility, and Interpretation}
+\label{sec:interpretation}
+
+Table~\ref{tab:errors} gives both metrics; Figure~\ref{fig:intercept_error} displays the three recorded MSE values. Figure~\ref{fig:residual_workflow} explains their data dependencies. Together with the decomposition, these materials support checking the optimum, midpoint scaling, and target reuse.
+
+For a new observation $(x_{\mathrm{new}},y_{\mathrm{new}})$, hold the fitted correction fixed at $3$:
+\[
+e_{\mathrm{new}}
+=(y_{\mathrm{new}}-2x_{\mathrm{new}})-3.
+\]
+Its error is zero precisely when its baseline residual equals $3$. Training agreement and new-observation agreement therefore concern different target values.
+
+Reproduction materials comprise the tabulated inputs and calculation commands, both supplied figure images, their separate R/ggplot2 and LaTeX/TikZ sources, and the export and rendering records identified below. The checksum manifest identifies the selected artifacts.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_intercept_error.jpg}
+    \caption{Recorded training MSE against added intercept $b$. The points are $(0,9)$, $(1.5,2.25)$, and $(3,0)$. In this constant-residual record, halfway correction quarters total MSE and the fitted correction cancels every residual. Only recorded values are plotted.}
+    \label{fig:intercept_error}
+\end{figure}
+
+\section{Conclusion}
+
+This worked calculation connects residual arithmetic, intercept fitting, and training evaluation. The mean minimizes MSE, while the median minimizes MAE. The decomposition identifies the positive error remaining for nonconstant residuals and explains exact cancellation in the supplied record. New-observation error follows from its own target.
+
+% PAPER_ORCHESTRA_PROVENANCE_BEGIN
+\clearpage
+\section*{Figure source provenance}
+The files below are the exact sources that produced the embedded figure previews. Paths are relative to this manuscript's source directory. The accompanying \texttt{figure\char95{}provenance.json} records all artifact checksums.\par
+\medskip\noindent\textbf{Figure~\ref{fig:intercept_error} (\texttt{fig\char95{}intercept\char95{}error.jpg}).}\par
+\noindent R/ggplot2 source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}source.R}.\par
+\noindent Source SHA256: \texttt{18933984\allowbreak{}6a19ff9a\allowbreak{}fe13e24a\allowbreak{}7efe95cc\allowbreak{}4a83ec38\allowbreak{}a9778113\allowbreak{}caa8f8c9\allowbreak{}2dd0589a}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}render.json}.\par
+\noindent Exact export wrapper: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}worker.R}.\par
+\noindent Wrapper SHA256: \texttt{6cb2b073\allowbreak{}27277f63\allowbreak{}fafbb553\allowbreak{}cd4f1f12\allowbreak{}c0f85bec\allowbreak{}37a49f3f\allowbreak{}a765da16\allowbreak{}a26b58ba}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}sessionInfo.txt}.\par
+\medskip\noindent\textbf{Figure~\ref{fig:residual_workflow} (\texttt{fig\char95{}residual\char95{}workflow.jpg}).}\par
+\noindent LaTeX/TikZ source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}source.tex}.\par
+\noindent Source SHA256: \texttt{4e19b72b\allowbreak{}be6333b3\allowbreak{}602153f3\allowbreak{}eab1b16a\allowbreak{}e392856f\allowbreak{}fa6a5527\allowbreak{}ea378e37\allowbreak{}911eb5fe}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}render.json}.\par
+% PAPER_ORCHESTRA_PROVENANCE_END
+\end{document}
+
+Output the Full Revised LaTeX only, inside a 
+```latex 
+paper_content
+``` 
+block.
+
+
+[SELECTED FIGURE SOURCE PROVENANCE — USER-AUTHORIZED ADAPTATION]
+
+These exact worker sources produced the selected figure previews. Their copies are bundled beside the manuscript at the listed relative paths. Reference them; do not reconstruct, embed, rename or replace R/ggplot2 or TikZ figure recipes. Preserve numerical/algorithm discussion. The runtime maintains a visible Figure source provenance section before compilation and review; preserve that section and the supplied figure images. The manifest, source checksums and renderer inputs are authoritative.
+
+{
+  "schema_version": 1,
+  "policy": "selected-worker-code-v1",
+  "figures": [
+    {
+      "figure_id": "fig_intercept_error",
+      "image_path": "figures/fig_intercept_error.jpg",
+      "backend": "ggplot2",
+      "original_directory": "figure_sources/264922fdb9c742c797cc3ad9d00fbe54",
+      "source": "figure_code/fig_intercept_error/source.R",
+      "source_sha256": "189339846a19ff9afe13e24a7efe95cc4a83ec38a9778113caa8f8c92dd0589a",
+      "preview_sha256": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad",
+      "files": {
+        "figure_code/fig_intercept_error/source.R": "189339846a19ff9afe13e24a7efe95cc4a83ec38a9778113caa8f8c92dd0589a",
+        "figure_code/fig_intercept_error/render.json": "c07ccb7fe2b8602efed8a84375fde4c74555bc8f0a5d5a1901dc0fd39b40ba95",
+        "figure_code/fig_intercept_error/figure.pdf": "84ed7788a96ca1b9b6abdce44e440100e1ef60481d3e7ec02fa1fb32ff79f0a7",
+        "figure_code/fig_intercept_error/preview.jpg": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad",
+        "figure_code/fig_intercept_error/worker.R": "6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba",
+        "figure_code/fig_intercept_error/sessionInfo.txt": "f8073055c2f9ee9c1ae02f85a5a33a981ddbd3e56d6181f5eea24cd8dc9957b8"
+      }
+    },
+    {
+      "figure_id": "fig_residual_workflow",
+      "image_path": "figures/fig_residual_workflow.jpg",
+      "backend": "tikz",
+      "original_directory": "figure_sources/b874cf3b91534bdaa589032e65bbacc7",
+      "source": "figure_code/fig_residual_workflow/source.tex",
+      "source_sha256": "4e19b72bbe6333b3602153f3eab1b16ae392856ffa6a5527ea378e37911eb5fe",
+      "preview_sha256": "771b22f2f99a67882a1b3a03cab7693b32da01f936faecf1a695c561eec2aa0a",
+      "files": {
+        "figure_code/fig_residual_workflow/source.tex": "4e19b72bbe6333b3602153f3eab1b16ae392856ffa6a5527ea378e37911eb5fe",
+        "figure_code/fig_residual_workflow/render.json": "2cb7be7d20fac530130cd817c211756eee3c352b8a69485d3f7b67069f03be20",
+        "figure_code/fig_residual_workflow/figure.pdf": "caaf716ef1b064867bfc14bc26a5719f50a0b3db5450c09c752f0c6b6bd88947",
+        "figure_code/fig_residual_workflow/preview.jpg": "771b22f2f99a67882a1b3a03cab7693b32da01f936faecf1a695c561eec2aa0a"
+      }
+    }
+  ]
+}
+
+--- EXACT ARTIFACT: figure_code/fig_intercept_error/source.R; SHA256 189339846a19ff9afe13e24a7efe95cc4a83ec38a9778113caa8f8c92dd0589a ---
+library(ggplot2)
+
+# Recorded results only; no interpolation or extra measurements
+df <- data.frame(
+  b   = c(0, 1.5, 3),
+  mse = c(9, 2.25, 0)
+)
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_point(shape = 16, size = 4, colour = "#1F4E79") +
+  geom_text(aes(label = sprintf("%.2f", mse)),
+            vjust = -1.2, size = 10 / .pt, colour = "#333333",
+            family = "sans") +
+  scale_x_continuous(breaks = c(0, 1.5, 3), limits = c(-0.3, 3.3)) +
+  scale_y_continuous(breaks = c(0, 3, 6, 9), limits = c(-0.6, 10.5)) +
+  labs(
+    title = "Recorded Mean Squared Error at Three Intercept Corrections",
+    x     = "Added intercept correction b",
+    y     = "Mean squared error (MSE)"
+  ) +
+  theme_classic(base_size = 12) +
+  theme(
+    plot.title         = element_text(size = 13, face = "bold", colour = "#111111",
+                                     hjust = 0, family = "sans"),
+    axis.title         = element_text(size = 12, face = "bold", colour = "#222222",
+                                     family = "sans"),
+    axis.text          = element_text(size = 10, colour = "#444444", family = "sans"),
+    axis.line          = element_line(linewidth = 0.5, colour = "#444444"),
+    panel.border       = element_blank(),
+    panel.background   = element_rect(fill = "#FFFFFF", colour = NA),
+    plot.background    = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.grid.major.y = element_line(linewidth = 0.3, colour = "#E5E5E5"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position    = "none",
+    plot.margin        = margin(t = 10, r = 15, b = 10, l = 10, unit = "pt")
+  )
+
+p
+
+--- EXACT ARTIFACT: figure_code/fig_intercept_error/worker.R; SHA256 6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba ---
+options(warn=1)
+set.seed(0)
+library(ggplot2)
+source("source.R", local=TRUE)
+if (!exists("p") || !inherits(p, "ggplot")) stop("source.R must define ggplot object p")
+ggsave("figure.pdf", plot=p, width=6.4, height=4.800000000000001, units="in", bg="white")
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")
+
+
+--- EXACT ARTIFACT: figure_code/fig_residual_workflow/source.tex; SHA256 4e19b72bbe6333b3602153f3eab1b16ae392856ffa6a5527ea378e37911eb5fe ---
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+
+\definecolor{slate}{HTML}{374151}
+\definecolor{infill}{HTML}{DCE9F7}
+\definecolor{inborder}{HTML}{2563EB}
+\definecolor{tgfill}{HTML}{DCFCE7}
+\definecolor{tgborder}{HTML}{15803D}
+\definecolor{basefill}{HTML}{F3F4F6}
+\definecolor{baseborder}{HTML}{6B7280}
+\definecolor{resfill}{HTML}{FFEDD5}
+\definecolor{resborder}{HTML}{C2410C}
+\definecolor{meanfill}{HTML}{FEF3C7}
+\definecolor{meanborder}{HTML}{B45309}
+\definecolor{evfill}{HTML}{F3E8FF}
+\definecolor{evborder}{HTML}{7E22CE}
+
+\tikzset{
+  arr/.style={draw=slate, line width=0.7pt, -Stealth},
+  box/.style={rounded corners=2pt, line width=0.6pt, align=center,
+              font=\small, inner sep=3pt},
+  tiny/.style={font=\fontsize{7.5}{9}\selectfont}
+}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm, y=1cm]
+
+% ---------------- Row 1 ----------------
+\node[box, draw=inborder, fill=infill, text width=2.2cm] (input) at (1.2,7.6)
+  {$x_i$, $i=1,\dots,5$\\[1pt]{\footnotesize $x=(-2,-1,0,1,2)$}};
+\node[box, draw=tgborder, fill=tgfill, text width=2.2cm] (target) at (4.4,7.6)
+  {$y_i = 2x_i + 3$\\[1pt]{\footnotesize $(-1,1,3,5,7)$}};
+
+% ---------------- Row 2 ----------------
+\node[box, draw=baseborder, fill=basefill, text width=2.2cm] (baseline) at (1.2,5.2)
+  {Fixed predictor\\$\hat{y}_i^{(0)} = 2x_i$\\[1pt]{\footnotesize $(-4,-2,0,2,4)$}};
+\node[box, draw=resborder, fill=resfill, text width=2.2cm] (residual) at (4.4,5.2)
+  {$r_i = y_i - 2x_i$\\[1pt]{\footnotesize $(3,3,3,3,3)$}};
+
+% ---------------- Row 3 ----------------
+\node[box, draw=meanborder, fill=meanfill, line width=1.2pt] (meanres) at (4.4,2.7)
+  {$b = \frac{1}{5}\sum_{i=1}^{5} r_i = 3$};
+\node[box, draw=tgborder, fill=tgfill, text width=2.1cm, minimum height=11mm]
+  (corrected) at (7.55,2.7)
+  {$\hat{y}_i = 2x_i + b$\\[1pt]{\footnotesize $(-1,1,3,5,7)$}};
+\node[box, draw=evborder, fill=evfill, font=\footnotesize, text width=2.4cm,
+      minimum height=11mm, dash pattern=on 3pt off 2pt] (eval) at (10.55,2.7)
+  {Evaluate $\hat{y}_i$ against $y_i$\\on the same five $(x_i, y_i)$.};
+
+% ---------------- Arrows ----------------
+\draw[arr] (input.south) -- (baseline.north)
+  node[midway, right, font=\small] {$\times 2$};
+\draw[arr] (target.south) -- (residual.north)
+  node[midway, right, font=\small] {$+y_i$};
+\draw[arr] (baseline.east) -- (residual.west)
+  node[midway, above, font=\footnotesize] {$-2x_i$};
+
+% Primary data dependency (emphasized amber arrow)
+\draw[draw=meanborder, line width=1.2pt, -Stealth] (residual.south) -- (meanres.north)
+  node[midway, right=2pt, align=left, tiny] {mean over the\\observed residuals};
+
+% Additive correction
+\draw[arr] (meanres.east) -- (corrected.west)
+  node[midway, above, font=\small] {$+\,b$};
+
+% Baseline feed: drop, run along lower margin, rise into corrected prediction
+\draw[arr] (baseline.south) -- (1.2,1.0) -- (7.55,1.0) -- (corrected.south);
+\node[font=\small, anchor=north, inner sep=0] at (4.375,0.894) {$2x_i$};
+
+% Corrected prediction into evaluation
+\draw[arr] (corrected.east) -- (eval.west)
+  node[midway, above, font=\footnotesize] {$\hat{y}_i$};
+
+% Target ground truth: high channel above Row 2, vertical drop into evaluation
+\draw[draw=baseborder, line width=0.7pt, dashed, -Stealth] (target.east) -| (eval.north)
+  node[pos=0.75, right=2pt, font=\small] {$y_i$};
+
+% ---------------- Reuse callout ----------------
+\node[tiny, align=center, text width=2.4cm] at (10.55,1.6)
+  {Same five observations used\\to estimate $b$ and to score.};
+
+\end{tikzpicture}
+\end{document}

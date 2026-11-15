@@ -1,0 +1,65 @@
+{
+  "section_name": "Generalization and In-Sample Evaluation Literature",
+  "candidates": [
+    {
+      "title": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year": 2010,
+      "reason": "Provides a comprehensive survey of statistical learning evaluation, explaining theoretically and practically why apparent/in-sample error on the same observations used for estimation yields an overly optimistic assessment that fails to reflect predictive generalization."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Formalizes the mathematical concept of optimism in prediction error, explicitly quantifying why evaluating a fitted or corrected model on the identical training sample underestimates true prediction error due to the positive covariance between data points and sample-fitted adjustments."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Establishes foundational principles on the systematic optimistic bias of the apparent error rate when assessing a prediction rule on its fitting sample compared to future unseen realizations."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal foundational paper establishing cross-validation and articulating why statistical prediction assessment requires evaluating predictors on holdout observations rather than the data used to determine the prediction rule."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Seminal work framing statistical inference around predicting unobserved observables, demonstrating that valid predictive assessment requires sample-splitting or reuse rather than evaluating discrepancies on the data from which estimators were derived."
+    },
+    {
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "year": 2010,
+      "reason": "Survey and experimental study analyzing how adapting parameters or model adjustments to an evaluation sample induces severe selection bias, demonstrating that reporting performance on the same observations used for estimation does not indicate genuine generalization."
+    },
+    {
+      "title": "Some Comments on Cp",
+      "year": 1973,
+      "reason": "Classic work on linear regression evaluation showing that raw in-sample residual sums of squares from fitted models are systematically biased downward, necessitating an explicit parameter penalty to estimate true prediction mean squared error."
+    },
+    {
+      "title": "A New Look at the Statistical Model Identification",
+      "year": 1974,
+      "reason": "Foundational paper introducing the Akaike Information Criterion, establishing that evaluating maximum likelihood or residual fit on the estimation sample is biased by the number of estimated parameters and requires an analytical correction for generalization assessment."
+    },
+    {
+      "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+      "year": 1995,
+      "reason": "Influential study investigating accuracy estimation in statistical and machine learning, documenting the failure of resubstitution (same-sample) evaluation and establishing standard validation protocols to assess out-of-sample performance."
+    },
+    {
+      "title": "Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning",
+      "year": 2018,
+      "reason": "Comprehensive review paper categorizing model assessment techniques, explaining in pedagogical detail why evaluating predictive performance on estimation data causes optimistic bias and conflates sample memorization with predictive generalization."
+    },
+    {
+      "title": "A Note on Screening Regression Equations",
+      "year": 1983,
+      "reason": "Demonstrates the statistical pitfall of screening and estimating model corrections on an observed sample, showing that apparent fit and significance on that sample can be deceptively high even when the model carries no genuine predictive power out-of-sample."
+    },
+    {
+      "title": "Statistical Modeling: The Two Cultures",
+      "year": 2001,
+      "reason": "Influential foundational essay contrasting in-sample goodness-of-fit on observed data with rigorous validation on test data, emphasizing that predictive validity must be tested on independent observations."
+    }
+  ]
+}

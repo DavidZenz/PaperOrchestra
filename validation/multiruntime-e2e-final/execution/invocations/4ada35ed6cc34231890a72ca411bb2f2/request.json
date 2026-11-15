@@ -1,0 +1,34 @@
+{
+  "invocation": "4ada35ed6cc34231890a72ca411bb2f2",
+  "call": "bf1f76d214f4470cb09c2246aee7c4ad",
+  "role": "ggplot2-visualizer",
+  "callsite": [
+    "orchestra_visuals.py:generate_figure_visuals:147",
+    "plotting_agent.py:process_single_figure:155",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_intercept_error",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "zai-glm-5-3",
+  "config": {},
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "mistral-vibe",
+  "transport_plan_sha256": "54f057f2035ba425d97cb5325adf9339b27beb1c07b766e189de5ae414395f84",
+  "prompt_sha256": "33a298c3c7293b9512ef2c7f32e8a843c58d26214cbca1f0f9847586601ddea8",
+  "model_routing": {
+    "model": "zai-glm-5-3",
+    "routing_role": "ggplot2-visualizer",
+    "group": "figure_code",
+    "selected_by": "profile group: figure_code",
+    "backend": "mistral-vibe",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile group: figure_code",
+      "model": "profile group: figure_code",
+      "effort": "profile group: figure_code"
+    }
+  }
+}

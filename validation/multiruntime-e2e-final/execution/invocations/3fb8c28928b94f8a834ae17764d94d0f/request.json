@@ -1,0 +1,66 @@
+{
+  "invocation": "3fb8c28928b94f8a834ae17764d94d0f",
+  "call": "ae7400de4d3a447e8f5caaf8e8f1a619",
+  "role": "section-writer",
+  "callsite": [
+    "section_writing_agent.py:run:201",
+    "paper_writer_with_plotting.py:write_single_paper:207"
+  ],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gpt-6.1-sol",
+  "config": {
+    "system_instruction": "Role: Senior AI Researcher.\nTask: Complete a research paper by writing the missing sections in a LaTeX template.\n\nYou will be given a 'template.tex' file where some sections (e.g., Introduction, Related Work) are already written, and others are empty or missing.\nYour job is to generate the LaTeX code for the missing sections only, based on the provided 'outline.json', and merge them into the final document.\n\nINPUTS:\n* 'outline.json': Your MASTER PLAN. Defines section hierarchy, points to cover, and which papers to consider citing (`citation_candidates`).\n* 'idea.md': Technical details of the Methodology.\n* 'experimental_log.md': Raw data for tables and qualitative analysis for text.\n* 'citation_map.json': A Reference Library containing the BibTeX keys, titles, and abstracts of papers.\n* 'conference_guidelines.md': Formatting rules.\n* 'figures_list': Available figure files.\n\nCRITICAL INSTRUCTIONS:\n\n1. Existing Content Preservation: \n   - DO NOT modify the text, style, or content of sections that are already filled in 'template.tex'. \n   - Come up with a good title if it's missing, fill in the author names if missing.\n   - Keep the preamble (packages) exactly as is.\n\n2. Data & Tables:\n   - You are responsible for creating LaTeX tables.\n   - Extract numerical data directly from 'experimental_log.md'.\n   - Use the `booktabs` package format (\\toprule, \\midrule, \\bottomrule).\n   - Do not hallucinate numbers. Use the exact values provided in the log.\n   - Make sure all tables appear before the Conclusion section, unless it's placed in an Appendix.\n\n3. Citations:\n   - The 'outline.json' provides a list of `citation_candidates` for specific subsections.\n   - You MUST use the exact keys found in `citation_map.json` (e.g., `\\cite{Hu2021LoraLowrank}`).\n   - Content Enrichment: Read the `abstract` provided in `citation_map.json` for the papers you are citing. Use this context to write accurate, specific sentences about those works.\n\n4. Writing Content:\n   - Write the missing sections following the 'outline.json' structure.\n   - Use formal mathematical equations, notations, and definitions where appropriate and directly supported by the idea/log. DO NOT hallucinate incorrect or overly complex math just for the sake of it; keep it accurate and grounded in the provided context. Avoid overly colloquial summaries.\n   - Always provide detailed ablation studies and qualitative analysis of the experimental results, what works and what doesn't, and why.\n   - Nice to have: discuss the limitation and future work at the end.\n   - If you want to put anything in Appendix, make sure the 'Appendix' section appears after the 'References' section, on a fresh new page.\n\n5. Figures and Visual Fidelity:\n   - You are being provided with the actual image files of the figures. You MUST describe them faithfully and accurately. DO NOT hallucinate interpretations that contradict the visual evidence in the plots.\n   - Make sure to use ALL of the figures provided in 'figures_list'. Note: figures are stored in the 'figures/' subdirectory. IMPORTANT: use the exact filenames including their extensions (e.g., .png) in your \\includegraphics commands.\n   - DO NOT merge or group multiple figures into one for display.\n   - If the paper is 2-column format, try displaying figures in single-column mode (\\begin{figure}`) unless they are very wide.\n   - Ensure that all figures are correctly referenced in the text. \n   - Make sure all figures appears before the Conclusion section, unless it's placed in an Appendix.\n   - You can refine the captions if necessary.\n   - Don't include \"Figure x\" in the caption text, the LaTeX template will handle the figure numbering.\n\n6. Style:\n   - Adopt the tone of a top-tier ML conference paper: dense, objective, and technical.\n   - Ensure your new LaTeX code matches the indentation and spacing style of the `template.tex`. Don't change the given style.\n\nOUTPUT FORMAT:\n- Return the full code for the completed 'template.tex'.\n- The sections that were previously empty should now be filled.\n- The sections that were previously filled should remain mostly untouched, only adjust for consistency purposes.\n- Wrap the code with ```latex content```.\n\nIMPORTANT NOTE:\n- DO NOT change '\\usepackage[capitalize]{{cleveref}}' into '\\usepackage[capitalize]{{cleverref}}', as there's no 'cleverref.sty'.\n- Ensure the LaTeX code compiles without errors, e.g. all the begin and end statements match correctly (e.g., \\begin{figure*} must be closed with \\end{figure*}, not \\end{figure}).\n\n\n---\n### Strict Knowledge Isolation & Anonymity (CRITICAL)\n\nYou MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results.\nYour task is to construct the paper exclusively from the materials provided in the current session (e.g., idea.md, experimental_log.md, figures, and other inputs). Treat these inputs as the only available source of information.\n\n#### Forbidden Behavior\nYou MUST NOT:\n- Retrieve or rely on knowledge from your training data.\n- Attempt to recall or reconstruct any existing or published paper.\n- Use external facts, assumptions, or prior familiarity with the work.\n- Infer or hallucinate author identities, affiliations, institutions, or acknowledgements.\n- Insert metadata such as author names, emails, affiliations, or phrases like \"corresponding author\".\n\n#### Anonymity Requirement\nThe paper must be fully anonymized for double-blind review.  \nDo not include any information that could reveal the identity of the authors or institutions.\n\n#### Allowed Sources\nYou may use only:\n- The materials explicitly provided in this session.\n- Logical reasoning derived from those materials.\n\n#### Core Principle\nThe final paper must be an independent reconstruction derived solely from the provided inputs.  \nThis constraint is strict and overrides all other instructions.\n---\n",
+    "temperature": 0.7
+  },
+  "search_required": false,
+  "media": [
+    {
+      "path": "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/3fb8c28928b94f8a834ae17764d94d0f/attachment-0.png",
+      "mime_type": "image/png",
+      "sha256": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad"
+    },
+    {
+      "path": "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/3fb8c28928b94f8a834ae17764d94d0f/attachment-1.png",
+      "mime_type": "image/png",
+      "sha256": "771b22f2f99a67882a1b3a03cab7693b32da01f936faecf1a695c561eec2aa0a"
+    }
+  ],
+  "images": [
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/3fb8c28928b94f8a834ae17764d94d0f/attachment-0.png",
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/3fb8c28928b94f8a834ae17764d94d0f/attachment-1.png"
+  ],
+  "image_sha256": {
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/3fb8c28928b94f8a834ae17764d94d0f/attachment-0.png": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad",
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/3fb8c28928b94f8a834ae17764d94d0f/attachment-1.png": "771b22f2f99a67882a1b3a03cab7693b32da01f936faecf1a695c561eec2aa0a"
+  },
+  "backend": "codex",
+  "transport_plan_sha256": "04d27b44a2887f71cf1cba5f55c3b7bd3cbe3537434a02734232e889711328e6",
+  "prompt_sha256": "d5316ae24e5a90399b6514eac224db93d7ee1567f7b4f56147e9431e32428151",
+  "model_routing": {
+    "model": "gpt-6.1-sol",
+    "routing_role": "section-writer",
+    "group": "writing",
+    "selected_by": "profile default",
+    "backend": "codex",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile default",
+      "model": "profile default",
+      "effort": "profile default"
+    }
+  },
+  "figure_provenance_sha256": "116f6f853dc893cbd598aea36dcf62f470a14b8b0734f771f41d8e1eb1773c86",
+  "figure_provenance_files": {
+    "figure_code/fig_intercept_error/source.R": "189339846a19ff9afe13e24a7efe95cc4a83ec38a9778113caa8f8c92dd0589a",
+    "figure_code/fig_intercept_error/render.json": "c07ccb7fe2b8602efed8a84375fde4c74555bc8f0a5d5a1901dc0fd39b40ba95",
+    "figure_code/fig_intercept_error/figure.pdf": "84ed7788a96ca1b9b6abdce44e440100e1ef60481d3e7ec02fa1fb32ff79f0a7",
+    "figure_code/fig_intercept_error/preview.jpg": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad",
+    "figure_code/fig_intercept_error/worker.R": "6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba",
+    "figure_code/fig_intercept_error/sessionInfo.txt": "f8073055c2f9ee9c1ae02f85a5a33a981ddbd3e56d6181f5eea24cd8dc9957b8",
+    "figure_code/fig_residual_workflow/source.tex": "4e19b72bbe6333b3602153f3eab1b16ae392856ffa6a5527ea378e37911eb5fe",
+    "figure_code/fig_residual_workflow/render.json": "2cb7be7d20fac530130cd817c211756eee3c352b8a69485d3f7b67069f03be20",
+    "figure_code/fig_residual_workflow/figure.pdf": "caaf716ef1b064867bfc14bc26a5719f50a0b3db5450c09c752f0c6b6bd88947",
+    "figure_code/fig_residual_workflow/preview.jpg": "771b22f2f99a67882a1b3a03cab7693b32da01f936faecf1a695c561eec2aa0a"
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the pinned authors' controller with separate Codex agent invocations."""
+"""Run the pinned authors' controller with separate native agent invocations."""
 from __future__ import annotations
 
 import argparse
@@ -18,6 +18,8 @@ sys.path.insert(0, str(SKILL / "vendor"))
 from orchestra_runtime import Runtime, configure, instrument, artifacts
 from bundle import manifest as bundle_manifest, snapshot as snapshot_bundle
 from orchestra_models import ModelPolicy, validate_profile
+from orchestra_execution import execution_policy, validate_execution_profile, configured_default, BACKENDS
+from orchestra_transports import EXECUTABLES
 
 
 def find_rscript():
@@ -25,8 +27,8 @@ def find_rscript():
             or next((p for p in ["/opt/homebrew/opt/r/bin/Rscript", "/usr/local/bin/Rscript"] if Path(p).is_file()), "Rscript"))
 
 
-def preflight(plotting=False, image_command=None, plot_backend="ggplot2", diagram_backend="tikz", rscript=None):
-    missing = [x for x in ["codex", "pdflatex", "bibtex"] if not shutil.which(x)]
+def preflight(plotting=False, image_command=None, plot_backend="ggplot2", diagram_backend="tikz", rscript=None, worker_executables=None):
+    missing = [x for x in [*(worker_executables or ["codex"]), "pdflatex", "bibtex"] if not shutil.which(x)]
     for module in ["google.genai", "pymupdf", "pypdf", "cv2", "numpy", "matplotlib", "json_repair", "requests", "pydantic", "thefuzz", "dotenv", "rich", "tqdm"]:
         try:
             if importlib.util.find_spec(module) is None:
@@ -67,10 +69,12 @@ def main(argv=None):
     parser.add_argument("--experimental-log-filename", default="experimental_log.md")
     parser.add_argument("--cutoff", default=datetime.now().strftime("%Y-%m"))
     parser.add_argument("--use-plotting", action="store_true")
-    parser.add_argument("--model", help="Codex model; otherwise use the runtime's configured default")
-    parser.add_argument("--model-map-json", help="JSON mapping of upstream writer/reflection/discovery model names to Codex models")
+    parser.add_argument("--model", help="Shared model fallback for the selected native runtime")
+    parser.add_argument("--backend", choices=BACKENDS, help="Native worker runtime fallback; profiles may select per role")
+    parser.add_argument("--effort", help="Native reasoning/thinking effort fallback (no cross-provider translation)")
+    parser.add_argument("--model-map-json", help="JSON mapping of upstream model names to native model/execution targets")
     parser.add_argument("--model-profile", type=Path, help="Saved JSON default/group/role model choices")
-    parser.add_argument("--role-models-json", help="JSON mapping of individual role names to Codex model IDs")
+    parser.add_argument("--role-models-json", help="JSON mapping of individual role names to model/execution targets")
     parser.add_argument("--show-model-plan", action="store_true", help="Print resolved role models without starting agents")
     parser.add_argument("--image-command-json", help="JSON argv of image tool; appended argument is request JSON path")
     parser.add_argument("--plot-backend", choices=["ggplot2"], default="ggplot2")
@@ -86,9 +90,10 @@ def main(argv=None):
         if not isinstance(model_map, dict) or not isinstance(role_models, dict):
             raise ValueError("--model-map-json and --role-models-json must contain JSON objects")
         profile_bytes = args.model_profile.read_bytes() if args.model_profile else None
-        model_profile = validate_profile(json.loads(profile_bytes)) if profile_bytes is not None else {}
-        model_policy = ModelPolicy(model=args.model, model_map=model_map,
-                                   profile=model_profile, role_models=role_models)
+        model_profile = validate_execution_profile(json.loads(profile_bytes)) if profile_bytes is not None else {}
+        model_policy = execution_policy(model=args.model, model_map=model_map,
+                                        profile=model_profile, role_models=role_models,
+                                        backend=args.backend, effort=args.effort)
     except (ValueError, OSError) as exc:
         parser.error(f"Invalid model selection: {exc}")
     if args.show_model_plan:
@@ -104,7 +109,8 @@ def main(argv=None):
             if not path.is_file():
                 parser.error(f"Required input file missing: {path}")
     image_command = json.loads(args.image_command_json) if args.image_command_json else None
-    missing = preflight(args.use_plotting, image_command, args.plot_backend, args.diagram_backend, args.rscript)
+    worker_executables = sorted({EXECUTABLES[item.get("backend", "codex")] for item in model_policy.plan()})
+    missing = preflight(args.use_plotting, image_command, args.plot_backend, args.diagram_backend, args.rscript, worker_executables)
     if missing:
         print(json.dumps({"status": "unavailable", "missing": missing}, indent=2))
         return 2
@@ -120,16 +126,18 @@ def main(argv=None):
                       plot_backend=args.plot_backend, diagram_backend=args.diagram_backend,
                       rscript=args.rscript, render_timeout=args.render_timeout,
                       manuscript_provenance=args.use_plotting,
-                      model_profile=model_profile, role_models=role_models)
+                      model_profile=model_profile, role_models=role_models, backend=args.backend, effort=args.effort)
     os.environ.setdefault("MPLCONFIGDIR", str(output / "execution" / "matplotlib-cache"))
     os.environ.setdefault("XDG_CACHE_HOME", str(output / "execution" / "cache"))
     configure(runtime)
     manifest = {"upstream_commit": json.loads((SKILL / "upstream-lock.json").read_text())["commit"],
-                "backend": "fresh codex exec process for every model attempt",
+                "backend": "fresh native worker process for every model attempt",
                 "plotting": args.use_plotting, "cutoff": args.cutoff,
-                "model": args.model or "Codex configured default", "model_map": model_map,
+                "model": args.model or ("per-role native policy; see model_policy" if model_policy.snapshot()["schema_version"] == 2
+                                        else configured_default("codex")), "model_map": model_map,
                 "image_command": image_command, "status": "running"}
     manifest["model_policy"] = model_policy.snapshot()
+    manifest["worker_backends"] = sorted({item.get("backend", "codex") for item in model_policy.plan()})
     if args.model_profile:
         manifest["model_profile_source"] = {"path":str(args.model_profile.resolve()),
                                             "sha256":hashlib.sha256(profile_bytes).hexdigest()}
@@ -143,9 +151,15 @@ def main(argv=None):
     manifest["skill_bundle"] = snapshot_bundle(SKILL, runtime.root / "skill_snapshot")
     manifest["implementation_sha256"] = manifest["skill_bundle"]["files"]
     software = {}
-    for label, command in [("codex",["codex","--version"]),("pdflatex",["pdflatex","--version"])]:
+    for label, command in [(binary,[binary,"--version"]) for binary in worker_executables if binary != "vibe-acp"] + [("pdflatex",["pdflatex","--version"])]:
         result = subprocess.run(command,capture_output=True,text=True,timeout=30)
         software[label] = result.stdout.split("\n")[0]
+    if "vibe-acp" in worker_executables:
+        if shutil.which("vibe"):
+            result = subprocess.run(["vibe", "--version"], capture_output=True, text=True, timeout=30)
+            software["mistral-vibe"] = result.stdout.split("\n")[0]
+        else:
+            software["mistral-vibe"] = "vibe-acp executable present; standalone version command unavailable"
     if args.use_plotting and args.plot_backend == "ggplot2":
         result = subprocess.run([args.rscript,"--vanilla","-e","cat(R.version.string,'\\n'); cat('ggplot2 ',as.character(packageVersion('ggplot2')),'\\n'); sessionInfo()"],capture_output=True,text=True,timeout=30)
         software["R_session"] = result.stdout

@@ -1,0 +1,6 @@
+library(ggplot2)
+set.seed(0)
+d <- data.frame(label=c("A","B","C"), value=c(7,11,3))
+p <- ggplot(d,aes(label,value)) + geom_col(fill="steelblue") + geom_text(aes(label=value),vjust=-0.2,size=8) + ylim(0,14) + theme_classic(base_size=22) + labs(x="Bar",y="Height")
+ggsave("fixture.png",p,width=6,height=4,dpi=120)
+writeLines(capture.output(sessionInfo()),"sessionInfo.txt")

@@ -1,0 +1,44 @@
+{
+  "invocation": "575594b9ed9d49b797f5dc58532a675a",
+  "call": "0229d3a837444c22a91fd68d25808b2c",
+  "role": "figure-critic",
+  "callsite": [
+    "paper_banana_utils.py:critique_and_revise_figure:618",
+    "plotting_agent.py:process_single_figure:127",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_intercept_error",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gemini-3.8-flash",
+  "config": {},
+  "search_required": false,
+  "media": [
+    {
+      "path": "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/575594b9ed9d49b797f5dc58532a675a/attachment-0.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad"
+    }
+  ],
+  "images": [
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/575594b9ed9d49b797f5dc58532a675a/attachment-0.jpg"
+  ],
+  "image_sha256": {
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/575594b9ed9d49b797f5dc58532a675a/attachment-0.jpg": "4908fc6061c3d9d73930a0dc4020b21c143a014eea1d6a8108be2b0a859afdad"
+  },
+  "backend": "antigravity",
+  "transport_plan_sha256": "48007a77ac2c5b4b512e87850eaf2434894792b9b017047e487646c9bc64b860",
+  "prompt_sha256": "5c2c75f2fa24193edc211a201df8012495f2d5ba34a95ac22e3baf6b4e575019",
+  "model_routing": {
+    "model": "gemini-3.8-flash",
+    "routing_role": "figure-critic",
+    "group": "figure_review",
+    "selected_by": "profile group: figure_review",
+    "backend": "antigravity",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "profile group: figure_review",
+      "model": "profile group: figure_review",
+      "effort": "profile group: figure_review"
+    }
+  }
+}

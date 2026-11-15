@@ -1,0 +1,36 @@
+{
+  "invocation": "e8a78ff1a7a74d18bc9a5db191c0d1c8",
+  "call": null,
+  "role": "literature-discovery",
+  "callsite": [],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "mistral-large-4",
+  "config": {
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "search_required": true,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "mistral-vibe",
+  "transport_plan_sha256": "0141332b92f9a0ca485de7e4ca2781b99c3d587de087e1ec610df86baacc0747",
+  "prompt_sha256": "22c84873cd93aee85c89eed625c534f9e2c1d397c942c3e3452f4274b7df6bf8",
+  "model_routing": {
+    "model": "mistral-large-4",
+    "routing_role": "literature-discovery",
+    "group": "discovery",
+    "selected_by": "--model fallback",
+    "backend": "mistral-vibe",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "--backend fallback",
+      "model": "--model fallback",
+      "effort": "--effort fallback"
+    }
+  }
+}

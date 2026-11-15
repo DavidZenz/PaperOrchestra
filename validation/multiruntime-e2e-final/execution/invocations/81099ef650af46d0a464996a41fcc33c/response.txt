@@ -1,0 +1,67 @@
+```json
+{
+  "section_name": "Fixed Predictor Additive Residual Calibration",
+  "candidates": [
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Establishes the foundational technical formulation of stagewise additive learning, proving that under squared error loss, optimizing an additive scalar correction while keeping the existing predictor fixed is uniquely solved by the sample mean of the unmodeled residuals."
+    },
+    {
+      "title": "A Calibration Hierarchy for Risk Models Was Defined: From Utopia to Empirical Data",
+      "year": 2016,
+      "reason": "Formalizes the canonical hierarchy of prediction model calibration, defining mean calibration (calibration-in-the-large) as the condition where a fixed predictor's systematic mean discrepancy is resolved entirely through a scalar intercept adjustment without modifying predictor slopes."
+    },
+    {
+      "title": "Updating Methods Improved the Performance of a Clinical Prediction Model in New Patients",
+      "year": 2008,
+      "reason": "Empirically and methodologically evaluates model recalibration strategies, showing that when a fixed linear predictor systematically over- or under-predicts by a constant offset, estimating only a scalar intercept update via an offset term eliminates mean bias without introducing parameter variance."
+    },
+    {
+      "title": "A Closed Testing Procedure to Select an Appropriate Method for Updating Prediction Models",
+      "year": 2017,
+      "reason": "Presents a formal hypothesis testing framework for model updating that explicitly isolates the condition under which observed residuals represent a constant baseline shift, justifying scalar intercept adjustment while leaving the underlying predictor rule fixed."
+    },
+    {
+      "title": "Distribution Calibration for Regression",
+      "year": 2019,
+      "reason": "Develops a post-hoc recalibration framework for continuous regression models, analyzing conditions where fixed base predictors require secondary additive adjustments to correct systematic mean discrepancy and preserve output calibration."
+    },
+    {
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year": 2018,
+      "reason": "Analyzes post-processing calibration algorithms that operate on fixed base continuous predictors, demonstrating how residual distributions can be leveraged post-hoc to correct systematic prediction offsets."
+    },
+    {
+      "title": "Bias Correcting Climate Change Simulations - A Critical Review",
+      "year": 2016,
+      "reason": "Provides a comprehensive technical analysis of additive mean bias correction, outlining the theoretical assumption that a fixed numerical simulation's error is stationary and additive across the domain, justifying correction by the mean residual."
+    },
+    {
+      "title": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+      "year": 1972,
+      "reason": "Seminal paper establishing the framework for post-processing fixed physical predictors via statistical adjustments, using observed residuals to estimate additive scalar offsets and systematic error corrections."
+    },
+    {
+      "title": "Generalized Additive Models",
+      "year": 1990
+      "reason": "Seminal monograph formulating additive models and the backfitting algorithm, proving that when fitting an additive constant while holding all other functional predictor components fixed, the exact analytic solution under L2 loss is the mean of the partial residuals."
+    },
+    {
+      "title": "Two Further Applications of a Model for Binary Regression",
+      "year": 1958,
+      "reason": "Pioneering work in regression recalibration that mathematically derives adjusting the intercept while constraining the existing prediction rule to a fixed offset (slope fixed to 1)."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "A widely cited benchmark study on post-hoc calibration methods that freeze the base predictor and learn low-dimensional scalar parameters to align predicted outputs with empirical observation rates."
+    },
+    {
+      "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+      "year": 2021,
+      "reason": "Details distribution-free calibration methods where an arbitrary base predictor is held fixed and empirical calibration residuals directly supply additive scalar correction bounds with guaranteed coverage."
+    }
+  ]
+}
+```

@@ -1,0 +1,30 @@
+{
+  "backend": "claude-code",
+  "command": [
+    "claude",
+    "--print",
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--safe-mode",
+    "--restricted",
+    "--strict-mcp-config",
+    "--disable-slash-commands",
+    "--no-chrome",
+    "--no-session-persistence",
+    "--session-id",
+    "dfbd254e-1db5-4667-bdd6-45037cb475fd",
+    "--tools",
+    "WebSearch",
+    "--allowedTools",
+    "WebSearch",
+    "--model",
+    "claude-haiku-5-5",
+    "--effort",
+    "medium"
+  ],
+  "stdin": "{\"type\": \"user\", \"message\": {\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\\n\\nUse live web search to find the original PaperOrchestra research paper. Return only JSON with keys title, authors (list), arxiv_url.\\n\\n[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.\"}]}}\n",
+  "env": {}
+}

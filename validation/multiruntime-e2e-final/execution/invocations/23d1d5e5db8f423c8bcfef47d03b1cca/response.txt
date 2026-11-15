@@ -1,0 +1,77 @@
+```json
+{
+  "section_name": "Prediction Correction Evaluation and In-Sample Dependency",
+  "candidates": [
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Foundational paper establishing that evaluating predictive performance on the exact observations used to fit a model or estimate an adjustment yields an apparent assessment that cannot measure predictive validity on unseen data."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Formalizes the mathematical concept of optimism—the systematic difference between apparent error evaluated on estimation observations and true out-of-sample prediction error."
+    },
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Directly analyzes the downward bias of apparent error when testing prediction rules on the same sample used for parameter estimation, showing why zero recorded error on fitted observations provides no measurement of general performance."
+    },
+    {
+      "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+      "year": 1995,
+      "reason": "Demonstrates empirically and theoretically that resubstitution evaluation (assessing on the training observations) produces optimistically biased error estimates, requiring strict separation for out-of-sample assessment."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Derives covariance penalties connecting in-sample fit to out-of-sample prediction error, demonstrating how estimating correction parameters directly on observed targets artificially collapses apparent error."
+    },
+    {
+      "title": "Circular Analysis in Systems Neuroscience: The Dangers of Double Dipping",
+      "year": 2009,
+      "reason": "Examines the statistical fallacy of circular analysis ('double dipping')—evaluating performance or effect sizes on the same observations used to estimate or select parameters—which distorts recorded performance."
+    },
+    {
+      "title": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year": 2010,
+      "reason": "Provides a comprehensive review of prediction risk estimation, explaining why apparent/in-sample error fails to quantify generalization when parameters are fit to the evaluated sample."
+    },
+    {
+      "title": "Leakage in Data Mining: Formulation, Detection, and Avoidance",
+      "year": 2012,
+      "reason": "Formalizes data leakage and evaluation dependencies where information from target observations is reused during estimation, producing trivial or near-zero apparent error that fails to translate to separate data."
+    },
+    {
+      "title": "The Reusable Holdout: Preserving Validity in Adaptive Data Analysis",
+      "year": 2015,
+      "reason": "Analyzes the loss of statistical validity when corrections or hypotheses are repeatedly evaluated on the same observations from which adjustments are estimated."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Highlights the necessity of estimating post-hoc prediction corrections (such as scalar temperature and bias parameters) on separate validation data rather than the evaluation sample, where fitting trivially minimizes error."
+    },
+    {
+      "title": "Machine Learning Algorithm Validation with a Limited Sample Size",
+      "year": 2019,
+      "reason": "Shows how small sample sizes exacerbate optimistic evaluation bias when model adjustments and evaluation are conducted on overlapping observations."
+    },
+    {
+      "title": "Predictive Inference with the Jackknife+",
+      "year": 2021,
+      "reason": "Analyzes residual-based corrections and distribution-free predictive inference, distinguishing in-sample residual optimization from guaranteed out-of-sample predictive performance."
+    },
+    {
+      "title": "Conformal Prediction: A Gentle Introduction",
+      "year": 2023,
+      "reason": "Explains why post-hoc prediction adjustments and calibration steps require strictly independent calibration and evaluation observations to ensure valid predictive coverage on new data."
+    },
+    {
+      "title": "Leakage and the Reproducibility Crisis in Machine-Learning-Based Science",
+      "year": 2023,
+      "reason": "Presents a taxonomy of data leakage and circular evaluation across scientific applications, analyzing how evaluating corrections on estimation data produces illusory zero-error findings."
+    }
+  ]
+}
+```

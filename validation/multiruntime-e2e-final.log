@@ -1,0 +1,215 @@
+Matplotlib is building the font cache; this may take a moment.
+/Users/davidzenz/.codex/skills/paper-orchestra/vendor/methods/prompts/content_refinement_agent.py:52: SyntaxWarning: "\e" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\e"? A raw string is also an option.
+  - Structure: Do not break the LaTeX compilation. Keep packages and environments stable. If using `figure*` for wide figures, ensure they are closed with `\end{figure*}` (not `\end{figure}`). Check for completeness.
+outline.json output written to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/outline.json
+[DEBUG] Starting run_literature_agent
+[DEBUG] Starting run_plotting_agent
+🚀 Starting Fast Hybrid Literature Agent (Cutoff: 2026-11, Threads: 3)...
+📚 Phase 1: Analyzing Plan & Executing Search Tasks...
+    -> Identified 21 distinct search tasks.
+   🔎 Phase 1a: Google Candidates Discovery (MaxPool=10)...
+   🔎 Exploration [Introduction]: 'Search 'prediction error teaching constant additive correction survey' for broad reviews establishing educational context; restrict publication dates to 2026-11 or earlier.'
+   🔎 Exploration [Introduction]: 'Search 'systematic constant prediction error practical consequences review' for macro-level motivation; treat any real-world applications as cited context only, never as settings evaluated by this note.'
+   🔎 Exploration [Introduction]: 'Search 'foundational statistical prediction residual mean intercept explanation' to identify 3–5 foundational sources, verifying each source rather than assuming its identity.'
+   🔎 Exploration [Introduction]: 'Search 'statistical learning evaluation same observations correction estimation survey' for broad explanations of why evaluation on correction-estimation observations does not establish predictive generalization.'
+   🔎 Exploration [Related Work: 2.1 Fixed Predictors and Additive Offset Corrections]: '"fixed predictor" "mean residual" "additive correction"'
+   🔎 Exploration [Related Work: 2.1 Fixed Predictors and Additive Offset Corrections]: '"constant residual" "intercept correction"'
+   🔎 Exploration [Related Work: 2.1 Fixed Predictors and Additive Offset Corrections]: '"scalar offset" "prediction error" "fixed slope"'
+Processing figure: fig_intercept_error
+Processing figure: fig_residual_workflow
+   🔎 Exploration [Related Work: 2.2 Evaluation of Corrections Estimated from Observed Residuals]: '"prediction correction" "same observations" "evaluation"'
+[fig_intercept_error] Retrieving few-shot examples...
+Warn: /Users/davidzenz/.codex/skills/paper-orchestra/vendor/utils/../../PaperBanana/data/PaperBananaBench/plot/ref.json not found. Proceeding without few-shot.
+[fig_intercept_error] Planning figure content...
+   🔎 Exploration [Related Work: 2.2 Evaluation of Corrections Estimated from Observed Residuals]: '"residual correction" "in-sample error"'
+   🔎 Exploration [Related Work: 2.2 Evaluation of Corrections Estimated from Observed Residuals]: '"estimated intercept" "evaluation" "held-out observations"'
+[fig_residual_workflow] Retrieving few-shot examples...
+Warn: /Users/davidzenz/.codex/skills/paper-orchestra/vendor/utils/../../PaperBanana/data/PaperBananaBench/diagram/ref.json not found. Proceeding without few-shot.
+[fig_residual_workflow] Planning figure content...
+[fig_intercept_error] Styling figure content...
+[fig_residual_workflow] Styling figure content...
+[fig_intercept_error] Generating initial visual with aspect ratio 4:3...
+[fig_intercept_error] Running critic round 1/3...
+[fig_residual_workflow] Generating initial visual with aspect ratio 3:2...
+[fig_intercept_error] Critic round 1: Changes needed. Re-generating based on suggestions...
+[fig_intercept_error] Running critic round 2/3...
+[fig_intercept_error] Critic round 2: No changes needed. Finishing refinement.
+[fig_intercept_error] Generating caption...
+   🎯 Targeted Search [Method - 3.2 Error Calculation and Data Dependency]: 'research paper or technical report introducing 'mean absolute error''
+[fig_intercept_error] Figure processing complete.
+   🎯 Targeted Search [Method - 3.2 Error Calculation and Data Dependency]: 'research paper or technical report introducing 'mean squared error''
+   🎯 Targeted Search [Method - 3.2 Error Calculation and Data Dependency]: 'research paper or technical report introducing 'R''
+   🎯 Targeted Search [Method - 3.2 Error Calculation and Data Dependency]: 'research paper or technical report introducing 'LaTeX''
+   🎯 Targeted Search [Method - 3.2 Error Calculation and Data Dependency]: 'research paper or technical report introducing 'TikZ''
+   🎯 Targeted Search [Experiments - 4.1 Deterministic Calculation and Recorded Results]: 'research paper or technical report introducing 'mean absolute error''
+   🎯 Targeted Search [Experiments - 4.1 Deterministic Calculation and Recorded Results]: 'research paper or technical report introducing 'mean squared error''
+   🎯 Targeted Search [Experiments - 4.1 Deterministic Calculation and Recorded Results]: 'research paper or technical report introducing 'R''
+Warning: Gemini API call failed on attempt 1 of 5. Error: Parsed response is None, Here is the raw response:
+```json
+{
+  "section_name": "Fixed Predictor Additive Residual Calibration",
+  "candidates": [
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Establishes the foundational technical formulation of stagewise additive learning, proving that under squared error loss, optimizing an additive scalar correction while keeping the existing predictor fixed is uniquely solved by the sample mean of the unmodeled residuals."
+    },
+    {
+      "title": "A Calibration Hierarchy for Risk Models Was Defined: From Utopia to Empirical Data",
+      "year": 2016,
+      "reason": "Formalizes the canonical hierarchy of prediction model calibration, defining mean calibration (calibration-in-the-large) as the condition where a fixed predictor's systematic mean discrepancy is resolved entirely through a scalar intercept adjustment without modifying predictor slopes."
+    },
+    {
+      "title": "Updating Methods Improved the Performance of a Clinical Prediction Model in New Patients",
+      "year": 2008,
+      "reason": "Empirically and methodologically evaluates model recalibration strategies, showing that when a fixed linear predictor systematically over- or under-predicts by a constant offset, estimating only a scalar intercept update via an offset term eliminates mean bias without introducing parameter variance."
+    },
+    {
+      "title": "A Closed Testing Procedure to Select an Appropriate Method for Updating Prediction Models",
+      "year": 2017,
+      "reason": "Presents a formal hypothesis testing framework for model updating that explicitly isolates the condition under which observed residuals represent a constant baseline shift, justifying scalar intercept adjustment while leaving the underlying predictor rule fixed."
+    },
+    {
+      "title": "Distribution Calibration for Regression",
+      "year": 2019,
+      "reason": "Develops a post-hoc recalibration framework for continuous regression models, analyzing conditions where fixed base predictors require secondary additive adjustments to correct systematic mean discrepancy and preserve output calibration."
+    },
+    {
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year": 2018,
+      "reason": "Analyzes post-processing calibration algorithms that operate on fixed base continuous predictors, demonstrating how residual distributions can be leveraged post-hoc to correct systematic prediction offsets."
+    },
+    {
+      "title": "Bias Correcting Climate Change Simulations - A Critical Review",
+      "year": 2016,
+      "reason": "Provides a comprehensive technical analysis of additive mean bias correction, outlining the theoretical assumption that a fixed numerical simulation's error is stationary and additive across the domain, justifying correction by the mean residual."
+    },
+    {
+      "title": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+      "year": 1972,
+      "reason": "Seminal paper establishing the framework for post-processing fixed physical predictors via statistical adjustments, using observed residuals to estimate additive scalar offsets and systematic error corrections."
+    },
+    {
+      "title": "Generalized Additive Models",
+      "year": 1990
+      "reason": "Seminal monograph formulating additive models and the backfitting algorithm, proving that when fitting an additive constant while holding all other functional predictor components fixed, the exact analytic solution under L2 loss is the mean of the partial residuals."
+    },
+    {
+      "title": "Two Further Applications of a Model for Binary Regression",
+      "year": 1958,
+      "reason": "Pioneering work in regression recalibration that mathematically derives adjusting the intercept while constraining the existing prediction rule to a fixed offset (slope fixed to 1)."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "A widely cited benchmark study on post-hoc calibration methods that freeze the base predictor and learn low-dimensional scalar parameters to align predicted outputs with empirical observation rates."
+    },
+    {
+      "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+      "year": 2021,
+      "reason": "Details distribution-free calibration methods where an arbitrary base predictor is held fixed and empirical calibration residuals directly supply additive scalar correction bounds with guaranteed coverage."
+    }
+  ]
+}
+```
+Retrying in 0 seconds...
+   🎯 Targeted Search [Experiments - 4.2 Visualization, Reproducibility, and Interpretation]: 'research paper or technical report introducing 'ggplot2''
+   🎯 Targeted Search [Experiments - 4.2 Visualization, Reproducibility, and Interpretation]: 'research paper or technical report introducing 'R''
+   🎯 Targeted Search [Experiments - 4.2 Visualization, Reproducibility, and Interpretation]: 'research paper or technical report introducing 'mean squared error''
+[fig_residual_workflow] Running critic round 1/3...
+[fig_residual_workflow] Critic round 1: Changes needed. Re-generating based on suggestions...
+   📊 Phase 1b: Semantic Scholar Enrichment (Rate-limited, sequential)...
+[fig_residual_workflow] Running critic round 2/3...
+[fig_residual_workflow] Critic round 2: Changes needed. Re-generating based on suggestions...
+
+✨ Final Count: 0 unique enriched papers retrieved.
+🔄 Injecting citations back into Outline...
+✍️  Phase 3: Writing Introduction & Related Work...
+✅ Done! Literature Review Outputs saved to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/literature_agent_output/
+[DEBUG] Finished run_literature_agent
+[fig_residual_workflow] Running critic round 3/3...
+[fig_residual_workflow] Critic round 3: Changes needed. Re-generating based on suggestions...
+Warning: Gemini API call failed on attempt 1 of 5. Error: Native ACP worker attempted a disallowed tool
+Retrying in 0 seconds...
+[fig_residual_workflow] Generating caption...
+[fig_residual_workflow] Figure processing complete.
+Saved /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/figures/fig_intercept_error.jpg
+Saved /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/figures/fig_residual_workflow.jpg
+[DEBUG] Finished run_plotting_agent
+ > Agent SectionWritingAgent starting...
+ > Generating paper content with Multimodal Images...
+ > Paper saved to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/latex_writeup/raw_draft_paper.tex
+ >> Work directory: /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir
+
+=== Initial Baseline Review ===
+ >> Initial PDF saved to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir/initial_draft.pdf
+ >> Generating snapshots for V0...
+ >> [AgentReview] Generating feedback for initial paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for initial: 2/10
+
+=== Refinement Iteration 1/3 ===
+ >> calling Refinement Agent...
+ >> Compiling new draft...
+ >> New PDF saved to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir/refined_paper_v1.pdf
+ >> Generating snapshots for v1...
+ >> [AgentReview] Generating feedback for v1 paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for v1: 3/10
+ >> Score Analysis v1:
+    Overall: 2.0 -> 3.0
+    Sub-axes Gain: +1.0 | Drop: -0.0
+    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 1.0}
+ >> SUCCESS: Overall Score increased! Progressing to next iteration...
+
+=== Refinement Iteration 2/3 ===
+ >> calling Refinement Agent...
+ >> Compiling new draft...
+ >> New PDF saved to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir/refined_paper_v2.pdf
+ >> Generating snapshots for v2...
+ >> [AgentReview] Generating feedback for v2 paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for v2: 3/10
+ >> Score Analysis v2:
+    Overall: 3.0 -> 3.0
+    Sub-axes Gain: +0.0 | Drop: -0.0
+    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}
+ >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...
+
+=== Refinement Iteration 3/3 ===
+ >> calling Refinement Agent...
+ >> Compiling new draft...
+ >> New PDF saved to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir/refined_paper_v3.pdf
+ >> Generating snapshots for v3...
+ >> [AgentReview] Generating feedback for v3 paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for v3: 3/10
+ >> Score Analysis v3:
+    Overall: 3.0 -> 3.0
+    Sub-axes Gain: +0.0 | Drop: -0.0
+    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}
+ >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...
+ >> Generating snapshots for format v0...
+ >> Starting dedicated formatting loop...
+
+=== Formatting Iteration 1/1 ===
+ >> [VLM] Generating formatting feedback for fmt_loop_1 paper...
+ >> [VLM] Found formatting issues. Calling Gemini to fix...
+ >> Formatting iteration 1 compiled successfully.
+ >> Process Complete. Final Score: 3.0, Final PDF at: /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir/final_refined_paper.pdf
+ >> Copying final PDF from  /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/content_refinement_workdir/final_refined_paper.pdf to /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/final_paper.pdf...
+
+ >> Final PDF saved to:
+ /Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/final_paper.pdf

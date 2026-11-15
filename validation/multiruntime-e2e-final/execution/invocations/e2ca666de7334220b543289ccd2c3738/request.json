@@ -1,0 +1,40 @@
+{
+  "invocation": "e2ca666de7334220b543289ccd2c3738",
+  "call": "707270cc76534dcdbe3c46d3bb98a786",
+  "role": "literature-discovery",
+  "callsite": [
+    "literature_review_agent.py:_discover_candidates:464",
+    "literature_review_agent.py:_process_search_task_google:318"
+  ],
+  "figure_id": null,
+  "requested_model": "gemini-3-flash-preview",
+  "effective_model": "gemini-3.8-flash",
+  "config": {
+    "temperature": 0.1,
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "search_required": true,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "antigravity",
+  "transport_plan_sha256": "cd4ab77e4f130c05d7bbb45ced8c879f0f4c0cdfa2b6ee339964fccf2f2ed5b2",
+  "prompt_sha256": "7f42b7045b747d7fa4f1b82c508362bc4b8852ed8eab3f16097539c0748eaf45",
+  "model_routing": {
+    "model": "gemini-3.8-flash",
+    "routing_role": "literature-discovery",
+    "group": "discovery",
+    "selected_by": "profile group: discovery",
+    "backend": "antigravity",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "profile group: discovery",
+      "model": "profile group: discovery",
+      "effort": "profile group: discovery"
+    }
+  }
+}

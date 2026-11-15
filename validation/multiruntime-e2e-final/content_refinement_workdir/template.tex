@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+% Fill the abstract.
+\end{abstract}
+\section{Introduction}
+A constant prediction error can be illustrated through a finite calculation in which the prediction rule omits an additive term. This teaching note considers five inputs,
+\[
+x_i \in \{-2,-1,0,1,2\},
+\qquad y_i=2x_i+3,
+\]
+and the fixed predictor $\hat{y}_i=2x_i$. On each of these observations, the target minus the prediction is exactly $3$. The example therefore isolates the effect of an omitted intercept while keeping the coefficient of $x$ fixed.
+
+The correction is obtained directly from the observed residuals:
+\[
+b=\frac{1}{5}\sum_{i=1}^{5}(y_i-2x_i)=3,
+\qquad
+\hat{y}_i^{\mathrm{corr}}=2x_i+b.
+\]
+The recorded calculation compares the three additive values $b=0$, $b=1.5$, and $b=3$. Their mean squared errors are $9$, $2.25$, and $0$, respectively; their mean absolute errors are $3$, $1.5$, and $0$. These values describe the arithmetic on the five listed observations.
+
+The purpose of the note is to make the residual-to-correction computation transparent, not to introduce a new algorithm or establish a research advance. The calculation is implemented in base R and involves no optimizer or stochastic repetitions. Crucially, the same five observations determine the correction and measure its error. The zero recorded error at $b=3$ demonstrates exact agreement on these observations, but supplies no measurement of predictive performance on other observations.
+
+\section{Related Work}
+This note makes no literature-based claim of novelty and reports no comparison with external methods. The discussion below identifies the conceptual scope of the calculation and the limits of its evaluation.
+
+\subsection{Fixed Predictors and Additive Offset Corrections}
+The example concerns a fixed prediction rule supplemented by a single scalar offset. The coefficient multiplying $x$ remains $2$ throughout; only the added value changes. For the five observations considered here, every residual $y_i-2x_i$ equals $3$, so averaging the residuals returns that same value. Adding it to the predictions removes the observed discrepancy at every listed point.
+
+This correspondence depends on the constant residual in the specified example. The calculation does not examine observations with varying residuals, estimate a different slope, or compare alternative correction procedures. Its role is to illustrate how the observed constant discrepancy becomes an additive correction. The three recorded settings, $b=0$, $b=1.5$, and $b=3$, are the complete measured comparison.
+
+\subsection{Evaluation of Corrections Estimated from Observed Residuals}
+The correction depends on the observed targets through the residuals used to compute its mean. Evaluating $2x_i+b$ on those same observations therefore measures agreement with the data that supplied $b$. In this example, exact agreement follows from the shared residual value of $3$.
+
+The experimental record contains no evaluation on separate observations. Consequently, the reported errors support only the finite comparison among the three recorded offsets. They do not establish generalization, robustness to other residual patterns, or superiority over an external method. Making the dependency between correction estimation and evaluation explicit is part of the teaching purpose of this note.
+\section{Method}
+% Fill the method.
+\section{Experiments}
+% Fill the experiments.
+\section{Conclusion}
+% Fill the conclusion.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

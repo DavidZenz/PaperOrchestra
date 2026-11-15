@@ -1,0 +1,35 @@
+{
+  "backend": "antigravity",
+  "mode": "acp",
+  "command": [
+    "/opt/homebrew/bin/agy",
+    "--settings",
+    "{\"agentMode\":\"\",\"toolPermission\":\"request-review\",\"permissions\":{\"deny\":[\"command(*)\",\"unsandboxed(*)\",\"write_file(*)\",\"read_file(*)\",\"execute_url(*)\",\"mcp(*)\"],\"allow\":[\"read_url(*)\"]}}",
+    "acp",
+    "--process-per-session",
+    "--sandbox",
+    "--include-default-customizations=false",
+    "--agent",
+    "paper-orchestra-isolated-worker",
+    "--disable-telemetry",
+    "--log-file",
+    "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/bd4d6e7c87dd45ca92c2b064b75dc59f/acp-server.log"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\n\n            Identify the SPECIFIC academic paper described by this hint: \"research paper or technical report introducing 'LaTeX'\".\n            \n            CONTEXT: Must-have citation for section covering: Define MAE as the mean absolute residual and MSE as the mean squared residual over these exact five observations, matching the columns of experimental_log.md. Show the finite algebra yielding MAE=|3-b| and MSE=(3-b)^2, and use it only to explain the three recorded correction settings. Insert fig_residual_workflow to show that observed residuals determine b and the same observations supply evaluation. State that the arithmetic is implemented in base R, while the requested diagram is generated with LaTeX/TikZ. Describe figure source retention as a downstream reproducibility requirement.\n            CUTOFF DATE: Published BEFORE 2026-11\n            \n            INSTRUCTIONS:\n            1. Use Google Search to find the EXACT title and year of this paper.\n            2. If the hint refers to a dataset, model architecture, or baseline (e.g., \"research paper introducing...\"), you MUST find the primary, original paper that introduced it.\n            3. Return EXACTLY 1 candidate paper that matches best.\n\n            YOU MUST return the results in json format (```json content```) following this schema:\n            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}\n            \n\n[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.",
+  "env": {},
+  "images": [],
+  "acp": {
+    "config_strategy": "session-options",
+    "model": "gemini-3.8-flash",
+    "effort": "medium",
+    "model_option": "model",
+    "effort_option": "thought_level",
+    "expected_mode": "default",
+    "allowed_search_tools": [
+      "search_web"
+    ],
+    "search_evidence": "native matched search_web query/status; result body is not emitted by ACP 1.5.9",
+    "agent_file": "/Users/davidzenz/PaperOrchestra/validation/multiruntime-e2e-final/execution/invocations/bd4d6e7c87dd45ca92c2b064b75dc59f/.agents/agents/paper-orchestra-isolated-worker.md",
+    "agent_file_sha256": "7365b33a7432fdaeff3a9edcf9589593fac21d8f8cc87d6a549365b211adae0b"
+  }
+}

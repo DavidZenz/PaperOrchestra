@@ -1,0 +1,41 @@
+{
+  "backend": "mistral-vibe",
+  "mode": "acp",
+  "command": [
+    "vibe-acp"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\nReply exactly PAPER_ORCHESTRA_RUNTIME_OK. Use no tools.",
+  "env": {
+    "VIBE_DEFAULT_AGENT": "ask",
+    "VIBE_ENABLED_AGENTS": "[\"ask\"]",
+    "VIBE_ENABLE_SUBAGENTS": "false",
+    "VIBE_ENABLE_MCP": "false",
+    "VIBE_ENABLE_CONNECTORS": "false",
+    "VIBE_ENABLED_TOOLS": "[]",
+    "VIBE_DISABLED_TOOLS": "[\"*\"]",
+    "VIBE_DISABLED_SKILLS": "[\"*\"]",
+    "VIBE_INCLUDE_PROJECT_CONTEXT": "false",
+    "VIBE_OUTSIDE_WORKDIR": "deny",
+    "VIBE_SESSION_LOGGING__ENABLED": "false",
+    "VIBE_SESSION_LOGGING__GENERATE_TITLES": "false",
+    "VIBE_ENABLE_UPDATE_CHECKS": "false",
+    "VIBE_ENABLE_NOTIFICATIONS": "false",
+    "VIBE_ENABLE_TELEMETRY": "false",
+    "VIBE_EXPERIMENTS__ENABLE": "false",
+    "VIBE_OUTPUT_LIMIT_RETRIES": "0",
+    "VIBE_ACTIVE_MODEL": "zai-glm-5-3",
+    "VIBE_MODELS": "{\"zai-glm-5-3\": {\"alias\": \"zai-glm-5-3\", \"name\": \"zai-glm-5-3\", \"provider\": \"mistral\", \"supports_images\": false, \"thinking\": \"high\", \"thinking_levels\": [\"low\", \"high\", \"max\"]}}"
+  },
+  "images": [],
+  "acp": {
+    "config_strategy": "preconfigured",
+    "model": "zai-glm-5-3",
+    "effort": "high",
+    "model_option": "model",
+    "effort_option": "thinking",
+    "allowed_search_tools": [],
+    "allowed_auxiliary_tools": [],
+    "image_limit": 8,
+    "image_max_bytes": 10485760
+  }
+}

@@ -1,0 +1,22 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Fixed Predictors and Additive Offset Corrections}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Evaluation of Corrections Estimated from Observed Residuals}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Finite Observations and Residual Correction}{2}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Complete observation record. Each residual is the target minus the baseline prediction; adding their mean to the baseline gives the corrected prediction.}}{2}{}\protected@file@percent }
+\newlabel{tab:observations}{{1}{2}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Least-Squares Equivalence and Error Calculation}{2}{}\protected@file@percent }
+\newlabel{sec:least_squares}{{3.2}{2}{}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Residual-to-offset workflow. Inputs give baseline predictions $2x_i$; subtracting these from targets gives $(3,3,3,3,3)$. Their mean supplies $b=3$, which is added to the baseline. The corrected predictions are evaluated against the same targets. The direct target-to-evaluation path marks this reuse; the description does not depend on box colors.}}{3}{}\protected@file@percent }
+\newlabel{fig:residual_workflow}{{1}{3}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Deterministic Calculation and Recorded Results}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Recorded fitting-observation errors. All rows use the five observations in Table~\ref {tab:observations}.}}{4}{}\protected@file@percent }
+\newlabel{tab:errors}{{2}{4}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Visualization, Reproducibility, and Interpretation}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Recorded fitting-observation MSE against added intercept $b$. The three labeled points are $(0,9)$, $(1.5,2.25)$, and $(3,0)$. The halfway correction quarters MSE; the fitted correction cancels the common residual. Each point is a recorded value.}}{5}{}\protected@file@percent }
+\newlabel{fig:intercept_error}{{2}{5}{}{figure.2}{}}
+\gdef \@abspage@last{6}

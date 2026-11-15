@@ -1,0 +1,153 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+## ROLE
+You are a Lead Visual Designer for top-tier AI conferences (e.g., NeurIPS 2025).
+
+## TASK
+You are provided with a preliminary description of a statistical plot to be generated. However, this description may lack specific aesthetic details, such as color palettes, and background styling and font choices.
+
+Your task is to refine and enrich this description based on the provided [NeurIPS 2025 Style Guidelines] to ensure the final generated image is a high-quality, publication-ready plot that strictly adheres to the NeurIPS 2025 aesthetic standards.
+
+**Crucial Instructions:**
+1.  **Enrich Details:** Focus on specifying visual attributes (colors, fonts, line styles, layout adjustments) defined in the guidelines.
+2.  **Preserve Content:** Do NOT alter the semantic content, logic, or quantitative results of the plot. Your job is purely aesthetic refinement, not content editing.
+3.  **Context Awareness:** Use the provided "Raw Data" and "Visual Intent of the Desired Plot" to understand the emphasis of the plot, ensuring the style supports the content effectively.
+
+## INPUT DATA
+-   **Detailed Description**: [The preliminary description of the plot]
+-   **Style Guidelines**: [NeurIPS 2025 Style Guidelines]
+-   **Raw Data**: [The raw data to be visualized]
+-   **Visual Intent of the Desired Plot**: [Visual intent of the desired plot]
+
+## OUTPUT
+Output ONLY the final polished Detailed Description. Do not include any conversational text or explanations.
+
+
+Detailed Description: # Figure description: `fig_intercept_error`
+
+## Content
+
+**Chart type:** Point chart (scatter plot with three markers, no connecting line, no fitted curve, no error bars).
+
+**Data (exactly three recorded pairs, each drawn as one point):**
+
+| Point | b (x) | MSE (y) |
+|---:|---:|---:|
+| 1 | 0 | 9 |
+| 2 | 1.5 | 2.25 |
+| 3 | 3 | 0 |
+
+**Variable mapping:**
+- **x channel:** added intercept correction `b`, the value added to `2x` (the baseline predictor). Ticks at 0, 1.5, 3.
+- **y channel:** mean squared error, `mean((y - (2x + b))^2)` over the five observations. Ticks at 0, 3, 6, 9.
+- **hue / shape:** none. All points share one color and one shape, since there is only one series.
+
+**Provenance (for the caption and notes, not plotted):** the five synthetic observations are (x, y) = (−2, −1), (−1, 1), (0, 3), (1, 5), (2, 7). Their residuals against `2x` are all 3, so the correction is `b = mean(y − 2x) = 3`. The MAE column (3, 1.5, 0) is in the source table but is not plotted.
+
+**Text elements:**
+- **Title:** "Recorded Mean Squared Error at Three Intercept Corrections"
+- **x-axis label:** "Added intercept correction b"
+- **y-axis label:** "Mean squared error (MSE)"
+- **Point labels:** "9.00" (above the first point), "2.25" (above the second), "0.00" (above the third). Labels are placed above each marker.
+- **Caption:** "Each point is a recorded result. The same five synthetic observations, (x, y) = (−2, −1), (−1, 1), (0, 3), (1, 5), (2, 7), determine the correction b = mean(y − 2x) = 3 and also evaluate it. The plot therefore shows finite arithmetic on these observations, not predictive generalization. No held-out data, fitted curve, or uncertainty interval is shown."
+
+## Presentation
+
+- **Canvas:** 6.0 in × 4.0 in, white background (`#FFFFFF`).
+- **Theme:** `theme_classic(base_size = 12)`, with the panel border removed.
+- **Markers:** filled circles (`shape = 16`), size 4 (about 4 mm), color `#1F4E79` (dark blue), no outline.
+- **Point labels:** 10 pt, color `#333333`, `vjust = -1.2`.
+- **Axis titles:** 12 pt, bold, color `#222222`.
+- **Axis tick labels:** 10 pt, color `#444444`.
+- **Title:** 13 pt, bold, left-aligned, color `#111111`.
+- **Caption:** 8.5 pt, italic, color `#555555`, left-aligned to the plot panel. Wrap at about 95 characters.
+- **Axis lines:** 0.5 pt, color `#444444`.
+- **Grid:** horizontal major gridlines only, 0.3 pt, color `#E5E5E5`. No vertical gridlines and no minor gridlines.
+- **Axis limits:** x from −0.3 to 3.3; y from −0.6 to 10.5. Limits leave room for the markers and labels.
+- **Legend:** none, since there is one series and the labels identify the values.
+
+## Reproducible R/ggplot2 source (described, not written to disk)
+
+```r
+library(ggplot2)
+
+# Recorded results only; no interpolation or extra measurements
+df <- data.frame(
+  b   = c(0, 1.5, 3),
+  mse = c(9, 2.25, 0)
+)
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_point(shape = 16, size = 4, colour = "#1F4E79") +
+  geom_text(aes(label = sprintf("%.2f", mse)),
+            vjust = -1.2, size = 3.5, colour = "#333333") +
+  scale_x_continuous(breaks = c(0, 1.5, 3), limits = c(-0.3, 3.3)) +
+  scale_y_continuous(breaks = c(0, 3, 6, 9), limits = c(-0.6, 10.5)) +
+  labs(
+    title   = "Recorded Mean Squared Error at Three Intercept Corrections",
+    x       = "Added intercept correction b",
+    y       = "Mean squared error (MSE)",
+    caption = paste(
+      "Each point is a recorded result. The same five synthetic observations,",
+      "(x, y) = (−2, −1), (−1, 1), (0, 3), (1, 5), (2, 7), determine the correction",
+      "b = mean(y − 2x) = 3 and also evaluate it. The plot shows finite arithmetic",
+      "on these observations, not predictive generalization. No held-out data,",
+      "fitted curve, or uncertainty interval is shown."
+    )
+  ) +
+  theme_classic(base_size = 12) +
+  theme(
+    plot.title       = element_text(size = 13, face = "bold", colour = "#111111", hjust = 0),
+    plot.caption     = element_text(size = 8.5, face = "italic", colour = "#555555", hjust = 0),
+    axis.title       = element_text(size = 12, face = "bold", colour = "#222222"),
+    axis.text        = element_text(size = 10, colour = "#444444"),
+    axis.line        = element_line(linewidth = 0.5, colour = "#444444"),
+    panel.grid.major.y = element_line(linewidth = 0.3, colour = "#E5E5E5"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position  = "none"
+  )
+
+# Vector PDF (editable, reproducible) and manuscript-compatible preview
+ggsave("fig_intercept_error.pdf", p, device = cairo_pdf, width = 6, height = 4)
+ggsave("fig_intercept_error_preview.png", p, width = 6, height = 4, dpi = 300)
+```
+
+## Output artifacts
+
+- `fig_intercept_error.R`: the source above, saved as an editable script.
+- `fig_intercept_error.pdf`: vector output for the manuscript.
+- `fig_intercept_error_preview.png`: 300 dpi raster preview.
+
+I did not write these files, per the invocation constraints. The source above is the content to save.
+Style Guidelines: 
+Raw Data: 
+--- experimental_log.md ---
+# Actual R calculation on five synthetic observations
+
+One deterministic calculation; no stochastic repetitions, optimizer, external dataset, benchmark, timing or held-out evaluation.
+The same observations determine and evaluate the correction. No other experiments were run.
+
+| x | y | baseline 2x | corrected 2x+3 |
+|---:|---:|---:|---:|
+| -2 | -1 | -4 | -1 |
+| -1 | 1 | -2 | 1 |
+| 0 | 3 | 0 | 3 |
+| 1 | 5 | 2 | 5 |
+| 2 | 7 | 4 | 7 |
+
+Correction b = mean(y - 2x) = 3.
+
+| Added b | Mean absolute error | Mean squared error |
+|---:|---:|---:|
+| 0 | 3 | 9 |
+| 1.5 | 1.5 | 2.25 |
+| 3 | 0 | 0 |
+
+Required generated statistical figure: fig_intercept_error. Plot the three recorded MSE values against b. No unmeasured points, uncertainty intervals or invented data.
+Code must be R/ggplot2. Keep this calculation reproducible and keep the numerical scope finite.
+
+Visual Intent of the Desired Plot: Title: Recorded Mean Squared Error at Three Intercept Corrections
+Objective: Create a point chart in R/ggplot2 showing exactly the recorded pairs (b, MSE) = (0, 9), (1.5, 2.25), and (3, 0). Label both axes and the three measured values. Do not add fitted curves, interpolated observations, uncertainty intervals, or additional measurements. The caption must explain that the same five observations determine and evaluate the correction, so the plot demonstrates finite arithmetic rather than predictive generalization. Retain editable .R source, a vector PDF, and a manuscript-compatible preview as downstream reproducibility artifacts.
+Your Output:

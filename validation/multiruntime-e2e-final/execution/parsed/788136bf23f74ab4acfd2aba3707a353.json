@@ -1,0 +1,46 @@
+{
+  "Summary": "The note presents a five-observation teaching example in which targets follow y = 2x + 3 while the predictor is fixed at 2x, so the only unknown is an additive intercept. It shows that the least-squares intercept under squared loss equals the mean residual, b = 3, using the decomposition L(b) = (1/5) sum (r_i - rbar)^2 + (b - rbar)^2. It reports MAE and MSE at three offsets (b = 0, 1.5, 3, giving MAE 3, 1.5, 0 and MSE 9, 2.25, 0), and provides a self-contained table, a residual workflow diagram, an error plot, and a short base R reproduction recipe. The stated contribution is instructional: sequencing residual calculation, offset estimation, and error evaluation for introductory learners.",
+  "Strengths": [
+    "The arithmetic and derivations are correct: all residuals equal 3, the mean residual is 3, MAE(b) = |3 - b| and MSE(b) = (3 - b)^2 agree with Table 2, and the cross-term elimination in the decomposition is valid.",
+    "Table 1 values agree with 2x and 2x + 3 at all five x values, so the example can be checked by hand.",
+    "The base R reproduction recipe is short and self-contained, which supports independent verification.",
+    "The note separates centering from cancellation and contrasts the linear scaling of absolute error with the quadratic scaling of squared error at b = 1.5, a useful pedagogical point.",
+    "The note openly states that the error is measured on the same observations that supplied the correction, which avoids overstating what the zero error shows."
+  ],
+  "Weaknesses": [
+    "The data are degenerate: constant residuals make the fixed-slope fit exact and the zero MSE at b = 3 guaranteed by construction, so the example does not test estimation under noise.",
+    "Evaluation is in-sample only. There is no held-out set, no noisy variant, and no analysis of the sampling variability of the intercept estimate.",
+    "Section 2 is titled Related Work but contains no citations to least-squares references, residual analysis, or existing teaching treatments of fixed-offset estimation, so the note's position relative to prior material is not established.",
+    "The instructional claims (learners can follow the sequence, the workflow is inspectable) are asserted without any learner evaluation or comparison with alternative presentations.",
+    "Pipeline language appears in the manuscript text, for example 'The supplied experimental record' and 'The supplied figure recipes and rendering records are identified once below, retaining their original provenance'. This reads as commentary rather than prose.",
+    "Figure 2 plots three points that already appear in Table 2 and adds little beyond the table.",
+    "The figure provenance section depends on external files, paths, and SHA256 hashes that are not part of the manuscript, and it lists Figure 2 before Figure 1.",
+    "The column order of Table 1 in the supplied text is hard to read, which weakens the claim that the table supports hand calculation.",
+    "Some sentences are vague, such as 'Table 2 supports exact lookup of both metrics' and the claim that the diagram 'connects data dependency to error magnitude'."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "What is the intended audience, and how would the authors assess whether learners understand the centering, cancellation, and error-scaling points?",
+    "How do the conclusions change when residuals are noisy and non-constant, and when the error is measured on held-out observations?",
+    "Why is the slope fixed at exactly 2, and how would the argument change if the slope were also estimated from the data?",
+    "Can the authors give Table 1 with clearly labeled columns in a consistent order?",
+    "Which existing teaching resources cover the equivalence between the mean residual and the fixed-slope least-squares intercept, and how does this note differ from them?"
+  ],
+  "Limitations": [
+    "The analysis rests on a single synthetic dataset with exact constant residuals, so the results are degenerate and do not generalize.",
+    "Error is measured in-sample only, with no held-out evaluation and no estimate of intercept variability.",
+    "The scope is limited to a fixed-slope intercept. Slope estimation, multiple predictors, and noisy targets are not addressed.",
+    "The instructional benefits are untested with learners.",
+    "The note is purely pedagogical and raises no direct negative societal impact."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 2,
+  "Contribution": 2,
+  "Overall": 3,
+  "Confidence": 4,
+  "Decision": "Reject"
+}

@@ -1,5 +1,9 @@
 # Dated model recommendations and publication
 
+This is the historical 46-file documentation/profile release. Its archive is
+retained at `dist/paper-orchestra-model-recommendations-e7079804.zip`; the current
+native-backend/effort extension has a [separate report](MULTIRUNTIME-REPORT.md).
+
 On 15 November 2026 the repository README gained recommendations for all eight
 agent groups across OpenAI, Anthropic, Google Gemini and Mistral. Sources are
 linked beside the recommendations. Antigravity is identified as an agent
@@ -57,5 +61,5 @@ check, because those optional local directories are excluded from Git. The
 complete local suite and actual-upstream comparison passed separately above.
 The clean export reused the existing Python dependency environment and native
 R/TeX installations; it was not a fresh dependency-install test. See
-`publication-checks.json` and `publish-export-tests.log` for the input commit,
+`first-publication-checks.json` and `first-publication-export-tests.log` for the input commit,
 tree hash, log hash and exact skip reasons. No new model calls were made.

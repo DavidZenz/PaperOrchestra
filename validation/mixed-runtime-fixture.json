@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "name": "finite-R-TikZ-mixed-native-validation",
+  "default": {
+    "backend": "codex",
+    "model": "gpt-6.1-sol",
+    "effort": "high"
+  },
+  "groups": {
+    "discovery": {
+      "backend": "antigravity",
+      "model": "gemini-3.8-flash",
+      "effort": "medium"
+    },
+    "figure_planning": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    },
+    "figure_code": {
+      "backend": "mistral-vibe",
+      "model": "zai-glm-5-3",
+      "effort": "high"
+    },
+    "figure_review": {
+      "backend": "antigravity",
+      "model": "gemini-3.8-flash",
+      "effort": "medium"
+    },
+    "peer_review": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high"
+    },
+    "meta_review": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "formatting": {
+      "backend": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "medium"
+    }
+  },
+  "roles": {
+    "runtime-probe": {
+      "backend": "codex",
+      "model": "gpt-6-luna",
+      "effort": "low"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "figure_and_tables": {
+    "Figure 1": {
+      "detected_issue": "The residual-to-offset workflow diagram has text overlapping its borders. In the purple evaluation box, the line 'five (x_i, y_i)' runs over the bottom edge of the box, and the annotation 'Same five observations used to estimate b and to score.' sits on top of that same edge and collides with the box text. The figure itself stays within the column margins.",
+      "suggested_fix": "Increase the node height or minimum height of the evaluation box (for example, `minimum height=` in TikZ) so all text fits inside it. Move the 'Same five observations...' annotation fully below the box with extra vertical spacing, or shorten the box label. Re-render and check that no text crosses a border."
+    },
+    "Figure 2": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    "Table 1": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    "Table 2": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    }
+  },
+  "other_issues": [
+    {
+      "page": 6,
+      "element": "Unnumbered section titled 'Figure source provenance' after the Conclusion",
+      "detected_issue": "The guidelines say no appendix is required and that the figure source code is retained as a separate reproducibility artifact. This appended section works as an appendix inside the manuscript and lists file paths and SHA256 checksums that the guidelines do not ask for.",
+      "suggested_fix": "Remove the section from the manuscript and keep the provenance details in the separate artifact (for example, `figure_provenance.json` or a README in the artifact directory). If a short pointer is needed, add one sentence in Section 4.2 that refers to the artifact."
+    },
+    {
+      "page": 6,
+      "element": "'Figure source provenance' section, entries for Figure 1 and Figure 2",
+      "detected_issue": "The entries are ordered Figure 2 first, then Figure 1, which is the reverse of the figure numbering used in the body of the paper.",
+      "suggested_fix": "If the section is kept, list the entries in figure-number order (Figure 1, then Figure 2)."
+    },
+    {
+      "page": 5,
+      "element": "Figure 2 page layout",
+      "detected_issue": "Figure 2 and its caption take up only the top part of the page, and the rest of the page is blank. This happens because the float was pushed to a new page.",
+      "suggested_fix": "Adjust float placement (for example, `[t]` or `[h]` options, or move the figure call to follow its first reference in Section 4.1) so the figure sits closer to the text that cites it and the page is filled more evenly."
+    }
+  ]
+}

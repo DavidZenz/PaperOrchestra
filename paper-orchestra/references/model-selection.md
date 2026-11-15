@@ -6,8 +6,10 @@ driver is noninteractive. Recommendations are optional; no profile is silently
 chosen. The bundled `profiles/openai-balanced.json` is an explicit starting point
 for Codex. Provider comparisons and their dated official sources are documented
 in the [repository README](https://github.com/DavidZenz/PaperOrchestra#recommended-models-by-agent-type);
-they are not cross-provider execution
-support or a measured PaperOrchestra quality comparison.
+the recommendations are not a measured PaperOrchestra quality comparison.
+For actual native backends, per-role effort and mixed execution targets, read
+[native runtimes](native-runtimes.md). The examples below describe the compatible
+schema-1 model-only interface; schema 2 adds backend/model/effort objects.
 
 Offer one setup question: use the current Codex CLI default for all roles, choose by
 agent type, or load a saved profile. If the user chooses per-type settings,
@@ -116,17 +118,17 @@ the parent chat model. Available models depend on the configured provider,
 account and workspace; original Gemini names are provenance/mapping keys, not
 automatically available Codex targets.
 
-Existing reasoning effort and other Codex settings continue to apply. Do not
-silently change them when selecting models. Discovery needs live-search support;
+Without explicit effort overrides, existing runtime effort settings continue to
+apply. Do not silently change them when selecting models. Discovery needs live-search support;
 section writing, revision, figure critique/captioning and visual reviews need
 image/PDF-context support. Choose compatible models or report the exact failure.
 Changing model IDs is an inference-environment adaptation (R023), not a change
 to the upstream dependency graph, role responsibilities, reviewer count,
 aggregation, revision acceptance/reversion, retries or stopping rules.
 
-The shipped transport launches Codex CLI only. Profiles contain model names, not
-provider/backend selectors. Anthropic, Google/Antigravity and Mistral worker
-adapters are not implemented or validated. Do not interpret another provider's
-model name as executable through Codex without a separately configured,
-compatible provider/gateway and verified image/search/event support. Antigravity's
-own orchestration must not substitute for the pinned PaperOrchestra controller.
+Native backend adapters launch Codex, Claude Code, Antigravity and Mistral Vibe.
+Schema 2 selects the runtime explicitly; model names alone never guess a provider.
+Each runtime requires its own authentication and compatible model/tool/media
+support. Antigravity's own orchestration must not substitute for the pinned
+PaperOrchestra controller. See the current validation report for what actually
+executed and [native runtime limits](native-runtimes.md) before choosing a profile.
