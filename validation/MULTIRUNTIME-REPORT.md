@@ -134,6 +134,24 @@ are retained unchanged. Other body text and the source appendix are readable.
 Control-flow/provenance conformance and exact figure replay pass; publication
 quality is not asserted.
 
+## Clean publication export
+
+A clean Git archive of implementation commit `4279ca4d5ce042c4077e7d7d4d591080f4e027e2`
+was extracted to a separate directory. All 2087 exported files matched the
+working files byte-for-byte. The exported suite discovered 294 tests: 290 passed
+and four optional checks skipped, with no failures, in 25.604 seconds. The skips
+are three actual-upstream-checkout tests and one older historical-run check;
+those excluded development directories were present for the complete 294-test
+workspace run. The clean export reused the existing Python dependency
+environment and R/TeX installations; it is not a fresh dependency-install claim.
+
+The exported standalone auditor also independently accepted the relocated full
+mixed run with zero errors/warnings. No models were invoked for these checks.
+See [publication receipts](native-publication-checks.json),
+[test log](publish-native-export-tests.log), and
+[relocated audit](publish-native-export-audit.json) for the exact source tree,
+hashes, environment and skip reasons.
+
 ## Limits
 
 Model recommendations remain engineering judgments, not cross-provider quality,
