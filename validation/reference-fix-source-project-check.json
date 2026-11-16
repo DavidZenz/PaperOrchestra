@@ -1,0 +1,46 @@
+{
+  "archive_sha256": "8053174fce61ded482a7907011983fb7c4b00a707469cd144373c4cf34422af9",
+  "commands": [
+    {
+      "command": [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "final_paper.tex"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "bibtex",
+        "final_paper"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "final_paper.tex"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "final_paper.tex"
+      ],
+      "returncode": 0
+    }
+  ],
+  "compiled_reference_entries": 18,
+  "pages": 7,
+  "model_calls": 0,
+  "success": true
+}

@@ -133,3 +133,10 @@ completed manifest did not yet exist; its log is retained separately as
 `reference-fix-replay-premature.log`. The completed-run replay passes. All
 interrupted diagnostics remain local and are explicitly not completed evidence;
 the final completed run and its replay are included in publication.
+
+The source-project ZIP was extracted to a fresh temporary directory and compiled
+with pdfLaTeX → BibTeX → pdfLaTeX → pdfLaTeX. All four commands returned0; the
+result has seven pages and18 bibliography entries, with zero model calls.
+[Source-project reproduction receipt](reference-fix-source-project-check.json).
+Implementation and full-run evidence were pushed in commit
+`c23ba3be07759427e869c8ad5abdca6060f2aa95`; remote main was independently checked.
