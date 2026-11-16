@@ -1,0 +1,267 @@
+{
+    "plotting_plan": [
+        {
+            "figure_id": "fig_intercept_error",
+            "title": "Measured Mean Squared Error at Three Intercept Corrections",
+            "plot_type": "plot",
+            "data_source": "experimental_log.md",
+            "objective": "Create a point chart using R/ggplot2 with exactly the recorded pairs (b, MSE) = (0, 9), (1.5, 2.25), and (3, 0). Label both axes and the three measured values. Do not add interpolated curves, unmeasured points, uncertainty intervals, or additional experiments. The plot establishes only the arithmetic error reduction on the same five observations used to determine the correction. Retain the editable .R source, vector PDF, and manuscript-compatible preview as separate reproducibility artifacts.",
+            "aspect_ratio": "3:2"
+        },
+        {
+            "figure_id": "fig_residual_workflow",
+            "title": "Residual-Based Intercept Correction on Five Observations",
+            "plot_type": "diagram",
+            "data_source": "idea.md",
+            "objective": "Create a LaTeX/TikZ schematic showing the supplied input x and target y, baseline prediction 2x, residual y-2x, mean residual b=3, corrected prediction 2x+b, and evaluation on the same five observations. Explicit arrows must show that observed targets and baseline predictions determine the residuals, which determine the scalar correction. Clearly identify the reuse of the five observations for correction and evaluation. Use mathematical labels and a compact layout readable within the supplied single-column article. The diagram explains computation and supplies no additional empirical evidence. Retain the editable .tex source, vector PDF, and manuscript-compatible preview.",
+            "aspect_ratio": "16:9"
+        }
+    ],
+    "intro_related_work_plan": {
+        "shared_constraints": {
+            "purpose": "Provide search instructions for a downstream literature agent, without conducting searches or asserting literature findings in this invocation.",
+            "research_cutoff": "2026-11",
+            "knowledge_boundary": "Use the supplied documents for all descriptions of this calculation. Literature may supply context and verified citations, but cannot supply additional experiments, novelty claims, application claims, or generalization evidence.",
+            "citation_separation": "Assign foundational and survey sources exclusively to Introduction and specialized technical sources exclusively to Related Work. Deduplicate the two source sets before writing. A source discovered in both searches must be assigned to one section only.",
+            "discovery_and_citation_policy": "Treat the requested literature counts as discovery targets, not manuscript citation quotas. Select only a small relevant subset for the approximately 700\u20131000-word teaching note. Report insufficient relevant literature instead of padding either collection. Cite only bibliography keys verified by the literature stage.",
+            "comparison_boundary": "The only supplied baseline is the fixed predictor 2x. The recorded correction settings are b=0, 1.5, and 3. Do not introduce external empirical competitors, benchmark rankings, or claims of superiority over published methods."
+        },
+        "introduction_strategy": {
+            "discovery_target": "10\u201320 macro-level candidate papers, subject to relevance and availability.",
+            "hook_hypothesis": "Foundational and survey literature may support the educational value of separating systematic prediction offsets, correction procedures, and evaluation protocols. Verify that context without asserting a real-world application or urgency unsupported by the supplied materials.",
+            "problem_gap_hypothesis": "The supplied fixed predictor 2x omits the constant offset in the five targets y=2x+3. The teaching problem is to explain the resulting residuals, their mean correction, and the limits of evaluating that correction on the same five observations. This is an exposition objective, not an established research gap or novel algorithm.",
+            "search_directions": [
+                "Find foundational papers or technical reports on systematic prediction offsets and additive intercept terms; examine whether they support the educational motivation for this finite example without implying an application evaluation.",
+                "Find surveys or reviews explaining residual analysis and additive prediction correction; reserve broad overviews for Introduction.",
+                "Identify 3\u20135 foundational papers or technical reports establishing residual-based estimation, intercept estimation with a fixed predictor, and the distinction between fitting observations and evaluating new observations.",
+                "Find broad methodological reviews documenting why evaluation on fitting observations has limited implications for predictive performance; use them only to contextualize the explicitly same-observation calculation."
+            ],
+            "writing_boundary": "Use verified macro-level context to motivate a transparent arithmetic demonstration. Do not claim that the five observations establish practical impact, statistical reliability, or performance beyond those observations.",
+            "citation_candidates": [
+                "Efron1986HowBiased",
+                "Arlot2010SurveyCrossvalidation",
+                "Geman1992NeuralNetworks",
+                "Shmueli2010ExplainOr",
+                "Hawkins2004ProblemOverfitting",
+                "Denby1987ExampleUse",
+                "Buja2009StatisticalInference",
+                "Friedman2001GreedyFunction",
+                "Hastie1986GeneralizedAdditive",
+                "Stone1974CrossvalidatoryChoice",
+                "Yarkoni2017ChoosingPrediction",
+                "Chatterjee1986InfluentialObservations",
+                "Efron2004EstimationPrediction",
+                "Cook1977DetectionInfluential",
+                "Lovell1963SeasonalAdjustment",
+                "Geisser1975PredictiveSample",
+                "Anscombe1963ExaminationAnalysis"
+            ]
+        },
+        "related_work_strategy": {
+            "discovery_target": "30\u201350 micro-level candidate papers across the two clusters, subject to relevance and availability.",
+            "overview": "Investigate the technical antecedents of residual-mean correction and deterministic error evaluation. These clusters provide conceptual comparisons rather than additional evaluated competitors. Include only papers published by 2026-11.",
+            "subsections": [
+                {
+                    "subsection_title": "2.1 Additive Correction of a Fixed Predictor",
+                    "methodology_cluster": "Fixed-slope intercept estimation and constant residual correction",
+                    "sota_investigation_mission": "Find specialized papers and technical reports on adding a scalar offset to an otherwise fixed predictor, including recent relevant work published by 2026-11. Identify their assumptions and estimation protocols for conceptual context. Do not propose additional methods to beat or imply that any external method was evaluated.",
+                    "limitation_hypothesis": "The supplied baseline has no added intercept and therefore leaves the constant residual 3 on every supplied observation. A scalar correction changes only this offset; the inputs provide no evidence about correcting other residual patterns or other observations.",
+                    "limitation_search_queries": [
+                        "\"fixed slope\" \"intercept estimation\" \"mean residual\"",
+                        "\"additive prediction correction\" \"constant residual\"",
+                        "\"intercept correction\" \"systematic offset\" \"limitations\""
+                    ],
+                    "bridge_to_our_method": "Explain that the supplied calculation obtains b=mean(y-2x)=3 and adds it to the fixed predictor. It exactly removes the observed constant residual on the five supplied points; it establishes no broader resolution of limitations reported elsewhere.",
+                    "citation_candidates": [
+                        "Miller1991ValidationTechniques",
+                        "Steyerberg2014TowardsBetter",
+                        "Nelder1972GeneralizedLinear",
+                        "Efron1983EstimatingError",
+                        "Copas1983RegressionPrediction",
+                        "Platt1999ProbabilisticOutputs",
+                        "Guo2017CalibrationModern",
+                        "Harrell1996MultivariablePrognostic",
+                        "Hahn1977FittingRegression",
+                        "Eisenhauer2003RegressionThrough",
+                        "Casella1983LeverageRegression",
+                        "Gordon1981ErrorsComputer",
+                        "Kvlseth1985CautionaryNote",
+                        "Glahn1972UseModel",
+                        "Maraun2016BiasCorrecting",
+                        "Kuleshov2018AccurateUncertainties",
+                        "Clements1996InterceptCorrections",
+                        "Riley2021MinimumSample",
+                        "Steyerberg2004ValidationUpdating"
+                    ]
+                },
+                {
+                    "subsection_title": "2.2 Error Summaries and Reuse of Fitting Observations",
+                    "methodology_cluster": "Deterministic residual metrics and same-observation evaluation",
+                    "sota_investigation_mission": "Find specialized technical sources on mean absolute error, mean squared error, and the interpretation of errors evaluated on observations used for estimation. Include relevant recent discussions only through 2026-11. Treat these as evaluation methodology sources, with no external benchmark or competing predictor added.",
+                    "limitation_hypothesis": "The correction is determined and evaluated on identical observations. Consequently, the recorded zero errors cannot establish held-out predictive performance. The deterministic log also supplies no basis for uncertainty estimates or statistical significance claims.",
+                    "limitation_search_queries": [
+                        "\"mean squared error\" \"training observations\" \"evaluation\"",
+                        "\"mean absolute error\" \"same observations\" \"estimation\"",
+                        "\"in-sample error\" \"intercept estimation\" \"prediction error\""
+                    ],
+                    "bridge_to_our_method": "The teaching note addresses interpretation through explicit protocol disclosure: show the complete observations, correction calculation, and recorded error table, and state that all numerical conclusions concern those same five points. The protocol does not resolve the absence of held-out evaluation.",
+                    "citation_candidates": [
+                        "Gneiting2011MakingEvaluating",
+                        "Willmott2005AdvantagesMean",
+                        "Chai2014RootMean",
+                        "Ye1998MeasuringCorrecting",
+                        "Berk2013ValidPostselection",
+                        "Varma2006BiasError",
+                        "Hodson2022RootmeansquareError",
+                        "Breiman1992SubmodelSelection",
+                        "Willmott1985StatisticsEvaluation"
+                    ]
+                }
+            ]
+        }
+    },
+    "section_plan": [
+        {
+            "section_title": "Abstract",
+            "latex_command": "\\begin{abstract} ... \\end{abstract}",
+            "word_target": 80,
+            "content_bullets": [
+                "Following idea.md and the supplied guidelines, identify the document as an anonymous synthetic teaching-note workflow demonstration.",
+                "Summarize the fixed predictor 2x, targets y=2x+3, and correction b=mean(y-2x)=3.",
+                "Report the experimental_log.md endpoints: mean absolute error changes from 3 to 0 and mean squared error from 9 to 0 on the same five observations.",
+                "State the finite evaluation scope and point to reproducible figures without claiming novelty or predictive generalization."
+            ],
+            "citation_hints": [
+                "research paper or technical report introducing 'mean absolute error'",
+                "research paper or technical report introducing 'mean squared error'"
+            ],
+            "sizing_and_formatting": {
+                "planned_body_words": 810,
+                "planned_caption_and_table_text_words": 110,
+                "planned_total_words": 920,
+                "guideline_basis": "The supplied guidelines request approximately 700\u20131000 words; no numeric page limit is supplied.",
+                "layout": "Preserve the supplied single-column 11-point article and one-inch margins. Include exactly two figures and one measured error table, with readable captions and no margin overflow.",
+                "anonymity": "Retain the anonymous template and introduce no identifying metadata."
+            }
+        },
+        {
+            "section_title": "Introduction",
+            "latex_command": "\\section{Introduction}",
+            "word_target": 115,
+            "content_bullets": [
+                "Use the macro-level literature strategy for brief, verified context about residual offsets and evaluation interpretation.",
+                "Ground the teaching objective in idea.md: expose the arithmetic of a missing constant offset using five fully specified observations.",
+                "Identify the concrete deliverables: the residual-mean calculation, the measured error table, the MSE plot, and the residual-flow diagram.",
+                "Keep motivation and claims within the supplied example; do not present a new algorithm, benchmark result, or demonstrated real-world application."
+            ],
+            "citation_hints": []
+        },
+        {
+            "section_title": "Related Work",
+            "latex_command": "\\section{Related Work}",
+            "word_target": 125,
+            "subsections": [
+                {
+                    "subsection_title": "2.1 Additive Correction of a Fixed Predictor",
+                    "latex_command": "\\subsection{Additive Correction of a Fixed Predictor}",
+                    "word_target": 60,
+                    "content_bullets": [
+                        "Use verified specialized sources from the first Related Work cluster to contextualize estimating a scalar correction while holding the predictor 2x fixed.",
+                        "Explain that the supplied example demonstrates arithmetic on known observations and makes no empirical comparison with external methods.",
+                        "Use only verified literature keys; do not invent a canonical external name or citation for the supplied predictor."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "2.2 Error Summaries and Evaluation Scope",
+                    "latex_command": "\\subsection{Error Summaries and Evaluation Scope}",
+                    "word_target": 65,
+                    "content_bullets": [
+                        "Use the second technical cluster to contextualize mean absolute error and mean squared error.",
+                        "Connect the literature discussion directly to experimental_log.md: all five observations determine and evaluate the correction.",
+                        "Keep specialized citations distinct from the foundational and survey sources assigned to Introduction."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Method",
+            "latex_command": "\\section{Method}",
+            "word_target": 190,
+            "subsections": [
+                {
+                    "subsection_title": "3.1 Finite Calculation and Error Definitions",
+                    "latex_command": "\\subsection{Finite Calculation and Error Definitions}",
+                    "word_target": 100,
+                    "content_bullets": [
+                        "Specify x=[-2,-1,0,1,2], targets y=2x+3, baseline predictions 2x, and corrected predictions 2x+b from idea.md and experimental_log.md.",
+                        "Define each observed residual as y-2x and compute the five residuals as [3,3,3,3,3].",
+                        "Define mean absolute error as the sum of the five absolute prediction residuals divided by 5, and mean squared error as the sum of their squares divided by 5.",
+                        "As a finite algebraic derivation, state that the corrected residual equals 3-b on each supplied observation. Distinguish this identity from additional measured correction settings.",
+                        "Do not introduce an optimizer, stochastic model, unprovided architecture, theoretical generalization theorem, or external dataset."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "3.2 Mean Residual Correction and Computational Flow",
+                    "latex_command": "\\subsection{Mean Residual Correction and Computational Flow}",
+                    "word_target": 90,
+                    "content_bullets": [
+                        "Compute b=mean(y-2x)=(3+3+3+3+3)/5=3 explicitly from the supplied observations.",
+                        "Substitute b=3 into 2x+b and verify equality with the five supplied targets.",
+                        "Place fig_residual_workflow here and use its caption to identify both the observed-residual dependency and reuse of observations for evaluation.",
+                        "State that the underlying calculation uses base R, as specified in idea.md. Keep the detailed figure source code in separate reproducibility artifacts."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Experiments",
+            "latex_command": "\\section{Experiments}",
+            "word_target": 235,
+            "subsections": [
+                {
+                    "subsection_title": "4.1 Observations and Evaluation Protocol",
+                    "latex_command": "\\subsection{Observations and Evaluation Protocol}",
+                    "word_target": 110,
+                    "content_bullets": [
+                        "Describe experimental_log.md as one deterministic calculation on the five synthetic observations, with targets [-1,1,3,5,7], baseline predictions [-4,-2,0,2,4], and corrected predictions [-1,1,3,5,7].",
+                        "State that the observations are supplied synthetic values rather than a named external dataset.",
+                        "Explain that the same observations determine b=3 and evaluate all recorded correction settings.",
+                        "List b=0, 1.5, and 3 as the three recorded settings without describing them as independent experiments or stochastic repetitions.",
+                        "Disclose the absence of held-out evaluation, timing measurements, optimizer training, and uncertainty estimates."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "4.2 Recorded Errors and Reproducible Figures",
+                    "latex_command": "\\subsection{Recorded Errors and Reproducible Figures}",
+                    "word_target": 125,
+                    "content_bullets": [
+                        "Include one measured error table copied from experimental_log.md with columns Added b, Mean absolute error, and Mean squared error, and rows (0,3,9), (1.5,1.5,2.25), and (3,0,0).",
+                        "Place fig_intercept_error alongside the result discussion. Its caption must identify exactly three recorded MSE values and evaluation on the same five observations.",
+                        "Explain that b=3 removes the constant residual on these observations and that the intermediate setting b=1.5 has recorded MSE 2.25.",
+                        "Require the downstream figure workflow to retain the R/ggplot2 plot source and LaTeX/TikZ diagram source, their vector PDFs, and manuscript-compatible previews. This outline invocation does not generate those files.",
+                        "State that native figure sources are separate reproducibility artifacts; do not add a manuscript appendix.",
+                        "Resolve every citation hint to verified bibliography keys before writing. If a canonical source cannot be verified, report that limitation without fabricating bibliographic metadata."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Conclusion",
+            "latex_command": "\\section{Conclusion}",
+            "word_target": 65,
+            "content_bullets": [
+                "Recap the supplied finite result: the mean residual correction b=3 makes 2x+b equal the targets on all five observations.",
+                "Connect the transparent calculation, measured error table, and two reproducible figures to the teaching-note objective.",
+                "Close with the explicit scope limit: correction and evaluation reuse the same five observations, so the note supplies no held-out performance or generalization result.",
+                "End the manuscript using the supplied bibliography structure. Add no appendix, acknowledgements, or identifying information."
+            ],
+            "citation_hints": []
+        }
+    ]
+}

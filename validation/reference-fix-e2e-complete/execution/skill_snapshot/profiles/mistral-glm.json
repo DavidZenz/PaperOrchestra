@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "name": "mistral-glm-2026-11-15",
+  "default": {
+    "backend": "mistral-vibe",
+    "model": "zai-glm-5-3-flash",
+    "effort": "high"
+  },
+  "groups": {
+    "discovery": {
+      "backend": "mistral-vibe",
+      "model": "mistral-large-4",
+      "effort": "high"
+    },
+    "figure_code": {
+      "backend": "mistral-vibe",
+      "model": "zai-glm-5-3",
+      "effort": "high"
+    }
+  },
+  "roles": {
+    "literature-synthesis": {
+      "backend": "mistral-vibe",
+      "model": "zai-glm-5-3",
+      "effort": "high"
+    },
+    "runtime-probe": {
+      "backend": "mistral-vibe",
+      "model": "zai-glm-5-3-flash",
+      "effort": "low"
+    }
+  }
+}

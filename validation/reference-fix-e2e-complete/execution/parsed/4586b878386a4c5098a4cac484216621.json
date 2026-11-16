@@ -1,0 +1,65 @@
+{
+  "section_name": "Intercept Correction and Systematic Offset Calibration",
+  "candidates": [
+    {
+      "title": "Intercept Corrections and Structural Change",
+      "year": 1996,
+      "reason": "Seminal econometric foundation analyzing the mechanics, assumptions, and limitations of adding scalar intercept corrections (add-factors) to fixed forecasting predictors to neutralize systematic residual offsets, detailing the trade-off between bias elimination and forecast variance."
+    },
+    {
+      "title": "Fitting Regression Models with No Intercept Term",
+      "year": 1977,
+      "reason": "Foundational methodology examining the consequences of omitting an intercept term from a linear predictor, demonstrating how zero-intercept constraints generate persistent non-zero mean residuals and systematic offset bias."
+    },
+    {
+      "title": "Regression through the Origin",
+      "year": 2003,
+      "reason": "Comprehensive pedagogical analysis of models forced through the origin, detailing the mathematical origin of non-zero residual sums, offset distortion, and evaluative pitfalls when constant terms are excluded."
+    },
+    {
+      "title": "Leverage and Regression through the Origin",
+      "year": 1983,
+      "reason": "Analyzes the statistical behavior, residual properties, and sensitivity of predictors lacking an intercept, providing conceptual context on how fixed slope-only lines fail to center residual errors."
+    },
+    {
+      "title": "Minimum sample size for external validation of a clinical prediction model with a continuous outcome",
+      "year": 2021,
+      "reason": "Directly addresses estimation protocols and sample size limitations for assessing continuous prediction models and calibration-in-the-large (mean systematic offset), proving the extreme statistical instability of estimating or evaluating intercept corrections on very small sample sizes."
+    },
+    {
+      "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+      "year": 2004,
+      "reason": "Formalizes the hierarchy of model updating, demonstrating that scalar intercept recalibration on fixed predictor scores adjusts baseline location shifts while highlighting the sample size constraints and limitations of in-sample recalibration."
+    },
+    {
+      "title": "Updating methods improved the performance of a clinical prediction model in new patients",
+      "year": 2008,
+      "reason": "Investigates the protocol of updating only the intercept (fixing the predictor weights as an offset) to correct systematic miscalibration, evaluating its benefits on systematic offset and its strict limitation in leaving slope and ranking unaltered."
+    },
+    {
+      "title": "A calibration hierarchy for risk models was defined: from intercept to overall calibration",
+      "year": 2016,
+      "reason": "Defines the statistical hierarchy of calibration levels, establishing 'mean calibration' (intercept calibration) as the primary scalar correction for systematic offset, and formalizing its structural limitation in not addressing slope or subgroup miscalibration."
+    },
+    {
+      "title": "Bias Correcting Climate Change Simulations - a Critical Review",
+      "year": 2016,
+      "reason": "Critically reviews simple additive (scalar offset) bias correction protocols on fixed model outputs, identifying their fundamental assumptions (constant mean shift) and limitations (inability to fix slope, higher-order moments, or structural misspecification)."
+    },
+    {
+      "title": "Calibration and bias correction of climate projections for crop modelling: an overview of empirical techniques",
+      "year": 2013,
+      "reason": "Evaluates additive scalar bias correction methods against observational baselines, highlighting that scalar adjustments correct only systematic mean errors while offering no corrective ability for model variability or unobserved sample distributions."
+    },
+    {
+      "title": "Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods",
+      "year": 1999,
+      "reason": "Introduced post-hoc scalar recalibration over fixed model scores, providing the conceptual bridge for fixing predictor representations while adjusting location (intercept) and scale to align predictions with targets."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Analyzes post-processing calibration methods that apply scalar and vector offsets to fixed model logits, highlighting the efficiency of low-parameter corrections and the danger of in-sample overfitting on small calibration sets."
+    }
+  ]
+}

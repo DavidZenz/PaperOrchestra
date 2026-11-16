@@ -126,7 +126,8 @@ def main(argv=None):
                       plot_backend=args.plot_backend, diagram_backend=args.diagram_backend,
                       rscript=args.rscript, render_timeout=args.render_timeout,
                       manuscript_provenance=args.use_plotting,
-                      model_profile=model_profile, role_models=role_models, backend=args.backend, effort=args.effort)
+                      model_profile=model_profile, role_models=role_models, backend=args.backend, effort=args.effort,
+                      bibliography_required=True)
     os.environ.setdefault("MPLCONFIGDIR", str(output / "execution" / "matplotlib-cache"))
     os.environ.setdefault("XDG_CACHE_HOME", str(output / "execution" / "cache"))
     configure(runtime)
@@ -136,6 +137,7 @@ def main(argv=None):
                 "model": args.model or ("per-role native policy; see model_policy" if model_policy.snapshot()["schema_version"] == 2
                                         else configured_default("codex")), "model_map": model_map,
                 "image_command": image_command, "status": "running"}
+    manifest["bibliography_required"] = True
     manifest["model_policy"] = model_policy.snapshot()
     manifest["worker_backends"] = sorted({item.get("backend", "codex") for item in model_policy.plan()})
     if args.model_profile:
@@ -193,6 +195,13 @@ def main(argv=None):
                                + (f"; {len(runtime.pending_search)} discovery tasks lack completed search evidence" if runtime.pending_search else ""))
         if not success or not (output / "final_paper.pdf").is_file():
             raise RuntimeError("Authors' controller exhausted its three paper attempts")
+        from orchestra_bibliography import validate_library, validate_manuscript
+        manifest["bibliography_audit"] = {
+            "library": validate_library(output / "literature_agent_output"),
+            "manuscript": validate_manuscript(output / "content_refinement_workdir",
+                "final_refined_paper", output / "literature_agent_output" / "citation_map.json")}
+        if (output / "final_paper.pdf").read_bytes() != (output / "content_refinement_workdir/final_refined_paper.pdf").read_bytes():
+            raise RuntimeError("Published PDF differs from bibliography-audited final manuscript")
         manifest["final_skill_bundle"] = bundle_manifest(SKILL)
         manifest["skill_unchanged"] = manifest["final_skill_bundle"] == manifest["skill_bundle"]
         if not manifest["skill_unchanged"]:

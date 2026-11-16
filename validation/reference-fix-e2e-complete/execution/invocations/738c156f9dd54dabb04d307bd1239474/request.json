@@ -1,0 +1,34 @@
+{
+  "invocation": "738c156f9dd54dabb04d307bd1239474",
+  "call": "f35c3d1d92a8400eacd4dbe7af5ee0b0",
+  "role": "figure-critic",
+  "callsite": [
+    "paper_banana_utils.py:critique_and_revise_figure:618",
+    "plotting_agent.py:process_single_figure:127",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_residual_workflow",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gemini-3.8-flash",
+  "config": {},
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "antigravity",
+  "transport_plan_sha256": "d11dc3ecd289b3c865ad3a1c5c235375cdb2adac8ff4d6f7385b83450e6ea081",
+  "prompt_sha256": "e9e046f7eae42d68627fc410cdbda7ba13c29789cc8a2f0aaf175a1be95b7a60",
+  "model_routing": {
+    "model": "gemini-3.8-flash",
+    "routing_role": "figure-critic",
+    "group": "figure_review",
+    "selected_by": "profile group: figure_review",
+    "backend": "antigravity",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "profile group: figure_review",
+      "model": "profile group: figure_review",
+      "effort": "profile group: figure_review"
+    }
+  }
+}

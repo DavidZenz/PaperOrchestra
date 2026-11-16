@@ -88,3 +88,26 @@ These are preserved instructions, not added recommendations:
 8. **Literal source quirks.** Some upstream Python prompt literals contain invalid escape-sequence warnings or interpreted escape characters. Source bytes are retained rather than silently cleaned up. Prompt repairs would need separate disclosure because they can change what the model receives.
 
 If future scientific or domain changes are made, append a distinct entry with source prompt/location, original requirement, replacement, rationale, affected output/acceptance semantics, and validation. Do not mix that entry with model identity, dependency fixes or PDF transport. An execution trace proves dispatch and artifact flow; it does not establish manuscript correctness or scientific validity by itself.
+
+
+## A005 — required bibliography (16 November 2026)
+
+The user explicitly requires failure when the bibliography is empty. All
+supported paper runs must retain a nonempty verified reference library, actual
+citations using permitted keys and a resolved reference list visible in the PDF.
+This is an output-readiness adaptation; copied domain prompts, review rubric,
+score aggregation and scientific claims are unchanged. No citations are inserted
+by a deterministic repair or invented by a fallback agent. R027's additional
+metadata providers are a separate execution-environment substitution. R028
+rejects bibliography-invalid candidates through the original compile-failure
+path and checks the final accepted manuscript before declaring completion.
+
+
+## A006 — literal metadata escaping
+
+The BibTeX adapter escapes unescaped literal `&`, `%`, `#` and `_` in generated
+metadata field lines (title, authors, venue, volume, pages). The upstream key
+collision mutations and raw verified citation map are retained. This is a
+serialization correction for provider-deposited text, not a replacement title,
+new scientific guidance or a change to citation selection. Unsupported TeX
+metadata still fails compilation/readiness; no invented replacement is inserted.

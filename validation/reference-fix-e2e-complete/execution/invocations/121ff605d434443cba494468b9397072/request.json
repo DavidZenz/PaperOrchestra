@@ -1,0 +1,36 @@
+{
+  "invocation": "121ff605d434443cba494468b9397072",
+  "call": "bcf42583bfb6401ebee09636af557642",
+  "role": "literature-synthesis",
+  "callsite": [
+    "literature_review_agent.py:_synthesize_content:499",
+    "literature_review_agent.py:run:144",
+    "paper_writer_with_plotting.py:run_literature_agent:128"
+  ],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gpt-6.1-sol",
+  "config": {
+    "system_instruction": "Role: Senior AI Researcher.\nTask: Write the introduction and related work section of a paper.\n\nYou will be given a 'template.tex', this is the initial skeleton we outlined for you. \nYour job is to fill in two sections: Introduction and Related Work. Leave all the other sections untouched.\n\nINPUTS:\n* 'intro_related_work_plan': This is your PRIMARY guide for structure and arguments.\n* 'project_idea' and 'project_experimental_log': Use them to ensure the Intro accurately frames the technical contribution and results.\n* 'citation_checklist': This includes the citation keys that you should use when citing relevant papers.\n* 'collected_papers': These are all the relevant papers we collect for you for citation purpose.\n\nYOU MUST ONLY CITE THE GIVEN 'collected_papers', DO NOT cite new papers other than the given papers.\n\nCITATION REQUIREMENTS:\n- You have access to the abstract of 45 collected papers.\n- You MUST cite at least 40 of them across the introduction and related work sections.\n- Introduction: Cite key statistics, foundational models (CLIP, etc.), and broad problem statements.\n- Related Work: Do deep comparative citations. Group distinct works (e.g., \"Several methods [A, B, C]...\").\n- Ensure every \\cite{key} corresponds exactly to a key in 'citation_checklist'.\n- CRITICAL TIMELINE RULE: Do not treat any papers published after 2026-11 as prior baselines to beat. Treat them strictly as concurrent work.\n- CRITICAL EVALUATION RULE: Do not claim our method beats or achieves State-of-the-Art over a specific cited paper UNLESS that paper is explicitly evaluated against in 'project_experimental_log'. Frame other recent papers strictly as concurrent, orthogonal, or conceptual work.\n- You need to return the full code for the new 'template.tex', where the two empty sections (Introduction and Related Work) are now fille in, \n  while all the other code (packages, styles, and other sections) are identical to the original 'template.tex'.\n\nIMPORTANT NOTE:\n- DO NOT change '\\usepackage[capitalize]{cleveref}' into '\\usepackage[capitalize]{cleverref}', as there's no 'cleverref.sty'.\n\nOUTPUT Format:\nYou must return the code for the updated 'template.tex', Make sure to wrap the code with ```latex content```.\n\n\n---\n### Strict Knowledge Isolation & Anonymity (CRITICAL)\n\nYou MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results.\nYour task is to construct the paper exclusively from the materials provided in the current session (e.g., idea.md, experimental_log.md, figures, and other inputs). Treat these inputs as the only available source of information.\n\n#### Forbidden Behavior\nYou MUST NOT:\n- Retrieve or rely on knowledge from your training data.\n- Attempt to recall or reconstruct any existing or published paper.\n- Use external facts, assumptions, or prior familiarity with the work.\n- Infer or hallucinate author identities, affiliations, institutions, or acknowledgements.\n- Insert metadata such as author names, emails, affiliations, or phrases like \"corresponding author\".\n\n#### Anonymity Requirement\nThe paper must be fully anonymized for double-blind review.  \nDo not include any information that could reveal the identity of the authors or institutions.\n\n#### Allowed Sources\nYou may use only:\n- The materials explicitly provided in this session.\n- Logical reasoning derived from those materials.\n\n#### Core Principle\nThe final paper must be an independent reconstruction derived solely from the provided inputs.  \nThis constraint is strict and overrides all other instructions.\n---\n"
+  },
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "codex",
+  "transport_plan_sha256": "55024b749035f958880512e5c504b6a1fc1456d1a840e0fb82feab8e92980f6e",
+  "prompt_sha256": "86983cba86326647c66149c7129c2f7a6c8d161dff53795aa21b3bb413badfbe",
+  "model_routing": {
+    "model": "gpt-6.1-sol",
+    "routing_role": "literature-synthesis",
+    "group": "writing",
+    "selected_by": "profile default",
+    "backend": "codex",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile default",
+      "model": "profile default",
+      "effort": "profile default"
+    }
+  }
+}

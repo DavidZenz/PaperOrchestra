@@ -1,0 +1,67 @@
+```json
+{
+  "section_name": "Additive Prediction Correction and Constant Residual Analysis",
+  "candidates": [
+    {
+      "title": "Fitting Regression Models with No Intercept Term",
+      "year": 1977,
+      "reason": "Analyzes the foundational statistical consequences of omitting an intercept term in linear models, establishing that the residual sum and mean do not equal zero when a true non-zero offset exists, leading to systematic constant bias in predictions."
+    },
+    {
+      "title": "Regression through the Origin",
+      "year": 2003,
+      "reason": "Presents a clear pedagogical derivation of the mechanics of no-intercept models, illustrating how forcing predictions through zero creates persistent residual offsets and distorts conventional goodness-of-fit metrics."
+    },
+    {
+      "title": "Leverage and Regression Through the Origin",
+      "year": 1983,
+      "reason": "Examines the geometric and structural leverage imposed on a predictor when an intercept is omitted, providing key context for understanding how an unmodeled scalar offset influences residual behavior across data points."
+    },
+    {
+      "title": "Errors in Computer Packages. Least Squares Regression Through the Origin",
+      "year": 1981,
+      "reason": "Demonstrates how omitting a constant term disrupts the standard zero-mean residual assumption, causing miscalculated sums of squares and misleading diagnostic statistics in software evaluations."
+    },
+    {
+      "title": "Cautionary Note about R2",
+      "year": 1985,
+      "reason": "Examines the severe pitfalls and invalid interpretations of the coefficient of determination when applied to models that omit an intercept or leave uncorrected constant residual offsets."
+    },
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Formalizes the principle of additive prediction correction, proving that the optimal initial base predictor under squared error loss is a constant scalar offset matching the sample mean residual before any functional adjustments are added."
+    },
+    {
+      "title": "Generalized Additive Models",
+      "year": 1986,
+      "reason": "Establishes the additive modeling framework wherein predictors are refined iteratively via residual estimation, centered on an explicit global intercept offset."
+    },
+    {
+      "title": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+      "year": 1972,
+      "reason": "Introduces the classic methodology of post-processing fixed physical model outputs with an additive linear regression correction to remove systematic mean residual bias."
+    },
+    {
+      "title": "Bias Correcting Climate Change Simulations - A Critical Review",
+      "year": 2016,
+      "reason": "Provides a comprehensive critical review of additive mean offset corrections applied to fixed model predictions, evaluating underlying assumptions, estimation protocols, and the risks of assuming correction validity outside observed conditions."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Analyzes the phenomenon of in-sample optimism, explaining why evaluating a fitted adjustment—such as an estimated mean offset correction—on the exact training observations from which it was derived yields an unrealistically optimistic assessment."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Formulates foundational principles of out-of-sample assessment, clarifying the statistical limits of testing an additive correction on the same small sample used for estimation."
+    },
+    {
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year": 2018,
+      "reason": "Investigates post-hoc recalibration protocols for fixed continuous predictors to align systematic residual misalignments and global offsets without retraining the base model."
+    }
+  ]
+}
+```

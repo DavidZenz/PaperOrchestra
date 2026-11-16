@@ -1,0 +1,27 @@
+{
+  "backend": "codex",
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--json",
+    "--color",
+    "never",
+    "--cd",
+    "/Users/davidzenz/PaperOrchestra/validation/reference-fix-e2e-complete/execution/invocations/4e13d44577b14699ae2ec65c7f1986a3",
+    "-o",
+    "/Users/davidzenz/PaperOrchestra/validation/reference-fix-e2e-complete/execution/invocations/4e13d44577b14699ae2ec65c7f1986a3/response.txt",
+    "-c",
+    "web_search=\"disabled\"",
+    "--model",
+    "gpt-6-luna",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\nReply exactly PAPER_ORCHESTRA_RUNTIME_OK. Use no tools.",
+  "env": {}
+}

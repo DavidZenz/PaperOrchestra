@@ -1,0 +1,18 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Identify the SPECIFIC academic paper described by this hint: "research paper or technical report introducing 'mean squared error'".
+            
+            CONTEXT: Must-have citation for section covering: Specify x=[-2,-1,0,1,2], targets y=2x+3, baseline predictions 2x, and corrected predictions 2x+b from idea.md and experimental_log.md. Define each observed residual as y-2x and compute the five residuals as [3,3,3,3,3]. Define mean absolute error as the sum of the five absolute prediction residuals divided by 5, and mean squared error as the sum of their squares divided by 5. As a finite algebraic derivation, state that the corrected residual equals 3-b on each supplied observation. Distinguish this identity from additional measured correction settings. Do not introduce an optimizer, stochastic model, unprovided architecture, theoretical generalization theorem, or external dataset.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find the EXACT title and year of this paper.
+            2. If the hint refers to a dataset, model architecture, or baseline (e.g., "research paper introducing..."), you MUST find the primary, original paper that introduced it.
+            3. Return EXACTLY 1 candidate paper that matches best.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

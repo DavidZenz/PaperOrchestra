@@ -1,0 +1,43 @@
+```r
+library(ggplot2)
+
+df <- data.frame(
+  b   = c(0, 1.5, 3),
+  mse = c(9, 2.25, 0)
+)
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_vline(xintercept = df$b, colour = "#E3E3E3",
+             linewidth = 0.3, linetype = "dashed") +
+  geom_point(shape = 21, size = 4, fill = "#1F4E79",
+             colour = "#FFFFFF", stroke = 0.6) +
+  geom_text(aes(label = paste0("MSE = ", format(mse, drop0trailing = TRUE))),
+            vjust = -1.1, hjust = 0.5, size = 3.5, colour = "#1F4E79") +
+  scale_x_continuous(limits = c(-0.25, 3.25),
+                     breaks = c(0, 1.5, 3),
+                     labels = c("0", "1.5", "3")) +
+  scale_y_continuous(limits = c(-0.5, 10), breaks = seq(0, 10, by = 2)) +
+  labs(
+    title = "Measured Mean Squared Error at Three Intercept Corrections",
+    x     = "Added intercept correction b",
+    y     = "Mean squared error (MSE)"
+  ) +
+  theme_minimal(base_family = "sans") +
+  theme(
+    plot.background    = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.background   = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.y = element_line(colour = "#E3E3E3", linewidth = 0.4),
+    axis.line          = element_line(colour = "#444444", linewidth = 0.5),
+    axis.ticks         = element_line(colour = "#444444"),
+    axis.ticks.length  = unit(3, "pt"),
+    plot.title         = element_text(size = 14, face = "bold", colour = "#1A1A1A"),
+    axis.title         = element_text(size = 12, colour = "#333333"),
+    axis.text          = element_text(size = 10, colour = "#444444"),
+    legend.position    = "none",
+    plot.margin        = margin(10, 10, 10, 10, "pt")
+  )
+
+p
+```

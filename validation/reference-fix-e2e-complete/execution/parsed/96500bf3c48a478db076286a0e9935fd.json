@@ -1,0 +1,70 @@
+{
+  "section_name": "In-Sample Error, Intercept Estimation, and Prediction Error Evaluation",
+  "candidates": [
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Seminal paper demonstrating that evaluating prediction error on the exact observations used for model fitting creates severe downward bias ('optimism'), establishing mathematical foundations for why in-sample errors cannot measure generalization."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Unifies covariance penalty methods and cross-validation, explaining why in-sample apparent error systematically underestimates out-of-sample risk and quantifying the optimism adjustment required for predictive assessment."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Establishes non-parametric bootstrap and cross-validation corrections to quantify the optimism gap between training error and true prediction error."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Foundational work introducing sample reuse and cross-validation to assess statistical predictors independently of the data used for parameter estimation."
+    },
+    {
+      "title": "Some Comments on CP",
+      "year": 1973,
+      "reason": "Derives the classic penalization of the in-sample residual sum of squares, showing that apparent residual error understates total predictive error by a factor proportional to fitted parameters."
+    },
+    {
+      "title": "Making and Evaluating Point Forecasts",
+      "year": 2011,
+      "reason": "Provides the definitive decision-theoretic treatment of point forecasting metrics, proving that squared error (MSE) elicits the mean while absolute error (MAE) elicits the median, directly illuminating residual offset corrections under different error loss functions."
+    },
+    {
+      "title": "Advantages of the Mean Absolute Error (MAE) over the Root Mean Square Error (RMSE) in Assessing Average Model Performance",
+      "year": 2005,
+      "reason": "Influential analysis of model evaluation metrics comparing MAE and RMSE, focusing on the interpretation of residual errors when evaluating model performance on observed data."
+    },
+    {
+      "title": "Root mean square error (RMSE) or mean absolute error (MAE)? \u2013 Arguments against avoiding RMSE in the literature",
+      "year": 2014,
+      "reason": "Investigates the statistical behavior of MAE versus RMSE across Gaussian and non-Gaussian error assumptions, clarifying the diagnostic properties of both metrics on sample residuals."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Formulates Generalized Degrees of Freedom (GDF) to show how data-driven parameter and offset adjustments reduce in-sample error while inflating optimism, necessitating corrections to residual variance."
+    },
+    {
+      "title": "Valid Post-Selection Inference",
+      "year": 2013,
+      "reason": "Shows why standard hypothesis tests, confidence intervals, and uncertainty estimates fail when calculated on the same observations used to identify or fit model corrections."
+    },
+    {
+      "title": "From Fixed-X to Random-X Regression: Bias-Variance Decompositions, Covariance Penalties, and Prediction Error Estimation",
+      "year": 2020,
+      "reason": "Decomposes prediction error and covariance penalties to contrast in-sample fixed-observation evaluation against genuine out-of-sample prediction error."
+    },
+    {
+      "title": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year": 2006,
+      "reason": "Details how using identical data to tune or adjust predictors and subsequently report prediction accuracy introduces severe optimistic bias."
+    },
+    {
+      "title": "Another Look at Measures of Forecast Accuracy",
+      "year": 2006,
+      "reason": "Surveys forecast accuracy metrics, comparing absolute error, squared error, and scale-independent metrics, discussing their behavior when errors approach zero."
+    }
+  ]
+}

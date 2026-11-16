@@ -1,0 +1,75 @@
+{
+  "section_name": "Evaluation Methodology: Error Metrics and In-Sample Resubstitution Limits",
+  "candidates": [
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Establishes the fundamental optimism theorem showing that evaluating prediction errors on the identical observations used for estimation produces a downwardly biased apparent error, formalizing the covariance penalty required to reflect out-of-sample error."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Analyzes the statistical discrepancy between apparent training error and generalization error, demonstrating why in-sample resubstitution yields an overly optimistic evaluation and proposing resampling principles to estimate true performance."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Provides a comprehensive mathematical framework connecting in-sample mean squared error, degrees of freedom, and expected out-of-sample prediction error through covariance penalties."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Foundational methodology paper establishing that assessing predictors on observations used in their estimation yields invalid evaluations, formalizing sample-reuse and hold-out evaluation principles."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Demonstrates why training sample resubstitution error cannot validate predictive performance and develops predictive sample-reuse methodology to assess accuracy on genuinely held-out observations."
+    },
+    {
+      "title": "Advantages of the Mean Absolute Error (MAE) Over the Root Mean Square Error (RMSE) in Assessing Average Model Performance",
+      "year": 2005,
+      "reason": "Examines the methodological distinction between MAE and RMSE/MSE, demonstrating that squared error criteria confound average error magnitude with residual dispersion and sample size."
+    },
+    {
+      "title": "Root Mean Square Error (RMSE) or Mean Absolute Error (MAE)? \u2013 Arguments Against Avoiding RMSE in the Literature",
+      "year": 2014,
+      "reason": "Analyzes the statistical and distributional assumptions underlying MSE/RMSE versus MAE, detailing how squared error metrics correspond directly to Gaussian error assumptions whereas absolute errors assume Laplacian error distributions."
+    },
+    {
+      "title": "Root-mean-square error (RMSE) or mean absolute error (MAE): when to use them or not",
+      "year": 2022,
+      "reason": "Synthesizes the methodological debate surrounding MAE and RMSE/MSE, demonstrating how the choice of evaluation metric reflects specific assumptions about residual distributions and error penalties."
+    },
+    {
+      "title": "Error Measures For Generalizing About Forecasting Methods: Empirical Comparisons",
+      "year": 1992,
+      "reason": "Empirically evaluates the validity, outlier sensitivity, and reliability of mean squared error, mean absolute error, and relative measures when assessing predictive performance."
+    },
+    {
+      "title": "Another Look at Measures of Forecast Accuracy",
+      "year": 2006,
+      "reason": "Critiques foundational accuracy metrics, outlining the mathematical limitations, degeneracy issues, and statistical properties of standard squared and absolute error metrics in predictive evaluation."
+    },
+    {
+      "title": "Some Comments on Cp",
+      "year": 1973,
+      "reason": "Demonstrates how fitting parameters to training observations mechanically reduces the in-sample residual sum of squares, formulating the Cp statistic to penalize training-set optimism."
+    },
+    {
+      "title": "Submodel Selection and Evaluation in Regression. The X-Random Case",
+      "year": 1992,
+      "reason": "Investigates the breakdown between in-sample goodness-of-fit metrics and true predictive error, proving that in-sample error evaluations severely underestimate prediction risk."
+    },
+    {
+      "title": "Statistics for the Evaluation and Comparison of Models",
+      "year": 1985,
+      "reason": "Presents rigorous difference-measure methodology (MAE, RMSE, residual decomposition) and clarifies the limitations of drawing inferential or uncertainty claims from deterministic in-sample fits."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Formalizes generalized degrees of freedom to quantify the optimism induced when fitted corrections adapt to training observations, directly linking parameter fitting to apparent residual reduction."
+    }
+  ]
+}

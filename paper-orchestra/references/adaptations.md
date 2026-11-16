@@ -19,7 +19,7 @@ bundle and exercise the parallel plotting branch.
 | R001 | Gemini/OpenAI SDK inference requests | Fresh `codex exec --ephemeral --sandbox read-only` subprocess and independent session per model attempt | Actual separate agents; no resume/fork or shared conversation. Controller threads and joins are unchanged. CLI event logs and PID/session IDs prove execution. |
 | R002 | Distinct upstream writer/reflection/discovery/image model names | Upstream names remain in controller and request metadata; text calls use Codex's configured model by default; optional explicit `--model` or `--model-map-json` | Model family, model weights and sampling behavior differ. This is workflow conformance, not replication of authors' numerical paper-quality results. No model is silently asserted to be Gemini. |
 | R003 | `system_instruction` provider role; some outline/figure prompts already first text part | Labeled upstream system instruction inside the independent agent's task; original text parts kept in order | Codex host/developer/user instructions remain higher priority. Provider instruction hierarchy cannot be reproduced exactly by a CLI prompt. Wrapper adds per-invocation execution, input isolation, output-format and search-use instructions; R022 separately adds the user-approved selected-source provenance context for manuscript workers. |
-| R004 | Provider Google Search grounding tool | Codex live `web_search` enabled only for discovery; completed native web-search or connected `codex_apps/search_service.web_run` tool event required | Search provider, ranking, citation metadata and tool semantics differ. No substitute internal-memory answer or text mention of a tool is accepted as tool execution. Semantic Scholar enrichment, title matching, dates, missing-abstract rejection, rates and no-retry behavior remain exact upstream. |
+| R004 | Provider Google Search grounding tool | Codex live `web_search` enabled only for discovery; completed native web-search or connected `codex_apps/search_service.web_run` tool event required | Search provider, ranking, citation metadata and tool semantics differ. No substitute internal-memory answer or text mention of a tool is accepted as tool execution. Title matching, dates and missing-abstract rejection are preserved; R027 now adapts metadata providers and bounded HTTP retries. |
 | R005 | Gemini temperature, response modalities, candidate settings | Original configs recorded; CLI has no equivalent supported temperature control | Temperature 0.1/0.4/0.75 etc. are provenance, not enforced sampling promises. Text response parsers and all original Gemini retry function bodies are copied exactly. |
 | R006 | PDF byte input to Gemini; OpenAI path extracts text | Original PDF retained, text from every page added, every page rasterized at 1.5x and sent as `--image` | Input representation changes, no intentional page/text truncation. Raster figure inputs and upstream 2×2 formatting screenshot grids remain original. Tests check all pages and text reach child arguments. |
 | R007 | Gemini image generation API | Earlier implementation exposed an optional external image executable | Superseded in the supported generated-figure entrypoint by user-approved TikZ rendering (R018). The historical low-level image transport remains for source compatibility/tests; no real image-model validation is claimed or required for the code-based mode. |
@@ -142,7 +142,7 @@ is retained, and no permission was broadened to turn it into a success. Base GLM
 remains available for text-only synthesis and R/TikZ code; Flash handles images.
 
 Stage/PDF/HTTP observer wrappers preserve their underlying return values and
-scientific control decisions. The separate R022 manuscript adapter changes
+scientific control decisions except the explicit bibliography readiness gate R028. The separate R022 manuscript adapter changes
 effective LaTeX payloads before the controller consumes them, with original and
 effective results retained. The full controller,
 reviewer ensemble and numeric aggregation execute the pinned source, not a second
@@ -218,3 +218,38 @@ Validation fixtures use explicitly mocked model/tool responses to reach branch,
 retry, stopping and aggregation cases deterministically. They are never presented
 as real scientific experiments or real model calls. The separate real run retains
 its own manifest, raw Codex session events and complete output tree.
+
+## Reference retrieval and bibliography readiness (16 November 2026)
+
+**R027 — metadata retrieval substitution.** Original Semantic Scholar title search
+can silently discard every candidate after HTTP 429. The adapter retains S2 as
+primary and adds bounded HTTP retries, a run-scoped rate-limit circuit breaker
+and query cache. Crossref deposited metadata/abstracts, then OpenAlex metadata
+and reconstructed deposited abstracts, are explicit fallbacks. The original
+three-result title scoring (>70 with +10 matching year), cutoff and nonempty
+abstract checks remain. Crossref year/month precision is retained as YYYY-MM;
+known months must precede the cutoff month, without inventing a day.
+No model fabricates missing metadata or abstracts.
+A006 separately records literal metadata escaping for BibTeX serialization.
+Raw provider JSON, selection/rejection reasons and hashes are retained under
+`execution/reference_retrieval/`. Provider coverage and rankings differ from S2;
+this can change collected papers, citation keys and manuscript content. Optional
+`OPENALEX_API_KEY` is read from the environment; it is never logged. Original
+agent retries, discovery pools, joins and review/revision limits are unchanged.
+
+**R028 — fail on empty or unresolved bibliography.** Upstream allows a zero-paper
+library and accepts a PDF despite BibTeX errors. The supported driver now requires
+a nonempty matching bibliography/citation map before section writing. Every
+compiled candidate must have approved cited keys, resolved aux/bibitem records,
+no citation/BibTeX errors and visible cited-reference metadata in its PDF. An
+invalid revision is treated as a compilation failure in the original controller;
+there are no added revision attempts. Final completion independently rechecks
+the accepted candidate and its exact final-source/PDF copies. Failure prevents
+`completed` status. A005 records the separately authorized output requirement.
+This deliberately changes upstream failure/acceptance eligibility, not its
+numeric aggregation or revision/stopping algorithm.
+
+Provider interfaces: [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api),
+[OpenAlex API authentication](https://help.openalex.org/api/authentication/).
+Availability/rate limits depend on the service/account; a provider failure cannot
+be replaced with invented metadata, and an empty library fails readiness.

@@ -1,0 +1,75 @@
+{
+  "section_name": "Offset Estimation, Residual Recalibration, and In-Sample Evaluation",
+  "candidates": [
+    {
+      "title": "A calibration hierarchy for risk models was defined: from utopia to empirical data",
+      "year": 2016,
+      "reason": "Formalizes the hierarchy of model calibration, establishing 'calibration-in-the-large' (mean calibration) as estimating only an intercept offset while fixing the predictor slope to 1, and demonstrates why zeroing the mean residual does not imply observation-level correctness."
+    },
+    {
+      "title": "Updating methods improved the performance of a clinical prediction model in new patients",
+      "year": 2008,
+      "reason": "Compares model recalibration protocols, specifically analyzing the estimation of an intercept adjustment term on an existing fixed linear predictor and the statistical properties of offset-only updating."
+    },
+    {
+      "title": "Validation techniques for logistic regression models",
+      "year": 1991,
+      "reason": "Introduces systematic regression calibration metrics (intercept and slope), formalizing the procedure of holding predictor coefficients fixed while estimating a scalar intercept to correct systematic mean residual displacement."
+    },
+    {
+      "title": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+      "year": 2014,
+      "reason": "Presents the 'ABCD' model evaluation framework where step 'A' evaluates calibration-in-the-large via intercept-only re-estimation with unit slope, clarifying the explicit assumptions and limits of scalar offset corrections."
+    },
+    {
+      "title": "Two further applications of a model for binary regression",
+      "year": 1958,
+      "reason": "Foundational work by D. R. Cox establishing the regression protocol for holding slope coefficients fixed as an offset while estimating a scalar intercept parameter."
+    },
+    {
+      "title": "Generalized Linear Models",
+      "year": 1989,
+      "reason": "Definitive text by McCullagh and Nelder defining the mathematical formulation of known offsets (fixed slope with unit coefficient) in linear models, where estimating the intercept reduces to the sample mean of the unmodeled residuals."
+    },
+    {
+      "title": "Generalized Linear Models",
+      "year": 1972,
+      "reason": "Seminal paper formalizing link functions and systematic components in regression, outlining how fixed predictors with known slopes isolate estimation exclusively to the intercept parameter."
+    },
+    {
+      "title": "Estimating the error rate of a prediction rule: improvement on cross-validation",
+      "year": 1983,
+      "reason": "Analyzes the statistical phenomenon of optimism and apparent error, demonstrating why evaluating an estimated correction (such as a fitted intercept) on the identical observations used to compute it produces artificially deflated residuals."
+    },
+    {
+      "title": "The estimation of prediction error: covariance penalties and optimism",
+      "year": 2004,
+      "reason": "Provides theoretical derivations of covariance penalties and degrees of freedom in residual calculation, explaining the fundamental limits of evaluating parameter corrections on the derivation sample."
+    },
+    {
+      "title": "Graphs in Statistical Analysis",
+      "year": 1973,
+      "reason": "Demonstrates through Anscombe's quartet that aggregate summary statistics and zero mean residuals can obscure identical or non-generalizable residual patterns, underscoring the necessity of examining individual observation errors."
+    },
+    {
+      "title": "Regression, prediction and shrinkage",
+      "year": 1983,
+      "reason": "Examines predictor shrinkage and the contrast between fitting models and assessing predictive accuracy, addressing the statistical mechanics of fixing regression parameters and testing on small sample sizes."
+    },
+    {
+      "title": "Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods",
+      "year": 1999,
+      "reason": "Develops scalar post-processing recalibration (Platt scaling) over a fixed uncalibrated score, detailing the assumptions under which a scalar intercept shift resolves systematic baseline misalignment."
+    },
+    {
+      "title": "On calibration of modern neural networks",
+      "year": 2017,
+      "reason": "Analyzes modern post-hoc calibration procedures that apply scalar affine adjustments to fixed predictors, discussing the limitations of evaluating scalar calibration updates strictly within derivation cohorts."
+    },
+    {
+      "title": "Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors",
+      "year": 1996,
+      "reason": "Provides a comprehensive guide to regression validation protocols, detailing the pitfalls of re-evaluating intercept-adjusted models on derivation samples and outlining protocols for assessing residual fit."
+    }
+  ]
+}

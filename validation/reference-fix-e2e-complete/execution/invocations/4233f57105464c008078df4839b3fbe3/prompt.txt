@@ -1,0 +1,18 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Identify the SPECIFIC academic paper described by this hint: "research paper or technical report introducing 'R'".
+            
+            CONTEXT: Must-have citation for section covering: Describe experimental_log.md as one deterministic calculation on the five synthetic observations, with targets [-1,1,3,5,7], baseline predictions [-4,-2,0,2,4], and corrected predictions [-1,1,3,5,7]. State that the observations are supplied synthetic values rather than a named external dataset. Explain that the same observations determine b=3 and evaluate all recorded correction settings. List b=0, 1.5, and 3 as the three recorded settings without describing them as independent experiments or stochastic repetitions. Disclose the absence of held-out evaluation, timing measurements, optimizer training, and uncertainty estimates.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find the EXACT title and year of this paper.
+            2. If the hint refers to a dataset, model architecture, or baseline (e.g., "research paper introducing..."), you MUST find the primary, original paper that introduced it.
+            3. Return EXACTLY 1 candidate paper that matches best.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

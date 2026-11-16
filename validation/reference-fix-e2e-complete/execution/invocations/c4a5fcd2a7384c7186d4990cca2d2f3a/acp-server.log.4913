@@ -1,0 +1,123 @@
+I1116 11:24:19.751128       1 options.go:485] Starting ACP server (pid 4913, worker=true, isJetski=false)
+I1116 11:24:19.756328       1 server.go:964] Running ACP RPC loop...
+I1116 11:24:19.756628      52 server.go:988] ACP Request received: initialize
+I1116 11:24:19.758386      52 server.go:1062] Sending initialize response: {"protocolVersion":1,"agentCapabilities":{"loadSession":true,"load_session":true,"promptCapabilities":{"image":true,"audio":false,"embeddedContext":true},"sessionCapabilities":{"resume":{},"close":{},"load":{},"list":{},"additionalDirectories":{}},"session_capabilities":{"resume":{},"close":{},"load":{},"list":{},"additionalDirectories":{}},"mcpCapabilities":{"http":true},"mcp_capabilities":{"http":true},"auth":{"logout":{}},"_meta":{"antigravity":{"tier":true,"systemPrompt":{"append":true}}}},"agentInfo":{"name":"Antigravity ACP Server","version":"1.5.9"},"authMethods":[{"id":"oauth-personal","name":"Log in with Google","description":"Log in with your Google account"},{"id":"oauth-business","name":"Log in with Gemini Enterprise","description":"Log in with your Gemini Enterprise account"},{"id":"gemini-api-key","name":"Gemini API key","description":"Use an API key with Gemini Developer API"},{"id":"agent-platform","name":"Gemini Enterprise Agent Platform","description":"Use Gemini Enterprise Agent Platform (formerly Vertex AI) with Application Default Credentials"}]}
+I1116 11:24:19.760537      22 server.go:988] ACP Request received: session/new
+I1116 11:24:19.760611      22 server.go:698] Booting backend (overlay=false)
+I1116 11:24:19.760680      40 server.go:2543] Starting language server process with pid 4913
+I1116 11:24:19.761154      40 workflow_python.go:21] run_workflow Python: interpreter "", embedded true
+I1116 11:24:19.761180      40 server.go:1156] Setting GOMAXPROCS to 4
+I1116 11:24:19.763805      40 server.go:2602] Language server version: 1.5.9
+I1116 11:24:19.763820      40 server.go:1269] Language server will attempt to listen on host localhost
+I1116 11:24:19.766882      40 server.go:1284] Language server listening on random port at 53719 for HTTPS (gRPC)
+I1116 11:24:19.768414      40 server.go:1292] Language server listening on random port at 53720 for HTTP
+I1116 11:24:19.769995      16 model_configs.go:209] Auth mode is unspecified, skipping fetchAvailableModels and returning empty response
+W1116 11:24:19.770562      82 cache.go:157] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1116 11:24:19.770623      82 errorreport.go:307] error getting token source: You are not logged into Antigravity.
+E1116 11:24:19.770824      16 errorreport.go:307] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+I1116 11:24:19.774105      85 store_client.go:714] summary store: starting background reconciliation (trigger=startup)
+W1116 11:24:19.781938     121 cache.go:157] Cache(peopleInfo): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1116 11:24:19.782014     121 errorreport.go:307] error getting token source: You are not logged into Antigravity.
+I1116 11:24:19.801614      85 store_client.go:764] summary store: reconciliation complete, synced 78 records
+W1116 11:24:19.826132      40 defaults.go:717] failed to get cs path: cs path /usr/bin/cs invalid
+I1116 11:24:19.826184      40 manager.go:140] Creating trajectory store manager with proto store and SQLite store
+I1116 11:24:19.831833     134 manager.go:98] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] is enabled
+I1116 11:24:19.832025     134 manager.go:107] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1116 11:24:19.832037     134 manager.go:98] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] is enabled
+I1116 11:24:19.832101     134 manager.go:107] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1116 11:24:19.832113     134 manager.go:98] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] is enabled
+I1116 11:24:19.832211     134 manager.go:107] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1116 11:24:19.832219     134 manager.go:95] Migration [MIGRATION_ID_LIN_BUILTIN_TO_MARKETPLACE] is disabled, skipping entirely
+I1116 11:24:19.832230     134 manager.go:95] Migration [MIGRATION_ID_ADOPT_BWG_INSTALLS] is disabled, skipping entirely
+I1116 11:24:19.832247     134 manager.go:95] Migration [MIGRATION_ID_GDRIVE_BUILTIN_PLUGIN] is disabled, skipping entirely
+I1116 11:24:19.832257     134 manager.go:95] Migration [MIGRATION_ID_SPLIT_SCIENCE_PLUGIN] is disabled, skipping entirely
+I1116 11:24:19.904268      40 server.go:3949] initialized server successfully in 143.255834ms
+I1116 11:24:19.904527      73 server.go:4693] Auth succeeded, refreshing features and managers
+W1116 11:24:19.904640      77 cache.go:157] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1116 11:24:19.904780      77 errorreport.go:307] error getting token source: You are not logged into Antigravity.
+E1116 11:24:19.904858      73 errorreport.go:307] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+I1116 11:24:19.904891      73 server.go:4712] State refresh took 0ms
+I1116 11:24:19.904904      73 server.go:4727] [RemoteControl] Subscription callback triggered.
+I1116 11:24:19.905087      73 server.go:4730] [RemoteControl] RemoteControlEnabled value: false
+I1116 11:24:19.905096      73 server.go:5828] [RemoteControl] Session toggle is off, staying disconnected
+I1116 11:24:19.905103      73 server.go:5511] [RemoteControl] Resolved proxyServerURL: ""
+I1116 11:24:19.905163      73 profiler.go:231] Continuous pprof profiling is disabled.
+I1116 11:24:19.905178     151 manager.go:98] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] is enabled
+I1116 11:24:19.905259     151 manager.go:107] Migration [MIGRATION_ID_SANITY_CHECK_PROJECT_URIS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1116 11:24:19.905268     151 manager.go:98] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] is enabled
+I1116 11:24:19.905327     151 manager.go:107] Migration [MIGRATION_ID_PLUGIN_ENABLEMENT] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1116 11:24:19.905334     151 manager.go:98] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] is enabled
+I1116 11:24:19.905393     151 manager.go:107] Migration [MIGRATION_ID_BUILTIN_SIDECARS_TO_PLUGINS] already has status MIGRATION_STATUS_COMPLETED, skipping
+I1116 11:24:19.905401     151 manager.go:95] Migration [MIGRATION_ID_LIN_BUILTIN_TO_MARKETPLACE] is disabled, skipping entirely
+I1116 11:24:19.905407     151 manager.go:95] Migration [MIGRATION_ID_ADOPT_BWG_INSTALLS] is disabled, skipping entirely
+I1116 11:24:19.905425     151 manager.go:95] Migration [MIGRATION_ID_GDRIVE_BUILTIN_PLUGIN] is disabled, skipping entirely
+I1116 11:24:19.905430     151 manager.go:95] Migration [MIGRATION_ID_SPLIT_SCIENCE_PLUGIN] is disabled, skipping entirely
+E1116 11:24:19.907893      22 launcher.go:249] Failed to resolve GeminiDir ".gemini": .gemini must be an absolute path: path is not absolute, falling back to default
+I1116 11:24:19.907923      22 launcher.go:257] ACP app data directory: /Users/davidzenz/.gemini/antigravity-cli (cliDir="", mode=ccpa)
+I1116 11:24:19.907967      22 server.go:313] Creating CLI server backend: product=antigravity workspaceDirs=[] appDataDir=/Users/davidzenz/.gemini/antigravity-cli languageServer=true codeAssist=true
+W1116 11:24:19.908039      76 cache.go:157] Cache(peopleInfo): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1116 11:24:19.908060      76 errorreport.go:307] error getting token source: You are not logged into Antigravity.
+W1116 11:24:19.908080      76 rpcs_plugin_auth.go:109] Not reloading plugin MCP servers: cannot get the signed-in user: error getting token source: You are not logged into Antigravity.
+I1116 11:24:19.908805      81 reconcile_summaries.go:94] [Summaries] reconcile checked 78 conversations, restored 0, cached 78, skipped 0, dropped 0, cancelled false in 0ms (resident: 0 -> 0)
+I1116 11:24:19.922195      22 auth_provider.go:813] [AuthProvider] SetEnableBusinessLogin called with enable: true
+I1116 11:24:19.923116      22 server.go:2267] Backend project ID updated dynamically to: default-cli-project
+I1116 11:24:20.018672     179 keyring.go:64] keyringAuth: loaded token, expiry=2026-11-16 11:57:39.233349 +0100 CET expired=false
+I1116 11:24:20.018766      22 auth.go:157] ChainedAuth: authenticated via keyring (effective: keyring)
+I1116 11:24:20.018778      22 server_oauth.go:221] applyAuthResult: email=david.zenz@gmail.com, authMethod=consumer, quotaProject=
+I1116 11:24:20.018792      22 server_oauth.go:226] OAuth: authenticated successfully as david.zenz@gmail.com
+I1116 11:24:20.018801      22 server_oauth.go:235] b.codeAssistClient.AuthProvider (0x61376d64c5a0) is same as b.cliAuth (0x61376d64c5a0)
+W1116 11:24:20.021820     201 cache.go:189] Failed to refresh cache in background: admin controls not applicable
+W1116 11:24:20.022302     188 cache.go:189] Failed to refresh cache in background: admin controls not applicable
+I1116 11:24:20.551774     199 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x19b182a38aa52f67
+I1116 11:24:21.066409     184 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0x2f36d5e2010bd6a1
+I1116 11:24:21.199195     173 code_assist_client.go:461] CCPA routed this account to AICode; serving AICode FetchConfig flags after 1.120692417s
+I1116 11:24:21.199584      22 http_helpers.go:108] UseAICodeMendel routing switch changed: false -> true
+I1116 11:24:21.199659      22 server.go:5348] [RemoteControl] Mendel flags changed (remote-control-setting-enabled=true, remote-control-proxy-server-url="jetski-webchannel.googleapis.com:443"), re-evaluating the connection
+I1116 11:24:21.199718      22 server.go:742] Failed to load CLI settings, using defaults: open /Users/davidzenz/.gemini/antigravity-cli/settings.json: no such file or directory
+I1116 11:24:21.199915     275 server.go:5828] [RemoteControl] Session toggle is off, staying disconnected
+I1116 11:24:21.199934     275 server.go:5511] [RemoteControl] Resolved proxyServerURL: ""
+I1116 11:24:21.206372      22 server.go:1199] Creating new cascade trajectory (agentScript=true)
+I1116 11:24:21.206406      22 server.go:1225] Conversation using project ID: default-cli-project
+I1116 11:24:21.215720      22 server.go:1242] Created conversation ab9e30ab-4785-49bd-b83b-2e40eaf03035 (backend=BACKEND_TYPE_UNSPECIFIED)
+I1116 11:24:21.216007      22 server.go:2901] Setting default model override: Gemini 3.8 Flash (High)
+I1116 11:24:21.216130      22 server.go:1288] Advertising available models to client: current=gemini-3.8-flash-high, count=6
+I1116 11:24:21.216932     507 server.go:988] ACP Request received: session/set_config_option
+I1116 11:24:21.217122     507 server.go:2655] Switching model in session ab9e30ab-4785-49bd-b83b-2e40eaf03035 to: Gemini 3.8 Flash (High) (enum: MODEL_PLACEHOLDER_M318)
+I1116 11:24:21.217612     508 server.go:988] ACP Request received: session/set_config_option
+I1116 11:24:21.217778     508 server.go:2655] Switching model in session ab9e30ab-4785-49bd-b83b-2e40eaf03035 to: Gemini 3.8 Flash (Medium) (enum: MODEL_PLACEHOLDER_M319)
+I1116 11:24:21.218683     509 server.go:988] ACP Request received: session/prompt
+I1116 11:24:21.242838     507 server.go:2427] Advertising 3 slash commands for session ab9e30ab-4785-49bd-b83b-2e40eaf03035
+I1116 11:24:21.244498     508 server.go:2427] Advertising 3 slash commands for session ab9e30ab-4785-49bd-b83b-2e40eaf03035
+I1116 11:24:21.244667      22 server.go:2427] Advertising 3 slash commands for session ab9e30ab-4785-49bd-b83b-2e40eaf03035
+I1116 11:24:21.244784     509 server.go:1260] Starting conversation update stream for ab9e30ab-4785-49bd-b83b-2e40eaf03035
+I1116 11:24:21.244831     509 server.go:1826] Sending user message to conversation ab9e30ab-4785-49bd-b83b-2e40eaf03035 (items=1, media=0)
+I1116 11:24:21.254391     509 latency_breakdown.go:168] SEND_USER_CASCADE_MESSAGE_LATENCY latency breakdown: map[active_user_state_latency_ms:0 blocking:false cascade_id:ab9e30ab-4785-49bd-b83b-2e40eaf03035 cascade_send_latency_ms:8 hydrate_slash_commands_latency_ms:0 load_trajectory_latency_ms:0 media_count:0 media_summaries_latency_ms:0 message_origin:AGENT_MESSAGE_ORIGIN_UNSPECIFIED resolve_agent_config_latency_ms:0 save_media_latency_ms:0 saved_media_count:0 status:OK total_latency_ms:8 trajectory_id:a5f41894-adbe-4c8f-8826-c9a6028cd898]
+I1116 11:24:21.281810    1054 monitor_config_manager_external.go:53] externalMonitorConfigManager: initialized with embedded config (3 monitors)
+I1116 11:24:21.282459    1054 monitoring.go:409] [Sonar] Resolved active tags: [jetski_mode_default policy_guardian sonar_skip_tags] (detected surface: "")
+I1116 11:24:21.283486    1054 monitoring.go:409] [Sonar] Resolved active tags: [jetski_mode_default policy_guardian sonar_skip_tags] (detected surface: "")
+I1116 11:24:21.757684     921 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xcac681b114dd13fc ResponseID: 1dn6ap33IMmL7M8PicDbkAg
+I1116 11:24:22.780130     178 server.go:2352] Sending session_info_update for session ab9e30ab-4785-49bd-b83b-2e40eaf03035: title="In-Sample Error Literature Search"
+I1116 11:24:24.651129    1553 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x796a27ef42c1a7dc ResponseID: 1dn6avmoLordkdUP5IfUuAg
+I1116 11:24:30.589931    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x50e437a0e8a78305
+I1116 11:24:34.018368    1877 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xc7cdffa41d34c720 ResponseID: 3tn6apjpL6zMnsEPutvLyAw
+I1116 11:24:39.926898    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x8c0c8ec67772de88
+I1116 11:24:42.603047    1939 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x7a2bde009cdd5b62 ResponseID: 6Nn6apn-CdeExs0PxNvH2Qw
+I1116 11:24:48.840729    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x1cf6d01eef1d2405
+I1116 11:24:52.271806    1993 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x4a22c6abd58f3ad4 ResponseID: 8dn6arT_AtLYkdUPgoj0kAU
+I1116 11:24:56.134670    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0xdc447c36f7459ce7
+I1116 11:24:59.899623    2016 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xcc723e8e47a611cf ResponseID: -Nn6arL1GpC5kdUP3Pi9kAU
+I1116 11:25:04.053811    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x918d27087d32a737
+I1116 11:25:07.334653    2075 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x216159d140b9dcd8 ResponseID: ANr6aqnvEICJvdIPxprsiAs
+I1116 11:25:12.366590    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x48f670763adeeb8e
+I1116 11:25:15.681349    2125 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x27cfb77397a38833 ResponseID: CNr6aq7gI_avnsEP-qWikAQ
+I1116 11:25:18.331884    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x1dfc7e1e8e4de0e8
+I1116 11:25:21.457301    2175 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xaf7c9e5085397f5f ResponseID: Dtr6auSSIordkdUPqJPX6Ac
+I1116 11:25:24.868337    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x465c13dd9e9f6769
+I1116 11:25:28.208323    2242 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf4768116aa30d23a ResponseID: Fdr6arPnBZKpkdUPyY6y4Ac
+I1116 11:25:31.148775    1054 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent Trace: 0x2a8208489a7d6185
+I1116 11:25:34.072145    2283 http_helpers.go:709] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe17e41128fdc775a ResponseID: G9r6aoWXFtS1xN8P9YunsAE
+I1116 11:25:53.834032     742 server.go:1323] Stream goroutine exited for ab9e30ab-4785-49bd-b83b-2e40eaf03035, sending completion signal
+I1116 11:25:53.834514    2424 server.go:988] ACP Request received: session/close
+I1116 11:25:53.834564    2424 server.go:2598] Last session ab9e30ab-4785-49bd-b83b-2e40eaf03035 closed
+I1116 11:25:53.837440    2379 server.go:4395] Language server shutting down
+I1116 11:25:53.837459    2379 server.go:4422] Waiting for migrations to complete to prevent partial migration state...

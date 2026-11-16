@@ -180,6 +180,33 @@ class ManifestTests(ProvenanceFixture, unittest.TestCase):
 
 
 class NormalizationTests(ProvenanceFixture, unittest.TestCase):
+    def test_figure_normalization_preserves_bibliography_and_citations_in_all_result_formats(self):
+        manifest = self.build()
+        bib = (r"\begin{filecontents*}{references.bib}" + "\n"
+               + "@misc{Fixture2020, title={Labelled bibliography fixture}, year={2020}}\n"
+               + r"\end{filecontents*}" + "\n")
+        citations = (r"Fixture~\cite{Fixture2020}." + "\n"
+                     + r"\bibliographystyle{plain}\bibliography{references}" + "\n")
+        tex = bib + manuscript().replace(r"\end{document}", citations + r"\end{document}")
+        raw = "```latex\n" + tex + "\n```"
+        cases = [
+            {"raw_response": raw, "parsed_response": tex},
+            {"raw_response": raw, "parsed_response": json.dumps({"json": {}, "latex": tex})},
+            {"raw_response": raw, "parsed_response": {"raw_response": raw}},
+        ]
+        for original in cases:
+            with self.subTest(format=type(original["parsed_response"]).__name__):
+                updated, details = provenance.transform_result(original, manifest)
+                self.assertIsNotNone(details)
+                for channel in [updated["raw_response"], updated["parsed_response"]]:
+                    if isinstance(channel, dict):
+                        channel = channel["raw_response"]
+                    elif channel.startswith('{"json":'):
+                        channel = json.loads(channel)["latex"]
+                    self.assertIn(bib, channel)
+                    self.assertIn(citations, channel)
+                    self.assertIn(provenance.BEGIN, channel)
+
     def test_removes_figure_recipes_preserves_arithmetic_and_is_idempotent(self):
         manifest = self.build()
         effective, removed = provenance.normalize_latex(manuscript(), manifest)

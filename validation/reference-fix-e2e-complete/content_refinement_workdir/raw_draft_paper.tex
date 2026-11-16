@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+This anonymous synthetic teaching-note workflow demonstration examines an additive correction to the fixed predictor $2x$ on five observations with targets $y=2x+3$. The mean observed residual gives $b=3$, making corrected predictions $2x+b$ equal the supplied targets. Recorded mean absolute error decreases from $3$ to $0$, and mean squared error from $9$ to $0$. A measured error table and two reproducible figures expose the computation. Correction and evaluation reuse the same observations; the results establish finite arithmetic agreement without predictive generalization or methodological novelty.
+\end{abstract}
+\section{Introduction}
+
+Residuals make discrepancies between observations and predictions explicit. Their examination has a substantial methodological history, encompassing numerical and graphical diagnostics, regression anomalies, and influential observations \cite{Anscombe1963ExaminationAnalysis,Denby1987ExampleUse,Chatterjee1986InfluentialObservations,Cook1977DetectionInfluential}. Formal protocols for visual inference further distinguish inspecting a plot from establishing inferential evidence \cite{Buja2009StatisticalInference}. This teaching note uses a completely specified example to explain a constant prediction discrepancy, its correction, and the interpretation of the resulting errors.
+
+Additive modeling and stagewise function approximation provide broader contexts for modifying predictions \cite{Hastie1986GeneralizedAdditive,Friedman2001GreedyFunction}. Tutorials on nonparametric inference also situate prediction within questions of model representation and statistical estimation \cite{Geman1992NeuralNetworks}. Here, the calculation requires neither flexible functions nor iterative estimation: the predictor is fixed, and only a scalar offset is computed.
+
+The supplied observations are
+\[
+x=(-2,-1,0,1,2), \qquad y=(-1,1,3,5,7),
+\]
+with $y_i=2x_i+3$ on these five points. The baseline predictor $f_0(x)=2x$ leaves residual $y_i-f_0(x_i)=3$ at every observation. Their mean therefore gives
+\[
+b=\frac{1}{5}\sum_{i=1}^{5}(y_i-2x_i)=3.
+\]
+Adding this value reproduces all five targets. The recorded mean absolute errors at $b=0,1.5,3$ are respectively $3,1.5,0$, and the corresponding mean squared errors are $9,2.25,0$.
+
+These numbers describe the observations used to determine the correction. Distinguishing descriptive or explanatory success from predictive performance is a broader methodological concern \cite{Shmueli2010ExplainOr,Yarkoni2017ChoosingPrediction}. Cross-validation and predictive sample reuse address assessment beyond apparent fit \cite{Stone1974CrossvalidatoryChoice,Geisser1975PredictiveSample,Arlot2010SurveyCrossvalidation}, while prediction-error analyses explain why reusing fitting data can produce optimistic assessments \cite{Efron1986HowBiased,Efron2004EstimationPrediction}.
+
+Our objective is an inspectable arithmetic demonstration, rather than a new algorithm or scientific result. The base R calculation contains no stochastic repetitions or held-out evaluation. Its zero recorded errors establish exact agreement on the five supplied points; they provide no measurement of performance on additional observations.
+
+\section{Related Work}
+
+\subsection{Additive Correction of a Fixed Predictor}
+
+Work on regression without an intercept examines when origin constraints are appropriate and what complications they introduce \cite{Hahn1977FittingRegression,Eisenhauer2003RegressionThrough}. A leverage-based interpretation offers another perspective on comparing intercept and no-intercept models \cite{Casella1983LeverageRegression}. These discussions concern model fitting and assessment more broadly. In the present example, the slope is supplied as $2$ and is never estimated; the calculation changes only the constant term.
+
+Evaluation conventions also matter when an intercept is absent. Analyses of software calculations for regression through the origin and of alternative coefficients of determination identify pitfalls in interpreting goodness-of-fit statistics \cite{Gordon1981ErrorsComputer,Kvlseth1985CautionaryNote}. We instead report the two directly calculated error summaries supplied in the experimental log. Generalized linear modeling provides a wider framework involving transformed systematic effects and distributional assumptions \cite{Nelder1972GeneralizedLinear}; none of that estimation machinery is required for this deterministic offset calculation.
+
+Prediction-model validation distinguishes several aspects of performance. Logistic-model validation considers calibration, refinement, diagnostics, and possible corrections \cite{Miller1991ValidationTechniques}. A development and validation framework explicitly separates calibration-in-the-large, represented by an intercept, from calibration slope, discrimination, and usefulness \cite{Steyerberg2014TowardsBetter}. Updating studies likewise distinguish intercept or slope recalibration from more extensive coefficient revision and assess updated models on independent patients \cite{Steyerberg2004ValidationUpdating}. These distinctions help locate our restricted operation: a scalar correction leaves the baseline slope unchanged. They do not transfer clinical validation findings to these five synthetic observations.
+
+Other post-processing approaches address different quantities. A sigmoid fitted to support-vector-machine outputs produces probabilities \cite{Platt1999ProbabilisticOutputs}; temperature scaling adjusts classification confidence \cite{Guo2017CalibrationModern}; calibrated regression addresses predictive uncertainty \cite{Kuleshov2018AccurateUncertainties}. Their shared conceptual feature is adjustment after constructing a predictor. Our response-scale addition neither estimates class probabilities nor calibrates uncertainty.
+
+Forecast post-processing supplies further conceptual comparisons. Model output statistics estimates relationships between numerical-model outputs and predictands \cite{Glahn1972UseModel}. A critical review of climate bias correction emphasizes assumptions and limits of correction procedures \cite{Maraun2016BiasCorrecting}. Intercept corrections under structural change can involve a trade-off between forecast bias and error variance \cite{Clements1996InterceptCorrections}. The supplied calculation contains no weather, climate, or time-series evaluation, and measures no such trade-off.
+
+Finally, regression-validation guidance discusses calibration, discrimination, and resampling \cite{Harrell1996MultivariablePrognostic}, while external-validation sample-size work targets precision for binary-outcome performance estimates \cite{Riley2021MinimumSample}. Prediction-error estimation and shrinkage studies distinguish original-data fit from future-case performance \cite{Efron1983EstimatingError,Copas1983RegressionPrediction}. These works motivate careful protocol disclosure, without furnishing additional evidence for our correction. No cited method is an evaluated competitor here.
+
+\subsection{Error Summaries and Reuse of Fitting Observations}
+
+Point-forecast evaluation depends on matching the scoring function to the forecasting task \cite{Gneiting2011MakingEvaluating}. Complementary difference measures have also been proposed for model evaluation \cite{Willmott1985StatisticsEvaluation}. Discussions comparing MAE and RMSE offer differing arguments about their interpretation and suitability \cite{Willmott2005AdvantagesMean,Chai2014RootMean,Hodson2022RootmeansquareError}. These discussions do not justify choosing a residual distribution for the supplied deterministic observations.
+
+For each recorded correction, all five residuals equal $3-b$. Consequently, the reported MAE and MSE are respectively $|3-b|$ and $(3-b)^2$ at $b=0,1.5,3$. These identities explain the recorded values without introducing additional measurements. The log reports MSE, whereas much of the cited metric discussion concerns its square root, RMSE.
+
+The dependency between fitting and evaluation is equally explicit. Generalized degrees of freedom quantify sensitivity of fitted values to observed responses \cite{Ye1998MeasuringCorrecting}. Cross-validation used for both tuning and assessment can yield biased error estimates \cite{Varma2006BiasError}. Post-selection inference addresses guarantees after data-driven variable selection \cite{Berk2013ValidPostselection}. Our calculation performs neither model selection nor cross-validation, so those specialized procedures are not claimed as implemented remedies. Their distinct settings underscore why an assessment protocol must be stated precisely. Here, the same five targets determine $b$ and evaluate $2x+b$; no held-out accuracy, uncertainty estimate, or statistical significance is established.
+
+\section{Method}
+
+\subsection{Finite Calculation and Error Definitions}
+
+Index the supplied inputs $x=(-2,-1,0,1,2)$ by $i=1,\ldots,5$, with targets $y_i=2x_i+3$. The fixed baseline predictions are
+\[
+\hat{y}^{(0)}=(-4,-2,0,2,4).
+\]
+Their observed residuals satisfy
+\[
+r_i=y_i-\hat{y}^{(0)}_i=3,
+\qquad r=(3,3,3,3,3).
+\]
+For an added scalar $b$, define $\hat{y}_i(b)=2x_i+b$ and $e_i(b)=y_i-\hat{y}_i(b)$. The two error summaries are
+\[
+\operatorname{MAE}(b)=\frac{1}{5}\sum_{i=1}^{5}|e_i(b)|,
+\qquad
+\operatorname{MSE}(b)=\frac{1}{5}\sum_{i=1}^{5}e_i(b)^2.
+\]
+Substitution gives $e_i(b)=3-b$ on every supplied observation, hence
+\[
+\operatorname{MAE}(b)=|3-b|,
+\qquad
+\operatorname{MSE}(b)=(3-b)^2.
+\]
+These finite algebraic identities explain the recorded settings; they do not constitute measurements at additional settings or assumptions about other observations.
+
+\subsection{Mean Residual Correction and Computational Flow}
+
+The correction is computed directly:
+\[
+b=\frac{1}{5}\sum_{i=1}^{5}r_i
+=\frac{3+3+3+3+3}{5}=3.
+\]
+Consequently, $\hat{y}(3)=(-1,1,3,5,7)=y$, so each corrected residual is zero. The calculation uses base R, with no optimizer or iterative training procedure.
+
+Figure~\ref{fig:residual_workflow} makes the dependencies explicit: targets and baseline predictions determine residuals, whose mean determines the correction. The baseline and correction jointly determine corrected predictions. The dashed path discloses reuse of the original observations for evaluation. The schematic explains this computation and supplies no additional empirical evidence.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_residual_workflow.jpg}
+    \caption{Residual-based intercept correction on five synthetic observations. Observed targets and fixed baseline predictions determine residuals $r_i=y_i-2x_i=3$; their mean determines $b=3$. Adding $b$ reproduces the targets. The dashed path identifies reuse of the same five observations for correction and in-sample evaluation.}
+    \label{fig:residual_workflow}
+\end{figure}
+
+\section{Experiments}
+
+\subsection{Observations and Evaluation Protocol}
+
+The experimental log records one deterministic calculation on supplied synthetic values, rather than a named external dataset. Targets are $(-1,1,3,5,7)$, baseline predictions are $(-4,-2,0,2,4)$, and predictions after adding $3$ are $(-1,1,3,5,7)$. All five observations determine the mean residual and evaluate the three recorded settings $b=0,1.5,3$. These settings are controlled changes to one scalar within the same calculation, not independent experiments or stochastic repetitions. The slope remains fixed throughout.
+
+There is no held-out evaluation, timing measurement, optimizer training, architecture comparison, or uncertainty estimate. The reported errors therefore describe agreement with the five observed targets only.
+
+\subsection{Recorded Errors and Reproducible Figures}
+
+Table~\ref{tab:recorded_errors} reproduces the logged measurements. The uncorrected setting retains the entire constant discrepancy. Adding $1.5$ removes half that discrepancy: MAE falls from $3$ to $1.5$, while MSE falls from $9$ to $2.25$. Adding the full mean residual, $3$, removes it entirely. Because every residual has the same magnitude at each setting, the different reductions follow directly from absolute versus squared error aggregation.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Recorded errors on the same five observations used to determine the correction.}
+    \label{tab:recorded_errors}
+    \begin{tabular}{rrr}
+        \toprule
+        Added $b$ & Mean absolute error & Mean squared error \\
+        \midrule
+        0   & 3   & 9    \\
+        1.5 & 1.5 & 2.25 \\
+        3   & 0   & 0    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Figure~\ref{fig:intercept_error} displays exactly these three recorded MSE values, without an interpolated curve, additional settings, or uncertainty intervals. The scalar adjustment succeeds here because the observed discrepancy is constant. The incomplete correction leaves a uniform residual; no supplied result tests correction of a nonconstant residual pattern. Independent observations and other patterns remain subjects for future evaluation rather than conclusions of this calculation.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_intercept_error.jpg}
+    \caption{Exactly three recorded mean squared errors: $(b,\operatorname{MSE})=(0,9),(1.5,2.25),(3,0)$. Evaluation uses the same five synthetic observations that determine $b=3$. The points establish finite arithmetic error reduction only.}
+    \label{fig:intercept_error}
+\end{figure}
+
+\section*{Figure source provenance}
+
+The supplied figure images are used unchanged. The selected editable R/ggplot2 source for Figure~\ref{fig:intercept_error} is
+\[
+\text{\texttt{\detokenize{figure_code/fig_intercept_error/source.R}}}.
+\]
+Its rendering worker is
+\[
+\text{\texttt{\detokenize{figure_code/fig_intercept_error/worker.R}}}.
+\]
+The selected editable LaTeX/TikZ source for Figure~\ref{fig:residual_workflow} is
+\[
+\text{\texttt{\detokenize{figure_code/fig_residual_workflow/source.tex}}}.
+\]
+These sources are separate reproducibility artifacts, accompanied in their respective directories by \texttt{figure.pdf}, \texttt{preview.jpg}, and \texttt{render.json}; the plot directory also contains \texttt{sessionInfo.txt}. The supplied provenance manifest records the authoritative source checksums and renderer inputs. The figure recipes are not reconstructed or embedded in the manuscript.
+
+\clearpage
+\section{Conclusion}
+
+The mean observed residual $b=3$ makes $2x+b$ equal all five supplied targets, reducing recorded MAE and MSE to zero. The explicit calculation, measured error table, and two reproducible figures support an inspectable teaching-note demonstration. Correction and evaluation reuse the same five observations. The note consequently supplies no held-out performance or generalization result; assessment on independent observations remains future work.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+% PAPER_ORCHESTRA_PROVENANCE_BEGIN
+\clearpage
+\section*{Figure source provenance}
+The files below are the exact sources that produced the embedded figure previews. Paths are relative to this manuscript's source directory. The accompanying \texttt{figure\char95{}provenance.json} records all artifact checksums.\par
+\medskip\noindent\textbf{Figure~\ref{fig:intercept_error} (\texttt{fig\char95{}intercept\char95{}error.jpg}).}\par
+\noindent R/ggplot2 source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}source.R}.\par
+\noindent Source SHA256: \texttt{2479e40e\allowbreak{}8d39e8e1\allowbreak{}6c29f883\allowbreak{}7e3b8df9\allowbreak{}909f9f65\allowbreak{}8bb35b95\allowbreak{}9fda0b12\allowbreak{}96debbe4}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}render.json}.\par
+\noindent Exact export wrapper: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}worker.R}.\par
+\noindent Wrapper SHA256: \texttt{1aedad4b\allowbreak{}1547d4b2\allowbreak{}d394cbb0\allowbreak{}239655d3\allowbreak{}667d453d\allowbreak{}d1fd0eca\allowbreak{}3e77c037\allowbreak{}e6d34892}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}sessionInfo.txt}.\par
+\medskip\noindent\textbf{Figure~\ref{fig:residual_workflow} (\texttt{fig\char95{}residual\char95{}workflow.jpg}).}\par
+\noindent LaTeX/TikZ source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}source.tex}.\par
+\noindent Source SHA256: \texttt{84e305cc\allowbreak{}09efdeb2\allowbreak{}bc2162c3\allowbreak{}9fc60cb1\allowbreak{}d1a3c538\allowbreak{}4254d368\allowbreak{}dee04e8d\allowbreak{}b66664b4}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}render.json}.\par
+% PAPER_ORCHESTRA_PROVENANCE_END
+\end{document}

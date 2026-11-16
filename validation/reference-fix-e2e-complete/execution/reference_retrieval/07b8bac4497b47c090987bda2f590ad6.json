@@ -1,0 +1,4383 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 2456,
+      "db_response_time_ms": 90,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Calibration \"and\" bias correction of climate projections for crop modelling: an overview of empirical techniques) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Calibration \"and\" bias correction of climate projections for crop modelling: an overview of empirical techniques) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Calibration and bias correction of climate projections for crop modelling: an overview of empirical techniques",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Calibration and bias correction of climate projections for crop modelling: an overview of empirical techniques&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W4387221150",
+        "doi": "https://doi.org/10.1038/s41612-023-00486-0",
+        "title": "Downscaling and bias-correction contribute considerable uncertainty to local climate projections in CMIP6",
+        "display_name": "Downscaling and bias-correction contribute considerable uncertainty to local climate projections in CMIP6",
+        "relevance_score": 37.767426,
+        "publication_year": 2023,
+        "publication_date": "2023-09-29",
+        "ids": {
+          "openalex": "https://openalex.org/W4387221150",
+          "doi": "https://doi.org/10.1038/s41612-023-00486-0"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1038/s41612-023-00486-0",
+          "doi": "https://doi.org/10.1038/s41612-023-00486-0",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41612-023-00486-0",
+          "pdf_url": "https://www.nature.com/articles/s41612-023-00486-0.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210224503",
+            "display_name": "npj Climate and Atmospheric Science",
+            "issn_l": "2397-3722",
+            "issn": [
+              "2397-3722"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "doaj",
+              "dongbi-d",
+              "jufo-2",
+              "norway-1",
+              "oarl",
+              "poland-100",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "npj Climate and Atmospheric Science",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4387221150"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "doaj"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "gold",
+          "oa_url": "https://www.nature.com/articles/s41612-023-00486-0.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5042083597",
+              "display_name": "David C. Lafferty",
+              "orcid": "https://orcid.org/0000-0003-2098-6885",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-2098-6885"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I157725225",
+                "display_name": "University of Illinois Urbana-Champaign",
+                "ror": "https://ror.org/047426m28",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "David C. Lafferty",
+            "raw_affiliation_strings": [
+              "Department of Atmospheric Sciences, University of Illinois Urbana-Champaign, Urbana, IL, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0003-2098-6885",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Atmospheric Sciences, University of Illinois Urbana-Champaign, Urbana, IL, USA",
+                "institution_ids": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5080399449",
+              "display_name": "Ryan L. Sriver",
+              "orcid": "https://orcid.org/0000-0001-9587-3741",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9587-3741"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I157725225",
+                "display_name": "University of Illinois Urbana-Champaign",
+                "ror": "https://ror.org/047426m28",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Ryan L. Sriver",
+            "raw_affiliation_strings": [
+              "Department of Atmospheric Sciences, University of Illinois Urbana-Champaign, Urbana, IL, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0001-9587-3741",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Atmospheric Sciences, University of Illinois Urbana-Champaign, Urbana, IL, USA",
+                "institution_ids": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5042083597"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I157725225"
+        ],
+        "apc_list": {
+          "value": 3290,
+          "currency": "USD",
+          "value_usd": 3290
+        },
+        "apc_paid": {
+          "value": 3290,
+          "currency": "USD",
+          "value_usd": 3290
+        },
+        "fwci": 13.278,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 171,
+        "citation_normalized_percentile": {
+          "value": 0.99599066,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 93,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "6",
+          "issue": "1",
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10029",
+          "display_name": "Climate variability and models",
+          "score": 0.9990000128746033,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10029",
+            "display_name": "Climate variability and models",
+            "score": 0.9990000128746033,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2306",
+              "display_name": "Global and Planetary Change"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10466",
+            "display_name": "Meteorological Phenomena and Simulations",
+            "score": 0.0003000000142492354,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1902",
+              "display_name": "Atmospheric Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/19",
+              "display_name": "Earth and Planetary Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13530",
+            "display_name": "Climate Change and Environmental Impact",
+            "score": 9.999999747378752e-05,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2306",
+              "display_name": "Global and Planetary Change"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/downscaling",
+            "display_name": "downscaling",
+            "score": 0.6100000143051147
+          },
+          {
+            "id": "https://openalex.org/keywords/bias-correction",
+            "display_name": "bias correction",
+            "score": 0.9860000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/uncertainty-quantification",
+            "display_name": "uncertainty quantification",
+            "score": 0.6700000166893005
+          },
+          {
+            "id": "https://openalex.org/keywords/cmip6",
+            "display_name": "CMIP6",
+            "score": 0.7419999837875366
+          },
+          {
+            "id": "https://openalex.org/keywords/regional-climate-projections",
+            "display_name": "regional climate projections",
+            "score": 0.7039999961853027
+          },
+          {
+            "id": "https://openalex.org/keywords/variance-decomposition",
+            "display_name": "variance decomposition",
+            "score": 0.9089999794960022
+          },
+          {
+            "id": "https://openalex.org/keywords/extreme-climate-events",
+            "display_name": "climate extremes",
+            "score": 0.9309999942779541
+          },
+          {
+            "id": "https://openalex.org/keywords/temperature-and-precipitation",
+            "display_name": "temperature and precipitation",
+            "score": 0.5989999771118164
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41156917",
+            "wikidata": "https://www.wikidata.org/wiki/Q682831",
+            "display_name": "Downscaling",
+            "level": 3,
+            "score": 0.9417556524276733
+          },
+          {
+            "id": "https://openalex.org/C51110983",
+            "wikidata": "https://www.wikidata.org/wiki/Q16503490",
+            "display_name": "Overconfidence effect",
+            "level": 2,
+            "score": 0.6828575134277344
+          },
+          {
+            "id": "https://openalex.org/C49204034",
+            "wikidata": "https://www.wikidata.org/wiki/Q52139",
+            "display_name": "Climatology",
+            "level": 1,
+            "score": 0.6532878279685974
+          },
+          {
+            "id": "https://openalex.org/C39432304",
+            "wikidata": "https://www.wikidata.org/wiki/Q188847",
+            "display_name": "Environmental science",
+            "level": 0,
+            "score": 0.5815776586532593
+          },
+          {
+            "id": "https://openalex.org/C168754636",
+            "wikidata": "https://www.wikidata.org/wiki/Q620920",
+            "display_name": "Climate model",
+            "level": 3,
+            "score": 0.5514960885047913
+          },
+          {
+            "id": "https://openalex.org/C132651083",
+            "wikidata": "https://www.wikidata.org/wiki/Q7942",
+            "display_name": "Climate change",
+            "level": 2,
+            "score": 0.5035752654075623
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.49894022941589355
+          },
+          {
+            "id": "https://openalex.org/C106306483",
+            "wikidata": "https://www.wikidata.org/wiki/Q183984",
+            "display_name": "Futures contract",
+            "level": 2,
+            "score": 0.4829651415348053
+          },
+          {
+            "id": "https://openalex.org/C204323151",
+            "wikidata": "https://www.wikidata.org/wiki/Q905424",
+            "display_name": "Range (aeronautics)",
+            "level": 2,
+            "score": 0.4222368597984314
+          },
+          {
+            "id": "https://openalex.org/C107054158",
+            "wikidata": "https://www.wikidata.org/wiki/Q25257",
+            "display_name": "Precipitation",
+            "level": 2,
+            "score": 0.42110005021095276
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.3279002904891968
+          },
+          {
+            "id": "https://openalex.org/C153294291",
+            "wikidata": "https://www.wikidata.org/wiki/Q25261",
+            "display_name": "Meteorology",
+            "level": 1,
+            "score": 0.2787454426288605
+          },
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.2293652892112732
+          },
+          {
+            "id": "https://openalex.org/C205649164",
+            "wikidata": "https://www.wikidata.org/wiki/Q1071",
+            "display_name": "Geography",
+            "level": 0,
+            "score": 0.14137861132621765
+          },
+          {
+            "id": "https://openalex.org/C127313418",
+            "wikidata": "https://www.wikidata.org/wiki/Q1069",
+            "display_name": "Geology",
+            "level": 0,
+            "score": 0.07090336084365845
+          },
+          {
+            "id": "https://openalex.org/C111368507",
+            "wikidata": "https://www.wikidata.org/wiki/Q43518",
+            "display_name": "Oceanography",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C15744967",
+            "wikidata": "https://www.wikidata.org/wiki/Q9418",
+            "display_name": "Psychology",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C159985019",
+            "wikidata": "https://www.wikidata.org/wiki/Q181790",
+            "display_name": "Composite material",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C77805123",
+            "wikidata": "https://www.wikidata.org/wiki/Q161272",
+            "display_name": "Social psychology",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C106159729",
+            "wikidata": "https://www.wikidata.org/wiki/Q2294553",
+            "display_name": "Financial economics",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C192562407",
+            "wikidata": "https://www.wikidata.org/wiki/Q228736",
+            "display_name": "Materials science",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 5,
+        "locations": [
+          {
+            "id": "doi:10.1038/s41612-023-00486-0",
+            "doi": "https://doi.org/10.1038/s41612-023-00486-0",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1038/s41612-023-00486-0",
+            "pdf_url": "https://www.nature.com/articles/s41612-023-00486-0.pdf",
+            "source": {
+              "id": "https://openalex.org/S4210224503",
+              "display_name": "npj Climate and Atmospheric Science",
+              "issn_l": "2397-3722",
+              "issn": [
+                "2397-3722"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "doaj",
+                "dongbi-d",
+                "jufo-2",
+                "norway-1",
+                "oarl",
+                "poland-100",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319908",
+              "host_organization_name": "Nature Portfolio",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319908",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Nature Portfolio",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "npj Climate and Atmospheric Science",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.22541/essoar.168286894.44910061/v1",
+            "doi": "https://doi.org/10.22541/essoar.168286894.44910061/v1",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.22541/essoar.168286894.44910061/v1",
+            "pdf_url": "https://www.authorea.com/doi/pdf/10.22541/essoar.168286894.44910061",
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "posted-content"
+          },
+          {
+            "id": "pmh:oai:doaj.org/article:e22c5d62632b45fca7a9615199756eb8",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://doaj.org/article/e22c5d62632b45fca7a9615199756eb8",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401280",
+              "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by-sa",
+            "license_id": "https://openalex.org/licenses/cc-by-sa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "npj Climate and Atmospheric Science, Vol 6, Iss 1, Pp 1-13 (2023)",
+            "raw_type": "article"
+          },
+          {
+            "id": "pmh:oai:osti.gov:2007112",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://www.osti.gov/biblio/2007112",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402487",
+              "display_name": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I139351228",
+              "host_organization_name": "Office of Scientific and Technical Information",
+              "host_organization_lineage": [
+                "https://openalex.org/I139351228"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          },
+          {
+            "id": "pmh:oai:osti.gov:2324980",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://www.osti.gov/biblio/2324980",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402487",
+              "display_name": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I139351228",
+              "host_organization_name": "Office of Scientific and Technical Information",
+              "host_organization_lineage": [
+                "https://openalex.org/I139351228"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1038/s41612-023-00486-0",
+          "doi": "https://doi.org/10.1038/s41612-023-00486-0",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41612-023-00486-0",
+          "pdf_url": "https://www.nature.com/articles/s41612-023-00486-0.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210224503",
+            "display_name": "npj Climate and Atmospheric Science",
+            "issn_l": "2397-3722",
+            "issn": [
+              "2397-3722"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "doaj",
+              "dongbi-d",
+              "jufo-2",
+              "norway-1",
+              "oarl",
+              "poland-100",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "npj Climate and Atmospheric Science",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 1.0,
+            "id": "https://metadata.un.org/sdg/13",
+            "display_name": "Climate action"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G2881266563",
+            "display_name": "UNDERSTANDING MULTISTRESSOR AND MULTISCALE DRIVERS OF FEEDBACKS, CASCADING FAILURES, AND RISK MANAGEMENT PATHWAYSWITHIN COMPLEX MSD SYSTEMS",
+            "funder_award_id": "DESC0022141",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G5830627093",
+            "display_name": null,
+            "funder_award_id": "DE-SC0022141",
+            "funder_id": "https://openalex.org/F4320337509",
+            "funder_display_name": "Biological and Environmental Research"
+          },
+          {
+            "id": "https://openalex.org/G8261412594",
+            "display_name": "UNDERSTANDING MULTISTRESSOR AND MULTISCALE DRIVERS OF FEEDBACKS, CASCADING FAILURES, AND RISK MANAGEMENT PATHWAYSWITHIN COMPLEX MSD SYSTEMS",
+            "funder_award_id": "DESC0022141",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306084",
+            "display_name": "U.S. Department of Energy",
+            "ror": "https://ror.org/01bj3aw27"
+          },
+          {
+            "id": "https://openalex.org/F4320310419",
+            "display_name": "Pennsylvania State University",
+            "ror": "https://ror.org/04p491231"
+          },
+          {
+            "id": "https://openalex.org/F4320332222",
+            "display_name": "University of Illinois at Urbana-Champaign",
+            "ror": "https://ror.org/047426m28"
+          },
+          {
+            "id": "https://openalex.org/F4320332359",
+            "display_name": "Office of Science",
+            "ror": "https://ror.org/00mmn6b08"
+          },
+          {
+            "id": "https://openalex.org/F4320334254",
+            "display_name": "Institute for Computational and Data Sciences, Pennsylvania State University",
+            "ror": null
+          },
+          {
+            "id": "https://openalex.org/F4320337509",
+            "display_name": "Biological and Environmental Research",
+            "ror": "https://ror.org/0114b2m14"
+          },
+          {
+            "id": "https://openalex.org/F4320338354",
+            "display_name": "Pacific Northwest National Laboratory",
+            "ror": "https://ror.org/05h992307"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W4387221150.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W4387221150.grobid-xml"
+        },
+        "referenced_works_count": 109,
+        "referenced_works": [
+          "https://openalex.org/W73397934",
+          "https://openalex.org/W156982620",
+          "https://openalex.org/W1480707851",
+          "https://openalex.org/W1978238614",
+          "https://openalex.org/W1987027200",
+          "https://openalex.org/W1996653992",
+          "https://openalex.org/W1999783660",
+          "https://openalex.org/W2053693629",
+          "https://openalex.org/W2079350221",
+          "https://openalex.org/W2079488032",
+          "https://openalex.org/W2085907528",
+          "https://openalex.org/W2093525923",
+          "https://openalex.org/W2097830888",
+          "https://openalex.org/W2120496201",
+          "https://openalex.org/W2165463227",
+          "https://openalex.org/W2181721807",
+          "https://openalex.org/W2193503481",
+          "https://openalex.org/W2287992427",
+          "https://openalex.org/W2338455138",
+          "https://openalex.org/W2410390527",
+          "https://openalex.org/W2528017898",
+          "https://openalex.org/W2604521289",
+          "https://openalex.org/W2734360073",
+          "https://openalex.org/W2737627007",
+          "https://openalex.org/W2758098718",
+          "https://openalex.org/W2766597251",
+          "https://openalex.org/W2768554742",
+          "https://openalex.org/W2792365086",
+          "https://openalex.org/W2801307720",
+          "https://openalex.org/W2888377003",
+          "https://openalex.org/W2907825563",
+          "https://openalex.org/W2914059076",
+          "https://openalex.org/W2922231923",
+          "https://openalex.org/W2929713011",
+          "https://openalex.org/W2937886790",
+          "https://openalex.org/W2943335865",
+          "https://openalex.org/W2947945093",
+          "https://openalex.org/W2969524748",
+          "https://openalex.org/W2974094547",
+          "https://openalex.org/W2991679519",
+          "https://openalex.org/W2998500935",
+          "https://openalex.org/W3004271001",
+          "https://openalex.org/W3007774593",
+          "https://openalex.org/W3008786499",
+          "https://openalex.org/W3015751088",
+          "https://openalex.org/W3022181925",
+          "https://openalex.org/W3022191888",
+          "https://openalex.org/W3025949386",
+          "https://openalex.org/W3035432101",
+          "https://openalex.org/W3041926889",
+          "https://openalex.org/W3042164357",
+          "https://openalex.org/W3065581507",
+          "https://openalex.org/W3094721985",
+          "https://openalex.org/W3110588279",
+          "https://openalex.org/W3112134271",
+          "https://openalex.org/W3120044900",
+          "https://openalex.org/W3123945281",
+          "https://openalex.org/W3127123385",
+          "https://openalex.org/W3127441868",
+          "https://openalex.org/W3149982436",
+          "https://openalex.org/W3151477587",
+          "https://openalex.org/W3157892829",
+          "https://openalex.org/W3167366064",
+          "https://openalex.org/W3173474709",
+          "https://openalex.org/W3174665500",
+          "https://openalex.org/W3198347438",
+          "https://openalex.org/W3200914692",
+          "https://openalex.org/W3205673351",
+          "https://openalex.org/W3208329981",
+          "https://openalex.org/W3212602953",
+          "https://openalex.org/W4205933753",
+          "https://openalex.org/W4213197433",
+          "https://openalex.org/W4214615453",
+          "https://openalex.org/W4226466719",
+          "https://openalex.org/W4229007794",
+          "https://openalex.org/W4231746097",
+          "https://openalex.org/W4242046679",
+          "https://openalex.org/W4250907890",
+          "https://openalex.org/W4252370996",
+          "https://openalex.org/W4280564121",
+          "https://openalex.org/W4281641492",
+          "https://openalex.org/W4286490644",
+          "https://openalex.org/W4291274998",
+          "https://openalex.org/W4291624854",
+          "https://openalex.org/W4292340282",
+          "https://openalex.org/W4296048935",
+          "https://openalex.org/W4304099131",
+          "https://openalex.org/W4304820627",
+          "https://openalex.org/W4306838952",
+          "https://openalex.org/W4307843299",
+          "https://openalex.org/W4310058936",
+          "https://openalex.org/W4312196752",
+          "https://openalex.org/W4317788492",
+          "https://openalex.org/W4318045160",
+          "https://openalex.org/W4319157868",
+          "https://openalex.org/W4319733471",
+          "https://openalex.org/W4321236355",
+          "https://openalex.org/W4366003410",
+          "https://openalex.org/W4366685048",
+          "https://openalex.org/W4382358676",
+          "https://openalex.org/W4384664617",
+          "https://openalex.org/W4388621120",
+          "https://openalex.org/W4389516033",
+          "https://openalex.org/W4390776687",
+          "https://openalex.org/W6810597344",
+          "https://openalex.org/W6891652211",
+          "https://openalex.org/W6893548140",
+          "https://openalex.org/W6931603849",
+          "https://openalex.org/W6931672655"
+        ],
+        "related_works": [
+          "https://openalex.org/W4389516033",
+          "https://openalex.org/W4398781864",
+          "https://openalex.org/W2059403125",
+          "https://openalex.org/W4383370714",
+          "https://openalex.org/W4211076468",
+          "https://openalex.org/W2980764838",
+          "https://openalex.org/W2625397598",
+          "https://openalex.org/W3125136627",
+          "https://openalex.org/W7029048791",
+          "https://openalex.org/W2945992172"
+        ],
+        "abstract_inverted_index": {
+          "Abstract": [
+            0
+          ],
+          "Efforts": [
+            1
+          ],
+          "to": [
+            2,
+            21,
+            37,
+            83,
+            105,
+            124,
+            133
+          ],
+          "diagnose": [
+            3
+          ],
+          "the": [
+            4,
+            23,
+            46,
+            111,
+            134
+          ],
+          "risks": [
+            5
+          ],
+          "of": [
+            6,
+            28,
+            49,
+            70,
+            137
+          ],
+          "a": [
+            7,
+            34
+          ],
+          "changing": [
+            8
+          ],
+          "climate": [
+            9,
+            16,
+            42,
+            56,
+            71,
+            86,
+            98,
+            139
+          ],
+          "often": [
+            10,
+            79
+          ],
+          "rely": [
+            11
+          ],
+          "on": [
+            12
+          ],
+          "downscaled": [
+            13
+          ],
+          "and": [
+            14,
+            25,
+            44,
+            51,
+            62,
+            77,
+            97,
+            108,
+            116
+          ],
+          "bias-corrected": [
+            15
+          ],
+          "information,": [
+            17
+          ],
+          "making": [
+            18
+          ],
+          "it": [
+            19
+          ],
+          "important": [
+            20
+          ],
+          "understand": [
+            22
+          ],
+          "uncertainties": [
+            24,
+            112,
+            128
+          ],
+          "potential": [
+            26
+          ],
+          "biases": [
+            27
+          ],
+          "this": [
+            29
+          ],
+          "approach.": [
+            30
+          ],
+          "Here,": [
+            31
+          ],
+          "we": [
+            32
+          ],
+          "perform": [
+            33
+          ],
+          "variance": [
+            35
+          ],
+          "decomposition": [
+            36
+          ],
+          "partition": [
+            38
+          ],
+          "uncertainty": [
+            39,
+            82
+          ],
+          "in": [
+            40
+          ],
+          "global": [
+            41
+          ],
+          "projections": [
+            43
+          ],
+          "quantify": [
+            45
+          ],
+          "relative": [
+            47,
+            132
+          ],
+          "importance": [
+            48
+          ],
+          "downscaling": [
+            50,
+            76,
+            115
+          ],
+          "bias-correction.": [
+            52
+          ],
+          "We": [
+            53,
+            73
+          ],
+          "analyze": [
+            54
+          ],
+          "simple": [
+            55
+          ],
+          "metrics": [
+            57
+          ],
+          "such": [
+            58
+          ],
+          "as": [
+            59,
+            65,
+            67,
+            122
+          ],
+          "annual": [
+            60
+          ],
+          "temperature": [
+            61
+          ],
+          "precipitation": [
+            63
+          ],
+          "averages,": [
+            64
+          ],
+          "well": [
+            66
+          ],
+          "several": [
+            68
+          ],
+          "indices": [
+            69
+          ],
+          "extremes.": [
+            72
+          ],
+          "find": [
+            74
+          ],
+          "that": [
+            75
+          ],
+          "bias-correction": [
+            78,
+            117
+          ],
+          "contribute": [
+            80
+          ],
+          "substantial": [
+            81
+          ],
+          "local": [
+            84
+          ],
+          "decision-relevant": [
+            85
+          ],
+          "outcomes,": [
+            87
+          ],
+          "though": [
+            88
+          ],
+          "our": [
+            89
+          ],
+          "results": [
+            90,
+            101
+          ],
+          "are": [
+            91
+          ],
+          "strongly": [
+            92
+          ],
+          "heterogeneous": [
+            93
+          ],
+          "across": [
+            94
+          ],
+          "space,": [
+            95
+          ],
+          "time,": [
+            96
+          ],
+          "metrics.": [
+            99
+          ],
+          "Our": [
+            100
+          ],
+          "can": [
+            102
+          ],
+          "provide": [
+            103
+          ],
+          "guidance": [
+            104
+          ],
+          "impact": [
+            106
+          ],
+          "modelers": [
+            107
+          ],
+          "decision-makers": [
+            109
+          ],
+          "regarding": [
+            110
+          ],
+          "associated": [
+            113
+          ],
+          "with": [
+            114
+          ],
+          "when": [
+            118
+          ],
+          "performing": [
+            119
+          ],
+          "local-scale": [
+            120
+          ],
+          "analyses,": [
+            121
+          ],
+          "neglecting": [
+            123
+          ],
+          "account": [
+            125
+          ],
+          "for": [
+            126
+          ],
+          "these": [
+            127
+          ],
+          "may": [
+            129
+          ],
+          "risk": [
+            130
+          ],
+          "overconfidence": [
+            131
+          ],
+          "full": [
+            135
+          ],
+          "range": [
+            136
+          ],
+          "possible": [
+            138
+          ],
+          "futures.": [
+            140
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 87
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 53
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 29
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 2
+          }
+        ],
+        "updated_date": "2026-11-13T13:42:25.865203",
+        "created_date": "2023-10-01T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W3006510575",
+        "doi": "https://doi.org/10.3390/w12020482",
+        "title": "Performance Evaluation of Bias Correction Methods for Climate Change Monthly Precipitation Projections over Costa Rica",
+        "display_name": "Performance Evaluation of Bias Correction Methods for Climate Change Monthly Precipitation Projections over Costa Rica",
+        "relevance_score": 35.15266,
+        "publication_year": 2020,
+        "publication_date": "2020-02-11",
+        "ids": {
+          "openalex": "https://openalex.org/W3006510575",
+          "doi": "https://doi.org/10.3390/w12020482",
+          "mag": "3006510575"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.3390/w12020482",
+          "doi": "https://doi.org/10.3390/w12020482",
+          "is_oa": true,
+          "landing_page_url": "http://dx.doi.org/10.3390/w12020482",
+          "pdf_url": "https://www.mdpi.com/2073-4441/12/2/482/pdf?version=1583032763",
+          "source": {
+            "id": "https://openalex.org/S134216166",
+            "display_name": "Water",
+            "issn_l": "2073-4441",
+            "issn": [
+              "2073-4441"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "norway-1",
+              "poland-100",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310310987",
+            "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310310987"
+            ],
+            "host_organization_lineage_names": [
+              "Multidisciplinary Digital Publishing Institute"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Water",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W3006510575"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "gold",
+          "oa_url": "https://www.mdpi.com/2073-4441/12/2/482/pdf?version=1583032763",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5025866267",
+              "display_name": "Maikel M\u00e9ndez-Morales",
+              "orcid": "https://orcid.org/0000-0003-1919-141X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1919-141X"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I145372079",
+                "display_name": "Instituto Tecnol\u00f3gico de Costa Rica",
+                "ror": "https://ror.org/04zhrfn38",
+                "country_code": "CR",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I145372079"
+                ]
+              }
+            ],
+            "countries": [
+              "CR"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Maikel Mendez",
+            "raw_affiliation_strings": [
+              "Instituto Tecnol\u00f3gico de Costa Rica, Escuela de Ingenier\u00eda en Construcci\u00f3n, Cartago 159-7050, Costa Rica"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0003-1919-141X",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Instituto Tecnol\u00f3gico de Costa Rica, Escuela de Ingenier\u00eda en Construcci\u00f3n, Cartago 159-7050, Costa Rica",
+                "institution_ids": [
+                  "https://openalex.org/I145372079"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5023840970",
+              "display_name": "Ben H. P. Maathuis",
+              "orcid": "https://orcid.org/0000-0001-7733-6512",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-7733-6512"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I4387152645",
+                "display_name": "International Institute for Geo-Information Science and Earth Observation",
+                "ror": "https://ror.org/038v7xb98",
+                "country_code": "NL",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I4387152645",
+                  "https://openalex.org/I94624287"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I94624287",
+                "display_name": "University of Twente",
+                "ror": "https://ror.org/006hf6230",
+                "country_code": "NL",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I94624287"
+                ]
+              }
+            ],
+            "countries": [
+              "NL"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Ben Maathuis",
+            "raw_affiliation_strings": [
+              "Faculty of Geo-Information Science and Earth Observation (ITC), Department of Water Resources, University of Twente, 99 7514 AE Enschede Hengelosestraat, The Netherlands"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Faculty of Geo-Information Science and Earth Observation (ITC), Department of Water Resources, University of Twente, 99 7514 AE Enschede Hengelosestraat, The Netherlands",
+                "institution_ids": [
+                  "https://openalex.org/I4387152645",
+                  "https://openalex.org/I94624287"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5041449472",
+              "display_name": "David Hein\u2010Griggs",
+              "orcid": "https://orcid.org/0000-0003-2304-2409",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-2304-2409"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I23923803",
+                "display_name": "University of Exeter",
+                "ror": "https://ror.org/03yghzc09",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I23923803"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "David Hein-Griggs",
+            "raw_affiliation_strings": [
+              "Department of Geography, University of Exeter, Exeter EX4 4PS, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Geography, University of Exeter, Exeter EX4 4PS, UK",
+                "institution_ids": [
+                  "https://openalex.org/I23923803"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5050697225",
+              "display_name": "Luis-Fernando Alvarado-Gamboa",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "raw_author_name": "Luis-Fernando Alvarado-Gamboa",
+            "raw_affiliation_strings": [
+              "Instituto Meteorol\u00f3gico Nacional, Departamento de Climatolog\u00eda e Investigaciones Aplicadas, San Jos\u00e9 5383-1000, Costa Rica"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Instituto Meteorol\u00f3gico Nacional, Departamento de Climatolog\u00eda e Investigaciones Aplicadas, San Jos\u00e9 5383-1000, Costa Rica",
+                "institution_ids": []
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 3,
+        "institutions_distinct_count": 4,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5025866267"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I145372079"
+        ],
+        "apc_list": {
+          "value": 1800,
+          "currency": "CHF",
+          "value_usd": 1901
+        },
+        "apc_paid": {
+          "value": 1800,
+          "currency": "CHF",
+          "value_usd": 1901
+        },
+        "fwci": 6.7773,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 235,
+        "citation_normalized_percentile": {
+          "value": 0.97844315,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 88,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "12",
+          "issue": "2",
+          "first_page": "482",
+          "last_page": "482"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10029",
+          "display_name": "Climate variability and models",
+          "score": 0.9955999851226807,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10029",
+            "display_name": "Climate variability and models",
+            "score": 0.9955999851226807,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2306",
+              "display_name": "Global and Planetary Change"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11234",
+            "display_name": "Precipitation Measurement and Analysis",
+            "score": 0.0015999999595806003,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1902",
+              "display_name": "Atmospheric Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/19",
+              "display_name": "Earth and Planetary Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10330",
+            "display_name": "Hydrology and Watershed Management Studies",
+            "score": 0.0008999999845400453,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2312",
+              "display_name": "Water Science and Technology"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/monthly-precipitation",
+            "display_name": "monthly rainfall",
+            "score": 0.8980000019073486
+          },
+          {
+            "id": "https://openalex.org/keywords/empirical-quantile-mapping",
+            "display_name": "empirical quantile mapping",
+            "score": 0.8119999766349792
+          },
+          {
+            "id": "https://openalex.org/keywords/delta-method",
+            "display_name": "delta method",
+            "score": 0.6179999709129333
+          },
+          {
+            "id": "https://openalex.org/keywords/linear-scaling",
+            "display_name": "linear scaling",
+            "score": 0.7720000147819519
+          },
+          {
+            "id": "https://openalex.org/keywords/regional-climate-model",
+            "display_name": "regional climate model",
+            "score": 0.6050000190734863
+          },
+          {
+            "id": "https://openalex.org/keywords/global-climate-models",
+            "display_name": "global climate models",
+            "score": 0.6480000019073486
+          },
+          {
+            "id": "https://openalex.org/keywords/precipitation-trends",
+            "display_name": "precipitation trends",
+            "score": 0.37599998712539673
+          },
+          {
+            "id": "https://openalex.org/keywords/costa-rica",
+            "display_name": "Costa Rica",
+            "score": 0.4950000047683716
+          },
+          {
+            "id": "https://openalex.org/keywords/rcp-scenarios",
+            "display_name": "RCP scenarios",
+            "score": 0.8450000286102295
+          },
+          {
+            "id": "https://openalex.org/keywords/seasonal-rainfall-variability",
+            "display_name": "seasonal rainfall variability",
+            "score": 0.46700000762939453
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C49204034",
+            "wikidata": "https://www.wikidata.org/wiki/Q52139",
+            "display_name": "Climatology",
+            "level": 1,
+            "score": 0.7676286101341248
+          },
+          {
+            "id": "https://openalex.org/C107054158",
+            "wikidata": "https://www.wikidata.org/wiki/Q25257",
+            "display_name": "Precipitation",
+            "level": 2,
+            "score": 0.7245224714279175
+          },
+          {
+            "id": "https://openalex.org/C39432304",
+            "wikidata": "https://www.wikidata.org/wiki/Q188847",
+            "display_name": "Environmental science",
+            "level": 0,
+            "score": 0.718113362789154
+          },
+          {
+            "id": "https://openalex.org/C118671147",
+            "wikidata": "https://www.wikidata.org/wiki/Q578714",
+            "display_name": "Quantile",
+            "level": 2,
+            "score": 0.7051925659179688
+          },
+          {
+            "id": "https://openalex.org/C143742823",
+            "wikidata": "https://www.wikidata.org/wiki/Q5513004",
+            "display_name": "GCM transcription factors",
+            "level": 4,
+            "score": 0.6737826466560364
+          },
+          {
+            "id": "https://openalex.org/C141452985",
+            "wikidata": "https://www.wikidata.org/wiki/Q650994",
+            "display_name": "General Circulation Model",
+            "level": 3,
+            "score": 0.463419109582901
+          },
+          {
+            "id": "https://openalex.org/C2778760939",
+            "wikidata": "https://www.wikidata.org/wiki/Q7314241",
+            "display_name": "Representative Concentration Pathways",
+            "level": 4,
+            "score": 0.4435034394264221
+          },
+          {
+            "id": "https://openalex.org/C168754636",
+            "wikidata": "https://www.wikidata.org/wiki/Q620920",
+            "display_name": "Climate model",
+            "level": 3,
+            "score": 0.44131791591644287
+          },
+          {
+            "id": "https://openalex.org/C132651083",
+            "wikidata": "https://www.wikidata.org/wiki/Q7942",
+            "display_name": "Climate change",
+            "level": 2,
+            "score": 0.3988284766674042
+          },
+          {
+            "id": "https://openalex.org/C153294291",
+            "wikidata": "https://www.wikidata.org/wiki/Q25261",
+            "display_name": "Meteorology",
+            "level": 1,
+            "score": 0.2883244454860687
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.19445472955703735
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.18176135420799255
+          },
+          {
+            "id": "https://openalex.org/C205649164",
+            "wikidata": "https://www.wikidata.org/wiki/Q1071",
+            "display_name": "Geography",
+            "level": 0,
+            "score": 0.17476853728294373
+          },
+          {
+            "id": "https://openalex.org/C127313418",
+            "wikidata": "https://www.wikidata.org/wiki/Q1069",
+            "display_name": "Geology",
+            "level": 0,
+            "score": 0.07657667994499207
+          },
+          {
+            "id": "https://openalex.org/C111368507",
+            "wikidata": "https://www.wikidata.org/wiki/Q43518",
+            "display_name": "Oceanography",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 5,
+        "locations": [
+          {
+            "id": "doi:10.3390/w12020482",
+            "doi": "https://doi.org/10.3390/w12020482",
+            "is_oa": true,
+            "landing_page_url": "http://dx.doi.org/10.3390/w12020482",
+            "pdf_url": "https://www.mdpi.com/2073-4441/12/2/482/pdf?version=1583032763",
+            "source": {
+              "id": "https://openalex.org/S134216166",
+              "display_name": "Water",
+              "issn_l": "2073-4441",
+              "issn": [
+                "2073-4441"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "anvur-scientific",
+                "cwts-core",
+                "norway-1",
+                "poland-100",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310310987",
+              "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310310987"
+              ],
+              "host_organization_lineage_names": [
+                "Multidisciplinary Digital Publishing Institute"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Water",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:ris.utwente.nl:openaire/fa9802fd-471b-4c70-988a-dc9429a44de4",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://research.utwente.nl/en/publications/fa9802fd-471b-4c70-988a-dc9429a44de4",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4406922991",
+              "display_name": "University of Twente Research Information",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Mendez, M, Maathuis, B, Hein-griggs, D & Alvarado-gamboa, L 2020, 'Performance evaluation of bias correction methods for climate change monthly precipitation projections over Costa Rica', Water (Basel), vol. 12, no. 2, 482, pp. 1-34. https://doi.org/10.3390/w12020482",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:figshare.com:article/29772725",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://figshare.com/articles/journal_contribution/Performance_evaluation_of_bias_correction_methods_for_climate_change_monthly_precipitation_projections_over_Costa_Rica/29772725",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196282",
+              "display_name": "Figshare",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4210132348",
+              "host_organization_name": "Figshare (United Kingdom)",
+              "host_organization_lineage": [
+                "https://openalex.org/I4210132348"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:oai:ore.exeter.ac.uk:10871/122498",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "http://hdl.handle.net/10871/122498",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401998",
+              "display_name": "Open Research Exeter (University of Exeter)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I23923803",
+              "host_organization_name": "University of Exeter",
+              "host_organization_lineage": [
+                "https://openalex.org/I23923803"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Article"
+          },
+          {
+            "id": "pmh:ut:oai:ris.utwente.nl:publications/fa9802fd-471b-4c70-988a-dc9429a44de4",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://research.utwente.nl/en/publications/fa9802fd-471b-4c70-988a-dc9429a44de4",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4406922991",
+              "display_name": "University of Twente Research Information",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Water, 12(2):482, 1 - 34. MDPI",
+            "raw_type": "info:eu-repo/semantics/article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.3390/w12020482",
+          "doi": "https://doi.org/10.3390/w12020482",
+          "is_oa": true,
+          "landing_page_url": "http://dx.doi.org/10.3390/w12020482",
+          "pdf_url": "https://www.mdpi.com/2073-4441/12/2/482/pdf?version=1583032763",
+          "source": {
+            "id": "https://openalex.org/S134216166",
+            "display_name": "Water",
+            "issn_l": "2073-4441",
+            "issn": [
+              "2073-4441"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "norway-1",
+              "poland-100",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310310987",
+            "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310310987"
+            ],
+            "host_organization_lineage_names": [
+              "Multidisciplinary Digital Publishing Institute"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Water",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 1.0,
+            "id": "https://metadata.un.org/sdg/13",
+            "display_name": "Climate action"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G7898372139",
+            "display_name": null,
+            "funder_award_id": "1411013",
+            "funder_id": "https://openalex.org/F4320323280",
+            "funder_display_name": "Instituto Tecnol\u00f3gico de Costa Rica"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320323280",
+            "display_name": "Instituto Tecnol\u00f3gico de Costa Rica",
+            "ror": "https://ror.org/04zhrfn38"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W3006510575.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W3006510575.grobid-xml"
+        },
+        "referenced_works_count": 109,
+        "referenced_works": [
+          "https://openalex.org/W75231382",
+          "https://openalex.org/W167573471",
+          "https://openalex.org/W937694889",
+          "https://openalex.org/W1522049197",
+          "https://openalex.org/W1602738779",
+          "https://openalex.org/W1642199944",
+          "https://openalex.org/W1917061602",
+          "https://openalex.org/W1941746952",
+          "https://openalex.org/W1956419907",
+          "https://openalex.org/W1966421922",
+          "https://openalex.org/W1967312957",
+          "https://openalex.org/W1969312858",
+          "https://openalex.org/W1973946911",
+          "https://openalex.org/W1978255628",
+          "https://openalex.org/W1980846233",
+          "https://openalex.org/W1992185994",
+          "https://openalex.org/W1996014677",
+          "https://openalex.org/W1998360908",
+          "https://openalex.org/W2002340384",
+          "https://openalex.org/W2004054442",
+          "https://openalex.org/W2005729679",
+          "https://openalex.org/W2008372515",
+          "https://openalex.org/W2008669846",
+          "https://openalex.org/W2014798038",
+          "https://openalex.org/W2014990487",
+          "https://openalex.org/W2017559255",
+          "https://openalex.org/W2021745814",
+          "https://openalex.org/W2024966118",
+          "https://openalex.org/W2030496351",
+          "https://openalex.org/W2030504740",
+          "https://openalex.org/W2032838653",
+          "https://openalex.org/W2036673258",
+          "https://openalex.org/W2037641802",
+          "https://openalex.org/W2039051017",
+          "https://openalex.org/W2039240409",
+          "https://openalex.org/W2044092569",
+          "https://openalex.org/W2046340073",
+          "https://openalex.org/W2046941888",
+          "https://openalex.org/W2047474193",
+          "https://openalex.org/W2050750306",
+          "https://openalex.org/W2052138108",
+          "https://openalex.org/W2053693629",
+          "https://openalex.org/W2063495784",
+          "https://openalex.org/W2064908124",
+          "https://openalex.org/W2069201244",
+          "https://openalex.org/W2075685626",
+          "https://openalex.org/W2079000795",
+          "https://openalex.org/W2082735581",
+          "https://openalex.org/W2084557503",
+          "https://openalex.org/W2085907528",
+          "https://openalex.org/W2088417377",
+          "https://openalex.org/W2089729606",
+          "https://openalex.org/W2092611860",
+          "https://openalex.org/W2093141926",
+          "https://openalex.org/W2097860437",
+          "https://openalex.org/W2102148524",
+          "https://openalex.org/W2102872847",
+          "https://openalex.org/W2105993164",
+          "https://openalex.org/W2115390542",
+          "https://openalex.org/W2117355623",
+          "https://openalex.org/W2130997496",
+          "https://openalex.org/W2133004253",
+          "https://openalex.org/W2142249749",
+          "https://openalex.org/W2146939523",
+          "https://openalex.org/W2147731777",
+          "https://openalex.org/W2149900683",
+          "https://openalex.org/W2150285422",
+          "https://openalex.org/W2151150232",
+          "https://openalex.org/W2152476840",
+          "https://openalex.org/W2156903980",
+          "https://openalex.org/W2165481117",
+          "https://openalex.org/W2166535858",
+          "https://openalex.org/W2167313701",
+          "https://openalex.org/W2168873818",
+          "https://openalex.org/W2172191993",
+          "https://openalex.org/W2177189184",
+          "https://openalex.org/W2321113463",
+          "https://openalex.org/W2322546971",
+          "https://openalex.org/W2333538346",
+          "https://openalex.org/W2396311076",
+          "https://openalex.org/W2510690364",
+          "https://openalex.org/W2510834378",
+          "https://openalex.org/W2519924701",
+          "https://openalex.org/W2520136722",
+          "https://openalex.org/W2542269584",
+          "https://openalex.org/W2567635462",
+          "https://openalex.org/W2581280978",
+          "https://openalex.org/W2589530245",
+          "https://openalex.org/W2606894135",
+          "https://openalex.org/W2658430873",
+          "https://openalex.org/W2734360073",
+          "https://openalex.org/W2752316436",
+          "https://openalex.org/W2767154044",
+          "https://openalex.org/W2793095339",
+          "https://openalex.org/W2800679202",
+          "https://openalex.org/W2802722930",
+          "https://openalex.org/W2885490563",
+          "https://openalex.org/W2888315744",
+          "https://openalex.org/W2904440264",
+          "https://openalex.org/W2905014577",
+          "https://openalex.org/W2908014315",
+          "https://openalex.org/W2931623877",
+          "https://openalex.org/W2939414353",
+          "https://openalex.org/W2942498410",
+          "https://openalex.org/W2962467581",
+          "https://openalex.org/W2964732642",
+          "https://openalex.org/W2971865653",
+          "https://openalex.org/W2978847467",
+          "https://openalex.org/W6652729474"
+        ],
+        "related_works": [
+          "https://openalex.org/W2581280978",
+          "https://openalex.org/W4242076158",
+          "https://openalex.org/W4416733241",
+          "https://openalex.org/W3174819542",
+          "https://openalex.org/W2118287872",
+          "https://openalex.org/W4220787239",
+          "https://openalex.org/W7162917032",
+          "https://openalex.org/W7214658209",
+          "https://openalex.org/W2129065079",
+          "https://openalex.org/W3082473078"
+        ],
+        "abstract_inverted_index": {
+          "Six": [
+            0
+          ],
+          "bias": [
+            1,
+            109,
+            322
+          ],
+          "correction": [
+            2,
+            323
+          ],
+          "(BC)": [
+            3
+          ],
+          "methods;": [
+            4
+          ],
+          "delta-method": [
+            5
+          ],
+          "(DT),": [
+            6
+          ],
+          "linear": [
+            7
+          ],
+          "scaling": [
+            8
+          ],
+          "(LS),": [
+            9
+          ],
+          "power": [
+            10
+          ],
+          "transformation": [
+            11
+          ],
+          "of": [
+            12,
+            34,
+            56,
+            108,
+            147,
+            247,
+            260,
+            286,
+            330
+          ],
+          "precipitation": [
+            13,
+            37,
+            66,
+            148,
+            191,
+            254,
+            292,
+            306,
+            332
+          ],
+          "(PTR),": [
+            14
+          ],
+          "empirical": [
+            15
+          ],
+          "quantile": [
+            16,
+            20,
+            25
+          ],
+          "mapping": [
+            17,
+            21,
+            26
+          ],
+          "(EQM),": [
+            18
+          ],
+          "gamma": [
+            19
+          ],
+          "(GQM)": [
+            22
+          ],
+          "and": [
+            23,
+            75,
+            91,
+            102,
+            114,
+            129,
+            138,
+            161,
+            172,
+            205,
+            212,
+            315
+          ],
+          "gamma-pareto": [
+            24
+          ],
+          "(GPQM)": [
+            27
+          ],
+          "were": [
+            28,
+            68,
+            121,
+            140
+          ],
+          "applied": [
+            29,
+            142
+          ],
+          "to": [
+            30,
+            143,
+            194,
+            309
+          ],
+          "adjust": [
+            31
+          ],
+          "the": [
+            32,
+            71,
+            78,
+            106,
+            133,
+            145,
+            175,
+            181,
+            198,
+            224,
+            235,
+            242,
+            248,
+            250,
+            258,
+            261,
+            269,
+            276,
+            302
+          ],
+          "biases": [
+            33,
+            85,
+            112,
+            146
+          ],
+          "historical": [
+            35
+          ],
+          "monthly": [
+            36
+          ],
+          "outputs": [
+            38,
+            90
+          ],
+          "from": [
+            39,
+            150,
+            180,
+            192
+          ],
+          "five": [
+            40
+          ],
+          "General": [
+            41
+          ],
+          "Circulation": [
+            42
+          ],
+          "Models": [
+            43,
+            51
+          ],
+          "(GCMs)": [
+            44
+          ],
+          "dynamically": [
+            45
+          ],
+          "downscaled": [
+            46
+          ],
+          "by": [
+            47
+          ],
+          "two": [
+            48
+          ],
+          "Regional": [
+            49
+          ],
+          "Climate": [
+            50
+          ],
+          "(RCMs)": [
+            52
+          ],
+          "for": [
+            53,
+            70,
+            123,
+            155,
+            210,
+            218,
+            241,
+            268,
+            275,
+            299
+          ],
+          "a": [
+            54,
+            156,
+            186
+          ],
+          "total": [
+            55
+          ],
+          "seven": [
+            57
+          ],
+          "different": [
+            58
+          ],
+          "GCM-RCM": [
+            59,
+            89,
+            97,
+            125,
+            153,
+            331
+          ],
+          "pairs": [
+            60
+          ],
+          "over": [
+            61,
+            77,
+            334
+          ],
+          "Costa": [
+            62,
+            339
+          ],
+          "Rica.": [
+            63,
+            340
+          ],
+          "High-resolution": [
+            64
+          ],
+          "gridded": [
+            65
+          ],
+          "observations": [
+            67
+          ],
+          "used": [
+            69
+          ],
+          "control": [
+            72,
+            176
+          ],
+          "period": [
+            73,
+            79,
+            164,
+            177,
+            271
+          ],
+          "1951\u20131980": [
+            74
+          ],
+          "validated": [
+            76
+          ],
+          "1981\u20131995.": [
+            80
+          ],
+          "Results": [
+            81,
+            179
+          ],
+          "show": [
+            82
+          ],
+          "that": [
+            83,
+            321
+          ],
+          "considerable": [
+            84
+          ],
+          "exist": [
+            86
+          ],
+          "between": [
+            87
+          ],
+          "uncorrected": [
+            88
+          ],
+          "observations,": [
+            92
+          ],
+          "which": [
+            93
+          ],
+          "largely": [
+            94
+          ],
+          "depend": [
+            95
+          ],
+          "on": [
+            96
+          ],
+          "pair,": [
+            98
+          ],
+          "seasonality,": [
+            99
+          ],
+          "climatic": [
+            100,
+            220
+          ],
+          "region": [
+            101,
+            278
+          ],
+          "spatial": [
+            103
+          ],
+          "resolution.": [
+            104
+          ],
+          "After": [
+            105
+          ],
+          "application": [
+            107,
+            329
+          ],
+          "correction,": [
+            110
+          ],
+          "substantial": [
+            111
+          ],
+          "reductions": [
+            113
+          ],
+          "comparable": [
+            115
+          ],
+          "performances": [
+            116
+          ],
+          "among": [
+            117
+          ],
+          "most": [
+            118,
+            124,
+            246
+          ],
+          "BC": [
+            119
+          ],
+          "methods": [
+            120
+          ],
+          "observed": [
+            122
+          ],
+          "pairs;": [
+            126
+          ],
+          "with": [
+            127,
+            214,
+            293,
+            311
+          ],
+          "EQM": [
+            128,
+            137
+          ],
+          "DT": [
+            130,
+            139
+          ],
+          "marginally": [
+            131
+          ],
+          "outperforming": [
+            132
+          ],
+          "remaining": [
+            134
+          ],
+          "methods.": [
+            135
+          ],
+          "Consequently,": [
+            136
+          ],
+          "selectively": [
+            141
+          ],
+          "correct": [
+            144
+          ],
+          "projections": [
+            149,
+            333
+          ],
+          "each": [
+            151
+          ],
+          "individual": [
+            152
+          ],
+          "pair": [
+            154
+          ],
+          "near-future": [
+            157
+          ],
+          "(2011\u20132040),": [
+            158
+          ],
+          "mid-future": [
+            159
+          ],
+          "(2041\u20132070)": [
+            160
+          ],
+          "far-future": [
+            162,
+            195,
+            270
+          ],
+          "(2071\u20132100)": [
+            163
+          ],
+          "under": [
+            165,
+            238,
+            272
+          ],
+          "Representative": [
+            166
+          ],
+          "Concentration": [
+            167
+          ],
+          "Pathways": [
+            168
+          ],
+          "(RCPs)": [
+            169
+          ],
+          "2.6,": [
+            170
+          ],
+          "4.5": [
+            171
+          ],
+          "8.5": [
+            173
+          ],
+          "using": [
+            174
+          ],
+          "1961\u20131990.": [
+            178
+          ],
+          "bias-corrected": [
+            182
+          ],
+          "future": [
+            183,
+            287,
+            316
+          ],
+          "ensemble-mean": [
+            184
+          ],
+          "anticipate": [
+            185
+          ],
+          "marked": [
+            187
+          ],
+          "decreasing": [
+            188
+          ],
+          "trend": [
+            189
+          ],
+          "in": [
+            190,
+            253,
+            291
+          ],
+          "near": [
+            193
+          ],
+          "periods": [
+            196
+          ],
+          "during": [
+            197,
+            234
+          ],
+          "dry": [
+            199,
+            236
+          ],
+          "season": [
+            200,
+            237,
+            263
+          ],
+          "(December,": [
+            201
+          ],
+          "January,": [
+            202
+          ],
+          "February": [
+            203
+          ],
+          "(DJF)": [
+            204
+          ],
+          "March,": [
+            206
+          ],
+          "April,": [
+            207
+          ],
+          "May": [
+            208
+          ],
+          "(MAM))": [
+            209
+          ],
+          "RCP4.5": [
+            211
+          ],
+          "8.5;": [
+            213
+          ],
+          "pronounced": [
+            215
+          ],
+          "drier": [
+            216
+          ],
+          "conditions": [
+            217,
+            231,
+            282
+          ],
+          "those": [
+            219
+          ],
+          "regions": [
+            221
+          ],
+          "draining": [
+            222
+          ],
+          "towards": [
+            223
+          ],
+          "Pacific": [
+            225
+          ],
+          "Ocean.": [
+            226
+          ],
+          "In": [
+            227,
+            245
+          ],
+          "contrast,": [
+            228
+          ],
+          "mostly": [
+            229,
+            280
+          ],
+          "wetter": [
+            230,
+            281
+          ],
+          "are": [
+            232,
+            283,
+            297
+          ],
+          "expected": [
+            233,
+            298
+          ],
+          "RCP2.6,": [
+            239
+          ],
+          "particularly": [
+            240
+          ],
+          "Caribbean": [
+            243,
+            277,
+            303
+          ],
+          "region.": [
+            244
+          ],
+          "country,": [
+            249
+          ],
+          "greatest": [
+            251
+          ],
+          "decrease": [
+            252
+          ],
+          "is": [
+            255,
+            307
+          ],
+          "projected": [
+            256
+          ],
+          "at": [
+            257
+          ],
+          "beginning": [
+            259
+          ],
+          "rainy": [
+            262
+          ],
+          "(June,": [
+            264
+          ],
+          "July,": [
+            265
+          ],
+          "August": [
+            266
+          ],
+          "(JJA))": [
+            267
+          ],
+          "RCP8.5,": [
+            273
+          ],
+          "except": [
+            274
+          ],
+          "where": [
+            279,
+            305
+          ],
+          "anticipated.": [
+            284
+          ],
+          "Regardless": [
+            285
+          ],
+          "period,": [
+            288
+          ],
+          "slight": [
+            289
+          ],
+          "increases": [
+            290
+          ],
+          "higher": [
+            294
+          ],
+          "radiative": [
+            295,
+            313
+          ],
+          "forcing": [
+            296,
+            314
+          ],
+          "SON": [
+            300
+          ],
+          "excluding": [
+            301
+          ],
+          "region,": [
+            304
+          ],
+          "likely": [
+            308
+          ],
+          "increase": [
+            310
+          ],
+          "increasing": [
+            312
+          ],
+          "period.": [
+            317
+          ],
+          "This": [
+            318
+          ],
+          "study": [
+            319
+          ],
+          "demonstrates": [
+            320
+          ],
+          "should": [
+            324
+          ],
+          "be": [
+            325
+          ],
+          "considered": [
+            326
+          ],
+          "before": [
+            327
+          ],
+          "direct": [
+            328
+          ],
+          "complex": [
+            335
+          ],
+          "territories": [
+            336
+          ],
+          "such": [
+            337
+          ],
+          "as": [
+            338
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 41
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 43
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 52
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 37
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 28
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 27
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-13T13:42:25.865203",
+        "created_date": "2020-02-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W3000355687",
+        "doi": "https://doi.org/10.1038/s41597-019-0343-8",
+        "title": "High-resolution and bias-corrected CMIP5 projections for climate change impact assessments",
+        "display_name": "High-resolution and bias-corrected CMIP5 projections for climate change impact assessments",
+        "relevance_score": 34.905823,
+        "publication_year": 2020,
+        "publication_date": "2020-01-20",
+        "ids": {
+          "openalex": "https://openalex.org/W3000355687",
+          "doi": "https://doi.org/10.1038/s41597-019-0343-8",
+          "mag": "3000355687",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/31959765",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/6971081"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1038/s41597-019-0343-8",
+          "doi": "https://doi.org/10.1038/s41597-019-0343-8",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41597-019-0343-8",
+          "pdf_url": "https://www.nature.com/articles/s41597-019-0343-8.pdf",
+          "source": {
+            "id": "https://openalex.org/S2607323502",
+            "display_name": "Scientific Data",
+            "issn_l": "2052-4463",
+            "issn": [
+              "2052-4463"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "jufo-1",
+              "ki-jl-1",
+              "medline",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Scientific Data",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W3000355687"
+        ],
+        "child_works_count": 0,
+        "type": "data-paper",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "doaj",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "gold",
+          "oa_url": "https://www.nature.com/articles/s41597-019-0343-8.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5067876653",
+              "display_name": "Carlos E. Navarro Racines",
+              "orcid": "https://orcid.org/0000-0002-8692-6431",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8692-6431"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I64492213",
+                "display_name": "International Center for Tropical Agriculture",
+                "ror": "https://ror.org/037wny167",
+                "country_code": "CO",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ],
+            "countries": [
+              "CO"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Carlos Navarro-Racines",
+            "raw_affiliation_strings": [
+              "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+              "International Center for Tropical Agriculture (CIAT), Cali, Colombia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "raw_affiliation_string": "International Center for Tropical Agriculture (CIAT), Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5095016361",
+              "display_name": "Jaime Tarapues-Montenegro",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I64492213",
+                "display_name": "International Center for Tropical Agriculture",
+                "ror": "https://ror.org/037wny167",
+                "country_code": "CO",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ],
+            "countries": [
+              "CO"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Jaime Tarapues",
+            "raw_affiliation_strings": [
+              "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+              "International Center for Tropical Agriculture (CIAT), Cali, Colombia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "raw_affiliation_string": "International Center for Tropical Agriculture (CIAT), Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5044287766",
+              "display_name": "Philip K. Thornton",
+              "orcid": "https://orcid.org/0000-0002-1854-0182",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-1854-0182"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I58422712",
+                "display_name": "International Livestock Research Institute",
+                "ror": "https://ror.org/01jxjwb74",
+                "country_code": "KE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I58422712"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I64492213",
+                "display_name": "International Center for Tropical Agriculture",
+                "ror": "https://ror.org/037wny167",
+                "country_code": "CO",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ],
+            "countries": [
+              "CO",
+              "KE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Philip Thornton",
+            "raw_affiliation_strings": [
+              "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+              "International Livestock Research Institute (ILRI), Nairobi, Kenya"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "raw_affiliation_string": "International Livestock Research Institute (ILRI), Nairobi, Kenya",
+                "institution_ids": [
+                  "https://openalex.org/I58422712"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5038971318",
+              "display_name": "Andy Jarvis",
+              "orcid": "https://orcid.org/0000-0001-6543-0798",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-6543-0798"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I64492213",
+                "display_name": "International Center for Tropical Agriculture",
+                "ror": "https://ror.org/037wny167",
+                "country_code": "CO",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ],
+            "countries": [
+              "CO"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Andy Jarvis",
+            "raw_affiliation_strings": [
+              "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+              "International Center for Tropical Agriculture (CIAT), Cali, Colombia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "raw_affiliation_string": "International Center for Tropical Agriculture (CIAT), Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5078211596",
+              "display_name": "Juli\u00e1n Ram\u00edrez-Villegas",
+              "orcid": "https://orcid.org/0000-0002-8044-583X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8044-583X"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1286583668",
+                "display_name": "CGIAR",
+                "ror": "https://ror.org/04c4bm785",
+                "country_code": "FR",
+                "type": "other",
+                "lineage": [
+                  "https://openalex.org/I1286583668"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I130828816",
+                "display_name": "University of Leeds",
+                "ror": "https://ror.org/024mrxd33",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I130828816"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210118691",
+                "display_name": "International Center for Tropical Agriculture",
+                "ror": "https://ror.org/02qk18s08",
+                "country_code": "KE",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I4210118691",
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I64492213",
+                "display_name": "International Center for Tropical Agriculture",
+                "ror": "https://ror.org/037wny167",
+                "country_code": "CO",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ],
+            "countries": [
+              "CO",
+              "FR",
+              "GB",
+              "KE"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Julian Ramirez-Villegas",
+            "raw_affiliation_strings": [
+              "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia. j.r.villegas@cgiar.org",
+              "International Center for Tropical Agriculture (CIAT), Cali, Colombia. j.r.villegas@cgiar.org",
+              "School of Earth and Environment, University of Leeds, Leeds, UK. j.r.villegas@cgiar.org",
+              "International Center for Tropical Agriculture (CIAT), Cali, Colombia"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-8044-583X",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), c/o CIAT, Cali, Colombia. j.r.villegas@cgiar.org",
+                "institution_ids": [
+                  "https://openalex.org/I1286583668",
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "raw_affiliation_string": "International Center for Tropical Agriculture (CIAT), Cali, Colombia. j.r.villegas@cgiar.org",
+                "institution_ids": [
+                  "https://openalex.org/I4210118691",
+                  "https://openalex.org/I64492213"
+                ]
+              },
+              {
+                "raw_affiliation_string": "School of Earth and Environment, University of Leeds, Leeds, UK. j.r.villegas@cgiar.org",
+                "institution_ids": [
+                  "https://openalex.org/I130828816"
+                ]
+              },
+              {
+                "raw_affiliation_string": "International Center for Tropical Agriculture (CIAT), Cali, Colombia",
+                "institution_ids": [
+                  "https://openalex.org/I64492213"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 4,
+        "institutions_distinct_count": 5,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5078211596"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I1286583668",
+          "https://openalex.org/I130828816",
+          "https://openalex.org/I4210118691",
+          "https://openalex.org/I64492213"
+        ],
+        "apc_list": {
+          "value": 1870,
+          "currency": "USD",
+          "value_usd": 1870
+        },
+        "apc_paid": {
+          "value": 1870,
+          "currency": "USD",
+          "value_usd": 1870
+        },
+        "fwci": null,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 496,
+        "citation_normalized_percentile": null,
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": "7",
+          "issue": "1",
+          "first_page": "7",
+          "last_page": "7"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10029",
+          "display_name": "Climate variability and models",
+          "score": 0.9945999979972839,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10029",
+            "display_name": "Climate variability and models",
+            "score": 0.9945999979972839,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2306",
+              "display_name": "Global and Planetary Change"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10439",
+            "display_name": "Climate change impacts on agriculture",
+            "score": 0.002099999925121665,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1102",
+              "display_name": "Agronomy and Crop Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/11",
+              "display_name": "Agricultural and Biological Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/1",
+              "display_name": "Life Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13530",
+            "display_name": "Climate Change and Environmental Impact",
+            "score": 0.0013000000035390258,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2306",
+              "display_name": "Global and Planetary Change"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/climate-change-projections",
+            "display_name": "climate change projections",
+            "score": 0.7639999985694885
+          },
+          {
+            "id": "https://openalex.org/keywords/cmip5",
+            "display_name": "CMIP5",
+            "score": 0.9589999914169312
+          },
+          {
+            "id": "https://openalex.org/keywords/bias-correction",
+            "display_name": "bias correction",
+            "score": 0.7990000247955322
+          },
+          {
+            "id": "https://openalex.org/keywords/delta-method",
+            "display_name": "delta method",
+            "score": 0.9440000057220459
+          },
+          {
+            "id": "https://openalex.org/keywords/high-resolution-climate-data",
+            "display_name": "high-resolution climate data",
+            "score": 0.9259999990463257
+          },
+          {
+            "id": "https://openalex.org/keywords/bioclimatic-indices",
+            "display_name": "bioclimatic indices",
+            "score": 0.8840000033378601
+          },
+          {
+            "id": "https://openalex.org/keywords/temperature",
+            "display_name": "temperature",
+            "score": 0.4779999852180481
+          },
+          {
+            "id": "https://openalex.org/keywords/precipitation",
+            "display_name": "precipitation",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/climate-change-impact-assessment",
+            "display_name": "climate impact assessment",
+            "score": 0.6579999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/biodiversity",
+            "display_name": "biodiversity",
+            "score": 0.996999979019165
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C132651083",
+            "wikidata": "https://www.wikidata.org/wiki/Q7942",
+            "display_name": "Climate change",
+            "level": 2,
+            "score": 0.8080941438674927
+          },
+          {
+            "id": "https://openalex.org/C39432304",
+            "wikidata": "https://www.wikidata.org/wiki/Q188847",
+            "display_name": "Environmental science",
+            "level": 0,
+            "score": 0.6734423041343689
+          },
+          {
+            "id": "https://openalex.org/C168754636",
+            "wikidata": "https://www.wikidata.org/wiki/Q620920",
+            "display_name": "Climate model",
+            "level": 3,
+            "score": 0.6026831269264221
+          },
+          {
+            "id": "https://openalex.org/C107054158",
+            "wikidata": "https://www.wikidata.org/wiki/Q25257",
+            "display_name": "Precipitation",
+            "level": 2,
+            "score": 0.5841525793075562
+          },
+          {
+            "id": "https://openalex.org/C118518473",
+            "wikidata": "https://www.wikidata.org/wiki/Q11451",
+            "display_name": "Agriculture",
+            "level": 2,
+            "score": 0.5079723000526428
+          },
+          {
+            "id": "https://openalex.org/C49204034",
+            "wikidata": "https://www.wikidata.org/wiki/Q52139",
+            "display_name": "Climatology",
+            "level": 1,
+            "score": 0.49489134550094604
+          },
+          {
+            "id": "https://openalex.org/C2778755073",
+            "wikidata": "https://www.wikidata.org/wiki/Q10858537",
+            "display_name": "Scale (ratio)",
+            "level": 2,
+            "score": 0.46562546491622925
+          },
+          {
+            "id": "https://openalex.org/C130217890",
+            "wikidata": "https://www.wikidata.org/wiki/Q47041",
+            "display_name": "Biodiversity",
+            "level": 2,
+            "score": 0.42718926072120667
+          },
+          {
+            "id": "https://openalex.org/C111874474",
+            "wikidata": "https://www.wikidata.org/wiki/Q6005872",
+            "display_name": "Impact assessment",
+            "level": 2,
+            "score": 0.41969045996665955
+          },
+          {
+            "id": "https://openalex.org/C107826830",
+            "wikidata": "https://www.wikidata.org/wiki/Q929380",
+            "display_name": "Environmental resource management",
+            "level": 1,
+            "score": 0.3819962441921234
+          },
+          {
+            "id": "https://openalex.org/C100970517",
+            "wikidata": "https://www.wikidata.org/wiki/Q52107",
+            "display_name": "Physical geography",
+            "level": 1,
+            "score": 0.33927929401397705
+          },
+          {
+            "id": "https://openalex.org/C205649164",
+            "wikidata": "https://www.wikidata.org/wiki/Q1071",
+            "display_name": "Geography",
+            "level": 0,
+            "score": 0.27667027711868286
+          },
+          {
+            "id": "https://openalex.org/C153294291",
+            "wikidata": "https://www.wikidata.org/wiki/Q25261",
+            "display_name": "Meteorology",
+            "level": 1,
+            "score": 0.20336464047431946
+          },
+          {
+            "id": "https://openalex.org/C18903297",
+            "wikidata": "https://www.wikidata.org/wiki/Q7150",
+            "display_name": "Ecology",
+            "level": 1,
+            "score": 0.19118916988372803
+          },
+          {
+            "id": "https://openalex.org/C58640448",
+            "wikidata": "https://www.wikidata.org/wiki/Q42515",
+            "display_name": "Cartography",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C127313418",
+            "wikidata": "https://www.wikidata.org/wiki/Q1069",
+            "display_name": "Geology",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C17744445",
+            "wikidata": "https://www.wikidata.org/wiki/Q36442",
+            "display_name": "Political science",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C86803240",
+            "wikidata": "https://www.wikidata.org/wiki/Q420",
+            "display_name": "Biology",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C3116431",
+            "wikidata": "https://www.wikidata.org/wiki/Q31728",
+            "display_name": "Public administration",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C166957645",
+            "wikidata": "https://www.wikidata.org/wiki/Q23498",
+            "display_name": "Archaeology",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 5,
+        "locations": [
+          {
+            "id": "doi:10.1038/s41597-019-0343-8",
+            "doi": "https://doi.org/10.1038/s41597-019-0343-8",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1038/s41597-019-0343-8",
+            "pdf_url": "https://www.nature.com/articles/s41597-019-0343-8.pdf",
+            "source": {
+              "id": "https://openalex.org/S2607323502",
+              "display_name": "Scientific Data",
+              "issn_l": "2052-4463",
+              "issn": [
+                "2052-4463"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": true,
+              "listed_in": [
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "doaj",
+                "dongbi-b",
+                "jufo-1",
+                "ki-jl-1",
+                "medline",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319908",
+              "host_organization_name": "Nature Portfolio",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319908",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Nature Portfolio",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Scientific Data",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:31959765",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/31959765",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Scientific data",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:6971081",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6971081/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Sci Data",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:oai:cgspace.cgiar.org:10568/106634",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://hdl.handle.net/10568/106634",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402055",
+              "display_name": "CGSPace A Repository of Agricultural Research Outputs (Consultative Group for International Agricultural Research)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1286583668",
+              "host_organization_name": "CGIAR",
+              "host_organization_lineage": [
+                "https://openalex.org/I1286583668"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Navarro-Racines C, Tarapues J, Thornton P, Jarvis A, Ramirez-Villegas J. 2020. High-resolution and bias-corrected CMIP5 projections for climate change impact assessments. Scientific Data 7:7.",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:doaj.org/article:7f9b236aa9ee4aa3963ef79a64e6ad62",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://doaj.org/article/7f9b236aa9ee4aa3963ef79a64e6ad62",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401280",
+              "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Scientific Data, Vol 7, Iss 1, Pp 1-14 (2020)",
+            "raw_type": "article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1038/s41597-019-0343-8",
+          "doi": "https://doi.org/10.1038/s41597-019-0343-8",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41597-019-0343-8",
+          "pdf_url": "https://www.nature.com/articles/s41597-019-0343-8.pdf",
+          "source": {
+            "id": "https://openalex.org/S2607323502",
+            "display_name": "Scientific Data",
+            "issn_l": "2052-4463",
+            "issn": [
+              "2052-4463"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "jufo-1",
+              "ki-jl-1",
+              "medline",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Scientific Data",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 1.0,
+            "id": "https://metadata.un.org/sdg/13",
+            "display_name": "Climate action"
+          },
+          {
+            "score": 0.40450000762939453,
+            "id": "https://metadata.un.org/sdg/2",
+            "display_name": "Zero hunger"
+          }
+        ],
+        "study_designs": [],
+        "awards": [],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306084",
+            "display_name": "U.S. Department of Energy",
+            "ror": "https://ror.org/01bj3aw27"
+          },
+          {
+            "id": "https://openalex.org/F4320329182",
+            "display_name": "Consortium of International Agricultural Research Centers",
+            "ror": "https://ror.org/04c4bm785"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W3000355687.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W3000355687.grobid-xml"
+        },
+        "referenced_works_count": 115,
+        "referenced_works": [
+          "https://openalex.org/W1596294",
+          "https://openalex.org/W1503026800",
+          "https://openalex.org/W1524420836",
+          "https://openalex.org/W1531397077",
+          "https://openalex.org/W1600968722",
+          "https://openalex.org/W1867005924",
+          "https://openalex.org/W1887614481",
+          "https://openalex.org/W1910754480",
+          "https://openalex.org/W1941608869",
+          "https://openalex.org/W1964551106",
+          "https://openalex.org/W1967150532",
+          "https://openalex.org/W1969676767",
+          "https://openalex.org/W1973066966",
+          "https://openalex.org/W1974468869",
+          "https://openalex.org/W1978250252",
+          "https://openalex.org/W1982029375",
+          "https://openalex.org/W1984129257",
+          "https://openalex.org/W1985217958",
+          "https://openalex.org/W1986527049",
+          "https://openalex.org/W1987024780",
+          "https://openalex.org/W1990376608",
+          "https://openalex.org/W1990701514",
+          "https://openalex.org/W1996478169",
+          "https://openalex.org/W2001672825",
+          "https://openalex.org/W2003164867",
+          "https://openalex.org/W2006750690",
+          "https://openalex.org/W2007489277",
+          "https://openalex.org/W2011599296",
+          "https://openalex.org/W2012725401",
+          "https://openalex.org/W2017632281",
+          "https://openalex.org/W2018451268",
+          "https://openalex.org/W2018832642",
+          "https://openalex.org/W2024951250",
+          "https://openalex.org/W2024966118",
+          "https://openalex.org/W2026156015",
+          "https://openalex.org/W2027092332",
+          "https://openalex.org/W2027901189",
+          "https://openalex.org/W2034174587",
+          "https://openalex.org/W2039322240",
+          "https://openalex.org/W2043068801",
+          "https://openalex.org/W2043196564",
+          "https://openalex.org/W2045597360",
+          "https://openalex.org/W2046278301",
+          "https://openalex.org/W2046848592",
+          "https://openalex.org/W2054653365",
+          "https://openalex.org/W2057710532",
+          "https://openalex.org/W2066305270",
+          "https://openalex.org/W2068138294",
+          "https://openalex.org/W2068359259",
+          "https://openalex.org/W2068523487",
+          "https://openalex.org/W2075112338",
+          "https://openalex.org/W2075258897",
+          "https://openalex.org/W2076358440",
+          "https://openalex.org/W2088479508",
+          "https://openalex.org/W2089760291",
+          "https://openalex.org/W2094425236",
+          "https://openalex.org/W2094688663",
+          "https://openalex.org/W2106435017",
+          "https://openalex.org/W2110669521",
+          "https://openalex.org/W2112776483",
+          "https://openalex.org/W2115247641",
+          "https://openalex.org/W2117433301",
+          "https://openalex.org/W2119057653",
+          "https://openalex.org/W2120012334",
+          "https://openalex.org/W2123058372",
+          "https://openalex.org/W2124091835",
+          "https://openalex.org/W2124850864",
+          "https://openalex.org/W2127154958",
+          "https://openalex.org/W2128330363",
+          "https://openalex.org/W2128892613",
+          "https://openalex.org/W2130544854",
+          "https://openalex.org/W2130997496",
+          "https://openalex.org/W2132930988",
+          "https://openalex.org/W2135089146",
+          "https://openalex.org/W2137598577",
+          "https://openalex.org/W2138920914",
+          "https://openalex.org/W2139314206",
+          "https://openalex.org/W2140155467",
+          "https://openalex.org/W2142463025",
+          "https://openalex.org/W2143082107",
+          "https://openalex.org/W2162251785",
+          "https://openalex.org/W2171254377",
+          "https://openalex.org/W2180539426",
+          "https://openalex.org/W2182078941",
+          "https://openalex.org/W2200391936",
+          "https://openalex.org/W2213317727",
+          "https://openalex.org/W2256319116",
+          "https://openalex.org/W2261645655",
+          "https://openalex.org/W2294627342",
+          "https://openalex.org/W2295422249",
+          "https://openalex.org/W2338980885",
+          "https://openalex.org/W2352554431",
+          "https://openalex.org/W2461419449",
+          "https://openalex.org/W2463674286",
+          "https://openalex.org/W2498176632",
+          "https://openalex.org/W2498808420",
+          "https://openalex.org/W2511218352",
+          "https://openalex.org/W2534929505",
+          "https://openalex.org/W2551448695",
+          "https://openalex.org/W2563527117",
+          "https://openalex.org/W2590800909",
+          "https://openalex.org/W2617606220",
+          "https://openalex.org/W2742561824",
+          "https://openalex.org/W2808387486",
+          "https://openalex.org/W2901722101",
+          "https://openalex.org/W2929357616",
+          "https://openalex.org/W2936480593",
+          "https://openalex.org/W2945989271",
+          "https://openalex.org/W4239572789",
+          "https://openalex.org/W4241840196",
+          "https://openalex.org/W4285719527",
+          "https://openalex.org/W4394323888",
+          "https://openalex.org/W6646541465",
+          "https://openalex.org/W6958733589",
+          "https://openalex.org/W7038334229"
+        ],
+        "related_works": [
+          "https://openalex.org/W2945658932",
+          "https://openalex.org/W2547178682",
+          "https://openalex.org/W4233002440",
+          "https://openalex.org/W2994692549",
+          "https://openalex.org/W4398142591",
+          "https://openalex.org/W3152896734",
+          "https://openalex.org/W2741871898",
+          "https://openalex.org/W2001783620",
+          "https://openalex.org/W4390971351",
+          "https://openalex.org/W2038084897"
+        ],
+        "abstract_inverted_index": {
+          "Projections": [
+            0
+          ],
+          "of": [
+            1,
+            33,
+            54,
+            88,
+            98,
+            141
+          ],
+          "climate": [
+            2,
+            20,
+            24,
+            45,
+            68,
+            99
+          ],
+          "change": [
+            3,
+            25,
+            100
+          ],
+          "are": [
+            4,
+            107
+          ],
+          "available": [
+            5,
+            109
+          ],
+          "at": [
+            6
+          ],
+          "coarse": [
+            7
+          ],
+          "scales": [
+            8
+          ],
+          "(70-400": [
+            9
+          ],
+          "km).": [
+            10
+          ],
+          "But": [
+            11
+          ],
+          "agricultural": [
+            12,
+            144
+          ],
+          "and": [
+            13,
+            63,
+            78,
+            81,
+            85,
+            91,
+            103,
+            143
+          ],
+          "species": [
+            14
+          ],
+          "models": [
+            15
+          ],
+          "typically": [
+            16
+          ],
+          "require": [
+            17
+          ],
+          "finer": [
+            18
+          ],
+          "scale": [
+            19
+          ],
+          "data": [
+            21,
+            74,
+            106,
+            125
+          ],
+          "to": [
+            22,
+            134
+          ],
+          "model": [
+            23,
+            46,
+            69
+          ],
+          "impacts.": [
+            26
+          ],
+          "Here,": [
+            27
+          ],
+          "we": [
+            28
+          ],
+          "present": [
+            29
+          ],
+          "a": [
+            30,
+            51,
+            59,
+            86
+          ],
+          "global": [
+            31
+          ],
+          "database": [
+            32,
+            129
+          ],
+          "future": [
+            34
+          ],
+          "climates": [
+            35
+          ],
+          "developed": [
+            36
+          ],
+          "by": [
+            37,
+            71
+          ],
+          "applying": [
+            38
+          ],
+          "the": [
+            39,
+            55,
+            111,
+            123
+          ],
+          "delta": [
+            40
+          ],
+          "method": [
+            41,
+            43,
+            57
+          ],
+          "-a": [
+            42
+          ],
+          "for": [
+            44,
+            95,
+            115
+          ],
+          "bias": [
+            47,
+            70
+          ],
+          "correction.": [
+            48
+          ],
+          "We": [
+            49
+          ],
+          "performed": [
+            50
+          ],
+          "technical": [
+            52
+          ],
+          "evaluation": [
+            53
+          ],
+          "bias-correction": [
+            56
+          ],
+          "using": [
+            58
+          ],
+          "'perfect": [
+            60
+          ],
+          "sibling'": [
+            61
+          ],
+          "framework": [
+            62
+          ],
+          "show": [
+            64
+          ],
+          "that": [
+            65
+          ],
+          "it": [
+            66
+          ],
+          "reduces": [
+            67
+          ],
+          "50-70%.": [
+            72
+          ],
+          "The": [
+            73,
+            105,
+            128
+          ],
+          "include": [
+            75
+          ],
+          "monthly": [
+            76,
+            82
+          ],
+          "maximum": [
+            77
+          ],
+          "minimum": [
+            79
+          ],
+          "temperatures": [
+            80
+          ],
+          "total": [
+            83
+          ],
+          "precipitation,": [
+            84
+          ],
+          "set": [
+            87
+          ],
+          "bioclimatic": [
+            89
+          ],
+          "indices,": [
+            90
+          ],
+          "can": [
+            92
+          ],
+          "be": [
+            93
+          ],
+          "used": [
+            94,
+            132
+          ],
+          "assessing": [
+            96
+          ],
+          "impacts": [
+            97
+          ],
+          "on": [
+            101
+          ],
+          "agriculture": [
+            102
+          ],
+          "biodiversity.": [
+            104
+          ],
+          "publicly": [
+            108
+          ],
+          "in": [
+            110,
+            122,
+            136
+          ],
+          "World": [
+            112
+          ],
+          "Data": [
+            113
+          ],
+          "Center": [
+            114
+          ],
+          "Climate": [
+            116
+          ],
+          "(WDCC;": [
+            117
+          ],
+          "cera-www.dkrz.de),": [
+            118
+          ],
+          "as": [
+            119,
+            121
+          ],
+          "well": [
+            120
+          ],
+          "CCAFS-Climate": [
+            124
+          ],
+          "portal": [
+            126
+          ],
+          "(http://ccafs-climate.org).": [
+            127
+          ],
+          "has": [
+            130
+          ],
+          "been": [
+            131
+          ],
+          "up": [
+            133
+          ],
+          "date": [
+            135
+          ],
+          "more": [
+            137
+          ],
+          "than": [
+            138
+          ],
+          "350": [
+            139
+          ],
+          "studies": [
+            140
+          ],
+          "ecosystem": [
+            142
+          ],
+          "impact": [
+            145
+          ],
+          "assessment.": [
+            146
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 68
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 78
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 70
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 91
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 97
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 77
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 15
+          }
+        ],
+        "updated_date": "2026-11-15T12:55:33.944570",
+        "created_date": "2020-01-23T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

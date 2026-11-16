@@ -1,0 +1,44 @@
+{
+    "Summary": "The manuscript presents a teaching example of an additive scalar correction to the fixed predictor f0(x) = 2x. Five synthetic observations satisfy y = 2x + 3, giving a constant residual of 3. Setting the correction to the mean residual, b = 3, therefore reproduces all targets. The reported MAE values of 3, 1.5, and 0 and MSE values of 9, 2.25, and 0 at b = 0, 1.5, and 3 follow directly from algebraic identities. The manuscript includes derivations, a table, two figures, related work, and figure provenance. It explicitly disclaims methodological novelty and generalization.",
+    "Strengths": [
+        "All reviewers agree that the arithmetic and reported error values are correct and directly verifiable.",
+        "The explicit derivations make the example easy to follow and potentially useful for elementary instruction.",
+        "The manuscript acknowledges that fitting and evaluation reuse the same observations and that zero error establishes only in-sample agreement.",
+        "The documented figure sources and checksums support reproducibility of the presentation artifacts."
+    ],
+    "Weaknesses": [
+        "The example does not provide a sufficient research contribution for a top-tier machine learning conference: recovering a constant generating intercept from constant residuals is an elementary identity.",
+        "The noise-free construction guarantees success and supplies no evidence about behavior with nonconstant residuals, noise, held-out observations, or distribution shifts.",
+        "The educational explanation omits the natural connection between the mean residual and the least-squares intercept when the baseline predictor is fixed.",
+        "Descriptions of error values as measured, recorded, or logged obscure that the reported values follow exactly from the stated construction.",
+        "All reviewers identify an extensive related-work discussion whose connections to the example are weak, along with apparent bibliography metadata errors. Two reviewers also identify a mismatched description of the Geman et al. reference.",
+        "Workflow paths, checksums, render metadata, and duplicated provenance material distract from the substantive content and would be better placed in supplementary material.",
+        "The figures contribute limited information beyond the derivation and table, and the intended educational audience is insufficiently established."
+    ],
+    "Originality": 1,
+    "Quality": 2,
+    "Clarity": 3,
+    "Significance": 1,
+    "Questions": [
+        "What specific educational objective and intended audience justify this example, and what should readers learn beyond removal of a constant residual?",
+        "Can the authors explicitly connect the mean-residual correction to least-squares intercept fitting with a fixed baseline predictor?",
+        "Can the authors clarify that the reported error values are algebraically determined and make any accompanying computational artifacts consistent with that framing?",
+        "What behavior can be demonstrated with nonconstant residuals, noisy targets, or held-out observations, and which conclusions would such examples support?",
+        "Can the authors verify the bibliography against the original publications, correct the reported metadata and citation-description problems, and retain only references that support a clear connection?",
+        "Can duplicated workflow and provenance details be consolidated into supplementary material?"
+    ],
+    "Limitations": [
+        "The demonstration consists of five synthetic, noise-free observations with constant residuals, which sharply limits its instructional and scientific scope.",
+        "Evaluation on the fitting observations establishes finite agreement only; it does not establish predictive performance, robustness, or generalization.",
+        "No uncertainty, sensitivity, or failure-case analysis is provided.",
+        "Readers could misinterpret zero in-sample error as practical validation if the example is presented without its explicit qualifications.",
+        "No substantial negative societal impact is apparent from this elementary example. The reported citation inaccuracies could nevertheless mislead readers seeking supporting literature."
+    ],
+    "Ethical Concerns": false,
+    "Soundness": 3,
+    "Presentation": 2,
+    "Contribution": 1,
+    "Overall": 2,
+    "Confidence": 4,
+    "Decision": "Reject"
+}

@@ -374,6 +374,72 @@ class LiteratureControllerTests(QuietTest):
         self.assertEqual((out / "updated_template.tex").read_text(), "LITERATURE_FILLED_TEMPLATE")
         self.assertEqual(synthesis.call_args.args[1][1].citation_key, "Same2020Keya")
 
+    def test_enriched_references_reach_real_synthesis_and_section_writer_inputs(self):
+        agent, root = self.make_agent()
+        papers = [literature_module.PaperData(
+            citation_key=f"Fixture2020Paper{i}", title=f"Labelled reference fixture {i}",
+            authors=["Fixture Author"], venue="Test Venue", year=2020,
+            abstract=f"Controlled bibliography handoff fixture {i}; not real literature.",
+            citation_count=0, found_in_section="Introduction", reason="test fixture")
+            for i in range(2)]
+        outline_path = root / "outline.json"
+        outline_path.write_text(json.dumps(self.outline()))
+        tex = (r"\documentclass{article}\begin{document}"
+               r"Fixture~\cite{Fixture2020Paper0,Fixture2020Paper1}."
+               r"\bibliographystyle{plain}\bibliography{references}\end{document}")
+
+        def enrich(tasks, outline, registry, processed, cutoff):
+            registry.update({p.title: p for p in papers})
+
+        # Only external retrieval/inference are controlled. The real literature
+        # controller, synthesis prompt and section-writer handoff execute.
+        with patch.object(agent, "_execute_tasks_in_parallel", side_effect=enrich), \
+             patch.object(literature_module, "call_gemini_with_contents",
+                          return_value={"parsed_response": tex}) as synthesis:
+            agent.run(str(outline_path), "2024-11")
+        payload = json.loads(synthesis.call_args.kwargs["contents"][1])
+        self.assertEqual(payload["citation_checklist"], [p.citation_key for p in papers])
+        self.assertEqual(payload["collected_papers"], [p.model_dump() for p in papers])
+        prompt = synthesis.call_args.kwargs["generation_configs"]["system_instruction"]
+        self.assertIn("abstract of 2 collected papers", prompt)
+        self.assertIn("MUST cite at least 1 of them", prompt)  # int(2 * .9), upstream rule
+        out = Path(agent.output_dir)
+        (root / "figures.json").write_text("[]")
+        writer = section_module.SectionWritingAgent(
+            str(out / "outline_v1.json"), str(out / "updated_template.tex"),
+            str(root / "idea.md"), str(root / "experimental_log.md"),
+            str(out / "citation_map.json"), str(root / "figures.json"),
+            str(root / "guidelines.md"))
+        with patch.object(section_module, "call_llm_with_images",
+                          return_value={"parsed_response": tex}) as writing:
+            writer.run(str(root / "draft.tex"))
+        for p in papers:
+            self.assertIn(f"@inproceedings{{{p.citation_key},", (out / "references.bib").read_text())
+            self.assertIn(p.citation_key, writing.call_args.kwargs["prompt"])
+            self.assertIn(p.abstract, writing.call_args.kwargs["prompt"])
+        self.assertIn(tex, writing.call_args.kwargs["prompt"])
+        self.assertEqual((root / "draft.tex").read_text(), tex)
+
+    def test_zero_enriched_papers_still_writes_empty_bibliography_and_zero_citation_requirement(self):
+        # Document the original failure mode; this is not a readiness criterion.
+        agent, root = self.make_agent()
+        outline_path = root / "outline.json"
+        outline_path.write_text(json.dumps(self.outline()))
+        with patch.object(agent, "_execute_tasks_in_parallel"), \
+             patch.object(literature_module, "call_gemini_with_contents",
+                          return_value={"parsed_response": "UNCITED_TEMPLATE"}) as synthesis:
+            agent.run(str(outline_path), "2024-11")
+        out = Path(agent.output_dir)
+        self.assertEqual((out / "references.bib").read_bytes(), b"")
+        self.assertEqual(json.loads((out / "citation_map.json").read_text()), {})
+        payload = json.loads(synthesis.call_args.kwargs["contents"][1])
+        self.assertEqual(payload["citation_checklist"], [])
+        self.assertEqual(payload["collected_papers"], [])
+        self.assertIn("MUST cite at least 0 of them",
+                      synthesis.call_args.kwargs["generation_configs"]["system_instruction"])
+        self.assertEqual(section_module.SectionWritingAgent._format_citation_library(None, {}),
+                         "No citation data provided.")
+
     def test_enrichment_dedup_keeps_first_section_and_requires_abstract(self):
         agent, _ = self.make_agent()
         candidate = {"title": "Same Title", "year": 2020, "reason": "useful"}

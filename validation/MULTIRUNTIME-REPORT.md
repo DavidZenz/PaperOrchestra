@@ -126,6 +126,14 @@ The literature filter accepted no enriched papers: Semantic Scholar returned
 empty. This is a synthetic teaching-note workflow demonstration, not novel
 research or a paper-quality evaluation.
 
+**Bibliography audit (2026-11-16):** upstream explicitly supports reference lists;
+the port preserves its discovery, BibTeX and citation-library handoffs. This run
+does **not** validate a reference-bearing paper. The first content editor removed
+the empty bibliography in its original response, before provenance normalization.
+The original compiler also permits BibTeX errors when a PDF is produced. See the
+[stage-by-stage audit and added controlled reference tests](BIBLIOGRAPHY-AUDIT.md).
+No run or installed-skill artifacts were changed by that audit.
+
 **Observed visual limit:** read-only Poppler review of all six final pages found
 an overlap between Figure 1's evaluation-box text and nearby annotation on page
 3. The upstream formatting feedback also identified overlap; compile success

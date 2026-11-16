@@ -32,6 +32,7 @@ python paper-orchestra/scripts/run.py \
   --materials /absolute/materials --template /absolute/template \
   --output /absolute/new-output --cutoff 2026-11
 python paper-orchestra/scripts/summarize_trace.py /absolute/new-output
+python paper-orchestra/scripts/audit_bibliography.py /absolute/new-output
 ```
 
 Materials need `idea_sparse.md`, `experimental_log.md`, and optional
@@ -39,6 +40,15 @@ Materials need `idea_sparse.md`, `experimental_log.md`, and optional
 and its assets. Supply other material filenames with the documented CLI flags.
 Use a fresh output directory. Child agents are read-only and do not resume or
 share conversations. Each original API retry gets its own fresh invocation.
+
+Bibliographies are mandatory. Enrichment tries Semantic Scholar, then Crossref
+and OpenAlex metadata with abstracts, using bounded HTTP retries and a rate-limit
+circuit. `SEMANTIC_SCHOLAR_API_KEY` and `OPENALEX_API_KEY` are optional account
+settings. Empty libraries, unknown/unresolved citations, invalid BibTeX output or
+a missing visible reference list prevent completion. A bibliography-invalid
+revision follows the original compilation-failure path; no extra revision loops
+are added. These user-requested changes are documented as R027/R028 and A005/A006
+in the adaptation ledgers. See the [reference validation report](validation/REFERENCE-FIX-REPORT.md).
 
 The default path uses supplied figures. Add `--use-plotting` for separate native
 workers producing R/ggplot2 plots and LaTeX/TikZ diagrams. Rscript with ggplot2 and
@@ -80,7 +90,9 @@ python paper-orchestra/scripts/run.py --model-profile /absolute/models.json --sh
 This preview makes zero model calls. Use the profile with the ordinary paper-run
 arguments to execute it. See [model selection](paper-orchestra/references/model-selection.md)
 for roles/schema/precedence and [native runtime validation](validation/MULTIRUNTIME-REPORT.md)
-for the 294-test suite and actual execution evidence. The prior 57-session Codex
+for the historical 294-test suite and actual execution evidence. The
+[reference validation report](validation/REFERENCE-FIX-REPORT.md) covers the current
+323-test suite and bibliography-required installed run. The prior 57-session Codex
 paper remains tied to its original frozen build; new native evidence is tracked
 separately.
 
@@ -239,7 +251,7 @@ python paper-orchestra/scripts/verify_upstream.py --source upstream
 
 Four tests are optional when the separate upstream checkout and older historical
 raw run are absent from a fresh clone. The complete development suite passes all
-294 tests. Clean-publication-export results and the four optional skips are
+323 tests. Earlier clean-publication-export results and the four optional skips are
 documented with their exact input commit and environment in the validation report.
 
 The source verifier checks bundled hashes, the actual upstream Git commit and
@@ -250,7 +262,7 @@ execution evidence for the final installed provenance build is retained in
 `validation/provenance-e2e-final/`: 57 separate Codex sessions with source
 propagation, aggregation, rejection/reversion and stopping. Its seven successful
 figure attempts replayed identically with zero model calls in
-`validation/provenance-e2e-final-replay/`. The current full suite has 294 passing tests;
+`validation/provenance-e2e-final-replay/`. The current full suite has 323 passing tests;
 160 were present at the time of that full workflow run.
 
 See `validation/REPORT.md` for the observed run, checks and limits. The corrected

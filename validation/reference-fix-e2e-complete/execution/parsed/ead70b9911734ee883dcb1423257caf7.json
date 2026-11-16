@@ -1,0 +1,75 @@
+{
+  "section_name": "Evaluation Methodology and In-Sample Estimation Error",
+  "candidates": [
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Seminal paper demonstrating that evaluating prediction error on the exact observations used for estimation introduces a systematic downward bias (optimism), establishing why zero or reduced in-sample error cannot prove out-of-sample predictive validity."
+    },
+    {
+      "title": "Making and Evaluating Point Forecasts",
+      "year": 2011,
+      "reason": "Establishes the decision-theoretic foundations of point forecast evaluation, proving that the mean minimizes mean squared error while the median minimizes mean absolute error under strictly consistent scoring rules."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Formalizes the relationship between in-sample apparent error, covariance penalties, and true prediction error, clarifying how fitting parameters to sample observations directly reduces in-sample error without improving generalization."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Foundational methodology paper proving that assessing a predictor on the same data sample used to tune or estimate it yields invalid performance assessments, establishing the necessity of sample reuse and out-of-sample validation."
+    },
+    {
+      "title": "Advantages of the Mean Absolute Error (MAE) Over the Root Mean Square Error (RMSE) in Assessing Average Model Performance",
+      "year": 2005,
+      "reason": "Provides a comprehensive critique comparing mean absolute error to root mean squared error, analyzing their interpretations, dimensional properties, and sensitivities when evaluating model residuals."
+    },
+    {
+      "title": "Root Mean Square Error (RMSE) or Mean Absolute Error (MAE)? \u2013 Arguments Against Avoiding RMSE in the Literature",
+      "year": 2014,
+      "reason": "Examines the comparative statistical behavior of MAE and RMSE across different residual distributions, showing how metric choice reflects distinct assumptions about underlying errors."
+    },
+    {
+      "title": "Root-mean-square error (RMSE) or mean absolute error (MAE): when to use them or not",
+      "year": 2022,
+      "reason": "Synthesizes the methodological debate between MAE and RMSE, articulating how error distribution geometry guides metric appropriateness and the limits of interpreting residual metrics on training sets."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Analyzes the failure of resubstitution error when models are evaluated on identical development observations and formulates resampling adjustments to estimate the true generalization gap."
+    },
+    {
+      "title": "Another Look at Measures of Forecast Accuracy",
+      "year": 2006,
+      "reason": "Systematic survey of scale-dependent and relative accuracy measures, addressing degeneracy, division-by-zero anomalies, and interpretive challenges when predictors produce zero error on sample points."
+    },
+    {
+      "title": "What You See May Not Be What You Get: A Brief, Nontechnical Introduction to Overfitting in Regression-Type Models",
+      "year": 2004,
+      "reason": "Pedagogical analysis showing how estimating corrections on small sample sizes leads to deceptive apparent fit, explaining why deterministic sample fitting does not supply valid statistical inference or significance claims."
+    },
+    {
+      "title": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year": 2006,
+      "reason": "Illustrates how information leakage and evaluating adjustments on the same observations used for estimation induces severe optimistic bias, masquerading as predictive power on null relationships."
+    },
+    {
+      "title": "From Fixed-X to Random-X Regression: Bias-Variance Decompositions, Covariance Penalties, and Prediction Error Estimation",
+      "year": 2020,
+      "reason": "Investigates prediction error and degrees-of-freedom penalization when conditioning on fixed design points versus predicting on independent unseen samples."
+    },
+    {
+      "title": "Internal Validation of Predictive Models: Efficiency of Some Procedures for Logistic Regression Analysis",
+      "year": 2001,
+      "reason": "Compares performance metrics evaluated on development datasets versus validated samples, illustrating why apparent performance calculated on identical estimation observations provides an inflated evaluation."
+    },
+    {
+      "title": "Multivariable Prognostic Models: Issues in Developing Models, Evaluating Assumptions and Adequacy, and Measuring and Reducing Errors",
+      "year": 1996,
+      "reason": "Essential methodology guide addressing the overinterpretation of model performance on identical observations and establishing requirements for uncertainty quantification and validation."
+    }
+  ]
+}

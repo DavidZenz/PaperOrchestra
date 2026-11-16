@@ -1,0 +1,44 @@
+{
+  "llm_calls": 0,
+  "figures": [
+    {
+      "id": "1a1032b1c77b4a5f8ad26c77740fa497",
+      "backend": "ggplot2",
+      "command": [
+        "/opt/homebrew/opt/r/bin/Rscript",
+        "--vanilla",
+        "worker.R"
+      ],
+      "source_sha256": "2479e40e8d39e8e16c29f8837e3b8df9909f9f658bb35b959fda0b1296debbe4",
+      "preview_identical": true,
+      "preview_sha256": "c76d25fccec8f344d112e4818ac663015aac1bbab1082859dcf309256f7d79b7"
+    },
+    {
+      "id": "1ba5744092b049779c82db3166b0a767",
+      "backend": "tikz",
+      "command": [
+        "pdflatex",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "source.tex"
+      ],
+      "source_sha256": "84e305cc09efdeb2bc2162c39fc60cb1d1a3c5384254d368dee04e8db66664b4",
+      "preview_identical": true,
+      "preview_sha256": "9abe57fc42cf6bbdc628d750b3576a6a5b859ae258c3a89e4a34b4ed5d87b65d"
+    },
+    {
+      "id": "555be23a75fb4860ac97d074f8098a49",
+      "backend": "ggplot2",
+      "command": [
+        "/opt/homebrew/opt/r/bin/Rscript",
+        "--vanilla",
+        "worker.R"
+      ],
+      "source_sha256": "e39f8a6e7db4e5d2126a41e08e1e3ce07a49d808aaf82e36fab17204e55f3ab6",
+      "preview_identical": true,
+      "preview_sha256": "eb2e2a0b56b6e9ea0d28fa03601b412156dff4ab1ab8acb2508242ba5d0c157e"
+    }
+  ],
+  "all_previews_identical": true
+}

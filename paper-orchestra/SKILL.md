@@ -23,6 +23,17 @@ execution permissions. The controller itself uses no Gemini or OpenAI API key;
 each worker runtime uses its own existing authentication. Never copy
 authentication files into execution evidence.
 Semantic Scholar optionally uses `SEMANTIC_SCHOLAR_API_KEY` from the environment.
+Reference enrichment uses bounded Semantic Scholar requests, then Crossref and
+OpenAlex metadata/abstract fallbacks; `OPENALEX_API_KEY` is optional where the
+service permits anonymous requests. Raw provider results and rejection reasons
+are retained. Never invent an abstract or bibliographic record. R027/R028 and
+A005 document these user-authorized adaptations.
+
+The driver fails if the verified bibliography is empty. Before section writing,
+its BibTeX keys must match a nonempty citation map. Compiled candidates must
+contain resolved permitted citations and a visible reference list; an invalid
+revision follows the original compile-failure path. Final completion rechecks
+the accepted TeX/PDF and compiled bibliography. A PDF alone is insufficient.
 
 Obtain the user's material directory, template directory, fresh output directory,
 and research cutoff (`YYYY-MM`). The material directory needs `idea_sparse.md`
@@ -154,6 +165,8 @@ same installed files again before accepting completion. Do not edit the installe
 skill during a validation run. If a fix is required, retain the failed run,
 finish/test/install the fix, and start a fresh full run of that final bundle.
 
+Run `scripts/audit_bibliography.py /absolute/output` to independently recheck
+resolved citations, visible reference metadata and provider-receipt hashes.
 Run `scripts/summarize_trace.py /absolute/output` to check the handoff hashes,
 process/session evidence and reviewer ensemble sequence. Deliver the compiled
 `final_paper.pdf`, the source in `content_refinement_workdir/final_refined_paper.tex`,

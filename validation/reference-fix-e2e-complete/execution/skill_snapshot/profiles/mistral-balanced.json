@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "name": "mistral-balanced-2026-11-15",
+  "default": {
+    "backend": "mistral-vibe",
+    "model": "mistral-large-4",
+    "effort": "high"
+  },
+  "groups": {
+    "discovery": {
+      "backend": "mistral-vibe",
+      "model": "mistral-small-2603",
+      "effort": "high"
+    },
+    "figure_planning": {
+      "backend": "mistral-vibe",
+      "model": "mistral-large-4",
+      "effort": "medium"
+    },
+    "figure_review": {
+      "backend": "mistral-vibe",
+      "model": "mistral-large-4",
+      "effort": "medium"
+    },
+    "formatting": {
+      "backend": "mistral-vibe",
+      "model": "mistral-small-2603",
+      "effort": "high"
+    }
+  },
+  "roles": {
+    "runtime-probe": {
+      "backend": "mistral-vibe",
+      "model": "mistral-small-2603",
+      "effort": "off"
+    }
+  }
+}

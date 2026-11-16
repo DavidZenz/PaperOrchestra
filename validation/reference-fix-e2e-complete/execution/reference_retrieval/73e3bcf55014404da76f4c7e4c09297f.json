@@ -1,0 +1,4179 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 1982,
+      "db_response_time_ms": 131,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Towards better clinical prediction models: seven steps for development \"and\" an ABCD for validation) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Towards better clinical prediction models: seven steps for development \"and\" an ABCD for validation) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Towards better clinical prediction models: seven steps for development and an ABCD for validation&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2154286581",
+        "doi": "https://doi.org/10.1093/eurheartj/ehu207",
+        "title": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+        "display_name": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+        "relevance_score": 510.16208,
+        "publication_year": 2014,
+        "publication_date": "2014-06-04",
+        "ids": {
+          "openalex": "https://openalex.org/W2154286581",
+          "doi": "https://doi.org/10.1093/eurheartj/ehu207",
+          "mag": "2154286581",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/24898551",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/4155437"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1093/eurheartj/ehu207",
+          "doi": "https://doi.org/10.1093/eurheartj/ehu207",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1093/eurheartj/ehu207",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S181568219",
+            "display_name": "European Heart Journal",
+            "issn_l": "0195-668X",
+            "issn": [
+              "0195-668X",
+              "1522-9645"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "European Heart Journal",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2154286581"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4155437/",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5091435927",
+              "display_name": "Ewout Willem Steyerberg",
+              "orcid": "https://orcid.org/0000-0002-7787-0122",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-7787-0122"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2801952686",
+                "display_name": "Erasmus MC",
+                "ror": "https://ror.org/018906e22",
+                "country_code": "NL",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I2801952686"
+                ]
+              }
+            ],
+            "countries": [
+              "NL"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "E. W. Steyerberg",
+            "raw_affiliation_strings": [
+              "Department of Public Health, Erasmus MC, University Medical Center Rotterdam, PO Box 2040, 3000 CA Rotterdam, The Netherlands e.steyerberg@erasmusmc.nl",
+              "Department of Public Health, Erasmus MC, University Medical Center Rotterdam, PO Box 2040, 3000 CA Rotterdam, The Netherlands"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Public Health, Erasmus MC, University Medical Center Rotterdam, PO Box 2040, 3000 CA Rotterdam, The Netherlands e.steyerberg@erasmusmc.nl",
+                "institution_ids": [
+                  "https://openalex.org/I2801952686"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Public Health, Erasmus MC, University Medical Center Rotterdam, PO Box 2040, 3000 CA Rotterdam, The Netherlands",
+                "institution_ids": [
+                  "https://openalex.org/I2801952686"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5009766171",
+              "display_name": "Yvonne Vergouwe",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2801952686",
+                "display_name": "Erasmus MC",
+                "ror": "https://ror.org/018906e22",
+                "country_code": "NL",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I2801952686"
+                ]
+              }
+            ],
+            "countries": [
+              "NL"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Y. Vergouwe",
+            "raw_affiliation_strings": [
+              "Department of Public Health, Erasmus MC, University Medical Center Rotterdam, PO Box 2040, 3000 CA Rotterdam, The Netherlands"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Public Health, Erasmus MC, University Medical Center Rotterdam, PO Box 2040, 3000 CA Rotterdam, The Netherlands",
+                "institution_ids": [
+                  "https://openalex.org/I2801952686"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5091435927"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I2801952686"
+        ],
+        "apc_list": {
+          "value": 5240,
+          "currency": "EUR",
+          "value_usd": 5922
+        },
+        "apc_paid": null,
+        "fwci": 42.5368,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 2042,
+        "citation_normalized_percentile": {
+          "value": 0.99905644,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 88,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "35",
+          "issue": "29",
+          "first_page": "1925",
+          "last_page": "1931"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T14374",
+          "display_name": "Statistical Methods in Epidemiology",
+          "score": 0.9848999977111816,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T14374",
+            "display_name": "Statistical Methods in Epidemiology",
+            "score": 0.9848999977111816,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11396",
+            "display_name": "Artificial Intelligence in Healthcare",
+            "score": 0.00419999985024333,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3605",
+              "display_name": "Health Information Management"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/36",
+              "display_name": "Health Professions"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10206",
+            "display_name": "Meta-analysis and systematic reviews",
+            "score": 0.0026000000070780516,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1804",
+              "display_name": "Statistics, Probability and Uncertainty"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/clinical-prediction-model",
+            "display_name": "clinical prediction model",
+            "score": 0.9950000047683716
+          },
+          {
+            "id": "https://openalex.org/keywords/prediction-model-development",
+            "display_name": "prediction model development",
+            "score": 0.7770000100135803
+          },
+          {
+            "id": "https://openalex.org/keywords/model-validation",
+            "display_name": "model validation",
+            "score": 0.7900000214576721
+          },
+          {
+            "id": "https://openalex.org/keywords/calibration",
+            "display_name": "calibration",
+            "score": 0.5099999904632568
+          },
+          {
+            "id": "https://openalex.org/keywords/discrimination-statistics",
+            "display_name": "discrimination (statistics)",
+            "score": 0.9409999847412109
+          },
+          {
+            "id": "https://openalex.org/keywords/decision-curve-analysis",
+            "display_name": "decision curve analysis",
+            "score": 0.7820000052452087
+          },
+          {
+            "id": "https://openalex.org/keywords/30-day-mortality",
+            "display_name": "30-day mortality",
+            "score": 0.9049999713897705
+          },
+          {
+            "id": "https://openalex.org/keywords/acute-myocardial-infarction",
+            "display_name": "acute myocardial infarction",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/prognostic-model",
+            "display_name": "prognostic model",
+            "score": 0.7379999756813049
+          },
+          {
+            "id": "https://openalex.org/keywords/methodological-quality",
+            "display_name": "methodological quality",
+            "score": 0.5730000138282776
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.7863916158676147
+          },
+          {
+            "id": "https://openalex.org/C160798450",
+            "wikidata": "https://www.wikidata.org/wiki/Q4230870",
+            "display_name": "Concordance",
+            "level": 2,
+            "score": 0.6480035781860352
+          },
+          {
+            "id": "https://openalex.org/C45804977",
+            "wikidata": "https://www.wikidata.org/wiki/Q7239673",
+            "display_name": "Predictive modelling",
+            "level": 2,
+            "score": 0.6434417366981506
+          },
+          {
+            "id": "https://openalex.org/C165838908",
+            "wikidata": "https://www.wikidata.org/wiki/Q736777",
+            "display_name": "Calibration",
+            "level": 2,
+            "score": 0.5311269760131836
+          },
+          {
+            "id": "https://openalex.org/C89128539",
+            "wikidata": "https://www.wikidata.org/wiki/Q1949963",
+            "display_name": "Statistic",
+            "level": 2,
+            "score": 0.5006387233734131
+          },
+          {
+            "id": "https://openalex.org/C3019813237",
+            "wikidata": "https://www.wikidata.org/wiki/Q65089264",
+            "display_name": "Model validation",
+            "level": 2,
+            "score": 0.46828433871269226
+          },
+          {
+            "id": "https://openalex.org/C71008984",
+            "wikidata": "https://www.wikidata.org/wiki/Q2890076",
+            "display_name": "Rigour",
+            "level": 2,
+            "score": 0.43389806151390076
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.33930128812789917
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.33783432841300964
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.32622218132019043
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.19432881474494934
+          },
+          {
+            "id": "https://openalex.org/C126322002",
+            "wikidata": "https://www.wikidata.org/wiki/Q11180",
+            "display_name": "Internal medicine",
+            "level": 1,
+            "score": 0.14981231093406677
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.13970157504081726
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C2524010",
+            "wikidata": "https://www.wikidata.org/wiki/Q8087",
+            "display_name": "Geometry",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D002138",
+            "descriptor_name": "Calibration",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D003661",
+            "descriptor_name": "Decision Support Techniques",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D003933",
+            "descriptor_name": "Diagnosis",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D006801",
+            "descriptor_name": "Humans",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D011379",
+            "descriptor_name": "Prognosis",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D015203",
+            "descriptor_name": "Reproducibility of Results",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015233",
+            "descriptor_name": "Models, Statistical",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D018570",
+            "descriptor_name": "Risk Assessment",
+            "qualifier_ui": "Q000379",
+            "qualifier_name": "methods",
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D018570",
+            "descriptor_name": "Risk Assessment",
+            "qualifier_ui": "Q000592",
+            "qualifier_name": "standards",
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D059019",
+            "descriptor_name": "Clinical Coding",
+            "qualifier_ui": "Q000379",
+            "qualifier_name": "methods",
+            "is_major_topic": false
+          }
+        ],
+        "locations_count": 9,
+        "locations": [
+          {
+            "id": "doi:10.1093/eurheartj/ehu207",
+            "doi": "https://doi.org/10.1093/eurheartj/ehu207",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1093/eurheartj/ehu207",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S181568219",
+              "display_name": "European Heart Journal",
+              "issn_l": "0195-668X",
+              "issn": [
+                "0195-668X",
+                "1522-9645"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "medline",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311648",
+              "host_organization_name": "Oxford University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311648",
+                "https://openalex.org/P4310311647"
+              ],
+              "host_organization_lineage_names": [
+                "Oxford University Press",
+                "University of Oxford"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "European Heart Journal",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:24898551",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/24898551",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "European heart journal",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:4155437",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4155437/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Eur Heart J",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:oai:pure.eur.nl:openaire_cris_publications/b35c7256-4453-4aac-a371-695fd3bb3806",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pure.eur.nl/en/publications/b35c7256-4453-4aac-a371-695fd3bb3806",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401266",
+              "display_name": "EUR Research Repository (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Steyerberg, E & Vergouwe, Y 2014, 'Towards better clinical prediction models: seven steps for development and an ABCD for validation', European Heart Journal, vol. 35, no. 29, pp. 1925-1931.",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:eur:oai:pure.eur.nl:publications/b35c7256-4453-4aac-a371-695fd3bb3806",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pure.eur.nl/en/publications/b35c7256-4453-4aac-a371-695fd3bb3806",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401266",
+              "display_name": "EUR Research Repository (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "European Heart Journal, 35(29), 1925 - 1931. Oxford University Press",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:eur:oai:repub.eur.nl:71867",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "http://hdl.handle.net/1765/71867",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196287",
+              "display_name": "RePub (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "European Heart Journal, 35(29), 1925 - 1931",
+            "raw_type": "info:eu-repo/semantics/other"
+          },
+          {
+            "id": "pmh:oai:repub.eur.nl:71867",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://repub.eur.nl/pub/71867",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196287",
+              "display_name": "RePub (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "European Heart Journal vol. 35 no. 29, pp. 1925-1931",
+            "raw_type": "info:eu-repo/semantics/other"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.657.7329",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.657.7329",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://eurheartj.oxfordjournals.org/content/ehj/35/29/1925.full.pdf",
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.964.8481",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.964.8481",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://eurheartj.oxfordjournals.org/content/ehj/early/2014/06/03/eurheartj.ehu207.full.pdf",
+            "raw_type": "text"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:pubmedcentral.nih.gov:4155437",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4155437/",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Eur Heart J",
+          "raw_type": "Text"
+        },
+        "sustainable_development_goals": [
+          {
+            "display_name": "Good health and well-being",
+            "score": 0.9907000064849854,
+            "id": "https://metadata.un.org/sdg/3"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G7987705107",
+            "display_name": "Value of Personalized Risk Information",
+            "funder_award_id": "U01NS086294",
+            "funder_id": "https://openalex.org/F4320337359",
+            "funder_display_name": "National Institute of Neurological Disorders and Stroke"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320337359",
+            "display_name": "National Institute of Neurological Disorders and Stroke",
+            "ror": "https://ror.org/01s5ya894"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 54,
+        "referenced_works": [
+          "https://openalex.org/W197059223",
+          "https://openalex.org/W650692540",
+          "https://openalex.org/W1966428349",
+          "https://openalex.org/W1967271902",
+          "https://openalex.org/W1985299015",
+          "https://openalex.org/W1987973071",
+          "https://openalex.org/W1994224528",
+          "https://openalex.org/W1998196574",
+          "https://openalex.org/W1998392635",
+          "https://openalex.org/W2002493616",
+          "https://openalex.org/W2015413151",
+          "https://openalex.org/W2019300001",
+          "https://openalex.org/W2024583141",
+          "https://openalex.org/W2026901643",
+          "https://openalex.org/W2035413743",
+          "https://openalex.org/W2045030989",
+          "https://openalex.org/W2046807902",
+          "https://openalex.org/W2052779929",
+          "https://openalex.org/W2059263105",
+          "https://openalex.org/W2060374620",
+          "https://openalex.org/W2064799866",
+          "https://openalex.org/W2068435120",
+          "https://openalex.org/W2068583723",
+          "https://openalex.org/W2074932800",
+          "https://openalex.org/W2075937340",
+          "https://openalex.org/W2084164487",
+          "https://openalex.org/W2089463633",
+          "https://openalex.org/W2094681746",
+          "https://openalex.org/W2103645914",
+          "https://openalex.org/W2103761883",
+          "https://openalex.org/W2106421416",
+          "https://openalex.org/W2106665921",
+          "https://openalex.org/W2109325327",
+          "https://openalex.org/W2111112545",
+          "https://openalex.org/W2117254307",
+          "https://openalex.org/W2119862467",
+          "https://openalex.org/W2119910794",
+          "https://openalex.org/W2121514893",
+          "https://openalex.org/W2126900802",
+          "https://openalex.org/W2130383679",
+          "https://openalex.org/W2133103557",
+          "https://openalex.org/W2135046866",
+          "https://openalex.org/W2144017903",
+          "https://openalex.org/W2145051815",
+          "https://openalex.org/W2149833112",
+          "https://openalex.org/W2150691612",
+          "https://openalex.org/W2165139489",
+          "https://openalex.org/W2166950143",
+          "https://openalex.org/W2168664034",
+          "https://openalex.org/W2297716127",
+          "https://openalex.org/W2494169975",
+          "https://openalex.org/W2951936974",
+          "https://openalex.org/W3021438309",
+          "https://openalex.org/W3175417087"
+        ],
+        "related_works": [
+          "https://openalex.org/W4285270750",
+          "https://openalex.org/W2303796163",
+          "https://openalex.org/W2558741329",
+          "https://openalex.org/W2151056789",
+          "https://openalex.org/W7213556217",
+          "https://openalex.org/W2036350863",
+          "https://openalex.org/W2146404132",
+          "https://openalex.org/W180893764",
+          "https://openalex.org/W4245289687"
+        ],
+        "abstract_inverted_index": {
+          "Clinical": [
+            0
+          ],
+          "prediction": [
+            1,
+            52,
+            90,
+            138,
+            166
+          ],
+          "models": [
+            2,
+            32,
+            139,
+            167
+          ],
+          "provide": [
+            3
+          ],
+          "risk": [
+            4
+          ],
+          "estimates": [
+            5
+          ],
+          "for": [
+            6,
+            22,
+            140,
+            165
+          ],
+          "the": [
+            7,
+            16,
+            37,
+            57,
+            111,
+            152,
+            155,
+            160
+          ],
+          "presence": [
+            8
+          ],
+          "of": [
+            9,
+            19,
+            56,
+            66,
+            76,
+            88,
+            154
+          ],
+          "disease": [
+            10,
+            20
+          ],
+          "(diagnosis)": [
+            11
+          ],
+          "or": [
+            12,
+            110
+          ],
+          "an": [
+            13,
+            132,
+            146
+          ],
+          "event": [
+            14
+          ],
+          "in": [
+            15,
+            50,
+            95,
+            143,
+            168
+          ],
+          "future": [
+            17
+          ],
+          "course": [
+            18
+          ],
+          "(prognosis)": [
+            21
+          ],
+          "individual": [
+            23
+          ],
+          "patients.": [
+            24
+          ],
+          "Although": [
+            25
+          ],
+          "publications": [
+            26
+          ],
+          "that": [
+            27,
+            44
+          ],
+          "present": [
+            28
+          ],
+          "and": [
+            29,
+            60,
+            82,
+            124,
+            136,
+            163
+          ],
+          "evaluate": [
+            30,
+            106
+          ],
+          "such": [
+            31
+          ],
+          "are": [
+            33
+          ],
+          "becoming": [
+            34
+          ],
+          "more": [
+            35
+          ],
+          "frequent,": [
+            36
+          ],
+          "methodology": [
+            38
+          ],
+          "is": [
+            39,
+            92
+          ],
+          "often": [
+            40
+          ],
+          "suboptimal.": [
+            41
+          ],
+          "We": [
+            42
+          ],
+          "propose": [
+            43,
+            101
+          ],
+          "seven": [
+            45
+          ],
+          "steps": [
+            46
+          ],
+          "should": [
+            47
+          ],
+          "be": [
+            48
+          ],
+          "considered": [
+            49
+          ],
+          "developing": [
+            51
+          ],
+          "models:": [
+            53
+          ],
+          "(i)": [
+            54
+          ],
+          "consideration": [
+            55
+          ],
+          "research": [
+            58
+          ],
+          "question": [
+            59
+          ],
+          "initial": [
+            61
+          ],
+          "data": [
+            62
+          ],
+          "inspection;": [
+            63
+          ],
+          "(ii)": [
+            64
+          ],
+          "coding": [
+            65
+          ],
+          "predictors;": [
+            67
+          ],
+          "(iii)": [
+            68
+          ],
+          "model": [
+            69,
+            72,
+            77,
+            84,
+            91,
+            107,
+            112
+          ],
+          "specification;": [
+            70
+          ],
+          "(iv)": [
+            71
+          ],
+          "estimation;": [
+            73
+          ],
+          "(v)": [
+            74
+          ],
+          "evaluation": [
+            75
+          ],
+          "performance;": [
+            78
+          ],
+          "(vi)": [
+            79
+          ],
+          "internal": [
+            80
+          ],
+          "validation;": [
+            81
+          ],
+          "(vii)": [
+            83
+          ],
+          "presentation.": [
+            85
+          ],
+          "The": [
+            86
+          ],
+          "validity": [
+            87
+          ],
+          "a": [
+            89,
+            120
+          ],
+          "ideally": [
+            93
+          ],
+          "assessed": [
+            94
+          ],
+          "fully": [
+            96
+          ],
+          "independent": [
+            97
+          ],
+          "data,": [
+            98
+          ],
+          "where": [
+            99
+          ],
+          "we": [
+            100,
+            134
+          ],
+          "four": [
+            102
+          ],
+          "key": [
+            103
+          ],
+          "measures": [
+            104
+          ],
+          "to": [
+            105,
+            158
+          ],
+          "performance:": [
+            108
+          ],
+          "calibration-in-the-large,": [
+            109
+          ],
+          "intercept": [
+            113
+          ],
+          "(A);": [
+            114
+          ],
+          "calibration": [
+            115
+          ],
+          "slope": [
+            116
+          ],
+          "(B);": [
+            117
+          ],
+          "discrimination,": [
+            118
+          ],
+          "with": [
+            119,
+            127,
+            145
+          ],
+          "concordance": [
+            121
+          ],
+          "statistic": [
+            122
+          ],
+          "(C);": [
+            123
+          ],
+          "clinical": [
+            125
+          ],
+          "usefulness,": [
+            126
+          ],
+          "decision-curve": [
+            128
+          ],
+          "analysis": [
+            129
+          ],
+          "(D).": [
+            130
+          ],
+          "As": [
+            131
+          ],
+          "application,": [
+            133
+          ],
+          "develop": [
+            135
+          ],
+          "validate": [
+            137
+          ],
+          "30-day": [
+            141
+          ],
+          "mortality": [
+            142
+          ],
+          "patients": [
+            144
+          ],
+          "acute": [
+            147
+          ],
+          "myocardial": [
+            148
+          ],
+          "infarction.": [
+            149
+          ],
+          "This": [
+            150
+          ],
+          "illustrates": [
+            151
+          ],
+          "usefulness": [
+            153
+          ],
+          "proposed": [
+            156
+          ],
+          "framework": [
+            157
+          ],
+          "strengthen": [
+            159
+          ],
+          "methodological": [
+            161
+          ],
+          "rigour": [
+            162
+          ],
+          "quality": [
+            164
+          ],
+          "cardiovascular": [
+            169
+          ],
+          "research.": [
+            170
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 345
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 178
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 229
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 245
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 270
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 252
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 190
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 107
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 75
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 82
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 43
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 20
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-15T12:55:33.944570",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2558741329",
+        "doi": "https://doi.org/10.1002/bjs.10242",
+        "title": "Clinical prediction models",
+        "display_name": "Clinical prediction models",
+        "relevance_score": 35.62585,
+        "publication_year": 2016,
+        "publication_date": "2016-11-30",
+        "ids": {
+          "openalex": "https://openalex.org/W2558741329",
+          "doi": "https://doi.org/10.1002/bjs.10242",
+          "mag": "2558741329",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/27901285"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1002/bjs.10242",
+          "doi": "https://doi.org/10.1002/bjs.10242",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1002/bjs.10242",
+          "pdf_url": "https://bjssjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bjs.10242",
+          "source": {
+            "id": "https://openalex.org/S61740008",
+            "display_name": "British journal of surgery",
+            "issn_l": "0007-1323",
+            "issn": [
+              "0007-1323",
+              "1365-2168"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "British Journal of Surgery",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2558741329"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "bronze",
+          "oa_url": "https://bjssjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bjs.10242",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5021390187",
+              "display_name": "Jonas Ranstam",
+              "orcid": "https://orcid.org/0000-0002-8287-7273",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8287-7273"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "raw_author_name": "J Ranstam",
+            "raw_affiliation_strings": [
+              "BJS Statistical Editors"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "BJS Statistical Editors",
+                "institution_ids": []
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5018731744",
+              "display_name": "Jonathan Alistair Cook",
+              "orcid": "https://orcid.org/0000-0002-4156-6989",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-4156-6989"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "raw_author_name": "J A Cook",
+            "raw_affiliation_strings": [
+              "BJS Statistical Editors"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "BJS Statistical Editors",
+                "institution_ids": []
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5060891981",
+              "display_name": "Professor Gary S. Collins",
+              "orcid": "https://orcid.org/0000-0002-2772-2316",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2772-2316"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "raw_author_name": "G S Collins",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 3797,
+          "currency": "GBP",
+          "value_usd": 5007
+        },
+        "apc_paid": null,
+        "fwci": 0.9576,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 58,
+        "citation_normalized_percentile": {
+          "value": 0.7704526,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 88,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "103",
+          "issue": "13",
+          "first_page": "1886",
+          "last_page": "1886"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T14374",
+          "display_name": "Statistical Methods in Epidemiology",
+          "score": 0.9643999934196472,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T14374",
+            "display_name": "Statistical Methods in Epidemiology",
+            "score": 0.9643999934196472,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11930",
+            "display_name": "Cardiac, Anesthesia and Surgical Outcomes",
+            "score": 0.009700000286102295,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2705",
+              "display_name": "Cardiology and Cardiovascular Medicine"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11396",
+            "display_name": "Artificial Intelligence in Healthcare",
+            "score": 0.003100000089034438,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3605",
+              "display_name": "Health Information Management"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/36",
+              "display_name": "Health Professions"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/clinical-prediction-model",
+            "display_name": "clinical prediction model",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/prognostic-model",
+            "display_name": "prognostic model",
+            "score": 0.9549999833106995
+          },
+          {
+            "id": "https://openalex.org/keywords/surgical-risk-scores",
+            "display_name": "surgical risk scores",
+            "score": 0.6470000147819519
+          },
+          {
+            "id": "https://openalex.org/keywords/postoperative-mortality-prediction",
+            "display_name": "postoperative mortality prediction",
+            "score": 0.796999990940094
+          },
+          {
+            "id": "https://openalex.org/keywords/euroscore-ii",
+            "display_name": "EuroSCORE II",
+            "score": 0.8130000233650208
+          },
+          {
+            "id": "https://openalex.org/keywords/possum",
+            "display_name": "possums",
+            "score": 0.9629999995231628
+          },
+          {
+            "id": "https://openalex.org/keywords/model-validation",
+            "display_name": "model validation",
+            "score": 0.6579999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/overfitting",
+            "display_name": "overfitting",
+            "score": 0.9010000228881836
+          },
+          {
+            "id": "https://openalex.org/keywords/discrimination-statistics",
+            "display_name": "discrimination (statistics)",
+            "score": 0.4740000069141388
+          },
+          {
+            "id": "https://openalex.org/keywords/calibration",
+            "display_name": "calibration",
+            "score": 0.984000027179718
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-adjustment",
+            "display_name": "risk adjustment",
+            "score": 0.8009999990463257
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.9651808738708496
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D003657",
+            "descriptor_name": "Decision Making",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D006801",
+            "descriptor_name": "Humans",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D013514",
+            "descriptor_name": "Surgical Procedures, Operative",
+            "qualifier_ui": "Q000592",
+            "qualifier_name": "standards",
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D015233",
+            "descriptor_name": "Models, Statistical",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D018570",
+            "descriptor_name": "Risk Assessment",
+            "qualifier_ui": "Q000706",
+            "qualifier_name": "statistics & numerical data",
+            "is_major_topic": true
+          }
+        ],
+        "locations_count": 3,
+        "locations": [
+          {
+            "id": "doi:10.1002/bjs.10242",
+            "doi": "https://doi.org/10.1002/bjs.10242",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1002/bjs.10242",
+            "pdf_url": "https://bjssjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bjs.10242",
+            "source": {
+              "id": "https://openalex.org/S61740008",
+              "display_name": "British journal of surgery",
+              "issn_l": "0007-1323",
+              "issn": [
+                "0007-1323",
+                "1365-2168"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "medline",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311648",
+              "host_organization_name": "Oxford University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311648",
+                "https://openalex.org/P4310311647"
+              ],
+              "host_organization_lineage_names": [
+                "Oxford University Press",
+                "University of Oxford"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "British Journal of Surgery",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:27901285",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/27901285",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The British journal of surgery",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:ora.ox.ac.uk:uuid:36271e1e-16b9-4cc3-a4fa-e3fb409dbcd3",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://ora.ox.ac.uk/objects/uuid:36271e1e-16b9-4cc3-a4fa-e3fb409dbcd3",
+            "pdf_url": "https://ora.ox.ac.uk/objects/uuid:36271e1e-16b9-4cc3-a4fa-e3fb409dbcd3/files/m250b16b5470c2fc2afb2cc1527f4c5db",
+            "source": {
+              "id": "https://openalex.org/S4306402636",
+              "display_name": "Oxford University Research Archive (ORA) (University of Oxford)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I40120149",
+              "host_organization_name": "University of Oxford",
+              "host_organization_lineage": [
+                "https://openalex.org/I40120149"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Symplectic Elements at Oxford",
+            "raw_type": "Journal article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1002/bjs.10242",
+          "doi": "https://doi.org/10.1002/bjs.10242",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1002/bjs.10242",
+          "pdf_url": "https://bjssjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bjs.10242",
+          "source": {
+            "id": "https://openalex.org/S61740008",
+            "display_name": "British journal of surgery",
+            "issn_l": "0007-1323",
+            "issn": [
+              "0007-1323",
+              "1365-2168"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "British Journal of Surgery",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "display_name": "Good health and well-being",
+            "score": 0.98580002784729,
+            "id": "https://metadata.un.org/sdg/3"
+          }
+        ],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2558741329.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2558741329.grobid-xml"
+        },
+        "referenced_works_count": 7,
+        "referenced_works": [
+          "https://openalex.org/W1906965911",
+          "https://openalex.org/W1994682257",
+          "https://openalex.org/W2018312500",
+          "https://openalex.org/W2119910794",
+          "https://openalex.org/W2154286581",
+          "https://openalex.org/W2297716127",
+          "https://openalex.org/W4213286494"
+        ],
+        "related_works": [
+          "https://openalex.org/W4285270750",
+          "https://openalex.org/W2057400233",
+          "https://openalex.org/W2303796163",
+          "https://openalex.org/W2404420681",
+          "https://openalex.org/W2993065175",
+          "https://openalex.org/W2154286581",
+          "https://openalex.org/W4408009591",
+          "https://openalex.org/W2436901927",
+          "https://openalex.org/W4393132467"
+        ],
+        "abstract_inverted_index": {
+          "Clinical": [
+            0
+          ],
+          "prediction": [
+            1,
+            62,
+            113,
+            161
+          ],
+          "models": [
+            2,
+            48,
+            63,
+            86,
+            114
+          ],
+          "(also": [
+            3
+          ],
+          "known": [
+            4,
+            61
+          ],
+          "as": [
+            5,
+            56,
+            255,
+            263
+          ],
+          "prognostic": [
+            6
+          ],
+          "models,": [
+            7
+          ],
+          "risk": [
+            8,
+            81,
+            104
+          ],
+          "scores)": [
+            9
+          ],
+          "are": [
+            10,
+            141,
+            152,
+            200
+          ],
+          "mathematical": [
+            11
+          ],
+          "equations": [
+            12
+          ],
+          "that": [
+            13,
+            33,
+            52
+          ],
+          "relate": [
+            14
+          ],
+          "multiple": [
+            15
+          ],
+          "predictors": [
+            16,
+            140,
+            174,
+            199,
+            207
+          ],
+          "(risk": [
+            17
+          ],
+          "factors,": [
+            18
+          ],
+          "co-variates)": [
+            19
+          ],
+          "to": [
+            20,
+            118,
+            155,
+            195,
+            209,
+            213
+          ],
+          "the": [
+            21,
+            31,
+            39,
+            43,
+            70,
+            124,
+            131,
+            204,
+            210,
+            219,
+            223,
+            247,
+            280,
+            290,
+            293,
+            314
+          ],
+          "probability": [
+            22,
+            32
+          ],
+          "of": [
+            23,
+            45,
+            73,
+            123,
+            126,
+            206,
+            222,
+            246,
+            258,
+            286,
+            292,
+            297
+          ],
+          "having": [
+            24
+          ],
+          "a": [
+            25,
+            135,
+            149,
+            159,
+            179,
+            256,
+            274
+          ],
+          "disease": [
+            26
+          ],
+          "or": [
+            27,
+            30,
+            103,
+            109,
+            133,
+            185,
+            265
+          ],
+          "condition": [
+            28
+          ],
+          "(diagnostic)": [
+            29
+          ],
+          "an": [
+            34
+          ],
+          "event": [
+            35
+          ],
+          "will": [
+            36,
+            217,
+            251,
+            269
+          ],
+          "happen": [
+            37
+          ],
+          "in": [
+            38,
+            99,
+            227,
+            295
+          ],
+          "future": [
+            40
+          ],
+          "(prognostic)1.": [
+            41
+          ],
+          "In": [
+            42
+          ],
+          "field": [
+            44
+          ],
+          "surgery": [
+            46
+          ],
+          "many": [
+            47
+          ],
+          "have": [
+            49
+          ],
+          "been": [
+            50
+          ],
+          "developed": [
+            51
+          ],
+          "predict": [
+            53
+          ],
+          "outcome": [
+            54,
+            125
+          ],
+          "(such": [
+            55
+          ],
+          "mortality)": [
+            57
+          ],
+          "following": [
+            58
+          ],
+          "surgery.": [
+            59
+          ],
+          "Well": [
+            60
+          ],
+          "include": [
+            64
+          ],
+          "EuroSCORE": [
+            65
+          ],
+          "II,": [
+            66
+          ],
+          "Portsmouth": [
+            67
+          ],
+          "POSSUM": [
+            68
+          ],
+          "and": [
+            69,
+            167,
+            175,
+            202,
+            238,
+            300
+          ],
+          "American": [
+            71
+          ],
+          "College": [
+            72
+          ],
+          "Surgeons": [
+            74
+          ],
+          "National": [
+            75
+          ],
+          "Surgical": [
+            76
+          ],
+          "Quality": [
+            77
+          ],
+          "Improvement": [
+            78
+          ],
+          "Program\u00ae": [
+            79
+          ],
+          "surgical": [
+            80
+          ],
+          "calculator2.": [
+            82
+          ],
+          "Predictions": [
+            83
+          ],
+          "from": [
+            84
+          ],
+          "these": [
+            85
+          ],
+          "can": [
+            87,
+            115,
+            147,
+            232
+          ],
+          "be": [
+            88,
+            116,
+            148,
+            233
+          ],
+          "used": [
+            89,
+            117
+          ],
+          "for": [
+            90,
+            106
+          ],
+          "planning": [
+            91
+          ],
+          "lifestyle": [
+            92
+          ],
+          "changes,": [
+            93
+          ],
+          "guiding": [
+            94
+          ],
+          "therapeutic": [
+            95
+          ],
+          "decisions,": [
+            96
+          ],
+          "stratifying": [
+            97
+          ],
+          "participants": [
+            98
+          ],
+          "randomized": [
+            100
+          ],
+          "controlled": [
+            101
+          ],
+          "trials": [
+            102
+          ],
+          "adjustment": [
+            105
+          ],
+          "comparing": [
+            107
+          ],
+          "hospital": [
+            108
+          ],
+          "surgeon": [
+            110
+          ],
+          "performance.": [
+            111
+          ],
+          "Although": [
+            112
+          ],
+          "gain": [
+            119
+          ],
+          "insight": [
+            120
+          ],
+          "into": [
+            121,
+            178,
+            236
+          ],
+          "causality": [
+            122
+          ],
+          "interest,": [
+            127
+          ],
+          "this": [
+            128,
+            192
+          ],
+          "is": [
+            129,
+            194,
+            244,
+            307
+          ],
+          "not": [
+            130,
+            138
+          ],
+          "aim": [
+            132
+          ],
+          "indeed": [
+            134
+          ],
+          "requirement.": [
+            136
+          ],
+          "Furthermore,": [
+            137
+          ],
+          "all": [
+            139,
+            144
+          ],
+          "causal": [
+            142,
+            145
+          ],
+          "but": [
+            143
+          ],
+          "factors": [
+            146
+          ],
+          "predictor.": [
+            150
+          ],
+          "There": [
+            151
+          ],
+          "clear": [
+            153
+          ],
+          "steps": [
+            154
+          ],
+          "follow": [
+            156
+          ],
+          "when": [
+            157,
+            225
+          ],
+          "introducing": [
+            158
+          ],
+          "new": [
+            160,
+            228
+          ],
+          "model:": [
+            162
+          ],
+          "model": [
+            163,
+            165,
+            168,
+            224,
+            248,
+            271,
+            281,
+            294,
+            308,
+            315
+          ],
+          "development,": [
+            164
+          ],
+          "validation": [
+            166,
+            231,
+            268,
+            287
+          ],
+          "impact3,4.": [
+            169
+          ],
+          "Model": [
+            170,
+            230
+          ],
+          "development": [
+            171,
+            249
+          ],
+          "involves": [
+            172
+          ],
+          "selecting": [
+            173
+          ],
+          "combining": [
+            176
+          ],
+          "them": [
+            177
+          ],
+          "multivariable": [
+            180
+          ],
+          "model,": [
+            181
+          ],
+          "typically": [
+            182
+          ],
+          "using": [
+            183,
+            260,
+            313
+          ],
+          "logistic": [
+            184
+          ],
+          "Cox": [
+            186
+          ],
+          "regression.": [
+            187
+          ],
+          "An": [
+            188
+          ],
+          "important": [
+            189
+          ],
+          "consideration": [
+            190
+          ],
+          "at": [
+            191
+          ],
+          "stage": [
+            193,
+            306
+          ],
+          "carefully": [
+            196
+          ],
+          "choose": [
+            197
+          ],
+          "what": [
+            198
+          ],
+          "examined,": [
+            201
+          ],
+          "limit": [
+            203
+          ],
+          "number": [
+            205
+          ],
+          "relative": [
+            208
+          ],
+          "sample": [
+            211
+          ],
+          "size": [
+            212
+          ],
+          "avoid": [
+            214
+          ],
+          "overfitting.": [
+            215
+          ],
+          "Overfitting": [
+            216
+          ],
+          "reduce": [
+            218
+          ],
+          "predictive": [
+            220
+          ],
+          "ability": [
+            221
+          ],
+          "applied": [
+            226
+          ],
+          "data.": [
+            229
+          ],
+          "separated": [
+            234
+          ],
+          "broadly": [
+            235
+          ],
+          "internal": [
+            237
+          ],
+          "external": [
+            239
+          ],
+          "validation.": [
+            240
+          ],
+          "Internal": [
+            241
+          ],
+          "validation,": [
+            242
+          ],
+          "which": [
+            243,
+            279
+          ],
+          "part": [
+            245
+          ],
+          "process,": [
+            250
+          ],
+          "quantify": [
+            252
+          ],
+          "any": [
+            253
+          ],
+          "optimism": [
+            254
+          ],
+          "result": [
+            257
+          ],
+          "overfitting,": [
+            259
+          ],
+          "methods": [
+            261
+          ],
+          "such": [
+            262
+          ],
+          "bootstrapping": [
+            264
+          ],
+          "cross-validation.": [
+            266
+          ],
+          "External": [
+            267
+          ],
+          "evaluate": [
+            270
+          ],
+          "transportability": [
+            272
+          ],
+          "on": [
+            273
+          ],
+          "different": [
+            275
+          ],
+          "data": [
+            276
+          ],
+          "set": [
+            277
+          ],
+          "(from": [
+            278
+          ],
+          "was": [
+            282
+          ],
+          "developed).": [
+            283
+          ],
+          "Both": [
+            284
+          ],
+          "types": [
+            285
+          ],
+          "involve": [
+            288
+          ],
+          "evaluating": [
+            289
+          ],
+          "performance": [
+            291
+          ],
+          "terms": [
+            296
+          ],
+          "discrimination,": [
+            298
+          ],
+          "calibration": [
+            299
+          ],
+          "sometimes": [
+            301
+          ],
+          "clinical": [
+            302
+          ],
+          "usefulness5.": [
+            303
+          ],
+          "The": [
+            304
+          ],
+          "final": [
+            305
+          ],
+          "impact,": [
+            309
+          ],
+          "by": [
+            310
+          ],
+          "demonstrating": [
+            311
+          ],
+          "whether": [
+            312
+          ],
+          "improves": [
+            316
+          ],
+          "decision-making6.": [
+            317
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 10
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 18
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 2
+          }
+        ],
+        "updated_date": "2026-11-14T11:04:58.165337",
+        "created_date": "2016-12-08T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4390876555",
+        "doi": "https://doi.org/10.1136/bmj-2023-074820",
+        "title": "Evaluation of clinical prediction models (part 2): how to undertake an external validation study",
+        "display_name": "Evaluation of clinical prediction models (part 2): how to undertake an external validation study",
+        "relevance_score": 35.11759,
+        "publication_year": 2024,
+        "publication_date": "2024-01-15",
+        "ids": {
+          "openalex": "https://openalex.org/W4390876555",
+          "doi": "https://doi.org/10.1136/bmj-2023-074820",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/38224968",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/10788734"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1136/bmj-2023-074820",
+          "doi": "https://doi.org/10.1136/bmj-2023-074820",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1136/bmj-2023-074820",
+          "pdf_url": "https://www.bmj.com/content/bmj/384/bmj-2023-074820.full.pdf",
+          "source": {
+            "id": "https://openalex.org/S4393917726",
+            "display_name": "BMJ",
+            "issn_l": "1756-1833",
+            "issn": [
+              "1756-1833"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-2",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319945",
+            "host_organization_name": "BMJ",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319945"
+            ],
+            "host_organization_lineage_names": [
+              "BMJ"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "BMJ",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4390876555"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "hybrid",
+          "oa_url": "https://www.bmj.com/content/bmj/384/bmj-2023-074820.full.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5040942978",
+              "display_name": "Richard D Riley",
+              "orcid": "https://orcid.org/0000-0001-8699-0735",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-8699-0735"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I34931013",
+                "display_name": "National Institute for Health and Care Research",
+                "ror": "https://ror.org/0187kwz08",
+                "country_code": "GB",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I34931013"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210162943",
+                "display_name": "NIHR Birmingham Biomedical Research Centre",
+                "ror": "https://ror.org/05ccjmp23",
+                "country_code": "GB",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I79619799",
+                "display_name": "University of Birmingham",
+                "ror": "https://ror.org/03angcq70",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I79619799"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Richard D Riley",
+            "raw_affiliation_strings": [
+              "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+              "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0001-8699-0735",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+                "institution_ids": [
+                  "https://openalex.org/I79619799"
+                ]
+              },
+              {
+                "raw_affiliation_string": "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK",
+                "institution_ids": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5086736480",
+              "display_name": "Lucinda Archer",
+              "orcid": "https://orcid.org/0000-0003-2504-2613",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-2504-2613"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I34931013",
+                "display_name": "National Institute for Health and Care Research",
+                "ror": "https://ror.org/0187kwz08",
+                "country_code": "GB",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I34931013"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210162943",
+                "display_name": "NIHR Birmingham Biomedical Research Centre",
+                "ror": "https://ror.org/05ccjmp23",
+                "country_code": "GB",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I79619799",
+                "display_name": "University of Birmingham",
+                "ror": "https://ror.org/03angcq70",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I79619799"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Lucinda Archer",
+            "raw_affiliation_strings": [
+              "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+              "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+                "institution_ids": [
+                  "https://openalex.org/I79619799"
+                ]
+              },
+              {
+                "raw_affiliation_string": "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK",
+                "institution_ids": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5049252097",
+              "display_name": "Kym I E Snell",
+              "orcid": "https://orcid.org/0000-0001-9373-6591",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9373-6591"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I34931013",
+                "display_name": "National Institute for Health and Care Research",
+                "ror": "https://ror.org/0187kwz08",
+                "country_code": "GB",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I34931013"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210162943",
+                "display_name": "NIHR Birmingham Biomedical Research Centre",
+                "ror": "https://ror.org/05ccjmp23",
+                "country_code": "GB",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I79619799",
+                "display_name": "University of Birmingham",
+                "ror": "https://ror.org/03angcq70",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I79619799"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Kym I E Snell",
+            "raw_affiliation_strings": [
+              "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+              "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+                "institution_ids": [
+                  "https://openalex.org/I79619799"
+                ]
+              },
+              {
+                "raw_affiliation_string": "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK",
+                "institution_ids": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5009368181",
+              "display_name": "Joie Ensor",
+              "orcid": "https://orcid.org/0000-0001-7481-0282",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-7481-0282"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I34931013",
+                "display_name": "National Institute for Health and Care Research",
+                "ror": "https://ror.org/0187kwz08",
+                "country_code": "GB",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I34931013"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210162943",
+                "display_name": "NIHR Birmingham Biomedical Research Centre",
+                "ror": "https://ror.org/05ccjmp23",
+                "country_code": "GB",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I79619799",
+                "display_name": "University of Birmingham",
+                "ror": "https://ror.org/03angcq70",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I79619799"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Joie Ensor",
+            "raw_affiliation_strings": [
+              "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+              "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Applied Health Research, College of Medical and Dental Sciences, University of Birmingham, Birmingham B15 2TT, UK",
+                "institution_ids": [
+                  "https://openalex.org/I79619799"
+                ]
+              },
+              {
+                "raw_affiliation_string": "National Institute for Health and Care Research (NIHR) Birmingham Biomedical Research Centre, Birmingham, UK",
+                "institution_ids": [
+                  "https://openalex.org/I34931013",
+                  "https://openalex.org/I4210162943"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5059901188",
+              "display_name": "Paula Dhiman",
+              "orcid": "https://orcid.org/0000-0002-0989-0623",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-0989-0623"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I40120149",
+                "display_name": "University of Oxford",
+                "ror": "https://ror.org/052gg0110",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Paula Dhiman",
+            "raw_affiliation_strings": [
+              "Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK",
+                "institution_ids": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5026108472",
+              "display_name": "Glen Philip Martin",
+              "orcid": "https://orcid.org/0000-0002-3410-9472",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3410-9472"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2799725268",
+                "display_name": "Manchester Academic Health Science Centre",
+                "ror": "https://ror.org/04rrkhs81",
+                "country_code": "GB",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I2799725268"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I28407311",
+                "display_name": "University of Manchester",
+                "ror": "https://ror.org/027m9bs27",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I28407311"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Glen P Martin",
+            "raw_affiliation_strings": [
+              "Division of Informatics, Imaging and Data Science, Faculty of Biology, Medicine and Health, University of Manchester, Manchester Academic Health Science Centre, Manchester, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Division of Informatics, Imaging and Data Science, Faculty of Biology, Medicine and Health, University of Manchester, Manchester Academic Health Science Centre, Manchester, UK",
+                "institution_ids": [
+                  "https://openalex.org/I2799725268",
+                  "https://openalex.org/I28407311"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5014921958",
+              "display_name": "Laura Jayne Bonnett",
+              "orcid": "https://orcid.org/0000-0002-6981-9212",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-6981-9212"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I146655781",
+                "display_name": "University of Liverpool",
+                "ror": "https://ror.org/04xs57h96",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I146655781"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Laura J Bonnett",
+            "raw_affiliation_strings": [
+              "Department of Biostatistics, University of Liverpool, Liverpool, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biostatistics, University of Liverpool, Liverpool, UK",
+                "institution_ids": [
+                  "https://openalex.org/I146655781"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5060891981",
+              "display_name": "Professor Gary S. Collins",
+              "orcid": "https://orcid.org/0000-0002-2772-2316",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2772-2316"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I40120149",
+                "display_name": "University of Oxford",
+                "ror": "https://ror.org/052gg0110",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Gary S Collins",
+            "raw_affiliation_strings": [
+              "Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK",
+                "institution_ids": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 7,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5040942978"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I34931013",
+          "https://openalex.org/I4210162943",
+          "https://openalex.org/I79619799"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 153.931,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 651,
+        "citation_normalized_percentile": {
+          "value": 0.99981468,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "384",
+          "issue": null,
+          "first_page": "e074820",
+          "last_page": "e074820"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T14374",
+          "display_name": "Statistical Methods in Epidemiology",
+          "score": 0.9779999852180481,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T14374",
+            "display_name": "Statistical Methods in Epidemiology",
+            "score": 0.9779999852180481,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10206",
+            "display_name": "Meta-analysis and systematic reviews",
+            "score": 0.005400000140070915,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1804",
+              "display_name": "Statistics, Probability and Uncertainty"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11396",
+            "display_name": "Artificial Intelligence in Healthcare",
+            "score": 0.003599999938160181,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3605",
+              "display_name": "Health Information Management"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/36",
+              "display_name": "Health Professions"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/external-validation",
+            "display_name": "external validation",
+            "score": 0.7910000085830688
+          },
+          {
+            "id": "https://openalex.org/keywords/clinical-prediction-model",
+            "display_name": "clinical prediction model",
+            "score": 0.9940000176429749
+          },
+          {
+            "id": "https://openalex.org/keywords/model-evaluation",
+            "display_name": "model evaluation",
+            "score": 0.7039999961853027
+          },
+          {
+            "id": "https://openalex.org/keywords/predictive-performance",
+            "display_name": "predictive performance",
+            "score": 0.9089999794960022
+          },
+          {
+            "id": "https://openalex.org/keywords/clinical-utility",
+            "display_name": "clinical utility",
+            "score": 0.9369999766349792
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-prediction",
+            "display_name": "risk prediction",
+            "score": 0.3869999945163727
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.7217674851417542
+          },
+          {
+            "id": "https://openalex.org/C45804977",
+            "wikidata": "https://www.wikidata.org/wiki/Q7239673",
+            "display_name": "Predictive modelling",
+            "level": 2,
+            "score": 0.5791089534759521
+          },
+          {
+            "id": "https://openalex.org/C26517878",
+            "wikidata": "https://www.wikidata.org/wiki/Q228039",
+            "display_name": "Key (lock)",
+            "level": 2,
+            "score": 0.509430468082428
+          },
+          {
+            "id": "https://openalex.org/C3019813237",
+            "wikidata": "https://www.wikidata.org/wiki/Q65089264",
+            "display_name": "Model validation",
+            "level": 2,
+            "score": 0.5057244300842285
+          },
+          {
+            "id": "https://openalex.org/C2779530757",
+            "wikidata": "https://www.wikidata.org/wiki/Q1207505",
+            "display_name": "Quality (philosophy)",
+            "level": 2,
+            "score": 0.4358874559402466
+          },
+          {
+            "id": "https://openalex.org/C174106493",
+            "wikidata": "https://www.wikidata.org/wiki/Q1057880",
+            "display_name": "External validity",
+            "level": 2,
+            "score": 0.41776248812675476
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.398601233959198
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.37299907207489014
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.273357629776001
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.10443189740180969
+          },
+          {
+            "id": "https://openalex.org/C38652104",
+            "wikidata": "https://www.wikidata.org/wiki/Q3510521",
+            "display_name": "Computer security",
+            "level": 1,
+            "score": 0.07918834686279297
+          },
+          {
+            "id": "https://openalex.org/C138885662",
+            "wikidata": "https://www.wikidata.org/wiki/Q5891",
+            "display_name": "Philosophy",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C111472728",
+            "wikidata": "https://www.wikidata.org/wiki/Q9471",
+            "display_name": "Epistemology",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D006801",
+            "descriptor_name": "Humans",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D011379",
+            "descriptor_name": "Prognosis",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015233",
+            "descriptor_name": "Models, Statistical",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          }
+        ],
+        "locations_count": 7,
+        "locations": [
+          {
+            "id": "doi:10.1136/bmj-2023-074820",
+            "doi": "https://doi.org/10.1136/bmj-2023-074820",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1136/bmj-2023-074820",
+            "pdf_url": "https://www.bmj.com/content/bmj/384/bmj-2023-074820.full.pdf",
+            "source": {
+              "id": "https://openalex.org/S4393917726",
+              "display_name": "BMJ",
+              "issn_l": "1756-1833",
+              "issn": [
+                "1756-1833"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-2",
+                "ki-jl-3",
+                "medline",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319945",
+              "host_organization_name": "BMJ",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319945"
+              ],
+              "host_organization_lineage_names": [
+                "BMJ"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "BMJ",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:38224968",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38224968",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "BMJ (Clinical research ed.)",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:10788734",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10788734/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "BMJ",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:oai:pure.atira.dk:openaire/878f2a40-4130-4209-ad2a-e6f4e6c938d2",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://research.birmingham.ac.uk/en/publications/878f2a40-4130-4209-ad2a-e6f4e6c938d2",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402634",
+              "display_name": "University of Birmingham Research Portal (University of Birmingham)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I79619799",
+              "host_organization_name": "University of Birmingham",
+              "host_organization_lineage": [
+                "https://openalex.org/I79619799"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Riley, R D, Archer, L, Snell, K I E, Ensor, J, Dhiman, P, Martin, G P, Bonnett, L J & Collins, G S 2024, 'Evaluation of clinical prediction models (part 2) : how to undertake an external validation study', BMJ (Clinical research ed.), vol. 384, e074820. https://doi.org/10.1136/bmj-2023-074820",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:ora.ox.ac.uk:uuid:8002daf5-e426-4bd3-a9c7-a095a341ec71",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://ora.ox.ac.uk/objects/uuid:8002daf5-e426-4bd3-a9c7-a095a341ec71",
+            "pdf_url": "https://ora.ox.ac.uk/objects/uuid:8002daf5-e426-4bd3-a9c7-a095a341ec71/files/s5d86p1939",
+            "source": {
+              "id": "https://openalex.org/S4306402636",
+              "display_name": "Oxford University Research Archive (ORA) (University of Oxford)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I40120149",
+              "host_organization_name": "University of Oxford",
+              "host_organization_lineage": [
+                "https://openalex.org/I40120149"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Symplectic Elements",
+            "raw_type": "Journal article"
+          },
+          {
+            "id": "pmh:oai:open-archive.highwire.org:bmj:384/jan15_3/e074820",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://www.bmj.com/cgi/content/short/384/jan15_3/e074820",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4406923041",
+              "display_name": "HighWire Press Open Archive",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "TEXT"
+          },
+          {
+            "id": "pmh:oai:pure.atira.dk:openaire_cris_publications/56237f9c-9b05-442b-8cb9-62897d596d8c",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://research.manchester.ac.uk/en/publications/56237f9c-9b05-442b-8cb9-62897d596d8c",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400662",
+              "display_name": "Research Explorer (The University of Manchester)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I28407311",
+              "host_organization_name": "University of Manchester",
+              "host_organization_lineage": [
+                "https://openalex.org/I28407311"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Riley, R D, Archer, L, Snell, K I E, Ensor, J, Dhiman, P, Martin, G P, Bonnett, L J & Collins, G S 2023, 'Evaluation of clinical prediction models : Part 2 - how to undertake an external validation study', British Medical Journal.",
+            "raw_type": "article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1136/bmj-2023-074820",
+          "doi": "https://doi.org/10.1136/bmj-2023-074820",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1136/bmj-2023-074820",
+          "pdf_url": "https://www.bmj.com/content/bmj/384/bmj-2023-074820.full.pdf",
+          "source": {
+            "id": "https://openalex.org/S4393917726",
+            "display_name": "BMJ",
+            "issn_l": "1756-1833",
+            "issn": [
+              "1756-1833"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-2",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319945",
+            "host_organization_name": "BMJ",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319945"
+            ],
+            "host_organization_lineage_names": [
+              "BMJ"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "BMJ",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "display_name": "Good health and well-being",
+            "score": 0.8048999905586243,
+            "id": "https://metadata.un.org/sdg/3"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G194756405",
+            "display_name": "Systematic Reviews and Meta-Analysis of Prognosis Studies (REVAMP): development of core methods, reporting guidelines and a methodology handbook",
+            "funder_award_id": "MR/V038168/1",
+            "funder_id": "https://openalex.org/F4320334626",
+            "funder_display_name": "Medical Research Council"
+          },
+          {
+            "id": "https://openalex.org/G2515644237",
+            "display_name": "Sample Size guidance for developing and validating reliable and fair AI PREDICTion models in healthcare (SS-PREDICT)",
+            "funder_award_id": "EP/Y018516/1",
+            "funder_id": "https://openalex.org/F4320334627",
+            "funder_display_name": "Engineering and Physical Sciences Research Council"
+          },
+          {
+            "id": "https://openalex.org/G2608461703",
+            "display_name": null,
+            "funder_award_id": "27294",
+            "funder_id": "https://openalex.org/F4320319985",
+            "funder_display_name": "Cancer Research UK"
+          },
+          {
+            "id": "https://openalex.org/G3272397192",
+            "display_name": null,
+            "funder_award_id": "PRCPJT-NOV21100021",
+            "funder_id": "https://openalex.org/F4320319985",
+            "funder_display_name": "Cancer Research UK"
+          },
+          {
+            "id": "https://openalex.org/G4512179801",
+            "display_name": null,
+            "funder_award_id": "MR/V038168/1",
+            "funder_id": "https://openalex.org/F4320319990",
+            "funder_display_name": "National Institute for Health and Care Research"
+          },
+          {
+            "id": "https://openalex.org/G6074549254",
+            "display_name": null,
+            "funder_award_id": "C49297/A27294",
+            "funder_id": "https://openalex.org/F4320319985",
+            "funder_display_name": "Cancer Research UK"
+          },
+          {
+            "id": "https://openalex.org/G8641196675",
+            "display_name": null,
+            "funder_award_id": "C49297",
+            "funder_id": "https://openalex.org/F4320319985",
+            "funder_display_name": "Cancer Research UK"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320314693",
+            "display_name": "University Hospitals Birmingham NHS Foundation Trust",
+            "ror": "https://ror.org/014ja3n03"
+          },
+          {
+            "id": "https://openalex.org/F4320319985",
+            "display_name": "Cancer Research UK",
+            "ror": "https://ror.org/054225q67"
+          },
+          {
+            "id": "https://openalex.org/F4320319990",
+            "display_name": "National Institute for Health and Care Research",
+            "ror": "https://ror.org/0187kwz08"
+          },
+          {
+            "id": "https://openalex.org/F4320319994",
+            "display_name": "Department of Health and Social Care",
+            "ror": "https://ror.org/03sbpja79"
+          },
+          {
+            "id": "https://openalex.org/F4320334626",
+            "display_name": "Medical Research Council",
+            "ror": "https://ror.org/03x94j517"
+          },
+          {
+            "id": "https://openalex.org/F4320334627",
+            "display_name": "Engineering and Physical Sciences Research Council",
+            "ror": "https://ror.org/0439y7842"
+          },
+          {
+            "id": "https://openalex.org/F4320336705",
+            "display_name": "Birmingham Biomedical Research Centre",
+            "ror": "https://ror.org/05ccjmp23"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W4390876555.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W4390876555.grobid-xml"
+        },
+        "referenced_works_count": 74,
+        "referenced_works": [
+          "https://openalex.org/W154377515",
+          "https://openalex.org/W1551952385",
+          "https://openalex.org/W1596397105",
+          "https://openalex.org/W1980283223",
+          "https://openalex.org/W1985299015",
+          "https://openalex.org/W1990005059",
+          "https://openalex.org/W1994682257",
+          "https://openalex.org/W1997192661",
+          "https://openalex.org/W2004655916",
+          "https://openalex.org/W2010010077",
+          "https://openalex.org/W2024887237",
+          "https://openalex.org/W2026901643",
+          "https://openalex.org/W2045030989",
+          "https://openalex.org/W2046119556",
+          "https://openalex.org/W2048033270",
+          "https://openalex.org/W2051411536",
+          "https://openalex.org/W2057678261",
+          "https://openalex.org/W2078271269",
+          "https://openalex.org/W2082376914",
+          "https://openalex.org/W2086274453",
+          "https://openalex.org/W2089463633",
+          "https://openalex.org/W2092309689",
+          "https://openalex.org/W2104039704",
+          "https://openalex.org/W2115709314",
+          "https://openalex.org/W2122892545",
+          "https://openalex.org/W2123162799",
+          "https://openalex.org/W2124704085",
+          "https://openalex.org/W2129925362",
+          "https://openalex.org/W2132392106",
+          "https://openalex.org/W2133848774",
+          "https://openalex.org/W2148291626",
+          "https://openalex.org/W2151056789",
+          "https://openalex.org/W2154286581",
+          "https://openalex.org/W2159966843",
+          "https://openalex.org/W2166339706",
+          "https://openalex.org/W2225109326",
+          "https://openalex.org/W2226880313",
+          "https://openalex.org/W2236833089",
+          "https://openalex.org/W2252398104",
+          "https://openalex.org/W2297716127",
+          "https://openalex.org/W2474667434",
+          "https://openalex.org/W2494169975",
+          "https://openalex.org/W2559950083",
+          "https://openalex.org/W2605975631",
+          "https://openalex.org/W2791678231",
+          "https://openalex.org/W2896476100",
+          "https://openalex.org/W2898559532",
+          "https://openalex.org/W2907554860",
+          "https://openalex.org/W2907638671",
+          "https://openalex.org/W2954707123",
+          "https://openalex.org/W2996480032",
+          "https://openalex.org/W3012413426",
+          "https://openalex.org/W3034503810",
+          "https://openalex.org/W3035639029",
+          "https://openalex.org/W3036249819",
+          "https://openalex.org/W3036972935",
+          "https://openalex.org/W3045258609",
+          "https://openalex.org/W3094834023",
+          "https://openalex.org/W3111310205",
+          "https://openalex.org/W3129661430",
+          "https://openalex.org/W3201008858",
+          "https://openalex.org/W4200283820",
+          "https://openalex.org/W4206310999",
+          "https://openalex.org/W4233080080",
+          "https://openalex.org/W4238788310",
+          "https://openalex.org/W4242807082",
+          "https://openalex.org/W4281398289",
+          "https://openalex.org/W4311668966",
+          "https://openalex.org/W4312141008",
+          "https://openalex.org/W4312194384",
+          "https://openalex.org/W4321782827",
+          "https://openalex.org/W4390674087",
+          "https://openalex.org/W4391100790",
+          "https://openalex.org/W6682068783"
+        ],
+        "related_works": [
+          "https://openalex.org/W4391100790",
+          "https://openalex.org/W2216723929",
+          "https://openalex.org/W2231037286",
+          "https://openalex.org/W1980283223",
+          "https://openalex.org/W3109609494",
+          "https://openalex.org/W2084164487",
+          "https://openalex.org/W6906467141",
+          "https://openalex.org/W75789687",
+          "https://openalex.org/W4390674087",
+          "https://openalex.org/W4396750358"
+        ],
+        "abstract_inverted_index": {
+          "External": [
+            0
+          ],
+          "validation": [
+            1,
+            32
+          ],
+          "studies": [
+            2
+          ],
+          "are": [
+            3
+          ],
+          "an": [
+            4,
+            30
+          ],
+          "important": [
+            5
+          ],
+          "but": [
+            6
+          ],
+          "often": [
+            7
+          ],
+          "neglected": [
+            8
+          ],
+          "part": [
+            9
+          ],
+          "of": [
+            10
+          ],
+          "prediction": [
+            11
+          ],
+          "model": [
+            12,
+            23
+          ],
+          "research.": [
+            13
+          ],
+          "In": [
+            14
+          ],
+          "this": [
+            15
+          ],
+          "article,": [
+            16
+          ],
+          "the": [
+            17,
+            37
+          ],
+          "second": [
+            18
+          ],
+          "in": [
+            19
+          ],
+          "a": [
+            20,
+            43,
+            49
+          ],
+          "series": [
+            21
+          ],
+          "on": [
+            22
+          ],
+          "evaluation,": [
+            24
+          ],
+          "Riley": [
+            25
+          ],
+          "and": [
+            26,
+            35,
+            53
+          ],
+          "colleagues": [
+            27
+          ],
+          "explain": [
+            28
+          ],
+          "what": [
+            29
+          ],
+          "external": [
+            31
+          ],
+          "study": [
+            33
+          ],
+          "entails": [
+            34
+          ],
+          "describe": [
+            36
+          ],
+          "key": [
+            38
+          ],
+          "steps": [
+            39
+          ],
+          "involved,": [
+            40
+          ],
+          "from": [
+            41
+          ],
+          "establishing": [
+            42
+          ],
+          "high": [
+            44
+          ],
+          "quality": [
+            45
+          ],
+          "dataset": [
+            46
+          ],
+          "to": [
+            47
+          ],
+          "evaluating": [
+            48
+          ],
+          "model\u2019s": [
+            50
+          ],
+          "predictive": [
+            51
+          ],
+          "performance": [
+            52
+          ],
+          "clinical": [
+            54
+          ],
+          "usefulness.": [
+            55
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 448
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 146
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 57
+          }
+        ],
+        "updated_date": "2026-11-15T12:55:33.944570",
+        "created_date": "2024-01-16T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

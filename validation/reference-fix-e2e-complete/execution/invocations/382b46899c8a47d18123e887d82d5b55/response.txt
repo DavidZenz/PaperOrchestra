@@ -1,0 +1,80 @@
+```json
+{
+  "figure_and_tables": {
+    "Figure 1": {
+      "detected_issue": "No margin overflow; the diagram stays within the column width and the caption is readable. Edge annotations such as \"(fixed map)\", \"mean over 5 points\" and \"compare ŷi, yi\" are very small, and the last sits on the purple arrow.",
+      "suggested_fix": "Increase the annotation font size in source.tex to at least match the caption's size, and offset the \"compare ŷi, yi\" label so it does not overlap the arrow."
+    },
+    "Figure 2": {
+      "detected_issue": "None for margin overflow; the plot fills the column width. The embedded title uses a bold sans-serif face that does not match the serif typography of the rest of the paper, and it repeats the caption's content.",
+      "suggested_fix": "Remove the in-figure title, since the caption already describes the plot, or set the figure's text to match the document font."
+    },
+    "Table 1": {
+      "detected_issue": "No margin overflow; the table is centered within the column. The caption appears to carry a stray underline across part of its text.",
+      "suggested_fix": "Remove the underline from the caption (check for \\\\underline or a hyperref artifact) so the caption matches the other captions."
+    }
+  },
+  "other_issues": [
+    {
+      "page": 1,
+      "element": "Whole manuscript, Sections 1–5 (body text before References)",
+      "detected_issue": "The body text is well above the requested 700–1000 words. A visual estimate puts it well over 1,000 words.",
+      "suggested_fix": "Trim the Related Work and Section 4 prose to bring the body within about 700–1000 words."
+    },
+    {
+      "page": 5,
+      "element": "Unnumbered 'Figure source provenance' section after Section 4.2, with continuation on page 7",
+      "detected_issue": "This appendix-like block sits in the body with an unnumbered heading that does not match the numbered section style. It lists filenames and SHA256 checksums, which the guidelines reserve for the separate reproducibility artifact.",
+      "suggested_fix": "Keep one short sentence pointing to the separate reproducibility artifacts, move the checksums to figure_provenance.json, and remove the detailed block."
+    },
+    {
+      "page": 7,
+      "element": "'Figure source provenance' continuation paragraph ('The supplied provenance manifest records...')",
+      "detected_issue": "A two-line paragraph is orphaned at the top of the page, separated from its heading on page 5, and the rest of the page is blank.",
+      "suggested_fix": "Remove this paragraph along with the provenance block, or move it so it follows its heading, and let Section 5 begin on this page."
+    },
+    {
+      "page": 6,
+      "element": "Region below the Figure 2 caption",
+      "detected_issue": "Large unused vertical space appears below Figure 2 because Section 5 (Conclusion) is pushed to page 8. Page 7 is also mostly blank.",
+      "suggested_fix": "Use [t] or [h] float placement for Figure 2, or reduce its height, so that Section 5 can flow onto the preceding pages."
+    },
+    {
+      "page": 8,
+      "element": "References [1], [5], [9], [11], [12], [13]",
+      "detected_issue": "Page ranges are degenerate with identical start and end pages: 5:141–141, 37:147–147, 19:15–15, 41:33–33, 78:316–316, 81:461–461.",
+      "suggested_fix": "Replace each degenerate range with the correct single page or the true article page range from the bibliographic source."
+    },
+    {
+      "page": 9,
+      "element": "References [17], [21], [28], [31]",
+      "detected_issue": "Page ranges are degenerate with identical start and end pages: 70:320–320, 30:23–23, 39:279–279, 135:370–370.",
+      "suggested_fix": "Replace each degenerate range with the correct single page or the true article page range from the bibliographic source."
+    },
+    {
+      "page": 9,
+      "element": "References [22], [27], [32]",
+      "detected_issue": "arXiv entries use inconsistent and incomplete formats: 'In arXiv (Cornell University), 2017', 'In arXiv (Cornell University), 2018' and 'In arXiv, 1999' give no identifier.",
+      "suggested_fix": "Use one consistent arXiv format with the identifier, for example 'arXiv preprint arXiv:XXXX.XXXXX, 2017'."
+    },
+    {
+      "page": 9,
+      "element": "References [19] and [21]",
+      "detected_issue": "Capitalization is inconsistent: 'Journal of applied meteorology' is lowercase where other journal names are title case, and 'least squares regression through the origin' follows a period in lowercase.",
+      "suggested_fix": "Use title case for the journal name ('Journal of Applied Meteorology') and capitalize the title after the period ('Least squares regression through the origin')."
+    },
+    {
+      "page": 10,
+      "element": "References [42]",
+      "detected_issue": "Degenerate page range: 93:120–120.",
+      "suggested_fix": "Replace with the correct single page or the true article page range from the bibliographic source."
+    },
+    {
+      "page": 11,
+      "element": "Unnumbered 'Figure source provenance' section after the References",
+      "detected_issue": "This is a duplicate of the provenance block on page 5 and sits after the References as an appendix-like section. It repeats the filenames and SHA256 checksums that belong in the separate artifact.",
+      "suggested_fix": "Delete this duplicate block and keep only the separate reproducibility artifacts."
+    }
+  ]
+}
+```

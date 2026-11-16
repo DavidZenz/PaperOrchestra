@@ -1,0 +1,59 @@
+{
+  "valid": true,
+  "errors": [],
+  "model_or_network_calls": 0,
+  "status": "completed",
+  "frozen_bundle_sha256": "157a4eb83eb7ad24b0738f55b3088af3d79a429625e44834c4e819eb44832330",
+  "bundle_files": 60,
+  "bundle_hash_mismatches": {
+    "source": [],
+    "installed": [],
+    "snapshot": [],
+    "archive": []
+  },
+  "archive_sha256": "5db8e70b2b53c10eaf18b2069f631634675ccbca28aa6a60e65d396b39643806",
+  "native_starts": 54,
+  "native_completed": 54,
+  "unique_process_ids": 54,
+  "unique_native_sessions": 54,
+  "backends": {
+    "codex": 12,
+    "claude-code": 9,
+    "antigravity": 31,
+    "mistral-vibe": 2
+  },
+  "literature_plot_overlap_seconds": 549.2766790390015,
+  "completed_ensembles": 1,
+  "score_means_checked": 9,
+  "score_means_match": true,
+  "content_candidates_rejected_for_bibliography": [
+    {
+      "seq": 1063,
+      "tex": "/Users/davidzenz/PaperOrchestra/validation/reference-fix-e2e-complete/content_refinement_workdir/refined_paper_v1.tex",
+      "error": "Missing bibliography database/style commands"
+    },
+    {
+      "seq": 1073,
+      "tex": "/Users/davidzenz/PaperOrchestra/validation/reference-fix-e2e-complete/content_refinement_workdir/refined_paper_v2.tex",
+      "error": "Missing bibliography database/style commands"
+    },
+    {
+      "seq": 1083,
+      "tex": "/Users/davidzenz/PaperOrchestra/validation/reference-fix-e2e-complete/content_refinement_workdir/refined_paper_v3.tex",
+      "error": "Missing bibliography database/style commands"
+    }
+  ],
+  "rejected_candidate_pdfs_removed": true,
+  "content_round_cap": 3,
+  "formatting_passes": 1,
+  "format_outcome": "ACCEPTED_COMPILE_SUCCESS",
+  "published_pdf_matches_audited_and_accepted_candidate": true,
+  "final_tex_matches_accepted_candidate": true,
+  "artifact_hashes_checked": 104,
+  "runtime_seconds": 1818.105171918869,
+  "limits": [
+    "Only baseline reviewer ensemble ran: all three content revisions failed bibliography checks before peer review.",
+    "Formatting editor reduced final citations from 42 to 18 while addressing length feedback; all 18 resolve and their titles are visible.",
+    "Original model/tool combination is substituted; no paper-quality equivalence is established."
+  ]
+}

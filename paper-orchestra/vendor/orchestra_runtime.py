@@ -93,7 +93,8 @@ class Runtime:
     def __init__(self, trace_dir, *, model=None, model_map=None, timeout=600,
                  image_command=None, executor=None, plot_backend="ggplot2", diagram_backend="tikz",
                  rscript="Rscript", render_timeout=60, manuscript_provenance=False,
-                 model_profile=None, role_models=None, backend=None, effort=None):
+                 model_profile=None, role_models=None, backend=None, effort=None,
+                 bibliography_required=False):
         self.root = Path(trace_dir).resolve()
         self.root.mkdir(parents=True, exist_ok=True)
         self.model = model
@@ -116,6 +117,7 @@ class Runtime:
         self.render_timeout = render_timeout
         self.manuscript_provenance = manuscript_provenance
         self.figure_provenance = None
+        self.bibliography_required = bibliography_required
 
     def event(self, kind, **fields):
         with self.lock:
@@ -415,20 +417,45 @@ def instrument(base):
     from methods.agents.plotting_agent import PlottingAgent
     import methods.agents.content_refinement_agent as refinement
     import requests
+    runtime = get_runtime()
+    if runtime.bibliography_required:
+        import methods.agents.literature_review_agent as literature
+        from orchestra_references import ReferenceRetriever
+        def record_reference(event, **fields):
+            record = {"event": event, **fields}
+            destination = runtime.root / "reference_retrieval" / (uuid.uuid4().hex + ".json")
+            destination.parent.mkdir(exist_ok=True)
+            destination.write_text(json.dumps(record, indent=2, default=str))
+            runtime.event("reference_retrieval", path=str(destination), sha256=digest(destination))
+        retriever = ReferenceRetriever(recorder=record_reference,
+                                       get=lambda *a, **kw: requests.get(*a, **kw))
+        literature.s2_title_search = retriever.lookup
+        original_bibtex = HybridLiteratureAgent._generate_bibtex
+        if not getattr(original_bibtex, "_orchestra_metadata_escape", False):
+            @functools.wraps(original_bibtex)
+            def escaped_bibtex(self, papers):
+                from orchestra_bibliography import escape_bibtex_fields
+                return escape_bibtex_fields(original_bibtex(self, papers))
+            escaped_bibtex._orchestra_metadata_escape = True
+            HybridLiteratureAgent._generate_bibtex = escaped_bibtex
     original_get = requests.get
     if not getattr(original_get, "_orchestra_observer", False):
         @functools.wraps(original_get)
         def observed_get(url, *args, **kwargs):
             runtime = get_runtime()
             request_id = uuid.uuid4().hex
-            runtime.event("http_start", request=request_id, url=url, params=kwargs.get("params"))
+            safe_params = {key: ("[REDACTED]" if key.lower() in {"api_key", "apikey", "token", "key"} else value)
+                           for key, value in (kwargs.get("params") or {}).items()}
+            runtime.event("http_start", request=request_id, url=url, params=safe_params)
             try:
                 result = original_get(url, *args, **kwargs)
                 runtime.event("http_end", request=request_id, status=result.status_code,
                               response_sha256=hashlib.sha256(result.content).hexdigest())
                 return result
             except Exception as exc:
-                runtime.event("http_error", request=request_id, error=str(exc))
+                # Requests exceptions can embed URLs containing API-key query
+                # parameters; retain the failure type without credential text.
+                runtime.event("http_error", request=request_id, error_type=type(exc).__name__)
                 raise
         observed_get._orchestra_observer = True
         requests.get = observed_get
@@ -462,6 +489,17 @@ def instrument(base):
             runtime.event("compile_start", tex=str(tex_path), pdf=pdf_file,
                           tex_sha256=digest(tex_path) if tex_path.is_file() else None)
             result = original_compile(cwd, pdf_file, texfile_name, timeout)
+            if runtime.bibliography_required and Path(pdf_file).is_file():
+                from orchestra_bibliography import validate_manuscript, BibliographyError
+                try:
+                    audit = validate_manuscript(cwd, texfile_name,
+                        runtime.root.parent / "literature_agent_output" / "citation_map.json", pdf_path=pdf_file)
+                    runtime.event("bibliography_compile", tex=str(tex_path), audit=audit)
+                except BibliographyError as exc:
+                    # Feed the original compile-failure branch; do not accept a
+                    # citation-dropping revision on PDF existence alone.
+                    Path(pdf_file).unlink(missing_ok=True)
+                    runtime.event("bibliography_compile_failure", tex=str(tex_path), error=str(exc))
             exists = Path(pdf_file).is_file()
             runtime.event("compile_end", pdf=pdf_file, exists=exists,
                           sha256=digest(pdf_file) if exists else None)
@@ -493,6 +531,10 @@ def instrument(base):
                 runtime.event("stage_start", stage=label, span=span, inputs=artifacts(stage_base))
                 try:
                     result = fn(*args, **kwargs)
+                    if label == "HybridLiteratureAgent" and runtime.bibliography_required:
+                        from orchestra_bibliography import validate_library
+                        audit = validate_library(args[0].output_dir)
+                        runtime.event("bibliography_library", audit=audit)
                     if label == "ContentRefinementAgent":
                         for key, decision in args[0].worklogs.items():
                             runtime.event("revision_decision", version=key, **decision)

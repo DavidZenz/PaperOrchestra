@@ -1,0 +1,138 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+You are an expert statistical plot illustrator. Write code to generate high-quality statistical plots based on user requests.
+
+Use R with ggplot2 to generate a statistical plot based on the following detailed description: # Detailed description of the target figure: `fig_intercept_error`
+
+## 1. Content and data mapping
+
+**Chart type:** Single-series point chart (scatter plot). No connecting line, no fitted or interpolated curve, no error bars, no confidence bands, and no additional points.
+
+**Variable-to-channel mapping:**
+
+| Channel | Variable | Source |
+|---|---|---|
+| x-position | Added intercept correction *b* | Experimental log, column "Added b" |
+| y-position | Mean squared error (MSE) | Experimental log, column "Mean squared error" |
+| Color (hue) | None; one series | n/a |
+| Shape | Filled circle for all points | n/a |
+| Text label | MSE value at each point | Same MSE value, formatted as shown below |
+
+**Every measured point, enumerated:**
+
+| Point | x = b | y = MSE | Point label |
+|---|---:|---:|---|
+| P1 | 0 | 9 | "MSE = 9" |
+| P2 | 1.5 | 2.25 | "MSE = 2.25" |
+| P3 | 3 | 0 | "MSE = 0" |
+
+**Consistency check against the log:** The residuals of the baseline (2x) are y − 2x = 3 for all five observations, so MSE(b=0) = 3² = 9. For b = 1.5, each residual is 3 − 1.5 = 1.5, so MSE = 2.25. For b = 3, each residual is 0, so MSE = 0. These match the recorded values. The correction b = 3 is the mean of y − 2x and drives MSE to zero on these same five observations.
+
+**Scope statement:** This figure shows only arithmetic error reduction on the five observations used to determine the correction. It makes no claim about generalization, timing, or held-out performance.
+
+## 2. Text content
+
+- **Title:** "Measured Mean Squared Error at Three Intercept Corrections"
+- **x-axis title:** "Added intercept correction *b*" (unitless)
+- **y-axis title:** "Mean squared error (MSE)" (unitless)
+- **Caption:** None within the plot canvas (figure caption is kept separate in the manuscript text).
+
+## 3. Axis specification
+
+- **x-axis:** Limits `c(-0.25, 3.25)`. Breaks at `c(0, 1.5, 3)` with explicit labels `c("0", "1.5", "3")`.
+- **y-axis:** Limits `c(-0.5, 10)`, so the point at MSE = 0 is not clipped at the axis. Breaks at `seq(0, 10, by = 2)`.
+- **Axis lines:** Left and bottom axis lines, 0.5 pt, color `#444444`.
+- **Tick marks:** Length 3 pt, color `#444444`.
+
+## 4. Aesthetic specification
+
+**Colors:**
+
+| Element | HEX |
+|---|---|
+| Background (panel and plot) | `#FFFFFF` |
+| Major gridlines | `#E3E3E3` |
+| Minor gridlines | None |
+| Markers (fill) | `#1F4E79` |
+| Marker outline | `#FFFFFF`, 0.6 pt |
+| Title text | `#1A1A1A` |
+| Axis titles | `#333333` |
+| Tick labels | `#444444` |
+| Point labels | `#1F4E79` |
+
+**Typography (sans-serif, e.g., Helvetica or Arial):**
+
+| Element | Size | Weight |
+|---|---|---|
+| Title | 14 pt | Bold |
+| Axis titles | 12 pt | Regular |
+| Tick labels | 10 pt | Regular |
+| Point labels | 10 pt | Regular |
+
+**Markers:**
+
+- Shape: filled circle (ggplot2 `shape = 21`, fill `#1F4E79`, stroke white).
+- Size: `size = 4` (about 4 mm in ggplot2 units).
+- Stroke width: 0.6 pt.
+
+**Point labels:**
+
+- Position: placed above each point and horizontally centered (`vjust = -1.1`, `hjust = 0.5`).
+- Text: the MSE value as shown in the table above.
+
+**Gridlines:**
+
+- Major gridlines on the y-axis only, 0.4 pt, `#E3E3E3`.
+- Vertical gridlines at the three b values, 0.3 pt, `#E3E3E3`, dashed (`linetype = "dashed"`), to aid reading of the x positions.
+
+**Legend:** None.
+
+**Plot dimensions:** 5.5 in wide by 3.8 in tall. Margins of 10 pt on all sides.
+
+## 5. Reproducible R/ggplot2 specification
+
+r
+library(ggplot2)
+
+df <- data.frame(
+  b   = c(0, 1.5, 3),
+  mse = c(9, 2.25, 0)
+)
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_vline(xintercept = df$b, colour = "#E3E3E3",
+             linewidth = 0.3, linetype = "dashed") +
+  geom_point(shape = 21, size = 4, fill = "#1F4E79",
+             colour = "#FFFFFF", stroke = 0.6) +
+  geom_text(aes(label = paste0("MSE = ", format(mse, drop0trailing = TRUE))),
+            vjust = -1.1, size = 3.5, colour = "#1F4E79") +
+  scale_x_continuous(limits = c(-0.25, 3.25), breaks = c(0, 1.5, 3), labels = c("0", "1.5", "3")) +
+  scale_y_continuous(limits = c(-0.5, 10), breaks = seq(0, 10, by = 2)) +
+  labs(
+    title = "Measured Mean Squared Error at Three Intercept Corrections",
+    x     = "Added intercept correction b",
+    y     = "Mean squared error (MSE)"
+  ) +
+  theme_minimal(base_family = "Helvetica") +
+  theme(
+    plot.background    = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.background   = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.y = element_line(colour = "#E3E3E3", linewidth = 0.4),
+    axis.line          = element_line(colour = "#444444", linewidth = 0.5),
+    axis.ticks         = element_line(colour = "#444444"),
+    axis.ticks.length  = unit(3, "pt"),
+    plot.title         = element_text(size = 14, face = "bold", colour = "#1A1A1A"),
+    axis.title         = element_text(size = 12, colour = "#333333"),
+    axis.text          = element_text(size = 10, colour = "#444444"),
+    legend.position    = "none",
+    plot.margin        = margin(10, 10, 10, 10, "pt")
+  )
+
+
+**Output artifacts:**
+1. Editable R source: `fig_intercept_error.R`
+2. Vector PDF: `fig_intercept_error.pdf`, saved with `ggsave(..., width = 5.5, height = 3.8, device = cairo_pdf)`
+3. Manuscript-compatible preview: `fig_intercept_error.png`, saved at 300 dpi with the same dimensions.
+Return R code only. Define the final ggplot object as p. Do not save files: the rendering wrapper exports p to PDF and JPEG. Use only base R and ggplot2, with built-in serif, sans or mono font families. Use the supplied numeric data exactly; do not simulate or invent observations. Do not install packages or download data. The runtime sets set.seed(0). Requested canvas aspect ratio: 3:2. Code:

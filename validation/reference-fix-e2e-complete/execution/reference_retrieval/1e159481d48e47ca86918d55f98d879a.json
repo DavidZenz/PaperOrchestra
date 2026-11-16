@@ -1,0 +1,5250 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 227546,
+      "db_response_time_ms": 225,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Understanding Predictive Information Criteria for Bayesian Models) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Understanding Predictive Information Criteria for Bayesian Models) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Understanding Predictive Information Criteria for Bayesian Models",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Understanding Predictive Information Criteria for Bayesian Models&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2130902307",
+        "doi": "https://doi.org/10.1007/s11222-013-9416-2",
+        "title": "Understanding predictive information criteria for Bayesian models",
+        "display_name": "Understanding predictive information criteria for Bayesian models",
+        "relevance_score": 364.4648,
+        "publication_year": 2013,
+        "publication_date": "2013-08-19",
+        "ids": {
+          "openalex": "https://openalex.org/W2130902307",
+          "doi": "https://doi.org/10.1007/s11222-013-9416-2",
+          "mag": "2130902307"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1007/s11222-013-9416-2",
+          "doi": "https://doi.org/10.1007/s11222-013-9416-2",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1007/s11222-013-9416-2",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S5437875",
+            "display_name": "Statistics and Computing",
+            "issn_l": "0960-3174",
+            "issn": [
+              "0960-3174",
+              "1573-1375"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-d",
+              "doyens",
+              "jufo-2",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Statistics and Computing",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2130902307"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "arxiv",
+          "crossref",
+          "datacite"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://arxiv.org/pdf/1307.5928",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5074093929",
+              "display_name": "Andrew Gelman",
+              "orcid": "https://orcid.org/0000-0002-6975-2601",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-6975-2601"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I78577930",
+                "display_name": "Columbia University",
+                "ror": "https://ror.org/00hj8s172",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I78577930"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Andrew Gelman",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Columbia University, New York, NY, USA",
+              "Department of Statistics Columbia University New York USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Columbia University, New York, NY, USA",
+                "institution_ids": [
+                  "https://openalex.org/I78577930"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Statistics Columbia University New York USA",
+                "institution_ids": [
+                  "https://openalex.org/I78577930"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5066530970",
+              "display_name": "Jessica Hwang",
+              "orcid": "https://orcid.org/0000-0002-5896-4182",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-5896-4182"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I136199984",
+                "display_name": "Harvard University",
+                "ror": "https://ror.org/03vek6s52",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Jessica Hwang",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Harvard University, Cambridge, MA, USA",
+              "Dept of Statistics, Harvard University, Cambridge, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Harvard University, Cambridge, MA, USA",
+                "institution_ids": [
+                  "https://openalex.org/I136199984"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Dept of Statistics, Harvard University, Cambridge, USA",
+                "institution_ids": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5047269552",
+              "display_name": "Aki Vehtari",
+              "orcid": "https://orcid.org/0000-0003-2164-9469",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-2164-9469"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I9927081",
+                "display_name": "Aalto University",
+                "ror": "https://ror.org/020hwjq30",
+                "country_code": "FI",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I9927081"
+                ]
+              }
+            ],
+            "countries": [
+              "FI"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Aki Vehtari",
+            "raw_affiliation_strings": [
+              "Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland",
+              "Dept. of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland#TAB#"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland",
+                "institution_ids": [
+                  "https://openalex.org/I9927081"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Dept. of Biomedical Engineering and Computational Science, Aalto University, Espoo, Finland#TAB#",
+                "institution_ids": [
+                  "https://openalex.org/I9927081"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 2,
+        "institutions_distinct_count": 3,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5074093929"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I78577930"
+        ],
+        "apc_list": {
+          "value": 2890,
+          "currency": "USD",
+          "value_usd": 2890
+        },
+        "apc_paid": null,
+        "fwci": 39.4118,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 2212,
+        "citation_normalized_percentile": {
+          "value": 0.99878368,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 93,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "24",
+          "issue": "6",
+          "first_page": "997",
+          "last_page": "1016"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10136",
+          "display_name": "Statistical Methods and Inference",
+          "score": 0.7627000212669373,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.7627000212669373,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.18979999423027039,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.006500000134110451,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/information-criteria",
+            "display_name": "information criteria",
+            "score": 0.8949999809265137
+          },
+          {
+            "id": "https://openalex.org/keywords/akaike-information-criterion",
+            "display_name": "Akaike information criterion",
+            "score": 0.9589999914169312
+          },
+          {
+            "id": "https://openalex.org/keywords/deviance-information-criterion",
+            "display_name": "deviance information criterion",
+            "score": 0.9860000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/bayesian-model-selection",
+            "display_name": "Bayesian model selection",
+            "score": 0.8560000061988831
+          },
+          {
+            "id": "https://openalex.org/keywords/out-of-sample-prediction-error",
+            "display_name": "out-of-sample prediction error",
+            "score": 0.9390000104904175
+          },
+          {
+            "id": "https://openalex.org/keywords/bias-correction",
+            "display_name": "bias correction",
+            "score": 0.7490000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/model-comparison",
+            "display_name": "model comparison",
+            "score": 0.515999972820282
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C126674687",
+            "wikidata": "https://www.wikidata.org/wiki/Q1662573",
+            "display_name": "Akaike information criterion",
+            "level": 2,
+            "score": 0.8852532505989075
+          },
+          {
+            "id": "https://openalex.org/C17634605",
+            "wikidata": "https://www.wikidata.org/wiki/Q972431",
+            "display_name": "Deviance information criterion",
+            "level": 4,
+            "score": 0.7790294289588928
+          },
+          {
+            "id": "https://openalex.org/C168136583",
+            "wikidata": "https://www.wikidata.org/wiki/Q1988242",
+            "display_name": "Bayesian information criterion",
+            "level": 2,
+            "score": 0.7059440016746521
+          },
+          {
+            "id": "https://openalex.org/C107673813",
+            "wikidata": "https://www.wikidata.org/wiki/Q812534",
+            "display_name": "Bayesian probability",
+            "level": 2,
+            "score": 0.6823068857192993
+          },
+          {
+            "id": "https://openalex.org/C177599991",
+            "wikidata": "https://www.wikidata.org/wiki/Q3706279",
+            "display_name": "Deviance (statistics)",
+            "level": 2,
+            "score": 0.6206004619598389
+          },
+          {
+            "id": "https://openalex.org/C2776709221",
+            "wikidata": "https://www.wikidata.org/wiki/Q6031040",
+            "display_name": "Information Criteria",
+            "level": 3,
+            "score": 0.5349529981613159
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.4835360050201416
+          },
+          {
+            "id": "https://openalex.org/C12713177",
+            "wikidata": "https://www.wikidata.org/wiki/Q1900281",
+            "display_name": "Perspective (graphical)",
+            "level": 2,
+            "score": 0.471711128950119
+          },
+          {
+            "id": "https://openalex.org/C2779343474",
+            "wikidata": "https://www.wikidata.org/wiki/Q3109175",
+            "display_name": "Context (archaeology)",
+            "level": 2,
+            "score": 0.43518081307411194
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.4257432818412781
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.4208759665489197
+          },
+          {
+            "id": "https://openalex.org/C93959086",
+            "wikidata": "https://www.wikidata.org/wiki/Q6888345",
+            "display_name": "Model selection",
+            "level": 2,
+            "score": 0.41779959201812744
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.38826826214790344
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.3810787796974182
+          },
+          {
+            "id": "https://openalex.org/C160234255",
+            "wikidata": "https://www.wikidata.org/wiki/Q812535",
+            "display_name": "Bayesian inference",
+            "level": 3,
+            "score": 0.33416491746902466
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.30787110328674316
+          },
+          {
+            "id": "https://openalex.org/C151730666",
+            "wikidata": "https://www.wikidata.org/wiki/Q7205",
+            "display_name": "Paleontology",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C86803240",
+            "wikidata": "https://www.wikidata.org/wiki/Q420",
+            "display_name": "Biology",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 7,
+        "locations": [
+          {
+            "id": "doi:10.1007/s11222-013-9416-2",
+            "doi": "https://doi.org/10.1007/s11222-013-9416-2",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1007/s11222-013-9416-2",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S5437875",
+              "display_name": "Statistics and Computing",
+              "issn_l": "0960-3174",
+              "issn": [
+                "0960-3174",
+                "1573-1375"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-d",
+                "doyens",
+                "jufo-2",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319900",
+              "host_organization_name": "Springer Science+Business Media",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319900",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Springer Science+Business Media",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Statistics and Computing",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:arXiv.org:1307.5928",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/1307.5928",
+            "pdf_url": "https://arxiv.org/pdf/1307.5928",
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "doi:10.48550/arxiv.1307.5928",
+            "doi": "https://doi.org/10.48550/arxiv.1307.5928",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.48550/arxiv.1307.5928",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Preprint"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.295.3501",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.295.3501",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://www.stat.columbia.edu/~gelman/research/unpublished/waic_understand_final.pdf",
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.309.7642",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.309.7642",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://www.stat.columbia.edu/~gelman/research/unpublished/waic_understand.pdf",
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.363.528",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.363.528",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://www.stat.columbia.edu/~gelman/research/published/waic_understand2.pdf",
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.370.7756",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.370.7756",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://www.stat.columbia.edu/~gelman/research/published/waic_understand3.pdf",
+            "raw_type": "text"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:arXiv.org:1307.5928",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1307.5928",
+          "pdf_url": "https://arxiv.org/pdf/1307.5928",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306076",
+            "display_name": "National Science Foundation",
+            "ror": "https://ror.org/021nxhr62"
+          },
+          {
+            "id": "https://openalex.org/F4320332210",
+            "display_name": "Institute of Education Sciences",
+            "ror": "https://ror.org/04et59085"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2130902307.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2130902307.grobid-xml"
+        },
+        "referenced_works_count": 41,
+        "referenced_works": [
+          "https://openalex.org/W55848811",
+          "https://openalex.org/W1499861606",
+          "https://openalex.org/W1569625389",
+          "https://openalex.org/W1603903339",
+          "https://openalex.org/W1922851081",
+          "https://openalex.org/W1967396577",
+          "https://openalex.org/W1969567794",
+          "https://openalex.org/W1995945562",
+          "https://openalex.org/W2006258746",
+          "https://openalex.org/W2008369359",
+          "https://openalex.org/W2009435671",
+          "https://openalex.org/W2013646242",
+          "https://openalex.org/W2015558203",
+          "https://openalex.org/W2016219233",
+          "https://openalex.org/W2025720061",
+          "https://openalex.org/W2040011853",
+          "https://openalex.org/W2045656233",
+          "https://openalex.org/W2056933586",
+          "https://openalex.org/W2057765075",
+          "https://openalex.org/W2058815839",
+          "https://openalex.org/W2060442802",
+          "https://openalex.org/W2075965721",
+          "https://openalex.org/W2083536977",
+          "https://openalex.org/W2101756511",
+          "https://openalex.org/W2108868276",
+          "https://openalex.org/W2117812871",
+          "https://openalex.org/W2143684265",
+          "https://openalex.org/W2146855196",
+          "https://openalex.org/W2153882688",
+          "https://openalex.org/W2168934042",
+          "https://openalex.org/W2170555811",
+          "https://openalex.org/W2171334257",
+          "https://openalex.org/W2292751606",
+          "https://openalex.org/W2951147613",
+          "https://openalex.org/W3006027310",
+          "https://openalex.org/W3015528301",
+          "https://openalex.org/W3106889297",
+          "https://openalex.org/W4232632925",
+          "https://openalex.org/W4234053147",
+          "https://openalex.org/W4245448682",
+          "https://openalex.org/W4249616859"
+        ],
+        "related_works": [
+          "https://openalex.org/W2021070302",
+          "https://openalex.org/W2483646144",
+          "https://openalex.org/W2964252496",
+          "https://openalex.org/W3161563222",
+          "https://openalex.org/W3147160141",
+          "https://openalex.org/W7204755513",
+          "https://openalex.org/W1520153412",
+          "https://openalex.org/W1991985445",
+          "https://openalex.org/W4390016993"
+        ],
+        "abstract_inverted_index": null,
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 218
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 231
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 211
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 218
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 224
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 255
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 213
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 193
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 147
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 145
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 86
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 45
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 17
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 2
+          }
+        ],
+        "updated_date": "2026-11-15T12:55:33.944570",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2808363984",
+        "doi": "https://doi.org/10.1002/ecm.1309",
+        "title": "Model averaging in ecology: a review of Bayesian, information\u2010theoretic, and tactical approaches for predictive inference",
+        "display_name": "Model averaging in ecology: a review of Bayesian, information\u2010theoretic, and tactical approaches for predictive inference",
+        "relevance_score": 48.36637,
+        "publication_year": 2018,
+        "publication_date": "2018-05-03",
+        "ids": {
+          "openalex": "https://openalex.org/W2808363984",
+          "doi": "https://doi.org/10.1002/ecm.1309",
+          "mag": "2808363984"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1002/ecm.1309",
+          "doi": "https://doi.org/10.1002/ecm.1309",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1002/ecm.1309",
+          "pdf_url": "https://esajournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ecm.1309",
+          "source": {
+            "id": "https://openalex.org/S201386569",
+            "display_name": "Ecological Monographs",
+            "issn_l": "0012-9615",
+            "issn": [
+              "0012-9615",
+              "1557-7015"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-b",
+              "jufo-3",
+              "ki-jl-1",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1"
+            ],
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Ecological Monographs",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2808363984"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "bronze",
+          "oa_url": "https://esajournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ecm.1309",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5075919156",
+              "display_name": "Carsten F. Dormann",
+              "orcid": "https://orcid.org/0000-0002-9835-1794",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-9835-1794"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I161046081",
+                "display_name": "University of Freiburg",
+                "ror": "https://ror.org/0245cg223",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I161046081"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Carsten F. Dormann",
+            "raw_affiliation_strings": [
+              "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-9835-1794",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I161046081"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5022471857",
+              "display_name": "Justin M. Calabrese",
+              "orcid": "https://orcid.org/0000-0003-0575-6408",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0575-6408"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2800056074",
+                "display_name": "Smithsonian Conservation Biology Institute",
+                "ror": "https://ror.org/04hnzva96",
+                "country_code": "US",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I103187081",
+                  "https://openalex.org/I2800056074"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Justin M. Calabrese",
+            "raw_affiliation_strings": [
+              "Conservation Ecology Center, Smithsonian Conservation Biology Institute, 1500 Remount Road, Front Royal, Virginia, 22630 USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0003-0575-6408",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Conservation Ecology Center, Smithsonian Conservation Biology Institute, 1500 Remount Road, Front Royal, Virginia, 22630 USA",
+                "institution_ids": [
+                  "https://openalex.org/I2800056074"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5069640986",
+              "display_name": "Gurutzeta Guillera\u2010Arroita",
+              "orcid": "https://orcid.org/0000-0002-8387-5739",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8387-5739"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I165779595",
+                "display_name": "The University of Melbourne",
+                "ror": "https://ror.org/01ej9dk98",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Gurutzeta Guillera\u2010Arroita",
+            "raw_affiliation_strings": [
+              "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia",
+                "institution_ids": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5056437364",
+              "display_name": "Eleni Matechou",
+              "orcid": "https://orcid.org/0000-0003-3626-844X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-3626-844X"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I20581793",
+                "display_name": "University of Kent",
+                "ror": "https://ror.org/00xkeyj56",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I20581793"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Eleni Matechou",
+            "raw_affiliation_strings": [
+              "School of Mathematics, Statistics and Actuarial Science, University of Kent, Parkwood Road, Canterbury, CT2 7FS UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of Mathematics, Statistics and Actuarial Science, University of Kent, Parkwood Road, Canterbury, CT2 7FS UK",
+                "institution_ids": [
+                  "https://openalex.org/I20581793"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5003801884",
+              "display_name": "Volker Bahn",
+              "orcid": "https://orcid.org/0000-0001-9594-4183",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9594-4183"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I19648265",
+                "display_name": "Wright State University",
+                "ror": "https://ror.org/04qk6pt94",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I19648265"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Volker Bahn",
+            "raw_affiliation_strings": [
+              "Department of Biological Sciences, Wright State University, 3640 Colonel Glenn Hwy., Dayton, Ohio, 45435 USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biological Sciences, Wright State University, 3640 Colonel Glenn Hwy., Dayton, Ohio, 45435 USA",
+                "institution_ids": [
+                  "https://openalex.org/I19648265"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5072426099",
+              "display_name": "Kamil A. Barto\u0144",
+              "orcid": "https://orcid.org/0000-0001-5562-8274",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5562-8274"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I4210124661",
+                "display_name": "Institute of Nature Conservation",
+                "ror": "https://ror.org/02x2xf445",
+                "country_code": "PL",
+                "type": "other",
+                "lineage": [
+                  "https://openalex.org/I4210124661",
+                  "https://openalex.org/I99542240"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I99542240",
+                "display_name": "Polish Academy of Sciences",
+                "ror": "https://ror.org/01dr6c206",
+                "country_code": "PL",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I99542240"
+                ]
+              }
+            ],
+            "countries": [
+              "PL"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Kamil Barto\u0144",
+            "raw_affiliation_strings": [
+              "Institute of Nature Conservation Polish Academy of Sciences al. A. Mickiewicza 33 31\u2010120 Krak\u00f3w Poland"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Nature Conservation Polish Academy of Sciences al. A. Mickiewicza 33 31\u2010120 Krak\u00f3w Poland",
+                "institution_ids": [
+                  "https://openalex.org/I4210124661",
+                  "https://openalex.org/I99542240"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5086723490",
+              "display_name": "Colin M. Beale",
+              "orcid": "https://orcid.org/0000-0002-2960-5666",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2960-5666"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I52099693",
+                "display_name": "University of York",
+                "ror": "https://ror.org/04m01e293",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I52099693"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Colin M. Beale",
+            "raw_affiliation_strings": [
+              "Department of Biology, University of York, Wentworth Way, York, YO10 5DD UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biology, University of York, Wentworth Way, York, YO10 5DD UK",
+                "institution_ids": [
+                  "https://openalex.org/I52099693"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5063519269",
+              "display_name": "Simone Ciuti",
+              "orcid": "https://orcid.org/0000-0003-1052-9509",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1052-9509"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I100930933",
+                "display_name": "University College Dublin",
+                "ror": "https://ror.org/05m7pjf47",
+                "country_code": "IE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I100930933"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I161046081",
+                "display_name": "University of Freiburg",
+                "ror": "https://ror.org/0245cg223",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I161046081"
+                ]
+              }
+            ],
+            "countries": [
+              "DE",
+              "IE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Simone Ciuti",
+            "raw_affiliation_strings": [
+              "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+              "Laboratory of Wildlife Ecology and Behaviour, School of Biology and Environmental Science, University College Dublin, Belfield D4, Dublin, Ireland"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I161046081"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Laboratory of Wildlife Ecology and Behaviour, School of Biology and Environmental Science, University College Dublin, Belfield D4, Dublin, Ireland",
+                "institution_ids": [
+                  "https://openalex.org/I100930933"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5032805182",
+              "display_name": "Jane Elith",
+              "orcid": "https://orcid.org/0000-0002-8706-0326",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8706-0326"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I165779595",
+                "display_name": "The University of Melbourne",
+                "ror": "https://ror.org/01ej9dk98",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Jane Elith",
+            "raw_affiliation_strings": [
+              "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia",
+                "institution_ids": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5053802547",
+              "display_name": "Katharina Gerstner",
+              "orcid": "https://orcid.org/0000-0003-0348-9334",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0348-9334"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I137479271",
+                "display_name": "Helmholtz Centre for Environmental Research",
+                "ror": "https://ror.org/000h6jb29",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I137479271"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I2801030728",
+                "display_name": "German Centre for Integrative Biodiversity Research",
+                "ror": "https://ror.org/01jty7g66",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I2801030728"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Katharina Gerstner",
+            "raw_affiliation_strings": [
+              "Computational Landscape Ecology, Helmholtz Centre for Environmental Research-UFZ, Permoser Str. 15, 04318 Leipzig, Germany",
+              "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig, Deutscher Platz 5E, 04103 Leipzig, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Computational Landscape Ecology, Helmholtz Centre for Environmental Research-UFZ, Permoser Str. 15, 04318 Leipzig, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I137479271"
+                ]
+              },
+              {
+                "raw_affiliation_string": "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig, Deutscher Platz 5E, 04103 Leipzig, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I2801030728"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5018504497",
+              "display_name": "J\u00e9r\u00f4me Gu\u00e9lat",
+              "orcid": "https://orcid.org/0000-0003-1438-4378",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1438-4378"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2799513111",
+                "display_name": "Swiss Ornithological Institute",
+                "ror": "https://ror.org/03mcsbr76",
+                "country_code": "CH",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I2799513111"
+                ]
+              }
+            ],
+            "countries": [
+              "CH"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "J\u00e9r\u00f4me Guelat",
+            "raw_affiliation_strings": [
+              "Swiss Ornithological Institute, Seerose 1, 6204 Sempach, Switzerland"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Swiss Ornithological Institute, Seerose 1, 6204 Sempach, Switzerland",
+                "institution_ids": [
+                  "https://openalex.org/I2799513111"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5055421718",
+              "display_name": "Petr Keil",
+              "orcid": "https://orcid.org/0000-0003-3017-1858",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-3017-1858"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2801030728",
+                "display_name": "German Centre for Integrative Biodiversity Research",
+                "ror": "https://ror.org/01jty7g66",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I2801030728"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Petr Keil",
+            "raw_affiliation_strings": [
+              "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig, Deutscher Platz 5E, 04103 Leipzig, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig, Deutscher Platz 5E, 04103 Leipzig, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I2801030728"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5070847668",
+              "display_name": "Jos\u00e9 Joaqu\u00edn Lahoz\u2010Monfort",
+              "orcid": "https://orcid.org/0000-0002-0845-7035",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-0845-7035"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I165779595",
+                "display_name": "The University of Melbourne",
+                "ror": "https://ror.org/01ej9dk98",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Jos\u00e9 J. Lahoz\u2010Monfort",
+            "raw_affiliation_strings": [
+              "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia",
+                "institution_ids": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5025863217",
+              "display_name": "Laura J. Pollock",
+              "orcid": "https://orcid.org/0000-0002-6004-4027",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-6004-4027"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1294671590",
+                "display_name": "Centre National de la Recherche Scientifique",
+                "ror": "https://ror.org/02feahw73",
+                "country_code": "FR",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I1294671590"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210137965",
+                "display_name": "Laboratoire d'\u00c9cologie Alpine",
+                "ror": "https://ror.org/03x1z2w73",
+                "country_code": "FR",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1294671590",
+                  "https://openalex.org/I2802818602",
+                  "https://openalex.org/I4210088668",
+                  "https://openalex.org/I4210090127",
+                  "https://openalex.org/I4210107625",
+                  "https://openalex.org/I4210113730",
+                  "https://openalex.org/I4210131494",
+                  "https://openalex.org/I4210137965",
+                  "https://openalex.org/I4210148025",
+                  "https://openalex.org/I4210166444",
+                  "https://openalex.org/I4387154391",
+                  "https://openalex.org/I70900168",
+                  "https://openalex.org/I899635006"
+                ]
+              }
+            ],
+            "countries": [
+              "FR"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Laura J. Pollock",
+            "raw_affiliation_strings": [
+              "Univ. Grenoble Alpes, CNRS, Univ. Savoie Mont Blanc, Laboratoire d'Ecologie Alpine (LECA), Grenoble, 38000 France"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Univ. Grenoble Alpes, CNRS, Univ. Savoie Mont Blanc, Laboratoire d'Ecologie Alpine (LECA), Grenoble, 38000 France",
+                "institution_ids": [
+                  "https://openalex.org/I1294671590",
+                  "https://openalex.org/I4210137965"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5012323114",
+              "display_name": "Bj\u00f6rn Reineking",
+              "orcid": "https://orcid.org/0000-0001-5277-9181",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5277-9181"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I4210088668",
+                "display_name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+                "ror": "https://ror.org/003vg9w96",
+                "country_code": "FR",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I4210088668"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I54009628",
+                "display_name": "University of Bayreuth",
+                "ror": "https://ror.org/0234wmv40",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I54009628"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I899635006",
+                "display_name": "Universit\u00e9 Grenoble Alpes",
+                "ror": "https://ror.org/02rx3b187",
+                "country_code": "FR",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I899635006"
+                ]
+              }
+            ],
+            "countries": [
+              "DE",
+              "FR"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Bj\u00f6rn Reineking",
+            "raw_affiliation_strings": [
+              "Biogeographical Modelling Bayreuth Center of Ecology and Environmental Research BayCEER University of Bayreuth Dr. Hans\u2010Frisch\u2010Stra\u00dfe 1\u20103 95448 Bayreuth Germany",
+              "University Grenoble Alpes Irstea UR LESSEM F\u201038402 St\u2010Martin\u2010d'H\u00e8res Grenoble France"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Biogeographical Modelling Bayreuth Center of Ecology and Environmental Research BayCEER University of Bayreuth Dr. Hans\u2010Frisch\u2010Stra\u00dfe 1\u20103 95448 Bayreuth Germany",
+                "institution_ids": [
+                  "https://openalex.org/I54009628"
+                ]
+              },
+              {
+                "raw_affiliation_string": "University Grenoble Alpes Irstea UR LESSEM F\u201038402 St\u2010Martin\u2010d'H\u00e8res Grenoble France",
+                "institution_ids": [
+                  "https://openalex.org/I4210088668",
+                  "https://openalex.org/I899635006"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5018957560",
+              "display_name": "David R. Roberts",
+              "orcid": "https://orcid.org/0000-0002-3437-2422",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3437-2422"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I161046081",
+                "display_name": "University of Freiburg",
+                "ror": "https://ror.org/0245cg223",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I161046081"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I168635309",
+                "display_name": "University of Calgary",
+                "ror": "https://ror.org/03yjb2x39",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I168635309"
+                ]
+              }
+            ],
+            "countries": [
+              "CA",
+              "DE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "David R. Roberts",
+            "raw_affiliation_strings": [
+              "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+              "Department of Geography, University of Calgary, 2500 University Dr. NW, Calgary, Alberta, T2N 1N4 Canada"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-3437-2422",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I161046081"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Geography, University of Calgary, 2500 University Dr. NW, Calgary, Alberta, T2N 1N4 Canada",
+                "institution_ids": [
+                  "https://openalex.org/I168635309"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5002453173",
+              "display_name": "Boris Schr\u00f6der",
+              "orcid": "https://orcid.org/0000-0002-8577-7980",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8577-7980"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I4210118442",
+                "display_name": "Berlin Brandenburg Institute of Advanced Biodiversity Research",
+                "ror": "https://ror.org/02ewzby52",
+                "country_code": "DE",
+                "type": "other",
+                "lineage": [
+                  "https://openalex.org/I4210118442",
+                  "https://openalex.org/I75951250"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I94509681",
+                "display_name": "Technische Universit\u00e4t Braunschweig",
+                "ror": "https://ror.org/010nsgg66",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I94509681"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Boris Schr\u00f6der",
+            "raw_affiliation_strings": [
+              "Berlin\u2010Brandenburg Institute of Advanced Biodiversity Research (BBIB) Altensteinstr. 34 14195 Berlin Germany",
+              "Landscape Ecology and Environmental Systems Analysis Institute of Geoecology Technische Universit\u00e4t Braunschweig Langer Kamp 19c 38106 Braunschweig Germany"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-8577-7980",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Berlin\u2010Brandenburg Institute of Advanced Biodiversity Research (BBIB) Altensteinstr. 34 14195 Berlin Germany",
+                "institution_ids": [
+                  "https://openalex.org/I4210118442"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Landscape Ecology and Environmental Systems Analysis Institute of Geoecology Technische Universit\u00e4t Braunschweig Langer Kamp 19c 38106 Braunschweig Germany",
+                "institution_ids": [
+                  "https://openalex.org/I94509681"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5072813166",
+              "display_name": "Wilfried Thuiller",
+              "orcid": "https://orcid.org/0000-0002-5388-5274",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-5388-5274"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1294671590",
+                "display_name": "Centre National de la Recherche Scientifique",
+                "ror": "https://ror.org/02feahw73",
+                "country_code": "FR",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I1294671590"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210137965",
+                "display_name": "Laboratoire d'\u00c9cologie Alpine",
+                "ror": "https://ror.org/03x1z2w73",
+                "country_code": "FR",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1294671590",
+                  "https://openalex.org/I2802818602",
+                  "https://openalex.org/I4210088668",
+                  "https://openalex.org/I4210090127",
+                  "https://openalex.org/I4210107625",
+                  "https://openalex.org/I4210113730",
+                  "https://openalex.org/I4210131494",
+                  "https://openalex.org/I4210137965",
+                  "https://openalex.org/I4210148025",
+                  "https://openalex.org/I4210166444",
+                  "https://openalex.org/I4387154391",
+                  "https://openalex.org/I70900168",
+                  "https://openalex.org/I899635006"
+                ]
+              }
+            ],
+            "countries": [
+              "FR"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Wilfried Thuiller",
+            "raw_affiliation_strings": [
+              "Univ. Grenoble Alpes, CNRS, Univ. Savoie Mont Blanc, Laboratoire d'Ecologie Alpine (LECA), Grenoble, 38000 France"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Univ. Grenoble Alpes, CNRS, Univ. Savoie Mont Blanc, Laboratoire d'Ecologie Alpine (LECA), Grenoble, 38000 France",
+                "institution_ids": [
+                  "https://openalex.org/I1294671590",
+                  "https://openalex.org/I4210137965"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5054836512",
+              "display_name": "David I. Warton",
+              "orcid": "https://orcid.org/0000-0001-9441-6645",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9441-6645"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I31746571",
+                "display_name": "UNSW Sydney",
+                "ror": "https://ror.org/03r8z3t63",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I31746571"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "David I. Warton",
+            "raw_affiliation_strings": [
+              "School of Mathematics and Statistics, Evolution and Ecology Research Centre, University of New South Wales, Sydney, New South Wales, 2052 Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of Mathematics and Statistics, Evolution and Ecology Research Centre, University of New South Wales, Sydney, New South Wales, 2052 Australia",
+                "institution_ids": [
+                  "https://openalex.org/I31746571"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5047183172",
+              "display_name": "Brendan Anthony Wintle",
+              "orcid": "https://orcid.org/0000-0002-4234-5950",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-4234-5950"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I165779595",
+                "display_name": "The University of Melbourne",
+                "ror": "https://ror.org/01ej9dk98",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Brendan A. Wintle",
+            "raw_affiliation_strings": [
+              "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of BioSciences, University of Melbourne, Royal Parade, Parkville, Melbourne, Victoria, 3052 Australia",
+                "institution_ids": [
+                  "https://openalex.org/I165779595"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5053318488",
+              "display_name": "Simon N. Wood",
+              "orcid": "https://orcid.org/0000-0002-2034-7453",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2034-7453"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I36234482",
+                "display_name": "University of Bristol",
+                "ror": "https://ror.org/0524sp257",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I36234482"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Simon N. Wood",
+            "raw_affiliation_strings": [
+              "School of Mathematics, Bristol University, Tyndall Avenue, Bristol, BS8 1TW UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "School of Mathematics, Bristol University, Tyndall Avenue, Bristol, BS8 1TW UK",
+                "institution_ids": [
+                  "https://openalex.org/I36234482"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5066761839",
+              "display_name": "Rafael O. W\u00fcest",
+              "orcid": "https://orcid.org/0000-0001-6047-1945",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-6047-1945"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1294671590",
+                "display_name": "Centre National de la Recherche Scientifique",
+                "ror": "https://ror.org/02feahw73",
+                "country_code": "FR",
+                "type": "government",
+                "lineage": [
+                  "https://openalex.org/I1294671590"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I2800262456",
+                "display_name": "Swiss Federal Institute for Forest, Snow and Landscape Research",
+                "ror": "https://ror.org/04bs5yc70",
+                "country_code": "CH",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I2799323385",
+                  "https://openalex.org/I2800262456"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210137965",
+                "display_name": "Laboratoire d'\u00c9cologie Alpine",
+                "ror": "https://ror.org/03x1z2w73",
+                "country_code": "FR",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1294671590",
+                  "https://openalex.org/I2802818602",
+                  "https://openalex.org/I4210088668",
+                  "https://openalex.org/I4210090127",
+                  "https://openalex.org/I4210107625",
+                  "https://openalex.org/I4210113730",
+                  "https://openalex.org/I4210131494",
+                  "https://openalex.org/I4210137965",
+                  "https://openalex.org/I4210148025",
+                  "https://openalex.org/I4210166444",
+                  "https://openalex.org/I4387154391",
+                  "https://openalex.org/I70900168",
+                  "https://openalex.org/I899635006"
+                ]
+              }
+            ],
+            "countries": [
+              "CH",
+              "FR"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Rafael O. W\u00fcest",
+            "raw_affiliation_strings": [
+              "Swiss Federal Institute for Forest, Snow and Landscape Research WSL Z\u00fcrcherstrasse 111 8903 Birmensdorf Switzerland",
+              "Univ. Grenoble Alpes, CNRS, Univ. Savoie Mont Blanc, Laboratoire d'Ecologie Alpine (LECA), Grenoble, 38000 France"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Swiss Federal Institute for Forest, Snow and Landscape Research WSL Z\u00fcrcherstrasse 111 8903 Birmensdorf Switzerland",
+                "institution_ids": [
+                  "https://openalex.org/I2800262456"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Univ. Grenoble Alpes, CNRS, Univ. Savoie Mont Blanc, Laboratoire d'Ecologie Alpine (LECA), Grenoble, 38000 France",
+                "institution_ids": [
+                  "https://openalex.org/I1294671590",
+                  "https://openalex.org/I4210137965"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5002648105",
+              "display_name": "Florian Hartig",
+              "orcid": "https://orcid.org/0000-0002-6255-9059",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-6255-9059"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I161046081",
+                "display_name": "University of Freiburg",
+                "ror": "https://ror.org/0245cg223",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I161046081"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I60668342",
+                "display_name": "University of Regensburg",
+                "ror": "https://ror.org/01eezs655",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I60668342"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Florian Hartig",
+            "raw_affiliation_strings": [
+              "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+              "Theoretical Ecology University of Regensburg Universit\u00e4tsstr. 31 93053 Regensburg Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Biometry and Environmental System Analysis, University of Freiburg, Tennenbacher Str. 4, 79106 Freiburg, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I161046081"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Theoretical Ecology University of Regensburg Universit\u00e4tsstr. 31 93053 Regensburg Germany",
+                "institution_ids": [
+                  "https://openalex.org/I60668342"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 9,
+        "institutions_distinct_count": 24,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5075919156"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I161046081"
+        ],
+        "apc_list": {
+          "value": 3970,
+          "currency": "USD",
+          "value_usd": 3970
+        },
+        "apc_paid": null,
+        "fwci": 21.5972,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 420,
+        "citation_normalized_percentile": {
+          "value": 0.99570662,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "88",
+          "issue": "4",
+          "first_page": "485",
+          "last_page": "504"
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10136",
+          "display_name": "Statistical Methods and Inference",
+          "score": 0.5814999938011169,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.5814999938011169,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.17309999465942383,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.033799998462200165,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/model-averaging",
+            "display_name": "model averaging",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/predictive-inference",
+            "display_name": "predictive inference",
+            "score": 0.8289999961853027
+          },
+          {
+            "id": "https://openalex.org/keywords/model-selection-uncertainty",
+            "display_name": "model selection uncertainty",
+            "score": 0.8420000076293945
+          },
+          {
+            "id": "https://openalex.org/keywords/bayesian-model-averaging",
+            "display_name": "Bayesian model averaging",
+            "score": 0.7350000143051147
+          },
+          {
+            "id": "https://openalex.org/keywords/cross-validation",
+            "display_name": "cross-validation",
+            "score": 0.7820000052452087
+          },
+          {
+            "id": "https://openalex.org/keywords/resampling",
+            "display_name": "resampling",
+            "score": 0.7390000224113464
+          },
+          {
+            "id": "https://openalex.org/keywords/confidence-interval-coverage",
+            "display_name": "confidence interval coverage",
+            "score": 0.7450000047683716
+          },
+          {
+            "id": "https://openalex.org/keywords/uncertainty-quantification",
+            "display_name": "uncertainty quantification",
+            "score": 0.843999981880188
+          },
+          {
+            "id": "https://openalex.org/keywords/noisy-data",
+            "display_name": "noisy data",
+            "score": 0.5239999890327454
+          },
+          {
+            "id": "https://openalex.org/keywords/ecological-forecasting",
+            "display_name": "ecological forecasting",
+            "score": 0.3610000014305115
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C196083921",
+            "wikidata": "https://www.wikidata.org/wiki/Q7915758",
+            "display_name": "Variance (accounting)",
+            "level": 2,
+            "score": 0.6128481030464172
+          },
+          {
+            "id": "https://openalex.org/C93959086",
+            "wikidata": "https://www.wikidata.org/wiki/Q6888345",
+            "display_name": "Model selection",
+            "level": 2,
+            "score": 0.5913324356079102
+          },
+          {
+            "id": "https://openalex.org/C160234255",
+            "wikidata": "https://www.wikidata.org/wiki/Q812535",
+            "display_name": "Bayesian inference",
+            "level": 3,
+            "score": 0.5531939268112183
+          },
+          {
+            "id": "https://openalex.org/C178650346",
+            "wikidata": "https://www.wikidata.org/wiki/Q201984",
+            "display_name": "Covariance",
+            "level": 2,
+            "score": 0.5508928894996643
+          },
+          {
+            "id": "https://openalex.org/C2779343474",
+            "wikidata": "https://www.wikidata.org/wiki/Q3109175",
+            "display_name": "Context (archaeology)",
+            "level": 2,
+            "score": 0.532477617263794
+          },
+          {
+            "id": "https://openalex.org/C107673813",
+            "wikidata": "https://www.wikidata.org/wiki/Q812534",
+            "display_name": "Bayesian probability",
+            "level": 2,
+            "score": 0.49366578459739685
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.45021045207977295
+          },
+          {
+            "id": "https://openalex.org/C18903297",
+            "wikidata": "https://www.wikidata.org/wiki/Q7150",
+            "display_name": "Ecology",
+            "level": 1,
+            "score": 0.43700939416885376
+          },
+          {
+            "id": "https://openalex.org/C204323151",
+            "wikidata": "https://www.wikidata.org/wiki/Q905424",
+            "display_name": "Range (aeronautics)",
+            "level": 2,
+            "score": 0.435200959444046
+          },
+          {
+            "id": "https://openalex.org/C2776214188",
+            "wikidata": "https://www.wikidata.org/wiki/Q408386",
+            "display_name": "Inference",
+            "level": 2,
+            "score": 0.4333333969116211
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.42690083384513855
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.4140288829803467
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.3852081894874573
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.2367403507232666
+          },
+          {
+            "id": "https://openalex.org/C121955636",
+            "wikidata": "https://www.wikidata.org/wiki/Q4116214",
+            "display_name": "Accounting",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C144133560",
+            "wikidata": "https://www.wikidata.org/wiki/Q4830453",
+            "display_name": "Business",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C151730666",
+            "wikidata": "https://www.wikidata.org/wiki/Q7205",
+            "display_name": "Paleontology",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C159985019",
+            "wikidata": "https://www.wikidata.org/wiki/Q181790",
+            "display_name": "Composite material",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C86803240",
+            "wikidata": "https://www.wikidata.org/wiki/Q420",
+            "display_name": "Biology",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C192562407",
+            "wikidata": "https://www.wikidata.org/wiki/Q228736",
+            "display_name": "Materials science",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 12,
+        "locations": [
+          {
+            "id": "doi:10.1002/ecm.1309",
+            "doi": "https://doi.org/10.1002/ecm.1309",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1002/ecm.1309",
+            "pdf_url": "https://esajournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ecm.1309",
+            "source": {
+              "id": "https://openalex.org/S201386569",
+              "display_name": "Ecological Monographs",
+              "issn_l": "0012-9615",
+              "issn": [
+                "0012-9615",
+                "1557-7015"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "dongbi-b",
+                "jufo-3",
+                "ki-jl-1",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1"
+              ],
+              "host_organization": "https://openalex.org/P4310320595",
+              "host_organization_name": "Wiley",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320595"
+              ],
+              "host_organization_lineage_names": [
+                "Wiley"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Ecological Monographs",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:research-information.bris.ac.uk:openaire_cris_publications/dfaf3cc3-4927-4e58-9853-f34207334251",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://research-information.bris.ac.uk/en/publications/dfaf3cc3-4927-4e58-9853-f34207334251",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407055359",
+              "display_name": "Explore Bristol Research",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": null,
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:kar.kent.ac.uk:66992",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://kar.kent.ac.uk/66992/",
+            "pdf_url": "https://kar.kent.ac.uk/66992/1/AS6221972405043261525354790459_content_1.pdf",
+            "source": {
+              "id": "https://openalex.org/S4377196264",
+              "display_name": "Kent Academic Repository (University of Kent)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I20581793",
+              "host_organization_name": "University of Kent",
+              "host_organization_lineage": [
+                "https://openalex.org/I20581793"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Article"
+          },
+          {
+            "id": "pmh:oai:dora:wsl_18761",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.dora.lib4ri.ch/wsl/item/wsl:18761",
+            "pdf_url": "https://www.dora.lib4ri.ch/wsl/dload/wsl:18761/PDF/view",
+            "source": {
+              "id": "https://openalex.org/S4306401379",
+              "display_name": "DORA WSL (Swiss Federal Institute for Forest, Snow and Landscape Research)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I2800262456",
+              "host_organization_name": "Swiss Federal Institute for Forest, Snow and Landscape Research",
+              "host_organization_lineage": [
+                "https://openalex.org/I2800262456"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Ecological Monographs",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:eprints.whiterose.ac.uk:127516",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://eprints.whiterose.ac.uk/id/eprint/127516/1/Beale_CombiningModels5_final.pdf",
+            "pdf_url": "https://eprints.whiterose.ac.uk/id/eprint/127516/1/Beale_CombiningModels5_final.pdf",
+            "source": {
+              "id": "https://openalex.org/S4306400854",
+              "display_name": "White Rose Research Online (University of Leeds, The University of Sheffield, University of York)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I2800616092",
+              "host_organization_name": "White Rose University Consortium",
+              "host_organization_lineage": [
+                "https://openalex.org/I2800616092"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Article"
+          },
+          {
+            "id": "pmh:oai:corescholar.libraries.wright.edu:biology-1822",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://corescholar.libraries.wright.edu/biology/791",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2737205702",
+              "display_name": "Journal of Bioresource Management",
+              "issn_l": "2309-3854",
+              "issn": [
+                "2309-3854"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": false,
+              "listed_in": [
+                "doaj",
+                "erih-plus"
+              ],
+              "host_organization": "https://openalex.org/P4310316536",
+              "host_organization_name": "Bioresource Research Center (BRC), Islamabad",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310316536"
+              ],
+              "host_organization_lineage_names": [
+                "Bioresource Research Center (BRC), Islamabad"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Biological Sciences Faculty Publications",
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:HAL:hal-01983400v1",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://hal.archives-ouvertes.fr/hal-01983400",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402512",
+              "display_name": "HAL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4405252976",
+              "host_organization_name": "Centre pour la Communication Scientifique Directe",
+              "host_organization_lineage": [
+                "https://openalex.org/I4405252976"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "ISSN: 0012-9615",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:HAL:hal-02608750v1",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://hal.inrae.fr/hal-02608750",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402512",
+              "display_name": "HAL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4405252976",
+              "host_organization_name": "Centre pour la Communication Scientifique Directe",
+              "host_organization_lineage": [
+                "https://openalex.org/I4405252976"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Ecological monographs, 2018, 88 (4), pp.485-504. &#x27E8;10.1002/ecm.1309&#x27E9;",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:irsteadoc.irstea.fr:PUB00060364",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://irsteadoc.irstea.fr/cemoa/PUB00060364",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407064358",
+              "display_name": "Cemadoc (Cemagref / IRSTEA)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "53052",
+            "raw_type": "Article de revue scientifique \u00e0 comit\u00e9 de lecture"
+          },
+          {
+            "id": "pmh:oai:jupiter.its.unimelb.edu.au:11343/284731",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://hdl.handle.net/11343/284731",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196259",
+              "display_name": "Minerva Access (University of Melbourne)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I165779595",
+              "host_organization_name": "The University of Melbourne",
+              "host_organization_lineage": [
+                "https://openalex.org/I165779595"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:research-information.bris.ac.uk:openaire/dfaf3cc3-4927-4e58-9853-f34207334251",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://research-information.bris.ac.uk/files/188474390/Full_text_PDF_final_published_version_.pdf",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400895",
+              "display_name": "Bristol Research (University of Bristol)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I36234482",
+              "host_organization_name": "University of Bristol",
+              "host_organization_lineage": [
+                "https://openalex.org/I36234482"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:works.bepress.com:volker_bahn-10016",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://works.bepress.com/volker_bahn/55",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2737205702",
+              "display_name": "Journal of Bioresource Management",
+              "issn_l": "2309-3854",
+              "issn": [
+                "2309-3854"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": false,
+              "listed_in": [
+                "doaj",
+                "erih-plus"
+              ],
+              "host_organization": "https://openalex.org/P4310316536",
+              "host_organization_name": "Bioresource Research Center (BRC), Islamabad",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310316536"
+              ],
+              "host_organization_lineage_names": [
+                "Bioresource Research Center (BRC), Islamabad"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Volker Bahn",
+            "raw_type": "text"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1002/ecm.1309",
+          "doi": "https://doi.org/10.1002/ecm.1309",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1002/ecm.1309",
+          "pdf_url": "https://esajournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ecm.1309",
+          "source": {
+            "id": "https://openalex.org/S201386569",
+            "display_name": "Ecological Monographs",
+            "issn_l": "0012-9615",
+            "issn": [
+              "0012-9615",
+              "1557-7015"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-b",
+              "jufo-3",
+              "ki-jl-1",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1"
+            ],
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Ecological Monographs",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G1070864770",
+            "display_name": null,
+            "funder_award_id": "SCHR1000/6-2",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G2406531789",
+            "display_name": "Using species distribution models to make robust conservation decisions",
+            "funder_award_id": "DP160101003",
+            "funder_id": "https://openalex.org/F4320334704",
+            "funder_display_name": "Australian Research Council"
+          },
+          {
+            "id": "https://openalex.org/G2529913644",
+            "display_name": null,
+            "funder_award_id": "EP/K005251/2",
+            "funder_id": "https://openalex.org/F4320334627",
+            "funder_display_name": "Engineering and Physical Sciences Research Council"
+          },
+          {
+            "id": "https://openalex.org/G3068621922",
+            "display_name": null,
+            "funder_award_id": "DO786/9\u20101 and DO786/10\u20101",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G3490424266",
+            "display_name": null,
+            "funder_award_id": "SCHR1000/6\u20102 and SCHR1000/8\u20102",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G392023134",
+            "display_name": "Verbundvorhaben: GLUES - Unterst\u00fctzung des F\u00f6rderbereichs Nachhaltiges Landmanagement (Modul A) - Globale Absch\u00e4tzung der Auswirkungen von Landnutzungs\u00e4nderungen auf Treibhausgasemissionen und \u00d6kosystemare Dienstleistungen - Teilvorhaben: Koordination, Synthese und Outreach",
+            "funder_award_id": "01LL0901A",
+            "funder_id": "https://openalex.org/F4320321114",
+            "funder_display_name": "Bundesministerium f\u00fcr Bildung und Forschung"
+          },
+          {
+            "id": "https://openalex.org/G3954197273",
+            "display_name": "Advancing tools for the analysis of high-dimensional data in ecology",
+            "funder_award_id": "FT120100501",
+            "funder_id": "https://openalex.org/F4320334704",
+            "funder_display_name": "Australian Research Council"
+          },
+          {
+            "id": "https://openalex.org/G4051600993",
+            "display_name": null,
+            "funder_award_id": "SCHR1000/8-2",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G4617990",
+            "display_name": null,
+            "funder_award_id": "FZT118",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G5632166549",
+            "display_name": null,
+            "funder_award_id": "FZT 118",
+            "funder_id": "https://openalex.org/F4320330723",
+            "funder_display_name": "Deutsches Zentrum f\u00fcr integrative Biodiversit\u00e4tsforschung Halle-Jena-Leipzig"
+          },
+          {
+            "id": "https://openalex.org/G6479908710",
+            "display_name": "Improved methods for predicting species' distributions under environmental change",
+            "funder_award_id": "FT0991640",
+            "funder_id": "https://openalex.org/F4320334704",
+            "funder_display_name": "Australian Research Council"
+          },
+          {
+            "id": "https://openalex.org/G7939772429",
+            "display_name": null,
+            "funder_award_id": "281422",
+            "funder_id": "https://openalex.org/F4320334960",
+            "funder_display_name": "Seventh Framework Programme"
+          },
+          {
+            "id": "https://openalex.org/G8253079694",
+            "display_name": "Connections between imperfect detection and ecological inference",
+            "funder_award_id": "DE160100904",
+            "funder_id": "https://openalex.org/F4320334704",
+            "funder_display_name": "Australian Research Council"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320308269",
+            "display_name": "Alexander von Humboldt-Stiftung",
+            "ror": "https://ror.org/012kf4317"
+          },
+          {
+            "id": "https://openalex.org/F4320320879",
+            "display_name": "Deutsche Forschungsgemeinschaft",
+            "ror": "https://ror.org/018mejw64"
+          },
+          {
+            "id": "https://openalex.org/F4320320974",
+            "display_name": "University of Melbourne",
+            "ror": "https://ror.org/01ej9dk98"
+          },
+          {
+            "id": "https://openalex.org/F4320321114",
+            "display_name": "Bundesministerium f\u00fcr Bildung und Forschung",
+            "ror": "https://ror.org/04pz7b180"
+          },
+          {
+            "id": "https://openalex.org/F4320330723",
+            "display_name": "Deutsches Zentrum f\u00fcr integrative Biodiversit\u00e4tsforschung Halle-Jena-Leipzig",
+            "ror": "https://ror.org/01jty7g66"
+          },
+          {
+            "id": "https://openalex.org/F4320334627",
+            "display_name": "Engineering and Physical Sciences Research Council",
+            "ror": "https://ror.org/0439y7842"
+          },
+          {
+            "id": "https://openalex.org/F4320334704",
+            "display_name": "Australian Research Council",
+            "ror": "https://ror.org/05mmh0f86"
+          },
+          {
+            "id": "https://openalex.org/F4320334960",
+            "display_name": "Seventh Framework Programme",
+            "ror": "https://ror.org/00k4n6c32"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2808363984.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2808363984.grobid-xml"
+        },
+        "referenced_works_count": 165,
+        "referenced_works": [
+          "https://openalex.org/W19323926",
+          "https://openalex.org/W27682692",
+          "https://openalex.org/W28412257",
+          "https://openalex.org/W42051514",
+          "https://openalex.org/W50802212",
+          "https://openalex.org/W55848811",
+          "https://openalex.org/W70948400",
+          "https://openalex.org/W198669658",
+          "https://openalex.org/W292828238",
+          "https://openalex.org/W429766147",
+          "https://openalex.org/W1487536649",
+          "https://openalex.org/W1488022545",
+          "https://openalex.org/W1498858051",
+          "https://openalex.org/W1525234069",
+          "https://openalex.org/W1533114367",
+          "https://openalex.org/W1567331820",
+          "https://openalex.org/W1584343945",
+          "https://openalex.org/W1603903339",
+          "https://openalex.org/W1605276600",
+          "https://openalex.org/W1626308529",
+          "https://openalex.org/W1645816215",
+          "https://openalex.org/W1789155650",
+          "https://openalex.org/W1800261609",
+          "https://openalex.org/W1896374999",
+          "https://openalex.org/W1912209164",
+          "https://openalex.org/W1941660934",
+          "https://openalex.org/W1960471525",
+          "https://openalex.org/W1966269030",
+          "https://openalex.org/W1967520271",
+          "https://openalex.org/W1967588242",
+          "https://openalex.org/W1967812191",
+          "https://openalex.org/W1968288293",
+          "https://openalex.org/W1973812150",
+          "https://openalex.org/W1976255336",
+          "https://openalex.org/W1977389736",
+          "https://openalex.org/W1980370194",
+          "https://openalex.org/W1981295458",
+          "https://openalex.org/W1986528915",
+          "https://openalex.org/W1989530726",
+          "https://openalex.org/W1989780425",
+          "https://openalex.org/W1991228755",
+          "https://openalex.org/W1993387039",
+          "https://openalex.org/W1994672023",
+          "https://openalex.org/W1999058847",
+          "https://openalex.org/W1999635025",
+          "https://openalex.org/W2000733812",
+          "https://openalex.org/W2004053254",
+          "https://openalex.org/W2006333257",
+          "https://openalex.org/W2008534646",
+          "https://openalex.org/W2008618406",
+          "https://openalex.org/W2009405650",
+          "https://openalex.org/W2010647378",
+          "https://openalex.org/W2011957546",
+          "https://openalex.org/W2015902483",
+          "https://openalex.org/W2016451053",
+          "https://openalex.org/W2019655958",
+          "https://openalex.org/W2021136548",
+          "https://openalex.org/W2021343752",
+          "https://openalex.org/W2021470958",
+          "https://openalex.org/W2021510303",
+          "https://openalex.org/W2022796567",
+          "https://openalex.org/W2023232915",
+          "https://openalex.org/W2024780423",
+          "https://openalex.org/W2027310257",
+          "https://openalex.org/W2028057088",
+          "https://openalex.org/W2028162143",
+          "https://openalex.org/W2028763699",
+          "https://openalex.org/W2031913335",
+          "https://openalex.org/W2036598968",
+          "https://openalex.org/W2038669980",
+          "https://openalex.org/W2042998778",
+          "https://openalex.org/W2046016039",
+          "https://openalex.org/W2048776980",
+          "https://openalex.org/W2054251214",
+          "https://openalex.org/W2054555291",
+          "https://openalex.org/W2056671942",
+          "https://openalex.org/W2060968688",
+          "https://openalex.org/W2063525187",
+          "https://openalex.org/W2068665397",
+          "https://openalex.org/W2072381293",
+          "https://openalex.org/W2077285872",
+          "https://openalex.org/W2078502317",
+          "https://openalex.org/W2078603034",
+          "https://openalex.org/W2081758401",
+          "https://openalex.org/W2082184995",
+          "https://openalex.org/W2092141482",
+          "https://openalex.org/W2094595478",
+          "https://openalex.org/W2095396557",
+          "https://openalex.org/W2096650374",
+          "https://openalex.org/W2097151205",
+          "https://openalex.org/W2098004651",
+          "https://openalex.org/W2099320848",
+          "https://openalex.org/W2100337656",
+          "https://openalex.org/W2100962671",
+          "https://openalex.org/W2101122849",
+          "https://openalex.org/W2101846955",
+          "https://openalex.org/W2102160343",
+          "https://openalex.org/W2105320608",
+          "https://openalex.org/W2105471685",
+          "https://openalex.org/W2106706098",
+          "https://openalex.org/W2110776215",
+          "https://openalex.org/W2111051773",
+          "https://openalex.org/W2122196572",
+          "https://openalex.org/W2123162799",
+          "https://openalex.org/W2123170022",
+          "https://openalex.org/W2125251038",
+          "https://openalex.org/W2129531883",
+          "https://openalex.org/W2130653110",
+          "https://openalex.org/W2130902307",
+          "https://openalex.org/W2131488378",
+          "https://openalex.org/W2131596385",
+          "https://openalex.org/W2131842864",
+          "https://openalex.org/W2135695572",
+          "https://openalex.org/W2136133754",
+          "https://openalex.org/W2137662262",
+          "https://openalex.org/W2138218974",
+          "https://openalex.org/W2138710913",
+          "https://openalex.org/W2140362063",
+          "https://openalex.org/W2141613880",
+          "https://openalex.org/W2141815356",
+          "https://openalex.org/W2142733079",
+          "https://openalex.org/W2146081698",
+          "https://openalex.org/W2146855196",
+          "https://openalex.org/W2147542479",
+          "https://openalex.org/W2147579960",
+          "https://openalex.org/W2151570241",
+          "https://openalex.org/W2152246075",
+          "https://openalex.org/W2152433329",
+          "https://openalex.org/W2152986536",
+          "https://openalex.org/W2158840489",
+          "https://openalex.org/W2161020850",
+          "https://openalex.org/W2162335786",
+          "https://openalex.org/W2164058021",
+          "https://openalex.org/W2165895388",
+          "https://openalex.org/W2166954039",
+          "https://openalex.org/W2168388823",
+          "https://openalex.org/W2189178662",
+          "https://openalex.org/W2217816999",
+          "https://openalex.org/W2275906175",
+          "https://openalex.org/W2319803923",
+          "https://openalex.org/W2477709421",
+          "https://openalex.org/W2519103570",
+          "https://openalex.org/W2560136348",
+          "https://openalex.org/W2605947465",
+          "https://openalex.org/W2736289890",
+          "https://openalex.org/W2921430350",
+          "https://openalex.org/W2922826800",
+          "https://openalex.org/W2939474406",
+          "https://openalex.org/W2951936974",
+          "https://openalex.org/W2963436583",
+          "https://openalex.org/W3006027310",
+          "https://openalex.org/W3015528301",
+          "https://openalex.org/W3021601205",
+          "https://openalex.org/W3123965474",
+          "https://openalex.org/W3124392963",
+          "https://openalex.org/W3175417087",
+          "https://openalex.org/W4211177544",
+          "https://openalex.org/W4232359393",
+          "https://openalex.org/W4236677417",
+          "https://openalex.org/W4237487469",
+          "https://openalex.org/W4239414618",
+          "https://openalex.org/W4241708500",
+          "https://openalex.org/W4245349857",
+          "https://openalex.org/W4247941329",
+          "https://openalex.org/W4285719527"
+        ],
+        "related_works": [
+          "https://openalex.org/W2024780423",
+          "https://openalex.org/W2114497133",
+          "https://openalex.org/W2951453490",
+          "https://openalex.org/W2624721943",
+          "https://openalex.org/W2021343752",
+          "https://openalex.org/W6903890909",
+          "https://openalex.org/W1927341307",
+          "https://openalex.org/W2157020902",
+          "https://openalex.org/W3166615595",
+          "https://openalex.org/W3004274075"
+        ],
+        "abstract_inverted_index": {
+          "Abstract": [
+            0
+          ],
+          "In": [
+            1
+          ],
+          "ecology,": [
+            2,
+            174
+          ],
+          "the": [
+            3,
+            83,
+            97,
+            105,
+            113,
+            129,
+            149,
+            162,
+            205,
+            264,
+            267,
+            292
+          ],
+          "true": [
+            4
+          ],
+          "causal": [
+            5
+          ],
+          "structure": [
+            6
+          ],
+          "for": [
+            7,
+            237,
+            271,
+            300
+          ],
+          "a": [
+            8,
+            73,
+            221,
+            242,
+            301
+          ],
+          "given": [
+            9
+          ],
+          "problem": [
+            10
+          ],
+          "is": [
+            11,
+            145,
+            156,
+            166,
+            202,
+            209
+          ],
+          "often": [
+            12,
+            51,
+            178,
+            210
+          ],
+          "not": [
+            13,
+            227
+          ],
+          "known,": [
+            14
+          ],
+          "and": [
+            15,
+            19,
+            68,
+            92,
+            124,
+            135,
+            160,
+            196,
+            281
+          ],
+          "several": [
+            16
+          ],
+          "plausible": [
+            17
+          ],
+          "models": [
+            18,
+            34,
+            165,
+            245
+          ],
+          "thus": [
+            20
+          ],
+          "model": [
+            21,
+            44,
+            63,
+            78,
+            101,
+            138,
+            143,
+            154,
+            224,
+            252
+          ],
+          "predictions": [
+            22,
+            67,
+            117,
+            132,
+            155
+          ],
+          "exist.": [
+            23
+          ],
+          "It": [
+            24
+          ],
+          "has": [
+            25
+          ],
+          "been": [
+            26
+          ],
+          "claimed": [
+            27
+          ],
+          "that": [
+            28,
+            112,
+            142,
+            275
+          ],
+          "using": [
+            29
+          ],
+          "weighted": [
+            30
+          ],
+          "averages": [
+            31
+          ],
+          "of": [
+            32,
+            76,
+            85,
+            100,
+            107,
+            152,
+            207,
+            244,
+            266,
+            294,
+            305
+          ],
+          "these": [
+            33,
+            175
+          ],
+          "can": [
+            35,
+            65
+          ],
+          "reduce": [
+            36
+          ],
+          "prediction": [
+            37
+          ],
+          "error,": [
+            38
+          ],
+          "as": [
+            39,
+            41,
+            126,
+            128,
+            234,
+            298
+          ],
+          "well": [
+            40,
+            127
+          ],
+          "better": [
+            42,
+            58
+          ],
+          "reflect": [
+            43
+          ],
+          "selection": [
+            45
+          ],
+          "uncertainty.": [
+            46,
+            219
+          ],
+          "These": [
+            47
+          ],
+          "claims,": [
+            48
+          ],
+          "however,": [
+            49,
+            250
+          ],
+          "are": [
+            50
+          ],
+          "demonstrated": [
+            52
+          ],
+          "by": [
+            53,
+            158
+          ],
+          "isolated": [
+            54
+          ],
+          "examples.": [
+            55
+          ],
+          "Analysts": [
+            56
+          ],
+          "must": [
+            57
+          ],
+          "understand": [
+            59
+          ],
+          "under": [
+            60
+          ],
+          "which": [
+            61,
+            171
+          ],
+          "conditions": [
+            62,
+            176
+          ],
+          "averaging": [
+            64,
+            79,
+            102,
+            144,
+            186,
+            241
+          ],
+          "improve": [
+            66
+          ],
+          "their": [
+            69,
+            90
+          ],
+          "uncertainty": [
+            70,
+            136,
+            303
+          ],
+          "estimates.": [
+            71
+          ],
+          "Moreover,": [
+            72
+          ],
+          "large": [
+            74
+          ],
+          "range": [
+            75
+          ],
+          "different": [
+            77,
+            182
+          ],
+          "methods": [
+            80,
+            183,
+            208,
+            296
+          ],
+          "exists,": [
+            81
+          ],
+          "raising": [
+            82
+          ],
+          "question": [
+            84
+          ],
+          "how": [
+            86
+          ],
+          "they": [
+            87,
+            276
+          ],
+          "differ": [
+            88,
+            277
+          ],
+          "in": [
+            89,
+            115,
+            131,
+            173,
+            279
+          ],
+          "behaviour": [
+            91,
+            280
+          ],
+          "performance.": [
+            93
+          ],
+          "Here,": [
+            94
+          ],
+          "we": [
+            95
+          ],
+          "review": [
+            96
+          ],
+          "mathematical": [
+            98
+          ],
+          "foundations": [
+            99
+          ],
+          "along": [
+            103
+          ],
+          "with": [
+            104,
+            246
+          ],
+          "diversity": [
+            106
+          ],
+          "approaches": [
+            108
+          ],
+          "available.": [
+            109
+          ],
+          "We": [
+            110,
+            140,
+            261
+          ],
+          "explain": [
+            111
+          ],
+          "error": [
+            114,
+            151
+          ],
+          "model\u2010averaged": [
+            116,
+            272,
+            306
+          ],
+          "depends": [
+            118
+          ],
+          "on": [
+            119
+          ],
+          "each": [
+            120
+          ],
+          "model's": [
+            121
+          ],
+          "predictive": [
+            122,
+            150
+          ],
+          "bias": [
+            123
+          ],
+          "variance,": [
+            125,
+            159
+          ],
+          "covariance": [
+            130,
+            163
+          ],
+          "between": [
+            133,
+            164
+          ],
+          "models,": [
+            134,
+            249
+          ],
+          "about": [
+            137
+          ],
+          "weights.": [
+            139,
+            260
+          ],
+          "show": [
+            141
+          ],
+          "particularly": [
+            146
+          ],
+          "useful": [
+            147
+          ],
+          "if": [
+            148,
+            161
+          ],
+          "contributing": [
+            153
+          ],
+          "dominated": [
+            157
+          ],
+          "low.": [
+            167
+          ],
+          "For": [
+            168
+          ],
+          "noisy": [
+            169
+          ],
+          "data,": [
+            170
+          ],
+          "predominate": [
+            172
+          ],
+          "will": [
+            177,
+            254
+          ],
+          "be": [
+            179,
+            256
+          ],
+          "met.": [
+            180
+          ],
+          "Many": [
+            181
+          ],
+          "to": [
+            184,
+            193,
+            258,
+            284
+          ],
+          "derive": [
+            185
+          ],
+          "weights": [
+            187,
+            215,
+            225,
+            236,
+            253
+          ],
+          "exist,": [
+            188
+          ],
+          "from": [
+            189
+          ],
+          "Bayesian": [
+            190
+          ],
+          "over": [
+            191
+          ],
+          "information\u2010theoretical": [
+            192
+          ],
+          "cross\u2010validation": [
+            194,
+            299
+          ],
+          "optimized": [
+            195
+          ],
+          "resampling": [
+            197
+          ],
+          "approaches.": [
+            198
+          ],
+          "A": [
+            199
+          ],
+          "general": [
+            200
+          ],
+          "recommendation": [
+            201
+          ],
+          "difficult,": [
+            203
+          ],
+          "because": [
+            204
+          ],
+          "performance": [
+            206
+          ],
+          "context": [
+            211
+          ],
+          "dependent.": [
+            212
+          ],
+          "Importantly,": [
+            213
+          ],
+          "estimating": [
+            214,
+            251
+          ],
+          "creates": [
+            216
+          ],
+          "some": [
+            217
+          ],
+          "additional": [
+            218
+          ],
+          "As": [
+            220
+          ],
+          "result,": [
+            222
+          ],
+          "estimated": [
+            223
+          ],
+          "may": [
+            226
+          ],
+          "always": [
+            228
+          ],
+          "outperform": [
+            229
+          ],
+          "arbitrary": [
+            230
+          ],
+          "fixed": [
+            231
+          ],
+          "weights,": [
+            232
+          ],
+          "such": [
+            233,
+            297
+          ],
+          "equal": [
+            235,
+            259
+          ],
+          "all": [
+            238
+          ],
+          "models.": [
+            239
+          ],
+          "When": [
+            240
+          ],
+          "set": [
+            243
+          ],
+          "many": [
+            247
+          ],
+          "inadequate": [
+            248
+          ],
+          "typically": [
+            255
+          ],
+          "superior": [
+            257
+          ],
+          "also": [
+            262
+          ],
+          "investigate": [
+            263
+          ],
+          "quality": [
+            265
+          ],
+          "confidence": [
+            268
+          ],
+          "intervals": [
+            269
+          ],
+          "calculated": [
+            270
+          ],
+          "predictions,": [
+            273
+          ],
+          "showing": [
+            274
+          ],
+          "greatly": [
+            278
+          ],
+          "seldom": [
+            282
+          ],
+          "manage": [
+            283
+          ],
+          "achieve": [
+            285
+          ],
+          "nominal": [
+            286
+          ],
+          "coverage.": [
+            287
+          ],
+          "Our": [
+            288
+          ],
+          "overall": [
+            289
+          ],
+          "recommendations": [
+            290
+          ],
+          "stress": [
+            291
+          ],
+          "importance": [
+            293
+          ],
+          "non\u2010parametric": [
+            295
+          ],
+          "reliable": [
+            302
+          ],
+          "quantification": [
+            304
+          ],
+          "predictions.": [
+            307
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 55
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 71
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 73
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 65
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 42
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 48
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 33
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 23
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 10
+          }
+        ],
+        "updated_date": "2026-11-15T12:55:33.944570",
+        "created_date": "2018-06-21T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4391312430",
+        "doi": "https://doi.org/10.1103/physrevd.109.014510",
+        "title": "Improved information criteria for Bayesian model averaging in lattice field theory",
+        "display_name": "Improved information criteria for Bayesian model averaging in lattice field theory",
+        "relevance_score": 47.913433,
+        "publication_year": 2024,
+        "publication_date": "2024-01-29",
+        "ids": {
+          "openalex": "https://openalex.org/W4391312430",
+          "doi": "https://doi.org/10.1103/physrevd.109.014510"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1103/physrevd.109.014510",
+          "doi": "https://doi.org/10.1103/physrevd.109.014510",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1103/physrevd.109.014510",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210238307",
+            "display_name": "Physical review. D/Physical review. D.",
+            "issn_l": "2470-0010",
+            "issn": [
+              "2470-0010",
+              "2470-0029",
+              "2470-0037"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-a",
+              "jufo-2",
+              "ki-jl-1",
+              "norway-1",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320261",
+            "host_organization_name": "American Physical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320261"
+            ],
+            "host_organization_lineage_names": [
+              "American Physical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Physical Review D",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4391312430"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "arxiv",
+          "crossref",
+          "datacite"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://arxiv.org/pdf/2208.14983",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5037935573",
+              "display_name": "Ethan T. Neil",
+              "orcid": "https://orcid.org/0000-0002-4915-3951",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-4915-3951"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I188538660",
+                "display_name": "University of Colorado Boulder",
+                "ror": "https://ror.org/02ttsq026",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I188538660"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Ethan T. Neil",
+            "raw_affiliation_strings": [
+              "Department of Physics, University of Colorado, Boulder, Colorado 80309, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-4915-3951",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Physics, University of Colorado, Boulder, Colorado 80309, USA",
+                "institution_ids": [
+                  "https://openalex.org/I188538660"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5054851001",
+              "display_name": "Jacob W. Sitison",
+              "orcid": "https://orcid.org/0000-0003-3178-2714",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-3178-2714"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I188538660",
+                "display_name": "University of Colorado Boulder",
+                "ror": "https://ror.org/02ttsq026",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I188538660"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Jacob W. Sitison",
+            "raw_affiliation_strings": [
+              "Department of Physics, University of Colorado, Boulder, Colorado 80309, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0003-3178-2714",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Physics, University of Colorado, Boulder, Colorado 80309, USA",
+                "institution_ids": [
+                  "https://openalex.org/I188538660"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5037935573"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I188538660"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 14.6812,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 72,
+        "citation_normalized_percentile": {
+          "value": 0.99495533,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "109",
+          "issue": "1",
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10243",
+          "display_name": "Statistical Methods and Bayesian Inference",
+          "score": 0.2815000116825104,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.2815000116825104,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.17550000548362732,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11303",
+            "display_name": "Bayesian Modeling and Causal Inference",
+            "score": 0.08420000225305557,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/bayesian-model-averaging",
+            "display_name": "Bayesian model averaging",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/information-criteria",
+            "display_name": "information criteria",
+            "score": 0.9380000233650208
+          },
+          {
+            "id": "https://openalex.org/keywords/kullback-leibler-divergence",
+            "display_name": "Kullback-Leibler divergence",
+            "score": 0.9520000219345093
+          },
+          {
+            "id": "https://openalex.org/keywords/lattice-field-theory",
+            "display_name": "lattice field theory",
+            "score": 0.8330000042915344
+          },
+          {
+            "id": "https://openalex.org/keywords/noisy-data",
+            "display_name": "noisy data",
+            "score": 0.9380000233650208
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C168136583",
+            "wikidata": "https://www.wikidata.org/wiki/Q1988242",
+            "display_name": "Bayesian information criterion",
+            "level": 2,
+            "score": 0.7637139558792114
+          },
+          {
+            "id": "https://openalex.org/C126674687",
+            "wikidata": "https://www.wikidata.org/wiki/Q1662573",
+            "display_name": "Akaike information criterion",
+            "level": 2,
+            "score": 0.7576719522476196
+          },
+          {
+            "id": "https://openalex.org/C107673813",
+            "wikidata": "https://www.wikidata.org/wiki/Q812534",
+            "display_name": "Bayesian probability",
+            "level": 2,
+            "score": 0.6521146297454834
+          },
+          {
+            "id": "https://openalex.org/C149569020",
+            "wikidata": "https://www.wikidata.org/wiki/Q25098598",
+            "display_name": "Bayesian average",
+            "level": 5,
+            "score": 0.6211868524551392
+          },
+          {
+            "id": "https://openalex.org/C185429906",
+            "wikidata": "https://www.wikidata.org/wiki/Q1130160",
+            "display_name": "Estimator",
+            "level": 2,
+            "score": 0.6052309274673462
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.5873759984970093
+          },
+          {
+            "id": "https://openalex.org/C207390915",
+            "wikidata": "https://www.wikidata.org/wiki/Q1230525",
+            "display_name": "Divergence (linguistics)",
+            "level": 2,
+            "score": 0.5464509725570679
+          },
+          {
+            "id": "https://openalex.org/C52622258",
+            "wikidata": "https://www.wikidata.org/wiki/Q131222",
+            "display_name": "Information theory",
+            "level": 2,
+            "score": 0.48734816908836365
+          },
+          {
+            "id": "https://openalex.org/C99173435",
+            "wikidata": "https://www.wikidata.org/wiki/Q4874469",
+            "display_name": "Bayesian experimental design",
+            "level": 5,
+            "score": 0.4800780415534973
+          },
+          {
+            "id": "https://openalex.org/C101112237",
+            "wikidata": "https://www.wikidata.org/wiki/Q4874481",
+            "display_name": "Bayesian statistics",
+            "level": 4,
+            "score": 0.44928598403930664
+          },
+          {
+            "id": "https://openalex.org/C9652623",
+            "wikidata": "https://www.wikidata.org/wiki/Q190109",
+            "display_name": "Field (mathematics)",
+            "level": 2,
+            "score": 0.43412697315216064
+          },
+          {
+            "id": "https://openalex.org/C171752962",
+            "wikidata": "https://www.wikidata.org/wiki/Q255166",
+            "display_name": "Kullback\u2013Leibler divergence",
+            "level": 2,
+            "score": 0.4305275082588196
+          },
+          {
+            "id": "https://openalex.org/C93959086",
+            "wikidata": "https://www.wikidata.org/wiki/Q6888345",
+            "display_name": "Model selection",
+            "level": 2,
+            "score": 0.4263971745967865
+          },
+          {
+            "id": "https://openalex.org/C160234255",
+            "wikidata": "https://www.wikidata.org/wiki/Q812535",
+            "display_name": "Bayesian inference",
+            "level": 3,
+            "score": 0.37517067790031433
+          },
+          {
+            "id": "https://openalex.org/C11413529",
+            "wikidata": "https://www.wikidata.org/wiki/Q8366",
+            "display_name": "Algorithm",
+            "level": 1,
+            "score": 0.36995792388916016
+          },
+          {
+            "id": "https://openalex.org/C28826006",
+            "wikidata": "https://www.wikidata.org/wiki/Q33521",
+            "display_name": "Applied mathematics",
+            "level": 1,
+            "score": 0.343737930059433
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.33826756477355957
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.33630508184432983
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.2464635670185089
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.2289784550666809
+          },
+          {
+            "id": "https://openalex.org/C202444582",
+            "wikidata": "https://www.wikidata.org/wiki/Q837863",
+            "display_name": "Pure mathematics",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C138885662",
+            "wikidata": "https://www.wikidata.org/wiki/Q5891",
+            "display_name": "Philosophy",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C41895202",
+            "wikidata": "https://www.wikidata.org/wiki/Q8162",
+            "display_name": "Linguistics",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 5,
+        "locations": [
+          {
+            "id": "doi:10.1103/physrevd.109.014510",
+            "doi": "https://doi.org/10.1103/physrevd.109.014510",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1103/physrevd.109.014510",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4210238307",
+              "display_name": "Physical review. D/Physical review. D.",
+              "issn_l": "2470-0010",
+              "issn": [
+                "2470-0010",
+                "2470-0029",
+                "2470-0037"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "dongbi-a",
+                "jufo-2",
+                "ki-jl-1",
+                "norway-1",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320261",
+              "host_organization_name": "American Physical Society",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320261"
+              ],
+              "host_organization_lineage_names": [
+                "American Physical Society"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Physical Review D",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:arXiv.org:2208.14983",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/2208.14983",
+            "pdf_url": "https://arxiv.org/pdf/2208.14983",
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:osti.gov:2283673",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.osti.gov/biblio/2283673",
+            "pdf_url": "https://www.osti.gov/servlets/purl/2283673",
+            "source": {
+              "id": "https://openalex.org/S4306402487",
+              "display_name": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I139351228",
+              "host_organization_name": "Office of Scientific and Technical Information",
+              "host_organization_lineage": [
+                "https://openalex.org/I139351228"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          },
+          {
+            "id": "pmh:oai:osti.gov:2294139",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://www.osti.gov/biblio/2294139",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402487",
+              "display_name": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I139351228",
+              "host_organization_name": "Office of Scientific and Technical Information",
+              "host_organization_lineage": [
+                "https://openalex.org/I139351228"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          },
+          {
+            "id": "doi:10.48550/arxiv.2208.14983",
+            "doi": "https://doi.org/10.48550/arxiv.2208.14983",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.48550/arxiv.2208.14983",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article-journal"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:arXiv.org:2208.14983",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2208.14983",
+          "pdf_url": "https://arxiv.org/pdf/2208.14983",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G121915436",
+            "display_name": null,
+            "funder_award_id": "DEAC05- 00OR22725",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G1286236842",
+            "display_name": null,
+            "funder_award_id": "-AC02-05CH11231",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G1645119126",
+            "display_name": null,
+            "funder_award_id": "AC05-00OR22725",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G203625172",
+            "display_name": null,
+            "funder_award_id": "DE--AC05--00OR22725",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G2124915014",
+            "display_name": "ELEMENTARY PARTICLE PHYSICS AND HIGH ENERGY PHENOMENA",
+            "funder_award_id": "DESC0010005",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G2289692176",
+            "display_name": null,
+            "funder_award_id": "DE-SC0010005",
+            "funder_id": "https://openalex.org/F4320337511",
+            "funder_display_name": "High Energy Physics"
+          },
+          {
+            "id": "https://openalex.org/G2706890024",
+            "display_name": null,
+            "funder_award_id": "DE-AC05-00OR22725",
+            "funder_id": "https://openalex.org/F4320337511",
+            "funder_display_name": "High Energy Physics"
+          },
+          {
+            "id": "https://openalex.org/G2988778103",
+            "display_name": null,
+            "funder_award_id": "DE-AC05?",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G3083819904",
+            "display_name": null,
+            "funder_award_id": "05CH11231",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G419881185",
+            "display_name": null,
+            "funder_award_id": "DEAC02\u201305CH11231",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G42916606",
+            "display_name": null,
+            "funder_award_id": "DE AC02 05CH11231",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G4423657506",
+            "display_name": null,
+            "funder_award_id": "AC05-00OR22725",
+            "funder_id": "https://openalex.org/F4320338287",
+            "funder_display_name": "Oak Ridge National Laboratory"
+          },
+          {
+            "id": "https://openalex.org/G4501827968",
+            "display_name": null,
+            "funder_award_id": "AC02-05CH11231",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G498139845",
+            "display_name": null,
+            "funder_award_id": "DE-AC02",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G660579501",
+            "display_name": null,
+            "funder_award_id": "DE-AC0205CH11231",
+            "funder_id": "https://openalex.org/F4320338287",
+            "funder_display_name": "Oak Ridge National Laboratory"
+          },
+          {
+            "id": "https://openalex.org/G6652958823",
+            "display_name": null,
+            "funder_award_id": "05CH11231",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G675320460",
+            "display_name": null,
+            "funder_award_id": "DE-AC05-00OR22725",
+            "funder_id": "https://openalex.org/F4320338287",
+            "funder_display_name": "Oak Ridge National Laboratory"
+          },
+          {
+            "id": "https://openalex.org/G759921648",
+            "display_name": null,
+            "funder_award_id": "DEAC02--05CH11231",
+            "funder_id": "https://openalex.org/F4320337511",
+            "funder_display_name": "High Energy Physics"
+          },
+          {
+            "id": "https://openalex.org/G7982157453",
+            "display_name": "ELEMENTARY PARTICLE PHYSICS AND HIGH ENERGY PHENOMENA",
+            "funder_award_id": "DESC0010005",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G8269158468",
+            "display_name": null,
+            "funder_award_id": "AC05-00OR22725",
+            "funder_id": "https://openalex.org/F4320332359",
+            "funder_display_name": "Office of Science"
+          },
+          {
+            "id": "https://openalex.org/G8906985441",
+            "display_name": null,
+            "funder_award_id": "00OR22725",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          },
+          {
+            "id": "https://openalex.org/G969889393",
+            "display_name": null,
+            "funder_award_id": "DE-AC02-",
+            "funder_id": "https://openalex.org/F4320306084",
+            "funder_display_name": "U.S. Department of Energy"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306084",
+            "display_name": "U.S. Department of Energy",
+            "ror": "https://ror.org/01bj3aw27"
+          },
+          {
+            "id": "https://openalex.org/F4320310620",
+            "display_name": "University of Texas at Austin",
+            "ror": "https://ror.org/00hj54h04"
+          },
+          {
+            "id": "https://openalex.org/F4320317220",
+            "display_name": "National Energy Research Scientific Computing Center",
+            "ror": "https://ror.org/05v3mvq14"
+          },
+          {
+            "id": "https://openalex.org/F4320332359",
+            "display_name": "Office of Science",
+            "ror": "https://ror.org/00mmn6b08"
+          },
+          {
+            "id": "https://openalex.org/F4320337511",
+            "display_name": "High Energy Physics",
+            "ror": "https://ror.org/035m6g344"
+          },
+          {
+            "id": "https://openalex.org/F4320338287",
+            "display_name": "Oak Ridge National Laboratory",
+            "ror": "https://ror.org/01qz5mb56"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W4391312430.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W4391312430.grobid-xml"
+        },
+        "referenced_works_count": 100,
+        "referenced_works": [
+          "https://openalex.org/W242440",
+          "https://openalex.org/W55848811",
+          "https://openalex.org/W78553138",
+          "https://openalex.org/W345352887",
+          "https://openalex.org/W1499861606",
+          "https://openalex.org/W1501760102",
+          "https://openalex.org/W1549451790",
+          "https://openalex.org/W1590421763",
+          "https://openalex.org/W1591656528",
+          "https://openalex.org/W1591737370",
+          "https://openalex.org/W1598813349",
+          "https://openalex.org/W1599623497",
+          "https://openalex.org/W1603339577",
+          "https://openalex.org/W1723534786",
+          "https://openalex.org/W1931193966",
+          "https://openalex.org/W1963671826",
+          "https://openalex.org/W1965555277",
+          "https://openalex.org/W1965873257",
+          "https://openalex.org/W1968172088",
+          "https://openalex.org/W1968371014",
+          "https://openalex.org/W1972829645",
+          "https://openalex.org/W1974931032",
+          "https://openalex.org/W1991985445",
+          "https://openalex.org/W2017696952",
+          "https://openalex.org/W2019050895",
+          "https://openalex.org/W2019448438",
+          "https://openalex.org/W2021070302",
+          "https://openalex.org/W2021075269",
+          "https://openalex.org/W2035035907",
+          "https://openalex.org/W2035343995",
+          "https://openalex.org/W2046386580",
+          "https://openalex.org/W2048305092",
+          "https://openalex.org/W2049261927",
+          "https://openalex.org/W2055974960",
+          "https://openalex.org/W2057765075",
+          "https://openalex.org/W2058201684",
+          "https://openalex.org/W2060512257",
+          "https://openalex.org/W2062125287",
+          "https://openalex.org/W2069039251",
+          "https://openalex.org/W2071360735",
+          "https://openalex.org/W2072197465",
+          "https://openalex.org/W2078727861",
+          "https://openalex.org/W2081724349",
+          "https://openalex.org/W2111051773",
+          "https://openalex.org/W2124993812",
+          "https://openalex.org/W2126163471",
+          "https://openalex.org/W2128604101",
+          "https://openalex.org/W2129531883",
+          "https://openalex.org/W2130902307",
+          "https://openalex.org/W2141747017",
+          "https://openalex.org/W2142635246",
+          "https://openalex.org/W2146855196",
+          "https://openalex.org/W2267841179",
+          "https://openalex.org/W2281805729",
+          "https://openalex.org/W2313852764",
+          "https://openalex.org/W2315852339",
+          "https://openalex.org/W2396477770",
+          "https://openalex.org/W2483646144",
+          "https://openalex.org/W2505756961",
+          "https://openalex.org/W2526783301",
+          "https://openalex.org/W2552207324",
+          "https://openalex.org/W2605358811",
+          "https://openalex.org/W2776802930",
+          "https://openalex.org/W2789845225",
+          "https://openalex.org/W2790662197",
+          "https://openalex.org/W2805432278",
+          "https://openalex.org/W2884206602",
+          "https://openalex.org/W2913708623",
+          "https://openalex.org/W2950381474",
+          "https://openalex.org/W2951147613",
+          "https://openalex.org/W3003950193",
+          "https://openalex.org/W3014019852",
+          "https://openalex.org/W3022212232",
+          "https://openalex.org/W3046833097",
+          "https://openalex.org/W3070461787",
+          "https://openalex.org/W3084527569",
+          "https://openalex.org/W3087662873",
+          "https://openalex.org/W3106213137",
+          "https://openalex.org/W3108426359",
+          "https://openalex.org/W3111969663",
+          "https://openalex.org/W3124285201",
+          "https://openalex.org/W3125599146",
+          "https://openalex.org/W3151200052",
+          "https://openalex.org/W3153282840",
+          "https://openalex.org/W3173048380",
+          "https://openalex.org/W3208736540",
+          "https://openalex.org/W3209689972",
+          "https://openalex.org/W4211177544",
+          "https://openalex.org/W4230727635",
+          "https://openalex.org/W4231135067",
+          "https://openalex.org/W4236403390",
+          "https://openalex.org/W4246784033",
+          "https://openalex.org/W4248046982",
+          "https://openalex.org/W4249360136",
+          "https://openalex.org/W4252366524",
+          "https://openalex.org/W4252386822",
+          "https://openalex.org/W4256183008",
+          "https://openalex.org/W4298033698",
+          "https://openalex.org/W4312225611",
+          "https://openalex.org/W4387874514"
+        ],
+        "related_works": [
+          "https://openalex.org/W2055974960",
+          "https://openalex.org/W3087662873",
+          "https://openalex.org/W2021070302",
+          "https://openalex.org/W2483646144",
+          "https://openalex.org/W4242102614",
+          "https://openalex.org/W3046833097",
+          "https://openalex.org/W1520153412",
+          "https://openalex.org/W2114497133",
+          "https://openalex.org/W2130902307",
+          "https://openalex.org/W7204755513"
+        ],
+        "abstract_inverted_index": {
+          "Bayesian": [
+            0,
+            59,
+            77,
+            90
+          ],
+          "model": [
+            1,
+            13,
+            23,
+            37,
+            60
+          ],
+          "averaging": [
+            2
+          ],
+          "is": [
+            3,
+            151
+          ],
+          "a": [
+            4,
+            45,
+            51,
+            76,
+            152
+          ],
+          "practical": [
+            5
+          ],
+          "method": [
+            6
+          ],
+          "for": [
+            7,
+            35,
+            58
+          ],
+          "dealing": [
+            8
+          ],
+          "with": [
+            9
+          ],
+          "uncertainty": [
+            10
+          ],
+          "due": [
+            11
+          ],
+          "to": [
+            12,
+            50,
+            69
+          ],
+          "specification.": [
+            14
+          ],
+          "Use": [
+            15,
+            39
+          ],
+          "of": [
+            16,
+            22,
+            33,
+            40,
+            53,
+            79,
+            105,
+            138,
+            145
+          ],
+          "this": [
+            17,
+            27
+          ],
+          "technique": [
+            18
+          ],
+          "requires": [
+            19
+          ],
+          "the": [
+            20,
+            31,
+            41,
+            70,
+            80,
+            87,
+            89,
+            95,
+            103,
+            122,
+            125,
+            133,
+            143,
+            149
+          ],
+          "estimation": [
+            21
+          ],
+          "probability": [
+            24
+          ],
+          "weights.": [
+            25,
+            38
+          ],
+          "In": [
+            26
+          ],
+          "work,": [
+            28
+          ],
+          "we": [
+            29,
+            85
+          ],
+          "revisit": [
+            30
+          ],
+          "derivation": [
+            32
+          ],
+          "estimators": [
+            34
+          ],
+          "these": [
+            36,
+            106
+          ],
+          "Kullback-Leibler": [
+            42
+          ],
+          "divergence": [
+            43
+          ],
+          "as": [
+            44
+          ],
+          "starting": [
+            46
+          ],
+          "point": [
+            47
+          ],
+          "leads": [
+            48
+          ],
+          "naturally": [
+            49
+          ],
+          "number": [
+            52
+          ],
+          "alternative": [
+            54
+          ],
+          "information": [
+            55,
+            82,
+            92,
+            98,
+            107
+          ],
+          "criteria": [
+            56,
+            108
+          ],
+          "suitable": [
+            57
+          ],
+          "weight": [
+            61
+          ],
+          "estimation.": [
+            62
+          ],
+          "We": [
+            63,
+            101,
+            119
+          ],
+          "explore": [
+            64
+          ],
+          "three": [
+            65
+          ],
+          "such": [
+            66
+          ],
+          "criteria,": [
+            67
+          ],
+          "known": [
+            68
+          ],
+          "statistics": [
+            71
+          ],
+          "literature": [
+            72
+          ],
+          "before,": [
+            73
+          ],
+          "in": [
+            74,
+            109,
+            114,
+            136,
+            142
+          ],
+          "detail:": [
+            75
+          ],
+          "analog": [
+            78
+          ],
+          "Akaike": [
+            81
+          ],
+          "criterion": [
+            83,
+            99
+          ],
+          "which": [
+            84
+          ],
+          "call": [
+            86
+          ],
+          "BAIC,": [
+            88
+          ],
+          "predictive": [
+            91,
+            97
+          ],
+          "criterion,": [
+            93
+          ],
+          "and": [
+            94,
+            130,
+            154
+          ],
+          "posterior": [
+            96
+          ],
+          "(PPIC).": [
+            100
+          ],
+          "compare": [
+            102
+          ],
+          "use": [
+            104
+          ],
+          "numerical": [
+            110
+          ],
+          "analysis": [
+            111
+          ],
+          "problems": [
+            112
+          ],
+          "common": [
+            113
+          ],
+          "lattice": [
+            115
+          ],
+          "field": [
+            116
+          ],
+          "theory": [
+            117
+          ],
+          "calculations.": [
+            118
+          ],
+          "find": [
+            120
+          ],
+          "that": [
+            121
+          ],
+          "PPIC": [
+            123
+          ],
+          "has": [
+            124
+          ],
+          "most": [
+            126
+          ],
+          "appealing": [
+            127
+          ],
+          "theoretical": [
+            128
+          ],
+          "properties": [
+            129
+          ],
+          "can": [
+            131
+          ],
+          "give": [
+            132
+          ],
+          "best": [
+            134
+          ],
+          "performance": [
+            135
+          ],
+          "terms": [
+            137
+          ],
+          "model-averaging": [
+            139
+          ],
+          "uncertainty,": [
+            140
+          ],
+          "particularly": [
+            141
+          ],
+          "presence": [
+            144
+          ],
+          "noisy": [
+            146
+          ],
+          "data,": [
+            147
+          ],
+          "while": [
+            148
+          ],
+          "BAIC": [
+            150
+          ],
+          "simple": [
+            153
+          ],
+          "reliable": [
+            155
+          ],
+          "alternative.": [
+            156
+          ]
+        },
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 24
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 23
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 11
+          }
+        ],
+        "updated_date": "2026-11-14T11:04:58.165337",
+        "created_date": "2024-01-30T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

@@ -1,0 +1,1848 @@
+{
+  "audit": "read-only metadata reconstruction, citation-map lineage, cutoff and citation inspection; zero network/model calls",
+  "run": "validation/reference-fix-e2e-complete",
+  "audited_at_utc": "2026-11-16T10:42:36.106775+00:00",
+  "trace_prefix_lines_at_audit": 1042,
+  "trace_prefix_sha256": "4bea33447af5d20ff299d7cb472f85e3c74d6fccfb80c097a4a0bbb00ad90367",
+  "citation_map_sha256": "b1c537af10582efa8cdda1a3d63ea787d529a6a71e9b2fc22fa0a725f9284619",
+  "retrieval_event_hashes_verified": 525,
+  "selected_records": 45,
+  "citation_map_entries": 45,
+  "all_entries_metadata_lineage_verified": true,
+  "errors": [],
+  "selected_provider_counts": {
+    "crossref": 19,
+    "openalex": 26
+  },
+  "selected_date_precision_counts": {
+    "day": 43,
+    "month": 2
+  },
+  "minimum_title_ratio_without_year_bonus": 94,
+  "identity_quality": "Metadata is authentic and all records meet preserved upstream scoring. One different intended target was accepted; the observed cited claim accurately describes the actual selected paper. This is not a blanket scientific-quality validation.",
+  "identity_warnings": [
+    {
+      "query": "Minimum sample size for external validation of a clinical prediction model with a continuous outcome",
+      "title": "Minimum sample size for external validation of a clinical prediction model with a binary outcome",
+      "title_match_score": 104,
+      "title_ratio_without_year_bonus": 94,
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/a3a743856cb54176a3190b97f0a41b0b.json",
+      "citation_map_keys": [
+        "Riley2021MinimumSample"
+      ],
+      "classification": "Different clinical outcome type: continuous-outcome query matched binary-outcome publication",
+      "citation_contexts": [
+        {
+          "path": "validation/reference-fix-e2e-complete/literature_agent_output/updated_template.tex",
+          "key": "Riley2021MinimumSample",
+          "context": "ed calculation contains no weather, climate, or time-series evaluation, and measures no such trade-off.\n\nFinally, regression-validation guidance discusses calibration, discrimination, and resampling \\cite{Harrell1996MultivariablePrognostic}, while external-validation sample-size work targets precision for binary-outcome performance estimates \\cite{Riley2021MinimumSample}. Prediction-error estimation and shrinkage studies distinguish original-data fit from future-case performance \\cite{Efron1983EstimatingError,Copas1983RegressionPrediction}. These works motivate careful protocol disclosure, wit"
+        },
+        {
+          "path": "validation/reference-fix-e2e-complete/latex_writeup/raw_draft_paper.tex",
+          "key": "Riley2021MinimumSample",
+          "context": "ed calculation contains no weather, climate, or time-series evaluation, and measures no such trade-off.\n\nFinally, regression-validation guidance discusses calibration, discrimination, and resampling \\cite{Harrell1996MultivariablePrognostic}, while external-validation sample-size work targets precision for binary-outcome performance estimates \\cite{Riley2021MinimumSample}. Prediction-error estimation and shrinkage studies distinguish original-data fit from future-case performance \\cite{Efron1983EstimatingError,Copas1983RegressionPrediction}. These works motivate careful protocol disclosure, wit"
+        }
+      ],
+      "claim_assessment": "Literature synthesis explicitly identifies binary-outcome performance estimates, consistent with the actual retained abstract; query identity mismatch did not become a false continuous-outcome claim."
+    }
+  ],
+  "manuscript_citation_checks": [
+    {
+      "path": "validation/reference-fix-e2e-complete/literature_agent_output/updated_template.tex",
+      "sha256": "c9c3244a6991cb73abd49974ce1c2b92837ed685d77ae8d0e73113acbd883ef2",
+      "distinct_cited_keys": 42,
+      "permitted_keys_cited": 42,
+      "upstream_literature_minimum": 40,
+      "meets_literature_minimum": true,
+      "unknown_keys": []
+    },
+    {
+      "path": "validation/reference-fix-e2e-complete/latex_writeup/raw_draft_paper.tex",
+      "sha256": "ea7195c6d0350d5ce4feed2f73772c3370fc82e266efc878b9128cc31919ee1e",
+      "distinct_cited_keys": 42,
+      "permitted_keys_cited": 42,
+      "upstream_literature_minimum": 40,
+      "meets_literature_minimum": true,
+      "unknown_keys": []
+    }
+  ],
+  "entries": [
+    {
+      "key": "Chatterjee1986InfluentialObservations",
+      "title": "Influential Observations, High Leverage Points, and Outliers in Linear Regression",
+      "authors": [
+        "Samprit Chatterjee",
+        "Ali S. Hadi"
+      ],
+      "year": 1986,
+      "abstract_sha256": "2dbf1670f4be9bcd0b1905b36513d5c88165c0c5f4b4d34b77c2e1ebfc3391b7",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/82b01092ee6f46d48c2ccb8c8d761efc.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/06a7bb8feda247fc948a1aea7a33954b.json",
+      "identifier": "10.1214/ss/1177013622",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 584,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Hastie1986GeneralizedAdditive",
+      "title": "Generalized Additive Models",
+      "authors": [
+        "Trevor J. Hastie",
+        "Robert John Tibshirani"
+      ],
+      "year": 1986,
+      "abstract_sha256": "3fa856d0b6921b31f552e6c93ba0cab88dde545732c23e383e3ffc94dc20af3f",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/4c25518b3fbf4fee8e1644e3d1083a72.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f0c610cbdf104d9abd8d3b96f7eb5705.json",
+      "identifier": "https://openalex.org/W2166163519",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1282,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Friedman2001GreedyFunction",
+      "title": "Greedy function approximation: A gradient boosting machine.",
+      "authors": [
+        "Jerome H. Friedman"
+      ],
+      "year": 2001,
+      "abstract_sha256": "a54f9952f2c8cbbe1734c9a04b268ac1f81623f4ecf8ee6ee3c906852efec122",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/d55f09c7c7374922a4801d758b12e424.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/9b06d1848d134916825ef9548b6840c6.json",
+      "identifier": "10.1214/aos/1013203451",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1038,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Arlot2010SurveyCrossvalidation",
+      "title": "A survey of cross-validation procedures for model selection",
+      "authors": [
+        "Sylvain Arlot",
+        "Alain Celisse"
+      ],
+      "year": 2010,
+      "abstract_sha256": "3d3ded69062df7127ec52c9aa3a639ccd8eacaba9aa376ccca537246be812dd0",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/74b64f7623b747008e36a8a3675af3a1.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/21c1fd65a8554726a6953a14c8658cf6.json",
+      "identifier": "10.1214/09-ss054",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 607,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Efron1986HowBiased",
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "authors": [
+        "Bradley Efron"
+      ],
+      "year": 1986,
+      "abstract_sha256": "dde5a0b10b7172ec8ba875abe0c7b4b098b92bbc2469c58ab3d3be27885c3b42",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5e579ca74897489f94a6a026cd19fdfc.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c8f8ab45a1ef4c83a7ef748271668b21.json",
+      "identifier": "https://openalex.org/W4249991467",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 754,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Efron2004EstimationPrediction",
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "authors": [
+        "Bradley Efron"
+      ],
+      "year": 2004,
+      "abstract_sha256": "c3fa77f0d8bef41f7f9204f7d76011f7e0eb6f7c3a0c90ccb85512e4fd19dcfb",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c19604bda1244ad4ac5130a40d60faa2.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/29dd2265c7f14dc7bd0d1cb159a04158.json",
+      "identifier": "https://openalex.org/W1502338185",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 852,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Buja2009StatisticalInference",
+      "title": "Statistical inference for exploratory data analysis and model diagnostics",
+      "authors": [
+        "Andreas Buja",
+        "Dianne Cook",
+        "Heike Hofmann",
+        "Michael Lawrence",
+        "Eun-Kyung Lee",
+        "Deborah F. Swayne",
+        "Hadley Wickham"
+      ],
+      "year": 2009,
+      "abstract_sha256": "14a8239e33205b3b62fddb2bdd858825a641058d16cd8b28a4117c4691e3fd1b",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/336cdc4007b24ac49b7fb470b3e769a9.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/675f928a7ac142d9b4f35d6446060c36.json",
+      "identifier": "10.1098/rsta.2009.0120",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1323,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Cook1977DetectionInfluential",
+      "title": "Detection of Influential Observation in Linear Regression",
+      "authors": [
+        "R. Dennis Cook"
+      ],
+      "year": 1977,
+      "abstract_sha256": "671a914ca473b687dac6f357e5a6003701bfa8ba9a23cda2e09551d771ec7227",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/56291f12db304891833bb3fffd16d34e.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3fefa605c32d45d4a351c95f07de7918.json",
+      "identifier": "https://openalex.org/W4233620411",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 385,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Denby1987ExampleUse",
+      "title": "An Example of the Use of Graphics in Regression",
+      "authors": [
+        "Lorraine Denby",
+        "Daryl Pregibon"
+      ],
+      "year": 1987,
+      "abstract_sha256": "3a6497d6c59e7f7ad5fafa0a7e1042c0d9a088fc46fb55a4da19fe0eeb9f46c6",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3eda7fb17689437fb8129bdbede04d71.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6ff45fecb87042e1b961da80561123f0.json",
+      "identifier": "https://openalex.org/W1972498398",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 485,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Stone1974CrossvalidatoryChoice",
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "authors": [
+        "M. Stone"
+      ],
+      "year": 1974,
+      "abstract_sha256": "8cbcf915ce4fe8812cfd3e79c4ea5f8d81f5cf6a326575cb1665b01ad3ee9258",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/216fd4515b6b46558803df6ea7561793.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/0499e1802db14e3180aec4c061e8b81a.json",
+      "identifier": "10.1111/j.2517-6161.1974.tb00994.x",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 333,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Miller1991ValidationTechniques",
+      "title": "Validation techniques for logistic regression models",
+      "authors": [
+        "Michael E. Miller",
+        "Siu L. Hui",
+        "William M. Tierney"
+      ],
+      "year": 1991,
+      "abstract_sha256": "b46e7420dbe6749dc19fe68eed75f305262f6de7906d8939ceab70f50b3f3343",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/91da7f39bc394b56af9c7761a5c4f6d5.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/785136f3e9fe40918105f50c3fbb3e5b.json",
+      "identifier": "10.1002/sim.4780100805",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 610,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Steyerberg2014TowardsBetter",
+      "title": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+      "authors": [
+        "Ewout Willem Steyerberg",
+        "Yvonne Vergouwe"
+      ],
+      "year": 2014,
+      "abstract_sha256": "3637c1dec7bf684a5be15c4a48084e8b515670d34ff89c36acfb69056ffb8a38",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/709e70d766e74860949b22db8b44a80a.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/73e3bcf55014404da76f4c7e4c09297f.json",
+      "identifier": "https://openalex.org/W2154286581",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1244,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Nelder1972GeneralizedLinear",
+      "title": "Generalized Linear Models",
+      "authors": [
+        "John Ashworth Nelder",
+        "R. W. M. Wedderburn"
+      ],
+      "year": 1972,
+      "abstract_sha256": "39d1a16e3594132086a13c41ae65eef02dbf7722db78ed220ccb7b81e38dc6e5",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c68803a6dfa34962b6697c2382030bd4.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c85e8ced75394681b877911fd1e86016.json",
+      "identifier": "https://openalex.org/W2801490189",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 640,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Efron1983EstimatingError",
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "authors": [
+        "Bradley Efron"
+      ],
+      "year": 1983,
+      "abstract_sha256": "58abf20317aec91bf1111ba288802aa8274e7a028eac819d6eed953c0c7b58c4",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ac542991aeae42f5b78a5de70f1e2fef.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/1feeefc68a8d4ad29e0eca0760d4ef40.json",
+      "identifier": "https://openalex.org/W2040615655",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 541,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Copas1983RegressionPrediction",
+      "title": "Regression, Prediction and Shrinkage",
+      "authors": [
+        "J. B. Copas"
+      ],
+      "year": 1983,
+      "abstract_sha256": "5998941a1d75e648d12983394ba4fffc0e660ce5ea681a9548e4bca1cefa9763",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/82856bf9e05d426bbd20d8f44a4f5352.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ff7b4f5b982a48f7a3b718e8ea13deca.json",
+      "identifier": "10.1111/j.2517-6161.1983.tb01258.x",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 656,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Platt1999ProbabilisticOutputs",
+      "title": "Probabilistic Outputs for Support vector Machines and Comparisons to Regularized Likelihood Methods",
+      "authors": [
+        "John C. Platt"
+      ],
+      "year": 1999,
+      "abstract_sha256": "a3c82799e16d9106f77e6677a5b634331aa5fc1e22fc28c4a5449871ec500285",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/eb0f2d8dfa784cde86c46b3de2ef8cc8.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6ca6459b20a44a61ae853519d5f5212b.json",
+      "identifier": "https://openalex.org/W1618905105",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 909,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Guo2017CalibrationModern",
+      "title": "On Calibration of Modern Neural Networks",
+      "authors": [
+        "Chuan Guo",
+        "Geoff Pleiss",
+        "Yu Sun",
+        "Kilian Q. Weinberger"
+      ],
+      "year": 2017,
+      "abstract_sha256": "b08b4bf65b7c8b652b0ab0710ec381bc1e22fdb839e7b39437c82ba6585a0be5",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/dba7222e11f741f8a6ef406c560bdb42.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/97954dcdc29644c9af71a317b1491593.json",
+      "identifier": "https://openalex.org/W2626967530",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 889,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Harrell1996MultivariablePrognostic",
+      "title": "MULTIVARIABLE PROGNOSTIC MODELS: ISSUES IN DEVELOPING MODELS, EVALUATING ASSUMPTIONS AND ADEQUACY, AND MEASURING AND REDUCING ERRORS",
+      "authors": [
+        "Frank E. Harrell",
+        "Kerry L. Lee",
+        "Daniel B. Mark"
+      ],
+      "year": 1996,
+      "abstract_sha256": "6d0f93a6d033688b0e3982d2f66c48037874c7a55684c4fc62e1922caad927bc",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f5637d0ba41e4bffa000172bf31e6713.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/2c75ec2f335749638e1c5b75b1b0fd50.json",
+      "identifier": "https://openalex.org/W2129925362",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1328,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Anscombe1963ExaminationAnalysis",
+      "title": "The Examination and Analysis of Residuals",
+      "authors": [
+        "Francis John Anscombe",
+        "John W. Tukey"
+      ],
+      "year": 1963,
+      "abstract_sha256": "3b9015a9fcc03b07cec306b8d2a08e5aaa77913ad1336cfd9673c41dfbce0c81",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/2550749e598d4d36a3aacf91a6745dfb.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/8af12b57743f401d86a4b10d498e8ade.json",
+      "identifier": "https://openalex.org/W2025610145",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 793,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Lovell1963SeasonalAdjustment",
+      "title": "Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis",
+      "authors": [
+        "Michael C. Lovell"
+      ],
+      "year": 1963,
+      "abstract_sha256": "ea9fdc3065fdf15a2299b472e292757f38d5d4a3ce8421835228de6ad2a63a24",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/7036d4c5f5ff4fa285f67b6695056847.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3875b96b7aa74c34890378035aa4b054.json",
+      "identifier": "https://openalex.org/W1974208729",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1515,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Geisser1975PredictiveSample",
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "authors": [
+        "Seymour Geisser"
+      ],
+      "year": 1975,
+      "abstract_sha256": "0984fdb54827ed4094985741256322dc11f64b48d398be607a8fe87ffea2beb2",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/480641810eb941989eb73e32ee88b401.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f59dd98e84d34e03a76492cde6e1e0f9.json",
+      "identifier": "https://openalex.org/W1981251392",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 247,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Gneiting2011MakingEvaluating",
+      "title": "Making and Evaluating Point Forecasts",
+      "authors": [
+        "Tilmann Gneiting"
+      ],
+      "year": 2011,
+      "abstract_sha256": "e49e96c4601580193172783f133791e2c2f9b5ee6c32f84fdd2d84d13dbfef46",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/23ab111532af495eb439c3c36794f297.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/733a0b430c9c45d1a4b0e84e57826e7c.json",
+      "identifier": "https://openalex.org/W2075965721",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1515,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Willmott2005AdvantagesMean",
+      "title": "Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance",
+      "authors": [
+        "C. J. Willmott",
+        "Kenji Matsuura"
+      ],
+      "year": 2005,
+      "abstract_sha256": "42e7242771268eba1c8a22a7c41745cabffd63cb6afd879d0321ff6492c3b97b",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5bbc515fc5424f87a18b0c5d3f0d6b8b.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/76978c6703f34ca8a87221435281a080.json",
+      "identifier": "https://openalex.org/W2039240409",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1515,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Chai2014RootMean",
+      "title": "Root mean square error (RMSE) or mean absolute error (MAE)? \u2013 Arguments against avoiding RMSE in the literature",
+      "authors": [
+        "T. Chai",
+        "R. R. Draxler"
+      ],
+      "year": 2014,
+      "abstract_sha256": "482c9319d57f584d5ca9698d8ac3fe560817438639e5f85581fad9cfb408faf1",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f237186172654603805a352326aba383.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ab412db160a24f2c8821e52ba4c8d28b.json",
+      "identifier": "10.5194/gmd-7-1247-2014",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1515,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Ye1998MeasuringCorrecting",
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "authors": [
+        "Jianming Ye"
+      ],
+      "year": 1998,
+      "abstract_sha256": "bcf8bfdac056f4d92dffda06b7b36a6386da9e1b308be0ec48529f7b3b86492c",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/273872f1b1844d10a244edf372c8eb71.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/2f8cb6361f034bf1bbf086fe7267883f.json",
+      "identifier": "https://openalex.org/W1999058847",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1412,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Berk2013ValidPostselection",
+      "title": "Valid post-selection inference",
+      "authors": [
+        "Richard Berk",
+        "Lawrence Brown",
+        "Andreas Buja",
+        "Kai Zhang",
+        "Linda Zhao"
+      ],
+      "year": 2013,
+      "abstract_sha256": "5eeda80d2e96b22610443ec9752609e70df946bc41add829a03bf487204389f5",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/37631baf2f6340c5b223f4b373e85225.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/4e12b753b2ac4357bfb5a3e90dc44306.json",
+      "identifier": "10.1214/12-aos1077",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1172,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Varma2006BiasError",
+      "title": "Bias in error estimation when using cross-validation for model selection",
+      "authors": [
+        "Sudhir Varma",
+        "Richard Simon"
+      ],
+      "year": 2006,
+      "abstract_sha256": "19c9320be24882e7cb0b883ac0e9f83be2bab8601de8538d18c00418f0bf44be",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6f8a0baee40c4d11aa2775ba0e888149.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c9368053952941caadf0bfc1a60b1a9b.json",
+      "identifier": "10.1186/1471-2105-7-91",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1515,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Hahn1977FittingRegression",
+      "title": "Fitting Regression Models with No Intercept Term",
+      "authors": [
+        "Gerald J. Hahn"
+      ],
+      "year": 1977,
+      "abstract_sha256": "2db83598ac9b926cb5236af6e4f65c67745f0acf17f6123f1e8de74f43cc7759",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6159ff5c077e42288a8fafe3ab11b45d.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/32d1acfcbd93434bac8d5a2f5796042f.json",
+      "identifier": "https://openalex.org/W172929394",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 286,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Eisenhauer2003RegressionThrough",
+      "title": "Regression through the Origin",
+      "authors": [
+        "Joseph G. Eisenhauer"
+      ],
+      "year": 2003,
+      "abstract_sha256": "754254381e0f1512d486f8acc53aac4709b3168ae36ed6ac77a4f019abb55751",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c912e97a327740eabb93690c39953999.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c21c8502f2ff417ca1388012b0ec923e.json",
+      "identifier": "10.1111/1467-9639.00136",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 384,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Casella1983LeverageRegression",
+      "title": "Leverage and Regression Through the Origin",
+      "authors": [
+        "George Casella"
+      ],
+      "year": 1983,
+      "abstract_sha256": "8ea4fd468538beb532d8fc66f86921dcc0837ef656d5cdccc86523df1cb4068d",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/962e6d30c3d6477a9e552a02e1df7978.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e3e13209750d4577af16d86d2bce8068.json",
+      "identifier": "https://openalex.org/W2084153418",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 617,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Gordon1981ErrorsComputer",
+      "title": "Errors in Computer Packages. Least Squares Regression Through the Origin",
+      "authors": [
+        "Hugh Gordon"
+      ],
+      "year": 1981,
+      "abstract_sha256": "1a42948ec4c7faabec71dcaf4268ef976266edacb1a1cf41bedfa4610df1a8a3",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/575261b037af4978a11e613d9f53d14b.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/19747a3fd2f64cd7b9eeea21c1e4f12a.json",
+      "identifier": "https://openalex.org/W2506375084",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 608,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Kvlseth1985CautionaryNote",
+      "title": "Cautionary Note about R 2",
+      "authors": [
+        "Tarald O. Kv\u00e5lseth"
+      ],
+      "year": 1985,
+      "abstract_sha256": "33268a3c90bd8c00661649d284018201ddd7b8d5b2a93945e5dad0acbfa8c205",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3081788753104f6c95d659789ab43c8c.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e0d269fe38934a15a22df1a8ecea2fc4.json",
+      "identifier": "https://openalex.org/W2057327562",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 514,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Glahn1972UseModel",
+      "title": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+      "authors": [
+        "Harry R. Glahn",
+        "Dale A. Lowry"
+      ],
+      "year": 1972,
+      "abstract_sha256": "ea2082634d64025ad6dc230f627c97d435b461a157019702a73b1fbdef005fd8",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/142e44783e67462da26f6c44faaba8d1.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/b85613d835e146fea808cb84bee0051f.json",
+      "identifier": "https://openalex.org/W2026058014",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1182,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Maraun2016BiasCorrecting",
+      "title": "Bias Correcting Climate Change Simulations - a Critical Review",
+      "authors": [
+        "Douglas Maraun"
+      ],
+      "year": 2016,
+      "abstract_sha256": "7f629c9d63ca2e5818a229b7de1baa2b741e64363e033a615adc906ba0d073fb",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5f7ff6fae6894de6847cae5fa85da90a.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/4dde3fc225884608860e905bd9962699.json",
+      "identifier": "https://openalex.org/W2528017898",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 995,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Kuleshov2018AccurateUncertainties",
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "authors": [
+        "Volodymyr Kuleshov",
+        "Nathan Fenner",
+        "Stefano Ermon"
+      ],
+      "year": 2018,
+      "abstract_sha256": "601d0166a07955b141acd91d652d53cb123f799d8b6d15a8d7132a70d8f924c5",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c16a11846adf4dbaa767b36102c2d84c.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/d44f870fb1844df391bf0ba367d3734a.json",
+      "identifier": "https://openalex.org/W2810469995",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 980,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Clements1996InterceptCorrections",
+      "title": "Intercept corrections and structural change",
+      "authors": [
+        "Michael P. Clements",
+        "David Forbes Hendry"
+      ],
+      "year": 1996,
+      "abstract_sha256": "acdc89d4c00b17ab59099ff63eee3016e60a205caa5d6bcf81bfd285a718c2fa",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5ffdce4113ef44b4b89e72e95e6cbd26.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/75afca3f8f244b85b4447af5ca06159a.json",
+      "identifier": "https://openalex.org/W2134575624",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 862,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Riley2021MinimumSample",
+      "title": "Minimum sample size for external validation of a clinical prediction model with a binary outcome",
+      "authors": [
+        "Richard D. Riley",
+        "Thomas P. A. Debray",
+        "Gary S. Collins",
+        "Lucinda Archer",
+        "Joie Ensor",
+        "Maarten van Smeden",
+        "Kym I. E. Snell"
+      ],
+      "year": 2021,
+      "abstract_sha256": "89a56e8fef25e0f315f777db21fe273c6e3aafe05ab234c8b78b422e8746b4bf",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/a3a743856cb54176a3190b97f0a41b0b.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/fef2239ec2784a558393633c04a373e5.json",
+      "identifier": "10.1002/sim.9025",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1515,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Steyerberg2004ValidationUpdating",
+      "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+      "authors": [
+        "Ewout W. Steyerberg",
+        "Gerard J. J. M. Borsboom",
+        "Hans C. van Houwelingen",
+        "Marinus J. C. Eijkemans",
+        "J. Dik F. Habbema"
+      ],
+      "year": 2004,
+      "abstract_sha256": "c251c7b36e52fdd12def1df21d60db089c2af727f5d8cea923b590dad7bd74da",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e467171a5536472f8914d8691360e8c3.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/01828d4d62e1404a89ceafe02381e9fb.json",
+      "identifier": "10.1002/sim.1844",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1399,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Hodson2022RootmeansquareError",
+      "title": "Root-mean-square error (RMSE) or mean absolute error (MAE): when to use them or not",
+      "authors": [
+        "Timothy O. Hodson"
+      ],
+      "year": 2022,
+      "abstract_sha256": "79bbe348a7b1b4e6d061421a7cb1d6939a35c460186644a4a4acc5365420556b",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/83dfca1e28ea4a12bb53d0b9dc4204f4.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/101f0ff8dd4f47849735c29ad8da0a6b.json",
+      "identifier": "10.5194/gmd-15-5481-2022",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 697,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Breiman1992SubmodelSelection",
+      "title": "Submodel Selection and Evaluation in Regression. The X-Random Case",
+      "authors": [
+        "Leo Breiman",
+        "Philip C. Spector"
+      ],
+      "year": 1992,
+      "abstract_sha256": "3d24ae09d926b60d90edf053cd902f4c3f927b84fd19f2c40cdfc8eafdbccf1c",
+      "provider": "openalex",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c41e84ca65ab438ab7c7bf9983954130.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/28ec01b7b1c040018f3947de6d86e7e2.json",
+      "identifier": "https://openalex.org/W2111814036",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 209,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Willmott1985StatisticsEvaluation",
+      "title": "Statistics for the evaluation and comparison of models",
+      "authors": [
+        "Cort J. Willmott",
+        "Steven G. Ackleson",
+        "Robert E. Davis",
+        "Johannes J. Feddema",
+        "Katherine M. Klink",
+        "David R. Legates",
+        "James O'Donnell",
+        "Clinton M. Rowe"
+      ],
+      "year": 1985,
+      "abstract_sha256": "f94ff1cc13b3743470c230ffc3c9af528d70955fc0a728a544a17d35221f5d7a",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ac67e126292f49b7b8c931120b021b16.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/bc715bd0f6c3418b88f7fc3fccce196b.json",
+      "identifier": "10.1029/jc090ic05p08995",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 650,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Shmueli2010ExplainOr",
+      "title": "To Explain or to Predict?",
+      "authors": [
+        "Galit Shmueli"
+      ],
+      "year": 2010,
+      "abstract_sha256": "f9b64230fe021c8dab645dcdb4348b1962906901929c5ebf1d2c3361f86b4f93",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/18f119f981ed425793ff3a181df334e3.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c5647620463548a59cb5e104867224b4.json",
+      "identifier": "10.1214/10-sts330",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 923,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Hawkins2004ProblemOverfitting",
+      "title": "The Problem of Overfitting",
+      "authors": [
+        "Douglas M. Hawkins"
+      ],
+      "year": 2004,
+      "abstract_sha256": "0026f1e625795a4cfc4b17643d7e48fb237d3e8eb382398d368bbe1aeab55ffa",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/93a0960ee70b477db0ca0a8b7d084b05.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e93cb129eda4429791da3e30cf43705c.json",
+      "identifier": "10.1002/chin.200419274",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 79,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Yarkoni2017ChoosingPrediction",
+      "title": "Choosing Prediction Over Explanation in Psychology: Lessons From Machine Learning",
+      "authors": [
+        "Tal Yarkoni",
+        "Jacob Westfall"
+      ],
+      "year": 2017,
+      "abstract_sha256": "f61799335402df6f4c8dad7c3ec45ab1b51008464252e53c8f4dd8b261cf9e96",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/04bf2ff7e91844b0917fb942dfc6dcc5.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/87daef4fc20742ae9705b8e5da4b0d24.json",
+      "identifier": "10.1177/1745691617693393",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 1162,
+      "matching_selected_record_count": 1
+    },
+    {
+      "key": "Geman1992NeuralNetworks",
+      "title": "Neural Networks and the Bias/Variance Dilemma",
+      "authors": [
+        "Stuart Geman",
+        "Elie Bienenstock",
+        "Ren\u00e9 Doursat"
+      ],
+      "year": 1992,
+      "abstract_sha256": "09e123916d5978e830d7e2511d8891d41f46d706080fea426ab1507dde806968",
+      "provider": "crossref",
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f69967b635c84f89a13e5e5932137834.json",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3a9499b7e26645cca862edac302a9902.json",
+      "identifier": "10.1162/neco.1992.4.1.1",
+      "exact_title_authors_year_venue_abstract_match": true,
+      "abstract_characters": 879,
+      "matching_selected_record_count": 1
+    }
+  ],
+  "selected_records_checks": [
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/82b01092ee6f46d48c2ccb8c8d761efc.json",
+      "selected_sha256": "eef3a9e6f5e26a418dfa3fc1cc11a7ca9f3fe39f90b3ab62e0a8baabac3eaaac",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/06a7bb8feda247fc948a1aea7a33954b.json",
+      "raw_response_sha256": "b81f6c05e55ade41322c8ff705eafd4358b68e079da39b1ed9aab16c9629359e",
+      "provider": "crossref",
+      "query": "Influential Observations, High Leverage Points, and Outliers in Linear Regression",
+      "year_hint": 1986,
+      "title": "Influential Observations, High Leverage Points, and Outliers in Linear Regression",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1214/ss/1177013622",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/4c25518b3fbf4fee8e1644e3d1083a72.json",
+      "selected_sha256": "a8418ad59e6c9977b485c9e1d6199a64041882418d80b1df5c0cbd7d638b4a6b",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f0c610cbdf104d9abd8d3b96f7eb5705.json",
+      "raw_response_sha256": "db7d6687cc9317750a775a183cc7881e5f576695288d6b10da54d5d8f893d7ad",
+      "provider": "openalex",
+      "query": "Generalized Additive Models",
+      "year_hint": 1986,
+      "title": "Generalized Additive Models",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2166163519",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/d55f09c7c7374922a4801d758b12e424.json",
+      "selected_sha256": "1f7938d1aa5334bce8e75df24dd1dedb1b59243f6c3b530c485a2892dcba6336",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/9b06d1848d134916825ef9548b6840c6.json",
+      "raw_response_sha256": "7dd455bc79b9c4c12af0cb31077483a4ffc1f62e5da56696014897a3f69977d2",
+      "provider": "crossref",
+      "query": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year_hint": 2001,
+      "title": "Greedy function approximation: A gradient boosting machine.",
+      "title_match_score": 109,
+      "title_ratio_without_year_bonus": 99,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1214/aos/1013203451",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/74b64f7623b747008e36a8a3675af3a1.json",
+      "selected_sha256": "a1b24211693d13aaf1c8aa03b35a632172f7bd8f953f0fa1a4e37d1c07a72ae7",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/21c1fd65a8554726a6953a14c8658cf6.json",
+      "raw_response_sha256": "89263ed72fa3c23f728e9aa3ca3fefa22d613ee8d9ccc4412b41626c5a32b640",
+      "provider": "crossref",
+      "query": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year_hint": 2010,
+      "title": "A survey of cross-validation procedures for model selection",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1214/09-ss054",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5e579ca74897489f94a6a026cd19fdfc.json",
+      "selected_sha256": "7df9bd4c86ec61dfd333512656bf9bced1ec06ed17e77a4f39f1118aae23ef34",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c8f8ab45a1ef4c83a7ef748271668b21.json",
+      "raw_response_sha256": "503ecf418493bf7ae813b05d67956b0c6d453f617b2dea471bf74bf159469f97",
+      "provider": "openalex",
+      "query": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year_hint": 1986,
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W4249991467",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c19604bda1244ad4ac5130a40d60faa2.json",
+      "selected_sha256": "a5b89cba9529f8db4a1e695a49bdd9abecad909b22d1ef70d66333ed02e0383f",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/29dd2265c7f14dc7bd0d1cb159a04158.json",
+      "raw_response_sha256": "05b4e4c4893cf97b8f7a1d64acfa75b1f2d34d62f0c40107c45761281382162c",
+      "provider": "openalex",
+      "query": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year_hint": 2004,
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W1502338185",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/336cdc4007b24ac49b7fb470b3e769a9.json",
+      "selected_sha256": "cc6d8c9f868407d67cd5ff1e27bb1e27a0fd9d3f075b6f6f983b739281469ef8",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/675f928a7ac142d9b4f35d6446060c36.json",
+      "raw_response_sha256": "1308ebe2d21f42edb9961fa0226c1e1730106b602793e98771d1f1dec6501370",
+      "provider": "crossref",
+      "query": "Statistical Inference for Exploratory Data Analysis and Model Diagnostics",
+      "year_hint": 2009,
+      "title": "Statistical inference for exploratory data analysis and model diagnostics",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1098/rsta.2009.0120",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/56291f12db304891833bb3fffd16d34e.json",
+      "selected_sha256": "c8d1800f316fdc6cdade4aff3a05ced950efcd2f9faef87f00ca6ee32fc6286a",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3fefa605c32d45d4a351c95f07de7918.json",
+      "raw_response_sha256": "a7e3ac6dd8d7b1b9d25174401754213f28bdd54561b53e42372c344f513c7683",
+      "provider": "openalex",
+      "query": "Detection of Influential Observation in Linear Regression",
+      "year_hint": 1977,
+      "title": "Detection of Influential Observation in Linear Regression",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W4233620411",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3eda7fb17689437fb8129bdbede04d71.json",
+      "selected_sha256": "e39336ac3cb868c415d0a92bdac304ca81b447dc426728019ade1ad03b4e7df6",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6ff45fecb87042e1b961da80561123f0.json",
+      "raw_response_sha256": "8f7aa629f149bf7b8830f7ffc649893eb390bedcfc59cc0766ad1091d5fea581",
+      "provider": "openalex",
+      "query": "An Example of the Use of Graphics in Regression",
+      "year_hint": 1987,
+      "title": "An Example of the Use of Graphics in Regression",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W1972498398",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/216fd4515b6b46558803df6ea7561793.json",
+      "selected_sha256": "538d4d1e480d51e3d249300795288e486de288b1fcbd58aabe0466a6888f7be2",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/0499e1802db14e3180aec4c061e8b81a.json",
+      "raw_response_sha256": "4e31c59c1df1f26a9dfce3649f7a5f99a2df5f9fad8ce9d7d25bff5270597def",
+      "provider": "crossref",
+      "query": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year_hint": 1974,
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1111/j.2517-6161.1974.tb00994.x",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/91da7f39bc394b56af9c7761a5c4f6d5.json",
+      "selected_sha256": "fa472adbf1d5785e62a39af8e2366d7fca131b2aceb321e6c96ad644dfdb4c16",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/785136f3e9fe40918105f50c3fbb3e5b.json",
+      "raw_response_sha256": "6330c722ee63cdbc2ecf5ca29caea26f16b85d7a95e1fca648e13f53fd5991de",
+      "provider": "crossref",
+      "query": "Validation techniques for logistic regression models",
+      "year_hint": 1991,
+      "title": "Validation techniques for logistic regression models",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1002/sim.4780100805",
+      "date_precision": "month",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/709e70d766e74860949b22db8b44a80a.json",
+      "selected_sha256": "24302174f9737b8012adf26dd269791f8b4aef84a66e05713a4c1989cbe7fa9c",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/73e3bcf55014404da76f4c7e4c09297f.json",
+      "raw_response_sha256": "f0a96e23e10b46b9503b0d655cee56f73eb8a319d97f3c5adcdd200eee61e94e",
+      "provider": "openalex",
+      "query": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+      "year_hint": 2014,
+      "title": "Towards better clinical prediction models: seven steps for development and an ABCD for validation",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2154286581",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c68803a6dfa34962b6697c2382030bd4.json",
+      "selected_sha256": "a2a08718c026d753d6a92122eecc21957581e0421fb9eb3cee347ba6f4b0ae5e",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c85e8ced75394681b877911fd1e86016.json",
+      "raw_response_sha256": "f46fce94abdc579ba30b0a70bde5e857a339edd957983fa752f65903dea3a7e2",
+      "provider": "openalex",
+      "query": "Generalized Linear Models",
+      "year_hint": 1972,
+      "title": "Generalized Linear Models",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2801490189",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ac542991aeae42f5b78a5de70f1e2fef.json",
+      "selected_sha256": "a89824966a65400e51f629e70e840ab4c683ee307c30985446dd69a603860298",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/1feeefc68a8d4ad29e0eca0760d4ef40.json",
+      "raw_response_sha256": "6805e86f65c0afb3198b84f8db87f0b81af59a261cbee9e93944126eac8d4bbd",
+      "provider": "openalex",
+      "query": "Estimating the error rate of a prediction rule: improvement on cross-validation",
+      "year_hint": 1983,
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2040615655",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/82856bf9e05d426bbd20d8f44a4f5352.json",
+      "selected_sha256": "84823e88d0ee1c218109fe00c60f4bc0a45acbd09dd36e1d54248dfd21a8e18f",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ff7b4f5b982a48f7a3b718e8ea13deca.json",
+      "raw_response_sha256": "673d80d482e041a1f6dd891b3893799b28a1e24a772985cb8f590163f1bdec6d",
+      "provider": "crossref",
+      "query": "Regression, prediction and shrinkage",
+      "year_hint": 1983,
+      "title": "Regression, Prediction and Shrinkage",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1111/j.2517-6161.1983.tb01258.x",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/eb0f2d8dfa784cde86c46b3de2ef8cc8.json",
+      "selected_sha256": "75a189555552873d841d7b7958c42ee26771b22c49485ea16b9c4f81c66f3934",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6ca6459b20a44a61ae853519d5f5212b.json",
+      "raw_response_sha256": "b0a7c88a2a45563df22faba04ff55e674cb64a5fb62b75d31cf1288ec7d80bea",
+      "provider": "openalex",
+      "query": "Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods",
+      "year_hint": 1999,
+      "title": "Probabilistic Outputs for Support vector Machines and Comparisons to Regularized Likelihood Methods",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W1618905105",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/dba7222e11f741f8a6ef406c560bdb42.json",
+      "selected_sha256": "0e7467e00f032a7549d4bf0375994bc35a0e40f40d7402b609b83cdedec86dc4",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/97954dcdc29644c9af71a317b1491593.json",
+      "raw_response_sha256": "f70f91569dbb066e4dd0047f2a46bfd88fb368903ef4e546c115d67f30b8f8aa",
+      "provider": "openalex",
+      "query": "On calibration of modern neural networks",
+      "year_hint": 2017,
+      "title": "On Calibration of Modern Neural Networks",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2626967530",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f5637d0ba41e4bffa000172bf31e6713.json",
+      "selected_sha256": "624903c3c562440889ea6668d90ed69340e006c74e87049124c7153216500727",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/2c75ec2f335749638e1c5b75b1b0fd50.json",
+      "raw_response_sha256": "b874900b0ef61fab7c23db6566d441d3f8662cb8c4e21f534080106a05eda6b7",
+      "provider": "openalex",
+      "query": "Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors",
+      "year_hint": 1996,
+      "title": "MULTIVARIABLE PROGNOSTIC MODELS: ISSUES IN DEVELOPING MODELS, EVALUATING ASSUMPTIONS AND ADEQUACY, AND MEASURING AND REDUCING ERRORS",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2129925362",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/2550749e598d4d36a3aacf91a6745dfb.json",
+      "selected_sha256": "88a03c4e79ce9950669003fca72ca3c5cbcb31a996869f9eeaa9cb0a0b1fe032",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/8af12b57743f401d86a4b10d498e8ade.json",
+      "raw_response_sha256": "e58e7de5b9734a6d1e475d9e3c4e26c7a7467a95e9e9dff6891bd05147fbc406",
+      "provider": "openalex",
+      "query": "The Examination and Analysis of Residuals",
+      "year_hint": 1963,
+      "title": "The Examination and Analysis of Residuals",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2025610145",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/7036d4c5f5ff4fa285f67b6695056847.json",
+      "selected_sha256": "6b3dd87311a7c6f7b1bcd465812c49fe04178ff13f304ff14ec088bc66efc068",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3875b96b7aa74c34890378035aa4b054.json",
+      "raw_response_sha256": "7d876e0394853476d55ae3893b11fef4a6501e2f16ae1765ccaca5abe3d17d39",
+      "provider": "openalex",
+      "query": "Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis",
+      "year_hint": 1963,
+      "title": "Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W1974208729",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/480641810eb941989eb73e32ee88b401.json",
+      "selected_sha256": "256846522842203db7b49379c0e3a8b2c377047f06407d163cc7ab8c5e94e279",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f59dd98e84d34e03a76492cde6e1e0f9.json",
+      "raw_response_sha256": "c6c2f9e46a84f6a05a862bf8c9bb5f1142e6946104b52d9b5172e99aca493167",
+      "provider": "openalex",
+      "query": "The Predictive Sample Reuse Method with Applications",
+      "year_hint": 1975,
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W1981251392",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/23ab111532af495eb439c3c36794f297.json",
+      "selected_sha256": "c578b979a172ff1d031db1e68a7ebe047597a26c79b6ba81f03bdf7a5413ca77",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/733a0b430c9c45d1a4b0e84e57826e7c.json",
+      "raw_response_sha256": "b46554b6e93eec8d9acf381389a09e46c361c7778b7f2cb25f4c6b5cec987463",
+      "provider": "openalex",
+      "query": "Making and Evaluating Point Forecasts",
+      "year_hint": 2011,
+      "title": "Making and Evaluating Point Forecasts",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2075965721",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5bbc515fc5424f87a18b0c5d3f0d6b8b.json",
+      "selected_sha256": "46e8d5c878e3110f5b4daaca3fa19284a5039ce8666831252e8750cf6d3416a8",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/76978c6703f34ca8a87221435281a080.json",
+      "raw_response_sha256": "0b0bfbe2737fe0a23f67a32f00d9e65f4ea50fa327d5ca3cc8c094b884bb51f7",
+      "provider": "openalex",
+      "query": "Advantages of the Mean Absolute Error (MAE) over the Root Mean Square Error (RMSE) in Assessing Average Model Performance",
+      "year_hint": 2005,
+      "title": "Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2039240409",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f237186172654603805a352326aba383.json",
+      "selected_sha256": "cc25e89b0c03d5711c11d7bbe7d1625c57f2886ff852a1f755d8824d9c05c641",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ab412db160a24f2c8821e52ba4c8d28b.json",
+      "raw_response_sha256": "7b8cdceb7a7817519d0781996421b2b7752dcf4d8c57a84d990904877a15d857",
+      "provider": "crossref",
+      "query": "Root mean square error (RMSE) or mean absolute error (MAE)? \u2013 Arguments against avoiding RMSE in the literature",
+      "year_hint": 2014,
+      "title": "Root mean square error (RMSE) or mean absolute error (MAE)? \u2013 Arguments against avoiding RMSE in the literature",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.5194/gmd-7-1247-2014",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/273872f1b1844d10a244edf372c8eb71.json",
+      "selected_sha256": "35fa8197179036be3933aa16f4bc23ca3b70c595332153312521a954d63c0662",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/2f8cb6361f034bf1bbf086fe7267883f.json",
+      "raw_response_sha256": "5ee56f2056dd3d2a62f6fb17d0bd0dedc61a9e408db5982b5ec6eac0380d3883",
+      "provider": "openalex",
+      "query": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year_hint": 1998,
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W1999058847",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/37631baf2f6340c5b223f4b373e85225.json",
+      "selected_sha256": "7a3459e6f37993daa65ed2b504935e8c1244bb44d14f331ee18c48f02d04cbee",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/4e12b753b2ac4357bfb5a3e90dc44306.json",
+      "raw_response_sha256": "b08198b14d555fef1b8f734391c0bd7a28d064c2e6555277f4c6fd3e458289b5",
+      "provider": "crossref",
+      "query": "Valid Post-Selection Inference",
+      "year_hint": 2013,
+      "title": "Valid post-selection inference",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1214/12-aos1077",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6f8a0baee40c4d11aa2775ba0e888149.json",
+      "selected_sha256": "5071efc0a13bf631cffe24ef7fa5f47c882cbd0638b1018908bd4fd5d8bc7e40",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c9368053952941caadf0bfc1a60b1a9b.json",
+      "raw_response_sha256": "12ae670f6b640d884d3675a62403b7760273a1769adfc691e98bcf056638799e",
+      "provider": "crossref",
+      "query": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year_hint": 2006,
+      "title": "Bias in error estimation when using cross-validation for model selection",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1186/1471-2105-7-91",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/6159ff5c077e42288a8fafe3ab11b45d.json",
+      "selected_sha256": "32746386f76e961271fdd960ef29c55eda00adb640f7da91da457ca0988335a4",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/32d1acfcbd93434bac8d5a2f5796042f.json",
+      "raw_response_sha256": "eaba1550c207c02a1205509f67731a67b332fb70f9e791d2833361aac8798b85",
+      "provider": "openalex",
+      "query": "Fitting Regression Models with No Intercept Term",
+      "year_hint": 1977,
+      "title": "Fitting Regression Models with No Intercept Term",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W172929394",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c912e97a327740eabb93690c39953999.json",
+      "selected_sha256": "b636ae31c56918fa1a04f4ad0beb103a11a3d9ada173d846a744195c33849e07",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c21c8502f2ff417ca1388012b0ec923e.json",
+      "raw_response_sha256": "d00f787a5730065c6f69178f7c1815da3674c3fd1b3d8a37af2194329462042b",
+      "provider": "crossref",
+      "query": "Regression through the Origin",
+      "year_hint": 2003,
+      "title": "Regression through the Origin",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1111/1467-9639.00136",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/962e6d30c3d6477a9e552a02e1df7978.json",
+      "selected_sha256": "744b35de9a13dca7986f61b19fba0a43aeb4432d390827418a15ec9b941bd0b8",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e3e13209750d4577af16d86d2bce8068.json",
+      "raw_response_sha256": "a449354982419db93e62afc89709f3481bdbbbf044cc7fb6ef89189d600d2c25",
+      "provider": "openalex",
+      "query": "Leverage and Regression Through the Origin",
+      "year_hint": 1983,
+      "title": "Leverage and Regression Through the Origin",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2084153418",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/575261b037af4978a11e613d9f53d14b.json",
+      "selected_sha256": "b8fef2e7a79e3e92b3e1ce4e682234d91cae60d3d0e0894757e4d2f03511ebba",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/19747a3fd2f64cd7b9eeea21c1e4f12a.json",
+      "raw_response_sha256": "af322975d6adab067d46f9639b65e5f00a5f46d829788b4d92d3f50780620e3c",
+      "provider": "openalex",
+      "query": "Errors in Computer Packages. Least Squares Regression Through the Origin",
+      "year_hint": 1981,
+      "title": "Errors in Computer Packages. Least Squares Regression Through the Origin",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2506375084",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3081788753104f6c95d659789ab43c8c.json",
+      "selected_sha256": "9b0f3efa9aaa9eb3569d2911ef5dcd55bf9c1af81584e98df25c891d819612e8",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e0d269fe38934a15a22df1a8ecea2fc4.json",
+      "raw_response_sha256": "cf18f1a1ca766ec90f1e37ae2f3755fc82fe7f577f78ebeeac3c607206ae3ae0",
+      "provider": "openalex",
+      "query": "Cautionary Note about R2",
+      "year_hint": 1985,
+      "title": "Cautionary Note about R 2",
+      "title_match_score": 108,
+      "title_ratio_without_year_bonus": 98,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2057327562",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/142e44783e67462da26f6c44faaba8d1.json",
+      "selected_sha256": "7a450fe0acea72d66427931bba63c726320171aa5a43a16caa9e405f3a416392",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/b85613d835e146fea808cb84bee0051f.json",
+      "raw_response_sha256": "0c224987b21e42b31277ac97a8e0227a6cb71b55cc2d108f58755e8d075216b8",
+      "provider": "openalex",
+      "query": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+      "year_hint": 1972,
+      "title": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2026058014",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5f7ff6fae6894de6847cae5fa85da90a.json",
+      "selected_sha256": "b86ea661277567e7e19173189777698d7e1b4d6627a1053bb0cccf70b5a2eb7a",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/4dde3fc225884608860e905bd9962699.json",
+      "raw_response_sha256": "08e549bc2877ced82930d503512ceb878d3486110809dd269c6ebe00e20de3c7",
+      "provider": "openalex",
+      "query": "Bias Correcting Climate Change Simulations - A Critical Review",
+      "year_hint": 2016,
+      "title": "Bias Correcting Climate Change Simulations - a Critical Review",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2528017898",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c16a11846adf4dbaa767b36102c2d84c.json",
+      "selected_sha256": "e1f0c310e97d0ccacb98069c6c9b47901faa8e34ebd4683f197f35930a032773",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/d44f870fb1844df391bf0ba367d3734a.json",
+      "raw_response_sha256": "295205f560e031a32deb296e8f904529f7d9d29194437412efa17b83e3648284",
+      "provider": "openalex",
+      "query": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year_hint": 2018,
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2810469995",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/5ffdce4113ef44b4b89e72e95e6cbd26.json",
+      "selected_sha256": "b49529603b5e833d56ffaa057230456dcb061f5dda2ea1c69ecee210ffb7c357",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/75afca3f8f244b85b4447af5ca06159a.json",
+      "raw_response_sha256": "c112dd2736d839b220e894ce5a77c26b01f4197f6825e89948314c66bff628dd",
+      "provider": "openalex",
+      "query": "Intercept Corrections and Structural Change",
+      "year_hint": 1996,
+      "title": "Intercept corrections and structural change",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2134575624",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/a3a743856cb54176a3190b97f0a41b0b.json",
+      "selected_sha256": "c875c6273d837a41dbb4c5841f8a7b124a28c14283bc497f2eff4b8deb1b2fd6",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/fef2239ec2784a558393633c04a373e5.json",
+      "raw_response_sha256": "6a38e365abb6a9ec5626e3dcd74e31693f72980378cbb6f49658cb09d51f25ad",
+      "provider": "crossref",
+      "query": "Minimum sample size for external validation of a clinical prediction model with a continuous outcome",
+      "year_hint": 2021,
+      "title": "Minimum sample size for external validation of a clinical prediction model with a binary outcome",
+      "title_match_score": 104,
+      "title_ratio_without_year_bonus": 94,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1002/sim.9025",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e467171a5536472f8914d8691360e8c3.json",
+      "selected_sha256": "16da7a9c01658e7d57c01f26472d2aedb49cba06e82962a9432748b8ab9148c5",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/01828d4d62e1404a89ceafe02381e9fb.json",
+      "raw_response_sha256": "1dc7394be9eebd82a2b4b2c6a47a88fdf73ad7e2157b9245e0135133d5a55437",
+      "provider": "crossref",
+      "query": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+      "year_hint": 2004,
+      "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1002/sim.1844",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/83dfca1e28ea4a12bb53d0b9dc4204f4.json",
+      "selected_sha256": "db1d0b682cced0c206ff4a67e961aa7e443ae9b21614a7a71d9278d9882defc4",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/101f0ff8dd4f47849735c29ad8da0a6b.json",
+      "raw_response_sha256": "7c1469eba27efe71516ffa2d520236a0187ac33939782b8d0dada3a98dc157cc",
+      "provider": "crossref",
+      "query": "Root-mean-square error (RMSE) or mean absolute error (MAE): when to use them or not",
+      "year_hint": 2022,
+      "title": "Root-mean-square error (RMSE) or mean absolute error (MAE): when to use them or not",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.5194/gmd-15-5481-2022",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c41e84ca65ab438ab7c7bf9983954130.json",
+      "selected_sha256": "bb5f40c28e19bb7f99accf66e754d66674e4a54c49bb8fd66cd0a0ad0d961d32",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/28ec01b7b1c040018f3947de6d86e7e2.json",
+      "raw_response_sha256": "009b16a6d5d6da3ffba66e8fb1362679186f488eb9730d0373c58f8979d4fa09",
+      "provider": "openalex",
+      "query": "Submodel Selection and Evaluation in Regression. The X-Random Case",
+      "year_hint": 1992,
+      "title": "Submodel Selection and Evaluation in Regression. The X-Random Case",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "https://openalex.org/W2111814036",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/ac67e126292f49b7b8c931120b021b16.json",
+      "selected_sha256": "4f2306f8e9c5b5d6de3620d6533e3df72af0cda8ba449468afc8a8291a59ee6a",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/bc715bd0f6c3418b88f7fc3fccce196b.json",
+      "raw_response_sha256": "b7563594c5d5c9e754331a3c8982d5881928a6f8f2ed317cfd67d23273092c30",
+      "provider": "crossref",
+      "query": "Statistics for the Evaluation and Comparison of Models",
+      "year_hint": 1985,
+      "title": "Statistics for the evaluation and comparison of models",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1029/jc090ic05p08995",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/18f119f981ed425793ff3a181df334e3.json",
+      "selected_sha256": "8e1c93e7ab61dddfdb4ebe2e67df066caaab9b654b16763fe146493796d2518f",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/c5647620463548a59cb5e104867224b4.json",
+      "raw_response_sha256": "733c47378d79a4beb8ca6f1097a1d0b3338362eb8495fea6eaed351917006e59",
+      "provider": "crossref",
+      "query": "To Explain or to Predict?",
+      "year_hint": 2010,
+      "title": "To Explain or to Predict?",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1214/10-sts330",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/93a0960ee70b477db0ca0a8b7d084b05.json",
+      "selected_sha256": "f68eb8506cee2fe964e6b4c6990ad735ca0e7fb4601c433b973f487b4e0e8256",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/e93cb129eda4429791da3e30cf43705c.json",
+      "raw_response_sha256": "a1982e1689bd68351ec5f837d5b4a1f6d87ea5f9db1532c9d13e2361c496927b",
+      "provider": "crossref",
+      "query": "The Problem of Overfitting",
+      "year_hint": 2004,
+      "title": "The Problem of Overfitting",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1002/chin.200419274",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/04bf2ff7e91844b0917fb942dfc6dcc5.json",
+      "selected_sha256": "120f0865c5374a8afc1dcf6de1ff9b42f090b8104acea86beee724b3cce15af2",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/87daef4fc20742ae9705b8e5da4b0d24.json",
+      "raw_response_sha256": "100877dbd679f03fbfe62e60064cec7736dae550c2e0832e7fc8131108c2a723",
+      "provider": "crossref",
+      "query": "Choosing Prediction Over Explanation in Psychology: Lessons From Machine Learning",
+      "year_hint": 2017,
+      "title": "Choosing Prediction Over Explanation in Psychology: Lessons From Machine Learning",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1177/1745691617693393",
+      "date_precision": "day",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    },
+    {
+      "selected_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/f69967b635c84f89a13e5e5932137834.json",
+      "selected_sha256": "8cedf8e9af2c106ca5bb42830280178291267068344d59f1c7fb24f916bf68a9",
+      "raw_response_path": "validation/reference-fix-e2e-complete/execution/reference_retrieval/3a9499b7e26645cca862edac302a9902.json",
+      "raw_response_sha256": "4c420f046fea3826c5ad38315975e72e1795724620342fa85b465163f72bd44e",
+      "provider": "crossref",
+      "query": "Neural Networks and the Bias/Variance Dilemma",
+      "year_hint": 1992,
+      "title": "Neural Networks and the Bias/Variance Dilemma",
+      "title_match_score": 110,
+      "title_ratio_without_year_bonus": 100,
+      "raw_metadata_matches_selected": true,
+      "raw_identifier": "10.1162/neco.1992.4.1.1",
+      "date_precision": "month",
+      "cutoff": "2026-11",
+      "date_allowed": true
+    }
+  ],
+  "final_manuscript_semantic_review": {
+    "reviewed_at_utc": "2026-11-16T10:54:55.853337+00:00",
+    "tex_path": "validation/reference-fix-e2e-complete/content_refinement_workdir/final_refined_paper.tex",
+    "tex_sha256": "6a939088bedf5fe8bf00db799b25775b673768e489d46f4b031d83cfa4a5779b",
+    "pdf_path": "validation/reference-fix-e2e-complete/final_paper.pdf",
+    "pdf_sha256": "30585e1656de7ebf623899275db1c3c63ef4b31606e6b9221372dbf3f7ede0eb",
+    "pdf_pages": 7,
+    "final_distinct_cited_keys": 18,
+    "initial_template_and_section_draft_distinct_keys": 42,
+    "cited_keys": [
+      "Anscombe1963ExaminationAnalysis",
+      "Chatterjee1986InfluentialObservations",
+      "Cook1977DetectionInfluential",
+      "Denby1987ExampleUse",
+      "Efron1986HowBiased",
+      "Efron2004EstimationPrediction",
+      "Eisenhauer2003RegressionThrough",
+      "Gneiting2011MakingEvaluating",
+      "Guo2017CalibrationModern",
+      "Hahn1977FittingRegression",
+      "Hodson2022RootmeansquareError",
+      "Kuleshov2018AccurateUncertainties",
+      "Platt1999ProbabilisticOutputs",
+      "Shmueli2010ExplainOr",
+      "Steyerberg2004ValidationUpdating",
+      "Varma2006BiasError",
+      "Willmott2005AdvantagesMean",
+      "Yarkoni2017ChoosingPrediction"
+    ],
+    "unapproved_keys": [],
+    "all_final_cited_titles_visible": true,
+    "all_final_cited_query_titles_match": true,
+    "riley_wrong_query_target_retained_in_library": true,
+    "riley_wrong_query_target_cited_in_final": false,
+    "semantic_review_scope": "Human-agent read of every final citation context against its retained abstract. Metadata/abstract evidence only; not a full-text scientific review or proof of universal claim validity. No manuscript or installed-bundle editing.",
+    "warnings": [],
+    "entries": [
+      {
+        "key": "Anscombe1963ExaminationAnalysis",
+        "title": "The Examination and Analysis of Residuals",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "solute error decreases from $3$ to $0$, and mean squared error from $9$ to $0$. A measured error table and two reproducible figures expose the computation. Correction and evaluation reuse the same observations; the results establish finite arithmetic agreement without predictive generalization or methodological novelty.\n\\end{abstract}\n\\section{Introduction}\n\nResiduals make discrepancies between observations and predictions explicit, and their examination has a substantial methodological history \\cite{Anscombe1963ExaminationAnalysis,Denby1987ExampleUse,Chatterjee1986InfluentialObservations,Cook1977DetectionInfluential}. This teaching note uses a completely specified example to explain a constant prediction discrepancy, its correction, and the interpretation of the resulting errors.\n\nThe supplied observations are\n\\["
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Chatterjee1986InfluentialObservations",
+        "title": "Influential Observations, High Leverage Points, and Outliers in Linear Regression",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "solute error decreases from $3$ to $0$, and mean squared error from $9$ to $0$. A measured error table and two reproducible figures expose the computation. Correction and evaluation reuse the same observations; the results establish finite arithmetic agreement without predictive generalization or methodological novelty.\n\\end{abstract}\n\\section{Introduction}\n\nResiduals make discrepancies between observations and predictions explicit, and their examination has a substantial methodological history \\cite{Anscombe1963ExaminationAnalysis,Denby1987ExampleUse,Chatterjee1986InfluentialObservations,Cook1977DetectionInfluential}. This teaching note uses a completely specified example to explain a constant prediction discrepancy, its correction, and the interpretation of the resulting errors.\n\nThe supplied observations are\n\\["
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Cook1977DetectionInfluential",
+        "title": "Detection of Influential Observation in Linear Regression",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "solute error decreases from $3$ to $0$, and mean squared error from $9$ to $0$. A measured error table and two reproducible figures expose the computation. Correction and evaluation reuse the same observations; the results establish finite arithmetic agreement without predictive generalization or methodological novelty.\n\\end{abstract}\n\\section{Introduction}\n\nResiduals make discrepancies between observations and predictions explicit, and their examination has a substantial methodological history \\cite{Anscombe1963ExaminationAnalysis,Denby1987ExampleUse,Chatterjee1986InfluentialObservations,Cook1977DetectionInfluential}. This teaching note uses a completely specified example to explain a constant prediction discrepancy, its correction, and the interpretation of the resulting errors.\n\nThe supplied observations are\n\\["
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Denby1987ExampleUse",
+        "title": "An Example of the Use of Graphics in Regression",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "solute error decreases from $3$ to $0$, and mean squared error from $9$ to $0$. A measured error table and two reproducible figures expose the computation. Correction and evaluation reuse the same observations; the results establish finite arithmetic agreement without predictive generalization or methodological novelty.\n\\end{abstract}\n\\section{Introduction}\n\nResiduals make discrepancies between observations and predictions explicit, and their examination has a substantial methodological history \\cite{Anscombe1963ExaminationAnalysis,Denby1987ExampleUse,Chatterjee1986InfluentialObservations,Cook1977DetectionInfluential}. This teaching note uses a completely specified example to explain a constant prediction discrepancy, its correction, and the interpretation of the resulting errors.\n\nThe supplied observations are\n\\["
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Efron1986HowBiased",
+        "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "ives\n\\[\nb=\\frac{1}{5}\\sum_{i=1}^{5}(y_i-2x_i)=3.\n\\]\nAdding this value reproduces all five targets. The recorded mean absolute errors at $b=0,1.5,3$ are $3,1.5,0$, and the mean squared errors are $9,2.25,0$.\n\nThese numbers describe the observations used to determine the correction. Distinguishing descriptive or explanatory success from predictive performance is a broader concern \\cite{Shmueli2010ExplainOr,Yarkoni2017ChoosingPrediction}, and reusing fitting data can produce optimistic assessments \\cite{Efron1986HowBiased,Efron2004EstimationPrediction}. Our objective is an inspectable arithmetic demonstration, not a new algorithm or scientific result. The calculation contains no stochastic repetitions or held-out evaluation; its zero recorded error"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Efron2004EstimationPrediction",
+        "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "ives\n\\[\nb=\\frac{1}{5}\\sum_{i=1}^{5}(y_i-2x_i)=3.\n\\]\nAdding this value reproduces all five targets. The recorded mean absolute errors at $b=0,1.5,3$ are $3,1.5,0$, and the mean squared errors are $9,2.25,0$.\n\nThese numbers describe the observations used to determine the correction. Distinguishing descriptive or explanatory success from predictive performance is a broader concern \\cite{Shmueli2010ExplainOr,Yarkoni2017ChoosingPrediction}, and reusing fitting data can produce optimistic assessments \\cite{Efron1986HowBiased,Efron2004EstimationPrediction}. Our objective is an inspectable arithmetic demonstration, not a new algorithm or scientific result. The calculation contains no stochastic repetitions or held-out evaluation; its zero recorded error"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Eisenhauer2003RegressionThrough",
+        "title": "Regression through the Origin",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "s \\cite{Efron1986HowBiased,Efron2004EstimationPrediction}. Our objective is an inspectable arithmetic demonstration, not a new algorithm or scientific result. The calculation contains no stochastic repetitions or held-out evaluation; its zero recorded errors establish exact agreement on the five supplied points only.\n\n\\section{Related Work}\n\n\\subsection{Additive Correction of a Fixed Predictor}\n\nRegression without an intercept raises known questions about when origin constraints are appropriate \\cite{Hahn1977FittingRegression,Eisenhauer2003RegressionThrough}. In the present example, however, the slope is supplied as $2$ and never estimated; the calculation changes only the constant term.\n\nPost-processing methods also adjust predictors after construction."
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Gneiting2011MakingEvaluating",
+        "title": "Making and Evaluating Point Forecasts",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "egression addresses predictive uncertainty \\cite{Kuleshov2018AccurateUncertainties}. Our response-scale addition neither estimates class probabilities nor calibrates uncertainty. Intercept recalibration has also been studied in clinical validation \\cite{Steyerberg2004ValidationUpdating}, but those findings do not transfer to five synthetic observations.\n\n\\subsection{Error Summaries and Reuse of Fitting Observations}\n\nPoint-forecast evaluation depends on matching the scoring function to the task \\cite{Gneiting2011MakingEvaluating}, and the relative merits of MAE and RMSE have been debated \\cite{Willmott2005AdvantagesMean,Hodson2022RootmeansquareError}. For each recorded correction, all five residuals equal $3-b$, so the report"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Guo2017CalibrationModern",
+        "title": "On Calibration of Modern Neural Networks",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "aises known questions about when origin constraints are appropriate \\cite{Hahn1977FittingRegression,Eisenhauer2003RegressionThrough}. In the present example, however, the slope is supplied as $2$ and never estimated; the calculation changes only the constant term.\n\nPost-processing methods also adjust predictors after construction. Sigmoid fitting produces probabilities from support-vector-machine outputs \\cite{Platt1999ProbabilisticOutputs}, temperature scaling adjusts classification confidence \\cite{Guo2017CalibrationModern}, and calibrated regression addresses predictive uncertainty \\cite{Kuleshov2018AccurateUncertainties}. Our response-scale addition neither estimates class probabilities nor calibrates uncertainty. Int"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Hahn1977FittingRegression",
+        "title": "Fitting Regression Models with No Intercept Term",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "s \\cite{Efron1986HowBiased,Efron2004EstimationPrediction}. Our objective is an inspectable arithmetic demonstration, not a new algorithm or scientific result. The calculation contains no stochastic repetitions or held-out evaluation; its zero recorded errors establish exact agreement on the five supplied points only.\n\n\\section{Related Work}\n\n\\subsection{Additive Correction of a Fixed Predictor}\n\nRegression without an intercept raises known questions about when origin constraints are appropriate \\cite{Hahn1977FittingRegression,Eisenhauer2003RegressionThrough}. In the present example, however, the slope is supplied as $2$ and never estimated; the calculation changes only the constant term.\n\nPost-processing methods also adjust predictors after construction."
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Hodson2022RootmeansquareError",
+        "title": "Root-mean-square error (RMSE) or mean absolute error (MAE): when to use them or not",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "se-scale addition neither estimates class probabilities nor calibrates uncertainty. Intercept recalibration has also been studied in clinical validation \\cite{Steyerberg2004ValidationUpdating}, but those findings do not transfer to five synthetic observations.\n\n\\subsection{Error Summaries and Reuse of Fitting Observations}\n\nPoint-forecast evaluation depends on matching the scoring function to the task \\cite{Gneiting2011MakingEvaluating}, and the relative merits of MAE and RMSE have been debated \\cite{Willmott2005AdvantagesMean,Hodson2022RootmeansquareError}. For each recorded correction, all five residuals equal $3-b$, so the reported MAE and MSE are $|3-b|$ and $(3-b)^2$. The log reports MSE, whereas much of the cited metric discussion concerns its squ"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Kuleshov2018AccurateUncertainties",
+        "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "ression,Eisenhauer2003RegressionThrough}. In the present example, however, the slope is supplied as $2$ and never estimated; the calculation changes only the constant term.\n\nPost-processing methods also adjust predictors after construction. Sigmoid fitting produces probabilities from support-vector-machine outputs \\cite{Platt1999ProbabilisticOutputs}, temperature scaling adjusts classification confidence \\cite{Guo2017CalibrationModern}, and calibrated regression addresses predictive uncertainty \\cite{Kuleshov2018AccurateUncertainties}. Our response-scale addition neither estimates class probabilities nor calibrates uncertainty. Intercept recalibration has also been studied in clinical validation \\cite{Steyerberg2004ValidationUpdat"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Platt1999ProbabilisticOutputs",
+        "title": "Probabilistic Outputs for Support vector Machines and Comparisons to Regularized Likelihood Methods",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "k}\n\n\\subsection{Additive Correction of a Fixed Predictor}\n\nRegression without an intercept raises known questions about when origin constraints are appropriate \\cite{Hahn1977FittingRegression,Eisenhauer2003RegressionThrough}. In the present example, however, the slope is supplied as $2$ and never estimated; the calculation changes only the constant term.\n\nPost-processing methods also adjust predictors after construction. Sigmoid fitting produces probabilities from support-vector-machine outputs \\cite{Platt1999ProbabilisticOutputs}, temperature scaling adjusts classification confidence \\cite{Guo2017CalibrationModern}, and calibrated regression addresses predictive uncertainty \\cite{Kuleshov2018AccurateUncertainties}. Our respon"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Shmueli2010ExplainOr",
+        "title": "To Explain or to Predict?",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "i+3$ on these five points. The baseline predictor $f_0(x)=2x$ leaves residual $3$ at every observation, so their mean gives\n\\[\nb=\\frac{1}{5}\\sum_{i=1}^{5}(y_i-2x_i)=3.\n\\]\nAdding this value reproduces all five targets. The recorded mean absolute errors at $b=0,1.5,3$ are $3,1.5,0$, and the mean squared errors are $9,2.25,0$.\n\nThese numbers describe the observations used to determine the correction. Distinguishing descriptive or explanatory success from predictive performance is a broader concern \\cite{Shmueli2010ExplainOr,Yarkoni2017ChoosingPrediction}, and reusing fitting data can produce optimistic assessments \\cite{Efron1986HowBiased,Efron2004EstimationPrediction}. Our objective is an inspectable arithmetic demonstration, not a new algorithm or "
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Steyerberg2004ValidationUpdating",
+        "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "just predictors after construction. Sigmoid fitting produces probabilities from support-vector-machine outputs \\cite{Platt1999ProbabilisticOutputs}, temperature scaling adjusts classification confidence \\cite{Guo2017CalibrationModern}, and calibrated regression addresses predictive uncertainty \\cite{Kuleshov2018AccurateUncertainties}. Our response-scale addition neither estimates class probabilities nor calibrates uncertainty. Intercept recalibration has also been studied in clinical validation \\cite{Steyerberg2004ValidationUpdating}, but those findings do not transfer to five synthetic observations.\n\n\\subsection{Error Summaries and Reuse of Fitting Observations}\n\nPoint-forecast evaluation depends on matching the scoring function"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Varma2006BiasError",
+        "title": "Bias in error estimation when using cross-validation for model selection",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "on depends on matching the scoring function to the task \\cite{Gneiting2011MakingEvaluating}, and the relative merits of MAE and RMSE have been debated \\cite{Willmott2005AdvantagesMean,Hodson2022RootmeansquareError}. For each recorded correction, all five residuals equal $3-b$, so the reported MAE and MSE are $|3-b|$ and $(3-b)^2$. The log reports MSE, whereas much of the cited metric discussion concerns its square root, RMSE.\n\nReusing data for both tuning and assessment can bias error estimates \\cite{Varma2006BiasError}. Our calculation performs neither model selection nor cross-validation. Here, the same five targets determine $b$ and evaluate $2x+b$; no held-out accuracy, uncertainty estimate, or statistical signi"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Willmott2005AdvantagesMean",
+        "title": "Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "se-scale addition neither estimates class probabilities nor calibrates uncertainty. Intercept recalibration has also been studied in clinical validation \\cite{Steyerberg2004ValidationUpdating}, but those findings do not transfer to five synthetic observations.\n\n\\subsection{Error Summaries and Reuse of Fitting Observations}\n\nPoint-forecast evaluation depends on matching the scoring function to the task \\cite{Gneiting2011MakingEvaluating}, and the relative merits of MAE and RMSE have been debated \\cite{Willmott2005AdvantagesMean,Hodson2022RootmeansquareError}. For each recorded correction, all five residuals equal $3-b$, so the reported MAE and MSE are $|3-b|$ and $(3-b)^2$. The log reports MSE, whereas much of the cited metric discussion concerns its squ"
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      },
+      {
+        "key": "Yarkoni2017ChoosingPrediction",
+        "title": "Choosing Prediction Over Explanation in Psychology: Lessons From Machine Learning",
+        "metadata_lineage_previously_verified": true,
+        "query_title_identity_matches_after_punctuation_case_normalization": true,
+        "title_visible_in_final_pdf": true,
+        "claim_contexts": [
+          "i+3$ on these five points. The baseline predictor $f_0(x)=2x$ leaves residual $3$ at every observation, so their mean gives\n\\[\nb=\\frac{1}{5}\\sum_{i=1}^{5}(y_i-2x_i)=3.\n\\]\nAdding this value reproduces all five targets. The recorded mean absolute errors at $b=0,1.5,3$ are $3,1.5,0$, and the mean squared errors are $9,2.25,0$.\n\nThese numbers describe the observations used to determine the correction. Distinguishing descriptive or explanatory success from predictive performance is a broader concern \\cite{Shmueli2010ExplainOr,Yarkoni2017ChoosingPrediction}, and reusing fitting data can produce optimistic assessments \\cite{Efron1986HowBiased,Efron2004EstimationPrediction}. Our objective is an inspectable arithmetic demonstration, not a new algorithm or "
+        ],
+        "semantic_assessment": "Read against retained abstract: cited contextual claim is consistent; no unsupported numerical superiority, novelty, or evaluation claim found."
+      }
+    ]
+  }
+}

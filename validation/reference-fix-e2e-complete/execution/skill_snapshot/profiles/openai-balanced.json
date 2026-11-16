@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "name": "openai-balanced-2026-11-15",
+  "default": {
+    "backend": "codex",
+    "model": "gpt-6.1-sol",
+    "effort": "high"
+  },
+  "groups": {
+    "discovery": {
+      "backend": "codex",
+      "model": "gpt-6-luna",
+      "effort": "high"
+    },
+    "writing": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "figure_planning": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "medium"
+    },
+    "figure_code": {
+      "backend": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "figure_review": {
+      "backend": "codex",
+      "model": "gpt-6.1-terra",
+      "effort": "medium"
+    },
+    "peer_review": {
+      "backend": "codex",
+      "model": "gpt-6-astra",
+      "effort": "high"
+    },
+    "meta_review": {
+      "backend": "codex",
+      "model": "gpt-6-astra",
+      "effort": "high"
+    },
+    "formatting": {
+      "backend": "codex",
+      "model": "gpt-6.1-terra",
+      "effort": "medium"
+    }
+  },
+  "roles": {
+    "runtime-probe": {
+      "backend": "codex",
+      "model": "gpt-6-luna",
+      "effort": "low"
+    }
+  }
+}
