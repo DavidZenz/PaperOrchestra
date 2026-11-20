@@ -140,3 +140,13 @@ result has seven pages and18 bibliography entries, with zero model calls.
 [Source-project reproduction receipt](reference-fix-source-project-check.json).
 Implementation and full-run evidence were pushed in commit
 `c23ba3be07759427e869c8ad5abdca6060f2aa95`; remote main was independently checked.
+
+## Subsequent formatting-scope finding
+
+[The formatting-scope audit](FORMATTING-SCOPE-AUDIT.md) confirms that the
+42→18 reduction removed cited scientific-context passages. Bibliography validity
+and surviving-citation checks passed, but **formatting-only content preservation
+was not enforced** in that historical run. The 20 November update adds the
+preservation guard and separately recovers the 42-reference pre-formatting
+manuscript. This report describes the earlier installed bundle, archived as
+[paper-orchestra-pre-formatting-157a4eb8.zip](../dist/paper-orchestra-pre-formatting-157a4eb8.zip).

@@ -253,3 +253,24 @@ Provider interfaces: [Crossref REST API](https://www.crossref.org/documentation/
 [OpenAlex API authentication](https://help.openalex.org/api/authentication/).
 Availability/rate limits depend on the service/account; a provider failure cannot
 be replaced with invented metadata, and an empty library fails readiness.
+
+## R030 — Formatting scope (20 November 2026)
+
+Upstream permits changes explicitly allowed by formatting feedback and accepts
+the resulting candidate on compilation alone. The port adds a scope instruction
+to both formatting workers and checks the effective LaTeX against
+format_candidate_v0.tex before compiling. It permits placement options on
+standalone top-level figure and table openings and width options on standalone
+includegraphics lines in those figures. Supported explicit widths lie between
+0.5 and 1 times linewidth or columnwidth. The comparison preserves every
+other source line and ignores whitespace at the document boundaries. It treats
+code listings and nested or grouped source conservatively. See A007 for the
+scientific preservation requirement.
+
+The controller uses its existing compile rejection when the comparison fails.
+The candidate TeX is retained, its PDF is withheld, and the trace records
+formatting_scope with the reason. Completion and the trace auditor independently
+recheck the final source against the formatting input. Separate worker calls,
+the single formatting pass and the content reviewer ensemble retain their
+original order and limits. Tests exercise a genuine layout-only edit and replay
+the recorded 42-to-18 citation regression.

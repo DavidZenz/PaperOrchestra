@@ -148,6 +148,12 @@ Reviewers are three **sequential separate agents**, followed by a separate chair
 The controller computes the bounded integer means and makes acceptance/reversion
 decisions. Never override a rejected revision or retry beyond these limits.
 
+Formatting must preserve the accepted LaTeX and its citations. The source check
+allows only the documented float placement and figure width edits. A candidate
+that changes protected source is rejected through the existing compile-failure
+path. Report length or other issues that require substantive editing as
+unresolved if the content-revision budget is spent. See R030 and A007.
+
 ## Inspect and deliver
 
 Check the exit status and `run.json`: only `completed` is a successful paper run.

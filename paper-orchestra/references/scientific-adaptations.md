@@ -111,3 +111,13 @@ collision mutations and raw verified citation map are retained. This is a
 serialization correction for provider-deposited text, not a replacement title,
 new scientific guidance or a change to citation selection. Unsupported TeX
 metadata still fails compilation/readiness; no invented replacement is inserted.
+
+## A007 — Formatting preserves scientific content (20 November 2026)
+
+The user's formatting-only requirement takes precedence over upstream's
+permission to edit content when formatting feedback allows it. Formatting
+preserves prose, equations, claims, data, captions, cited passages and the
+bibliography commands in the last accepted scientific manuscript. Length or
+reference issues that require substantive edits are reported for content review
+within its existing budget. If that budget is spent, the issue remains open.
+R030 documents the allowed layout edits and the rejection evidence.

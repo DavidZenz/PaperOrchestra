@@ -20,6 +20,7 @@ from bundle import manifest as bundle_manifest, snapshot as snapshot_bundle
 from orchestra_models import ModelPolicy, validate_profile
 from orchestra_execution import execution_policy, validate_execution_profile, configured_default, BACKENDS
 from orchestra_transports import EXECUTABLES
+from orchestra_formatting import validate_formatting
 
 
 def find_rscript():
@@ -127,7 +128,7 @@ def main(argv=None):
                       rscript=args.rscript, render_timeout=args.render_timeout,
                       manuscript_provenance=args.use_plotting,
                       model_profile=model_profile, role_models=role_models, backend=args.backend, effort=args.effort,
-                      bibliography_required=True)
+                      bibliography_required=True, formatting_scope_required=True)
     os.environ.setdefault("MPLCONFIGDIR", str(output / "execution" / "matplotlib-cache"))
     os.environ.setdefault("XDG_CACHE_HOME", str(output / "execution" / "cache"))
     configure(runtime)
@@ -138,6 +139,7 @@ def main(argv=None):
                                         else configured_default("codex")), "model_map": model_map,
                 "image_command": image_command, "status": "running"}
     manifest["bibliography_required"] = True
+    manifest["formatting_scope_required"] = True
     manifest["model_policy"] = model_policy.snapshot()
     manifest["worker_backends"] = sorted({item.get("backend", "codex") for item in model_policy.plan()})
     if args.model_profile:
@@ -202,6 +204,8 @@ def main(argv=None):
                 "final_refined_paper", output / "literature_agent_output" / "citation_map.json")}
         if (output / "final_paper.pdf").read_bytes() != (output / "content_refinement_workdir/final_refined_paper.pdf").read_bytes():
             raise RuntimeError("Published PDF differs from bibliography-audited final manuscript")
+        refinement_dir = output / "content_refinement_workdir"
+        validate_formatting(refinement_dir, refinement_dir / "final_refined_paper.tex")
         manifest["final_skill_bundle"] = bundle_manifest(SKILL)
         manifest["skill_unchanged"] = manifest["final_skill_bundle"] == manifest["skill_bundle"]
         if not manifest["skill_unchanged"]:

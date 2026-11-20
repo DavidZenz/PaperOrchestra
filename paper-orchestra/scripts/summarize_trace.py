@@ -310,6 +310,13 @@ def summarize(output):
             errors.append("Completed run requires both section and refinement handoff evidence")
         if not reviews:
             errors.append("Completed run has no reviewer ensemble evidence")
+        if run.get("formatting_scope_required"):
+            from orchestra_formatting import FormattingScopeError, validate_formatting
+            workdir = output / "content_refinement_workdir"
+            try:
+                validate_formatting(workdir, workdir / "final_refined_paper.tex")
+            except FormattingScopeError as exc:
+                errors.append(f"Final manuscript violates formatting scope: {exc}")
         required_stages = ["OutlineAgent", "HybridLiteratureAgent", "SectionWritingAgent", "ContentRefinementAgent"]
         if run.get("plotting"):
             required_stages.append("PlottingAgent")
@@ -356,6 +363,8 @@ def summarize(output):
             "model_policy":model_policy,
             "revision_decisions":[{k:v for k,v in e.items() if k in {"version", "outcome", "total_gain", "total_drop"}} for e in trace if e["event"] == "revision_decision"],
             "format_decisions":[{k:v for k,v in e.items() if k in {"version", "outcome"}} for e in trace if e["event"] == "format_decision"],
+            "formatting_scope":[{k:v for k,v in e.items() if k in {"tex", "valid", "error"}}
+                                for e in trace if e["event"] == "formatting_scope"],
             "evidence_valid":not errors, "errors":errors, "warnings":warnings}
 
 

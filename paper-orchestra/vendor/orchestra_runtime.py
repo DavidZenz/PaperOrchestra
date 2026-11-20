@@ -94,7 +94,7 @@ class Runtime:
                  image_command=None, executor=None, plot_backend="ggplot2", diagram_backend="tikz",
                  rscript="Rscript", render_timeout=60, manuscript_provenance=False,
                  model_profile=None, role_models=None, backend=None, effort=None,
-                 bibliography_required=False):
+                 bibliography_required=False, formatting_scope_required=False):
         self.root = Path(trace_dir).resolve()
         self.root.mkdir(parents=True, exist_ok=True)
         self.model = model
@@ -118,6 +118,7 @@ class Runtime:
         self.manuscript_provenance = manuscript_provenance
         self.figure_provenance = None
         self.bibliography_required = bibliography_required
+        self.formatting_scope_required = formatting_scope_required
 
     def event(self, kind, **fields):
         with self.lock:
@@ -238,6 +239,13 @@ class Runtime:
                 "figure_provenance_files":{
                     name:digest(directory / name)
                     for item in self.figure_provenance["figures"] for name in item["files"]}}
+        if self.formatting_scope_required:
+            from orchestra_formatting import FORMAT_EDITOR_RULE, FORMAT_REVIEW_RULE
+            routing_role = _routing_role.get() or role
+            if routing_role == "format-editor":
+                prompt += "\n\n" + FORMAT_EDITOR_RULE
+            elif routing_role == "format-reviewer":
+                prompt += "\n\n" + FORMAT_REVIEW_RULE
         (directory / "prompt.txt").write_text(prompt)
         search_key = hashlib.sha256(prompt.encode()).hexdigest()
         if search:
@@ -465,6 +473,24 @@ def instrument(base):
         def observed_compile(cwd, pdf_file, texfile_name="template", timeout=30):
             runtime = get_runtime()
             tex_path = Path(cwd) / f"{texfile_name}.tex"
+            def compile_start():
+                runtime.event("compile_start", tex=str(tex_path), pdf=pdf_file,
+                              tex_sha256=digest(tex_path) if tex_path.is_file() else None)
+
+            if runtime.formatting_scope_required and texfile_name.startswith("formatted_candidate_v"):
+                from orchestra_formatting import FormattingScopeError, validate_formatting
+                try:
+                    validate_formatting(cwd, tex_path)
+                except FormattingScopeError as exc:
+                    # Retain both sources and let the original controller keep
+                    # its last accepted PDF through the compile-failure branch.
+                    compile_start()
+                    Path(pdf_file).unlink(missing_ok=True)
+                    runtime.event("formatting_scope", tex=str(tex_path), valid=False, error=str(exc))
+                    runtime.event("compile_end", pdf=pdf_file, exists=False, sha256=None)
+                    print(f" >> Formatting rejected: {exc}. Keeping the last accepted manuscript.")
+                    return
+                runtime.event("formatting_scope", tex=str(tex_path), valid=True)
             if runtime.figure_provenance:
                 from orchestra_provenance import publish_workspace, verify_files, verify_manuscript, ProvenanceError
                 try:
@@ -486,8 +512,7 @@ def instrument(base):
                     runtime.fatal.append(str(exc))
                     runtime.event("provenance_error", error=str(exc))
                     raise
-            runtime.event("compile_start", tex=str(tex_path), pdf=pdf_file,
-                          tex_sha256=digest(tex_path) if tex_path.is_file() else None)
+            compile_start()
             result = original_compile(cwd, pdf_file, texfile_name, timeout)
             if runtime.bibliography_required and Path(pdf_file).is_file():
                 from orchestra_bibliography import validate_manuscript, BibliographyError
