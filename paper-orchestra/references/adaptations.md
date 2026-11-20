@@ -274,3 +274,12 @@ recheck the final source against the formatting input. Separate worker calls,
 the single formatting pass and the content reviewer ensemble retain their
 original order and limits. Tests exercise a genuine layout-only edit and replay
 the recorded 42-to-18 citation regression.
+
+## R031 — Preserve line endings in prompt evidence (20 November 2026)
+
+Recorded prompts are written as UTF-8 bytes and decoded without newline
+conversion when checking native stdin or prompt events. Reference metadata
+in a live run contained carriage returns. The launch plan and saved prompt
+matched byte for byte, but the audit's text reader converted the saved line
+endings and rejected the match. The byte comparison keeps native input
+validation strict and accepts genuine mixed line endings.

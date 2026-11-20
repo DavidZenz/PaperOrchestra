@@ -1,0 +1,67 @@
+```json
+{
+  "section_name": "Methodological Foundations and Evaluation Limits",
+  "candidates": [
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Provides the foundational statistical formulation of optimism when evaluating prediction rules on the same data used for estimation, highlighting why removing offsets on five specific observations reflects apparent in-sample fitting rather than predictive generalization."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Analyzes the theoretical gap between in-sample apparent error and true prediction error via covariance penalties, clarifying the boundary between adjusting empirical residuals on observed samples and establishing generalizable predictive accuracy."
+    },
+    {
+      "title": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year": 2010,
+      "reason": "Surveys formal model assessment and validation frameworks, offering educational context for why separate validation sets or resampled data are required to evaluate generalization beyond finite sample-specific residual offsets."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Establishes the seminal methodology of data splitting for assessment, explaining why evaluating an estimator on the identical points used for offset estimation cannot measure out-of-sample predictive performance."
+    },
+    {
+      "title": "To Explain or to Predict?",
+      "year": 2010,
+      "reason": "Clarifies the fundamental distinction between explanatory descriptive fitting (such as calculating sample mean residuals to eliminate observed discrepancy) and true predictive generalization to unobserved cases."
+    },
+    {
+      "title": "Statistical Modeling: The Two Cultures",
+      "year": 2001,
+      "reason": "Discusses the limitations of judging models purely on goodness-of-fit to observed data, framing the five-observation residual adjustment strictly as an instructional fitting exercise rather than algorithmic validation."
+    },
+    {
+      "title": "The Elements of Statistical Learning: Data Mining, Inference, and Prediction",
+      "year": 2009,
+      "reason": "Provides a comprehensive pedagogical reference detailing model assessment, in-sample training error optimism, and the conceptual separation between parameter estimation and out-of-sample risk evaluation."
+    },
+    {
+      "title": "Some Comments on Cp",
+      "year": 1973,
+      "reason": "Examines residual sum of squares and the inherent underestimation of error when evaluating fitted models on the estimation sample, illustrating the limits of using identical observations for fitting and evaluation."
+    },
+    {
+      "title": "Classifier Technology and the Illusion of Progress",
+      "year": 2006,
+      "reason": "Reviews methodological pitfalls in evaluating predictive tools, supporting the perspective that localized empirical improvements on fixed observations should not be conflated with genuine real-world predictive advance."
+    },
+    {
+      "title": "Stability and Generalization",
+      "year": 2002,
+      "reason": "Connects algorithmic sensitivity and sample perturbations to generalization bounds, reinforcing why eliminating a constant offset over five fixed points does not imply stability or predictive validity across new observations."
+    },
+    {
+      "title": "Multivariable Prognostic Models: Issues in Developing Models, Evaluating Assumptions and Adequacy, and Measuring and Reducing Errors",
+      "year": 1996,
+      "reason": "Surveys practical modeling pitfalls such as overfitting and optimism from reusing observations for estimation and validation, emphasizing the scope limit of purely in-sample residual corrections."
+    },
+    {
+      "title": "The Reusable Holdout: Preserving Validity in Adaptive Data Analysis",
+      "year": 2015,
+      "reason": "Investigates statistical overfitting resulting from adaptive inspection and reuse of sample observations, demonstrating why repeated evaluation on the same finite data points limits claims of broader generalizability."
+    }
+  ]
+}
+```

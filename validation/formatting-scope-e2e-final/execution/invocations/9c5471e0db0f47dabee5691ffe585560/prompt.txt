@@ -1,0 +1,18 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Identify the SPECIFIC academic paper described by this hint: "research paper or technical report introducing 'LaTeX'".
+            
+            CONTEXT: Must-have citation for section covering: Write the grounded calculation b=mean(y-2x)=mean([3,3,3,3,3])=3, followed by corrected prediction 2x+b. Show by substitution that 2x+3 equals the supplied targets at all five observations. Present this as finite arithmetic, with no unsupported theorem or generalization bound. Place fig_residual_workflow here and explain the dependency from observed targets and residuals to b. State that base R implements the calculation and that the separate LaTeX/TikZ schematic source is retained by the downstream figure workflow.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find the EXACT title and year of this paper.
+            2. If the hint refers to a dataset, model architecture, or baseline (e.g., "research paper introducing..."), you MUST find the primary, original paper that introduced it.
+            3. Return EXACTLY 1 candidate paper that matches best.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

@@ -1,0 +1,19 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Find 10-15 highly relevant, influential academic papers matching the search task. Do not force results; only return strictly relevant papers.
+            
+            SEARCH TASK: Find foundational or review literature on systematic prediction offsets and residual interpretation, using the query 'linear prediction residual interpretation systematic additive offset survey'. Use any discussion of practical consequences only as attributed context.
+            CONTEXT FOR TASK: Hook: Investigate whether foundational or survey literature supports using a simple residual correction calculation to explain systematic prediction offsets and the distinction between fitting and evaluation. Treat this as educational context, not evidence of real-world impact measured by this demonstration.. Gap: Frame the supplied problem as a finite instructional example: the fixed predictor 2x differs from y=2x+3 by a constant on exactly five observations. The note illustrates how the observed mean residual removes that offset on those same observations. Do not claim an unresolved scientific gap, a novel algorithm, benchmark superiority, or generalization.
+            BROADER PROJECT PROBLEM: Frame the supplied problem as a finite instructional example: the fixed predictor 2x differs from y=2x+3 by a constant on exactly five observations. The note illustrates how the observed mean residual removes that offset on those same observations. Do not claim an unresolved scientific gap, a novel algorithm, benchmark superiority, or generalization.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find REAL papers (ArXiv, CVPR, NeurIPS, ICML, ICLR, etc.).
+            2. Only return papers published in top-tier conferences or journals, or highly-cited works, or the exact state-of-the-art relevant to the task.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

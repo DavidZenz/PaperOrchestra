@@ -1,0 +1,1029 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+[UPSTREAM SYSTEM INSTRUCTION]
+Role: Senior AI Researcher.
+Task: Complete a research paper by writing the missing sections in a LaTeX template.
+
+You will be given a 'template.tex' file where some sections (e.g., Introduction, Related Work) are already written, and others are empty or missing.
+Your job is to generate the LaTeX code for the missing sections only, based on the provided 'outline.json', and merge them into the final document.
+
+INPUTS:
+* 'outline.json': Your MASTER PLAN. Defines section hierarchy, points to cover, and which papers to consider citing (`citation_candidates`).
+* 'idea.md': Technical details of the Methodology.
+* 'experimental_log.md': Raw data for tables and qualitative analysis for text.
+* 'citation_map.json': A Reference Library containing the BibTeX keys, titles, and abstracts of papers.
+* 'conference_guidelines.md': Formatting rules.
+* 'figures_list': Available figure files.
+
+CRITICAL INSTRUCTIONS:
+
+1. Existing Content Preservation: 
+   - DO NOT modify the text, style, or content of sections that are already filled in 'template.tex'. 
+   - Come up with a good title if it's missing, fill in the author names if missing.
+   - Keep the preamble (packages) exactly as is.
+
+2. Data & Tables:
+   - You are responsible for creating LaTeX tables.
+   - Extract numerical data directly from 'experimental_log.md'.
+   - Use the `booktabs` package format (\toprule, \midrule, \bottomrule).
+   - Do not hallucinate numbers. Use the exact values provided in the log.
+   - Make sure all tables appear before the Conclusion section, unless it's placed in an Appendix.
+
+3. Citations:
+   - The 'outline.json' provides a list of `citation_candidates` for specific subsections.
+   - You MUST use the exact keys found in `citation_map.json` (e.g., `\cite{Hu2021LoraLowrank}`).
+   - Content Enrichment: Read the `abstract` provided in `citation_map.json` for the papers you are citing. Use this context to write accurate, specific sentences about those works.
+
+4. Writing Content:
+   - Write the missing sections following the 'outline.json' structure.
+   - Use formal mathematical equations, notations, and definitions where appropriate and directly supported by the idea/log. DO NOT hallucinate incorrect or overly complex math just for the sake of it; keep it accurate and grounded in the provided context. Avoid overly colloquial summaries.
+   - Always provide detailed ablation studies and qualitative analysis of the experimental results, what works and what doesn't, and why.
+   - Nice to have: discuss the limitation and future work at the end.
+   - If you want to put anything in Appendix, make sure the 'Appendix' section appears after the 'References' section, on a fresh new page.
+
+5. Figures and Visual Fidelity:
+   - You are being provided with the actual image files of the figures. You MUST describe them faithfully and accurately. DO NOT hallucinate interpretations that contradict the visual evidence in the plots.
+   - Make sure to use ALL of the figures provided in 'figures_list'. Note: figures are stored in the 'figures/' subdirectory. IMPORTANT: use the exact filenames including their extensions (e.g., .png) in your \includegraphics commands.
+   - DO NOT merge or group multiple figures into one for display.
+   - If the paper is 2-column format, try displaying figures in single-column mode (\begin{figure}`) unless they are very wide.
+   - Ensure that all figures are correctly referenced in the text. 
+   - Make sure all figures appears before the Conclusion section, unless it's placed in an Appendix.
+   - You can refine the captions if necessary.
+   - Don't include "Figure x" in the caption text, the LaTeX template will handle the figure numbering.
+
+6. Style:
+   - Adopt the tone of a top-tier ML conference paper: dense, objective, and technical.
+   - Ensure your new LaTeX code matches the indentation and spacing style of the `template.tex`. Don't change the given style.
+
+OUTPUT FORMAT:
+- Return the full code for the completed 'template.tex'.
+- The sections that were previously empty should now be filled.
+- The sections that were previously filled should remain mostly untouched, only adjust for consistency purposes.
+- Wrap the code with ```latex content```.
+
+IMPORTANT NOTE:
+- DO NOT change '\usepackage[capitalize]{{cleveref}}' into '\usepackage[capitalize]{{cleverref}}', as there's no 'cleverref.sty'.
+- Ensure the LaTeX code compiles without errors, e.g. all the begin and end statements match correctly (e.g., \begin{figure*} must be closed with \end{figure*}, not \end{figure}).
+
+
+---
+### Strict Knowledge Isolation & Anonymity (CRITICAL)
+
+You MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results.
+Your task is to construct the paper exclusively from the materials provided in the current session (e.g., idea.md, experimental_log.md, figures, and other inputs). Treat these inputs as the only available source of information.
+
+#### Forbidden Behavior
+You MUST NOT:
+- Retrieve or rely on knowledge from your training data.
+- Attempt to recall or reconstruct any existing or published paper.
+- Use external facts, assumptions, or prior familiarity with the work.
+- Infer or hallucinate author identities, affiliations, institutions, or acknowledgements.
+- Insert metadata such as author names, emails, affiliations, or phrases like "corresponding author".
+
+#### Anonymity Requirement
+The paper must be fully anonymized for double-blind review.  
+Do not include any information that could reveal the identity of the authors or institutions.
+
+#### Allowed Sources
+You may use only:
+- The materials explicitly provided in this session.
+- Logical reasoning derived from those materials.
+
+#### Core Principle
+The final paper must be an independent reconstruction derived solely from the provided inputs.  
+This constraint is strict and overrides all other instructions.
+---
+
+
+
+Here are the input materials for the paper.
+
+--- INPUT: outline.json (Structure & Citation Candidates) ---
+{
+    "plotting_plan": [
+        {
+            "figure_id": "fig_intercept_error",
+            "title": "Recorded Mean Squared Error for Three Intercept Corrections",
+            "plot_type": "plot",
+            "data_source": "experimental_log.md",
+            "objective": "Create a discrete scatter plot showing exactly the recorded pairs (b, MSE) = (0, 9), (1.5, 2.25), and (3, 0). Label the three observations and both axes. Present evidence only of the finite arithmetic on the same five observations used to compute the correction. Do not add interpolated curves, unmeasured points, uncertainty intervals, stochastic repetitions, or generalization claims.",
+            "aspect_ratio": "3:2",
+            "implementation_plan": "Use R/ggplot2. Retain the editable .R source, vector PDF, and manuscript-compatible preview as downstream reproducibility artifacts. Include a caption stating that correction estimation and evaluation use the same five observations."
+        },
+        {
+            "figure_id": "fig_residual_workflow",
+            "title": "Residual-Based Intercept Correction on Five Observations",
+            "plot_type": "diagram",
+            "data_source": "idea.md",
+            "objective": "Show the supplied computation: input x and target y; baseline prediction 2x; residual y-2x; mean residual b=3; corrected prediction 2x+b; evaluation on the same five observations. Draw explicit dependencies from x to the baseline, from y and the baseline to residuals, and from observed residuals to the scalar correction. Make reuse of the observations visible. Include no unrelated modules or experiments.",
+            "aspect_ratio": "4:3",
+            "implementation_plan": "Use LaTeX/TikZ with mathematical labels and a compact layout suitable for the supplied single-column article. Retain the editable .tex source, vector PDF, and manuscript-compatible preview. Explain in the caption that the schematic describes the computation and supplies no evidence of predictive generalization."
+        }
+    ],
+    "intro_related_work_plan": {
+        "introduction_strategy": {
+            "candidate_paper_target": "Inspect 10\u201320 macro-level candidates for the research graph; retain only directly relevant, verified citations for the short manuscript.",
+            "hook_hypothesis": "Investigate whether foundational or survey literature supports using a simple residual correction calculation to explain systematic prediction offsets and the distinction between fitting and evaluation. Treat this as educational context, not evidence of real-world impact measured by this demonstration.",
+            "problem_gap_hypothesis": "Frame the supplied problem as a finite instructional example: the fixed predictor 2x differs from y=2x+3 by a constant on exactly five observations. The note illustrates how the observed mean residual removes that offset on those same observations. Do not claim an unresolved scientific gap, a novel algorithm, benchmark superiority, or generalization.",
+            "search_directions": [
+                "Find foundational or review literature on systematic prediction offsets and residual interpretation, using the query 'linear prediction residual interpretation systematic additive offset survey'. Use any discussion of practical consequences only as attributed context.",
+                "Find surveys or educational reviews using the query 'regression residual correction fitted error versus predictive evaluation review'. Exclude technical comparison papers reserved for Related Work.",
+                "Identify 3\u20135 foundational sources establishing the contextual concepts of linear prediction, residuals, and intercept estimation, using the query 'foundational linear prediction intercept mean residual estimation'. Verify identities rather than reconstructing papers from memory.",
+                "Find broad methodological references using the query 'same observations estimation evaluation limits predictive generalization review'. Connect these references only to the scope limitation explicitly stated in experimental_log.md."
+            ],
+            "citation_separation_rule": "Reserve foundational and survey sources for Introduction. Assign each verified paper to one section only; do not repeat Introduction citations in Related Work.",
+            "evidence_boundary": "Literature may contextualize the calculation but must not supply additional measurements, datasets, experiments, or claims of novelty. Search only material published on or before 2026-11.",
+            "citation_candidates": [
+                "Arlot2010SurveyCrossvalidation",
+                "Shmueli2010ExplainOr",
+                "Gauss2011TheoriaMotus",
+                "Stone1974CrossvalidatoryChoice",
+                "Cook1977DetectionInfluential",
+                "Pearson1896ViiMathematical",
+                "Plackett1972StudiesHistory",
+                "Chatterjee1986InfluentialObservations",
+                "Anscombe1963ExaminationAnalysis",
+                "Ling1984ResidualsInfluence",
+                "Dwork2015ReusableHoldout",
+                "Stigler1981GaussInvention",
+                "Box1976ScienceStatistics",
+                "Cox1968GeneralDefinition",
+                "Box1964AnalysisTransformations",
+                "Buja2019ModelsAs",
+                "Makhoul1975LinearPrediction",
+                "Hand2006ClassifierTechnology"
+            ]
+        },
+        "related_work_strategy": {
+            "candidate_paper_target": "Inspect 30\u201350 micro-level candidates across the two clusters for the research graph, deduplicating against Introduction. These are search candidates, not a required manuscript citation count.",
+            "overview": "Investigate two narrowly defined technical contexts for the supplied fixed predictor and residual correction. Use recent literature published on or before 2026-11 for conceptual comparison only. The experimental_log.md contains no external competitor evaluations; do not introduce methods to beat or imply unrun comparisons.",
+            "subsections": [
+                {
+                    "subsection_title": "Fixed Predictors and Additive Offsets",
+                    "methodology_cluster": "Fixed linear prediction with an omitted additive intercept",
+                    "sota_investigation_mission": "Find technical treatments, including recent papers through 2026-11, that distinguish a fixed predictor from an additive adjustment. Examine their assumptions for contextual comparison. Keep the only evaluated baseline as the supplied predictor 2x.",
+                    "limitation_hypothesis": "For the exact observations in experimental_log.md, the fixed predictor 2x has residual 3 at every point because the supplied targets are 2x+3. This is a property of the constructed example, not an established failure of an external method.",
+                    "limitation_search_queries": [
+                        "'fixed linear predictor' 'additive offset' residual",
+                        "'omitted intercept' 'constant residual' linear prediction",
+                        "'fixed slope' 'intercept correction' prediction error"
+                    ],
+                    "bridge_to_our_method": "Explain that the supplied calculation retains the fixed slope and adds the observed mean residual b=3, which exactly matches the five recorded targets. Present this as an arithmetic demonstration.",
+                    "citation_candidates": [
+                        "Nelder1972GeneralizedLinear",
+                        "Dobson2001IntroductionGeneralized",
+                        "Lovell1963SeasonalAdjustment",
+                        "Hastie1986GeneralizedAdditive",
+                        "Friedman2001GreedyFunction",
+                        "Buja1989LinearSmoothers",
+                        "Robinson1988RootnconsistentSemiparametric",
+                        "Engle1986SemiparametricEstimates",
+                        "Belsley1980RegressionDiagnostics",
+                        "Chernozhukov2018DoubledebiasedMachine",
+                        "Wood2004StableEfficient",
+                        "Eisenhauer2003RegressionThrough",
+                        "Vergouwe2016ClosedTesting",
+                        "Miller1991ValidationTechniques"
+                    ]
+                },
+                {
+                    "subsection_title": "Residual-Based Correction and Evaluation Scope",
+                    "methodology_cluster": "Mean-residual additive correction evaluated on its estimation observations",
+                    "sota_investigation_mission": "Find technical papers through 2026-11 discussing mean-residual adjustments and evaluation when an adjustment is estimated from observed errors. Investigate distinctions between fitted error and predictive evidence without adding external methods as experimental competitors.",
+                    "limitation_hypothesis": "The same five observations determine and evaluate b, so the recorded zero error does not establish performance on additional observations. The supplied correction does not resolve this evaluation limitation.",
+                    "limitation_search_queries": [
+                        "'mean residual' 'additive correction' estimation evaluation",
+                        "'residual correction' 'same data' prediction evaluation",
+                        "'intercept adjustment' 'in-sample error' evaluation"
+                    ],
+                    "bridge_to_our_method": "Connect the mean-residual calculation to the supplied workflow diagram and measured error table. State that transparent data dependencies clarify the result's scope; no held-out or generalization evidence is supplied.",
+                    "citation_candidates": [
+                        "Copas1983RegressionPrediction",
+                        "Steyerberg2004ValidationUpdating",
+                        "Riley2021MinimumSample",
+                        "Stein1981EstimationMean",
+                        "Varma2006BiasError"
+                    ]
+                }
+            ],
+            "verification_policy": "Verify every selected source and citation key during the literature stage. Treat limitation hypotheses as search questions unless supported by the supplied arithmetic or verified literature. Keep conceptual literature separate from measured results."
+        }
+    },
+    "section_plan": [
+        {
+            "section_title": "Abstract",
+            "template_command": "\\begin{abstract} ... \\end{abstract}",
+            "word_budget": 90,
+            "content_bullets": [
+                "Identify the work as a synthetic teaching-note demonstration, following idea.md and the supplied formatting guidelines.",
+                "Summarize the fixed predictor 2x, targets y=2x+3, and correction b=mean(y-2x)=3 on the five supplied observations.",
+                "Summarize the recorded reduction in mean squared error from 9 to 0, explicitly identifying evaluation on the same observations.",
+                "Mention reproducible figure sources without claiming novelty, benchmark superiority, stochastic validation, or predictive generalization."
+            ],
+            "citation_hints": [],
+            "subsections": []
+        },
+        {
+            "section_title": "Introduction",
+            "template_command": "\\section{Introduction}",
+            "word_budget": 110,
+            "content_bullets": [
+                "Use the macro-level literature strategy to motivate residual interpretation and careful separation of correction estimation from evaluation.",
+                "Define the finite instructional objective from idea.md and experimental_log.md: demonstrate removal of a constructed constant offset.",
+                "Describe the deliverables as an explicit calculation, a measured error table, two generated figures, and retained figure source code.",
+                "State the evaluation boundary early: five deterministic observations, with no external dataset or held-out evaluation."
+            ],
+            "citation_hints": [],
+            "citation_policy": "Use only verified foundational or survey keys selected by the Introduction research strategy. The synthetic observations and fixed predictor are supplied constructions and require no invented external dataset or baseline citation.",
+            "subsections": []
+        },
+        {
+            "section_title": "Related Work",
+            "template_command": "\\section{Related Work}",
+            "word_budget": 90,
+            "content_bullets": [
+                "Condense the two technical research-graph clusters into two short paragraphs: fixed predictors with additive offsets, and residual correction with explicit evaluation scope.",
+                "Compare concepts and assumptions only; experimental_log.md supplies no external baseline measurements.",
+                "Keep all references distinct from Introduction and avoid suggesting that the teaching note resolves an open scientific problem."
+            ],
+            "citation_hints": [],
+            "citation_policy": "Use only verified technical papers selected by the Related Work strategy. Candidate search volume does not imply a large bibliography in the short note.",
+            "subsections": []
+        },
+        {
+            "section_title": "Method",
+            "template_command": "\\section{Method}",
+            "word_budget": 220,
+            "content_bullets": [
+                "Ground every definition and calculation in idea.md and experimental_log.md. Do not introduce a training procedure, optimizer, learned architecture, or unsupported theoretical guarantee."
+            ],
+            "citation_hints": [],
+            "subsections": [
+                {
+                    "subsection_title": "3.1 Finite Inputs and Fixed Predictor",
+                    "content_bullets": [
+                        "Specify x=[-2,-1,0,1,2], targets y=2x+3, and the fixed prediction 2x exactly as supplied.",
+                        "Explain that the five observations are a constructed example rather than an external dataset.",
+                        "Establish the constant residual directly by subtracting the supplied baseline from the supplied targets."
+                    ],
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "3.2 Mean-Residual Correction and Data Dependencies",
+                    "content_bullets": [
+                        "Write the grounded calculation b=mean(y-2x)=mean([3,3,3,3,3])=3, followed by corrected prediction 2x+b.",
+                        "Show by substitution that 2x+3 equals the supplied targets at all five observations. Present this as finite arithmetic, with no unsupported theorem or generalization bound.",
+                        "Place fig_residual_workflow here and explain the dependency from observed targets and residuals to b.",
+                        "State that base R implements the calculation and that the separate LaTeX/TikZ schematic source is retained by the downstream figure workflow."
+                    ],
+                    "citation_candidates": [
+                        "Ihaka1996RLanguage"
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Experiments",
+            "template_command": "\\section{Experiments}",
+            "word_budget": 250,
+            "content_bullets": [
+                "Describe this section as the recorded deterministic calculation, retaining the supplied template heading without implying additional experiments."
+            ],
+            "citation_hints": [],
+            "subsections": [
+                {
+                    "subsection_title": "4.1 Recorded Calculation and Error Definitions",
+                    "content_bullets": [
+                        "Use only the five observation rows and three correction settings recorded in experimental_log.md.",
+                        "Define mean absolute error as the arithmetic mean of absolute target-prediction differences across these five observations.",
+                        "Define mean squared error as the arithmetic mean of squared target-prediction differences across these five observations.",
+                        "Distinguish the intermediate recorded setting b=1.5 from the mean-residual correction b=3. Do not describe the three settings as stochastic runs, optimization steps, or an extensive ablation study.",
+                        "State explicitly that there is no optimizer, external dataset, external baseline method, timing result, or held-out evaluation."
+                    ],
+                    "citation_verification_note": "These are targeted discovery hints, not claims about metric provenance. Verify a single appropriate canonical source for each metric before selecting citation keys; do not invent an introducing paper.",
+                    "citation_candidates": []
+                },
+                {
+                    "subsection_title": "4.2 Measured Errors, Visualization, and Limits",
+                    "content_bullets": [
+                        "Include the complete measured error table from experimental_log.md: b=0 gives MAE=3 and MSE=9; b=1.5 gives MAE=1.5 and MSE=2.25; b=3 gives MAE=0 and MSE=0.",
+                        "Insert fig_intercept_error with exactly the three recorded MSE values and a caption identifying reuse of the correction-estimation observations.",
+                        "Explain zero recorded error through the constant residual established in Method, rather than attributing it to learned capabilities.",
+                        "Specify R/ggplot2 for the statistical figure and retain its editable source, vector PDF, and preview.",
+                        "State that the log contains no evidence about additional observations, uncertainty, runtime, or comparative benchmark performance."
+                    ],
+                    "citation_candidates": []
+                }
+            ]
+        },
+        {
+            "section_title": "Conclusion",
+            "template_command": "\\section{Conclusion}",
+            "word_budget": 80,
+            "content_bullets": [
+                "Restate the finite result from both substantive inputs: the observed mean residual is 3 and adding it removes the recorded offset on the same five observations.",
+                "Emphasize the educational value of explicit arithmetic, visible data dependencies, and reproducible figure sources.",
+                "Close with the supplied evidence boundary without proposing unperformed experiments as results."
+            ],
+            "citation_hints": [],
+            "subsections": [],
+            "manuscript_constraints": {
+                "total_prose_word_budget": 840,
+                "additional_display_text_allowance": "Approximately 80\u2013130 words for captions and table text, keeping the complete note approximately within 700\u20131000 words.",
+                "layout": "Preserve the supplied single-column 11-point article with one-inch margins. Fit both figures and the measured error table within the text width and verify readable labels and captions.",
+                "page_limit": "No explicit page limit is supplied; do not invent one or substitute a conference template.",
+                "appendix": "Omit the appendix because none is required. Retain figure source code as separate reproducibility artifacts.",
+                "anonymity": "Preserve the supplied Anonymous author field and include no identifying metadata.",
+                "references": "Preserve the supplied bibliography commands. Cite only literature-stage-verified keys. Cover every external dependency named in the outline through the targeted hints; do not fabricate citations for the synthetic observations or fixed predictor."
+            }
+        }
+    ]
+}
+
+--- INPUT: citation_map.json (Reference Library) ---
+### REFERENCE LIBRARY (Use these keys for \cite{})
+--- Key: Nelder1972GeneralizedLinear ---
+Title: Generalized Linear Models
+Authors: John Ashworth Nelder, R. W. M. Wedderburn (1972)
+Abstract: The technique of iterative weighted linear regression can be used to obtain maximum likelihood estimates of the parameters with observations distributed according to some exponential family and systematic effects that can be made linear by a suitable transformation. A generalization of the analysis of variance is given for these models using log-likelihoods. These generalized linear models are illustrated by examples relating to four distributions; the Normal, Binomial (probit analysis, etc.), Poisson (contingency tables) and gamma (variance components). The implications of the approach in designing statistics courses are discussed.
+
+--- Key: Dobson2001IntroductionGeneralized ---
+Title: An Introduction to Generalized Linear Models, Second Edition
+Authors: Annette Jane Dobson (2001)
+Abstract: Generalized linear models provide a unified theoretical and conceptual framework for many of the most commonly used statistical methods. In the ten years since publication of the first edition of this bestselling text, great strides have been made in the development of new methods and in software for generalized linear models and other closely related models.Thoroughly revised and updated, An Introduction to Generalized Linear Models, Second Edition continues to initiate intermediate students of statistics, and the many other disciplines that use statistics, in the practical use of these models and methods. The new edition incorporates many of the important developments of the last decade, including survival analysis, nominal and ordinal logistic regression, generalized estimating equations, and multi-level models. It also includes modern methods for checking model adequacy and examples from an even wider range of application. Statistics can appear to the uninitiated as a collection of unrelated tools. An Introduction to Generalized Linear Models, Second Edition illustrates how these apparently disparate methods are examples or special cases of a conceptually simple structure based on the exponential family of distribution, maximum likelihood estimation, and the principles of statistical modelling.
+
+--- Key: Lovell1963SeasonalAdjustment ---
+Title: Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis
+Authors: Michael C. Lovell (1963)
+Abstract: The logical implications of certain simple consistency requirements for appraising alternative procedures for seasonal adjustment constitute the first problem considered in this paper. It is shown that any sum preserving technique of seasonal adjustment that satisfies the quite reasonable requirements of orthogonality and idempotency can be executed on the electronic computer by standard least squares regression procedures. Problems involved in utilizing seasonally adjusted data when estimating the parameters of econometric models are examined. Extending the fundamental Frisch-Waugh theorem concerning trend and regression analysis to encompass problems of seasonality facilitates the comparison of the implications of running regressions on data subjected to prior seasonal adjustment with the effects of including dummy variables with unadjusted data. Complicated types of moving seasonal patterns that may be handled by the dummy variable procedure are considered. Although efficient estimates of the parameters of the econometric model may be obtained in appropriate circumstances when data subjected to prior seasonal adjustment by the least squares procedure are employed, there is an inherent tendency to overstate the significance of the regression coefficients; a correction procedure is suggested. When seasonally adjusted data are employed, certain special complications must be taken into account in applying Aitken's generalized least squares procedure in order to deal with autoc... [Truncated]
+
+--- Key: Hastie1986GeneralizedAdditive ---
+Title: Generalized Additive Models
+Authors: Trevor J. Hastie, Robert John Tibshirani (1986)
+Abstract: Likelihood-based regression models such as the normal linear regression model and the linear logistic model, assume a linear (or some other parametric) form for the covariates $X_1, X_2, \cdots, X_p$. We introduce the class of generalized additive models which replaces the linear form $\sum \beta_jX_j$ by a sum of smooth functions $\sum s_j(X_j)$. The $s_j(\cdot)$'s are unspecified functions that are estimated using a scatterplot smoother, in an iterative procedure we call the local scoring algorithm. The technique is applicable to any likelihood-based regression model: the class of generalized linear models contains many of these. In this class the linear predictor $\eta = \Sigma \beta_jX_j$ is replaced by the additive predictor $\Sigma s_j(X_j)$; hence, the name generalized additive models. We illustrate the technique with binary response and survival data. In both cases, the method proves to be useful in uncovering nonlinear covariate effects. It has the advantage of being completely automatic, i.e., no "detective work" is needed on the part of the statistician. As a theoretical underpinning, the technique is viewed as an empirical method of maximizing the expected log likelihood, or equivalently, of minimizing the Kullback-Leibler distance to the true model.
+
+--- Key: Friedman2001GreedyFunction ---
+Title: Greedy function approximation: A gradient boosting machine.
+Authors: Jerome H. Friedman (2001)
+Abstract: Function estimation/approximation is viewed from the perspective of numerical optimization in function space, rather than parameter space. A connection is made between stagewise additive expansions and steepest-descent minimization. A general gradient descent “boosting” paradigm is developed for additive expansions based on any fitting criterion.Specific algorithms are presented for least-squares, least absolute deviation, and Huber-M loss functions for regression, and multiclass logistic likelihood for classification. Special enhancements are derived for the particular case where the individual additive components are regression trees, and tools for interpreting such “TreeBoost” models are presented. Gradient boosting of regression trees produces competitive, highly robust, interpretable procedures for both regression and classification, especially appropriate for mining less than clean data. Connections between this approach and the boosting methods of Freund and Shapire and Friedman, Hastie and Tibshirani are discussed.
+
+--- Key: Buja1989LinearSmoothers ---
+Title: Linear Smoothers and Additive Models
+Authors: Andreas Buja, Trevor Hastie, Robert Tibshirani (1989)
+Abstract: We study linear smoothers and their use in building nonparametric regression models. In the first part of this paper we examine certain aspects of linear smoothers for scatterplots; examples of these are the running-mean and running-line, kernel and cubic spline smoothers. The eigenvalue and singular value decompositions of the corresponding smoother matrix are used to describe qualitatively a smoother, and several other topics such as the number of degrees of freedom of a smoother are discussed. In the second part of the paper we describe how linear smoothers can be used to estimate the additive model, a powerful nonparametric regression model, using the "back-fitting algorithm." We show that backfitting is the Gauss-Seidel iterative method for solving a set of normal equations associated with the additive model. We provide conditions for consistency and nondegeneracy and prove convergence for the backfitting and related algorithms for a class of smoothers that includes cubic spline smoothers.
+
+--- Key: Robinson1988RootnconsistentSemiparametric ---
+Title: Root-N-Consistent Semiparametric Regression
+Authors: Peter M. Robinson (1988)
+Abstract: One type of semiparametric regression is b8X A u(Z), where b and u(Z) are an unknown slope coefficient vector and function. Estimates of b based on incorrect parametrization of u are generally inconsist ent, whereas consistent nonparametric estimates converge slowly. An e stimate, bC, is constructed by inserting nonpar-ametric regression es timates in the nonlinear orthogonal projection on Z. Under regularity conditions bC is shown to be N1/2-consistent for b and asymptoticall y normal, and a consistent estimate of its limiting covariance matrix is given. The author discusses the identification problem and bC's e fficiency. Extensions to other econometric models are described. Copyright 1988 by The Econometric Society.
+
+--- Key: Engle1986SemiparametricEstimates ---
+Title: Semiparametric Estimates of the Relation Between Weather and Electricity Sales
+Authors: Robert F. Engle, Clive W. J. Granger, John Rice et al. (1986)
+Abstract: A nonlinear relationship between electricity sales and temperature is estimated using a semiparametric regression procedure that easily allows linear transformations of the data. This accommodates introduction of covariates, timing adjustments due to the actual billing schedules, and serial correlation. The procedure is an extension of smoothing splines with the smoothness parameter estimated from minimization of the generalized cross-validation criterion introduced by Craven and Wahba (1979). Estimates are presented for residential sales for four electric utilities and are compared with models that represent the weather using only heating and cooling degree days or with piecewise linear splines.
+
+--- Key: Belsley1980RegressionDiagnostics ---
+Title: Regression Diagnostics: Identifying Influential Data and Sources of Collinearity
+Authors: David A. Belsley, Edwin Kuh, Roy E. Welsch (1980)
+Abstract: This book provides practicing statisticians and econometricians with new tools for assessing quality and reliability of regression estimates. Diagnostic techniques are developed that aid in the systematic location of data points that are unusual or inordinately influential, and measure the presence and intensity of collinear relations among the regression data and help to identify variables involved in each and pinpoint estimated coefficients potentially most adversely affected. It emphasizes diagnostics and includes suggestions for remedial action.
+
+--- Key: Chernozhukov2018DoubledebiasedMachine ---
+Title: Double/debiased machine learning for treatment and structural parameters
+Authors: Victor Chernozhukov, Denis Chetverikov, Mert Demirer et al. (2018)
+Abstract: We revisit the classic semi‐parametric problem of inference on a low‐dimensional parameter θ0 in the presence of high‐dimensional nuisance parameters η0. We depart from the classical setting by allowing for η0 to be so high‐dimensional that the traditional assumptions (e.g. Donsker properties) that limit complexity of the parameter space for this object break down. To estimate η0, we consider the use of statistical or machine learning (ML) methods, which are particularly well suited to estimation in modern, very high‐dimensional cases. ML methods perform well by employing regularization to reduce variance and trading off regularization bias with overfitting in practice. However, both regularization bias and overfitting in estimating η0 cause a heavy bias in estimators of θ0 that are obtained by naively plugging ML estimators of η0 into estimating equations for θ0. This bias results in the naive estimator failing to be N−1/2 consistent, where N is the sample size. We show that the impact of regularization bias and overfitting on estimation of the parameter of interest θ0 can be removed by using two simple, yet critical, ingredients: (1) using Neyman‐orthogonal moments/scores that have reduced sensitivity with respect to nuisance parameters to estimate θ0; (2) making use of cross‐fitting, which provides an efficient form of data‐splitting. We call the resulting set of methods double or debiased ML (DML). We verify that DML delivers point estimators that concentrate in an N−1/2‐... [Truncated]
+
+--- Key: Wood2004StableEfficient ---
+Title: Stable and Efficient Multiple Smoothing Parameter Estimation for Generalized Additive Models
+Authors: Simon N. Wood (2004)
+Abstract: Representation of generalized additive models (GAM's) using penalized regression splines allows GAM's to be employed in a straightforward manner using penalized regression methods. Not only is inference facilitated by this approach, but it is also possible to integrate model selection in the form of smoothing parameter selection into model fitting in a computationally efficient manner using well founded criteria such as generalized cross-validation. The current fitting and smoothing parameter selection methods for such models are usually effective, but do not provide the level of numerical stability to which users of linear regression packages, for example, are accustomed. In particular the existing methods cannot deal adequately with numerical rank deficiency of the GAM fitting problem, and it is not straightforward to produce methods that can do so, given that the degree of rank deficiency can be smoothing parameter dependent. In addition, models with the potential flexibility of GAM's can also present practical fitting difficulties as a result of indeterminacy in the model likelihood: Data with many zeros fitted by a model with a log link are a good example. In this article it is proposed that GAM's with a ridge penalty provide a practical solution in such circumstances, and a multiple smoothing parameter selection method suitable for use in the presence of such a penalty is developed. The method is based on the pivoted QR decomposition and the singular value decomposition... [Truncated]
+
+--- Key: Ihaka1996RLanguage ---
+Title: R: A Language for Data Analysis and Graphics
+Authors: Ross Ihaka, Robert C. Gentleman (1996)
+Abstract: In this article we discuss our experience designing and implementing a statistical computing language. In developing this new language, we sought to combine what we felt were useful features from two existing computer languages. We feel that the new language provides advantages in the areas of portability, computational efficiency, memory management, and scoping.
+
+--- Key: Gauss2011TheoriaMotus ---
+Title: Theoria Motus Corporum Coelestium in Sectionibus Conicis Solem Ambientium
+Authors: Carl Friedrich Gauss (2011)
+Abstract: Described by one reviewer as 'one of the most perfect books ever written on theoretical astronomy', this work in Latin by the German mathematician Carl Friedrich Gauss (1777–1855), the 'Prince of Mathematicians', derived from his attempt to solve an astronomical puzzle: where in the heavens would the dwarf planet Ceres, first sighted in 1801, reappear? Gauss' predicted position was correct to within half a degree, and this led him to develop a streamlined and sophisticated method of calculating the effect of the larger planets and the sun on the orbits of planetoids, which he published in 1809. As well as providing a tool for astronomers, Gauss' method also offered a way of reducing inaccuracy of calculations arising from measurement error; the primacy of this discovery was however disputed between him and the French mathematician Legendre, whose Essai sur la théorie des nombres is also reissued in this series.
+
+--- Key: Pearson1896ViiMathematical ---
+Title: VII. Mathematical contributions to the theory of evolution.—III. Regression, heredity, and panmixia
+Authors: Karl Pearson (1896)
+Abstract: Abstract 
+                   There are few branches of the Theory of Evolution which appear to the mathematical statistician so much in need of exact treatment as those of Regression, Heredity, and Panmixia. Round the notion of panmixia much obscurity has accumulated, owing to the want of precise definition and quantitative measurement. The problems of regression and heredity have been dealt with by Mr. Francis Galton in his epochmaking work on ‘Natural Inheritance,’ but, although he has shown exact methods of dealing, both experimentally and mathematically, with the problems of inheritance, it does not appear that mathematicians have hitherto developed his treatment, or that biologists and medical men have yet fully appreciated that he has really shown how many of the problems which perplex them may receive at any rate a partial answer. A considerable portion of the present memoir will be devoted to the expansion and fuller development of Mr. Galton’s ideas, particularly their application to the problem of bi-parental inheritance. At the same time I shall endeavour to point out how the results apply to some current biological and medical problems. In the first place, we must definitely free our minds, in the present state of our knowledge of the mechanism of inheritance and reproduction, of any hope of reaching a mathematical relation expressing the degree of correlation between individual parent and individual offspring. The causes in any individual case of inheritance are ... [Truncated]
+
+--- Key: Box1964AnalysisTransformations ---
+Title: An Analysis of Transformations
+Authors: George E. P. Box, David Roxbee Cox (1964)
+Abstract: Summary In the analysis of data it is often assumed that observations y 1, y 2, …, yn are independently normally distributed with constant variance and with expectations specified by a model linear in a set of parameters θ. In this paper we make the less restrictive assumption that such a normal, homoscedastic, linear model is appropriate after some suitable transformation has been applied to the y's. Inferences about the transformation and about the parameters of the linear model are made by computing the likelihood function and the relevant posterior distribution. The contributions of normality, homoscedasticity and additivity to the transformation are separated. The relation of the present methods to earlier procedures for finding transformations is discussed. The methods are illustrated with examples.
+
+--- Key: Plackett1972StudiesHistory ---
+Title: Studies in the History of Probability and Statistics. XXIX: The Discovery of the Method of Least Squares
+Authors: Robin L. Plackett (1972)
+Abstract: The circumstances in which the discovery of the method of least squares took place and the course of the ensuing controversy are examined in detail with the aid of correspondence. Some conclusions are drawn about the attitudes of the main participants and the nature of historical research in statistics.
+
+--- Key: Makhoul1975LinearPrediction ---
+Title: Linear prediction: A tutorial review
+Authors: J. Makhoul (1975)
+Abstract: This paper gives an exposition of linear prediction in the analysis of discrete signals. The signal is modeled as a linear combination of its past values and present and past values of a hypothetical input to a system whose output is the given signal. In the frequency domain, this is equivalent to modeling the signal spectrum by a pole-zero spectrum. The major part of the paper is devoted to all-pole models. The model parameters are obtained by a least squares analysis in the time domain. Two methods result, depending on whether the signal is assumed to be stationary or nonstationary. The same results are then derived in the frequency domain. The resulting spectral matching formulation allows for the modeling of selected portions of a spectrum, for arbitrary spectral shaping in the frequency domain, and for the modeling of continuous as well as discrete spectra. This also leads to a discussion of the advantages and disadvantages of the least squares error criterion. A spectral interpretation is given to the normalized minimum prediction error. Applications of the normalized error are given, including the determination of an "optimal" number of poles. The use of linear prediction in data compression is reviewed. For purposes of transmission, particular attention is given to the quantization and encoding of the reflection (or partial correlation) coefficients. Finally, a brief introduction to pole-zero modeling is given.
+
+--- Key: Cook1977DetectionInfluential ---
+Title: Detection of Influential Observation in Linear Regression
+Authors: R. Dennis Cook (1977)
+Abstract: A new measure based on confidence ellipsoids is developed for judging the contribution of each data point to the determination of the least squares estimate of the parameter vector in full rank linear regression models. It is shown that the measure combines information from the studentized residuals and the variances of the residuals and predicted values. Two examples are presented.
+
+--- Key: Stigler1981GaussInvention ---
+Title: Gauss and the Invention of Least Squares
+Authors: Stephen M. Stigler (1981)
+Abstract: The most famous priority dispute in the history of statistics is that between Gauss and Legendre, over the discovery of the method of least squares. New evidence, both documentary and statistical, is discussed, and an attempt is made to evaluate Gauss's claim. It is argued (though not conclusively) that Gauss probably possessed the method well before Legendre, but that he was unsuccessful in communicating it to his contemporaries. Data on the French meridian arc are presented that could, conceivably, permit a definitive verification of the claim.
+
+--- Key: Anscombe1963ExaminationAnalysis ---
+Title: The Examination and Analysis of Residuals
+Authors: Francis John Anscombe, John W. Tukey (1963)
+Abstract: A number of methods for examining the residuals remaining after a conventional analysis of variance or least-squares fitting have been explored during the past few years. These give information on various questions of interest, and in particular, aid in assessing the validity or appropriateness of the conventional analysis. The purpose of this paper is to make a variety of these techniques more easily available, so that they can be tried out more widely. Techniques of analysis, some graphical, some wholly numerical, and others mixed, are discussed in terms of the residuals that result from fitting row and column means to entries in a two-way array (or in several two-way arrays). Extensions to more complex situations, and some of the uses of the results of examination, are indicated.
+
+--- Key: Cox1968GeneralDefinition ---
+Title: A General Definition of Residuals
+Authors: D. R. Cox, E. J. Snell (1968)
+Abstract: Summary 
+                Residuals are usually defined in connection with linear models. Here a more general definition is given and some asymptotic properties found. Some illustrative examples are discussed, including a regression problem involving exponentially distributed errors and some problems concerning Poisson and binomially distributed observations.
+
+--- Key: Box1976ScienceStatistics ---
+Title: Science and Statistics
+Authors: George E. P. Box (1976)
+Abstract: Aspects of scientific method are discussed: In particular, its representation as a motivated iteration in which, in succession, practice confronts theory, and theory, practice. Rapid progress requires sufficient flexibility to profit from such confrontations, and the ability to devise parsimonious but effective models, to worry selectively about model inadequacies and to employ mathematics skillfully but appropriately. The development of statistical methods at Rothamsted Experimental Station by Sir Ronald Fisher is used to illustrate these themes.
+
+--- Key: Ling1984ResidualsInfluence ---
+Title: Residuals and Influence in Regression
+Authors: Robert F. Ling, R. Dennis Cook, Sanford Weisberg (1984)
+Abstract: Author affiliations: University of Minnesota, Twin Cities, School of Statistics.
+
+--- Key: Buja2019ModelsAs ---
+Title: Models as Approximations I: Consequences Illustrated with Linear Regression
+Authors: Andreas Buja, Lawrence Brown, Richard Berk et al. (2019)
+Abstract: In the early 1980s, Halbert White inaugurated a “model-robust” form of statistical inference based on the “sandwich estimator” of standard error. This estimator is known to be “heteroskedasticity-consistent,” but it is less well known to be “nonlinearity-consistent” as well. Nonlinearity, however, raises fundamental issues because in its presence regressors are not ancillary, hence cannot be treated as fixed. The consequences are deep: (1) population slopes need to be reinterpreted as statistical functionals obtained from OLS fits to largely arbitrary joint ${x\textrm{-}y}$ distributions; (2) the meaning of slope parameters needs to be rethought; (3) the regressor distribution affects the slope parameters; (4) randomness of the regressors becomes a source of sampling variability in slope estimates of order $1/\sqrt{N}$; (5) inference needs to be based on model-robust standard errors, including sandwich estimators or the ${x\textrm{-}y}$ bootstrap. In theory, model-robust and model-trusting standard errors can deviate by arbitrary magnitudes either way. In practice, significant deviations between them can be detected with a diagnostic test.
+
+--- Key: Arlot2010SurveyCrossvalidation ---
+Title: A survey of cross-validation procedures for model selection
+Authors: Sylvain Arlot, Alain Celisse (2010)
+Abstract: Used to estimate the risk of an estimator or to perform model selection, cross-validation is a widespread strategy because of its simplicity and its (apparent) universality. Many results exist on model selection performances of cross-validation procedures. This survey intends to relate these results to the most recent advances of model selection theory, with a particular emphasis on distinguishing empirical statements from rigorous theoretical results. As a conclusion, guidelines are provided for choosing the best cross-validation procedure according to the particular features of the problem in hand.
+
+--- Key: Stone1974CrossvalidatoryChoice ---
+Title: Cross-Validatory Choice and Assessment of Statistical Predictions
+Authors: M. Stone (1974)
+Abstract: Summary 
+                A generalized form of the cross-validation criterion is applied to the choice and assessment of prediction using the data-analytic concept of a prescription. The examples used to illustrate the application are drawn from the problem areas of univariate estimation, linear regression and analysis of variance.
+
+--- Key: Shmueli2010ExplainOr ---
+Title: To Explain or to Predict?
+Authors: Galit Shmueli (2010)
+Abstract: Statistical modeling is a powerful tool for developing and testing theories by way of causal explanation, prediction, and description. In many disciplines there is near-exclusive use of statistical modeling for causal explanation and the assumption that models with high explanatory power are inherently of high predictive power. Conflation between explanation and prediction is common, yet the distinction must be understood for progressing scientific knowledge. While this distinction has been recognized in the philosophy of science, the statistical literature lacks a thorough discussion of the many differences that arise in the process of modeling for an explanatory versus a predictive goal. The purpose of this article is to clarify the distinction between explanatory and predictive modeling, to discuss its sources, and to reveal the practical implications of the distinction to each step in the modeling process.
+
+--- Key: Hand2006ClassifierTechnology ---
+Title: Classifier Technology and the Illusion of Progress
+Authors: David J. Hand (2006)
+Abstract: A great many tools have been developed for supervised classification, ranging from early methods such as linear discriminant analysis through to modern developments such as neural networks and support vector machines. A large number of comparative studies have been conducted in attempts to establish the relative superiority of these methods. This paper argues that these comparisons often fail to take into account important aspects of real problems, so that the apparent superiority of more sophisticated methods may be something of an illusion. In particular, simple methods typically yield performance almost as good as more sophisticated methods, to the extent that the difference in performance may be swamped by other sources of uncertainty that generally are not considered in the classical supervised classification paradigm.
+
+--- Key: Dwork2015ReusableHoldout ---
+Title: The reusable holdout: Preserving validity in adaptive data analysis
+Authors: Cynthia Dwork, Vitaly Feldman, Moritz Hardt et al. (2015)
+Abstract: Testing hypotheses privately 
+                   
+                    Large data sets offer a vast scope for testing already-formulated ideas and exploring new ones. Unfortunately, researchers who attempt to do both on the same data set run the risk of making false discoveries, even when testing and exploration are carried out on distinct subsets of data. Based on ideas drawn from differential privacy, Dwork
+                     et al. 
+                    now provide a theoretical solution. Ideas are tested against aggregate information, whereas individual data set components remain confidential. Preserving that privacy also preserves statistical inference validity.
+                   
+                   
+                     Science 
+                    , this issue p.
+                     636
+
+--- Key: Copas1983RegressionPrediction ---
+Title: Regression, Prediction and Shrinkage
+Authors: J. B. Copas (1983)
+Abstract: Summary 
+                The fit of a regression predictor to new data is nearly always worse than its fit to the original data. Anticipating this shrinkage leads to Stein-type predictors which, under certain assumptions, give a uniformly lower prediction mean squared error than least squares. Shrinkage can be particularly marked when stepwise fitting is used: the shrinkage is then closer to that expected of the full regression rather than of the subset regression actually fitted. Preshrunk predictors for selected subsets are proposed and tested on a number of practical examples. Both multiple and binary (logistic) regression models are considered.
+
+--- Key: Steyerberg2004ValidationUpdating ---
+Title: Validation and updating of predictive logistic regression models: a study on sample size and shrinkage
+Authors: Ewout W. Steyerberg, Gerard J. J. M. Borsboom, Hans C. van Houwelingen et al. (2004)
+Abstract: Abstract  A logistic regression model may be used to provide predictions of outcome for individual patients at another centre than where the model was developed. When empirical data are available from this centre, the validity of predictions can be assessed by comparing observed outcomes and predicted probabilities. Subsequently, the model may be updated to improve predictions for future patients.  As an example, we analysed 30‐day mortality after acute myocardial infarction in a large data set (GUSTO‐I, n = 40 830). We validated and updated a previously published model from another study (TIMI‐II, n = 3339) in validation samples ranging from small (200 patients, 14 deaths) to large (10 000 patients, 700 deaths). Updated models were tested on independent patients. Updating methods included re‐calibration (re‐estimation of the intercept or slope of the linear predictor) and more structural model revisions (re‐estimation of some or all regression coefficients, model extension with more predictors). We applied heuristic shrinkage approaches in the model revision methods, such that regression coefficients were shrunken towards their re‐calibrated values. Parsimonious updating methods were found preferable to more extensive model revisions, which should only be attempted with relatively large validation samples in combination with shrinkage. Copyright © 2004 John Wiley & Sons, Ltd.
+
+--- Key: Riley2021MinimumSample ---
+Title: Minimum sample size for external validation of a clinical prediction model with a binary outcome
+Authors: Richard D. Riley, Thomas P. A. Debray, Gary S. Collins et al. (2021)
+Abstract: In prediction model research, external validation is needed to examine an existing model's performance using data independent to that for model development. Current external validation studies often suffer from small sample sizes and consequently imprecise predictive performance estimates. To address this, we propose how to determine the minimum sample size needed for a new external validation study of a prediction model for a binary outcome. Our calculations aim to precisely estimate calibration (Observed/Expected and calibration slope), discrimination (C‐statistic), and clinical utility (net benefit). For each measure, we propose closed‐form and iterative solutions for calculating the minimum sample size required. These require specifying: (i) target SEs (confidence interval widths) for each estimate of interest, (ii) the anticipated outcome event proportion in the validation population, (iii) the prediction model's anticipated (mis)calibration and variance of linear predictor values in the validation population, and (iv) potential risk thresholds for clinical decision‐making. The calculations can also be used to inform whether the sample size of an existing (already collected) dataset is adequate for external validation. We illustrate our proposal for external validation of a prediction model for mechanical heart valve failure with an expected outcome event proportion of 0.018. Calculations suggest at least 9835 participants (177 events) are required to precisely estimate ... [Truncated]
+
+--- Key: Stein1981EstimationMean ---
+Title: Estimation of the Mean of a Multivariate Normal Distribution
+Authors: Charles M. Stein (1981)
+Abstract: Estimation of the means of independent normal random variables is considered, using sum of squared errors as loss. An unbiased estimate of risk is obtained for an arbitrary estimate, and certain special classes of estimates are then discussed. The results are applied to smoothing by use of moving averages and to trimmed analogs of the James-Stein estimate. A suggestion is made for calculating approximate confidence sets for the mean vector centered at an arbitrary estimate.
+
+--- Key: Eisenhauer2003RegressionThrough ---
+Title: Regression through the Origin
+Authors: Joseph G. Eisenhauer (2003)
+Abstract: Summary  This article describes situations in which regression through the origin is appropriate, derives the normal equation for such a regression and explains the controversy regarding its evaluative statistics. Differences between three popular software packages that allow regression through the origin are illustrated using examples from previous issues of  Teaching Statistics .
+
+--- Key: Chatterjee1986InfluentialObservations ---
+Title: Influential Observations, High Leverage Points, and Outliers in Linear Regression
+Authors: Samprit Chatterjee, Ali S. Hadi (1986)
+Abstract: A bewilderingly large number of statistical quantities have been proposed to study outliers and influence of individual observations in regression analysis. In this article we describe the inter-relationships which exist among the proposed measures. An examination of these relationships leads us to conclude that only three of these measures along with some graphical displays can provide an analyst a complete picture of outliers (major discrepant points) and points which excessively influence the fitted regression equation. Illustrative examples based on real data are presented.
+
+--- Key: Vergouwe2016ClosedTesting ---
+Title: A closed testing procedure to select an appropriate method for updating prediction models
+Authors: Yvonne Vergouwe, Daan Nieboer, Rianne Oostenbrink et al. (2016)
+Abstract: Prediction models fitted with logistic regression often show poor performance when applied in populations other than the development population. Model updating may improve predictions. Previously suggested methods vary in their extensiveness of updating the model. We aim to define a strategy in selecting an appropriate update method that considers the balance between the amount of evidence for updating in the new patient sample and the danger of overfitting. We consider recalibration in the large (re‐estimation of model intercept); recalibration (re‐estimation of intercept and slope) and model revision (re‐estimation of all coefficients) as update methods. We propose a closed testing procedure that allows the extensiveness of the updating to increase progressively from a minimum (the original model) to a maximum (a completely revised model). The procedure involves multiple testing with maintaining approximately the chosen type I error rate. We illustrate this approach with three clinical examples: patients with prostate cancer, traumatic brain injury and children presenting with fever. The need for updating the prostate cancer model was completely driven by a different model intercept in the update sample (adjustment: 2.58). Separate testing of model revision against the original model showed statistically significant results, but led to overfitting (calibration slope at internal validation = 0.86). The closed testing procedure selected recalibration in the large as update me... [Truncated]
+
+--- Key: Miller1991ValidationTechniques ---
+Title: Validation techniques for logistic regression models
+Authors: Michael E. Miller, Siu L. Hui, William M. Tierney (1991)
+Abstract: Abstract  This paper presents a comprehensive approach to the validation of logistic prediction models. It reviews measures of overall goodness‐of‐fit, and indices of calibration and refinement. Using a model‐based approach developed by Cox, we adapt logistic regression diagnostic techniques for use in model validation. This allows identification of problematic predictor variables in the prediction model as well as influential observations in the validation data that adversely affect the fit of the model. In appropriate situations, recommendations are made for correction of models that provide poor fit.
+
+--- Key: Varma2006BiasError ---
+Title: Bias in error estimation when using cross-validation for model selection
+Authors: Sudhir Varma, Richard Simon (2006)
+Abstract: Abstract 
+                   
+                     Background 
+                     Cross-validation (CV) is an effective method for estimating the prediction error of a classifier. Some recent articles have proposed methods for optimizing classifiers by choosing classifier parameter values that minimize the CV error estimate. We have evaluated the validity of using the CV error estimate of the optimized classifier as an estimate of the true error expected on independent data. 
+                   
+                   
+                     Results 
+                     We used CV to optimize the classification parameters for two kinds of classifiers; Shrunken Centroids and Support Vector Machines (SVM). Random training datasets were created, with no difference in the distribution of the features between the two classes. Using these "null" datasets, we selected classifier parameter values that minimized the CV error estimate. 10-fold CV was used for Shrunken Centroids while Leave-One-Out-CV (LOOCV) was used for the SVM. Independent test data was created to estimate the true error. With "null" and "non null" (with differential expression between the classes) data, we also tested a nested CV procedure, where an inner CV loop is used to perform the tuning of the parameters while an outer CV is used to compute an estimate of the error. 
+                     The CV error estimate for the classifier with the optimal parameters was found to be a substantially biased estimate of the tru... [Truncated]
+
+
+
+--- INPUT: idea.md (Technical Method Details) ---
+# A finite intercept correction calculation with reproducible figures
+
+This is a synthetic teaching-note workflow demonstration, not a new scientific
+result. Five inputs x = [-2,-1,0,1,2] have targets y = 2x+3. A fixed predictor
+returns 2x. Compute the mean residual on these same points, b = mean(y-2x)=3,
+and add it to the predictions. The experimental log is the only measured data.
+There is no optimizer, architecture, external dataset, stochastic experiment,
+held-out evaluation or timing result. The calculation is implemented in base R.
+Scope all claims to these exact five observations; literature supplies context,
+not extra measurements or claims of novelty.
+
+Generate exactly two essential figures, with all source code retained:
+
+1. `fig_intercept_error`: a statistical plot, `plot_type` `plot`, from
+   `experimental_log.md`. Show the three measured MSE values at b=0,1.5,3.
+   Use R/ggplot2. This plot is evidence of the finite arithmetic only.
+2. `fig_residual_workflow`: a scientific schematic, `plot_type` `diagram`, from
+   `idea.md`. Show input x and target y; baseline 2x; residual y-2x; mean
+   residual b=3; corrected prediction 2x+b; evaluation on the same five points.
+   Indicate the data dependency from observed residuals to the scalar correction.
+   Use LaTeX/TikZ, mathematical labels, and no unrelated modules or experiments.
+
+No figures are supplied. Separate Codex workers must plan, style, generate code,
+critique the rendered figures, and write captions through the normal workflow.
+The flow diagram should make the computation understandable; it adds no evidence
+of predictive generalization. Native editable `.R` and `.tex` sources and their
+vector PDFs should be retained alongside the manuscript-compatible previews.
+
+
+--- INPUT: experimental_log.md (Raw Data for Tables) ---
+# Actual R calculation on five synthetic observations
+
+One deterministic calculation; no stochastic repetitions, optimizer, external dataset, benchmark, timing or held-out evaluation.
+The same observations determine and evaluate the correction. No other experiments were run.
+
+| x | y | baseline 2x | corrected 2x+3 |
+|---:|---:|---:|---:|
+| -2 | -1 | -4 | -1 |
+| -1 | 1 | -2 | 1 |
+| 0 | 3 | 0 | 3 |
+| 1 | 5 | 2 | 5 |
+| 2 | 7 | 4 | 7 |
+
+Correction b = mean(y - 2x) = 3.
+
+| Added b | Mean absolute error | Mean squared error |
+|---:|---:|---:|
+| 0 | 3 | 9 |
+| 1.5 | 1.5 | 2.25 |
+| 3 | 0 | 0 |
+
+Required generated statistical figure: fig_intercept_error. Plot the three recorded MSE values against b. No unmeasured points, uncertainty intervals or invented data.
+Code must be R/ggplot2. Keep this calculation reproducible and keep the numerical scope finite.
+
+
+--- INPUT: figures_list (Available Figure Files) ---
+### AVAILABLE FIGURES LIST
+Item 1:
+  - Filename: fig_intercept_error.jpg
+  - Caption: Recorded mean squared error (MSE) for candidate intercept corrections b = 0, 1.5, and 3 evaluated deterministically on the five synthetic observations. Text labels indicate the exact recorded (b, MSE) coordinate pairs.
+--------------------------------------------------
+Item 2:
+  - Filename: fig_residual_workflow.jpg
+  - Caption: Schematic workflow of the finite intercept correction on five observations. A baseline predictor 2x generates residuals r_i = y_i - 2x_i relative to targets y = 2x + 3. The sample mean residual defines the scalar correction b = 3, which is added to the baseline to produce corrected predictions 2x + b evaluated in-sample across the same observations.
+--------------------------------------------------
+
+
+--- INPUT: conference_guidelines.md ---
+# Reproducible workflow demonstration
+
+Produce an anonymous short technical teaching note of approximately 700–1000 words
+with the supplied article headings. Keep claims within the finite synthetic
+calculation. Do not describe it as a novel algorithm or a benchmark result.
+No appendix is required. Include the generated MSE plot, generated residual-flow
+diagram and measured error table, with readable captions and no margin overflow.
+Use the existing single-column 11-point article with one-inch margins.
+Keep all author information anonymous. Cite only keys verified by the literature
+stage. The figure source code is retained as a separate reproducibility artifact.
+
+
+--- INPUT: template.tex (DO NOT CHANGE EXISTING TEXT. FILL MISSING SECTIONS.) ---
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+% Fill the abstract.
+\end{abstract}
+\section{Introduction}
+
+A constant discrepancy between observed targets and fixed predictions provides a simple setting for explaining residual correction. The historical development of least squares, examined by Plackett and Stigler, places such calculations within an established tradition of fitting numerical relationships to observations \cite{Plackett1972StudiesHistory,Stigler1981GaussInvention}. Linear prediction also has broader formulations: Makhoul's tutorial studies prediction of discrete signals and least-squares criteria \cite{Makhoul1975LinearPrediction}. The present note considers a smaller instructional problem in which the slope is supplied and only an additive correction is calculated.
+
+Residuals make the discrepancy explicit. Work on residual examination describes graphical and numerical tools for assessing fitted analyses, while broader definitions extend residual concepts beyond linear models \cite{Anscombe1963ExaminationAnalysis,Cox1968GeneralDefinition}. Transformations provide another approach to modeling, with separate attention to normality, constant variance, and additivity \cite{Box1964AnalysisTransformations}. Here, the supplied observations require neither a transformation nor a distributional assumption to establish the numerical result: every baseline residual is exactly the same.
+
+Specifically, the five inputs are
+\[
+x_i\in\{-2,-1,0,1,2\},\qquad y_i=2x_i+3,
+\]
+and the fixed predictor returns $\widehat{y}^{(0)}_i=2x_i$. Consequently,
+\[
+r_i=y_i-\widehat{y}^{(0)}_i=3,\qquad
+b=\frac{1}{5}\sum_{i=1}^{5}r_i=3.
+\]
+Adding this observed mean residual gives
+$\widehat{y}^{(b)}_i=2x_i+b=y_i$ on all five observations. The experimental log records mean squared errors of $9$, $2.25$, and $0$ for the respective additions $b=0$, $1.5$, and $3$. The corresponding mean absolute errors are $3$, $1.5$, and $0$. These values describe one deterministic calculation implemented in base R.
+
+The example isolates a common residual pattern rather than the influence of particular observations. Influence measures study how individual data points affect regression estimates, and surveys relate those measures to outliers and leverage \cite{Cook1977DetectionInfluential,Chatterjee1986InfluentialObservations}. In this construction, the slope remains fixed and all five residuals equal $3$; the calculation therefore concerns a shared additive discrepancy. Its educational purpose is consistent with attention to parsimonious models and model inadequacy \cite{Box1976ScienceStatistics}. Broader work on linear models as approximations additionally emphasizes that interpreting fitted parameters and their uncertainty requires attention to modeling assumptions \cite{Buja2019ModelsAs}; this note supplies no population-level parameter inference.
+
+The distinction between fitting and prediction is central to interpreting the zero error. Shmueli distinguishes explanatory and predictive modeling goals \cite{Shmueli2010ExplainOr}, while cross-validatory assessment and surveys of cross-validation address prediction assessment and estimator risk \cite{Stone1974CrossvalidatoryChoice,Arlot2010SurveyCrossvalidation}. Here, the same five targets determine $b$ and assess the corrected predictions. Their exact agreement establishes the finite arithmetic result, without supplying evidence about additional observations.
+
+The note therefore makes a limited contribution: it presents an explicit calculation and makes its data dependencies transparent. There is no new algorithm, external dataset, optimizer, stochastic repetition, or held-out evaluation. Hand's discussion of comparative classifier studies illustrates why numerical comparisons need careful interpretation in their application context \cite{Hand2006ClassifierTechnology}. Work on adaptive data analysis further examines validity under data reuse \cite{Dwork2015ReusableHoldout}. Neither setting is an experiment performed here. The only evaluated baseline is the supplied predictor $2x$, and the literature provides conceptual context rather than additional measurements or evidence of superiority.
+
+\section{Related Work}
+
+\subsection{Fixed Predictors and Additive Offsets}
+
+Generalized linear models organize estimation around systematic effects that become linear under an appropriate transformation, with likelihood-based estimation for exponential-family observations \cite{Nelder1972GeneralizedLinear}. Dobson presents this framework as a unifying account of statistical modeling and model checking \cite{Dobson2001IntroductionGeneralized}. These works provide a broad context for distinguishing predictor structure from estimated parameters. The present calculation has a narrower specification: $2x$ is fixed, and a scalar is added directly to the prediction. No response distribution or link transformation is fitted.
+
+Regression through the origin is a closer educational comparison. Eisenhauer discusses when that restriction is appropriate, derives its normal equation, and examines its evaluation statistics \cite{Eisenhauer2003RegressionThrough}. The baseline here also has zero intercept, but its slope is prescribed rather than estimated by an origin-constrained regression. Its discrepancy follows immediately from the supplied targets $2x+3$. Lovell studies regression-based seasonal adjustment and the consequences of using adjusted data in subsequent estimation \cite{Lovell1963SeasonalAdjustment}; that work concerns transformations and regression dependencies beyond a constant correction. Regression diagnostics likewise address unusual observations, influence, and collinearity \cite{Belsley1980RegressionDiagnostics}. None of those additional structures is evaluated in this five-point construction.
+
+Additive modeling offers a broader comparison in which adjustment components can depend on covariates. Generalized additive models replace linear covariate terms with estimated smooth functions \cite{Hastie1986GeneralizedAdditive}. Linear-smoother analyses characterize backfitting and its convergence, while penalized-spline methods address smoothing-parameter estimation and numerical stability \cite{Buja1989LinearSmoothers,Wood2004StableEfficient}. Gradient boosting instead formulates stagewise additive expansions through optimization in function space \cite{Friedman2001GreedyFunction}. These approaches estimate richer components through fitting procedures. The supplied demonstration computes one scalar mean and contains no smoother, boosting sequence, penalty selection, or numerical optimization.
+
+Semiparametric regression further distinguishes linear parameters from unknown functional components. Robinson studies estimation of a slope vector alongside an unspecified function, and Engle and colleagues estimate a nonlinear relationship using a semiparametric smoothing procedure \cite{Robinson1988RootnconsistentSemiparametric,Engle1986SemiparametricEstimates}. Double/debiased machine learning addresses low-dimensional parameter inference with high-dimensional nuisance estimation, using orthogonal scores and cross-fitting \cite{Chernozhukov2018DoubledebiasedMachine}. The finite correction here involves neither nuisance-function estimation nor inferential guarantees. Its connection to these methods is conceptual: a specified prediction component can be distinguished from a subsequently estimated adjustment.
+
+\subsection{Residual-Based Correction and Evaluation Scope}
+
+Prediction-model updating directly considers how much of an existing predictor to revise. Miller and colleagues review logistic-model validation, calibration, diagnostic assessment, and possible corrections \cite{Miller1991ValidationTechniques}. Vergouwe and colleagues distinguish intercept updating, intercept-and-slope recalibration, and revision of all coefficients, selecting among them with a closed testing procedure \cite{Vergouwe2016ClosedTesting}. Retaining the supplied slope while adding $b$ resembles the limited scope of intercept updating. However, the present targets are deterministic numerical values, and the calculation uses neither logistic probabilities nor a testing procedure. Those papers are contextual comparisons rather than evaluated competitors.
+
+For these observations, the entire correction is visible algebraically:
+\[
+y_i-(2x_i+b)=3-b,\qquad
+\frac{1}{5}\sum_{i=1}^{5}\bigl[y_i-(2x_i+b)\bigr]^2=(3-b)^2.
+\]
+This identity explains the three recorded mean squared errors and their zero value at $b=3$. It is a derivation from the supplied observations; no additional correction values were measured. The mean residual provides the least-squares constant adjustment, but exact agreement here additionally depends on all five original residuals being identical.
+
+Fitted loss and predictive risk remain different objects. Copas examines the deterioration that can occur when regression predictors are applied to new data and studies shrinkage under specified assumptions \cite{Copas1983RegressionPrediction}. Stein develops unbiased risk estimation for estimation of normal mean vectors under squared-error loss \cite{Stein1981EstimationMean}. These works consider statistical questions that the deterministic arithmetic alone does not answer. No sampling model, risk estimate, or uncertainty calculation is supplied here.
+
+Validation and updating studies also make the assessment data consequential. Steyerberg and colleagues evaluate updated logistic models on independent patients, distinguishing updating from subsequent testing \cite{Steyerberg2004ValidationUpdating}. Riley and colleagues study sample-size requirements for precise external validation of binary-outcome prediction models \cite{Riley2021MinimumSample}. Their clinical outcomes, performance measures, and sample-size calculations do not transfer to the present construction. They contextualize the missing assessment step: the five observations used to obtain $b$ are also the only observations used to report its error.
+
+Finally, Varma and Simon investigate bias when cross-validation error is reused to assess a classifier whose parameters were selected using that criterion \cite{Varma2006BiasError}. Their model-selection setting differs from this single scalar calculation, but it reinforces the need to identify which observations determine an adjustment and which assess it. Here that dependency is explicit: observed targets produce residuals, the residuals determine $b$, and the corrected predictions are compared with those same targets. The resulting zero error establishes exact correction on these five points and leaves performance on further observations unmeasured.
+
+\section{Method}
+% Fill the method.
+\section{Experiments}
+% Fill the experiments.
+\section{Conclusion}
+% Fill the conclusion.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
+**INSTRUCTION**: 
+1. Identify missing sections in `template.tex`.
+2. Generate LaTeX content for those sections based on `outline.json`.
+3. Construct tables using data from `experimental_log.md`.
+4. Insert figures using the filenames from the 'figures_list' input.
+5. Use citations from the Reference Library.
+6. Return the **full** compilable LaTeX file.
+
+
+[SELECTED FIGURE SOURCE PROVENANCE — USER-AUTHORIZED ADAPTATION]
+
+These exact worker sources produced the selected figure previews. Their copies are bundled beside the manuscript at the listed relative paths. Reference them; do not reconstruct, embed, rename or replace R/ggplot2 or TikZ figure recipes. Preserve numerical/algorithm discussion. The runtime maintains a visible Figure source provenance section before compilation and review; preserve that section and the supplied figure images. The manifest, source checksums and renderer inputs are authoritative.
+
+{
+  "schema_version": 1,
+  "policy": "selected-worker-code-v1",
+  "figures": [
+    {
+      "figure_id": "fig_intercept_error",
+      "image_path": "figures/fig_intercept_error.jpg",
+      "backend": "ggplot2",
+      "original_directory": "figure_sources/b7b9ff9826ef4eb39a225d5cf12bf98e",
+      "source": "figure_code/fig_intercept_error/source.R",
+      "source_sha256": "34ba57e56adf6b784bfabe24299ef6d25ce7405170d96d8c09ada69897622aee",
+      "preview_sha256": "e0becdf8a73270e35b4b24228a64b4ecf770ac189607ec6c3177521c4fed78b1",
+      "files": {
+        "figure_code/fig_intercept_error/source.R": "34ba57e56adf6b784bfabe24299ef6d25ce7405170d96d8c09ada69897622aee",
+        "figure_code/fig_intercept_error/render.json": "bba725bd47c845b49a3f8f5d912fc97ad595703580eee2759452415944631abe",
+        "figure_code/fig_intercept_error/figure.pdf": "82475c35c87e50b5e888122e59977fe5bc73b059787dfb85d380216a49a7160e",
+        "figure_code/fig_intercept_error/preview.jpg": "e0becdf8a73270e35b4b24228a64b4ecf770ac189607ec6c3177521c4fed78b1",
+        "figure_code/fig_intercept_error/worker.R": "1aedad4b1547d4b2d394cbb0239655d3667d453dd1fd0eca3e77c037e6d34892",
+        "figure_code/fig_intercept_error/sessionInfo.txt": "f8073055c2f9ee9c1ae02f85a5a33a981ddbd3e56d6181f5eea24cd8dc9957b8"
+      }
+    },
+    {
+      "figure_id": "fig_residual_workflow",
+      "image_path": "figures/fig_residual_workflow.jpg",
+      "backend": "tikz",
+      "original_directory": "figure_sources/76f369355cdd4b8386b2d63459593e24",
+      "source": "figure_code/fig_residual_workflow/source.tex",
+      "source_sha256": "e1de201d70c4a99677d8214ab33a2f9c6815b281a8c5bf2097e46cce5855da92",
+      "preview_sha256": "df5033f1b6d093a19cde69a4a77ea88be382e21ddc973e28bc5fd2e126d9f523",
+      "files": {
+        "figure_code/fig_residual_workflow/source.tex": "e1de201d70c4a99677d8214ab33a2f9c6815b281a8c5bf2097e46cce5855da92",
+        "figure_code/fig_residual_workflow/render.json": "ef238854e726a3754c323623098b3d82ad83e41254429497b8cb93a4415012be",
+        "figure_code/fig_residual_workflow/figure.pdf": "f5256ba99e720ae3f58c4a94cb6f9f46d6914d62cf347c871905f4179b634301",
+        "figure_code/fig_residual_workflow/preview.jpg": "df5033f1b6d093a19cde69a4a77ea88be382e21ddc973e28bc5fd2e126d9f523"
+      }
+    }
+  ]
+}
+
+--- EXACT ARTIFACT: figure_code/fig_intercept_error/source.R; SHA256 34ba57e56adf6b784bfabe24299ef6d25ce7405170d96d8c09ada69897622aee ---
+library(ggplot2)
+
+# Recorded observations from the experimental log
+df <- data.frame(b = c(0, 1.5, 3), mse = c(9, 2.25, 0))
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_point(
+    shape = 21,
+    fill = "#1F4E79",
+    colour = "#FFFFFF",
+    size = 4.5,
+    stroke = 0.8
+  ) +
+  geom_text(
+    aes(label = c("(0, 9)", "(1.5, 2.25)", "(3, 0)")),
+    vjust = -1,
+    size = 3.5,
+    colour = "#222222",
+    family = "sans"
+  ) +
+  scale_x_continuous(
+    limits = c(-0.25, 3.25),
+    breaks = c(0, 1.5, 3),
+    labels = c("0.0", "1.5", "3.0")
+  ) +
+  scale_y_continuous(
+    limits = c(-0.5, 10.2),
+    breaks = seq(0, 10, by = 2)
+  ) +
+  labs(
+    title = "Recorded Mean Squared Error for Three Intercept Corrections",
+    x = "Added intercept correction b (unitless)",
+    y = "Mean squared error (MSE)"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(
+    plot.background = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.background = element_rect(fill = "#FFFFFF", colour = NA),
+    panel.border = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(colour = "#E5E5E5", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(colour = "#444444", linewidth = 0.5),
+    axis.line.top = element_blank(),
+    axis.line.right = element_blank(),
+    axis.text = element_text(colour = "#444444", size = 10),
+    axis.title = element_text(colour = "#222222", size = 12),
+    plot.title = element_text(
+      colour = "#222222", size = 14, face = "bold", hjust = 0
+    ),
+    legend.position = "none"
+  )
+
+--- EXACT ARTIFACT: figure_code/fig_intercept_error/worker.R; SHA256 1aedad4b1547d4b2d394cbb0239655d3667d453dd1fd0eca3e77c037e6d34892 ---
+options(warn=1)
+set.seed(0)
+library(ggplot2)
+source("source.R", local=TRUE)
+if (!exists("p") || !inherits(p, "ggplot")) stop("source.R must define ggplot object p")
+ggsave("figure.pdf", plot=p, width=6.4, height=4.266666666666667, units="in", bg="white")
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")
+
+
+--- EXACT ARTIFACT: figure_code/fig_residual_workflow/source.tex; SHA256 e1de201d70c4a99677d8214ab33a2f9c6815b281a8c5bf2097e46cce5855da92 ---
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows,calc}
+
+\definecolor{obsfill}{HTML}{EBF1F7}
+\definecolor{obsdraw}{HTML}{4C78A8}
+\definecolor{basefill}{HTML}{F0F0F0}
+\definecolor{basedraw}{HTML}{8C8C8C}
+\definecolor{resfill}{HTML}{FDF3E7}
+\definecolor{resdraw}{HTML}{E08E2B}
+\definecolor{teal}{HTML}{2A9D8F}
+\definecolor{corrfill}{HTML}{EEF6ED}
+\definecolor{corrdraw}{HTML}{59A14F}
+\definecolor{evalfill}{HTML}{F4F5F7}
+\definecolor{charcoal}{HTML}{3A3A3A}
+\definecolor{provenance}{HTML}{555555}
+
+\newcommand{\moduleheader}[1]{%
+  {\sffamily\fontsize{9.5}{11}\selectfont\bfseries #1}}
+\newcommand{\mathtext}{\fontsize{8.5}{11}\selectfont}
+
+\begin{document}
+\begin{tikzpicture}[
+  box/.style={
+    rectangle,
+    rounded corners=3pt,
+    line width=0.8pt,
+    inner xsep=6pt,
+    inner ysep=6pt,
+    outer sep=0pt,
+    align=center,
+    font=\mathtext
+  },
+  flow/.style={
+    -latex,
+    line width=1pt,
+    draw=charcoal,
+    line cap=butt,
+    line join=miter
+  },
+  reuse/.style={
+    -latex,
+    line width=0.8pt,
+    dashed,
+    draw=provenance,
+    line cap=butt,
+    line join=miter
+  },
+  mathlabel/.style={
+    font=\fontsize{8}{10}\selectfont,
+    inner sep=0pt,
+    outer sep=0pt,
+    fill=white
+  },
+  textlabel/.style={
+    font=\sffamily\fontsize{8}{10}\selectfont,
+    inner sep=0pt,
+    outer sep=0pt,
+    fill=white,
+    align=center
+  }
+]
+
+% White 4:3 canvas.
+\path[fill=white] (0,0) rectangle (14,10.5);
+\path[use as bounding box] (0,0) rectangle (14,10.5);
+
+% Column 1: observations.
+\node[
+  box,
+  draw=obsdraw,
+  fill=obsfill,
+  minimum width=4cm,
+  minimum height=1.8cm
+] (D1) at (2.05,8.5) {
+  \moduleheader{Observations}\\[5pt]
+  $x=(-2,-1,0,1,2)$\\[3pt]
+  $y=2x+3=(-1,1,3,5,7)$
+};
+
+% Column 2: residuals and baseline prediction.
+\node[
+  box,
+  draw=resdraw,
+  fill=resfill,
+  minimum width=3cm,
+  minimum height=1.8cm
+] (R) at (5.95,8.5) {
+  \moduleheader{Residuals}\\[5pt]
+  $r_i=y_i-2x_i$\\[3pt]
+  $(3,3,3,3,3)$
+};
+
+\node[
+  box,
+  draw=basedraw,
+  fill=basefill,
+  minimum width=3cm,
+  minimum height=1.8cm
+] (B) at (5.95,4.8) {
+  \moduleheader{Baseline predictor}\\[5pt]
+  $\hat{y}_0=2x$\\[3pt]
+  $(-4,-2,0,2,4)$
+};
+
+% Column 3: scalar intercept correction.
+\node[
+  box,
+  draw=teal,
+  fill=teal,
+  text=white,
+  minimum width=1.5cm,
+  minimum height=1.8cm
+] (S) at (9.4,8.5) {
+  {\boldmath $b=\bar{r}=3$}
+};
+
+% Column 4: corrected prediction and evaluation.
+\node[
+  box,
+  draw=corrdraw,
+  fill=corrfill,
+  minimum width=3.9cm,
+  minimum height=1.8cm
+] (C) at (12,4.8) {
+  \moduleheader{Corrected prediction}\\[5pt]
+  $\hat{y}=2x+b$\\[3pt]
+  $(-1,1,3,5,7)$
+};
+
+\node[
+  box,
+  draw=charcoal,
+  fill=evalfill,
+  minimum width=4.1cm,
+  minimum height=1.7cm
+] (E) at (11.85,1.95) {
+  \moduleheader{Evaluation on the}\\[-1pt]
+  \moduleheader{same five points}\\[5pt]
+  {\sffamily\fontsize{8.5}{11}\selectfont
+   in-sample check; no held-out data}
+};
+
+% Target observations enter the residual calculation.
+\draw[flow] (D1.east) -- (R.west)
+  node[midway,above=4pt,mathlabel] {$y$};
+
+% Predictor input: a separate orthogonal branch.
+\coordinate (xexit) at ($(D1.south east)+(0,0.32)$);
+\draw[flow]
+  (xexit) -- (4.25,7.92) -- (4.25,4.8) -- (B.west)
+  node[pos=0.5,above=4pt,mathlabel] {$x$};
+
+% Baseline prediction enters the residual calculation.
+\draw[flow] (B.north) -- (R.south)
+  node[midway,right=4pt,mathlabel] {$2x$};
+
+% The upper-flank connection leaves room for its single-line label.
+\coordinate (meanstart) at ($(R.north east)+(0,-0.1)$);
+\coordinate (meanend) at ($(S.north west)+(0,-0.1)$);
+\draw[flow,draw=resdraw] (meanstart) -- (meanend)
+  node[midway,above=4pt,textlabel] {mean over five residuals};
+
+% Baseline prediction is carried directly into the corrected prediction.
+\draw[flow] (B.east) -- (C.west)
+  node[midway,above=4pt,mathlabel] {$2x$};
+
+% Scalar correction enters the top of the corrected-prediction module.
+\draw[flow,draw=teal]
+  (S.east) -- (12,8.5) -- (C.north)
+  node[midway,right=4pt,mathlabel] {$+b$};
+
+% In-sample comparison.
+\coordinate (evaluationentry) at (C.south |- E.north);
+\draw[flow] (C.south) -- (evaluationentry)
+  node[midway,left=4pt,textlabel]
+  {compare $\hat{y}$ with $y$};
+
+% Provenance: the original observations are reused for evaluation.
+\coordinate (reusebottom) at ($(E.south)+(0,-0.8)$);
+\draw[reuse]
+  (D1.south)
+  -- (D1.south |- reusebottom)
+  -- (reusebottom)
+  -- (E.south);
+
+\node[
+  font=\sffamily\itshape\fontsize{7.5}{9}\selectfont,
+  text=provenance,
+  fill=white,
+  inner sep=0pt,
+  anchor=south
+] at ($(D1.south |- reusebottom)!0.5!(reusebottom)+(0,4pt)$)
+  {same five observations reused};
+
+\end{tikzpicture}
+\end{document}

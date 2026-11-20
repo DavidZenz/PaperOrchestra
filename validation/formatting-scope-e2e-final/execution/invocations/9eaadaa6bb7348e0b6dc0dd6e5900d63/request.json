@@ -1,0 +1,34 @@
+{
+  "invocation": "9eaadaa6bb7348e0b6dc0dd6e5900d63",
+  "call": "ff5c4ab5175d4874973bdab3166f5d6f",
+  "role": "tikz-visualizer",
+  "callsite": [
+    "orchestra_visuals.py:generate_figure_visuals:147",
+    "plotting_agent.py:process_single_figure:109",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_residual_workflow",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gpt-6.1-sol",
+  "config": {},
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "codex",
+  "transport_plan_sha256": "5818fa8d05bf787933e0c9e11fb89109e3ef69ce9550def8501426ab8065121b",
+  "prompt_sha256": "5837780b64e863bb2594826bc69d626f85f07b2d9a1ffe2af08a021f4a37739c",
+  "model_routing": {
+    "model": "gpt-6.1-sol",
+    "routing_role": "tikz-visualizer",
+    "group": "figure_code",
+    "selected_by": "profile role: tikz-visualizer",
+    "backend": "codex",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile role: tikz-visualizer",
+      "model": "profile role: tikz-visualizer",
+      "effort": "profile role: tikz-visualizer"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+```json
+{
+  "section_name": "Omitted Intercept and Additive Adjustment in Linear Prediction",
+  "candidates": [
+    {
+      "title": "Fitting Regression Models with No Intercept Term",
+      "year": 1977,
+      "reason": "Provides a seminal technical analysis of regression without an intercept, detailing how suppressing the constant term forfeits the zero-mean residual guarantee and induces systematic residual offsets and parameter bias when the underlying relationship contains an intercept."
+    },
+    {
+      "title": "Leverage and Regression Through the Origin",
+      "year": 1983,
+      "reason": "Examines the diagnostic and geometric properties of omitting an intercept, demonstrating that forcing a predictor through the origin is equivalent to an artificial leverage constraint that introduces predictable residual shifts when an additive offset is omitted."
+    },
+    {
+      "title": "Regression through the Origin",
+      "year": 2003,
+      "reason": "Presents a rigorous pedagogical and mathematical derivation of normal equations in zero-intercept models versus intercept-inclusive models, explicitly analyzing why the mean residual fails to vanish without an intercept."
+    },
+    {
+      "title": "A Note on Fitting a Regression Without an Intercept Term",
+      "year": 1980,
+      "reason": "Analyzes the mathematical mechanics of constraining the intercept in linear regression, contrasting parameter estimates, residual sums of squares, and degrees of freedom against models with an estimated constant term."
+    },
+    {
+      "title": "Errors in Computer Packages: Least Squares Regression Through the Origin",
+      "year": 1981,
+      "reason": "Critiques computational treatments of models without an intercept, establishing how omitting the constant term violates standard residual balance equations and leaves non-zero residual sums."
+    },
+    {
+      "title": "Cautionary Note about R2",
+      "year": 1985,
+      "reason": "Investigates goodness-of-fit metrics and residual properties when an intercept is omitted, explaining how failure to absorb the sample mean leads to persistent residual offsets."
+    },
+    {
+      "title": "Straight Line Regression Through the Origin",
+      "year": 1960,
+      "reason": "A classic foundational treatment of linear estimation constrained through the origin, analyzing variance structures and estimator behavior in the absence of an additive constant."
+    },
+    {
+      "title": "Specification Errors and the Estimation of Economic Relationships",
+      "year": 1957,
+      "reason": "Foundational econometric formulation of omitted variable bias, establishing that omitting a constant regressor shifts the error distribution and leaves an unabsorbed systematic residual offset across observations."
+    },
+    {
+      "title": "Two Further Applications of a Model for Binary Data",
+      "year": 1958,
+      "reason": "Introduces calibration regression principles, demonstrating how a fixed linear predictor can be updated via an additive intercept adjustment to align observed and predicted means without modifying predictor coefficients."
+    },
+    {
+      "title": "Validation and Updating of Predictive Logistic Regression Models: A Study on Sample Size and Shrinkage",
+      "year": 2004,
+      "reason": "Formalizes intercept recalibration ('calibration-in-the-large'), where an existing fixed linear predictor is adjusted purely by an additive offset to eliminate mean residual bias on a target dataset."
+    },
+    {
+      "title": "A Calibration Hierarchy for Risk Models Was Defined: From Utopia to Empirical Data",
+      "year": 2016,
+      "reason": "Defines the hierarchy of prediction calibration, isolating mean calibration (achieved by an additive intercept correction to eliminate systematic residual offsets) from slope and conditional calibration."
+    },
+    {
+      "title": "Conformalized Quantile Regression",
+      "year": 2019,
+      "reason": "Examines standard conformal calibration baselines where a fixed prediction function is shifted by a constant empirical residual offset, illustrating the operational behavior of additive adjustments on fixed predictors."
+    },
+    {
+      "title": "Algorithmic Learning in a Random World",
+      "year": 2005,
+      "reason": "Provides foundational theory on conformal prediction and residual calibration, analyzing how constant adjustments based on observed residuals correct global systematic shifts of fixed prediction rules."
+    }
+  ]
+}
+```

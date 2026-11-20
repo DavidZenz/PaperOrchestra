@@ -1,0 +1,1579 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 365958,
+      "db_response_time_ms": 283,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Generalized Linear Models Second Edition) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Generalized Linear Models Second Edition) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Generalized Linear Models (Second Edition)",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Generalized Linear Models %28Second Edition%29&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2488433815",
+        "doi": "https://doi.org/10.1201/9781420057683",
+        "title": "An Introduction to Generalized Linear Models, Second Edition",
+        "display_name": "An Introduction to Generalized Linear Models, Second Edition",
+        "alternate_titles": [],
+        "relevance_score": 301.75238,
+        "publication_year": 2001,
+        "publication_date": "2001-11-28",
+        "ids": {
+          "openalex": "https://openalex.org/W2488433815",
+          "doi": "https://doi.org/10.1201/9781420057683",
+          "mag": "2488433815"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1201/9781420057683",
+          "doi": "https://doi.org/10.1201/9781420057683",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1201/9781420057683",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210168942",
+            "display_name": "Chapman & Hall/CRC texts in statistical science/Texts in statistical science",
+            "issn_l": "2154-8137",
+            "issn": [
+              "2154-8137",
+              "2380-5161"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/P4310321043",
+            "host_organization_name": "Chapman and Hall London",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310321043",
+              "https://openalex.org/P4310320584",
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Chapman and Hall London",
+              "CRC Press",
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "book series"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Chapman &amp; Hall/CRC Texts in Statistical Science",
+          "raw_type": "book"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2488433815"
+        ],
+        "child_works_count": 14,
+        "type": "book",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5083659255",
+              "display_name": "Annette Jane Dobson",
+              "orcid": "https://orcid.org/0000-0003-4956-0124",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4956-0124"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I141945490",
+                "display_name": "University of British Columbia",
+                "ror": "https://ror.org/03rmrcq20",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I141945490"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I157674565",
+                "display_name": "University of Li\u00e8ge",
+                "ror": "https://ror.org/00afp2z80",
+                "country_code": "BE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I157674565"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I165143802",
+                "display_name": "The University of Queensland",
+                "ror": "https://ror.org/00rqy9422",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I165143802"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I51601045",
+                "display_name": "University of Bath",
+                "ror": "https://ror.org/002h8g185",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I51601045"
+                ]
+              }
+            ],
+            "countries": [
+              "AU",
+              "BE",
+              "CA",
+              "GB"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Annette Dobson",
+            "raw_affiliation_strings": [
+              "University of Bath, UK,University of British Columbia, Vancouver, Canada,University of Liege, Liege, Belgium,University of Queensland, Herston, Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Bath, UK,University of British Columbia, Vancouver, Canada,University of Liege, Liege, Belgium,University of Queensland, Herston, Australia",
+                "institution_ids": [
+                  "https://openalex.org/I141945490",
+                  "https://openalex.org/I157674565",
+                  "https://openalex.org/I165143802",
+                  "https://openalex.org/I51601045"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 4,
+        "institutions_distinct_count": 4,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5083659255"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I141945490",
+          "https://openalex.org/I157674565",
+          "https://openalex.org/I165143802",
+          "https://openalex.org/I51601045"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.6837,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 526,
+        "citation_normalized_percentile": {
+          "value": 0.81196581,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10243",
+          "display_name": "Statistical Methods and Bayesian Inference",
+          "score": 0.9613999724388123,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.9613999724388123,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.013899999670684338,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10968",
+            "display_name": "Statistical Distribution Estimation and Applications",
+            "score": 0.0071000000461936,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/generalized-linear-models",
+            "display_name": "generalized linear models",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/exponential-family",
+            "display_name": "exponential family",
+            "score": 0.8610000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/maximum-likelihood-estimation",
+            "display_name": "maximum likelihood estimation",
+            "score": 0.972000002861023
+          },
+          {
+            "id": "https://openalex.org/keywords/survival-analysis",
+            "display_name": "survival analysis",
+            "score": 0.9409999847412109
+          },
+          {
+            "id": "https://openalex.org/keywords/logistic-regression",
+            "display_name": "logistic regression",
+            "score": 0.8040000200271606
+          },
+          {
+            "id": "https://openalex.org/keywords/ordinal-logistic-regression",
+            "display_name": "ordinal logistic regression",
+            "score": 0.9679999947547913
+          },
+          {
+            "id": "https://openalex.org/keywords/generalized-estimating-equations",
+            "display_name": "generalized estimating equations",
+            "score": 0.8679999709129333
+          },
+          {
+            "id": "https://openalex.org/keywords/multilevel-models",
+            "display_name": "multilevel models",
+            "score": 0.8650000095367432
+          },
+          {
+            "id": "https://openalex.org/keywords/model-adequacy-assessment",
+            "display_name": "model adequacy assessment",
+            "score": 0.9259999990463257
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.39984002709388733
+          },
+          {
+            "id": "https://openalex.org/C28826006",
+            "wikidata": "https://www.wikidata.org/wiki/Q33521",
+            "display_name": "Applied mathematics",
+            "level": 1,
+            "score": 0.3305402100086212
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.29279449582099915
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.1201/9781420057683",
+            "doi": "https://doi.org/10.1201/9781420057683",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1201/9781420057683",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4210168942",
+              "display_name": "Chapman & Hall/CRC texts in statistical science/Texts in statistical science",
+              "issn_l": "2154-8137",
+              "issn": [
+                "2154-8137",
+                "2380-5161"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/P4310321043",
+              "host_organization_name": "Chapman and Hall London",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310321043",
+                "https://openalex.org/P4310320584",
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Chapman and Hall London",
+                "CRC Press",
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "book series"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Chapman &amp; Hall/CRC Texts in Statistical Science",
+            "raw_type": "book"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W2120080481",
+          "https://openalex.org/W4249124622",
+          "https://openalex.org/W4288625073",
+          "https://openalex.org/W4292024691",
+          "https://openalex.org/W4393234821",
+          "https://openalex.org/W117592956",
+          "https://openalex.org/W191383808",
+          "https://openalex.org/W4294844850",
+          "https://openalex.org/W1504480307",
+          "https://openalex.org/W4410036639"
+        ],
+        "abstract_inverted_index": {
+          "Generalized": [
+            0,
+            62,
+            151
+          ],
+          "linear": [
+            1,
+            49
+          ],
+          "models": [
+            2,
+            50,
+            88
+          ],
+          "provide": [
+            3
+          ],
+          "a": [
+            4,
+            143,
+            168
+          ],
+          "unified": [
+            5
+          ],
+          "theoretical": [
+            6
+          ],
+          "and": [
+            7,
+            44,
+            51,
+            57,
+            74,
+            89,
+            108,
+            115,
+            127,
+            182
+          ],
+          "conceptual": [
+            8
+          ],
+          "framework": [
+            9
+          ],
+          "for": [
+            10,
+            47,
+            123
+          ],
+          "many": [
+            11,
+            76,
+            95
+          ],
+          "of": [
+            12,
+            25,
+            29,
+            41,
+            72,
+            86,
+            96,
+            100,
+            134,
+            145,
+            167,
+            177,
+            185
+          ],
+          "the": [
+            13,
+            20,
+            26,
+            39,
+            75,
+            83,
+            97,
+            101,
+            140,
+            174,
+            183
+          ],
+          "most": [
+            14
+          ],
+          "commonly": [
+            15
+          ],
+          "used": [
+            16
+          ],
+          "statistical": [
+            17,
+            186
+          ],
+          "methods.": [
+            18,
+            90
+          ],
+          "In": [
+            19
+          ],
+          "ten": [
+            21
+          ],
+          "years": [
+            22
+          ],
+          "since": [
+            23
+          ],
+          "publication": [
+            24
+          ],
+          "first": [
+            27
+          ],
+          "edition": [
+            28,
+            93
+          ],
+          "this": [
+            30
+          ],
+          "bestselling": [
+            31
+          ],
+          "text,": [
+            32
+          ],
+          "great": [
+            33
+          ],
+          "strides": [
+            34
+          ],
+          "have": [
+            35
+          ],
+          "been": [
+            36
+          ],
+          "made": [
+            37
+          ],
+          "in": [
+            38,
+            45,
+            82
+          ],
+          "development": [
+            40
+          ],
+          "new": [
+            42,
+            92
+          ],
+          "methods": [
+            43,
+            122,
+            161
+          ],
+          "software": [
+            46
+          ],
+          "generalized": [
+            48,
+            112
+          ],
+          "other": [
+            52,
+            77
+          ],
+          "closely": [
+            53
+          ],
+          "related": [
+            54
+          ],
+          "models.Thoroughly": [
+            55
+          ],
+          "revised": [
+            56
+          ],
+          "updated,": [
+            58
+          ],
+          "An": [
+            59,
+            148
+          ],
+          "Introduction": [
+            60,
+            149
+          ],
+          "to": [
+            61,
+            68,
+            139,
+            150
+          ],
+          "Linear": [
+            63,
+            152
+          ],
+          "Models,": [
+            64,
+            153
+          ],
+          "Second": [
+            65,
+            154
+          ],
+          "Edition": [
+            66,
+            155
+          ],
+          "continues": [
+            67
+          ],
+          "initiate": [
+            69
+          ],
+          "intermediate": [
+            70
+          ],
+          "students": [
+            71
+          ],
+          "statistics,": [
+            73,
+            81
+          ],
+          "disciplines": [
+            78
+          ],
+          "that": [
+            79
+          ],
+          "use": [
+            80,
+            85
+          ],
+          "practical": [
+            84
+          ],
+          "these": [
+            87,
+            158
+          ],
+          "The": [
+            91
+          ],
+          "incorporates": [
+            94
+          ],
+          "important": [
+            98
+          ],
+          "developments": [
+            99
+          ],
+          "last": [
+            102
+          ],
+          "decade,": [
+            103
+          ],
+          "including": [
+            104
+          ],
+          "survival": [
+            105
+          ],
+          "analysis,": [
+            106
+          ],
+          "nominal": [
+            107
+          ],
+          "ordinal": [
+            109
+          ],
+          "logistic": [
+            110
+          ],
+          "regression,": [
+            111
+          ],
+          "estimating": [
+            113
+          ],
+          "equations,": [
+            114
+          ],
+          "multi-level": [
+            116
+          ],
+          "models.": [
+            117
+          ],
+          "It": [
+            118
+          ],
+          "also": [
+            119
+          ],
+          "includes": [
+            120
+          ],
+          "modern": [
+            121
+          ],
+          "checking": [
+            124
+          ],
+          "model": [
+            125
+          ],
+          "adequacy": [
+            126
+          ],
+          "examples": [
+            128,
+            163
+          ],
+          "from": [
+            129
+          ],
+          "an": [
+            130
+          ],
+          "even": [
+            131
+          ],
+          "wider": [
+            132
+          ],
+          "range": [
+            133
+          ],
+          "application.": [
+            135
+          ],
+          "Statistics": [
+            136
+          ],
+          "can": [
+            137
+          ],
+          "appear": [
+            138
+          ],
+          "uninitiated": [
+            141
+          ],
+          "as": [
+            142
+          ],
+          "collection": [
+            144
+          ],
+          "unrelated": [
+            146
+          ],
+          "tools.": [
+            147
+          ],
+          "illustrates": [
+            156
+          ],
+          "how": [
+            157
+          ],
+          "apparently": [
+            159
+          ],
+          "disparate": [
+            160
+          ],
+          "are": [
+            162
+          ],
+          "or": [
+            164
+          ],
+          "special": [
+            165
+          ],
+          "cases": [
+            166
+          ],
+          "conceptually": [
+            169
+          ],
+          "simple": [
+            170
+          ],
+          "structure": [
+            171
+          ],
+          "based": [
+            172
+          ],
+          "on": [
+            173
+          ],
+          "exponential": [
+            175
+          ],
+          "family": [
+            176
+          ],
+          "distribution,": [
+            178
+          ],
+          "maximum": [
+            179
+          ],
+          "likelihood": [
+            180
+          ],
+          "estimation,": [
+            181
+          ],
+          "principles": [
+            184
+          ],
+          "modelling.": [
+            187
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2488433815",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 26
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 32
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 30
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 22
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 26
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 33
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 21
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 20
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 18
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 16
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 25
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 29
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 25
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 30
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 24
+          }
+        ],
+        "updated_date": "2026-11-17T12:49:18.490984",
+        "created_date": "2016-08-23T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2942688449",
+        "doi": null,
+        "title": "Errata corrige \"An Introduction to Generalized Linear Models\" (second edition, 2002)",
+        "display_name": "Errata corrige \"An Introduction to Generalized Linear Models\" (second edition, 2002)",
+        "alternate_titles": [],
+        "relevance_score": 164.97443,
+        "publication_year": 2014,
+        "publication_date": "2014-02-17",
+        "ids": {
+          "openalex": "https://openalex.org/W2942688449",
+          "mag": "2942688449"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "pmh:oai:campus.cib.unibo.it:136959",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "http://campus.unibo.it/136959/1/Corrections.pdf",
+          "pdf_url": "http://campus.unibo.it/136959/1/Corrections.pdf",
+          "source": {
+            "id": "https://openalex.org/S4406922555",
+            "display_name": "AMS Campus - AlmaDL",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Materiale didattico / Altro"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2942688449"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5059822941",
+              "display_name": "Giuliano Galimberti",
+              "orcid": "https://orcid.org/0000-0002-9161-9671",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-9161-9671"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": true,
+            "raw_author_name": "Galimberti, Giuliano",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5059822941"
+        ],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10243",
+          "display_name": "Statistical Methods and Bayesian Inference",
+          "score": 0.9077000021934509,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.9077000021934509,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.026599999517202377,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10968",
+            "display_name": "Statistical Distribution Estimation and Applications",
+            "score": 0.012000000104308128,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/generalized-linear-models",
+            "display_name": "generalized linear models",
+            "score": 0.949999988079071
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.4597892761230469
+          },
+          {
+            "id": "https://openalex.org/C2777686260",
+            "wikidata": "https://www.wikidata.org/wiki/Q144037",
+            "display_name": "Calculus (dental)",
+            "level": 2,
+            "score": 0.4391915202140808
+          },
+          {
+            "id": "https://openalex.org/C144237770",
+            "wikidata": "https://www.wikidata.org/wiki/Q747534",
+            "display_name": "Mathematical economics",
+            "level": 1,
+            "score": 0.35318657755851746
+          },
+          {
+            "id": "https://openalex.org/C28826006",
+            "wikidata": "https://www.wikidata.org/wiki/Q33521",
+            "display_name": "Applied mathematics",
+            "level": 1,
+            "score": 0.3282463550567627
+          },
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.06675925850868225
+          },
+          {
+            "id": "https://openalex.org/C199343813",
+            "wikidata": "https://www.wikidata.org/wiki/Q12128",
+            "display_name": "Dentistry",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "pmh:oai:campus.cib.unibo.it:136959",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://campus.unibo.it/136959/1/Corrections.pdf",
+            "pdf_url": "http://campus.unibo.it/136959/1/Corrections.pdf",
+            "source": {
+              "id": "https://openalex.org/S4406922555",
+              "display_name": "AMS Campus - AlmaDL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Materiale didattico / Altro"
+          },
+          {
+            "id": "pmh:oai:campus.cib.unibo.it:175152",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://campus.unibo.it/175152/1/Corrections.pdf",
+            "pdf_url": "http://campus.unibo.it/175152/1/Corrections.pdf",
+            "source": {
+              "id": "https://openalex.org/S4406922555",
+              "display_name": "AMS Campus - AlmaDL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Materiale didattico / Altro"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W102918252",
+          "https://openalex.org/W7019329427",
+          "https://openalex.org/W149781699",
+          "https://openalex.org/W4300899637",
+          "https://openalex.org/W7010058528",
+          "https://openalex.org/W7029331673",
+          "https://openalex.org/W4382566559",
+          "https://openalex.org/W3024793038"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2942688449",
+        "counts_by_year": [],
+        "updated_date": "2026-11-14T11:04:58.165337",
+        "created_date": "2025-10-10T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W102918252",
+        "doi": null,
+        "title": "An Introduction to Generalized Linear Models (second edition, 2002) Annette Dobson: Errata Corrige",
+        "display_name": "An Introduction to Generalized Linear Models (second edition, 2002) Annette Dobson: Errata Corrige",
+        "alternate_titles": [],
+        "relevance_score": 150.78699,
+        "publication_year": 2009,
+        "publication_date": "2009-04-17",
+        "ids": {
+          "openalex": "https://openalex.org/W102918252",
+          "mag": "102918252"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "pmh:oai:campus.cib.unibo.it:104268",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "http://campus.unibo.it/104268/1/Corrections.pdf",
+          "pdf_url": "http://campus.unibo.it/104268/1/Corrections.pdf",
+          "source": {
+            "id": "https://openalex.org/S4406922555",
+            "display_name": "AMS Campus - AlmaDL",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Materiale didattico / Altro"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W102918252"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5059822941",
+              "display_name": "Giuliano Galimberti",
+              "orcid": "https://orcid.org/0000-0002-9161-9671",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-9161-9671"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": true,
+            "raw_author_name": "Galimberti, Giuliano",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5059822941"
+        ],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10243",
+          "display_name": "Statistical Methods and Bayesian Inference",
+          "score": 0.9394999742507935,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.9394999742507935,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.018699999898672104,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10968",
+            "display_name": "Statistical Distribution Estimation and Applications",
+            "score": 0.00839999970048666,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/generalized-linear-models",
+            "display_name": "generalized linear models",
+            "score": 0.9539999961853027
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C144237770",
+            "wikidata": "https://www.wikidata.org/wiki/Q747534",
+            "display_name": "Mathematical economics",
+            "level": 1,
+            "score": 0.4363762140274048
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.393424391746521
+          },
+          {
+            "id": "https://openalex.org/C138885662",
+            "wikidata": "https://www.wikidata.org/wiki/Q5891",
+            "display_name": "Philosophy",
+            "level": 0,
+            "score": 0.3253920078277588
+          }
+        ],
+        "mesh": [],
+        "locations_count": 3,
+        "locations": [
+          {
+            "id": "pmh:oai:campus.cib.unibo.it:104268",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://campus.unibo.it/104268/1/Corrections.pdf",
+            "pdf_url": "http://campus.unibo.it/104268/1/Corrections.pdf",
+            "source": {
+              "id": "https://openalex.org/S4406922555",
+              "display_name": "AMS Campus - AlmaDL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Materiale didattico / Altro"
+          },
+          {
+            "id": "pmh:oai:campus.cib.unibo.it:15503",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://campus.unibo.it/15503/1/Corrections.pdf",
+            "pdf_url": "http://campus.unibo.it/15503/1/Corrections.pdf",
+            "source": {
+              "id": "https://openalex.org/S4406922555",
+              "display_name": "AMS Campus - AlmaDL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Materiale didattico / Altro"
+          },
+          {
+            "id": "pmh:oai:campus.cib.unibo.it:74827",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://campus.unibo.it/74827/1/Corrections.pdf",
+            "pdf_url": "http://campus.unibo.it/74827/1/Corrections.pdf",
+            "source": {
+              "id": "https://openalex.org/S4406922555",
+              "display_name": "AMS Campus - AlmaDL",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Materiale didattico / Altro"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W7029331673",
+          "https://openalex.org/W4214668002",
+          "https://openalex.org/W2942688449",
+          "https://openalex.org/W7061856404",
+          "https://openalex.org/W2795496664",
+          "https://openalex.org/W4300899637",
+          "https://openalex.org/W3149574988",
+          "https://openalex.org/W7019329427"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W102918252",
+        "counts_by_year": [],
+        "updated_date": "2026-11-14T11:04:58.165337",
+        "created_date": "2025-10-10T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

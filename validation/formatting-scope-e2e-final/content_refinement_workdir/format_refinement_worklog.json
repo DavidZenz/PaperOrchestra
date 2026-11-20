@@ -1,0 +1,59 @@
+{
+    "v1": {
+        "outcome": "ACCEPTED_COMPILE_SUCCESS",
+        "formatting_feedback": {
+            "figure_and_tables": {
+                "Figure 1": {
+                    "detected_issue": "None",
+                    "suggested_fix": "None"
+                },
+                "Figure 2": {
+                    "detected_issue": "None",
+                    "suggested_fix": "None"
+                },
+                "Table 1": {
+                    "detected_issue": "The table's top rule sits directly under the second caption line and underlines 'residual correction and evaluate it.' The caption and the rule collide.",
+                    "suggested_fix": "Add vertical space between the caption and the table's top rule (for example, a small \\vspace or a larger \\abovecaptionskip/\\belowcaptionskip for this float), so the rule no longer touches the caption text."
+                }
+            },
+            "other_issues": [
+                {
+                    "page": 7,
+                    "element": "'Figure source provenance' section, first paragraph, file paths 'figure_code/fig_intercept_error/worker.R' and 'figure_code/fig_residual_workflow/source.tex'",
+                    "detected_issue": "Long monospace paths run past the right edge of the left column and into the gutter (text reaches about x=845 against a column edge near x=745).",
+                    "suggested_fix": "Let the paths break across lines by wrapping them in \\path{} with \\allowbreak at slashes, or with \\seqsplit, without changing their text."
+                },
+                {
+                    "page": 5,
+                    "element": "Figure 1 float placement at top of page 5",
+                    "detected_issue": "A large blank band sits above Figure 1 and another below its caption, so the float placement leaves a large amount of unused space on the page.",
+                    "suggested_fix": "Adjust the float placement specifier for Figure 1 (for example, [t] or [tbp]) so it fills the top of the page without the blank band."
+                },
+                {
+                    "page": 7,
+                    "element": "'Figure source provenance' section (page 7) and a second 'Figure source provenance' section (page 11)",
+                    "detected_issue": "The provenance section appears twice with different wording, and the page 7 copy is followed by a mostly blank page. This duplicates content and leaves a large amount of blank space.",
+                    "suggested_fix": "Unresolved: consolidating or removing the duplicate section changes content and structure, which is outside the permitted formatting scope. Needs a content decision."
+                },
+                {
+                    "page": 1,
+                    "element": "Document layout (all pages)",
+                    "detected_issue": "The rendered article uses a two-column layout. The guideline requires the existing single-column 11-point article with one-inch margins.",
+                    "suggested_fix": "Unresolved: changing the column layout is outside the permitted formatting scope (figure/table placement and width only). Needs a decision."
+                },
+                {
+                    "page": 1,
+                    "element": "Whole paper (Abstract through References), length",
+                    "detected_issue": "The manuscript runs about 11 pages with substantial prose, well beyond the requested approximately 700\u20131000 word short technical teaching note.",
+                    "suggested_fix": "Unresolved: reducing length requires content edits, which are outside the permitted formatting scope."
+                },
+                {
+                    "page": 5,
+                    "element": "Figure 1 schematic, 'x' label on the arrow entering 'Baseline predictor'",
+                    "detected_issue": "The 'x' label sits on top of the connecting arrow line near the left edge of the Baseline predictor box, making it hard to read.",
+                    "suggested_fix": "Unresolved: moving the label requires editing the figure source, which is outside the permitted formatting scope."
+                }
+            ]
+        }
+    }
+}

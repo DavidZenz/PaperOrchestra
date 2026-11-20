@@ -1,0 +1,67 @@
+```json
+{
+  "section_name": "Intercept Adjustment and In-Sample Error Evaluation",
+  "candidates": [
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Establishes the foundational statistical theory for why apparent (in-sample) error is downward-biased when evaluated on the same observations used to determine model adjustments, demonstrating that fitting parameters to empirical errors yields overly optimistic error estimates."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Connects in-sample residual fitting to degrees of freedom and covariance penalties, showing how estimating an adjustment from observed outcomes consumes degrees of freedom that in-sample evaluation fundamentally ignores."
+    },
+    {
+      "title": "Regression, Prediction and Shrinkage",
+      "year": 1983,
+      "reason": "Analyzes the predictive shortfall of ordinary least-squares and intercept-adjusted predictors, explaining why apparent zero or reduced error on a construction sample fails to translate into predictive validity on new observations."
+    },
+    {
+      "title": "A calibration hierarchy for risk models was defined: from utopia to empirical data",
+      "year": 2016,
+      "reason": "Formalizes mean calibration and intercept recalibration, analyzing how adjusting an intercept to match the mean response across a sample removes mean offset while delineating the difference between apparent calibration and out-of-sample evaluation."
+    },
+    {
+      "title": "Updating methods improved the performance of a clinical prediction model in new patients",
+      "year": 2008,
+      "reason": "Provides empirical and methodological analysis of updating fixed predictors via intercept adjustment, evaluating the behavior and limits of mean residual corrections on small samples versus independent validation."
+    },
+    {
+      "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+      "year": 2004,
+      "reason": "Investigates model recalibration through intercept adjustment and shrinkage, demonstrating how evaluating fitted adjustments on limited observation sets induces optimism and fails to establish general performance."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Introduces the classic cross-validation framework to separate model adjustment from evaluation, formalizing why using the same data points to both estimate a correction and score its error invalidates predictive assessment."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Examines sample reuse methods to decouple model parameter fitting from predictive evaluation, proving why in-sample goodness-of-fit cannot be taken as predictive evidence."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Develops generalized degrees of freedom to measure how tuning or fitting adjustments directly to sample data deflates observed residuals and introduces severe optimism into apparent evaluation metrics."
+    },
+    {
+      "title": "Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors",
+      "year": 1996,
+      "reason": "Details the distinctions between apparent in-sample fit and genuine predictive performance, specifically critiquing the conflation of residual minimization on development samples with predictive reliability."
+    },
+    {
+      "title": "Some Comments on Cp",
+      "year": 1973,
+      "reason": "Derives the analytical penalty on in-sample residual sums of squares needed to account for parameter estimation, illustrating why raw in-sample error fails to reflect expected prediction error."
+    },
+    {
+      "title": "Minimum sample size for external validation of a clinical prediction model with a binary outcome",
+      "year": 2021,
+      "reason": "Analyzes sample size dependencies and uncertainty when evaluating calibration intercepts, demonstrating that small finite observation samples cannot reliably establish intercept adjustment accuracy beyond the sample itself."
+    }
+  ]
+}
+```

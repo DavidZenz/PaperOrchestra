@@ -1,0 +1,80 @@
+{
+  "section_name": "In-Sample Residual Correction and Predictive Evaluation",
+  "candidates": [
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Examines the fundamental gap between the apparent error rate computed on the training sample and true predictive error, establishing formal methods to quantify optimism when parameters are fit and tested on identical data."
+    },
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Provides mathematical formulations for the downward bias of in-sample error assessments when a predictive adjustment is estimated from and evaluated on the same observed data points."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Unifies apparent error and generalization performance through covariance penalties, demonstrating why fitted residual reductions do not constitute out-of-sample predictive evidence."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Foundational paper that distinguishes parameter estimation/choice from predictive assessment, demonstrating that valid evaluation requires separating data used for prescription fitting from evaluation data."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Contrasts parameter estimation on a fixed sample with predictive validity on unseen data, showing that evaluating an adjustment on the observations used to fit it provides no evidence of generalization."
+    },
+    {
+      "title": "The Relationship Between Variable Selection and Data Augmentation and a Method for Prediction",
+      "year": 1974,
+      "reason": "Introduces the Prediction Sum of Squares (PRESS) statistic, explicitly contrasting fitted in-sample residuals with prediction residuals where evaluated observations are omitted from the estimation step."
+    },
+    {
+      "title": "Regression, Prediction and Shrinkage",
+      "year": 1983,
+      "reason": "Analyzes prediction decay (shrinkage), formalizing why minimizing residual errors on a construction sample results in overly optimistic apparent performance that degrades on fresh observations."
+    },
+    {
+      "title": "Cross-Validation of Regression Models",
+      "year": 1984,
+      "reason": "Examines predictive evaluation of regression models, demonstrating that goodness-of-fit measures calculated on the data used to estimate parameters fail to assess out-of-sample predictive validity."
+    },
+    {
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "year": 2010,
+      "reason": "Investigates performance evaluation bias when the same finite dataset is used to tune or select model adjustments and subsequently quantify their predictive efficacy."
+    },
+    {
+      "title": "Circular Analysis in Systems Neuroscience: The Dangers of Double Dipping",
+      "year": 2009,
+      "reason": "Provides a comprehensive critique of circular analysis ('double dipping') where using identical observations to estimate an effect or offset and to evaluate that adjustment creates entirely spurious evidence."
+    },
+    {
+      "title": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year": 2006,
+      "reason": "Demonstrates the severe optimistic bias that occurs when model adjustments or hyperparameter choices are determined and assessed on the same data sample."
+    },
+    {
+      "title": "A Note on Screening Regression Equations",
+      "year": 1983,
+      "reason": "Illustrates how deriving predictive adjustments or submodels from observed data creates illusory fits and zero or near-zero errors on the derivation sample without true predictive value."
+    },
+    {
+      "title": "Internal Validation of Predictive Models: Efficiency of Some Procedures for Logistic Regression Analysis",
+      "year": 2001,
+      "reason": "Addresses apparent performance versus predictive performance in finite samples, formalizing optimism quantification when models are evaluated on the data from which they were derived."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Develops generalized degrees of freedom to capture how fitting adjustments to observed errors absorbs residual variation on that sample, showing that in-sample residual reduction masks predictive limitations."
+    },
+    {
+      "title": "The Reusable Holdout: Preserving Validity in Adaptive Data Analysis",
+      "year": 2015,
+      "reason": "Analyzes the loss of statistical validity when empirical observations are reused iteratively to guide adjustments and evaluate their predictive reliability."
+    }
+  ]
+}

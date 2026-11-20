@@ -12,7 +12,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1] / "paper-orchestra/ven
 from orchestra_execution import execution_policy
 from orchestra_runtime import Runtime, configure
 import orchestra_runtime
-from orchestra_transports import prepare_invocation, inspect_invocation
+from orchestra_transports import prepare_invocation, inspect_invocation, validate_invocation_plan
 from utils.gemini_utils import call_gemini_with_contents
 from tests.test_multiruntime_audit import claude_events, write_events
 
@@ -74,6 +74,22 @@ class NativeGuardTests(unittest.TestCase):
         result = self.inspect(claude_events("labelled-session","fixture"))
         self.assertFalse(result["completed"])
         self.assertTrue(any("image bytes differ" in x for x in result["errors"]))
+
+    def test_transport_plan_preserves_external_metadata_line_endings(self):
+        prompt = "First line\r\nSecond line\nThird line\rlast line with café"
+        path = self.root / "prompt.txt"
+        for backend in ("codex", "claude-code", "antigravity", "mistral-vibe"):
+            with self.subTest(backend=backend):
+                selection = {"backend": backend, "model": None, "effort": None}
+                plan = prepare_invocation(selection, prompt, [], False, self.root)
+                data = json.dumps(plan).encode("utf-8")
+                (self.root / "transport.json").write_bytes(data)
+                request = {"backend": backend, "search_required": False,
+                           "transport_plan_sha256": hashlib.sha256(data).hexdigest()}
+                path.write_bytes(prompt.encode("utf-8"))
+                self.assertEqual(validate_invocation_plan(self.root, request, plan["command"], selection), [])
+                path.write_bytes(prompt.replace("\r\n", "\n").encode("utf-8"))
+                self.assertTrue(validate_invocation_plan(self.root, request, plan["command"], selection))
 
     def test_known_model_effort_incompatibility_fails_during_policy_resolution(self):
         for model,effort in [("mistral-large-4","max"),("mistral-small-2603","medium"),("zai-glm-5-3","medium")]:

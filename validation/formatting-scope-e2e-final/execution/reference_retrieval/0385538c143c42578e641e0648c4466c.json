@@ -1,0 +1,2496 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 7722657,
+      "db_response_time_ms": 1283,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (An Analysis of Transformations) in the title, abstract, or full text",
+        "x_new_oql": "get works with (An Analysis of Transformations) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "An Analysis of Transformations",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:An Analysis of Transformations&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W129305155",
+        "doi": "https://doi.org/10.1111/j.2517-6161.1964.tb00553.x",
+        "title": "An Analysis of Transformations",
+        "display_name": "An Analysis of Transformations",
+        "alternate_titles": [],
+        "relevance_score": 135.00073,
+        "publication_year": 1964,
+        "publication_date": "1964-07-01",
+        "ids": {
+          "openalex": "https://openalex.org/W129305155",
+          "doi": "https://doi.org/10.1111/j.2517-6161.1964.tb00553.x",
+          "mag": "129305155"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1111/j.2517-6161.1964.tb00553.x",
+          "doi": "https://doi.org/10.1111/j.2517-6161.1964.tb00553.x",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1111/j.2517-6161.1964.tb00553.x",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S145009937",
+            "display_name": "Journal of the Royal Statistical Society Series B (Statistical Methodology)",
+            "issn_l": "1369-7412",
+            "issn": [
+              "1369-7412",
+              "1467-9868"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-1",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W129305155"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5112669993",
+              "display_name": "George E. P. Box",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1304256225",
+                "display_name": "University of Wisconsin System",
+                "ror": "https://ror.org/03ydkyb10",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I1304256225"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "G. E. P. Box",
+            "raw_affiliation_strings": [
+              "University of Wisconsin"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Wisconsin",
+                "institution_ids": [
+                  "https://openalex.org/I1304256225"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5103803344",
+              "display_name": "David Roxbee Cox",
+              "orcid": "https://orcid.org/0000-0002-2189-9743",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2189-9743"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124357947",
+                "display_name": "University of London",
+                "ror": "https://ror.org/04cw6st05",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124357947"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I98259816",
+                "display_name": "Birkbeck, University of London",
+                "ror": "https://ror.org/02mb95055",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124357947",
+                  "https://openalex.org/I98259816"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "D. R. Cox",
+            "raw_affiliation_strings": [
+              "Birkbeck College \u00a0",
+              "University of London \u00a0",
+              "Birkbeck College,University of London"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Birkbeck College \u00a0",
+                "institution_ids": [
+                  "https://openalex.org/I98259816"
+                ]
+              },
+              {
+                "raw_affiliation_string": "University of London \u00a0",
+                "institution_ids": [
+                  "https://openalex.org/I124357947"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Birkbeck College,University of London",
+                "institution_ids": [
+                  "https://openalex.org/I124357947",
+                  "https://openalex.org/I98259816"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 2,
+        "institutions_distinct_count": 3,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 2621,
+          "currency": "GBP",
+          "value_usd": 3456
+        },
+        "apc_paid": null,
+        "fwci": 15.6649,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 17164,
+        "citation_normalized_percentile": {
+          "value": 0.99484915,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "26",
+          "issue": "2",
+          "first_page": "211",
+          "last_page": "243"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10243",
+          "display_name": "Statistical Methods and Bayesian Inference",
+          "score": 0.35109999775886536,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10243",
+            "display_name": "Statistical Methods and Bayesian Inference",
+            "score": 0.35109999775886536,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.323199987411499,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.1941000074148178,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/linear-models",
+            "display_name": "linear models",
+            "score": 0.5609999895095825
+          },
+          {
+            "id": "https://openalex.org/keywords/normality",
+            "display_name": "normality",
+            "score": 0.4519999921321869
+          },
+          {
+            "id": "https://openalex.org/keywords/homogeneity-of-variances",
+            "display_name": "homoscedasticity",
+            "score": 0.9980000257492065
+          },
+          {
+            "id": "https://openalex.org/keywords/additivity",
+            "display_name": "additivity",
+            "score": 0.8479999899864197
+          },
+          {
+            "id": "https://openalex.org/keywords/likelihood-function",
+            "display_name": "likelihood function",
+            "score": 0.878000020980835
+          },
+          {
+            "id": "https://openalex.org/keywords/posterior-distribution",
+            "display_name": "posterior distribution",
+            "score": 0.9290000200271606
+          },
+          {
+            "id": "https://openalex.org/keywords/bayesian-inference",
+            "display_name": "Bayesian inference",
+            "score": 0.7289999723434448
+          },
+          {
+            "id": "https://openalex.org/keywords/model-selection",
+            "display_name": "model selection",
+            "score": 0.3199999928474426
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C104409967",
+            "wikidata": "https://www.wikidata.org/wiki/Q1054836",
+            "display_name": "Homoscedasticity",
+            "level": 3,
+            "score": 0.992197573184967
+          },
+          {
+            "id": "https://openalex.org/C204241405",
+            "wikidata": "https://www.wikidata.org/wiki/Q461499",
+            "display_name": "Transformation (genetics)",
+            "level": 3,
+            "score": 0.7468655109405518
+          },
+          {
+            "id": "https://openalex.org/C2776157432",
+            "wikidata": "https://www.wikidata.org/wiki/Q1375683",
+            "display_name": "Normality",
+            "level": 2,
+            "score": 0.636847734451294
+          },
+          {
+            "id": "https://openalex.org/C28826006",
+            "wikidata": "https://www.wikidata.org/wiki/Q33521",
+            "display_name": "Applied mathematics",
+            "level": 1,
+            "score": 0.5651126503944397
+          },
+          {
+            "id": "https://openalex.org/C38803922",
+            "wikidata": "https://www.wikidata.org/wiki/Q95745348",
+            "display_name": "Additive function",
+            "level": 2,
+            "score": 0.5528202652931213
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.5252187848091125
+          },
+          {
+            "id": "https://openalex.org/C2777027219",
+            "wikidata": "https://www.wikidata.org/wiki/Q1284190",
+            "display_name": "Constant (computer programming)",
+            "level": 2,
+            "score": 0.5096254348754883
+          },
+          {
+            "id": "https://openalex.org/C150670458",
+            "wikidata": "https://www.wikidata.org/wiki/Q4272815",
+            "display_name": "Data transformation",
+            "level": 3,
+            "score": 0.487708181142807
+          },
+          {
+            "id": "https://openalex.org/C177264268",
+            "wikidata": "https://www.wikidata.org/wiki/Q1514741",
+            "display_name": "Set (abstract data type)",
+            "level": 2,
+            "score": 0.48437365889549255
+          },
+          {
+            "id": "https://openalex.org/C49766605",
+            "wikidata": "https://www.wikidata.org/wiki/Q207643",
+            "display_name": "Linear map",
+            "level": 2,
+            "score": 0.4589328467845917
+          },
+          {
+            "id": "https://openalex.org/C163175372",
+            "wikidata": "https://www.wikidata.org/wiki/Q3339222",
+            "display_name": "Linear model",
+            "level": 2,
+            "score": 0.4552217721939087
+          },
+          {
+            "id": "https://openalex.org/C196083921",
+            "wikidata": "https://www.wikidata.org/wiki/Q7915758",
+            "display_name": "Variance (accounting)",
+            "level": 2,
+            "score": 0.4257887303829193
+          },
+          {
+            "id": "https://openalex.org/C101104100",
+            "wikidata": "https://www.wikidata.org/wiki/Q1063540",
+            "display_name": "Heteroscedasticity",
+            "level": 2,
+            "score": 0.3595694899559021
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.35303688049316406
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.3461863398551941
+          },
+          {
+            "id": "https://openalex.org/C202444582",
+            "wikidata": "https://www.wikidata.org/wiki/Q837863",
+            "display_name": "Pure mathematics",
+            "level": 1,
+            "score": 0.15472877025604248
+          },
+          {
+            "id": "https://openalex.org/C134306372",
+            "wikidata": "https://www.wikidata.org/wiki/Q7754",
+            "display_name": "Mathematical analysis",
+            "level": 1,
+            "score": 0.14149001240730286
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.12324610352516174
+          },
+          {
+            "id": "https://openalex.org/C135572916",
+            "wikidata": "https://www.wikidata.org/wiki/Q193351",
+            "display_name": "Data warehouse",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C104317684",
+            "wikidata": "https://www.wikidata.org/wiki/Q7187",
+            "display_name": "Gene",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C199360897",
+            "wikidata": "https://www.wikidata.org/wiki/Q9143",
+            "display_name": "Programming language",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C121955636",
+            "wikidata": "https://www.wikidata.org/wiki/Q4116214",
+            "display_name": "Accounting",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C55493867",
+            "wikidata": "https://www.wikidata.org/wiki/Q7094",
+            "display_name": "Biochemistry",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C185592680",
+            "wikidata": "https://www.wikidata.org/wiki/Q2329",
+            "display_name": "Chemistry",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C144133560",
+            "wikidata": "https://www.wikidata.org/wiki/Q4830453",
+            "display_name": "Business",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 3,
+        "locations": [
+          {
+            "id": "doi:10.1111/j.2517-6161.1964.tb00553.x",
+            "doi": "https://doi.org/10.1111/j.2517-6161.1964.tb00553.x",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1111/j.2517-6161.1964.tb00553.x",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S145009937",
+              "display_name": "Journal of the Royal Statistical Society Series B (Statistical Methodology)",
+              "issn_l": "1369-7412",
+              "issn": [
+                "1369-7412",
+                "1467-9868"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-1",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311648",
+              "host_organization_name": "Oxford University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311648",
+                "https://openalex.org/P4310311647"
+              ],
+              "host_organization_lineage_names": [
+                "Oxford University Press",
+                "University of Oxford"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:CiteSeerX.psu:10.1.1.321.3819",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.321.3819",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "http://pegasus.cc.ucf.edu/~lni/sta6236/BoxCox1964.pdf",
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:AD0604262",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://oai.dtic.mil/oai/oai?&amp;verb=getRecord&amp;metadataPrefix=html&amp;identifier=AD0604262",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4406923043",
+              "display_name": "Defense Technical Information Center (DTIC)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "DTIC AND NTIS",
+            "raw_type": "Text"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 16,
+        "referenced_works": [
+          "https://openalex.org/W1619652270",
+          "https://openalex.org/W1966901658",
+          "https://openalex.org/W1967917628",
+          "https://openalex.org/W1986465163",
+          "https://openalex.org/W2011786242",
+          "https://openalex.org/W2025610145",
+          "https://openalex.org/W2027713282",
+          "https://openalex.org/W2122817968",
+          "https://openalex.org/W2126163471",
+          "https://openalex.org/W2145974393",
+          "https://openalex.org/W2148802697",
+          "https://openalex.org/W2316025483",
+          "https://openalex.org/W2411066114",
+          "https://openalex.org/W4231049928",
+          "https://openalex.org/W4255655703",
+          "https://openalex.org/W4297397521"
+        ],
+        "related_works": [
+          "https://openalex.org/W2032958015",
+          "https://openalex.org/W2062676349",
+          "https://openalex.org/W2093713098",
+          "https://openalex.org/W961350556",
+          "https://openalex.org/W2025837725",
+          "https://openalex.org/W2919066451",
+          "https://openalex.org/W2341769991",
+          "https://openalex.org/W2049779363",
+          "https://openalex.org/W2500128420",
+          "https://openalex.org/W4256389019"
+        ],
+        "abstract_inverted_index": {
+          "Summary": [
+            0
+          ],
+          "In": [
+            1,
+            39
+          ],
+          "the": [
+            2,
+            44,
+            65,
+            69,
+            73,
+            76,
+            83,
+            87,
+            99,
+            106
+          ],
+          "analysis": [
+            3
+          ],
+          "of": [
+            4,
+            36,
+            75,
+            93,
+            105
+          ],
+          "data": [
+            5
+          ],
+          "it": [
+            6
+          ],
+          "is": [
+            7,
+            55,
+            115
+          ],
+          "often": [
+            8
+          ],
+          "assumed": [
+            9
+          ],
+          "that": [
+            10,
+            48
+          ],
+          "observations": [
+            11
+          ],
+          "y": [
+            12,
+            14
+          ],
+          "1,": [
+            13
+          ],
+          "2,": [
+            15
+          ],
+          "\u2026,": [
+            16
+          ],
+          "yn": [
+            17
+          ],
+          "are": [
+            18,
+            79,
+            101,
+            119
+          ],
+          "independently": [
+            19
+          ],
+          "normally": [
+            20
+          ],
+          "distributed": [
+            21
+          ],
+          "with": [
+            22,
+            26,
+            121
+          ],
+          "constant": [
+            23
+          ],
+          "variance": [
+            24
+          ],
+          "and": [
+            25,
+            71,
+            86,
+            96
+          ],
+          "expectations": [
+            27
+          ],
+          "specified": [
+            28
+          ],
+          "by": [
+            29,
+            81
+          ],
+          "a": [
+            30,
+            34,
+            50
+          ],
+          "model": [
+            31,
+            54,
+            78
+          ],
+          "linear": [
+            32,
+            53,
+            77
+          ],
+          "in": [
+            33
+          ],
+          "set": [
+            35
+          ],
+          "parameters": [
+            37,
+            74
+          ],
+          "\u03b8.": [
+            38
+          ],
+          "this": [
+            40
+          ],
+          "paper": [
+            41
+          ],
+          "we": [
+            42
+          ],
+          "make": [
+            43
+          ],
+          "less": [
+            45
+          ],
+          "restrictive": [
+            46
+          ],
+          "assumption": [
+            47
+          ],
+          "such": [
+            49
+          ],
+          "normal,": [
+            51
+          ],
+          "homoscedastic,": [
+            52
+          ],
+          "appropriate": [
+            56
+          ],
+          "after": [
+            57
+          ],
+          "some": [
+            58
+          ],
+          "suitable": [
+            59
+          ],
+          "transformation": [
+            60,
+            70,
+            100
+          ],
+          "has": [
+            61
+          ],
+          "been": [
+            62
+          ],
+          "applied": [
+            63
+          ],
+          "to": [
+            64,
+            98,
+            109
+          ],
+          "y's.": [
+            66
+          ],
+          "Inferences": [
+            67
+          ],
+          "about": [
+            68,
+            72
+          ],
+          "made": [
+            80
+          ],
+          "computing": [
+            82
+          ],
+          "likelihood": [
+            84
+          ],
+          "function": [
+            85
+          ],
+          "relevant": [
+            88
+          ],
+          "posterior": [
+            89
+          ],
+          "distribution.": [
+            90
+          ],
+          "The": [
+            91,
+            103,
+            117
+          ],
+          "contributions": [
+            92
+          ],
+          "normality,": [
+            94
+          ],
+          "homoscedasticity": [
+            95
+          ],
+          "additivity": [
+            97
+          ],
+          "separated.": [
+            102
+          ],
+          "relation": [
+            104
+          ],
+          "present": [
+            107
+          ],
+          "methods": [
+            108,
+            118
+          ],
+          "earlier": [
+            110
+          ],
+          "procedures": [
+            111
+          ],
+          "for": [
+            112
+          ],
+          "finding": [
+            113
+          ],
+          "transformations": [
+            114
+          ],
+          "discussed.": [
+            116
+          ],
+          "illustrated": [
+            120
+          ],
+          "examples.": [
+            122
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W129305155",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 820
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 824
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 758
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 785
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 752
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 886
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 760
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 840
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 760
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 678
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 694
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 664
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 653
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 529
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 597
+          }
+        ],
+        "updated_date": "2026-11-19T14:11:59.513116",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W3035751571",
+        "doi": null,
+        "title": "An analysis of transformations (with discussion)",
+        "display_name": "An analysis of transformations (with discussion)",
+        "alternate_titles": [],
+        "relevance_score": 129.85956,
+        "publication_year": 1964,
+        "publication_date": "1964-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W3035751571",
+          "mag": "3035751571"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "mag:3035751571",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://ci.nii.ac.jp/naid/10009669212",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S185328345",
+            "display_name": "Journal of the Royal Statistical Society Series A (Statistics in Society)",
+            "issn_l": "0964-1998",
+            "issn": [
+              "0964-1998",
+              "1467-985X"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-2",
+              "ki-jl-2",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311763",
+            "host_organization_name": "Royal Statistical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311763"
+            ],
+            "host_organization_lineage_names": [
+              "Royal Statistical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Journal of the Royal Statistical Society Series A (Statistics in Society)",
+          "raw_type": null
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W3035751571"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5112669993",
+              "display_name": "George E. P. Box",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": true,
+            "raw_author_name": "George E. P. Box",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5112669993"
+        ],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 2621,
+          "currency": "GBP",
+          "value_usd": 3456
+        },
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 2666,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "26",
+          "issue": null,
+          "first_page": "211",
+          "last_page": "246"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T13141",
+          "display_name": "Statistical Methods and Applications",
+          "score": 0.8076000213623047,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.8076000213623047,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.03790000081062317,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13500",
+            "display_name": "Probability and Statistical Research",
+            "score": 0.03189999982714653,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/transformation",
+            "display_name": "transformation",
+            "score": 0.7799999713897705
+          },
+          {
+            "id": "https://openalex.org/keywords/transformation-theory",
+            "display_name": "transformation theory",
+            "score": 0.31700000166893005
+          },
+          {
+            "id": "https://openalex.org/keywords/probability-distributions",
+            "display_name": "probability distributions",
+            "score": 0.47999998927116394
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.4075056314468384
+          },
+          {
+            "id": "https://openalex.org/C94375191",
+            "wikidata": "https://www.wikidata.org/wiki/Q11205",
+            "display_name": "Arithmetic",
+            "level": 1,
+            "score": 0.3692002594470978
+          },
+          {
+            "id": "https://openalex.org/C136119220",
+            "wikidata": "https://www.wikidata.org/wiki/Q1000660",
+            "display_name": "Algebra over a field",
+            "level": 2,
+            "score": 0.32807329297065735
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.32233303785324097
+          },
+          {
+            "id": "https://openalex.org/C202444582",
+            "wikidata": "https://www.wikidata.org/wiki/Q837863",
+            "display_name": "Pure mathematics",
+            "level": 1,
+            "score": 0.1452326476573944
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "mag:3035751571",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://ci.nii.ac.jp/naid/10009669212",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S185328345",
+              "display_name": "Journal of the Royal Statistical Society Series A (Statistics in Society)",
+              "issn_l": "0964-1998",
+              "issn": [
+                "0964-1998",
+                "1467-985X"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-2",
+                "ki-jl-2",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311763",
+              "host_organization_name": "Royal Statistical Society",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311763"
+              ],
+              "host_organization_lineage_names": [
+                "Royal Statistical Society"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Journal of the Royal Statistical Society Series A (Statistics in Society)",
+            "raw_type": null
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W2278826508",
+          "https://openalex.org/W2317626095",
+          "https://openalex.org/W2531617332",
+          "https://openalex.org/W2797360906",
+          "https://openalex.org/W2031140689",
+          "https://openalex.org/W2325907622",
+          "https://openalex.org/W2130891082",
+          "https://openalex.org/W2800695765",
+          "https://openalex.org/W7024790589",
+          "https://openalex.org/W2078916336"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W3035751571",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 20
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 33
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 41
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 67
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 35
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 82
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 54
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 94
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 91
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 99
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 105
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 104
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 102
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 74
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 101
+          }
+        ],
+        "updated_date": "2026-11-20T13:11:24.684918",
+        "created_date": "2020-06-19T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2072216292",
+        "doi": "https://doi.org/10.1080/01621459.1981.10477649",
+        "title": "An Analysis of Transformations Revisited",
+        "display_name": "An Analysis of Transformations Revisited",
+        "alternate_titles": [],
+        "relevance_score": 119.92181,
+        "publication_year": 1981,
+        "publication_date": "1981-06-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2072216292",
+          "doi": "https://doi.org/10.1080/01621459.1981.10477649",
+          "mag": "2072216292"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/01621459.1981.10477649",
+          "doi": "https://doi.org/10.1080/01621459.1981.10477649",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/01621459.1981.10477649",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4394736638",
+            "display_name": "Journal of the American Statistical Association",
+            "issn_l": "0162-1459",
+            "issn": [
+              "0162-1459",
+              "1537-274X"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of the American Statistical Association",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2072216292"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5025311999",
+              "display_name": "Peter J. Bickel",
+              "orcid": "https://orcid.org/0000-0001-7480-662X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-7480-662X"
+              ]
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "raw_author_name": "Peter J. Bickel",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5032417246",
+              "display_name": "Kjell A. Doksum",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "raw_author_name": "Kjell A. Doksum",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 14.6075,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 598,
+        "citation_normalized_percentile": {
+          "value": 0.99440716,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "76",
+          "issue": "374",
+          "first_page": "296",
+          "last_page": "296"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11871",
+          "display_name": "Advanced Statistical Methods and Models",
+          "score": 0.9843999743461609,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.9843999743461609,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13487",
+            "display_name": "Statistical and numerical algorithms",
+            "score": 0.004600000102072954,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2604",
+              "display_name": "Applied Mathematics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.0031999999191612005,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/box-cox-transformation",
+            "display_name": "Box-Cox transformation",
+            "score": 0.9940000176429749
+          },
+          {
+            "id": "https://openalex.org/keywords/maximum-likelihood-estimation",
+            "display_name": "maximum likelihood estimation",
+            "score": 0.6460000276565552
+          },
+          {
+            "id": "https://openalex.org/keywords/asymptotic-variance",
+            "display_name": "asymptotic variance",
+            "score": 0.7829999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/consistency",
+            "display_name": "consistency",
+            "score": 0.5659999847412109
+          },
+          {
+            "id": "https://openalex.org/keywords/one-way-anova",
+            "display_name": "one-way ANOVA",
+            "score": 0.902999997138977
+          },
+          {
+            "id": "https://openalex.org/keywords/robust-estimation",
+            "display_name": "robust estimation",
+            "score": 0.6480000019073486
+          },
+          {
+            "id": "https://openalex.org/keywords/non-normal-error-distributions",
+            "display_name": "non-normal error distributions",
+            "score": 0.6850000023841858
+          },
+          {
+            "id": "https://openalex.org/keywords/error-variance",
+            "display_name": "error variance",
+            "score": 0.4230000078678131
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C2778584072",
+            "wikidata": "https://www.wikidata.org/wiki/Q7353545",
+            "display_name": "Robustification",
+            "level": 3,
+            "score": 0.8465203642845154
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.7233825922012329
+          },
+          {
+            "id": "https://openalex.org/C208788",
+            "wikidata": "https://www.wikidata.org/wiki/Q895499",
+            "display_name": "Power transform",
+            "level": 3,
+            "score": 0.705472469329834
+          },
+          {
+            "id": "https://openalex.org/C2776436953",
+            "wikidata": "https://www.wikidata.org/wiki/Q5163215",
+            "display_name": "Consistency (knowledge bases)",
+            "level": 2,
+            "score": 0.6001407504081726
+          },
+          {
+            "id": "https://openalex.org/C204241405",
+            "wikidata": "https://www.wikidata.org/wiki/Q461499",
+            "display_name": "Transformation (genetics)",
+            "level": 3,
+            "score": 0.5907241106033325
+          },
+          {
+            "id": "https://openalex.org/C28826006",
+            "wikidata": "https://www.wikidata.org/wiki/Q33521",
+            "display_name": "Applied mathematics",
+            "level": 1,
+            "score": 0.5708540678024292
+          },
+          {
+            "id": "https://openalex.org/C163175372",
+            "wikidata": "https://www.wikidata.org/wiki/Q3339222",
+            "display_name": "Linear model",
+            "level": 2,
+            "score": 0.5569100379943848
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.5136508345603943
+          },
+          {
+            "id": "https://openalex.org/C48921125",
+            "wikidata": "https://www.wikidata.org/wiki/Q10861030",
+            "display_name": "Linear regression",
+            "level": 2,
+            "score": 0.4972398579120636
+          },
+          {
+            "id": "https://openalex.org/C196083921",
+            "wikidata": "https://www.wikidata.org/wiki/Q7915758",
+            "display_name": "Variance (accounting)",
+            "level": 2,
+            "score": 0.4630257189273834
+          },
+          {
+            "id": "https://openalex.org/C118615104",
+            "wikidata": "https://www.wikidata.org/wiki/Q121416",
+            "display_name": "Discrete mathematics",
+            "level": 1,
+            "score": 0.10267260670661926
+          },
+          {
+            "id": "https://openalex.org/C104317684",
+            "wikidata": "https://www.wikidata.org/wiki/Q7187",
+            "display_name": "Gene",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C55493867",
+            "wikidata": "https://www.wikidata.org/wiki/Q7094",
+            "display_name": "Biochemistry",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C79337645",
+            "wikidata": "https://www.wikidata.org/wiki/Q779824",
+            "display_name": "Outlier",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C144133560",
+            "wikidata": "https://www.wikidata.org/wiki/Q4830453",
+            "display_name": "Business",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C185592680",
+            "wikidata": "https://www.wikidata.org/wiki/Q2329",
+            "display_name": "Chemistry",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C121955636",
+            "wikidata": "https://www.wikidata.org/wiki/Q4116214",
+            "display_name": "Accounting",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "doi:10.1080/01621459.1981.10477649",
+            "doi": "https://doi.org/10.1080/01621459.1981.10477649",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/01621459.1981.10477649",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4394736638",
+              "display_name": "Journal of the American Statistical Association",
+              "issn_l": "0162-1459",
+              "issn": [
+                "0162-1459",
+                "1537-274X"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of the American Statistical Association",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.2307/2287831",
+            "doi": "https://doi.org/10.2307/2287831",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/2287831",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4394736638",
+              "display_name": "Journal of the American Statistical Association",
+              "issn_l": "0162-1459",
+              "issn": [
+                "0162-1459",
+                "1537-274X"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of the American Statistical Association",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 35,
+        "referenced_works": [
+          "https://openalex.org/W129305155",
+          "https://openalex.org/W131649693",
+          "https://openalex.org/W151499024",
+          "https://openalex.org/W1619652270",
+          "https://openalex.org/W1665499840",
+          "https://openalex.org/W1964213285",
+          "https://openalex.org/W1969417607",
+          "https://openalex.org/W1985338491",
+          "https://openalex.org/W2012504235",
+          "https://openalex.org/W2025610145",
+          "https://openalex.org/W2028125409",
+          "https://openalex.org/W2045980827",
+          "https://openalex.org/W2046033161",
+          "https://openalex.org/W2054781139",
+          "https://openalex.org/W2060816262",
+          "https://openalex.org/W2062313604",
+          "https://openalex.org/W2099756352",
+          "https://openalex.org/W2100097431",
+          "https://openalex.org/W2136158063",
+          "https://openalex.org/W2136821824",
+          "https://openalex.org/W2156273867",
+          "https://openalex.org/W2316163432",
+          "https://openalex.org/W2513443823",
+          "https://openalex.org/W2587253664",
+          "https://openalex.org/W2614237344",
+          "https://openalex.org/W2797195457",
+          "https://openalex.org/W2798264002",
+          "https://openalex.org/W2903795409",
+          "https://openalex.org/W3035751571",
+          "https://openalex.org/W3136987530",
+          "https://openalex.org/W4230948549",
+          "https://openalex.org/W4231049928",
+          "https://openalex.org/W4242617520",
+          "https://openalex.org/W4251404811",
+          "https://openalex.org/W4396738222"
+        ],
+        "related_works": [
+          "https://openalex.org/W2045942414",
+          "https://openalex.org/W205123838",
+          "https://openalex.org/W2105258130",
+          "https://openalex.org/W1973332353",
+          "https://openalex.org/W1998665345",
+          "https://openalex.org/W2017313428",
+          "https://openalex.org/W44352276",
+          "https://openalex.org/W2008765054",
+          "https://openalex.org/W2257187595"
+        ],
+        "abstract_inverted_index": {
+          "Following": [
+            0
+          ],
+          "Box": [
+            1
+          ],
+          "and": [
+            2,
+            35,
+            144,
+            158,
+            204
+          ],
+          "Cox": [
+            3
+          ],
+          "(1964),": [
+            4
+          ],
+          "we": [
+            5
+          ],
+          "assume": [
+            6
+          ],
+          "that": [
+            7,
+            55,
+            168
+          ],
+          "a": [
+            8,
+            23
+          ],
+          "transform": [
+            9
+          ],
+          "Z": [
+            10
+          ],
+          "i": [
+            11
+          ],
+          "=": [
+            12
+          ],
+          "h(Yi": [
+            13
+          ],
+          ",": [
+            14
+          ],
+          "\u03bb)": [
+            15
+          ],
+          "of": [
+            16,
+            28,
+            33,
+            48,
+            74,
+            77,
+            108,
+            118,
+            150,
+            175,
+            182,
+            197,
+            210
+          ],
+          "our": [
+            17
+          ],
+          "original": [
+            18
+          ],
+          "data": [
+            19
+          ],
+          "{Yi": [
+            20
+          ],
+          "}": [
+            21
+          ],
+          "satisfies": [
+            22
+          ],
+          "linear": [
+            24,
+            40,
+            63,
+            82,
+            134
+          ],
+          "model.": [
+            25
+          ],
+          "Consistency": [
+            26
+          ],
+          "properties": [
+            27
+          ],
+          "the": [
+            29,
+            36,
+            39,
+            45,
+            71,
+            75,
+            78,
+            81,
+            88,
+            116,
+            129,
+            133,
+            148,
+            162,
+            176,
+            180,
+            183,
+            186,
+            195,
+            208,
+            211
+          ],
+          "Box-Cox": [
+            30,
+            177,
+            199
+          ],
+          "estimates": [
+            31,
+            76
+          ],
+          "(MLE's)": [
+            32
+          ],
+          "\u03bb": [
+            34,
+            91,
+            121
+          ],
+          "parameters": [
+            37,
+            79,
+            209
+          ],
+          "in": [
+            38,
+            56,
+            80,
+            132,
+            147,
+            213
+          ],
+          "model,": [
+            41
+          ],
+          "as": [
+            42,
+            44,
+            61,
+            104
+          ],
+          "well": [
+            43
+          ],
+          "asymptotic": [
+            46,
+            72
+          ],
+          "variances": [
+            47,
+            73
+          ],
+          "these": [
+            49
+          ],
+          "estimates,": [
+            50
+          ],
+          "are": [
+            51,
+            84,
+            152,
+            190
+          ],
+          "considered.": [
+            52
+          ],
+          "We": [
+            53
+          ],
+          "find": [
+            54
+          ],
+          "some": [
+            57,
+            100
+          ],
+          "structured": [
+            58,
+            214
+          ],
+          "models": [
+            59,
+            102,
+            215
+          ],
+          "such": [
+            60,
+            103
+          ],
+          "transformed": [
+            62,
+            105,
+            163
+          ],
+          "regression": [
+            64
+          ],
+          "with": [
+            65,
+            110,
+            216
+          ],
+          "small": [
+            66,
+            217
+          ],
+          "to": [
+            67,
+            112,
+            124,
+            185,
+            192,
+            218
+          ],
+          "moderate": [
+            68,
+            111,
+            123,
+            191,
+            219
+          ],
+          "error": [
+            69,
+            114,
+            130,
+            187,
+            220
+          ],
+          "variances,": [
+            70,
+            115
+          ],
+          "model": [
+            83,
+            135,
+            212
+          ],
+          "much": [
+            85,
+            169
+          ],
+          "larger": [
+            86
+          ],
+          "when": [
+            87,
+            95,
+            179
+          ],
+          "transformation": [
+            89
+          ],
+          "parameter": [
+            90
+          ],
+          "is": [
+            92,
+            97,
+            122,
+            136,
+            142,
+            170,
+            202
+          ],
+          "unknown": [
+            93,
+            141
+          ],
+          "than": [
+            94
+          ],
+          "it": [
+            96
+          ],
+          "known.": [
+            98
+          ],
+          "In": [
+            99
+          ],
+          "unstructured": [
+            101
+          ],
+          "one-way": [
+            106
+          ],
+          "analysis": [
+            107
+          ],
+          "variance": [
+            109
+          ],
+          "large": [
+            113
+          ],
+          "cost": [
+            117
+          ],
+          "not": [
+            119,
+            137
+          ],
+          "knowing": [
+            120
+          ],
+          "small.": [
+            125
+          ],
+          "The": [
+            126
+          ],
+          "case": [
+            127
+          ],
+          "where": [
+            128
+          ],
+          "distribution": [
+            131
+          ],
+          "normal": [
+            138
+          ],
+          "but": [
+            139
+          ],
+          "actually": [
+            140
+          ],
+          "considered,": [
+            143
+          ],
+          "robust": [
+            145
+          ],
+          "methods": [
+            146,
+            178
+          ],
+          "presence": [
+            149
+          ],
+          "transformations": [
+            151
+          ],
+          "introduced": [
+            153
+          ],
+          "for": [
+            154,
+            161
+          ],
+          "this": [
+            155,
+            173
+          ],
+          "case.": [
+            156
+          ],
+          "Asymptotics": [
+            157
+          ],
+          "simulation": [
+            159
+          ],
+          "results": [
+            160
+          ],
+          "additive": [
+            164
+          ],
+          "two-way": [
+            165
+          ],
+          "layout": [
+            166
+          ],
+          "show": [
+            167
+          ],
+          "gained": [
+            171
+          ],
+          "by": [
+            172
+          ],
+          "robustification": [
+            174
+          ],
+          "ratios": [
+            181
+          ],
+          "means": [
+            184
+          ],
+          "standard": [
+            188
+          ],
+          "deviation": [
+            189
+          ],
+          "large.": [
+            193
+          ],
+          "However,": [
+            194
+          ],
+          "performance": [
+            196
+          ],
+          "all": [
+            198
+          ],
+          "type": [
+            200
+          ],
+          "procedures": [
+            201
+          ],
+          "unstable": [
+            203
+          ],
+          "highly": [
+            205
+          ],
+          "dependent": [
+            206
+          ],
+          "on": [
+            207
+          ],
+          "variances.": [
+            221
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2072216292",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 27
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 19
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 40
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 19
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 18
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 17
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 22
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 19
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 30
+          }
+        ],
+        "updated_date": "2026-11-19T14:11:59.513116",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

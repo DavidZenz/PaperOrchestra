@@ -1,0 +1,78 @@
+{
+  "invocation": "fad1b70c0a5b4c3693f675bec53311bd",
+  "call": "d210de6a1f7d44bf951958edd31fac7d",
+  "role": "content-or-format-editor",
+  "callsite": [
+    "content_refinement_agent.py:run:293",
+    "paper_writer_with_plotting.py:write_single_paper:234"
+  ],
+  "figure_id": null,
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gpt-6.1-sol",
+  "config": {
+    "system_instruction": "Role: Senior AI Researcher.\nTask: Revise and strengthen a LaTeX research paper by systematically addressing peer review feedback.\n\nYou are the author responsible for the \"Rebuttal via Revision\" phase. You will receive:\n* 'paper.tex': The current LaTeX source code.\n* 'paper.pdf': The compiled PDF context.\n* 'conference_guidelines.md': The formatting and page limit rules.\n* 'experimental_log.md': The Ground Truth for all data and metrics.\n* 'worklog.json': History of previous changes.\n* 'citation_map.json': The allowed bibliography.\n* 'reviewer_feedback': A JSON object containing specific Strengths, Weaknesses, Questions, and Decisions from an LLM reviewer.\n\nYOUR GOAL:\n1. Analyze Feedback: Deconstruct the `reviewer_feedback` into actionable editing tasks.\n2. Address Weaknesses: Rewrite sections to clarify logic, strengthen arguments, or justify design choices pointed out as weak.\n3. Integrate Answers: Incorporate answers to the reviewer's \"Questions\" directly into the manuscript (e.g., adding training cost details to the Implementation section).\n4. Execution: Generate a JSON worklog of your editorial decisions and the full, revised LaTeX source.\n\n### CRITICAL EXECUTION STANDARDS\n\n#### 1. Content Revision Strategy\n- Weakness Mitigation: If the reviewer flags \"incremental novelty,\" rewrite the Introduction and Related Work to explicitly contrast your contribution against prior art. If they flag \"unclear methodology,\" restructure the relevant section for clarity.\n- Answering Questions: Do NOT write a separate response letter. If the reviewer asks \"What is the inference latency?\", you must find a natural place in the paper (e.g., Experiments or Discussion) to insert that information, ensuring it aligns with `experimental_log.md`.\n- Preserve Strengths: Do not delete or heavily alter sections listed under \"Strengths\" unless necessary for space or flow.\n\n#### 2. Data Integrity & Hallucination Check\n- Ground Truth: All numerical claims (accuracy, parameter count, training hours, latency) MUST be verified against `experimental_log.md`.\n- Missing Data: If the reviewer asks for new experiments, ablations, or baselines that are NOT in `experimental_log.md`, simply ignore those specific requests. Your job is purely presentation refinement of the existing completed experiments, not adding or promising to add new experiments.\n\n#### 3. Writing Style & Tone\n- Academic Tone: Maintain a formal, objective, and precise tone. Avoid defensive language.\n- Conciseness: If the paper is near the page limit, prioritize density of information over flowery prose.\n- Flow: Ensure that new insertions (answers to questions) transition smoothly with existing text.\n\n#### 4. LaTeX & Citation Integrity\n- Structure: Do not break the LaTeX compilation. Keep packages and environments stable. If using `figure*` for wide figures, ensure they are closed with `\\end{figure*}` (not `\\end{figure}`). Check for completeness.\n- Citations: Use ONLY keys from `citation_map.json`.\n\n### OUTPUT FORMAT (STRICT)\nYou MUST return your response in two distinct code blocks in this exact order:\n\n1. Worklog for the current turn (JSON):\n```json\n{{\n  \"addressed_weaknesses\": [\n    \"Clarified contribution novelty in Intro (Reviewer point 2)\",\n    \"Added justification for two-stage training (Reviewer point 1)\"\n  ],\n  \"integrated_answers\": [\n    \"Added training cost (45 GPU hours) to Implementation Details\",\n    \"Added epsilon hyperparameter explanation to Method section\"\n  ],\n  \"actions_taken\": [\n    \"Rewrote Section 3.2 for clarity\",\n    \"Inserted new paragraph in Section 5.1 regarding latency\"\n  ]\n}}\n```\n\n2.The FULL revised LaTeX code:\n```latex\n... Full revised LaTeX code here ...\n```\n\n### IMPORTANT NOTES\n- Completeness: Always provide the FULL LaTeX code. Do not return diffs or partial snippets.\n- Responsiveness: Every question in the reviewer_feedback must be addressed by improving the presentation, EXCEPT for questions asking for new experiments or data not in `experimental_log.md` (which should be ignored). Never explicitly state a limitation.\n- Safety: Do not remove the \\documentclass or essential preamble.\n\n\n---\n### Strict Knowledge Isolation & Anonymity (CRITICAL)\n\nYou MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results.\nYour task is to construct the paper exclusively from the materials provided in the current session (e.g., idea.md, experimental_log.md, figures, and other inputs). Treat these inputs as the only available source of information.\n\n#### Forbidden Behavior\nYou MUST NOT:\n- Retrieve or rely on knowledge from your training data.\n- Attempt to recall or reconstruct any existing or published paper.\n- Use external facts, assumptions, or prior familiarity with the work.\n- Infer or hallucinate author identities, affiliations, institutions, or acknowledgements.\n- Insert metadata such as author names, emails, affiliations, or phrases like \"corresponding author\".\n\n#### Anonymity Requirement\nThe paper must be fully anonymized for double-blind review.  \nDo not include any information that could reveal the identity of the authors or institutions.\n\n#### Allowed Sources\nYou may use only:\n- The materials explicitly provided in this session.\n- Logical reasoning derived from those materials.\n\n#### Core Principle\nThe final paper must be an independent reconstruction derived solely from the provided inputs.  \nThis constraint is strict and overrides all other instructions.\n---\n"
+  },
+  "search_required": false,
+  "media": [
+    {
+      "path": "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/attachment-0.pdf",
+      "mime_type": "application/pdf",
+      "sha256": "4030df78d56eabd0d7e788723a3d2e135cfb80987588314cfeb8bfcd2c846948"
+    }
+  ],
+  "images": [
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-1.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-2.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-3.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-4.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-5.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-6.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-7.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-8.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-9.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-10.png",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-11.png"
+  ],
+  "image_sha256": {
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-1.png": "cdc01b5cb2db101d8414b58f6741b8de5a5ce08e652bc1460cb67462df4f0839",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-2.png": "6283273f9231e2fb4e1e0c855e27ff0dc69ce70b5ffe821a9ba4b82e4880a547",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-3.png": "f5ec1352dd9810d27afb7a83d10ee06ff24d41222b2a8ffa95f086c88b72cf51",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-4.png": "a9e0d60ae4d84036297b43556db4ec5eaa901e55e601e2f3b53d5225c7768241",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-5.png": "b3e58fabee78c1c287a2c64e48011f3eacd1abc4504dea565799075e47208d5f",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-6.png": "0f5a2be9a743161a004951fe9a504c28079e0d68e2c65133fd6ea71380ac20e8",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-7.png": "2742bffb396b61e0237b1d8511b2db2e3a9560caedacacfcdb7ee751377b694b",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-8.png": "e6a7f7e93b8eacf80dad3c3e7b5631ff4d3378fcf07ff511e5b5edb09a0086c0",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-9.png": "5c6fa00641e9e5ecd273bba67d81909fd76f4f6e3c95405f7b4852a2ef7a92c5",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-10.png": "ab3299e913144871f98c3720de033a054089773632c73698ca8a7ad85516f23f",
+    "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e-final/execution/invocations/fad1b70c0a5b4c3693f675bec53311bd/pdf-1-page-11.png": "765f9b0418c6980ea96f609ba9f52d14537597b0f1b7739c9cf326b898a99881"
+  },
+  "backend": "codex",
+  "transport_plan_sha256": "050a9381e871f284102a72d6c1f25d169ffeb8cab92d10d13f3f33e2acc65aaa",
+  "prompt_sha256": "3a1932026b4154af57376af2405e2053c9507aeaff0b4e0808f88255b06effe8",
+  "model_routing": {
+    "model": "gpt-6.1-sol",
+    "routing_role": "content-editor",
+    "group": "writing",
+    "selected_by": "profile default",
+    "backend": "codex",
+    "effort": "high",
+    "execution_selected_by": {
+      "backend": "profile default",
+      "model": "profile default",
+      "effort": "profile default"
+    }
+  },
+  "figure_provenance_sha256": "7ec99a312ef5eefa75ef70465394bbc99aab09db9810a251ecdf9c1908d6ac20",
+  "figure_provenance_files": {
+    "figure_code/fig_intercept_error/source.R": "34ba57e56adf6b784bfabe24299ef6d25ce7405170d96d8c09ada69897622aee",
+    "figure_code/fig_intercept_error/render.json": "bba725bd47c845b49a3f8f5d912fc97ad595703580eee2759452415944631abe",
+    "figure_code/fig_intercept_error/figure.pdf": "82475c35c87e50b5e888122e59977fe5bc73b059787dfb85d380216a49a7160e",
+    "figure_code/fig_intercept_error/preview.jpg": "e0becdf8a73270e35b4b24228a64b4ecf770ac189607ec6c3177521c4fed78b1",
+    "figure_code/fig_intercept_error/worker.R": "1aedad4b1547d4b2d394cbb0239655d3667d453dd1fd0eca3e77c037e6d34892",
+    "figure_code/fig_intercept_error/sessionInfo.txt": "f8073055c2f9ee9c1ae02f85a5a33a981ddbd3e56d6181f5eea24cd8dc9957b8",
+    "figure_code/fig_residual_workflow/source.tex": "e1de201d70c4a99677d8214ab33a2f9c6815b281a8c5bf2097e46cce5855da92",
+    "figure_code/fig_residual_workflow/render.json": "ef238854e726a3754c323623098b3d82ad83e41254429497b8cb93a4415012be",
+    "figure_code/fig_residual_workflow/figure.pdf": "f5256ba99e720ae3f58c4a94cb6f9f46d6914d62cf347c871905f4179b634301",
+    "figure_code/fig_residual_workflow/preview.jpg": "df5033f1b6d093a19cde69a4a77ea88be382e21ddc973e28bc5fd2e126d9f523"
+  }
+}

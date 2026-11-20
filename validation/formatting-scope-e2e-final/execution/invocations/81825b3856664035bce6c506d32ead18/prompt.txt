@@ -1,0 +1,120 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+## ROLE
+You are a Lead Visual Designer for top-tier AI conferences (e.g., NeurIPS 2025).
+
+## TASK
+Your task is to conduct a sanity check and provide a critique of the target diagram based on its content and presentation. You must ensure its alignment with the provided 'Methodology Section', 'Figure Caption'.
+
+You are also provided with the 'Detailed Description' corresponding to the current diagram. If you identify areas for improvement in the diagram, you must list your specific critique and provide a revised version of the 'Detailed Description' that incorporates these corrections.
+
+## CRITIQUE & REVISION RULES
+
+1. Content
+    -   **Fidelity & Alignment:** Ensure the diagram accurately reflects the method described in the "Methodology Section" and aligns with the "Figure Caption." Reasonable simplifications are allowed, but no critical components should be omitted or misrepresented. Also, the diagram should not contain any hallucinated content. Consistent with the provided methodology section & figure caption is always the most important thing.
+    -   **Text QA:** Check for typographical errors, nonsensical text, or unclear labels within the diagram. Suggest specific corrections.
+    -   **Validation of Examples:** Verify the accuracy of illustrative examples. If the diagram includes specific examples to aid understanding (e.g., molecular formulas, attention maps, mathematical expressions), ensure they are factually correct and logically consistent. If an example is incorrect, provide the correct version.
+    -   **Caption Exclusion:** Ensure the figure caption text (e.g., "Figure 1: Overview...") is **not** included within the image visual itself. The caption should remain separate.
+
+2. Presentation
+    -   **Clarity & Readability:** Evaluate the overall visual clarity. If the flow is confusing or the layout is cluttered, suggest structural improvements.
+    -   **Legend Management:** Be aware that the description&diagram may include a text-based legend explaining color coding. Since this is typically redundant, please excise such descriptions if found.
+
+** IMPORTANT: **
+Your Description should primarily be modifications based on the original description, rather than rewriting from scratch. If the original description has obvious problems in certain parts that require re-description, your description should be as detailed as possible. Semantically, clearly describe each element and their connections. Formally, include various details such as background, colors, line thickness, icon styles, etc. Remember: vague or unclear specifications will only make the generated figure worse, not better.
+
+## INPUT DATA
+-   **Target Diagram**: [The generated figure]
+-   **Detailed Description**: [The detailed description of the figure]
+-   **Methodology Section**: [Contextual content from the methodology section]
+-   **Figure Caption**: [Target figure caption]
+
+## OUTPUT
+Provide your response strictly in the following JSON format.
+
+```json
+{
+    "critic_suggestions": "Insert your detailed critique and specific suggestions for improvement here. If the diagram is perfect, write 'No changes needed.'",
+    "revised_description": "Insert the fully revised detailed description here, incorporating all your suggestions. If no changes are needed, write 'No changes needed.'",
+}
+```
+
+
+Target Diagram for Critique:
+
+
+Detailed Description: The figure is a left-to-right white-background schematic with no title, legend box, or unrelated modules. It shows five observations flowing into a scalar correction and back to the same points.
+
+**Canvas and style**
+- Pure white background, no border or gridlines, roughly 16 cm × 8 cm.
+- Clean, symmetric rounded rectangles (corner radius about 3 pt) with complete 0.8 pt continuous outlines and very light pastel fills (about 10–15% tint of the accent color), with ample internal padding (at least 6 pt horizontal margin) preventing any text clipping.
+- Solid connectors are 1.2 pt with filled arrowheads (`-latex`). The reuse path is a 0.8 pt dashed connector.
+- Labels in sans-serif math typesetting (`\mathsf` for words, `$...$` for symbols). Body text is about 9 pt; the node headers are about 10 pt bold.
+- Palette: data nodes ($x, y$) in muted blue `#4C78A8`; baseline in neutral gray `#8C8C8C`; residuals in amber `#E08E2B`; scalar correction $b$ in teal `#2A9D8F`, rendered as a clean rounded rectangle with solid saturated fill; corrected prediction in muted green `#59A14F` as a pastel tint with a green outline; evaluation in dark charcoal `#3A3A3A` outline on white.
+
+**Layout (left to right, four columns)**
+
+*Column 1, data (left, blue):*
+- Node D1: "Observations", sized sufficiently wide (at least 4.2 cm) so equations do not collide with boundaries. Contains two neatly stacked lines: $x = (-2, -1, 0, 1, 2)$ and $y = 2x+3 = (-1, 1, 3, 5, 7)$.
+- Explicit branching from D1: one distinct line exits the right side carrying $y$ directly to the Residuals node; a second orthogonal line drops down and turns right carrying $x$ into the Baseline predictor; a third dedicated solid blue line routes upwards and across the top margin carrying $y$ directly to the Evaluation node.
+
+*Column 2, computation (center-left):*
+- Node R (top): "Residuals", amber pastel fill with complete, unbroken 0.8 pt amber outline. Text: $r_i = y_i - 2x_i$ and $(3, 3, 3, 3, 3)$. Incoming arrows: $y$ entering from D1 on the left, and $2x$ entering from Node B from below.
+- Node B (bottom): "Baseline predictor", gray pastel fill with gray outline. Text: $\hat{y}_0 = 2x$ and $(-4, -2, 0, 2, 4)$. Input arrow carries $x$ from D1.
+
+*Column 3, scalar correction (center-right):*
+- Node S: clean, symmetric teal rounded rectangle with solid saturated fill (no notches or irregular contours). Text in white: $b = \bar{r} = 3$. Prominent horizontal arrow (1.6 pt) from R labeled "mean over the five observed residuals" enters on the left.
+
+*Column 4, corrected prediction and evaluation (right):*
+- Node C (upper): "Corrected prediction", green pastel fill with green outline. Text: $\hat{y} = 2x + b$ and $(-1, 1, 3, 5, 7)$. Incoming arrows: baseline $2x$ arriving horizontally from Node B, and $+b$ arriving via a clean orthogonal connector from Node S entering the top/left.
+- Node E (lower): "Evaluation on the same five points", charcoal outline on white. Text: "in-sample check; no held-out data". Incoming arrows: vertical downward arrow from Node C labeled "compare with $y$", and the solid blue top-perimeter line carrying $y$ entering on the right.
+
+**Reuse of observations**
+- A dashed 0.8 pt connector in charcoal runs from the bottom of D1 along the lower margin of the figure and enters E from below. It is labeled "same five observations reused" in small italic text.
+- Visual distinction: the dashed bottom path reads as data provenance/reuse, distinct from the solid computational connectors.
+
+**Dependency summary (all arrows)**
+1. $x \to B$ (baseline)
+2. $y \to R$ and $B \to R$ (residuals)
+3. $R \to S$ (mean residual, the observed-to-scalar dependency)
+4. $B \to C$ and $S \to C$ (corrected prediction)
+5. $C \to E$ and $y \to E$ (evaluation against target)
+6. $D1 \dashrightarrow E$ (dashed reuse of the same five observations)
+
+**Text and symbols**
+- Use only the symbols $x$, $y$, $2x$, $r_i$, $\bar{r}$, $b$, $\hat{y}_0$, $\hat{y}$. No extra variables, error metrics, or numeric axes.
+- Strictly no figure-level title or caption text inside the canvas.
+Methodology Section: 
+--- idea_sparse.md ---
+# A finite intercept correction calculation with reproducible figures
+
+This is a synthetic teaching-note workflow demonstration, not a new scientific
+result. Five inputs x = [-2,-1,0,1,2] have targets y = 2x+3. A fixed predictor
+returns 2x. Compute the mean residual on these same points, b = mean(y-2x)=3,
+and add it to the predictions. The experimental log is the only measured data.
+There is no optimizer, architecture, external dataset, stochastic experiment,
+held-out evaluation or timing result. The calculation is implemented in base R.
+Scope all claims to these exact five observations; literature supplies context,
+not extra measurements or claims of novelty.
+
+Generate exactly two essential figures, with all source code retained:
+
+1. `fig_intercept_error`: a statistical plot, `plot_type` `plot`, from
+   `experimental_log.md`. Show the three measured MSE values at b=0,1.5,3.
+   Use R/ggplot2. This plot is evidence of the finite arithmetic only.
+2. `fig_residual_workflow`: a scientific schematic, `plot_type` `diagram`, from
+   `idea.md`. Show input x and target y; baseline 2x; residual y-2x; mean
+   residual b=3; corrected prediction 2x+b; evaluation on the same five points.
+   Indicate the data dependency from observed residuals to the scalar correction.
+   Use LaTeX/TikZ, mathematical labels, and no unrelated modules or experiments.
+
+No figures are supplied. Separate Codex workers must plan, style, generate code,
+critique the rendered figures, and write captions through the normal workflow.
+The flow diagram should make the computation understandable; it adds no evidence
+of predictive generalization. Native editable `.R` and `.tex` sources and their
+vector PDFs should be retained alongside the manuscript-compatible previews.
+
+Figure Caption: Title: Residual-Based Intercept Correction on Five Observations
+Objective: Show the supplied computation: input x and target y; baseline prediction 2x; residual y-2x; mean residual b=3; corrected prediction 2x+b; evaluation on the same five observations. Draw explicit dependencies from x to the baseline, from y and the baseline to residuals, and from observed residuals to the scalar correction. Make reuse of the observations visible. Include no unrelated modules or experiments.
+Your Output:

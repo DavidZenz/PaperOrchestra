@@ -1,0 +1,65 @@
+{
+  "section_name": "Literature on Fixed Predictors, Intercept Corrections, and Prediction Error Calibration",
+  "candidates": [
+    {
+      "title": "Intercept Corrections and Structural Change",
+      "year": 1996,
+      "reason": "Establishes foundational econometric theory for intercept corrections, showing how an additive constant adjustment based on observed mean residuals corrects deterministic level offsets in fixed predictor baselines without re-estimating slope dynamics."
+    },
+    {
+      "title": "The Evaluation of Economic Forecasts",
+      "year": 1969,
+      "reason": "Originates the Mincer-Zarnowitz regression framework y = alpha + beta * y_hat, formalizing the evaluation of a fixed predictor with unit slope (beta = 1) versus an additive intercept correction (alpha) to remove systematic mean error."
+    },
+    {
+      "title": "Minimum sample size for external validation of a clinical prediction model with a continuous outcome",
+      "year": 2021,
+      "reason": "Provides exact statistical treatments for continuous prediction models distinguishing calibration-in-the-large (estimating the intercept shift while fixing the predictor slope to 1) from calibration slope estimation."
+    },
+    {
+      "title": "A calibration hierarchy for risk models: from 'in-the-large' to 'moderately' and 'strongly' calibrated",
+      "year": 2016,
+      "reason": "Formalizes the hierarchy of prediction calibration, establishing 'calibration-in-the-large' as the level where the baseline predictor slope is held fixed and only an additive intercept adjustment is applied to resolve mean residual bias."
+    },
+    {
+      "title": "A closed testing procedure to select an appropriate method for updating prediction models",
+      "year": 2017,
+      "reason": "Develops formal closed testing procedures to evaluate whether adjusting only the intercept while retaining fixed predictor coefficients is sufficient to eliminate observed prediction error offsets."
+    },
+    {
+      "title": "Applied Economic Forecasting",
+      "year": 1966,
+      "reason": "Introduces Theil's mean squared prediction error decomposition into bias (intercept / mean residual offset), regression/slope discrepancy, and disturbance proportions, isolating pure additive shift errors when slope alignment is exact."
+    },
+    {
+      "title": "Robust Approaches to Forecasting",
+      "year": 2015,
+      "reason": "Investigates robust forecasting mechanisms under location shifts, analyzing the mechanics through which additive intercept adjustments restore baseline tracking when the underlying predictor slopes remain unchanged."
+    },
+    {
+      "title": "A new biometrical procedure for testing the equality of measurements from two different analytical methods. Application of linear regression procedures for method comparison studies in clinical chemistry, Part I",
+      "year": 1983,
+      "reason": "Seminal paper separating constant systematic error (pure intercept shift under fixed unity slope) from proportional systematic error (slope divergence) in measurement and prediction comparisons."
+    },
+    {
+      "title": "Validation techniques for logistic regression models",
+      "year": 1991,
+      "reason": "Introduces recalibration methodology that assesses calibration-in-the-large by fixing the linear predictor slope to 1 and estimating the intercept adjustment needed to remove systematic overall prediction error."
+    },
+    {
+      "title": "Validation, calibration, revision and combination of prognostic survival models",
+      "year": 2000,
+      "reason": "Distinguishes pure calibration adjustments (such as baseline intercept updates with fixed predictor weights) from model revisions involving re-estimation of slope parameters."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Analyzes post-processing calibration techniques, contrasting single-parameter / fixed-weight scaling with affine and multi-parameter recalibration to adjust systematic prediction discrepancies."
+    },
+    {
+      "title": "Evaluation of clinical prediction models (part 2): how to undertake an external validation study",
+      "year": 2024,
+      "reason": "Synthesizes modern best practices for evaluating fixed prediction models, detailing step-by-step assessment of mean residual offset (intercept calibration) versus slope recalibration in validation datasets."
+    }
+  ]
+}

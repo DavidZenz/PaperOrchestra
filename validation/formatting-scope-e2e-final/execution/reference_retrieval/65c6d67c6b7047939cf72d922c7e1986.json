@@ -1,0 +1,2786 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 354816,
+      "db_response_time_ms": 427,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (R: A Language for Data Analysis \"and\" Graphics) in the title, abstract, or full text",
+        "x_new_oql": "get works with (R: A Language for Data Analysis \"and\" Graphics) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "R: A Language for Data Analysis and Graphics",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:R: A Language for Data Analysis and Graphics&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W1969761972",
+        "doi": "https://doi.org/10.1080/10618600.1996.10474713",
+        "title": "R: A Language for Data Analysis and Graphics",
+        "display_name": "R: A Language for Data Analysis and Graphics",
+        "alternate_titles": [],
+        "relevance_score": 285.15158,
+        "publication_year": 1996,
+        "publication_date": "1996-09-01",
+        "ids": {
+          "openalex": "https://openalex.org/W1969761972",
+          "doi": "https://doi.org/10.1080/10618600.1996.10474713",
+          "mag": "1969761972"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/10618600.1996.10474713",
+          "doi": "https://doi.org/10.1080/10618600.1996.10474713",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/10618600.1996.10474713",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S76159266",
+            "display_name": "Journal of Computational and Graphical Statistics",
+            "issn_l": "1061-8600",
+            "issn": [
+              "1061-8600",
+              "1537-2715"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "jufo-3",
+              "ki-jl-2",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320547",
+            "host_organization_name": "Taylor & Francis",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Computational and Graphical Statistics",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W1969761972"
+        ],
+        "child_works_count": 0,
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5089267023",
+              "display_name": "Ross Ihaka",
+              "orcid": "https://orcid.org/0009-0005-9352-6953",
+              "observed_orcids": [
+                "https://orcid.org/0009-0005-9352-6953"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I154130895",
+                "display_name": "University of Auckland",
+                "ror": "https://ror.org/03b94tp07",
+                "country_code": "NZ",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154130895"
+                ]
+              }
+            ],
+            "countries": [
+              "NZ"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Ross Ihaka",
+            "raw_affiliation_strings": [
+              "Department of Statistics, University of Auckland, Private Bag, Auckland, 92019, New Zealand"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, University of Auckland, Private Bag, Auckland, 92019, New Zealand",
+                "institution_ids": [
+                  "https://openalex.org/I154130895"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5039040940",
+              "display_name": "Robert C. Gentleman",
+              "orcid": "https://orcid.org/0000-0003-4505-9893",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4505-9893"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I154130895",
+                "display_name": "University of Auckland",
+                "ror": "https://ror.org/03b94tp07",
+                "country_code": "NZ",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I154130895"
+                ]
+              }
+            ],
+            "countries": [
+              "NZ"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Robert Gentleman",
+            "raw_affiliation_strings": [
+              "Department of Statistics, University of Auckland, Private Bag, Auckland, 92019, New Zealand"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, University of Auckland, Private Bag, Auckland, 92019, New Zealand",
+                "institution_ids": [
+                  "https://openalex.org/I154130895"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I154130895"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 9.1891,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 12398,
+        "citation_normalized_percentile": {
+          "value": 0.98772169,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "5",
+          "issue": "3",
+          "first_page": "299",
+          "last_page": "299"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T13398",
+          "display_name": "Data Analysis with R",
+          "score": 0.9990000128746033,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T13398",
+            "display_name": "Data Analysis with R",
+            "score": 0.9990000128746033,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10126",
+            "display_name": "Logic, programming, and type systems",
+            "score": 0.00019999999494757503,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1712",
+              "display_name": "Software"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11986",
+            "display_name": "Scientific Computing and Data Management",
+            "score": 0.00019999999494757503,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1802",
+              "display_name": "Information Systems and Management"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/r-programming",
+            "display_name": "R programming language",
+            "score": 0.7940000295639038
+          },
+          {
+            "id": "https://openalex.org/keywords/language-design",
+            "display_name": "language design",
+            "score": 0.7450000047683716
+          },
+          {
+            "id": "https://openalex.org/keywords/data-analysis",
+            "display_name": "data analysis",
+            "score": 0.6710000038146973
+          },
+          {
+            "id": "https://openalex.org/keywords/graphics",
+            "display_name": "graphics",
+            "score": 0.6740000247955322
+          },
+          {
+            "id": "https://openalex.org/keywords/portability",
+            "display_name": "portability",
+            "score": 0.9369999766349792
+          },
+          {
+            "id": "https://openalex.org/keywords/computational-efficiency",
+            "display_name": "computational efficiency",
+            "score": 0.9940000176429749
+          },
+          {
+            "id": "https://openalex.org/keywords/memory-management",
+            "display_name": "memory management",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/scoping",
+            "display_name": "scoping",
+            "score": 0.9800000190734863
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C63000827",
+            "wikidata": "https://www.wikidata.org/wiki/Q3080428",
+            "display_name": "Software portability",
+            "level": 2,
+            "score": 0.8884318470954895
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.8231837153434753
+          },
+          {
+            "id": "https://openalex.org/C176222170",
+            "wikidata": "https://www.wikidata.org/wiki/Q5157340",
+            "display_name": "Computational statistics",
+            "level": 2,
+            "score": 0.5759646892547607
+          },
+          {
+            "id": "https://openalex.org/C21442007",
+            "wikidata": "https://www.wikidata.org/wiki/Q1027879",
+            "display_name": "Graphics",
+            "level": 2,
+            "score": 0.554105281829834
+          },
+          {
+            "id": "https://openalex.org/C199360897",
+            "wikidata": "https://www.wikidata.org/wiki/Q9143",
+            "display_name": "Programming language",
+            "level": 1,
+            "score": 0.4277638792991638
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.3707759380340576
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.36456236243247986
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.214048832654953
+          },
+          {
+            "id": "https://openalex.org/C121684516",
+            "wikidata": "https://www.wikidata.org/wiki/Q7600677",
+            "display_name": "Computer graphics (images)",
+            "level": 1,
+            "score": 0.1289336085319519
+          }
+        ],
+        "mesh": [],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "doi:10.1080/10618600.1996.10474713",
+            "doi": "https://doi.org/10.1080/10618600.1996.10474713",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/10618600.1996.10474713",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S76159266",
+              "display_name": "Journal of Computational and Graphical Statistics",
+              "issn_l": "1061-8600",
+              "issn": [
+                "1061-8600",
+                "1537-2715"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "jufo-3",
+                "ki-jl-2",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of Computational and Graphical Statistics",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.2307/1390807",
+            "doi": "https://doi.org/10.2307/1390807",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/1390807",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S76159266",
+              "display_name": "Journal of Computational and Graphical Statistics",
+              "issn_l": "1061-8600",
+              "issn": [
+                "1061-8600",
+                "1537-2715"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "jufo-3",
+                "ki-jl-2",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of Computational and Graphical Statistics",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 12,
+        "referenced_works": [
+          "https://openalex.org/W133977063",
+          "https://openalex.org/W206348627",
+          "https://openalex.org/W1509600745",
+          "https://openalex.org/W2081656192",
+          "https://openalex.org/W2086704771",
+          "https://openalex.org/W2089674328",
+          "https://openalex.org/W2109507516",
+          "https://openalex.org/W2797291332",
+          "https://openalex.org/W2801780708",
+          "https://openalex.org/W4241595142",
+          "https://openalex.org/W6630656549",
+          "https://openalex.org/W7052536942"
+        ],
+        "related_works": [
+          "https://openalex.org/W4321644003",
+          "https://openalex.org/W7098156398",
+          "https://openalex.org/W4379191860",
+          "https://openalex.org/W2182841232",
+          "https://openalex.org/W6930375345",
+          "https://openalex.org/W598785207",
+          "https://openalex.org/W138891665",
+          "https://openalex.org/W2086704771",
+          "https://openalex.org/W3024581402",
+          "https://openalex.org/W2537976417"
+        ],
+        "abstract_inverted_index": {
+          "In": [
+            0,
+            14
+          ],
+          "this": [
+            1,
+            16
+          ],
+          "article": [
+            2
+          ],
+          "we": [
+            3,
+            19,
+            24
+          ],
+          "discuss": [
+            4
+          ],
+          "our": [
+            5
+          ],
+          "experience": [
+            6
+          ],
+          "designing": [
+            7
+          ],
+          "and": [
+            8,
+            51
+          ],
+          "implementing": [
+            9
+          ],
+          "a": [
+            10
+          ],
+          "statistical": [
+            11
+          ],
+          "computing": [
+            12
+          ],
+          "language.": [
+            13
+          ],
+          "developing": [
+            15
+          ],
+          "new": [
+            17,
+            38
+          ],
+          "language,": [
+            18
+          ],
+          "sought": [
+            20
+          ],
+          "to": [
+            21
+          ],
+          "combine": [
+            22
+          ],
+          "what": [
+            23
+          ],
+          "felt": [
+            25
+          ],
+          "were": [
+            26
+          ],
+          "useful": [
+            27
+          ],
+          "features": [
+            28
+          ],
+          "from": [
+            29
+          ],
+          "two": [
+            30
+          ],
+          "existing": [
+            31
+          ],
+          "computer": [
+            32
+          ],
+          "languages.": [
+            33
+          ],
+          "We": [
+            34
+          ],
+          "feel": [
+            35
+          ],
+          "that": [
+            36
+          ],
+          "the": [
+            37,
+            43
+          ],
+          "language": [
+            39
+          ],
+          "provides": [
+            40
+          ],
+          "advantages": [
+            41
+          ],
+          "in": [
+            42
+          ],
+          "areas": [
+            44
+          ],
+          "of": [
+            45
+          ],
+          "portability,": [
+            46
+          ],
+          "computational": [
+            47
+          ],
+          "efficiency,": [
+            48
+          ],
+          "memory": [
+            49
+          ],
+          "management,": [
+            50
+          ],
+          "scoping.": [
+            52
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W1969761972",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 300
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 367
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 485
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 387
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 392
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 487
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 477
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 432
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 479
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 451
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 482
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 453
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 469
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 542
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 542
+          }
+        ],
+        "updated_date": "2026-11-19T14:11:59.513116",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W3110949613",
+        "doi": "https://doi.org/10.1201/9781351007726",
+        "title": "Texts in Statistical Science: Graphics for Statistics and Data Analysis with R",
+        "display_name": "Texts in Statistical Science: Graphics for Statistics and Data Analysis with R",
+        "alternate_titles": [],
+        "relevance_score": 36.298893,
+        "publication_year": 2018,
+        "publication_date": "2018-09-26",
+        "ids": {
+          "openalex": "https://openalex.org/W3110949613",
+          "doi": "https://doi.org/10.1201/9781351007726",
+          "mag": "3110949613"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1201/9781351007726",
+          "doi": "https://doi.org/10.1201/9781351007726",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1201/9781351007726",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306467597",
+            "display_name": "Chapman & Hall/CRC eBooks",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/P4310320449",
+            "host_organization_name": "Informa",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Informa"
+            ],
+            "type": "ebook platform"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": null,
+          "raw_type": "book"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W3110949613"
+        ],
+        "child_works_count": 13,
+        "type": "book",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5000956371",
+              "display_name": "Kevin J. Keen",
+              "orcid": "https://orcid.org/0000-0001-5695-0505",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5695-0505"
+              ]
+            },
+            "institutions": [
+              {
+                "id": "https://openalex.org/I151934421",
+                "display_name": "University of Northern British Columbia",
+                "ror": "https://ror.org/025wzwv46",
+                "country_code": "CA",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I151934421"
+                ]
+              }
+            ],
+            "countries": [
+              "CA"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "Kevin J. Keen",
+            "raw_affiliation_strings": [
+              "University of Northern British Columbia, Prince George, Canada"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Northern British Columbia, Prince George, Canada",
+                "institution_ids": [
+                  "https://openalex.org/I151934421"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5000956371"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I151934421"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 13.8943,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 187,
+        "citation_normalized_percentile": {
+          "value": 0.98473282,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 89,
+          "max": 99
+        },
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10799",
+          "display_name": "Data Visualization and Analytics",
+          "score": 0.885699987411499,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1704",
+            "display_name": "Computer Graphics and Computer-Aided Design"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10799",
+            "display_name": "Data Visualization and Analytics",
+            "score": 0.885699987411499,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1704",
+              "display_name": "Computer Graphics and Computer-Aided Design"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13398",
+            "display_name": "Data Analysis with R",
+            "score": 0.10369999706745148,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13820",
+            "display_name": "SAS software applications and methods",
+            "score": 0.003000000026077032,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1712",
+              "display_name": "Software"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/statistical-graphics",
+            "display_name": "statistical graphics",
+            "score": 0.996999979019165
+          },
+          {
+            "id": "https://openalex.org/keywords/data-visualization",
+            "display_name": "data visualization",
+            "score": 0.9459999799728394
+          },
+          {
+            "id": "https://openalex.org/keywords/r-graphics",
+            "display_name": "R graphics",
+            "score": 0.5889999866485596
+          },
+          {
+            "id": "https://openalex.org/keywords/ggplot2",
+            "display_name": "ggplot2",
+            "score": 0.9810000061988831
+          },
+          {
+            "id": "https://openalex.org/keywords/density-estimation",
+            "display_name": "density estimation",
+            "score": 0.8090000152587891
+          },
+          {
+            "id": "https://openalex.org/keywords/quantile-estimation",
+            "display_name": "quantile estimation",
+            "score": 0.8930000066757202
+          },
+          {
+            "id": "https://openalex.org/keywords/regression-diagnostics",
+            "display_name": "regression diagnostics",
+            "score": 0.5809999704360962
+          },
+          {
+            "id": "https://openalex.org/keywords/polynomial-regression",
+            "display_name": "polynomial regression",
+            "score": 0.8939999938011169
+          },
+          {
+            "id": "https://openalex.org/keywords/splines",
+            "display_name": "splines",
+            "score": 0.9810000061988831
+          },
+          {
+            "id": "https://openalex.org/keywords/graphic-design",
+            "display_name": "graphic design",
+            "score": 0.597000002861023
+          },
+          {
+            "id": "https://openalex.org/keywords/color-rendering",
+            "display_name": "color rendering",
+            "score": 0.800000011920929
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.4250966012477875
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.1201/9781351007726",
+            "doi": "https://doi.org/10.1201/9781351007726",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1201/9781351007726",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306467597",
+              "display_name": "Chapman & Hall/CRC eBooks",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/P4310320449",
+              "host_organization_name": "Informa",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Informa"
+              ],
+              "type": "ebook platform"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": null,
+            "raw_type": "book"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W1907586038",
+          "https://openalex.org/W4230614295",
+          "https://openalex.org/W4237685485",
+          "https://openalex.org/W7135553952",
+          "https://openalex.org/W4231614901",
+          "https://openalex.org/W4304195011",
+          "https://openalex.org/W299098028",
+          "https://openalex.org/W2923473239",
+          "https://openalex.org/W7044022001",
+          "https://openalex.org/W4230096730"
+        ],
+        "abstract_inverted_index": {
+          "Praise": [
+            0
+          ],
+          "for": [
+            1,
+            21,
+            25,
+            76,
+            95,
+            135,
+            177,
+            204,
+            218,
+            225,
+            234
+          ],
+          "the": [
+            2,
+            41,
+            54,
+            59,
+            105,
+            119,
+            142,
+            148,
+            168,
+            193,
+            205,
+            249,
+            264,
+            270
+          ],
+          "First": [
+            3
+          ],
+          "Edition": [
+            4
+          ],
+          "\"The": [
+            5
+          ],
+          "main": [
+            6
+          ],
+          "strength": [
+            7
+          ],
+          "of": [
+            8,
+            18,
+            43,
+            53,
+            91,
+            108,
+            131,
+            147,
+            170,
+            195,
+            244,
+            251,
+            267
+          ],
+          "this": [
+            9
+          ],
+          "book": [
+            10
+          ],
+          "is": [
+            11,
+            34,
+            46,
+            241
+          ],
+          "that": [
+            12
+          ],
+          "it": [
+            13,
+            33,
+            69
+          ],
+          "provides": [
+            14
+          ],
+          "a": [
+            15,
+            73,
+            128,
+            220,
+            242
+          ],
+          "unified": [
+            16
+          ],
+          "framework": [
+            17
+          ],
+          "graphical": [
+            19,
+            55,
+            66,
+            109,
+            133,
+            182
+          ],
+          "tools": [
+            20
+          ],
+          "data": [
+            22,
+            85,
+            136,
+            227,
+            233
+          ],
+          "analysis,": [
+            23
+          ],
+          "especially": [
+            24
+          ],
+          "univariate": [
+            26
+          ],
+          "and": [
+            27,
+            40,
+            78,
+            97,
+            111,
+            121,
+            138,
+            156,
+            163,
+            173,
+            179,
+            198,
+            213,
+            232,
+            246,
+            258,
+            269
+          ],
+          "low-dimensional": [
+            28
+          ],
+          "multivariate": [
+            29,
+            226
+          ],
+          "data.": [
+            30
+          ],
+          "In": [
+            31
+          ],
+          "addition,": [
+            32
+          ],
+          "clearly": [
+            35
+          ],
+          "written": [
+            36
+          ],
+          "in": [
+            37,
+            58,
+            84,
+            124,
+            141,
+            159,
+            164,
+            184
+          ],
+          "plain": [
+            38
+          ],
+          "language": [
+            39
+          ],
+          "inclusion": [
+            42
+          ],
+          "R": [
+            44,
+            185,
+            230
+          ],
+          "code": [
+            45,
+            231
+          ],
+          "particularly": [
+            47
+          ],
+          "useful": [
+            48
+          ],
+          "to": [
+            49,
+            115
+          ],
+          "assist": [
+            50
+          ],
+          "readers\u2019": [
+            51
+          ],
+          "understanding": [
+            52
+          ],
+          "techniques": [
+            56
+          ],
+          "discussed": [
+            57
+          ],
+          "book.": [
+            60
+          ],
+          "\u2026": [
+            61
+          ],
+          "It": [
+            62,
+            126
+          ],
+          "not": [
+            63
+          ],
+          "only": [
+            64
+          ],
+          "summarises": [
+            65
+          ],
+          "techniques,": [
+            67
+          ],
+          "but": [
+            68
+          ],
+          "also": [
+            70
+          ],
+          "serves": [
+            71
+          ],
+          "as": [
+            72
+          ],
+          "practical": [
+            74
+          ],
+          "reference": [
+            75
+          ],
+          "researchers": [
+            77
+          ],
+          "graduate": [
+            79
+          ],
+          "students": [
+            80
+          ],
+          "with": [
+            81,
+            100
+          ],
+          "an": [
+            82,
+            259
+          ],
+          "interest": [
+            83
+          ],
+          "display.\"": [
+            86
+          ],
+          "-Han": [
+            87
+          ],
+          "Lin": [
+            88
+          ],
+          "Shang,": [
+            89
+          ],
+          "Journal": [
+            90
+          ],
+          "Applied": [
+            92
+          ],
+          "Statistics": [
+            93,
+            96,
+            247
+          ],
+          "Graphics": [
+            94
+          ],
+          "Data": [
+            98
+          ],
+          "Analysis": [
+            99
+          ],
+          "R,": [
+            101,
+            160
+          ],
+          "Second": [
+            102
+          ],
+          "Edition,": [
+            103
+          ],
+          "presents": [
+            104
+          ],
+          "basic": [
+            106
+          ],
+          "principles": [
+            107,
+            114
+          ],
+          "design": [
+            110
+          ],
+          "applies": [
+            112
+          ],
+          "these": [
+            113
+          ],
+          "engaging": [
+            116
+          ],
+          "examples": [
+            117
+          ],
+          "using": [
+            118
+          ],
+          "graphics": [
+            120,
+            150,
+            172,
+            224
+          ],
+          "lattice": [
+            122
+          ],
+          "packages": [
+            123
+          ],
+          "R.": [
+            125
+          ],
+          "offers": [
+            127
+          ],
+          "wide": [
+            129
+          ],
+          "array": [
+            130
+          ],
+          "modern": [
+            132
+          ],
+          "displays": [
+            134,
+            183
+          ],
+          "visualization": [
+            137,
+            155
+          ],
+          "representation.": [
+            139
+          ],
+          "Added": [
+            140
+          ],
+          "second": [
+            143
+          ],
+          "edition": [
+            144
+          ],
+          "are": [
+            145
+          ],
+          "coverage": [
+            146
+          ],
+          "ggplot2": [
+            149
+          ],
+          "package,": [
+            151
+          ],
+          "material": [
+            152
+          ],
+          "on": [
+            153,
+            161,
+            189
+          ],
+          "human": [
+            154
+          ],
+          "color": [
+            157
+          ],
+          "rendering": [
+            158
+          ],
+          "screen,": [
+            162
+          ],
+          "print.": [
+            165
+          ],
+          "Features": [
+            166
+          ],
+          "Emphasizes": [
+            167
+          ],
+          "fundamentals": [
+            169
+          ],
+          "statistical": [
+            171
+          ],
+          "best": [
+            174
+          ],
+          "practice": [
+            175
+          ],
+          "guidelines": [
+            176
+          ],
+          "producing": [
+            178,
+            219
+          ],
+          "choosing": [
+            180
+          ],
+          "among": [
+            181
+          ],
+          "Presents": [
+            186
+          ],
+          "technical": [
+            187
+          ],
+          "details": [
+            188
+          ],
+          "topics": [
+            190
+          ],
+          "such": [
+            191
+          ],
+          "as:": [
+            192
+          ],
+          "estimation": [
+            194
+          ],
+          "quantiles,": [
+            196
+          ],
+          "nonparametric": [
+            197
+          ],
+          "parametric": [
+            199
+          ],
+          "density": [
+            200
+          ],
+          "estimation;": [
+            201
+          ],
+          "diagnostic": [
+            202
+          ],
+          "plots": [
+            203
+          ],
+          "simple": [
+            206
+          ],
+          "linear": [
+            207
+          ],
+          "regression": [
+            208,
+            217
+          ],
+          "model;": [
+            209
+          ],
+          "polynomial": [
+            210,
+            216
+          ],
+          "regression,": [
+            211
+          ],
+          "splines,": [
+            212
+          ],
+          "locally": [
+            214
+          ],
+          "weighted": [
+            215
+          ],
+          "smooth": [
+            221
+          ],
+          "curve;": [
+            222
+          ],
+          "Trellis": [
+            223
+          ],
+          "Provides": [
+            228
+          ],
+          "downloadable": [
+            229
+          ],
+          "figures": [
+            235
+          ],
+          "at": [
+            236,
+            248
+          ],
+          "www.graphicsforstatistics.com": [
+            237
+          ],
+          "Kevin": [
+            238
+          ],
+          "J.": [
+            239
+          ],
+          "Keen": [
+            240
+          ],
+          "Professor": [
+            243
+          ],
+          "Mathematics": [
+            245
+          ],
+          "University": [
+            250
+          ],
+          "Northern": [
+            252
+          ],
+          "British": [
+            253
+          ],
+          "Columbia": [
+            254
+          ],
+          "(Prince": [
+            255
+          ],
+          "George,": [
+            256
+          ],
+          "Canada)": [
+            257
+          ],
+          "Accredited": [
+            260
+          ],
+          "Professional": [
+            261
+          ],
+          "StatisticianTM": [
+            262
+          ],
+          "by": [
+            263
+          ],
+          "Statistical": [
+            265,
+            272
+          ],
+          "Society": [
+            266
+          ],
+          "Canada": [
+            268
+          ],
+          "American": [
+            271
+          ],
+          "Association.": [
+            273
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W3110949613",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 8
+          }
+        ],
+        "updated_date": "2026-11-20T13:11:24.684918",
+        "created_date": "2020-12-21T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W1592224053",
+        "doi": "https://doi.org/10.5281/zenodo.13513756",
+        "title": "R in action: data analysis and graphics with R",
+        "display_name": "R in action: data analysis and graphics with R",
+        "alternate_titles": [],
+        "relevance_score": 35.697617,
+        "publication_year": 2011,
+        "publication_date": "2011-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W1592224053",
+          "doi": "https://doi.org/10.5281/zenodo.13513756",
+          "mag": "1592224053"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "pmh:oai:aleph.bib-bvb.de:BVB01-024416298",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://bvbr.bib-bvb.de:443/F?func=service&doc_library=BVB01&local_base=BVB01&doc_number=024416298&sequence=000002&line_number=0001&func_code=DB_RECORDS&service_type=MEDIA",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W1592224053"
+        ],
+        "child_works_count": 0,
+        "type": "book",
+        "is_traditional": true,
+        "indexed_in": [
+          "datacite"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://doi.org/10.5281/zenodo.13513756",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5018453504",
+              "display_name": "Robert I. Kabacoff",
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": true,
+            "raw_author_name": "Kabacoff, Robert",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5018453504"
+        ],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 2.9246,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 525,
+        "citation_normalized_percentile": {
+          "value": 0.92265193,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 96,
+          "max": 100
+        },
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T13398",
+          "display_name": "Data Analysis with R",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T13398",
+            "display_name": "Data Analysis with R",
+            "score": 0.9994999766349792,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13820",
+            "display_name": "SAS software applications and methods",
+            "score": 0.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1712",
+              "display_name": "Software"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/r-programming",
+            "display_name": "R programming language",
+            "score": 0.9639999866485596
+          },
+          {
+            "id": "https://openalex.org/keywords/statistical-computing",
+            "display_name": "statistical computing",
+            "score": 0.9860000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/data-analysis",
+            "display_name": "data analysis",
+            "score": 0.7129999995231628
+          },
+          {
+            "id": "https://openalex.org/keywords/data-visualization",
+            "display_name": "data visualization",
+            "score": 0.7289999723434448
+          },
+          {
+            "id": "https://openalex.org/keywords/graphics",
+            "display_name": "graphics",
+            "score": 0.656000018119812
+          },
+          {
+            "id": "https://openalex.org/keywords/data-manipulation",
+            "display_name": "data manipulation",
+            "score": 0.7020000219345093
+          },
+          {
+            "id": "https://openalex.org/keywords/statistical-software",
+            "display_name": "statistical software",
+            "score": 0.492000013589859
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.7967168092727661
+          },
+          {
+            "id": "https://openalex.org/C21442007",
+            "wikidata": "https://www.wikidata.org/wiki/Q1027879",
+            "display_name": "Graphics",
+            "level": 2,
+            "score": 0.7934867143630981
+          },
+          {
+            "id": "https://openalex.org/C2780451532",
+            "wikidata": "https://www.wikidata.org/wiki/Q759676",
+            "display_name": "Task (project management)",
+            "level": 2,
+            "score": 0.6618272662162781
+          },
+          {
+            "id": "https://openalex.org/C2776760102",
+            "wikidata": "https://www.wikidata.org/wiki/Q5139990",
+            "display_name": "Code (set theory)",
+            "level": 3,
+            "score": 0.6419100165367126
+          },
+          {
+            "id": "https://openalex.org/C132964779",
+            "wikidata": "https://www.wikidata.org/wiki/Q2110223",
+            "display_name": "Raw data",
+            "level": 2,
+            "score": 0.6055375337600708
+          },
+          {
+            "id": "https://openalex.org/C2780791683",
+            "wikidata": "https://www.wikidata.org/wiki/Q846785",
+            "display_name": "Action (physics)",
+            "level": 2,
+            "score": 0.5774087905883789
+          },
+          {
+            "id": "https://openalex.org/C101468663",
+            "wikidata": "https://www.wikidata.org/wiki/Q1620158",
+            "display_name": "Modular design",
+            "level": 2,
+            "score": 0.5765948295593262
+          },
+          {
+            "id": "https://openalex.org/C56288433",
+            "wikidata": "https://www.wikidata.org/wiki/Q58673",
+            "display_name": "Data manipulation language",
+            "level": 2,
+            "score": 0.469435453414917
+          },
+          {
+            "id": "https://openalex.org/C23123220",
+            "wikidata": "https://www.wikidata.org/wiki/Q816826",
+            "display_name": "Information retrieval",
+            "level": 1,
+            "score": 0.4269944131374359
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.42025962471961975
+          },
+          {
+            "id": "https://openalex.org/C199360897",
+            "wikidata": "https://www.wikidata.org/wiki/Q9143",
+            "display_name": "Programming language",
+            "level": 1,
+            "score": 0.37519168853759766
+          },
+          {
+            "id": "https://openalex.org/C121684516",
+            "wikidata": "https://www.wikidata.org/wiki/Q7600677",
+            "display_name": "Computer graphics (images)",
+            "level": 1,
+            "score": 0.2798477113246918
+          },
+          {
+            "id": "https://openalex.org/C127413603",
+            "wikidata": "https://www.wikidata.org/wiki/Q11023",
+            "display_name": "Engineering",
+            "level": 0,
+            "score": 0.10101604461669922
+          },
+          {
+            "id": "https://openalex.org/C177264268",
+            "wikidata": "https://www.wikidata.org/wiki/Q1514741",
+            "display_name": "Set (abstract data type)",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C201995342",
+            "wikidata": "https://www.wikidata.org/wiki/Q682496",
+            "display_name": "Systems engineering",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C62520636",
+            "wikidata": "https://www.wikidata.org/wiki/Q944",
+            "display_name": "Quantum mechanics",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C121332964",
+            "wikidata": "https://www.wikidata.org/wiki/Q413",
+            "display_name": "Physics",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 8,
+        "locations": [
+          {
+            "id": "pmh:oai:aleph.bib-bvb.de:BVB01-024416298",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://bvbr.bib-bvb.de:443/F?func=service&doc_library=BVB01&local_base=BVB01&doc_number=024416298&sequence=000002&line_number=0001&func_code=DB_RECORDS&service_type=MEDIA",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:aleph.bib-bvb.de:BVB01-025401715",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://bvbr.bib-bvb.de:443/F?func=service&doc_library=BVB01&local_base=BVB01&doc_number=025401715&sequence=000002&line_number=0001&func_code=DB_RECORDS&service_type=MEDIA",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:aleph.bib-bvb.de:BVB01-027964216",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://bvbr.bib-bvb.de:443/F?func=service&doc_library=BVB01&local_base=BVB01&doc_number=027964216&sequence=000002&line_number=0001&func_code=DB_RECORDS&service_type=MEDIA",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:cds.cern.ch:1418906",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://cds.cern.ch/record/1418906",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400735",
+              "display_name": "International Linear Collider",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": null
+          },
+          {
+            "id": "pmh:oai:cds.cern.ch:2041922",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://cds.cern.ch/record/2041922",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306402195",
+              "display_name": "CERN Document Server (European Organization for Nuclear Research)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I67311998",
+              "host_organization_name": "European Organization for Nuclear Research",
+              "host_organization_lineage": [
+                "https://openalex.org/I67311998"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": null
+          },
+          {
+            "id": "doi:10.5281/zenodo.13513756",
+            "doi": "https://doi.org/10.5281/zenodo.13513756",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.5281/zenodo.13513756",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400562",
+              "display_name": "Zenodo (CERN European Organization for Nuclear Research)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I67311998",
+              "host_organization_name": "European Organization for Nuclear Research",
+              "host_organization_lineage": [
+                "https://openalex.org/I67311998"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Book"
+          },
+          {
+            "id": "doi:10.5281/zenodo.13513757",
+            "doi": "https://doi.org/10.5281/zenodo.13513757",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.5281/zenodo.13513757",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400562",
+              "display_name": "Zenodo (CERN European Organization for Nuclear Research)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I67311998",
+              "host_organization_name": "European Organization for Nuclear Research",
+              "host_organization_lineage": [
+                "https://openalex.org/I67311998"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Book"
+          },
+          {
+            "id": "mag:1592224053",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://ci.nii.ac.jp/ncid/BB18795371",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.5281/zenodo.13513756",
+          "doi": "https://doi.org/10.5281/zenodo.13513756",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.5281/zenodo.13513756",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400562",
+            "display_name": "Zenodo (CERN European Organization for Nuclear Research)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I67311998",
+            "host_organization_name": "European Organization for Nuclear Research",
+            "host_organization_lineage": [
+              "https://openalex.org/I67311998"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Book"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 7,
+        "referenced_works": [
+          "https://openalex.org/W139186542",
+          "https://openalex.org/W1518897246",
+          "https://openalex.org/W1587026990",
+          "https://openalex.org/W2079201812",
+          "https://openalex.org/W2115098571",
+          "https://openalex.org/W2132949918",
+          "https://openalex.org/W2170836630"
+        ],
+        "related_works": [
+          "https://openalex.org/W1600069255",
+          "https://openalex.org/W6949541016",
+          "https://openalex.org/W270671445",
+          "https://openalex.org/W6911594012",
+          "https://openalex.org/W6930285069",
+          "https://openalex.org/W2603122175",
+          "https://openalex.org/W2496279191",
+          "https://openalex.org/W6911692506",
+          "https://openalex.org/W7052278909",
+          "https://openalex.org/W1932020254"
+        ],
+        "abstract_inverted_index": {
+          "R": [
+            0,
+            34,
+            47
+          ],
+          "is": [
+            1,
+            52,
+            142
+          ],
+          "a": [
+            2,
+            35,
+            53,
+            62,
+            67,
+            90,
+            134
+          ],
+          "powerful": [
+            3
+          ],
+          "language": [
+            4,
+            54
+          ],
+          "for": [
+            5
+          ],
+          "statistical": [
+            6
+          ],
+          "computing": [
+            7
+          ],
+          "and": [
+            8,
+            23,
+            30,
+            69,
+            89,
+            114
+          ],
+          "graphics": [
+            9
+          ],
+          "that": [
+            10,
+            99,
+            118
+          ],
+          "can": [
+            11,
+            120
+          ],
+          "handle": [
+            12
+          ],
+          "virtually": [
+            13
+          ],
+          "any": [
+            14
+          ],
+          "data-crunching": [
+            15
+          ],
+          "task.": [
+            16
+          ],
+          "It": [
+            17
+          ],
+          "runs": [
+            18
+          ],
+          "on": [
+            19,
+            57,
+            85
+          ],
+          "all": [
+            20,
+            143
+          ],
+          "important": [
+            21
+          ],
+          "platforms": [
+            22
+          ],
+          "provides": [
+            24
+          ],
+          "thousands": [
+            25
+          ],
+          "of": [
+            26,
+            44,
+            93,
+            125,
+            133
+          ],
+          "useful": [
+            27,
+            82
+          ],
+          "specialized": [
+            28
+          ],
+          "modules": [
+            29
+          ],
+          "utilities.": [
+            31
+          ],
+          "This": [
+            32
+          ],
+          "makes": [
+            33
+          ],
+          "great": [
+            36
+          ],
+          "way": [
+            37
+          ],
+          "to": [
+            38,
+            72,
+            80,
+            104,
+            122
+          ],
+          "get": [
+            39,
+            108
+          ],
+          "meaningful": [
+            40,
+            116
+          ],
+          "information": [
+            41,
+            77
+          ],
+          "from": [
+            42,
+            138,
+            145
+          ],
+          "mountains": [
+            43
+          ],
+          "raw": [
+            45
+          ],
+          "data.": [
+            46
+          ],
+          "in": [
+            48
+          ],
+          "Action,": [
+            49
+          ],
+          "Second": [
+            50
+          ],
+          "Edition": [
+            51
+          ],
+          "tutorial": [
+            55
+          ],
+          "focused": [
+            56
+          ],
+          "practical": [
+            58
+          ],
+          "problems.": [
+            59
+          ],
+          "Written": [
+            60
+          ],
+          "by": [
+            61
+          ],
+          "research": [
+            63
+          ],
+          "methodologist,": [
+            64
+          ],
+          "it": [
+            65,
+            95,
+            109
+          ],
+          "takes": [
+            66
+          ],
+          "direct": [
+            68
+          ],
+          "modular": [
+            70
+          ],
+          "approach": [
+            71
+          ],
+          "quickly": [
+            73
+          ],
+          "give": [
+            74
+          ],
+          "readers": [
+            75
+          ],
+          "the": [
+            76,
+            97,
+            126,
+            146
+          ],
+          "they": [
+            78,
+            119
+          ],
+          "need": [
+            79
+          ],
+          "produce": [
+            81,
+            115
+          ],
+          "results.": [
+            83
+          ],
+          "Focusing": [
+            84
+          ],
+          "realistic": [
+            86
+          ],
+          "data": [
+            87,
+            101
+          ],
+          "analyses": [
+            88
+          ],
+          "comprehensive": [
+            91
+          ],
+          "integration": [
+            92
+          ],
+          "graphics,": [
+            94
+          ],
+          "follows": [
+            96
+          ],
+          "steps": [
+            98
+          ],
+          "real": [
+            100
+          ],
+          "analysts": [
+            102
+          ],
+          "use": [
+            103
+          ],
+          "acquire": [
+            105
+          ],
+          "their": [
+            106
+          ],
+          "data,": [
+            107
+          ],
+          "into": [
+            110
+          ],
+          "shape,": [
+            111
+          ],
+          "analyze": [
+            112
+          ],
+          "it,": [
+            113
+          ],
+          "results": [
+            117
+          ],
+          "provide": [
+            121
+          ],
+          "clients.": [
+            123
+          ],
+          "Purchase": [
+            124
+          ],
+          "print": [
+            127
+          ],
+          "book": [
+            128
+          ],
+          "comes": [
+            129
+          ],
+          "with": [
+            130
+          ],
+          "an": [
+            131
+          ],
+          "offer": [
+            132
+          ],
+          "free": [
+            135
+          ],
+          "PDF": [
+            136
+          ],
+          "eBook": [
+            137
+          ],
+          "Manning.": [
+            139
+          ],
+          "Also": [
+            140
+          ],
+          "available": [
+            141
+          ],
+          "code": [
+            144
+          ],
+          "book.": [
+            147
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W1592224053",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 21
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 31
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 44
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 37
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 61
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 45
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 53
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 51
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 41
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 42
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 53
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 21
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 10
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 4
+          }
+        ],
+        "updated_date": "2026-11-20T13:11:24.684918",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

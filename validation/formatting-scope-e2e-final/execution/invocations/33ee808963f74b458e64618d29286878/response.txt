@@ -1,0 +1,67 @@
+```json
+{
+  "section_name": "Estimation, Additive Residual Correction, and Predictive Evaluation",
+  "candidates": [
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Efron derives the mathematical covariance penalty connecting apparent in-sample error to expected prediction error, explaining why evaluating an additive adjustment on the identical sample used to estimate it creates an optimistic downward bias in error."
+    },
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Efron examines the inherent optimism of apparent error rates when sample data are used twice—both to fit a rule and to evaluate its performance—directly addressing why zero in-sample residual fails to provide predictive evidence."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Stone establishes the formal foundations of predictive assessment and cross-validation, demonstrating that honest performance assessment requires separating estimation data from evaluation data to avoid circularity."
+    },
+    {
+      "title": "Some Comments on Cp",
+      "year": 1973,
+      "reason": "Mallows differentiates the in-sample residual sum of squares from true expected prediction error, showing that absorbing observed errors via parameter adjustments artificially lowers apparent error without guaranteeing generalization."
+    },
+    {
+      "title": "Updating Prediction Models: A Review of Methods and Application to Patients with Traumatic Brain Injury",
+      "year": 2004,
+      "reason": "Steyerberg et al. evaluate model updating via intercept recalibration (an additive correction based on observed mean residuals) and emphasize that achieving zero mean error on the recalibration sample is an apparent artifact requiring external validation."
+    },
+    {
+      "title": "Validation, Calibration, Revision and Combination of Prognostic Survival Models",
+      "year": 2000,
+      "reason": "Van Houwelingen investigates model revision through additive offset adjustments, detailing the fundamental distinction between in-sample apparent calibration and valid out-of-sample predictive performance."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Ye defines Generalized Degrees of Freedom to quantify the optimism induced when models or adjustments adapt directly to observed residuals, explaining how data-dependent shifts consume degrees of freedom."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Geisser details the predictive sample reuse principle, explaining that using the same finite observations to both estimate an adjustment parameter and assess its error yields uninformative apparent fit rather than predictive validity."
+    },
+    {
+      "title": "Estimation of the Mean of a Multivariate Normal Distribution",
+      "year": 1981,
+      "reason": "Stein presents Stein's Unbiased Risk Estimate (SURE), establishing the relationship between additive adjustments derived from observed outcomes and the true risk of the resulting prediction rule."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Efron analyzes the systematic downward bias of resubstitution/apparent error when evaluating fitted rules, introducing resampling frameworks to isolate genuine prediction error from sample-fitting effects."
+    },
+    {
+      "title": "Multivariable Prognostic Models: Issues in Developing Models, Evaluating Assumptions and Adequacy, and Measuring and Reducing Errors",
+      "year": 1996,
+      "reason": "Harrell, Lee, and Mark outline principles of predictive validation, emphasizing how post-hoc additive recalibration trivially removes observed mean error while inflating apparent accuracy unless independently verified."
+    },
+    {
+      "title": "Improvements on Cross-Validation: The .632+ Bootstrap Method",
+      "year": 1997,
+      "reason": "Efron and Tibshirani analyze extreme optimism and overfitting in finite samples, formalizing the gap between fitted residuals and predictive performance when an adjustment perfectly fits observed data."
+    }
+  ]
+}
+```

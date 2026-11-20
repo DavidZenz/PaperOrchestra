@@ -1,0 +1,48 @@
+{
+  "Summary": "The note demonstrates a finite additive intercept correction on five synthetic observations (x = -2, -1, 0, 1, 2; y = 2x + 3). A fixed predictor 2x leaves a constant residual of 3 at every point. Adding the observed mean residual b = 3 reduces the recorded MSE from 9 to 0, and MAE from 3 to 0, on the same five observations used to compute b. The paper reports b = 1.5 as a partial correction (MSE 2.25, MAE 1.5), presents a table, a discrete plot, and a dependency schematic, and provides figure source provenance. It states explicitly that it contains no held-out evaluation, external data, optimizer, or stochastic repetition. Its main contribution is a transparent worked example of residual-based constant correction and of how fitting and evaluation share the same data.",
+  "Strengths": [
+    "The arithmetic is correct. I recomputed the residuals (all 3), b = 3, the MSE values 9, 2.25, and 0, and the MAE values 3, 1.5, and 0. The reported table matches these values.",
+    "The paper is explicit about its limits. It states that the zero error is in-sample, that b and the evaluation use the same five observations, and that no predictive generalization is claimed.",
+    "The dependency structure (targets and baseline predictions give residuals, residuals give b, and the corrected predictions are checked against the same targets) is stated clearly and is reflected in Figure 1.",
+    "The main text is short and easy to follow for a reader familiar with least squares.",
+    "Figure provenance is documented with source paths, hashes, and render metadata, which supports reproducibility of the displays."
+  ],
+  "Weaknesses": [
+    "The example is constructed so that every baseline residual is identical. The mean-residual correction then gives zero error by construction, so the result does not test any method or show anything about general performance.",
+    "The zero error is an in-sample quantity computed on the same points used to estimate b. The paper acknowledges this, but the headline result (MSE 9 to 0) is still presented as the main finding, which overstates what it shows.",
+    "The mean residual is the least-squares constant adjustment, a textbook fact. The note offers no new method, analysis, or extension beyond restating it for one specific dataset.",
+    "The related-work section is long and mostly tangential. It covers GLMs, GAMs, boosting, double/debiased ML, seasonal adjustment, influence diagnostics, and validation-updating studies. The paper states it does not evaluate or use any of these, so the citations pad the manuscript without supporting its argument.",
+    "The manuscript includes pipeline and process artifacts that do not belong in a research paper, such as references to 'supplied worker artifacts', worker.R, render.json, sessionInfo.txt, and 'the Figure source provenance section'.",
+    "Several bibliography entries have placeholder-like page ranges (for example, Anscombe and Tukey '141-141', Box 1976 '791-791', Cook 1977 '15-15', Ihaka and Gentleman '299-299', Nelder and Wedderburn '370-370', Plackett '239-239', Robinson '931-931', Engle et al. '310-310'). These need checking against the original sources.",
+    "The figure provenance section lists Figure 2 before Figure 1, which is inconsistent with the manuscript's ordering.",
+    "The text cites an 'experimental log' as the source of the recorded values, but the log is not part of the submission. The values can be recomputed from the stated inputs, but the paper does not supply the log or the code in the manuscript itself.",
+    "The comparison set is minimal. It consists of the baseline (b = 0), one partial correction (b = 1.5), and the full correction (b = 3). Without a non-degenerate dataset, the comparison says little about when or how the correction helps."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "What research question does this note answer beyond the identity that the mean residual minimizes MSE when all residuals are equal? Who is the intended audience?",
+    "Would the authors add a non-degenerate case, for example noisy targets, held-out points, or cross-validation, so that the correction's effect on predictive error can be assessed?",
+    "Can the authors verify the page ranges and volume numbers in the reference list, several of which appear to be placeholders (for example, '141-141', '791-791', '370-370')?",
+    "Why does the manuscript body refer to pipeline artifacts (worker.R, render.json, sessionInfo.txt, 'supplied worker artifacts')? Are these meant to be part of the submission?",
+    "Why does the figure provenance section list Figure 2 before Figure 1? Please confirm the figure numbering.",
+    "Can the authors supply the experimental log and the code that produced the reported values, so the reported MSE and MAE can be checked directly?",
+    "Which of the cited works on GLMs, GAMs, boosting, double/debiased ML, and seasonal adjustment does the authors' argument actually depend on? If none, should they be removed?"
+  ],
+  "Limitations": [
+    "The single constructed dataset is a degenerate case with identical residuals. The result cannot be generalized to real data, noisy targets, or fitted models.",
+    "The reported zero error is in-sample by construction, so it must not be read as evidence of predictive accuracy or generalization.",
+    "The note evaluates only one fixed baseline and one scalar correction. It provides no comparison with alternative correction methods or with any benchmark.",
+    "Risk of misuse is low, but a teaching example that reports a perfect in-sample result could be misread as evidence that residual correction eliminates error in practice. The authors should make the in-sample limitation prominent wherever the zero error is reported.",
+    "No ethical concerns arise from the work itself."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 2,
+  "Contribution": 1,
+  "Overall": 2,
+  "Confidence": 4,
+  "Decision": "Reject"
+}

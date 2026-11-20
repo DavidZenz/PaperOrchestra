@@ -246,7 +246,7 @@ class Runtime:
                 prompt += "\n\n" + FORMAT_EDITOR_RULE
             elif routing_role == "format-reviewer":
                 prompt += "\n\n" + FORMAT_REVIEW_RULE
-        (directory / "prompt.txt").write_text(prompt)
+        (directory / "prompt.txt").write_bytes(prompt.encode("utf-8"))
         search_key = hashlib.sha256(prompt.encode()).hexdigest()
         if search:
             with self.lock:

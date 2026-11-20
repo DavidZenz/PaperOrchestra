@@ -1,0 +1,43 @@
+{
+  "Summary": "The note presents a deterministic teaching example in which five inputs x = (-2, -1, 0, 1, 2) have targets y = 2x + 3 and a fixed predictor 2x. Every baseline residual equals 3, so the observed mean residual b = 3 is added to the predictor. This removes the error on the same five observations, with recorded MSE 9, 2.25, and 0 and MAE 3, 1.5, and 0 for b = 0, 1.5, and 3. The authors explicitly state that the zero error is in-sample, that no held-out evaluation is performed, and that the note contributes a finite, transparent calculation rather than a method. The paper also describes figure sources, render metadata, and SHA256 checksums for reproducibility.",
+  "Strengths": [
+    "The arithmetic is correct. Residuals are all 3, the mean residual is 3, and the reported MSE and MAE values for b = 0, 1.5, and 3 match the stated definitions.",
+    "The authors are candid about the limits of the result. They repeatedly state that the zero error is in-sample and that no held-out, noisy, or inferential evidence is supplied.",
+    "The dependency between observations, residuals, b, and the evaluation of corrected predictions is made explicit, which is useful for teaching in-sample versus out-of-sample assessment.",
+    "The note is short and self-contained in its main computation, and it is written in a clear, direct style.",
+    "The figure and source provenance section gives file paths and SHA256 checksums, which supports reproducibility of the displays."
+  ],
+  "Weaknesses": [
+    "The contribution is minimal. The zero error is an algebraic consequence of the constructed data having identical residuals, so the example does not test or demonstrate anything beyond that identity.",
+    "The evaluation is tautological by design. The same five points determine b and assess the corrected model, so the reported zero MSE carries no evidential weight, as the authors concede.",
+    "Section 2 is padded. Several cited works (seasonal adjustment [21], classifier-progress critique [18], adaptive data analysis [14], semiparametric weather-electricity regression [16], GAM and boosting work [17, 19, 35]) are discussed but not connected to any calculation in the note.",
+    "The reference list has metadata defects visible in the text. Several entries have identical start and end pages, including [1] 141\u2013141, [4] 791\u2013791, [10] 15\u201315, [16] 310\u2013310, [20] 299\u2013299, [24] 370\u2013370, [25] 239\u2013239, and [27] 931\u2013931. Reference [33] has no page range.",
+    "The work depends on external figure sources (figure_code/...) and a log that are not included in the manuscript. The R code that produces the reported numbers is therefore not inspectable from the paper itself.",
+    "The note does not offer a variant in which the mean-residual correction is nontrivial, such as noisy targets, a held-out split, or a case where residuals vary. Without one, the pedagogical point is limited to the trivially exact case."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "What is the intended audience and the venue-relevant contribution beyond a worked textbook example of mean-residual intercept correction?",
+    "Can you add a variant with noisy targets or a held-out split, and report where the correction no longer yields zero error? This would show that the method has content beyond the constructed case.",
+    "Please verify the bibliographic metadata. Several entries list identical start and end pages, and reference [33] lacks pages. Which entries have been checked against the original publications?",
+    "Which of the cited works in Section 2 are used in the argument, and which serve only as context? Could the related-work section be shortened to those that connect directly to the calculation?",
+    "Could the R code that generates the error table and the MSE values be included inline or in supplementary material, so that the calculation can be reproduced without the external figure directories?"
+  ],
+  "Limitations": [
+    "All results come from one constructed dataset of five points with identical residuals. No conclusion about performance on other data, noise, or additional observations is supported.",
+    "The reported zero error is in-sample and does not measure predictive accuracy or generalization.",
+    "There is no uncertainty quantification, sampling model, or repeated stochastic evaluation.",
+    "The note may be misread as evidence that residual correction reduces error in general. If it is circulated without the in-sample caveat, it could give a misleading impression of model quality.",
+    "Several figures and their sources were not available to this review, so claims about figure content were not verified."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 2,
+  "Contribution": 1,
+  "Overall": 3,
+  "Confidence": 4,
+  "Decision": "Reject"
+}

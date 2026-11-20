@@ -1,0 +1,80 @@
+{
+  "status": "failed",
+  "runner": "/Users/davidzenz/.codex/skills/paper-orchestra",
+  "frozen_bundle": "f790da80a7089e5a7769c8c137a4ef141f402d793a20ccb5111724f5e84cb309",
+  "unchanged_installed_bundle": true,
+  "duration_seconds": 1366.920490026474,
+  "agent_attempts": 48,
+  "completed_agent_attempts": 47,
+  "separate_processes": 48,
+  "unique_sessions": 47,
+  "backends": {
+    "codex": 12,
+    "claude-code": 9,
+    "mistral-vibe": 2,
+    "antigravity": 24
+  },
+  "search_workers_with_evidence": 17,
+  "http_status_by_host": {
+    "api.semanticscholar.org": {
+      "429": 2
+    },
+    "api.crossref.org": {
+      "200": 103
+    },
+    "api.openalex.org": {
+      "200": 74
+    }
+  },
+  "literature_plot_overlap_seconds": 565.0346558094025,
+  "reviewer_ensembles": 1,
+  "aggregate_scores_checked": 9,
+  "artifact_hashes_checked": 110,
+  "revision_decisions": [],
+  "format_worker_invocations": {
+    "format-reviewer": [
+      "d3a24492b9854c44b62a4ace2a7bef9f"
+    ],
+    "format-editor": [
+      "c4d2812a300949c181113f86b364d2b1"
+    ]
+  },
+  "format_decisions": [
+    {
+      "version": "v1",
+      "outcome": "ACCEPTED_COMPILE_SUCCESS"
+    }
+  ],
+  "formatting_guard_checks": [
+    {
+      "tex": "/Users/davidzenz/PaperOrchestra/validation/formatting-scope-e2e/content_refinement_workdir/formatted_candidate_v1.tex",
+      "valid": true
+    }
+  ],
+  "content_tex_sha256": "0eefa2a3a479d06167d92363f381a7da9dd828b49be7a03939f0e86959757c68",
+  "final_tex_sha256": "0eefa2a3a479d06167d92363f381a7da9dd828b49be7a03939f0e86959757c68",
+  "latex_changes": [],
+  "citation_keys_unchanged": true,
+  "citation_groups_unchanged": true,
+  "compiled_bibliography_bytes_unchanged": true,
+  "preformat_compiled_candidate": "initial_draft",
+  "final_compiled_candidate": "formatted_candidate_v1",
+  "reference_count_preformat": 73,
+  "reference_count_final": 73,
+  "visible_reference_titles_final": 73,
+  "reference_library_count": 77,
+  "reference_pages": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "pdf_pages": 12,
+  "pdf_sha256": "fbce44170f410f22db496c20f616bb919f2563146de2e93bfaf3f6472b8b2250",
+  "audit_warnings": [],
+  "driver_error": "Execution evidence audit failed: Model policy: Invocation native execution plan is invalid: d8639af59ee04d5bb1dceea02773407e: Codex stdin differs from retained prompt",
+  "post_run_audit_verified": true,
+  "prompt_and_planned_stdin_sha256": "26e52efdc630a8540f0e9a18385d2a36d9ec651e82f99f0c972c86db1269df3a",
+  "mixed_line_ending_count": 4
+}

@@ -129,7 +129,8 @@ def _claude(directory, request):
             plan = json.loads((Path(directory) / "transport.json").read_text())
             payload = json.loads(plan["stdin"])
             blocks = payload["message"]["content"]
-            if len(blocks) != len(request["images"]) + 1 or blocks[0] != {"type":"text", "text":(Path(directory) / "prompt.txt").read_text()}:
+            prompt = (Path(directory) / "prompt.txt").read_bytes().decode("utf-8")
+            if len(blocks) != len(request["images"]) + 1 or blocks[0] != {"type":"text", "text":prompt}:
                 raise ValueError("Claude native input does not preserve the full prompt/image count")
             for path, block in zip(request["images"], blocks[1:]):
                 source = block["source"]
@@ -179,6 +180,9 @@ def validate_invocation_plan(directory, request, command, selection):
         if hashlib.sha256(path.read_bytes()).hexdigest() != request["transport_plan_sha256"]:
             raise ValueError("Native transport plan hash differs")
         plan = json.loads(path.read_text())
+        # Universal-newline reads change CRLF from the original prompt, which
+        # can come from external reference metadata or caller-supplied material.
+        prompt = (directory / "prompt.txt").read_bytes().decode("utf-8")
         if plan["backend"] != backend or request.get("backend", "codex") != backend:
             raise ValueError("Native execution backend differs from selected runtime")
         if command != plan["command"] or Path(command[0]).name != EXECUTABLES[backend]:
@@ -203,7 +207,7 @@ def validate_invocation_plan(directory, request, command, selection):
                 required = {"--ephemeral", "--sandbox", "read-only"}
                 if not required.issubset(command):
                     raise ValueError("Codex worker is not ephemeral/read-only")
-                if plan["stdin"] != (directory / "prompt.txt").read_text():
+                if plan["stdin"] != prompt:
                     raise ValueError("Codex stdin differs from retained prompt")
             else:
                 effort_flags = [command[i + 1] for i, arg in enumerate(command[:-1]) if arg == "--effort"]
@@ -217,12 +221,12 @@ def validate_invocation_plan(directory, request, command, selection):
                     raise ValueError("Claude tools differ from the discovery-only search policy")
                 payload = json.loads(plan["stdin"])
                 content = payload["message"]["content"]
-                if payload["type"] != "user" or content[0] != {"type":"text", "text":(directory / "prompt.txt").read_text()}:
+                if payload["type"] != "user" or content[0] != {"type":"text", "text":prompt}:
                     raise ValueError("Claude native input differs from retained prompt")
         else:
             if plan["acp"]["model"] != model or plan["acp"]["effort"] != effort:
                 raise ValueError("ACP settings differ from selected model/effort")
-            if plan["stdin"] != (directory / "prompt.txt").read_text():
+            if plan["stdin"] != prompt:
                 raise ValueError("ACP prompt differs from retained prompt")
     except (OSError, ValueError, KeyError, TypeError, IndexError) as exc:
         errors.append(str(exc))

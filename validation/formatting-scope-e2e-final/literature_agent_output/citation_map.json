@@ -1,0 +1,438 @@
+{
+    "Nelder1972GeneralizedLinear": {
+        "citation_key": "Nelder1972GeneralizedLinear",
+        "title": "Generalized Linear Models",
+        "authors": [
+            "John Ashworth Nelder",
+            "R. W. M. Wedderburn"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series A (General)",
+        "year": 1972,
+        "abstract": "The technique of iterative weighted linear regression can be used to obtain maximum likelihood estimates of the parameters with observations distributed according to some exponential family and systematic effects that can be made linear by a suitable transformation. A generalization of the analysis of variance is given for these models using log-likelihoods. These generalized linear models are illustrated by examples relating to four distributions; the Normal, Binomial (probit analysis, etc.), Poisson (contingency tables) and gamma (variance components). The implications of the approach in designing statistics courses are discussed."
+    },
+    "Dobson2001IntroductionGeneralized": {
+        "citation_key": "Dobson2001IntroductionGeneralized",
+        "title": "An Introduction to Generalized Linear Models, Second Edition",
+        "authors": [
+            "Annette Jane Dobson"
+        ],
+        "venue": "Chapman & Hall/CRC texts in statistical science/Texts in statistical science",
+        "year": 2001,
+        "abstract": "Generalized linear models provide a unified theoretical and conceptual framework for many of the most commonly used statistical methods. In the ten years since publication of the first edition of this bestselling text, great strides have been made in the development of new methods and in software for generalized linear models and other closely related models.Thoroughly revised and updated, An Introduction to Generalized Linear Models, Second Edition continues to initiate intermediate students of statistics, and the many other disciplines that use statistics, in the practical use of these models and methods. The new edition incorporates many of the important developments of the last decade, including survival analysis, nominal and ordinal logistic regression, generalized estimating equations, and multi-level models. It also includes modern methods for checking model adequacy and examples from an even wider range of application. Statistics can appear to the uninitiated as a collection of unrelated tools. An Introduction to Generalized Linear Models, Second Edition illustrates how these apparently disparate methods are examples or special cases of a conceptually simple structure based on the exponential family of distribution, maximum likelihood estimation, and the principles of statistical modelling."
+    },
+    "Lovell1963SeasonalAdjustment": {
+        "citation_key": "Lovell1963SeasonalAdjustment",
+        "title": "Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis",
+        "authors": [
+            "Michael C. Lovell"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1963,
+        "abstract": "The logical implications of certain simple consistency requirements for appraising alternative procedures for seasonal adjustment constitute the first problem considered in this paper. It is shown that any sum preserving technique of seasonal adjustment that satisfies the quite reasonable requirements of orthogonality and idempotency can be executed on the electronic computer by standard least squares regression procedures. Problems involved in utilizing seasonally adjusted data when estimating the parameters of econometric models are examined. Extending the fundamental Frisch-Waugh theorem concerning trend and regression analysis to encompass problems of seasonality facilitates the comparison of the implications of running regressions on data subjected to prior seasonal adjustment with the effects of including dummy variables with unadjusted data. Complicated types of moving seasonal patterns that may be handled by the dummy variable procedure are considered. Although efficient estimates of the parameters of the econometric model may be obtained in appropriate circumstances when data subjected to prior seasonal adjustment by the least squares procedure are employed, there is an inherent tendency to overstate the significance of the regression coefficients; a correction procedure is suggested. When seasonally adjusted data are employed, certain special complications must be taken into account in applying Aitken's generalized least squares procedure in order to deal with autoc... [Truncated]"
+    },
+    "Hastie1986GeneralizedAdditive": {
+        "citation_key": "Hastie1986GeneralizedAdditive",
+        "title": "Generalized Additive Models",
+        "authors": [
+            "Trevor J. Hastie",
+            "Robert John Tibshirani"
+        ],
+        "venue": "Statistical Science",
+        "year": 1986,
+        "abstract": "Likelihood-based regression models such as the normal linear regression model and the linear logistic model, assume a linear (or some other parametric) form for the covariates $X_1, X_2, \\cdots, X_p$. We introduce the class of generalized additive models which replaces the linear form $\\sum \\beta_jX_j$ by a sum of smooth functions $\\sum s_j(X_j)$. The $s_j(\\cdot)$'s are unspecified functions that are estimated using a scatterplot smoother, in an iterative procedure we call the local scoring algorithm. The technique is applicable to any likelihood-based regression model: the class of generalized linear models contains many of these. In this class the linear predictor $\\eta = \\Sigma \\beta_jX_j$ is replaced by the additive predictor $\\Sigma s_j(X_j)$; hence, the name generalized additive models. We illustrate the technique with binary response and survival data. In both cases, the method proves to be useful in uncovering nonlinear covariate effects. It has the advantage of being completely automatic, i.e., no \"detective work\" is needed on the part of the statistician. As a theoretical underpinning, the technique is viewed as an empirical method of maximizing the expected log likelihood, or equivalently, of minimizing the Kullback-Leibler distance to the true model."
+    },
+    "Friedman2001GreedyFunction": {
+        "citation_key": "Friedman2001GreedyFunction",
+        "title": "Greedy function approximation: A gradient boosting machine.",
+        "authors": [
+            "Jerome H. Friedman"
+        ],
+        "venue": "The Annals of Statistics",
+        "year": 2001,
+        "abstract": "Function estimation/approximation is viewed from the perspective of numerical optimization in function space, rather than parameter space. A connection is made between stagewise additive expansions and steepest-descent minimization. A general gradient descent \u201cboosting\u201d paradigm is developed for additive expansions based on any fitting criterion.Specific algorithms are presented for least-squares, least absolute deviation, and Huber-M loss functions for regression, and multiclass logistic likelihood for classification. Special enhancements are derived for the particular case where the individual additive components are regression trees, and tools for interpreting such \u201cTreeBoost\u201d models are presented. Gradient boosting of regression trees produces competitive, highly robust, interpretable procedures for both regression and classification, especially appropriate for mining less than clean data. Connections between this approach and the boosting methods of Freund and Shapire and Friedman, Hastie and Tibshirani are discussed."
+    },
+    "Buja1989LinearSmoothers": {
+        "citation_key": "Buja1989LinearSmoothers",
+        "title": "Linear Smoothers and Additive Models",
+        "authors": [
+            "Andreas Buja",
+            "Trevor Hastie",
+            "Robert Tibshirani"
+        ],
+        "venue": "The Annals of Statistics",
+        "year": 1989,
+        "abstract": "We study linear smoothers and their use in building nonparametric regression models. In the first part of this paper we examine certain aspects of linear smoothers for scatterplots; examples of these are the running-mean and running-line, kernel and cubic spline smoothers. The eigenvalue and singular value decompositions of the corresponding smoother matrix are used to describe qualitatively a smoother, and several other topics such as the number of degrees of freedom of a smoother are discussed. In the second part of the paper we describe how linear smoothers can be used to estimate the additive model, a powerful nonparametric regression model, using the \"back-fitting algorithm.\" We show that backfitting is the Gauss-Seidel iterative method for solving a set of normal equations associated with the additive model. We provide conditions for consistency and nondegeneracy and prove convergence for the backfitting and related algorithms for a class of smoothers that includes cubic spline smoothers."
+    },
+    "Robinson1988RootnconsistentSemiparametric": {
+        "citation_key": "Robinson1988RootnconsistentSemiparametric",
+        "title": "Root-N-Consistent Semiparametric Regression",
+        "authors": [
+            "Peter M. Robinson"
+        ],
+        "venue": "Econometrica",
+        "year": 1988,
+        "abstract": "One type of semiparametric regression is b8X A u(Z), where b and u(Z) are an unknown slope coefficient vector and function. Estimates of b based on incorrect parametrization of u are generally inconsist ent, whereas consistent nonparametric estimates converge slowly. An e stimate, bC, is constructed by inserting nonpar-ametric regression es timates in the nonlinear orthogonal projection on Z. Under regularity conditions bC is shown to be N1/2-consistent for b and asymptoticall y normal, and a consistent estimate of its limiting covariance matrix is given. The author discusses the identification problem and bC's e fficiency. Extensions to other econometric models are described. Copyright 1988 by The Econometric Society."
+    },
+    "Engle1986SemiparametricEstimates": {
+        "citation_key": "Engle1986SemiparametricEstimates",
+        "title": "Semiparametric Estimates of the Relation Between Weather and Electricity Sales",
+        "authors": [
+            "Robert F. Engle",
+            "Clive W. J. Granger",
+            "John Rice",
+            "Andrew Weiss"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1986,
+        "abstract": "A nonlinear relationship between electricity sales and temperature is estimated using a semiparametric regression procedure that easily allows linear transformations of the data. This accommodates introduction of covariates, timing adjustments due to the actual billing schedules, and serial correlation. The procedure is an extension of smoothing splines with the smoothness parameter estimated from minimization of the generalized cross-validation criterion introduced by Craven and Wahba (1979). Estimates are presented for residential sales for four electric utilities and are compared with models that represent the weather using only heating and cooling degree days or with piecewise linear splines."
+    },
+    "Belsley1980RegressionDiagnostics": {
+        "citation_key": "Belsley1980RegressionDiagnostics",
+        "title": "Regression Diagnostics: Identifying Influential Data and Sources of Collinearity",
+        "authors": [
+            "David A. Belsley",
+            "Edwin Kuh",
+            "Roy E. Welsch"
+        ],
+        "venue": "Wiley series in probability and statistics",
+        "year": 1980,
+        "abstract": "This book provides practicing statisticians and econometricians with new tools for assessing quality and reliability of regression estimates. Diagnostic techniques are developed that aid in the systematic location of data points that are unusual or inordinately influential, and measure the presence and intensity of collinear relations among the regression data and help to identify variables involved in each and pinpoint estimated coefficients potentially most adversely affected. It emphasizes diagnostics and includes suggestions for remedial action."
+    },
+    "Chernozhukov2018DoubledebiasedMachine": {
+        "citation_key": "Chernozhukov2018DoubledebiasedMachine",
+        "title": "Double/debiased machine learning for treatment and structural parameters",
+        "authors": [
+            "Victor Chernozhukov",
+            "Denis Chetverikov",
+            "Mert Demirer",
+            "Esther Duflo",
+            "Christian Hansen",
+            "Whitney K. Newey",
+            "James M. Robins"
+        ],
+        "venue": "Econometrics Journal",
+        "year": 2018,
+        "abstract": "We revisit the classic semi\u2010parametric problem of inference on a low\u2010dimensional parameter \u03b80 in the presence of high\u2010dimensional nuisance parameters \u03b70. We depart from the classical setting by allowing for \u03b70 to be so high\u2010dimensional that the traditional assumptions (e.g. Donsker properties) that limit complexity of the parameter space for this object break down. To estimate \u03b70, we consider the use of statistical or machine learning (ML) methods, which are particularly well suited to estimation in modern, very high\u2010dimensional cases. ML methods perform well by employing regularization to reduce variance and trading off regularization bias with overfitting in practice. However, both regularization bias and overfitting in estimating \u03b70 cause a heavy bias in estimators of \u03b80 that are obtained by naively plugging ML estimators of \u03b70 into estimating equations for \u03b80. This bias results in the naive estimator failing to be N\u22121/2 consistent, where N is the sample size. We show that the impact of regularization bias and overfitting on estimation of the parameter of interest \u03b80 can be removed by using two simple, yet critical, ingredients: (1) using Neyman\u2010orthogonal moments/scores that have reduced sensitivity with respect to nuisance parameters to estimate \u03b80; (2) making use of cross\u2010fitting, which provides an efficient form of data\u2010splitting. We call the resulting set of methods double or debiased ML (DML). We verify that DML delivers point estimators that concentrate in an N\u22121/2\u2010... [Truncated]"
+    },
+    "Wood2004StableEfficient": {
+        "citation_key": "Wood2004StableEfficient",
+        "title": "Stable and Efficient Multiple Smoothing Parameter Estimation for Generalized Additive Models",
+        "authors": [
+            "Simon N. Wood"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 2004,
+        "abstract": "Representation of generalized additive models (GAM's) using penalized regression splines allows GAM's to be employed in a straightforward manner using penalized regression methods. Not only is inference facilitated by this approach, but it is also possible to integrate model selection in the form of smoothing parameter selection into model fitting in a computationally efficient manner using well founded criteria such as generalized cross-validation. The current fitting and smoothing parameter selection methods for such models are usually effective, but do not provide the level of numerical stability to which users of linear regression packages, for example, are accustomed. In particular the existing methods cannot deal adequately with numerical rank deficiency of the GAM fitting problem, and it is not straightforward to produce methods that can do so, given that the degree of rank deficiency can be smoothing parameter dependent. In addition, models with the potential flexibility of GAM's can also present practical fitting difficulties as a result of indeterminacy in the model likelihood: Data with many zeros fitted by a model with a log link are a good example. In this article it is proposed that GAM's with a ridge penalty provide a practical solution in such circumstances, and a multiple smoothing parameter selection method suitable for use in the presence of such a penalty is developed. The method is based on the pivoted QR decomposition and the singular value decomposition... [Truncated]"
+    },
+    "Ihaka1996RLanguage": {
+        "citation_key": "Ihaka1996RLanguage",
+        "title": "R: A Language for Data Analysis and Graphics",
+        "authors": [
+            "Ross Ihaka",
+            "Robert C. Gentleman"
+        ],
+        "venue": "Journal of Computational and Graphical Statistics",
+        "year": 1996,
+        "abstract": "In this article we discuss our experience designing and implementing a statistical computing language. In developing this new language, we sought to combine what we felt were useful features from two existing computer languages. We feel that the new language provides advantages in the areas of portability, computational efficiency, memory management, and scoping."
+    },
+    "Gauss2011TheoriaMotus": {
+        "citation_key": "Gauss2011TheoriaMotus",
+        "title": "Theoria Motus Corporum Coelestium in Sectionibus Conicis Solem Ambientium",
+        "authors": [
+            "Carl Friedrich Gauss"
+        ],
+        "venue": "arXiv",
+        "year": 2011,
+        "abstract": "Described by one reviewer as 'one of the most perfect books ever written on theoretical astronomy', this work in Latin by the German mathematician Carl Friedrich Gauss (1777\u20131855), the 'Prince of Mathematicians', derived from his attempt to solve an astronomical puzzle: where in the heavens would the dwarf planet Ceres, first sighted in 1801, reappear? Gauss' predicted position was correct to within half a degree, and this led him to develop a streamlined and sophisticated method of calculating the effect of the larger planets and the sun on the orbits of planetoids, which he published in 1809. As well as providing a tool for astronomers, Gauss' method also offered a way of reducing inaccuracy of calculations arising from measurement error; the primacy of this discovery was however disputed between him and the French mathematician Legendre, whose Essai sur la th\u00e9orie des nombres is also reissued in this series."
+    },
+    "Pearson1896ViiMathematical": {
+        "citation_key": "Pearson1896ViiMathematical",
+        "title": "VII. Mathematical contributions to the theory of evolution.\u2014III. Regression, heredity, and panmixia",
+        "authors": [
+            "Karl Pearson"
+        ],
+        "venue": "Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character",
+        "year": 1896,
+        "abstract": "Abstract \n                   There are few branches of the Theory of Evolution which appear to the mathematical statistician so much in need of exact treatment as those of Regression, Heredity, and Panmixia. Round the notion of panmixia much obscurity has accumulated, owing to the want of precise definition and quantitative measurement. The problems of regression and heredity have been dealt with by Mr. Francis Galton in his epochmaking work on \u2018Natural Inheritance,\u2019 but, although he has shown exact methods of dealing, both experimentally and mathematically, with the problems of inheritance, it does not appear that mathematicians have hitherto developed his treatment, or that biologists and medical men have yet fully appreciated that he has really shown how many of the problems which perplex them may receive at any rate a partial answer. A considerable portion of the present memoir will be devoted to the expansion and fuller development of Mr. Galton\u2019s ideas, particularly their application to the problem of bi-parental inheritance. At the same time I shall endeavour to point out how the results apply to some current biological and medical problems. In the first place, we must definitely free our minds, in the present state of our knowledge of the mechanism of inheritance and reproduction, of any hope of reaching a mathematical relation expressing the degree of correlation between individual parent and individual offspring. The causes in any individual case of inheritance are ... [Truncated]"
+    },
+    "Box1964AnalysisTransformations": {
+        "citation_key": "Box1964AnalysisTransformations",
+        "title": "An Analysis of Transformations",
+        "authors": [
+            "George E. P. Box",
+            "David Roxbee Cox"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B (Statistical Methodology)",
+        "year": 1964,
+        "abstract": "Summary In the analysis of data it is often assumed that observations y 1, y 2, \u2026, yn are independently normally distributed with constant variance and with expectations specified by a model linear in a set of parameters \u03b8. In this paper we make the less restrictive assumption that such a normal, homoscedastic, linear model is appropriate after some suitable transformation has been applied to the y's. Inferences about the transformation and about the parameters of the linear model are made by computing the likelihood function and the relevant posterior distribution. The contributions of normality, homoscedasticity and additivity to the transformation are separated. The relation of the present methods to earlier procedures for finding transformations is discussed. The methods are illustrated with examples."
+    },
+    "Plackett1972StudiesHistory": {
+        "citation_key": "Plackett1972StudiesHistory",
+        "title": "Studies in the History of Probability and Statistics. XXIX: The Discovery of the Method of Least Squares",
+        "authors": [
+            "Robin L. Plackett"
+        ],
+        "venue": "Biometrika",
+        "year": 1972,
+        "abstract": "The circumstances in which the discovery of the method of least squares took place and the course of the ensuing controversy are examined in detail with the aid of correspondence. Some conclusions are drawn about the attitudes of the main participants and the nature of historical research in statistics."
+    },
+    "Makhoul1975LinearPrediction": {
+        "citation_key": "Makhoul1975LinearPrediction",
+        "title": "Linear prediction: A tutorial review",
+        "authors": [
+            "J. Makhoul"
+        ],
+        "venue": "Proceedings of the IEEE",
+        "year": 1975,
+        "abstract": "This paper gives an exposition of linear prediction in the analysis of discrete signals. The signal is modeled as a linear combination of its past values and present and past values of a hypothetical input to a system whose output is the given signal. In the frequency domain, this is equivalent to modeling the signal spectrum by a pole-zero spectrum. The major part of the paper is devoted to all-pole models. The model parameters are obtained by a least squares analysis in the time domain. Two methods result, depending on whether the signal is assumed to be stationary or nonstationary. The same results are then derived in the frequency domain. The resulting spectral matching formulation allows for the modeling of selected portions of a spectrum, for arbitrary spectral shaping in the frequency domain, and for the modeling of continuous as well as discrete spectra. This also leads to a discussion of the advantages and disadvantages of the least squares error criterion. A spectral interpretation is given to the normalized minimum prediction error. Applications of the normalized error are given, including the determination of an \"optimal\" number of poles. The use of linear prediction in data compression is reviewed. For purposes of transmission, particular attention is given to the quantization and encoding of the reflection (or partial correlation) coefficients. Finally, a brief introduction to pole-zero modeling is given."
+    },
+    "Cook1977DetectionInfluential": {
+        "citation_key": "Cook1977DetectionInfluential",
+        "title": "Detection of Influential Observation in Linear Regression",
+        "authors": [
+            "R. Dennis Cook"
+        ],
+        "venue": "Technometrics",
+        "year": 1977,
+        "abstract": "A new measure based on confidence ellipsoids is developed for judging the contribution of each data point to the determination of the least squares estimate of the parameter vector in full rank linear regression models. It is shown that the measure combines information from the studentized residuals and the variances of the residuals and predicted values. Two examples are presented."
+    },
+    "Stigler1981GaussInvention": {
+        "citation_key": "Stigler1981GaussInvention",
+        "title": "Gauss and the Invention of Least Squares",
+        "authors": [
+            "Stephen M. Stigler"
+        ],
+        "venue": "The Annals of Statistics",
+        "year": 1981,
+        "abstract": "The most famous priority dispute in the history of statistics is that between Gauss and Legendre, over the discovery of the method of least squares. New evidence, both documentary and statistical, is discussed, and an attempt is made to evaluate Gauss's claim. It is argued (though not conclusively) that Gauss probably possessed the method well before Legendre, but that he was unsuccessful in communicating it to his contemporaries. Data on the French meridian arc are presented that could, conceivably, permit a definitive verification of the claim."
+    },
+    "Anscombe1963ExaminationAnalysis": {
+        "citation_key": "Anscombe1963ExaminationAnalysis",
+        "title": "The Examination and Analysis of Residuals",
+        "authors": [
+            "Francis John Anscombe",
+            "John W. Tukey"
+        ],
+        "venue": "Technometrics",
+        "year": 1963,
+        "abstract": "A number of methods for examining the residuals remaining after a conventional analysis of variance or least-squares fitting have been explored during the past few years. These give information on various questions of interest, and in particular, aid in assessing the validity or appropriateness of the conventional analysis. The purpose of this paper is to make a variety of these techniques more easily available, so that they can be tried out more widely. Techniques of analysis, some graphical, some wholly numerical, and others mixed, are discussed in terms of the residuals that result from fitting row and column means to entries in a two-way array (or in several two-way arrays). Extensions to more complex situations, and some of the uses of the results of examination, are indicated."
+    },
+    "Cox1968GeneralDefinition": {
+        "citation_key": "Cox1968GeneralDefinition",
+        "title": "A General Definition of Residuals",
+        "authors": [
+            "D. R. Cox",
+            "E. J. Snell"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "year": 1968,
+        "abstract": "Summary \n                Residuals are usually defined in connection with linear models. Here a more general definition is given and some asymptotic properties found. Some illustrative examples are discussed, including a regression problem involving exponentially distributed errors and some problems concerning Poisson and binomially distributed observations."
+    },
+    "Box1976ScienceStatistics": {
+        "citation_key": "Box1976ScienceStatistics",
+        "title": "Science and Statistics",
+        "authors": [
+            "George E. P. Box"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1976,
+        "abstract": "Aspects of scientific method are discussed: In particular, its representation as a motivated iteration in which, in succession, practice confronts theory, and theory, practice. Rapid progress requires sufficient flexibility to profit from such confrontations, and the ability to devise parsimonious but effective models, to worry selectively about model inadequacies and to employ mathematics skillfully but appropriately. The development of statistical methods at Rothamsted Experimental Station by Sir Ronald Fisher is used to illustrate these themes."
+    },
+    "Ling1984ResidualsInfluence": {
+        "citation_key": "Ling1984ResidualsInfluence",
+        "title": "Residuals and Influence in Regression",
+        "authors": [
+            "Robert F. Ling",
+            "R. Dennis Cook",
+            "Sanford Weisberg"
+        ],
+        "venue": "Technometrics",
+        "year": 1984,
+        "abstract": "Author affiliations: University of Minnesota, Twin Cities, School of Statistics."
+    },
+    "Buja2019ModelsAs": {
+        "citation_key": "Buja2019ModelsAs",
+        "title": "Models as Approximations I: Consequences Illustrated with Linear Regression",
+        "authors": [
+            "Andreas Buja",
+            "Lawrence Brown",
+            "Richard Berk",
+            "Edward George",
+            "Emil Pitkin",
+            "Mikhail Traskin",
+            "Kai Zhang",
+            "Linda Zhao"
+        ],
+        "venue": "Statistical Science",
+        "year": 2019,
+        "abstract": "In the early 1980s, Halbert White inaugurated a \u201cmodel-robust\u201d form of statistical inference based on the \u201csandwich estimator\u201d of standard error. This estimator is known to be \u201cheteroskedasticity-consistent,\u201d but it is less well known to be \u201cnonlinearity-consistent\u201d as well. Nonlinearity, however, raises fundamental issues because in its presence regressors are not ancillary, hence cannot be treated as fixed. The consequences are deep: (1) population slopes need to be reinterpreted as statistical functionals obtained from OLS fits to largely arbitrary joint ${x\\textrm{-}y}$ distributions; (2) the meaning of slope parameters needs to be rethought; (3) the regressor distribution affects the slope parameters; (4) randomness of the regressors becomes a source of sampling variability in slope estimates of order $1/\\sqrt{N}$; (5) inference needs to be based on model-robust standard errors, including sandwich estimators or the ${x\\textrm{-}y}$ bootstrap. In theory, model-robust and model-trusting standard errors can deviate by arbitrary magnitudes either way. In practice, significant deviations between them can be detected with a diagnostic test."
+    },
+    "Arlot2010SurveyCrossvalidation": {
+        "citation_key": "Arlot2010SurveyCrossvalidation",
+        "title": "A survey of cross-validation procedures for model selection",
+        "authors": [
+            "Sylvain Arlot",
+            "Alain Celisse"
+        ],
+        "venue": "Statistics Surveys",
+        "year": 2010,
+        "abstract": "Used to estimate the risk of an estimator or to perform model selection, cross-validation is a widespread strategy because of its simplicity and its (apparent) universality. Many results exist on model selection performances of cross-validation procedures. This survey intends to relate these results to the most recent advances of model selection theory, with a particular emphasis on distinguishing empirical statements from rigorous theoretical results. As a conclusion, guidelines are provided for choosing the best cross-validation procedure according to the particular features of the problem in hand."
+    },
+    "Stone1974CrossvalidatoryChoice": {
+        "citation_key": "Stone1974CrossvalidatoryChoice",
+        "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+        "authors": [
+            "M. Stone"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "year": 1974,
+        "abstract": "Summary \n                A generalized form of the cross-validation criterion is applied to the choice and assessment of prediction using the data-analytic concept of a prescription. The examples used to illustrate the application are drawn from the problem areas of univariate estimation, linear regression and analysis of variance."
+    },
+    "Shmueli2010ExplainOr": {
+        "citation_key": "Shmueli2010ExplainOr",
+        "title": "To Explain or to Predict?",
+        "authors": [
+            "Galit Shmueli"
+        ],
+        "venue": "Statistical Science",
+        "year": 2010,
+        "abstract": "Statistical modeling is a powerful tool for developing and testing theories by way of causal explanation, prediction, and description. In many disciplines there is near-exclusive use of statistical modeling for causal explanation and the assumption that models with high explanatory power are inherently of high predictive power. Conflation between explanation and prediction is common, yet the distinction must be understood for progressing scientific knowledge. While this distinction has been recognized in the philosophy of science, the statistical literature lacks a thorough discussion of the many differences that arise in the process of modeling for an explanatory versus a predictive goal. The purpose of this article is to clarify the distinction between explanatory and predictive modeling, to discuss its sources, and to reveal the practical implications of the distinction to each step in the modeling process."
+    },
+    "Hand2006ClassifierTechnology": {
+        "citation_key": "Hand2006ClassifierTechnology",
+        "title": "Classifier Technology and the Illusion of Progress",
+        "authors": [
+            "David J. Hand"
+        ],
+        "venue": "Statistical Science",
+        "year": 2006,
+        "abstract": "A great many tools have been developed for supervised classification, ranging from early methods such as linear discriminant analysis through to modern developments such as neural networks and support vector machines. A large number of comparative studies have been conducted in attempts to establish the relative superiority of these methods. This paper argues that these comparisons often fail to take into account important aspects of real problems, so that the apparent superiority of more sophisticated methods may be something of an illusion. In particular, simple methods typically yield performance almost as good as more sophisticated methods, to the extent that the difference in performance may be swamped by other sources of uncertainty that generally are not considered in the classical supervised classification paradigm."
+    },
+    "Dwork2015ReusableHoldout": {
+        "citation_key": "Dwork2015ReusableHoldout",
+        "title": "The reusable holdout: Preserving validity in adaptive data analysis",
+        "authors": [
+            "Cynthia Dwork",
+            "Vitaly Feldman",
+            "Moritz Hardt",
+            "Toniann Pitassi",
+            "Omer Reingold",
+            "Aaron Roth"
+        ],
+        "venue": "Science",
+        "year": 2015,
+        "abstract": "Testing hypotheses privately \n                   \n                    Large data sets offer a vast scope for testing already-formulated ideas and exploring new ones. Unfortunately, researchers who attempt to do both on the same data set run the risk of making false discoveries, even when testing and exploration are carried out on distinct subsets of data. Based on ideas drawn from differential privacy, Dwork\n                     et al. \n                    now provide a theoretical solution. Ideas are tested against aggregate information, whereas individual data set components remain confidential. Preserving that privacy also preserves statistical inference validity.\n                   \n                   \n                     Science \n                    , this issue p.\n                     636"
+    },
+    "Copas1983RegressionPrediction": {
+        "citation_key": "Copas1983RegressionPrediction",
+        "title": "Regression, Prediction and Shrinkage",
+        "authors": [
+            "J. B. Copas"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "year": 1983,
+        "abstract": "Summary \n                The fit of a regression predictor to new data is nearly always worse than its fit to the original data. Anticipating this shrinkage leads to Stein-type predictors which, under certain assumptions, give a uniformly lower prediction mean squared error than least squares. Shrinkage can be particularly marked when stepwise fitting is used: the shrinkage is then closer to that expected of the full regression rather than of the subset regression actually fitted. Preshrunk predictors for selected subsets are proposed and tested on a number of practical examples. Both multiple and binary (logistic) regression models are considered."
+    },
+    "Steyerberg2004ValidationUpdating": {
+        "citation_key": "Steyerberg2004ValidationUpdating",
+        "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+        "authors": [
+            "Ewout W. Steyerberg",
+            "Gerard J. J. M. Borsboom",
+            "Hans C. van Houwelingen",
+            "Marinus J. C. Eijkemans",
+            "J. Dik F. Habbema"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 2004,
+        "abstract": "Abstract  A logistic regression model may be used to provide predictions of outcome for individual patients at another centre than where the model was developed. When empirical data are available from this centre, the validity of predictions can be assessed by comparing observed outcomes and predicted probabilities. Subsequently, the model may be updated to improve predictions for future patients.  As an example, we analysed 30\u2010day mortality after acute myocardial infarction in a large data set (GUSTO\u2010I, n = 40 830). We validated and updated a previously published model from another study (TIMI\u2010II, n = 3339) in validation samples ranging from small (200 patients, 14 deaths) to large (10 000 patients, 700 deaths). Updated models were tested on independent patients. Updating methods included re\u2010calibration (re\u2010estimation of the intercept or slope of the linear predictor) and more structural model revisions (re\u2010estimation of some or all regression coefficients, model extension with more predictors). We applied heuristic shrinkage approaches in the model revision methods, such that regression coefficients were shrunken towards their re\u2010calibrated values. Parsimonious updating methods were found preferable to more extensive model revisions, which should only be attempted with relatively large validation samples in combination with shrinkage. Copyright \u00a9 2004 John Wiley & Sons, Ltd."
+    },
+    "Riley2021MinimumSample": {
+        "citation_key": "Riley2021MinimumSample",
+        "title": "Minimum sample size for external validation of a clinical prediction model with a binary outcome",
+        "authors": [
+            "Richard D. Riley",
+            "Thomas P. A. Debray",
+            "Gary S. Collins",
+            "Lucinda Archer",
+            "Joie Ensor",
+            "Maarten van Smeden",
+            "Kym I. E. Snell"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 2021,
+        "abstract": "In prediction model research, external validation is needed to examine an existing model's performance using data independent to that for model development. Current external validation studies often suffer from small sample sizes and consequently imprecise predictive performance estimates. To address this, we propose how to determine the minimum sample size needed for a new external validation study of a prediction model for a binary outcome. Our calculations aim to precisely estimate calibration (Observed/Expected and calibration slope), discrimination (C\u2010statistic), and clinical utility (net benefit). For each measure, we propose closed\u2010form and iterative solutions for calculating the minimum sample size required. These require specifying: (i) target SEs (confidence interval widths) for each estimate of interest, (ii) the anticipated outcome event proportion in the validation population, (iii) the prediction model's anticipated (mis)calibration and variance of linear predictor values in the validation population, and (iv) potential risk thresholds for clinical decision\u2010making. The calculations can also be used to inform whether the sample size of an existing (already collected) dataset is adequate for external validation. We illustrate our proposal for external validation of a prediction model for mechanical heart valve failure with an expected outcome event proportion of 0.018. Calculations suggest at least 9835 participants (177 events) are required to precisely estimate ... [Truncated]"
+    },
+    "Stein1981EstimationMean": {
+        "citation_key": "Stein1981EstimationMean",
+        "title": "Estimation of the Mean of a Multivariate Normal Distribution",
+        "authors": [
+            "Charles M. Stein"
+        ],
+        "venue": "The Annals of Statistics",
+        "year": 1981,
+        "abstract": "Estimation of the means of independent normal random variables is considered, using sum of squared errors as loss. An unbiased estimate of risk is obtained for an arbitrary estimate, and certain special classes of estimates are then discussed. The results are applied to smoothing by use of moving averages and to trimmed analogs of the James-Stein estimate. A suggestion is made for calculating approximate confidence sets for the mean vector centered at an arbitrary estimate."
+    },
+    "Eisenhauer2003RegressionThrough": {
+        "citation_key": "Eisenhauer2003RegressionThrough",
+        "title": "Regression through the Origin",
+        "authors": [
+            "Joseph G. Eisenhauer"
+        ],
+        "venue": "Teaching Statistics",
+        "year": 2003,
+        "abstract": "Summary  This article describes situations in which regression through the origin is appropriate, derives the normal equation for such a regression and explains the controversy regarding its evaluative statistics. Differences between three popular software packages that allow regression through the origin are illustrated using examples from previous issues of  Teaching Statistics ."
+    },
+    "Chatterjee1986InfluentialObservations": {
+        "citation_key": "Chatterjee1986InfluentialObservations",
+        "title": "Influential Observations, High Leverage Points, and Outliers in Linear Regression",
+        "authors": [
+            "Samprit Chatterjee",
+            "Ali S. Hadi"
+        ],
+        "venue": "Statistical Science",
+        "year": 1986,
+        "abstract": "A bewilderingly large number of statistical quantities have been proposed to study outliers and influence of individual observations in regression analysis. In this article we describe the inter-relationships which exist among the proposed measures. An examination of these relationships leads us to conclude that only three of these measures along with some graphical displays can provide an analyst a complete picture of outliers (major discrepant points) and points which excessively influence the fitted regression equation. Illustrative examples based on real data are presented."
+    },
+    "Vergouwe2016ClosedTesting": {
+        "citation_key": "Vergouwe2016ClosedTesting",
+        "title": "A closed testing procedure to select an appropriate method for updating prediction models",
+        "authors": [
+            "Yvonne Vergouwe",
+            "Daan Nieboer",
+            "Rianne Oostenbrink",
+            "Thomas P. A. Debray",
+            "Gordon D. Murray",
+            "Michael W. Kattan",
+            "Hendrik Koffijberg",
+            "Karel G. M. Moons",
+            "Ewout W. Steyerberg"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 2016,
+        "abstract": "Prediction models fitted with logistic regression often show poor performance when applied in populations other than the development population. Model updating may improve predictions. Previously suggested methods vary in their extensiveness of updating the model. We aim to define a strategy in selecting an appropriate update method that considers the balance between the amount of evidence for updating in the new patient sample and the danger of overfitting. We consider recalibration in the large (re\u2010estimation of model intercept); recalibration (re\u2010estimation of intercept and slope) and model revision (re\u2010estimation of all coefficients) as update methods. We propose a closed testing procedure that allows the extensiveness of the updating to increase progressively from a minimum (the original model) to a maximum (a completely revised model). The procedure involves multiple testing with maintaining approximately the chosen type I error rate. We illustrate this approach with three clinical examples: patients with prostate cancer, traumatic brain injury and children presenting with fever. The need for updating the prostate cancer model was completely driven by a different model intercept in the update sample (adjustment: 2.58). Separate testing of model revision against the original model showed statistically significant results, but led to overfitting (calibration slope at internal validation\u2009=\u20090.86). The closed testing procedure selected recalibration in the large as update me... [Truncated]"
+    },
+    "Miller1991ValidationTechniques": {
+        "citation_key": "Miller1991ValidationTechniques",
+        "title": "Validation techniques for logistic regression models",
+        "authors": [
+            "Michael E. Miller",
+            "Siu L. Hui",
+            "William M. Tierney"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 1991,
+        "abstract": "Abstract  This paper presents a comprehensive approach to the validation of logistic prediction models. It reviews measures of overall goodness\u2010of\u2010fit, and indices of calibration and refinement. Using a model\u2010based approach developed by Cox, we adapt logistic regression diagnostic techniques for use in model validation. This allows identification of problematic predictor variables in the prediction model as well as influential observations in the validation data that adversely affect the fit of the model. In appropriate situations, recommendations are made for correction of models that provide poor fit."
+    },
+    "Varma2006BiasError": {
+        "citation_key": "Varma2006BiasError",
+        "title": "Bias in error estimation when using cross-validation for model selection",
+        "authors": [
+            "Sudhir Varma",
+            "Richard Simon"
+        ],
+        "venue": "BMC Bioinformatics",
+        "year": 2006,
+        "abstract": "Abstract \n                   \n                     Background \n                     Cross-validation (CV) is an effective method for estimating the prediction error of a classifier. Some recent articles have proposed methods for optimizing classifiers by choosing classifier parameter values that minimize the CV error estimate. We have evaluated the validity of using the CV error estimate of the optimized classifier as an estimate of the true error expected on independent data. \n                   \n                   \n                     Results \n                     We used CV to optimize the classification parameters for two kinds of classifiers; Shrunken Centroids and Support Vector Machines (SVM). Random training datasets were created, with no difference in the distribution of the features between the two classes. Using these \"null\" datasets, we selected classifier parameter values that minimized the CV error estimate. 10-fold CV was used for Shrunken Centroids while Leave-One-Out-CV (LOOCV) was used for the SVM. Independent test data was created to estimate the true error. With \"null\" and \"non null\" (with differential expression between the classes) data, we also tested a nested CV procedure, where an inner CV loop is used to perform the tuning of the parameters while an outer CV is used to compute an estimate of the error. \n                     The CV error estimate for the classifier with the optimal parameters was found to be a substantially biased estimate of the tru... [Truncated]"
+    }
+}

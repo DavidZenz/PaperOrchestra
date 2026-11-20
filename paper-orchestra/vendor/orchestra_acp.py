@@ -393,7 +393,10 @@ def inspect(directory, request, backend):
                 errors.append(f"ACP observed {label} differs from selection")
         content = prompt_message.get("params", {}).get("prompt", [])
         text = "".join(item.get("text", "") for item in content if item.get("type") == "text")
-        if text != plan.get("stdin") or (directory / "prompt.txt").exists() and text != (directory / "prompt.txt").read_text():
+        prompt_file = directory / "prompt.txt"
+        if text != plan.get("stdin") or (
+            prompt_file.exists() and text != prompt_file.read_bytes().decode("utf-8")
+        ):
             errors.append("ACP native prompt differs from the original recorded task")
         expected_paths = request.get("images", plan.get("images", []))
         expected_hashes = request.get("image_sha256", {})
