@@ -1,0 +1,67 @@
+```json
+{
+  "section_name": "Fitted Sample Error versus Held-Out Prediction Assessment",
+  "candidates": [
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Foundational paper that defines apparent error on the training sample versus true prediction error and introduces the bootstrap formulation of optimism to correct for in-sample evaluation bias."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal work establishing cross-validation and explaining why assessing a predictive rule on the exact observations used to fit or determine corrections gives an overly optimistic assessment."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Classic paper establishing sample-reuse principles to prevent circularity when evaluating prediction rules on the same data sample used to tune or estimate parameters."
+    },
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Derives explicit analytical expressions for the downward bias of in-sample error rates, formally demonstrating why apparent error on fitted observations understates generalization error."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Unifies in-sample residual corrections and cross-validation through covariance penalties, explaining how parameter fitting mechanically reduces sample residuals without guaranteeing true prediction improvement."
+    },
+    {
+      "title": "The Elements of Statistical Learning: Data Mining, Inference, and Prediction",
+      "year": 2009,
+      "reason": "Influential reference whose model assessment and selection chapters clearly contrast training error, optimism, and held-out validation error in educational and methodological settings."
+    },
+    {
+      "title": "A survey of cross-validation procedures for model selection",
+      "year": 2010
+      "reason": "Comprehensive review examining the theoretical foundations and limitations of cross-validation versus apparent error when assessing predictive models."
+    },
+    {
+      "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+      "year": 1995,
+      "reason": "Highly cited benchmark study investigating the bias and variance of evaluation methods when comparing fitted sample accuracy to held-out test accuracy."
+    },
+    {
+      "title": "No Unbiased Estimator of the Variance of K-Fold Cross-Validation",
+      "year": 2004,
+      "reason": "Examines the theoretical limits and dependencies inherent in resampling-based prediction error estimates relative to the training sample."
+    },
+    {
+      "title": "Internal validation of predictive models: efficiency of some procedures for logistic regression analysis",
+      "year": 2001,
+      "reason": "Analyzes apparent performance, optimism correction, and calibration, demonstrating why evaluating model adjustments on the derivation sample overestimates true predictive performance."
+    },
+    {
+      "title": "The reusable holdout: Preserving validity in adaptive data analysis",
+      "year": 2015,
+      "reason": "Explores how repeatedly evaluating and adapting predictions on holdout observations leads to overfitting the holdout, clarifying the limits of sample reuse for prediction adjustments."
+    },
+    {
+      "title": "Cross-validation: what does it estimate and how well does it do it?",
+      "year": 2023,
+      "reason": "Analyzes the exact theoretical estimand of held-out assessment versus the in-sample fitted model performance, highlighting what same-sample evaluations fail to capture."
+    }
+  ]
+}
+```

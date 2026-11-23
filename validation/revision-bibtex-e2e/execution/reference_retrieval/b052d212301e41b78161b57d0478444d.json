@@ -1,0 +1,1367 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 1135562,
+      "db_response_time_ms": 322,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (The Evaluation of Economic Forecasts) in the title, abstract, or full text",
+        "x_new_oql": "get works with (The Evaluation of Economic Forecasts) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "The Evaluation of Economic Forecasts",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:The Evaluation of Economic Forecasts&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W3125362734",
+        "doi": null,
+        "title": "The Evaluation of Economic Forecasts",
+        "display_name": "The Evaluation of Economic Forecasts",
+        "alternate_titles": [],
+        "relevance_score": 210.95616,
+        "publication_year": 1969,
+        "publication_date": "1969-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W3125362734",
+          "mag": "3125362734"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "mag:3125362734",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://ideas.repec.org/h/nbr/nberch/1214.html",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306520638",
+            "display_name": "NBER Chapters",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "other"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "NBER Chapters",
+          "raw_type": null
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W3125362734"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "book-chapter",
+        "is_traditional": true,
+        "indexed_in": [],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5085405001",
+              "display_name": "Jacob Mincer",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Jacob Mincer",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5024724555",
+              "display_name": "Victor Zarnowitz",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Victor Zarnowitz",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 774,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": "3",
+          "last_page": "46"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 0.9980000257492065,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.9980000257492065,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 0.00139999995008111,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10315",
+            "display_name": "Decision-Making and Behavioral Economics",
+            "score": 0.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1800",
+              "display_name": "General Decision Sciences"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/economic-forecasting",
+            "display_name": "economic forecasting",
+            "score": 0.8519999980926514
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-evaluation",
+            "display_name": "forecast evaluation",
+            "score": 0.9860000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-accuracy",
+            "display_name": "forecast accuracy",
+            "score": 0.8370000123977661
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.48727715015411377
+          },
+          {
+            "id": "https://openalex.org/C120954023",
+            "wikidata": "https://www.wikidata.org/wiki/Q1127277",
+            "display_name": "Consensus forecast",
+            "level": 2,
+            "score": 0.4690295457839966
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.42293912172317505
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "mag:3125362734",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://ideas.repec.org/h/nbr/nberch/1214.html",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306520638",
+              "display_name": "NBER Chapters",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "other"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "NBER Chapters",
+            "raw_type": null
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W3124604120",
+          "https://openalex.org/W3123053792",
+          "https://openalex.org/W4299989286",
+          "https://openalex.org/W198803904",
+          "https://openalex.org/W2045798479",
+          "https://openalex.org/W3121641064",
+          "https://openalex.org/W2317057836",
+          "https://openalex.org/W1503276205",
+          "https://openalex.org/W4251767980",
+          "https://openalex.org/W2318776851"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W3125362734",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 68
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 42
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 44
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 52
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 36
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 34
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 39
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 40
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 34
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 24
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 19
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 38
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 34
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 26
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 34
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2021-02-01T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W1487662461",
+        "doi": "https://doi.org/10.4324/9781315480695-16",
+        "title": "Evaluation of Economic Forecasts",
+        "display_name": "Evaluation of Economic Forecasts",
+        "alternate_titles": [],
+        "relevance_score": 207.43886,
+        "publication_year": 2016,
+        "publication_date": "2016-09-16",
+        "ids": {
+          "openalex": "https://openalex.org/W1487662461",
+          "doi": "https://doi.org/10.4324/9781315480695-16",
+          "mag": "1487662461"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.4324/9781315480695-16",
+          "doi": "https://doi.org/10.4324/9781315480695-16",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.4324/9781315480695-16",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306463855",
+            "display_name": "Routledge eBooks",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/P4310319847",
+            "host_organization_name": "Routledge",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319847",
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Routledge",
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "ebook platform"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Economic Forecasting: The State of the Art",
+          "raw_type": "book-chapter"
+        },
+        "parent_works": [
+          {
+            "id": "https://openalex.org/W2916552186",
+            "display_name": "Economic Forecasting: The State of the Art",
+            "relationship": "volume",
+            "link_type": "volume"
+          }
+        ],
+        "lineage": [
+          "https://openalex.org/W1487662461",
+          "https://openalex.org/W2916552186"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "book-chapter",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 96.2289,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 534,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.9994091,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 86,
+          "max": 100
+        },
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": "172",
+          "last_page": "204"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.9994999766349792,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 9.999999747378752e-05,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10315",
+            "display_name": "Decision-Making and Behavioral Economics",
+            "score": 0.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1800",
+              "display_name": "General Decision Sciences"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/economic-forecasting",
+            "display_name": "economic forecasting",
+            "score": 0.7910000085830688
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-evaluation",
+            "display_name": "forecast evaluation",
+            "score": 0.9890000224113464
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-accuracy",
+            "display_name": "forecast accuracy",
+            "score": 0.5979999899864197
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.41811326146125793
+          },
+          {
+            "id": "https://openalex.org/C39432304",
+            "wikidata": "https://www.wikidata.org/wiki/Q188847",
+            "display_name": "Environmental science",
+            "level": 0,
+            "score": 0.3505251705646515
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.4324/9781315480695-16",
+            "doi": "https://doi.org/10.4324/9781315480695-16",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.4324/9781315480695-16",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306463855",
+              "display_name": "Routledge eBooks",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/P4310319847",
+              "host_organization_name": "Routledge",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319847",
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Routledge",
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "ebook platform"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Economic Forecasting: The State of the Art",
+            "raw_type": "book-chapter"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 7,
+        "referenced_works": [
+          "https://openalex.org/W649511033",
+          "https://openalex.org/W1505738836",
+          "https://openalex.org/W1552507619",
+          "https://openalex.org/W1784126847",
+          "https://openalex.org/W2321541861",
+          "https://openalex.org/W2800702870",
+          "https://openalex.org/W2896322077"
+        ],
+        "related_works": [
+          "https://openalex.org/W2022189875",
+          "https://openalex.org/W4251363364",
+          "https://openalex.org/W2037851753",
+          "https://openalex.org/W1968905187",
+          "https://openalex.org/W2476189179",
+          "https://openalex.org/W4416091387",
+          "https://openalex.org/W2135791301",
+          "https://openalex.org/W2021803107",
+          "https://openalex.org/W1503276205",
+          "https://openalex.org/W2504441980"
+        ],
+        "abstract_inverted_index": {
+          "From": [
+            0
+          ],
+          "a": [
+            1,
+            11
+          ],
+          "decision": [
+            2
+          ],
+          "point": [
+            3
+          ],
+          "of": [
+            4,
+            18
+          ],
+          "view,": [
+            5
+          ],
+          "this": [
+            6,
+            19
+          ],
+          "measure": [
+            7
+          ],
+          "is": [
+            8
+          ],
+          "optimal": [
+            9
+          ],
+          "under": [
+            10
+          ],
+          "quadratic": [
+            12
+          ],
+          "loss": [
+            13
+          ],
+          "criterion.For": [
+            14
+          ],
+          "an": [
+            15
+          ],
+          "extensive": [
+            16
+          ],
+          "treatment": [
+            17
+          ],
+          "criterion": [
+            20
+          ],
+          "see": [
+            21
+          ],
+          "Theil": [
+            22
+          ],
+          "[9].": [
+            23
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W1487662461",
+        "counts_by_year": [
+          {
+            "year": 2024,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 19
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 23
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 25
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 25
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 27
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 30
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 38
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 26
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 28
+          }
+        ],
+        "updated_date": "2026-11-21T10:27:49.728292",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2159425317",
+        "doi": "https://doi.org/10.1080/00036847300000003",
+        "title": "Some comments on the evaluation of economic forecasts",
+        "display_name": "Some comments on the evaluation of economic forecasts",
+        "alternate_titles": [],
+        "relevance_score": 199.53015,
+        "publication_year": 1973,
+        "publication_date": "1973-03-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2159425317",
+          "doi": "https://doi.org/10.1080/00036847300000003",
+          "mag": "2159425317"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/00036847300000003",
+          "doi": "https://doi.org/10.1080/00036847300000003",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/00036847300000003",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S201533460",
+            "display_name": "Applied Economics",
+            "issn_l": "0003-6846",
+            "issn": [
+              "0003-6846",
+              "1466-4283"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "fnege-3",
+              "jufo-1",
+              "norway-1",
+              "poland-40",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320547",
+            "host_organization_name": "Taylor & Francis",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Applied Economics",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2159425317"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5105834520",
+              "display_name": "Clive W. J. Granger",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I142263535",
+                "display_name": "University of Nottingham",
+                "ror": "https://ror.org/01ee9ar58",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I142263535"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "C. W. J. Granger",
+            "raw_affiliation_strings": [
+              "a  Nottingham University",
+              "Nottingham University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "a  Nottingham University",
+                "institution_ids": [
+                  "https://openalex.org/I142263535"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Nottingham University",
+                "institution_ids": [
+                  "https://openalex.org/I142263535"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5108202560",
+              "display_name": "Paul Newbold",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I142263535",
+                "display_name": "University of Nottingham",
+                "ror": "https://ror.org/01ee9ar58",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I142263535"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "P. Newbold",
+            "raw_affiliation_strings": [
+              "a  Nottingham University",
+              "Nottingham University"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "a  Nottingham University",
+                "institution_ids": [
+                  "https://openalex.org/I142263535"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Nottingham University",
+                "institution_ids": [
+                  "https://openalex.org/I142263535"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I142263535"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 8.2611,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 313,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.98080542,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 94,
+          "max": 99
+        },
+        "biblio": {
+          "volume": "5",
+          "issue": "1",
+          "first_page": "35",
+          "last_page": "47"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 1.0,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 1.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 0.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13370",
+            "display_name": "Diverse Scientific and Economic Studies",
+            "score": 0.0,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2002",
+              "display_name": "Economics and Econometrics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/economic-forecasting",
+            "display_name": "economic forecasting",
+            "score": 0.8870000243186951
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-evaluation",
+            "display_name": "forecast evaluation",
+            "score": 0.9860000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-accuracy",
+            "display_name": "forecast accuracy",
+            "score": 0.7699999809265137
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.7697754502296448
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.44118648767471313
+          },
+          {
+            "id": "https://openalex.org/C163068380",
+            "wikidata": "https://www.wikidata.org/wiki/Q3409313",
+            "display_name": "Economic forecasting",
+            "level": 2,
+            "score": 0.4246734082698822
+          },
+          {
+            "id": "https://openalex.org/C106159729",
+            "wikidata": "https://www.wikidata.org/wiki/Q2294553",
+            "display_name": "Financial economics",
+            "level": 1,
+            "score": 0.37662068009376526
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.34893107414245605
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.1080/00036847300000003",
+            "doi": "https://doi.org/10.1080/00036847300000003",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/00036847300000003",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S201533460",
+              "display_name": "Applied Economics",
+              "issn_l": "0003-6846",
+              "issn": [
+                "0003-6846",
+                "1466-4283"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "fnege-3",
+                "jufo-1",
+                "norway-1",
+                "poland-40",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Applied Economics",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 23,
+        "referenced_works": [
+          "https://openalex.org/W27682692",
+          "https://openalex.org/W649511033",
+          "https://openalex.org/W1487662461",
+          "https://openalex.org/W1508119776",
+          "https://openalex.org/W1553967253",
+          "https://openalex.org/W1967550560",
+          "https://openalex.org/W1985084886",
+          "https://openalex.org/W1986528915",
+          "https://openalex.org/W2013448945",
+          "https://openalex.org/W2069508080",
+          "https://openalex.org/W2081951886",
+          "https://openalex.org/W2086453666",
+          "https://openalex.org/W2313953460",
+          "https://openalex.org/W2324838518",
+          "https://openalex.org/W2795698508",
+          "https://openalex.org/W2795805775",
+          "https://openalex.org/W2991608638",
+          "https://openalex.org/W3123205867",
+          "https://openalex.org/W4246807036",
+          "https://openalex.org/W4300032880",
+          "https://openalex.org/W4300185665",
+          "https://openalex.org/W7054935310",
+          "https://openalex.org/W7086610293"
+        ],
+        "related_works": [
+          "https://openalex.org/W2012202091",
+          "https://openalex.org/W1503276205",
+          "https://openalex.org/W2318776851",
+          "https://openalex.org/W2034783043",
+          "https://openalex.org/W1992405419",
+          "https://openalex.org/W2566736396",
+          "https://openalex.org/W2740293997",
+          "https://openalex.org/W3125362734",
+          "https://openalex.org/W7097189346",
+          "https://openalex.org/W1968905187"
+        ],
+        "abstract_inverted_index": {
+          "(1973).": [
+            0
+          ],
+          "Some": [
+            1
+          ],
+          "comments": [
+            2
+          ],
+          "on": [
+            3
+          ],
+          "the": [
+            4
+          ],
+          "evaluation": [
+            5
+          ],
+          "of": [
+            6
+          ],
+          "economic": [
+            7
+          ],
+          "forecasts.": [
+            8
+          ],
+          "Applied": [
+            9
+          ],
+          "Economics:": [
+            10
+          ],
+          "Vol.": [
+            11
+          ],
+          "5,": [
+            12
+          ],
+          "No.": [
+            13
+          ],
+          "1,": [
+            14
+          ],
+          "pp.": [
+            15
+          ],
+          "35-47.": [
+            16
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2159425317",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 10
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 15
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 7
+          }
+        ],
+        "updated_date": "2026-11-21T10:27:49.728292",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

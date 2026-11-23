@@ -1,0 +1,503 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+[UPSTREAM SYSTEM INSTRUCTION]
+You are a reviewer. You write peer review of academic papers by evaluating their technical quality, originality, and clarity.
+
+Knowledgeability: You are knowledgeable, with a strong background and a PhD degree in the subject areas related to this paper. You possess the expertise necessary to scrutinize and provide insightful feedback to this paper.
+
+Responsibility: As a responsible reviewer, you highly responsibly write paper reviews. You meticulously assess a research paper's technical accuracy, innovation, and relevance. You thoroughly read the paper, critically analyze the methodologies, and carefully consider the paper's contribution to the field.
+
+Intention: As a benign reviewer, your approach to reviewing is guided by a genuine intention to aid authors in enhancing their work. You provide detailed, constructive feedback, aimed at both validating robust research and guiding authors to refine and improve their work. You are also critical of technical flaws in the paper.
+
+## Rubrics for Overall Rating
+* 10: This study is among the top 2% of all papers. It is one of the most thorough I have seen. It changed my thinking on this topic. I would fight for it to be accepted;
+* 8: This study is among the top 10% of all papers. It provides sufficient support for all of its claims/arguments. Some extra experiments are needed, but not essential. The method is highly original and generalizable to various fields. It deepens the understanding of some phenomenons or lowers the barriers to an existing research direction;
+* 6: This study provides sufficient support for its major claims/arguments, some minor points may need extra support or details. The method is moderately original and generalizable to various relevant fields. The work it describes is not particularly interesting and/or novel, so it will not be a big loss if people don’t see it in this conference;
+* 5: Some of the main claims/arguments are not sufficiently supported, there are major technical/methodological problems. The proposed method is somewhat original and generalizable to various relevant fields. I am leaning towards rejection, but I can be persuaded if my co-reviewers think otherwise;
+* 3: This paper makes marginal contributions;
+* 1: This study is not yet sufficiently thorough to warrant publication or is not relevant to the conference. 
+
+
+Respond in the following format:
+
+THOUGHT:
+<THOUGHT>
+
+REVIEW JSON:
+```json
+<JSON>
+```
+
+In <THOUGHT>, first briefly discuss your intuitions and reasoning for the evaluation.
+Detail your high-level arguments, necessary choices and desired outcomes of the review.
+Do not make generic comments here, but be specific to your current paper.
+Treat this as the note-taking phase of your review.
+
+In <JSON>, provide the review in JSON format with the following fields in the order:
+- "Summary": A summary of the paper content and its contributions.
+- "Strengths": A list of strengths of the paper.
+- "Weaknesses": A list of weaknesses of the paper.
+- "Originality": A rating from 1 to 4 (low, medium, high, very high).
+- "Quality": A rating from 1 to 4 (low, medium, high, very high).
+- "Clarity": A rating from 1 to 4 (low, medium, high, very high).
+- "Significance": A rating from 1 to 4 (low, medium, high, very high).
+- "Questions": A set of clarifying questions to be answered by the paper authors.
+- "Limitations": A set of limitations and potential negative societal impacts of the work.
+- "Ethical Concerns": A boolean value indicating whether there are ethical concerns.
+- "Soundness": A rating from 1 to 4 (poor, fair, good, excellent).
+- "Presentation": A rating from 1 to 4 (poor, fair, good, excellent).
+- "Contribution": A rating from 1 to 4 (poor, fair, good, excellent).
+- "Overall": A rating from 1 to 10 (very strong reject to award quality).
+- "Confidence": A rating from 1 to 5 (low, medium, high, very high, absolute).
+- "Decision": A decision that has to be one of the following: Accept, Reject.
+
+For the "Decision" field, don't use Weak Accept, Borderline Accept, Borderline Reject, or Strong Reject. Instead, only use Accept or Reject.
+This JSON will be automatically parsed, so ensure the format is precise.
+Here is the paper you are asked to review:
+```
+A Finite Intercept Correction Calculation
+Anonymous
+Abstract
+This reproducible technical teaching note examines an additive correction on five synthetic
+observations satisfying y = 2x + 3. The supplied fixed predictor returns 2x, leaving a mean
+residual of 3. Adding this residual mean reproduces the five targets exactly. The recorded mean
+squared errors are 9, 2.25, and 0 for corrections of 0, 1.5, and 3, respectively. An error table,
+statistical plot, and dependency schematic connect the arithmetic to its evaluation protocol.
+Correction and evaluation use the same observations; consequently, these results provide no
+evidence about unseen data.
+1
+Introduction
+Examining residuals provides a direct way to describe discrepancies between observed targets and
+model predictions. Foundational treatments develop numerical and graphical residual analysis and
+extend the definition of residuals beyond linear models [3, 18].
+Broader regression diagnostics
+address influential observations, model specification, and the interpretation of discrepancies [7, 8,
+19]. These perspectives support a modest teaching objective: use a transparent calculation to show
+precisely which discrepancy an additive correction removes. Such an objective is consistent with
+the emphasis on parsimonious models and attention to model inadequacies in statistical practice
+[9].
+The interpretation of a prediction error depends on both the discrepancy measure and the ob-
+servations being assessed. Work on model validation and comparison discusses difference measures
+and the limitations of relying on correlation alone [62, 63]. Forecast verification frameworks dis-
+tinguish attributes of predictions and observations, while mean-square-error skill decompositions
+explicitly include systematic and nonsystematic bias terms [48, 47]. Here, however, a systematic
+offset means only a constant residual on a specified finite sample. It should not be confused with
+the statistical bias of an estimator across repeated samples, a different concept discussed in the
+bias–variance literature [27].
+This note considers exactly five inputs,
+x = (−2, −1, 0, 1, 2),
+yi = 2xi + 3,
+and a supplied fixed predictor ˆy(0)
+i
+= 2xi. Every observed residual is therefore ri = yi −ˆy(0)
+i
+= 3.
+The calculation takes their mean,
+b = 1
+5
+5
+X
+i=1
+(yi −2xi) = 3,
+and adds this scalar to the unchanged predictor. On these observations, the corrected prediction
+2xi + b equals the target at every point. The experimental log records mean squared errors of 9,
+1
+2.25, and 0 at b = 0, 1.5, and 3, respectively; the corresponding mean absolute errors are 3, 1.5,
+and 0. These values describe one deterministic calculation implemented in base R.
+The central interpretive constraint is that the same five targets determine and evaluate the
+correction.
+Apparent-error analysis explains why using observations both to fit a rule and as-
+sess its accuracy can yield optimistic assessments of future prediction error [21]. Cross-validatory
+assessment and predictive sample reuse address different evaluation questions from reporting a
+fitted-sample discrepancy [54, 25]. Subsequent treatments connect prediction-error estimation to
+covariance penalties and review the properties of cross-validation procedures [22, 4].
+No such
+prediction-error estimation procedure is performed here. The recorded zero error establishes agree-
+ment on the supplied observations only.
+The purpose of this teaching note is to make the arithmetic and its evidential scope explicit: a
+constant observed residual is removed by adding its mean, and the resulting error is assessed on the
+observations used to calculate that mean. The only recorded comparison is among the three supplied
+values of b. The calculation establishes neither a literature gap nor an algorithmic advance, and it
+provides no held-out evidence or comparative performance claim against the contextual methods
+discussed below.
+2
+Related Work
+Intercept adjustment with a fixed predictor.
+The choice to include an intercept has a sub-
+stantial methodological and educational literature. Treatments of regression without an intercept
+discuss its applicability, fitting considerations, and evaluative statistics [31, 34, 23]. Analyses of
+regression software and alternative definitions of R2 identify difficulties that arise when interpreting
+models fitted through the origin [29, 41]. A leverage-based interpretation also connects regression
+through the origin to fitting an augmented dataset [11]. These works supply context for distin-
+guishing intercept inclusion from intercept omission. The present calculation is narrower: the slope
+is supplied as 2, and only an additive scalar is determined from the observed residuals.
+Broader regression frameworks provide useful distinctions between changing a constant and
+changing a predictive function. Generalized linear models accommodate systematic effects through
+suitable transformations, generalized additive models replace linear covariate effects with estimated
+smooth functions, and gradient boosting develops stagewise additive expansions through optimiza-
+tion in function space [49, 33, 24]. Ridge regression and data-augmentation approaches concern
+biased estimation and prediction in multiple regression [36, 2]. None of these broader fitting pro-
+cedures is implemented here. For the supplied residuals, the relevant algebra is simply
+1
+5
+5
+X
+i=1
+(ri −b)2 = 1
+5
+5
+X
+i=1
+(ri −¯r)2 + (b −¯r)2,
+¯r = 1
+5
+5
+X
+i=1
+ri.
+Thus, choosing b = ¯r removes the mean-residual component of squared error on this sample. It
+removes every residual here because all five residuals equal 3.
+Residual magnitude should also be distinguished from influence and leverage. Work on influ-
+ential observations, the hat matrix, and relationships among regression diagnostics examines how
+observations affect fitted quantities [16, 35, 12]. Posterior predictive assessment instead evaluates
+model fitness using discrepancies and model-based reference distributions [26]. The present note
+performs neither an influence analysis nor a probabilistic model check. Its constant residual vector
+is directly available from the supplied targets and predictions.
+Forecasting provides a more application-specific setting for intercept corrections. Research on
+economic forecasting discusses sources of forecast uncertainty and intercept adjustment, including
+2
+the effects of structural change and possible trade-offs between forecast bias and variance [13, 14,
+15]. Judgmental adjustments in macroeconomic forecasting and statistical relationships between
+numerical model outputs and weather observations illustrate other forms of forecast modification
+[56, 28]. These approaches address forecasting settings and assumptions absent from the five-point
+example. The example contains no temporal observations or structural-change experiment, so its
+exact correction supplies no evidence about robustness in those settings.
+Prediction-model validation and updating offer another relevant perspective. Logistic-model
+validation, prognostic-model assessment, performance frameworks, and calibration guidance dis-
+tinguish several aspects of predictive adequacy [45, 32, 53, 6]. Work on survival-model calibra-
+tion, logistic-model updating, selection among update strategies, and reviews of statistical updat-
+ing methods describes alternatives ranging from limited recalibration to broader model revision
+[57, 52, 59, 55]. Intercept updating is therefore a contextual connection, but the present response-
+scale addition is not an implementation of these clinical prediction procedures. It uses no probability
+link, survival model, or independent validation population.
+Post-processing also appears in probability and uncertainty calibration. Sigmoid mappings of
+support-vector-machine scores, comparisons of probability-calibration methods, and temperature
+scaling concern the relationship between classifier outputs and outcome probabilities [51, 50, 30].
+Probability-score partitioning separates uncertainty, reliability, and resolution [46]. Regression un-
+certainty calibration and conformal predictive inference address uncertainty estimates or prediction
+bands rather than merely correcting a point-prediction offset [40, 44, 43]. These are distinct objec-
+tives. Zero point-prediction error on the supplied sample establishes no probability-calibration or
+predictive-coverage result.
+Residual-derived correction and evaluation.
+The distinction between fitting and prediction
+is central to interpreting the calculation. Regression shrinkage research explicitly considers deterio-
+ration from original-data fit to new-data prediction, while work on prediction-rule error estimation
+and discriminant-analysis error rates studies how assessment procedures behave [17, 20, 42]. In-
+formation criteria account for adjusted parameters in model identification, and generalized degrees
+of freedom quantify the sensitivity of fitted values to observed data [1, 64]. These perspectives
+motivate making the dependence of b on the targets explicit. They do not provide an estimated
+optimism correction or a future-error estimate for this deterministic example.
+Studies of regression submodel selection and comparisons of cross-validation with bootstrap
+assessment investigate evaluation beyond apparent fit [10, 39]. Research on using cross-validation
+for model selection shows that tuning and evaluation can interact, and later analysis clarifies which
+prediction-error quantities cross-validation estimates and the difficulties of associated uncertainty
+intervals [58, 5].
+A survey of leakage in machine-learning-based science further documents the
+consequences of inappropriate information dependencies for reported conclusions [38]. Here, the
+dependency is deliberately disclosed: observed residuals determine b, and those observations are
+reused for assessment. No cross-validation, bootstrap assessment, or held-out experiment was run,
+so these references contextualize the scope of the reported errors rather than validate generalization.
+Finally, discussions comparing mean absolute error with root mean square error emphasize that
+error summaries have different interpretations [61]. This note reports the supplied mean absolute
+and mean squared errors without claiming that one metric is universally preferable. Both vanish
+at b = 3 because each of the five corrected residuals is zero. The literature supplies conceptual
+context; the experimental evidence remains exclusively the recorded finite calculation.
+3
+Figure 1: Residual-based intercept correction from idea.md on five synthetic observations. Ob-
+served targets and fixed predictions determine ri = yi −2xi and their mean b = 3. The dashed
+path identifies reuse of the same observations for evaluation. Zero error is a deterministic finite
+arithmetic check, without evidence of predictive generalization.
+3
+Method
+3.1
+Finite Setup and Mean-Residual Correction
+For x = (−2, −1, 0, 1, 2), let yi = 2xi + 3 and retain the fixed predictor ˆy(0)
+i
+= 2xi. Define
+ri = yi −2xi,
+b = 1
+5
+5
+X
+i=1
+ri = 3,
+ˆyi(b) = 2xi + b.
+Every ri equals 3, so ˆyi(3) = yi on these five observations. The slope remains unchanged. Figure 1
+makes the dependence explicit: observed targets and baseline predictions determine residuals, which
+determine the correction. Its dashed path shows that evaluation reuses those observations.
+3.2
+Error Definitions and Reproducible Calculation
+Define the target-minus-prediction residual after correction as
+di(b) = yi −ˆyi(b) = 3 −b.
+4
+Table 1: Recorded errors from experimental log.md. One deterministic calculation uses the same
+five observations to determine the mean-residual correction b = 3 and evaluate all three settings.
+Added b
+Mean absolute error
+Mean squared error
+0
+3
+9
+1.5
+1.5
+2.25
+3
+0
+0
+The schematic uses the opposite sign, ei = ˆyi −yi; both conventions yield identical absolute and
+squared errors. Specifically,
+MAE(b) = 1
+5
+5
+X
+i=1
+|di(b)| = |3 −b|,
+(1)
+MSE(b) = 1
+5
+5
+X
+i=1
+di(b)2 = (3 −b)2.
+(2)
+These identities explain the logged values without adding measured observations. The numerical
+calculation uses base R [37]; the statistical figure uses R/ggplot2, whose layered grammar describes
+graphic components [60].
+The selected editable .R and .tex figure sources, vector PDFs, and
+previews are retained separately, as identified in the provenance section.
+4
+Experiments
+4.1
+Observations and Evaluation Protocol
+The experimental log is the sole measured-data source. In input order, its rows (x, y, 2x, 2x + 3)
+are
+(−2, −1, −4, −1),
+(−1, 1, −2, 1),
+(0, 3, 0, 3),
+(1, 5, 2, 5),
+(2, 7, 4, 7).
+There is one deterministic calculation with no stochastic repetitions. The same five observations
+determine the mean residual and supply every reported error. The recorded settings are the un-
+corrected predictor (b = 0), an intermediate correction (b = 1.5), and the mean-residual correction
+(b = 3). No optimizer, architecture, external dataset, held-out evaluation, or timing experiment is
+present.
+4.2
+Recorded Errors and Their Interpretation
+Table 1 reproduces the logged errors. Figure 2 displays exactly the corresponding three MSE points,
+with their recorded values labeled.
+The comparison isolates the additive correction while holding predictions’ slope and evaluation
+observations fixed. At b = 0, every target exceeds its prediction by 3. The intermediate setting
+leaves a residual of 1.5 at every point, yielding MAE 1.5 and MSE 2.25; it therefore reduces but
+does not remove the offset. At b = 3, every corrected residual vanishes. This agreement between
+arithmetic, table, and plot follows from the identical baseline residuals across all five inputs. The
+three settings constitute the entire recorded comparison, without statistical significance estimates
+or a broader sensitivity study.
+The workflow diagram explains why zero error is same-sample
+agreement; assessing transfer would require observations outside the supplied evaluation.
+5
+Figure 2: Recorded mean squared errors from experimental log.md at b = 0, 1.5, and 3. These
+three points describe one deterministic calculation evaluated on the same five observations used to
+determine b = 3. No interpolated values or uncertainty intervals are shown.
+6
+Figure source provenance
+The selected ggplot2 source for Figure 2 is figure code/fig intercept error/source.R, with its
+supplied rendering worker at figure code/fig intercept error/worker.R. The selected TikZ
+source for Figure 1 is figure code/fig residual workflow/source.tex.
+These are the exact
+selected worker sources identified by the supplied provenance manifest and source checksums.
+Each corresponding source directory retains figure.pdf, preview.jpg, and render.json; the
+statistical-figure directory also retains sessionInfo.txt. The manuscript includes the supplied
+images at figures/fig intercept error.jpg and figures/fig residual workflow.jpg. The
+editable figure recipes remain separate reproducibility artifacts.
+7
+5
+Conclusion
+Adding the observed mean residual b = 3 removes the fixed predictor’s constant offset on the five
+supplied observations. The measured error table and two figures connect the numerical calcula-
+tion to its data dependencies and evaluation scope. Exact agreement follows from the constant
+residual vector and reuse of the observations. The calculation supports no conclusion about unseen
+observations; any assessment of transfer remains outside the supplied evidence.
+References
+[1] Hirotugu Akaike. A new look at the statistical model identification. IEEE Transactions on
+Automatic Control, 19:716–723, 1974.
+[2] David M. Allen. The relationship between variable selection and data agumentation and a
+method for prediction. Technometrics, 16:125–127, 1974.
+[3] Francis John Anscombe and John W. Tukey.
+The examination and analysis of residuals.
+Technometrics, 5:141–160, 1963.
+[4] Sylvain Arlot and Alain Celisse. A survey of cross-validation procedures for model selection.
+Statistics Surveys, 4:40–79, 2010.
+[5] Stephen Bates, Trevor J. Hastie, and Robert John Tibshirani. Cross-validation: What does
+it estimate and how well does it do it?
+Journal of the American Statistical Association,
+119:1434–1445, 2023.
+[6] On behalf of Topic Group ‘Evaluating diagnostic tests, prediction models’ of the STRATOS ini-
+tiative, Ben Van Calster, David J. McLernon, Maarten van Smeden, Laure Wynants, and
+Ewout W. Steyerberg. Calibration: the achilles heel of predictive analytics. BMC Medicine,
+17, 2019.
+[7] David A. Belsley, Edwin Kuh, and Roy E. Welsch. Regression diagnostics: Identifying influ-
+ential data and sources of collinearity. In Wiley series in probability and statistics, 1980.
+[8] Kenneth A. Bollen and Robert W. Jackman. Regression diagnostics: An expository treatment
+of outliers and influential cases. Sociological Methods & Research, 13:510–542, 1985.
+[9] George E. P. Box. Science and statistics. Journal of the American Statistical Association,
+71:791–799, 1976.
+[10] Leo Breiman and Philip C. Spector.
+Submodel selection and evaluation in regression. the
+x-random case. International Statistical Review, 60:291–291, 1992.
+[11] George Casella. Leverage and regression through the origin. The American Statistician, 37:147–
+152, 1983.
+[12] Samprit Chatterjee and Ali S. Hadi. Influential observations, high leverage points, and outliers
+in linear regression. Statistical Science, 1:379–393, 1986.
+[13] Michael P Clements and David F Hendry.
+Towards a theory of economic forecasting.
+In
+Nonstationary Time Series Analysis and Cointegration, 1994.
+8
+[14] Michael P. Clements and David Forbes Hendry. Intercept corrections and structural change.
+Journal of Applied Econometrics, 11:475–494, 1996.
+[15] Michael P. Clements and David Forbes Hendry. Forecasting economic time series. In Cambridge
+University Press eBooks, 1998.
+[16] R. Dennis Cook.
+Detection of influential observation in linear regression.
+Technometrics,
+19:15–18, 1977.
+[17] J. B. Copas. Regression, prediction and shrinkage. Journal of the Royal Statistical Society
+Series B: Statistical Methodology, 45:311–335, 1983.
+[18] D. R. Cox and E. J. Snell. A general definition of residuals. Journal of the Royal Statistical
+Society Series B: Statistical Methodology, 30:248–265, 1968.
+[19] Anthony C. Davison and C.-L. Tsai. Regression model diagnostics. International Statistical
+Review, 60:337–337, 1992.
+[20] Bradley Efron. Estimating the error rate of a prediction rule: Improvement on cross-validation.
+Journal of the American Statistical Association, 78:316–331, 1983.
+[21] Bradley Efron. How biased is the apparent error rate of a prediction rule?
+Journal of the
+American Statistical Association, 81:461–470, 1986.
+[22] Bradley Efron. The estimation of prediction error: Covariance penalties and cross-validation.
+Journal of the American Statistical Association, 99:619–632, 2004.
+[23] Joseph G. Eisenhauer. Regression through the origin. Teaching Statistics, 25:76–80, 2003.
+[24] Jerome H. Friedman. Greedy function approximation: A gradient boosting machine. The
+Annals of Statistics, 29:1189–1232, 2001.
+[25] Seymour Geisser.
+The predictive sample reuse method with applications.
+Journal of the
+American Statistical Association, 70:320–328, 1975.
+[26] Andrew Gelman, Xiao-Li Meng, and Hal S. Stern. Posterior predictive assessment of model
+fitness via realized discrepancies. In arXiv, 1996.
+[27] Stuart Geman, Elie Bienenstock, and Ren´e Doursat. Neural networks and the bias/variance
+dilemma. Neural Computation, 4:1–58, 1992.
+[28] Harry R. Glahn and Dale A. Lowry. The use of model output statistics (mos) in objective
+weather forecasting. Journal of applied meteorology, 11:1203–1211, 1972.
+[29] Hugh Gordon. Errors in computer packages. least squares regression through the origin. Jour-
+nal of the Royal Statistical Society Series D (The Statistician), 30:23–23, 1981.
+[30] Chuan Guo, Geoff Pleiss, Yu Sun, and Kilian Q. Weinberger. On calibration of modern neural
+networks. In arXiv (Cornell University), 2017.
+[31] Gerald J. Hahn. Fitting regression models with no intercept term. Journal of Quality Tech-
+nology, 9:56–61, 1977.
+9
+[32] Frank E. Harrell, Kerry L. Lee, and Daniel B. Mark. Multivariable prognostic models: Issues in
+developing models, evaluating assumptions and adequacy, and measuring and reducing errors.
+Statistics in Medicine, 15:361–387, 1996.
+[33] Trevor J. Hastie and Robert John Tibshirani. Generalized additive models. Statistical Science,
+1:297–310, 1986.
+[34] Douglas M. Hawkins. A note on fitting a regression without an intercept term. The American
+Statistician, 34:233–233, 1980.
+[35] David C. Hoaglin and Roy E. Welsch. The hat matrix in regression and anova. The American
+Statistician, 32:17–22, 1978.
+[36] Arthur E. Hoerl and Robert W. Kennard. Ridge regression: Biased estimation for nonorthog-
+onal problems. Technometrics, 12:55–67, 1970.
+[37] Ross Ihaka and Robert C. Gentleman. R: A language for data analysis and graphics. Journal
+of Computational and Graphical Statistics, 5:299–314, 1996.
+[38] Sayash Kapoor and Arvind Narayanan. Leakage and the reproducibility crisis in machine-
+learning-based science. Patterns, 4:100804–100804, 2023.
+[39] Ron Kohavi. A study of cross-validation and bootstrap for accuracy estimation and model
+selection. In Memoria digital de Canarias (Universidad de Las Palmas de Gran Canaria),
+1995.
+[40] Volodymyr Kuleshov, Nathan Fenner, and Stefano Ermon. Accurate uncertainties for deep
+learning using calibrated regression. In arXiv (Cornell University), 2018.
+[41] Tarald O. Kv˚alseth. Cautionary note about r 2. The American Statistician, 39:279–285, 1985.
+[42] Peter A. Lachenbruch and M. R. Mickey. Estimation of error rates in discriminant analysis.
+Technometrics, 10:1–11, 1968.
+[43] Jing Lei, Max G’Sell, Alessandro Rinaldo, Ryan J. Tibshirani, and Larry Wasserman.
+Distribution-free predictive inference for regression. Journal of the American Statistical Asso-
+ciation, 113:1094–1111, 2018.
+[44] Dan Levi, Liran Gispan, Niv Giladi, and Ethan Fetaya. Evaluating and calibrating uncertainty
+prediction in regression tasks. Sensors, 22:5540, 2022.
+[45] Michael E. Miller, Siu L. Hui, and William M. Tierney.
+Validation techniques for logistic
+regression models. Statistics in Medicine, 10:1213–1226, 1991.
+[46] Allan H. Murphy. A new vector partition of the probability score. Journal of applied meteo-
+rology, 12:595–600, 1973.
+[47] Allan H. Murphy. Skill scores based on the mean square error and their relationships to the
+correlation coefficient. Monthly Weather Review, 116:2417–2424, 1988.
+[48] Allan H. Murphy and Robert L. Winkler.
+A general framework for forecast verification.
+Monthly Weather Review, 115:1330–1338, 1987.
+10
+[49] John Ashworth Nelder and R. W. M. Wedderburn. Generalized linear models. Journal of the
+Royal Statistical Society Series A (General), 135:370–370, 1972.
+[50] Alexandru Niculescu-Mizil and Rich Caruana. Predicting good probabilities with supervised
+learning. In International Conference on Machine Learning, 2005.
+[51] John C. Platt. Probabilistic outputs for support vector machines and comparisons to regular-
+ized likelihood methods. In arXiv, 1999.
+[52] Ewout W. Steyerberg, Gerard J. J. M. Borsboom, Hans C. van Houwelingen, Marinus J. C.
+Eijkemans, and J. Dik F. Habbema. Validation and updating of predictive logistic regression
+models: a study on sample size and shrinkage. Statistics in Medicine, 23:2567–2586, 2004.
+[53] Ewout Willem Steyerberg, Andrew Julian Vickers, Nancy R. Cook, Thomas Alexander Gerds,
+Mithat G¨onen, Nancy A. Obuchowski, Michael J. Pencina, and Michael W. Kattan. Assess-
+ing the performance of prediction models: A framework for traditional and novel measures.
+Epidemiology, 21:128–138, 2009.
+[54] M. Stone. Cross-validatory choice and assessment of statistical predictions. Journal of the
+Royal Statistical Society Series B: Statistical Methodology, 36:111–133, 1974.
+[55] Ting-Li Su, Thomas Jaki, Graeme L Hickey, Iain Buchan, and Matthew Sperrin. A review
+of statistical updating methods for clinical prediction models. Statistical Methods in Medical
+Research, 27:185–197, 2016.
+[56] D. S. Turner. The role of judgement in macroeconomic forecasting. Journal of Forecasting,
+9:315–345, 1990.
+[57] Hans C. van Houwelingen. Validation, calibration, revision and combination of prognostic
+survival models. Statistics in Medicine, 19:3401–3415, 2000.
+[58] Sudhir Varma and Richard Simon. Bias in error estimation when using cross-validation for
+model selection. BMC Bioinformatics, 7, 2006.
+[59] Yvonne Vergouwe, Daan Nieboer, Rianne Oostenbrink, Thomas P. A. Debray, Gordon D. Mur-
+ray, Michael W. Kattan, Hendrik Koffijberg, Karel G. M. Moons, and Ewout W. Steyerberg.
+A closed testing procedure to select an appropriate method for updating prediction models.
+Statistics in Medicine, 36:4529–4539, 2016.
+[60] Hadley Wickham. A layered grammar of graphics. Journal of Computational and Graphical
+Statistics, 19:3–28, 2009.
+[61] C. J. Willmott and Kenji Matsuura. Advantages of the mean absolute error (mae) over the
+root mean square error (rmse) in assessing average model performance. Climate Research,
+30:79–82, 2005.
+[62] Cort J. Willmott. On the validation of models. Physical Geography, 2:184–194, 1981.
+[63] Cort J. Willmott, Steven G. Ackleson, Robert E. Davis, Johannes J. Feddema, Katherine M.
+Klink, David R. Legates, James O’Donnell, and Clinton M. Rowe. Statistics for the evaluation
+and comparison of models. Journal of Geophysical Research: Oceans, 90:8995–9005, 1985.
+[64] Jianming Ye. On measuring and correcting the effects of data mining and model selection.
+Journal of the American Statistical Association, 93:120–131, 1998.
+11
+Figure source provenance
+The files below are the exact sources that produced the embedded figure previews. Paths are relative
+to this manuscript’s source directory. The accompanying figure_provenance.json records all
+artifact checksums.
+Figure 2 (fig_intercept_error.jpg).
+R/ggplot2 source: figure_code/fig_intercept_error/source.R.
+Source SHA256: 68963e7e0f21eaa57dfe9d4150f6248fd142e763e30835f3e6e8af10adc25ae2.
+Rendering metadata: figure_code/fig_intercept_error/render.json.
+Exact export wrapper: figure_code/fig_intercept_error/worker.R.
+Wrapper SHA256: 6cb2b07327277f63fafbb553cd4f1f12c0f85bec37a49f3fa765da16a26b58ba.
+Rendering metadata: figure_code/fig_intercept_error/sessionInfo.txt.
+Figure 1 (fig_residual_workflow.jpg).
+LaTeX/TikZ source: figure_code/fig_residual_workflow/source.tex.
+Source SHA256: 666066807053c57adee8b1947e99adeb6a9369c3c53399fd76a380331907dee2.
+Rendering metadata: figure_code/fig_residual_workflow/render.json.
+12
+
+```

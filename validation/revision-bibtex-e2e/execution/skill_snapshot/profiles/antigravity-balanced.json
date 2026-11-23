@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "name": "antigravity-balanced-2026-11-15",
+  "default": {
+    "backend": "antigravity",
+    "model": "gemini-4-argon",
+    "effort": "high"
+  },
+  "groups": {
+    "discovery": {
+      "backend": "antigravity",
+      "model": "gemini-4-hydrogen",
+      "effort": "medium"
+    },
+    "figure_planning": {
+      "backend": "antigravity",
+      "model": "gemini-4-argon",
+      "effort": "medium"
+    },
+    "figure_review": {
+      "backend": "antigravity",
+      "model": "gemini-4-argon",
+      "effort": "medium"
+    },
+    "peer_review": {
+      "backend": "antigravity",
+      "model": "gemini-4-carbon",
+      "effort": "high"
+    },
+    "meta_review": {
+      "backend": "antigravity",
+      "model": "gemini-4-carbon",
+      "effort": "high"
+    },
+    "formatting": {
+      "backend": "antigravity",
+      "model": "gemini-4-argon",
+      "effort": "medium"
+    }
+  },
+  "roles": {
+    "runtime-probe": {
+      "backend": "antigravity",
+      "model": "gemini-4-hydrogen",
+      "effort": "low"
+    }
+  }
+}

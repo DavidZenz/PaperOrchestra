@@ -1,0 +1,2062 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 352551,
+      "db_response_time_ms": 257,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Distribution-Free Predictive Inference for Regression) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Distribution-Free Predictive Inference for Regression) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Distribution-Free Predictive Inference for Regression",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Distribution-Free Predictive Inference for Regression&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2964060211",
+        "doi": "https://doi.org/10.1080/01621459.2017.1307116",
+        "title": "Distribution-Free Predictive Inference for Regression",
+        "display_name": "Distribution-Free Predictive Inference for Regression",
+        "alternate_titles": [],
+        "relevance_score": 364.59186,
+        "publication_year": 2018,
+        "publication_date": "2018-06-08",
+        "ids": {
+          "openalex": "https://openalex.org/W2964060211",
+          "doi": "https://doi.org/10.1080/01621459.2017.1307116",
+          "mag": "2964060211",
+          "arxiv": "https://arxiv.org/abs/1604.04173"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/01621459.2017.1307116",
+          "doi": "https://doi.org/10.1080/01621459.2017.1307116",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/01621459.2017.1307116",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4394736638",
+            "display_name": "Journal of the American Statistical Association",
+            "issn_l": "0162-1459",
+            "issn": [
+              "0162-1459",
+              "1537-274X"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320547",
+            "host_organization_name": "Taylor & Francis",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of the American Statistical Association",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2964060211"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "arxiv",
+          "crossref",
+          "datacite"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://arxiv.org/pdf/1604.04173",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5085887576",
+              "display_name": "Jing Lei",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-3104-9387",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-3104-9387"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I74973139",
+                "display_name": "Carnegie Mellon University",
+                "ror": "https://ror.org/05x2bcf33",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Jing Lei",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0003-3104-9387",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA",
+                "institution_ids": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5008167016",
+              "display_name": "Max G\u2019Sell",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I74973139",
+                "display_name": "Carnegie Mellon University",
+                "ror": "https://ror.org/05x2bcf33",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Max G\u2019Sell",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA",
+                "institution_ids": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5112007828",
+              "display_name": "Alessandro Rinaldo",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I74973139",
+                "display_name": "Carnegie Mellon University",
+                "ror": "https://ror.org/05x2bcf33",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Alessandro Rinaldo",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA",
+                "institution_ids": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5076708141",
+              "display_name": "Ryan J. Tibshirani",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-2158-8304",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2158-8304"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I74973139",
+                "display_name": "Carnegie Mellon University",
+                "ror": "https://ror.org/05x2bcf33",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Ryan J. Tibshirani",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-2158-8304",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA",
+                "institution_ids": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5103096586",
+              "display_name": "Larry Wasserman",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-1874-5601",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1874-5601"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I74973139",
+                "display_name": "Carnegie Mellon University",
+                "ror": "https://ror.org/05x2bcf33",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Larry Wasserman",
+            "raw_affiliation_strings": [
+              "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA",
+                "institution_ids": [
+                  "https://openalex.org/I74973139"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I74973139"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 34.3728,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 2163,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99772714,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 87,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "113",
+          "issue": "523",
+          "first_page": "1094",
+          "last_page": "1111"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10136",
+          "display_name": "Statistical Methods and Inference",
+          "score": 0.9067000150680542,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.9067000150680542,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.025100000202655792,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13500",
+            "display_name": "Probability and Statistical Research",
+            "score": 0.007000000216066837,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/conformal-inference",
+            "display_name": "conformal inference",
+            "score": 0.8389999866485596
+          },
+          {
+            "id": "https://openalex.org/keywords/jackknife",
+            "display_name": "jackknife",
+            "score": 0.7239999771118164
+          },
+          {
+            "id": "https://openalex.org/keywords/prediction-bands",
+            "display_name": "prediction bands",
+            "score": 0.7860000133514404
+          },
+          {
+            "id": "https://openalex.org/keywords/prediction-intervals",
+            "display_name": "prediction intervals",
+            "score": 0.8859999775886536
+          },
+          {
+            "id": "https://openalex.org/keywords/heteroscedasticity",
+            "display_name": "heteroscedasticity",
+            "score": 0.9269999861717224
+          },
+          {
+            "id": "https://openalex.org/keywords/feature-importance",
+            "display_name": "feature importance",
+            "score": 0.7670000195503235
+          },
+          {
+            "id": "https://openalex.org/keywords/model-free-inference",
+            "display_name": "model-free inference",
+            "score": 0.5979999899864197
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C2776214188",
+            "wikidata": "https://www.wikidata.org/wiki/Q408386",
+            "display_name": "Inference",
+            "level": 2,
+            "score": 0.7330155372619629
+          },
+          {
+            "id": "https://openalex.org/C917703",
+            "wikidata": "https://www.wikidata.org/wiki/Q7239668",
+            "display_name": "Predictive inference",
+            "level": 5,
+            "score": 0.6026755571365356
+          },
+          {
+            "id": "https://openalex.org/C95167961",
+            "wikidata": "https://www.wikidata.org/wiki/Q4483495",
+            "display_name": "Fiducial inference",
+            "level": 5,
+            "score": 0.5995386838912964
+          },
+          {
+            "id": "https://openalex.org/C185429906",
+            "wikidata": "https://www.wikidata.org/wiki/Q1130160",
+            "display_name": "Estimator",
+            "level": 2,
+            "score": 0.5824316740036011
+          },
+          {
+            "id": "https://openalex.org/C119043178",
+            "wikidata": "https://www.wikidata.org/wiki/Q320723",
+            "display_name": "Covariate",
+            "level": 2,
+            "score": 0.5184552073478699
+          },
+          {
+            "id": "https://openalex.org/C134261354",
+            "wikidata": "https://www.wikidata.org/wiki/Q938438",
+            "display_name": "Statistical inference",
+            "level": 2,
+            "score": 0.5149317383766174
+          },
+          {
+            "id": "https://openalex.org/C101104100",
+            "wikidata": "https://www.wikidata.org/wiki/Q1063540",
+            "display_name": "Heteroscedasticity",
+            "level": 2,
+            "score": 0.49669891595840454
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.488974928855896
+          },
+          {
+            "id": "https://openalex.org/C98214594",
+            "wikidata": "https://www.wikidata.org/wiki/Q850275",
+            "display_name": "Conformal map",
+            "level": 2,
+            "score": 0.4675648808479309
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.4314616024494171
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.3808850944042206
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.3422449231147766
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.23902621865272522
+          },
+          {
+            "id": "https://openalex.org/C162376815",
+            "wikidata": "https://www.wikidata.org/wiki/Q2158281",
+            "display_name": "Frequentist inference",
+            "level": 4,
+            "score": 0.20858484506607056
+          },
+          {
+            "id": "https://openalex.org/C160234255",
+            "wikidata": "https://www.wikidata.org/wiki/Q812535",
+            "display_name": "Bayesian inference",
+            "level": 3,
+            "score": 0.08269044756889343
+          },
+          {
+            "id": "https://openalex.org/C107673813",
+            "wikidata": "https://www.wikidata.org/wiki/Q812534",
+            "display_name": "Bayesian probability",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C134306372",
+            "wikidata": "https://www.wikidata.org/wiki/Q7754",
+            "display_name": "Mathematical analysis",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 5,
+        "locations": [
+          {
+            "id": "doi:10.1080/01621459.2017.1307116",
+            "doi": "https://doi.org/10.1080/01621459.2017.1307116",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/01621459.2017.1307116",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4394736638",
+              "display_name": "Journal of the American Statistical Association",
+              "issn_l": "0162-1459",
+              "issn": [
+                "0162-1459",
+                "1537-274X"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of the American Statistical Association",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:arXiv.org:1604.04173",
+            "doi": "https://doi.org/10.48550/arxiv.1604.04173",
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/1604.04173",
+            "pdf_url": "https://arxiv.org/pdf/1604.04173",
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:RePEc:taf:jnlasa:v:113:y:2018:i:523:p:1094-1111",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://hdl.handle.net/10.1080/01621459.2017.1307116",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          },
+          {
+            "id": "pmh:oai:figshare.com:article/4812304",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://figshare.com/articles/journal_contribution/Distribution-Free_Predictive_Inference_For_Regression/4812304",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196282",
+              "display_name": "Figshare",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4210132348",
+              "host_organization_name": "Figshare (United Kingdom)",
+              "host_organization_lineage": [
+                "https://openalex.org/I4210132348"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Text"
+          },
+          {
+            "id": "doi:10.6084/m9.figshare.4812304.v2",
+            "doi": "https://doi.org/10.6084/m9.figshare.4812304.v2",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.6084/m9.figshare.4812304.v2",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196282",
+              "display_name": "Figshare",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4210132348",
+              "host_organization_name": "Figshare (United Kingdom)",
+              "host_organization_lineage": [
+                "https://openalex.org/I4210132348"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article-journal"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:arXiv.org:1604.04173",
+          "doi": "https://doi.org/10.48550/arxiv.1604.04173",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1604.04173",
+          "pdf_url": "https://arxiv.org/pdf/1604.04173",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G3157262204",
+            "display_name": "Advancing Theory and Computation in Statistical Learning Problems",
+            "funder_award_id": "1309174",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G3395338938",
+            "display_name": "CAREER:  Modernizing Classical Nonparametric and Multivariate Theory for Large-scale,  High-dimensional Data Analysis",
+            "funder_award_id": "1553884",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G5909158359",
+            "display_name": null,
+            "funder_award_id": "1553884",
+            "funder_id": "https://openalex.org/F4320337380",
+            "funder_display_name": "Division of Mathematical Sciences"
+          },
+          {
+            "id": "https://openalex.org/G7426450513",
+            "display_name": "Adaptive Thresholding for Hierarchical Clustering of Variables, with Connections to Scan Statistics",
+            "funder_award_id": "1613202",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G8986973987",
+            "display_name": "CAREER: Locally Adaptive Nonparametric Estimation for the Modern Age - New Insights, Extensions, and Inference Tools",
+            "funder_award_id": "1554123",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G940135654",
+            "display_name": "Spectral and principal components analysis in sparse, high-dimensional data",
+            "funder_award_id": "1407771",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306076",
+            "display_name": "National Science Foundation",
+            "ror": "https://ror.org/021nxhr62"
+          },
+          {
+            "id": "https://openalex.org/F4320337380",
+            "display_name": "Division of Mathematical Sciences",
+            "ror": "https://ror.org/051fftw81"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2964060211.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2964060211.grobid-xml"
+        },
+        "referenced_works_count": 38,
+        "referenced_works": [
+          "https://openalex.org/W92292672",
+          "https://openalex.org/W1499689786",
+          "https://openalex.org/W1535995764",
+          "https://openalex.org/W1553101044",
+          "https://openalex.org/W1582966010",
+          "https://openalex.org/W1654108135",
+          "https://openalex.org/W1812676967",
+          "https://openalex.org/W1941710798",
+          "https://openalex.org/W1963600315",
+          "https://openalex.org/W1986593852",
+          "https://openalex.org/W1989598822",
+          "https://openalex.org/W2009462809",
+          "https://openalex.org/W2045756756",
+          "https://openalex.org/W2069119359",
+          "https://openalex.org/W2078411132",
+          "https://openalex.org/W2085828897",
+          "https://openalex.org/W2097209031",
+          "https://openalex.org/W2098508243",
+          "https://openalex.org/W2099932489",
+          "https://openalex.org/W2116581043",
+          "https://openalex.org/W2119862467",
+          "https://openalex.org/W2122825543",
+          "https://openalex.org/W2135046866",
+          "https://openalex.org/W2163162137",
+          "https://openalex.org/W2166693382",
+          "https://openalex.org/W2204774351",
+          "https://openalex.org/W2275716410",
+          "https://openalex.org/W2328479405",
+          "https://openalex.org/W2562162676",
+          "https://openalex.org/W2593996946",
+          "https://openalex.org/W2747741487",
+          "https://openalex.org/W2911964244",
+          "https://openalex.org/W2954535554",
+          "https://openalex.org/W2962922530",
+          "https://openalex.org/W2963901036",
+          "https://openalex.org/W3003608419",
+          "https://openalex.org/W3101040439",
+          "https://openalex.org/W3104560798"
+        ],
+        "related_works": [
+          "https://openalex.org/W2964118998",
+          "https://openalex.org/W7029253488",
+          "https://openalex.org/W3135016461",
+          "https://openalex.org/W4408178946",
+          "https://openalex.org/W4386488250",
+          "https://openalex.org/W7117322909",
+          "https://openalex.org/W4283759695",
+          "https://openalex.org/W4391914485",
+          "https://openalex.org/W6884567892",
+          "https://openalex.org/W4398143373"
+        ],
+        "abstract_inverted_index": {
+          "We": [
+            0,
+            63,
+            135
+          ],
+          "develop": [
+            1,
+            111
+          ],
+          "a": [
+            2,
+            22,
+            88,
+            112,
+            161
+          ],
+          "general": [
+            3
+          ],
+          "framework": [
+            4
+          ],
+          "for": [
+            5,
+            18,
+            25,
+            114,
+            143
+          ],
+          "distribution-free": [
+            6
+          ],
+          "predictive": [
+            7
+          ],
+          "inference": [
+            8,
+            81
+          ],
+          "in": [
+            9,
+            155
+          ],
+          "regression,": [
+            10
+          ],
+          "using": [
+            11,
+            29,
+            204
+          ],
+          "conformal": [
+            12,
+            77,
+            80,
+            84,
+            122,
+            133
+          ],
+          "inference.": [
+            13,
+            134,
+            171
+          ],
+          "The": [
+            14,
+            36
+          ],
+          "proposed": [
+            15
+          ],
+          "methodology": [
+            16
+          ],
+          "allows": [
+            17
+          ],
+          "the": [
+            19,
+            26,
+            33,
+            41,
+            45,
+            71,
+            127,
+            156,
+            184,
+            190
+          ],
+          "construction": [
+            20
+          ],
+          "of": [
+            21,
+            32,
+            44,
+            75,
+            101,
+            140,
+            164,
+            183,
+            192,
+            195
+          ],
+          "prediction": [
+            23,
+            38,
+            103,
+            118,
+            145
+          ],
+          "band": [
+            24,
+            39
+          ],
+          "response": [
+            27
+          ],
+          "variable": [
+            28,
+            165
+          ],
+          "any": [
+            30
+          ],
+          "estimator": [
+            31,
+            47
+          ],
+          "regression": [
+            34
+          ],
+          "function.": [
+            35
+          ],
+          "resulting": [
+            37,
+            102
+          ],
+          "preserves": [
+            40
+          ],
+          "consistency": [
+            42
+          ],
+          "properties": [
+            43
+          ],
+          "original": [
+            46
+          ],
+          "under": [
+            48
+          ],
+          "standard": [
+            49
+          ],
+          "assumptions,": [
+            50
+          ],
+          "while": [
+            51
+          ],
+          "guaranteeing": [
+            52
+          ],
+          "finite-sample": [
+            53
+          ],
+          "marginal": [
+            54
+          ],
+          "coverage": [
+            55
+          ],
+          "even": [
+            56
+          ],
+          "when": [
+            57
+          ],
+          "these": [
+            58
+          ],
+          "assumptions": [
+            59
+          ],
+          "do": [
+            60
+          ],
+          "not": [
+            61
+          ],
+          "hold.": [
+            62
+          ],
+          "analyze": [
+            64
+          ],
+          "and": [
+            65,
+            69,
+            82,
+            105
+          ],
+          "compare,": [
+            66
+          ],
+          "both": [
+            67
+          ],
+          "empirically": [
+            68
+          ],
+          "theoretically,": [
+            70
+          ],
+          "two": [
+            72
+          ],
+          "major": [
+            73
+          ],
+          "variants": [
+            74
+          ],
+          "our": [
+            76,
+            141,
+            196
+          ],
+          "framework:": [
+            78
+          ],
+          "full": [
+            79
+          ],
+          "split": [
+            83,
+            132
+          ],
+          "inference,": [
+            85,
+            123
+          ],
+          "along": [
+            86
+          ],
+          "with": [
+            87,
+            147
+          ],
+          "related": [
+            89
+          ],
+          "jackknife": [
+            90
+          ],
+          "method.": [
+            91
+          ],
+          "These": [
+            92
+          ],
+          "methods": [
+            93
+          ],
+          "offer": [
+            94
+          ],
+          "different": [
+            95
+          ],
+          "tradeoffs": [
+            96
+          ],
+          "between": [
+            97
+          ],
+          "statistical": [
+            98
+          ],
+          "accuracy": [
+            99
+          ],
+          "(length": [
+            100
+          ],
+          "intervals)": [
+            104
+          ],
+          "computational": [
+            106,
+            129
+          ],
+          "efficiency.": [
+            107
+          ],
+          "As": [
+            108
+          ],
+          "extensions,": [
+            109
+          ],
+          "we": [
+            110,
+            159,
+            186
+          ],
+          "method": [
+            113
+          ],
+          "constructing": [
+            115
+          ],
+          "valid": [
+            116
+          ],
+          "in-sample": [
+            117
+          ],
+          "intervals": [
+            119
+          ],
+          "called": [
+            120,
+            167
+          ],
+          "rank-one-out": [
+            121
+          ],
+          "which": [
+            124
+          ],
+          "has": [
+            125
+          ],
+          "essentially": [
+            126
+          ],
+          "same": [
+            128
+          ],
+          "efficiency": [
+            130
+          ],
+          "as": [
+            131
+          ],
+          "also": [
+            136,
+            200
+          ],
+          "describe": [
+            137
+          ],
+          "an": [
+            138,
+            176
+          ],
+          "extension": [
+            139
+          ],
+          "procedures": [
+            142
+          ],
+          "producing": [
+            144
+          ],
+          "bands": [
+            146
+          ],
+          "locally": [
+            148
+          ],
+          "varying": [
+            149
+          ],
+          "length,": [
+            150
+          ],
+          "to": [
+            151,
+            153
+          ],
+          "adapt": [
+            152
+          ],
+          "heteroscedasticity": [
+            154
+          ],
+          "data.": [
+            157
+          ],
+          "Finally,": [
+            158
+          ],
+          "propose": [
+            160
+          ],
+          "model-free": [
+            162
+          ],
+          "notion": [
+            163
+          ],
+          "importance,": [
+            166
+          ],
+          "leave-one-covariate-out": [
+            168
+          ],
+          "or": [
+            169
+          ],
+          "LOCO": [
+            170
+          ],
+          "Accompanying": [
+            172
+          ],
+          "this": [
+            173,
+            205
+          ],
+          "article": [
+            174
+          ],
+          "is": [
+            175
+          ],
+          "R": [
+            177
+          ],
+          "package": [
+            178
+          ],
+          "conformalInference": [
+            179
+          ],
+          "that": [
+            180
+          ],
+          "implements": [
+            181
+          ],
+          "all": [
+            182,
+            194
+          ],
+          "proposals": [
+            185
+          ],
+          "have": [
+            187
+          ],
+          "introduced.": [
+            188
+          ],
+          "In": [
+            189
+          ],
+          "spirit": [
+            191
+          ],
+          "reproducibility,": [
+            193
+          ],
+          "empirical": [
+            197
+          ],
+          "results": [
+            198
+          ],
+          "can": [
+            199
+          ],
+          "be": [
+            201
+          ],
+          "easily": [
+            202
+          ],
+          "(re)generated": [
+            203
+          ],
+          "package.": [
+            206
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2964060211",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 1076
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 357
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 232
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 159
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 114
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 102
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 70
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 36
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2019-07-30T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4312847507",
+        "doi": "https://doi.org/10.1002/cem.3457/v2/review1",
+        "title": "Review for \"Distribution\u2010Free Predictive Inference for PLS Regression with Applications to Molecular Descriptors Datasets\"",
+        "display_name": "Review for \"Distribution\u2010Free Predictive Inference for PLS Regression with Applications to Molecular Descriptors Datasets\"",
+        "alternate_titles": [],
+        "relevance_score": 84.69849,
+        "publication_year": 2022,
+        "publication_date": "2022-09-20",
+        "ids": {
+          "openalex": "https://openalex.org/W4312847507",
+          "doi": "https://doi.org/10.1002/cem.3457/v2/review1"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1002/cem.3457/v2/review1",
+          "doi": "https://doi.org/10.1002/cem.3457/v2/review1",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1002/cem.3457/v2/review1",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4363604615",
+            "display_name": "Publons reviews and discussion",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": null,
+          "raw_type": "peer-review"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4312847507"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "peer-review",
+        "is_traditional": false,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": null,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 0,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": null,
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11871",
+          "display_name": "Advanced Statistical Methods and Models",
+          "score": 0.7089999914169312,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.7089999914169312,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10640",
+            "display_name": "Spectroscopy and Chemometric Analyses",
+            "score": 0.11050000041723251,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1602",
+              "display_name": "Analytical Chemistry"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/16",
+              "display_name": "Chemistry"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.04360000044107437,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/partial-least-squares-regression",
+            "display_name": "partial least squares regression",
+            "score": 0.9079999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/molecular-descriptors",
+            "display_name": "molecular descriptors",
+            "score": 0.9300000071525574
+          },
+          {
+            "id": "https://openalex.org/keywords/chemometrics",
+            "display_name": "chemometrics",
+            "score": 0.5830000042915344
+          },
+          {
+            "id": "https://openalex.org/keywords/prediction-intervals",
+            "display_name": "prediction intervals",
+            "score": 0.39399999380111694
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C2776214188",
+            "wikidata": "https://www.wikidata.org/wiki/Q408386",
+            "display_name": "Inference",
+            "level": 2,
+            "score": 0.643952488899231
+          },
+          {
+            "id": "https://openalex.org/C83546350",
+            "wikidata": "https://www.wikidata.org/wiki/Q1139051",
+            "display_name": "Regression",
+            "level": 2,
+            "score": 0.4825529456138611
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.4697601795196533
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.43609100580215454
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.35588836669921875
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.340509831905365
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.3352377712726593
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.1002/cem.3457/v2/review1",
+            "doi": "https://doi.org/10.1002/cem.3457/v2/review1",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1002/cem.3457/v2/review1",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4363604615",
+              "display_name": "Publons reviews and discussion",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": null,
+            "raw_type": "peer-review"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W4309083017",
+          "https://openalex.org/W4384025701",
+          "https://openalex.org/W4407747402",
+          "https://openalex.org/W1491942102",
+          "https://openalex.org/W1524909614",
+          "https://openalex.org/W2221948242",
+          "https://openalex.org/W404591136",
+          "https://openalex.org/W7058772466",
+          "https://openalex.org/W7098078098"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W4312847507",
+        "counts_by_year": [],
+        "updated_date": "2026-11-14T11:04:58.165337",
+        "created_date": "2023-01-05T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4312444193",
+        "doi": "https://doi.org/10.1002/cem.3457/v1/review1",
+        "title": "Review for \"Distribution\u2010Free Predictive Inference for PLS Regression with Applications to Molecular Descriptors Datasets\"",
+        "display_name": "Review for \"Distribution\u2010Free Predictive Inference for PLS Regression with Applications to Molecular Descriptors Datasets\"",
+        "alternate_titles": [],
+        "relevance_score": 84.59413,
+        "publication_year": 2022,
+        "publication_date": "2022-01-29",
+        "ids": {
+          "openalex": "https://openalex.org/W4312444193",
+          "doi": "https://doi.org/10.1002/cem.3457/v1/review1"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1002/cem.3457/v1/review1",
+          "doi": "https://doi.org/10.1002/cem.3457/v1/review1",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1002/cem.3457/v1/review1",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4363604615",
+            "display_name": "Publons reviews and discussion",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": null,
+          "raw_type": "peer-review"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4312444193"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "peer-review",
+        "is_traditional": false,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": null,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 0,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": null,
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11871",
+          "display_name": "Advanced Statistical Methods and Models",
+          "score": 0.7089999914169312,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.7089999914169312,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10640",
+            "display_name": "Spectroscopy and Chemometric Analyses",
+            "score": 0.11050000041723251,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1602",
+              "display_name": "Analytical Chemistry"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/16",
+              "display_name": "Chemistry"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.04360000044107437,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/partial-least-squares-regression",
+            "display_name": "partial least squares regression",
+            "score": 0.9079999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/molecular-descriptors",
+            "display_name": "molecular descriptors",
+            "score": 0.9300000071525574
+          },
+          {
+            "id": "https://openalex.org/keywords/chemometrics",
+            "display_name": "chemometrics",
+            "score": 0.5830000042915344
+          },
+          {
+            "id": "https://openalex.org/keywords/prediction-intervals",
+            "display_name": "prediction intervals",
+            "score": 0.39399999380111694
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C2776214188",
+            "wikidata": "https://www.wikidata.org/wiki/Q408386",
+            "display_name": "Inference",
+            "level": 2,
+            "score": 0.666080117225647
+          },
+          {
+            "id": "https://openalex.org/C83546350",
+            "wikidata": "https://www.wikidata.org/wiki/Q1139051",
+            "display_name": "Regression",
+            "level": 2,
+            "score": 0.524685800075531
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.5155661106109619
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.4477444291114807
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.39525043964385986
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.3639744520187378
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.3147680163383484
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.275127649307251
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.1002/cem.3457/v1/review1",
+            "doi": "https://doi.org/10.1002/cem.3457/v1/review1",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1002/cem.3457/v1/review1",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4363604615",
+              "display_name": "Publons reviews and discussion",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": null,
+            "raw_type": "peer-review"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W4309083017",
+          "https://openalex.org/W4384025701",
+          "https://openalex.org/W4407747402",
+          "https://openalex.org/W1491942102",
+          "https://openalex.org/W1524909614",
+          "https://openalex.org/W2221948242",
+          "https://openalex.org/W404591136",
+          "https://openalex.org/W7058772466",
+          "https://openalex.org/W7098078098"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W4312444193",
+        "counts_by_year": [],
+        "updated_date": "2026-11-14T11:04:58.165337",
+        "created_date": "2023-01-04T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

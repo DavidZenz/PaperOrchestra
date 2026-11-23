@@ -1,0 +1,75 @@
+{
+  "section_name": "Fixed Slope Intercept Adjustment and Mean Residual Calibration",
+  "candidates": [
+    {
+      "title": "Two Further Applications of a Model for Binary Regression",
+      "year": 1958,
+      "reason": "Foundational paper introducing calibration regression to evaluate and adjust model predictions, demonstrating the estimation of an additive intercept under fixed predictor parameters."
+    },
+    {
+      "title": "Generalized Linear Models",
+      "year": 1972,
+      "reason": "Establishes the mathematical formulation of generalized linear models with fixed predictor offsets, formalizing how an intercept is estimated conditional on fixed-slope predictors."
+    },
+    {
+      "title": "Regression, Prediction and Shrinkage",
+      "year": 1983,
+      "reason": "Examines shrinkage and calibration adjustments in regression models, detailing how intercept recalibration corrects systematic baseline offsets while holding linear predictors fixed."
+    },
+    {
+      "title": "Validation Techniques for Logistic Regression Models",
+      "year": 1991,
+      "reason": "Formulates calibration-in-the-large diagnostics and updates, showing how fitting an intercept with the predictor fixed as an offset corrects the mean residual shift."
+    },
+    {
+      "title": "Multivariable Prognostic Models: Issues in Developing Models, Evaluating Assumptions and Adequacy, and Measuring and Reducing Errors",
+      "year": 1996,
+      "reason": "Discusses model calibration diagnostics and updating rules, highlighting the role of intercept correction to zero out the average residual error while preserving predictor slopes."
+    },
+    {
+      "title": "Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods",
+      "year": 1999,
+      "reason": "Presents post-hoc calibration over fixed uncalibrated predictors, optimizing additive bias/intercept parameters while holding underlying predictor outputs constant."
+    },
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Derives optimal additive constant initialization in stage-wise regression, proving that the optimal intercept under squared error loss is precisely the sample mean residual of the prior predictor."
+    },
+    {
+      "title": "Internal and External Validation of Predictive Models: A Review of Methods and Recommendations",
+      "year": 2004,
+      "reason": "Categorizes model updating strategies and formally defines intercept-only updating (recalibration-in-the-large) using the fixed linear predictor as an offset."
+    },
+    {
+      "title": "Updating Methods Improved the Performance of a Clinical Prediction Model in New Patients",
+      "year": 2008,
+      "reason": "Directly compares predictive model updating methods, showing that updating only the intercept with a fixed slope (offset) completely eliminates systematic baseline offsets."
+    },
+    {
+      "title": "Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures",
+      "year": 2010,
+      "reason": "Synthesizes calibration metrics, defining the calibration intercept estimated with fixed unit slope as the exact metric for overall mean residual bias."
+    },
+    {
+      "title": "A Calibration Hierarchy for Risk Models Was Defined: From Considering to Optimizing Alignment",
+      "year": 2016,
+      "reason": "Defines mean calibration (Level 1 in the calibration hierarchy), achieved mathematically by adjusting an additive intercept to ensure average residuals equal zero while fixing predictor slopes."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Analyzes post-processing calibration of fixed scoring functions, investigating linear transformations and bias/intercept shifts on top of frozen predictor outputs."
+    },
+    {
+      "title": "Calibration: The Achilles Heel of Predictive Analytics",
+      "year": 2019,
+      "reason": "Provides a comprehensive tutorial on calibration-in-the-large and recalibration, explaining how adding the mean residual offset to a fixed predictor resolves systematic model under- or over-prediction."
+    },
+    {
+      "title": "External Validation of Clinical Prediction Models Using Big Datasets from Multiple Centres: A Tutorial and Guidance for Evaluating Calibration",
+      "year": 2021,
+      "reason": "Provides statistical guidelines and model specifications for estimating calibration intercepts by treating the linear predictor as an offset, eliminating mean residual error in validation samples."
+    }
+  ]
+}

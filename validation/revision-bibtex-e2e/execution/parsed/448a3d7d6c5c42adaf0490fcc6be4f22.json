@@ -1,0 +1,43 @@
+{
+  "Summary": "The note studies a fixed-slope intercept fit on five noise-free synthetic observations satisfying y = 2x + 3, where the baseline predictor is 2x. Every baseline residual equals 3, so the least-squares intercept correction is the residual mean, 3. The note derives the squared-error decomposition (Equation 1), states that the absolute-error optimum is the median, and reports MAE and MSE at corrections b = 0, 1.5, and 3 (Table 1 and Figure 2). It presents the workflow as a teaching sequence that traces observations through fitting and evaluation, with a dependency diagram (Figure 1) and reproducibility artifacts.",
+  "Strengths": [
+    "The arithmetic is correct and easy to verify: MSE(b) = (b-3)^2 and MAE(b) = |b-3| reproduce every value in Table 1.",
+    "The decomposition in Equation 1 is correctly derived, and the role of the vanishing cross term is clearly explained.",
+    "The note makes the dependency chain from observations to fitted correction to reported errors explicit, both in the text (Section 4.1) and in the diagram.",
+    "The writing is concise and the notation is consistent. The hand-check in Section 4.2 lets a reader reconstruct the table without software.",
+    "Reproducibility metadata (source files, wrappers, rendering info, and checksums) is listed for the figures."
+  ],
+  "Weaknesses": [
+    "The residuals are constant, so the mean and median are both 3. The example therefore cannot show the difference between the mean correction and the median correction, even though the abstract and the intended learning outcome claim it does.",
+    "The median-minimization argument is asserted for the general case with only a sketch ('the analogous bound for r(2), r(4)'), and the example used cannot test it, because the minimizer is trivially r(3).",
+    "The technical content (the least-squares optimum is the mean residual, and the squared-error decomposition) is standard. The note offers no new method, theory, or nontrivial result, so its contribution is limited to packaging.",
+    "The data are noise-free and constructed so that every residual is identical. The 'exact agreement' result holds by construction rather than as an empirical finding.",
+    "All errors are computed on the training observations (apparent error). The discussion of evaluation dependencies therefore never reaches held-out or cross-validated evaluation, and the Efron citation is invoked without analysis.",
+    "Related work omits the offset/GLM literature, which treats the known 2x_i term as an offset, and the least-absolute-deviations and quantile-regression literature, where the median result is standard. The regression-through-origin citation is tangential to a fixed-slope intercept.",
+    "The figure claims (exactly three labeled points, a dashed path in Figure 1) and the checksums cannot be verified from the manuscript text.",
+    "Residual notation differs between sections: r_i = y_i - 2x_i in Section 3.1 and e_i = prediction - target in Section 3.2. Both are stated, but the switch adds avoidable friction for the target readership."
+  ],
+  "Originality": 1,
+  "Quality": 3,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "Can you provide a residual vector with unequal mean and median, such as one containing an outlier, and show the mean and median corrections and their error tables? This is the minimal case needed to demonstrate the distinction the note claims to teach.",
+    "What would a held-out evaluation of this fixed-slope intercept look like, and how would the apparent-error and held-out results differ?",
+    "What is the intended audience and course level? How would a student verify the median-minimization step for r(2) and r(4) without relying on the sketch?",
+    "Are the coordinates in Figure 2 generated from the same computation that produces Table 1, and are the figure sources included with the submission rather than only referenced by path and checksum?"
+  ],
+  "Limitations": [
+    "The analysis uses a single five-point, noise-free example. The conclusions do not extend to noisy data, to multi-parameter models, or to cases where the mean and median differ.",
+    "Because the residuals are constant by construction, the example does not test any estimation method. It shows only that the algebra behaves as expected.",
+    "Reporting apparent errors on training data may lead students to read them as generalization performance, which is a pedagogical risk if the note is used without a held-out counterpart.",
+    "The work raises no ethical or societal concerns of note."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 3,
+  "Contribution": 2,
+  "Overall": 3,
+  "Confidence": 4,
+  "Decision": "Reject"
+}

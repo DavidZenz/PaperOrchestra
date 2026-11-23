@@ -1,0 +1,65 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+You are an expert scientific diagram illustrator. Generate high-quality scientific diagrams based on user requests.
+
+Write a complete standalone LaTeX/TikZ document rendering the following detailed description: **Figure description: `fig_residual_workflow` (diagram, LaTeX/TikZ)**
+
+**Canvas and style**
+- Pure white background, no outer frame border, no drop shadows, no gradients.
+- Landscape canvas, dimensions approximately 17 cm × 7.5 cm, laid out strictly from left to right across 5 non-overlapping horizontal stages with generous spacing to avoid collisions and clipping.
+- All text and math in Computer Modern: 8–9 pt for annotations, 9–10 pt for node labels, 10 pt for mathematical symbols.
+- Rounded rectangular nodes with 3 pt corner radius, 0.6 pt outline, and light thematic fills:
+  - Observations: pale blue fill `#DDEBF7`, outline `#2F5597`.
+  - Baseline predictor: light gray fill `#EFEFEF`, outline `#595959`.
+  - Residuals & scalar correction: pale orange fill `#FBE5D6`, outline `#C55A11`.
+  - Corrected prediction: pale green fill `#E2F0D9`, outline `#548235`.
+  - Evaluation: white fill, dark gray outline `#404040`.
+- Arrows:
+  - Solid computation/dependency arrows: 0.8 pt line width, dark gray `#333333`, `-Stealth` tips.
+  - Dashed reuse path: 0.6 pt dashed (3 pt on, 2 pt off), color `#2F5597`, routed along the bottom row.
+
+**Layout and elements (strictly non-overlapping, left to right)**
+
+1. **Observation block (Column 1, centered vertically)**
+   - A tall rounded box labeled 'Observations ($n = 5$)' at the top.
+   - Contains a minimal two-column table:
+     - Header: $x$ and $y = 2x+3$ separated by a horizontal rule.
+     - Rows: $(-2, -1), (-1, 1), (0, 3), (1, 5), (2, 7)$.
+   - Keep width around 3.0 cm so it clears subsequent columns comfortably.
+
+2. **Baseline predictor (Column 2, upper row)**
+   - Positioned horizontally to the right of the Observation block (clearing its right border by at least 0.8 cm) and vertically aligned above the Residuals block.
+   - Box labeled 'Fixed baseline' with $\hat{y}^{(0)} = 2x$.
+   - Direct incoming solid arrow with right-angle step from the Observation block to the baseline box, labeled '$x$'.
+
+3. **Residual computation (Column 2, lower row)**
+   - Pale orange box positioned directly below the Baseline predictor box with clear vertical separation (~0.8 cm).
+   - Labeled 'Residuals' with formula $r_i = y_i - 2x_i$.
+   - Displays computed values: $r_i = 3, 3, 3, 3, 3$ ($i=1,\dots,5$).
+   - Incoming solid horizontal arrow from the Observation block (labeled '$y_i$') and a vertical solid arrow from the Fixed baseline box above (labeled '$2x_i$').
+
+4. **Scalar correction (Column 3, vertically centered with Residuals)**
+   - Pale orange box placed strictly to the right of the Residuals box (clearing it with a 1.0 cm gap).
+   - Contains formula $b = \frac{1}{5}\sum_{i=1}^{5} r_i = 3$.
+   - Incoming horizontal arrow from Residuals to $b$.
+   - Centered directly beneath this connecting arrow, the key annotation: 'data dependency: correction computed from observed residuals' in 8 pt italic text, with sufficient vertical clearance from both the box and the bottom reuse dashed line.
+
+5. **Corrected prediction (Column 4, vertically centered)**
+   - Pale green box placed strictly to the right of Column 3 with at least 1.0 cm horizontal clearance.
+   - Labeled 'Corrected prediction' with formula $\hat{y}_i = 2x_i + b$.
+   - Incoming arrow 1: A route from the top of the Fixed baseline box running horizontally above Column 3 and descending into the top of the Corrected prediction box, labeled '$2x_i$'.
+   - Incoming arrow 2: Horizontal solid arrow from the scalar correction box $b$ to the left edge of Corrected prediction, labeled '$+b$' centered clearly above the arrow.
+
+6. **Evaluation block (Column 5, far right, vertically centered)**
+   - White rounded box placed strictly to the right of Corrected prediction with clear separation (at least 1.0 cm gap).
+   - Generous box width (minimum 4.0–4.2 cm) with `inner xsep=6pt` to ensure zero text collision or border clipping:
+     - Title: 'Evaluation on the same 5 observations' (fully visible without truncating 'observations').
+     - Math: $e_i = \hat{y}_i - y_i = 0$ (centered on a single line).
+     - Note: 'finite arithmetic check, not generalization' (fully visible without clipping 'check' against the right border).
+   - Direct horizontal solid arrow from the right edge of Corrected prediction to the left edge of Evaluation.
+   - Dashed blue reuse arrow originating from the bottom center of the Observation block, dropping into a dedicated lower corridor below all blocks, and entering the bottom of the Evaluation block. Labeled along the horizontal segment: 'same observations reused' in 8 pt blue text.
+
+**Output format notes**
+- Native editable `.tex` source ensuring coordinate/node positioning (`right=of ...`, `above=of ...`) with explicit bounding box and node widths preventing any text clipping or overlaps.
+- Vector PDF and 300 dpi raster preview.
+Return LaTeX code only. Use \documentclass[tikz,border=5pt]{standalone}, \usepackage{amsmath} and any required standard TikZ libraries. The renderer is pdfLaTeX. Use its built-in TeX fonts; do not load fontspec, select system fonts, or require XeLaTeX/LuaLaTeX. Match the requested font style with a standard TeX serif, sans or mono family. Produce one diagram on one page, with no figure title or caption in the drawing. Use editable TikZ nodes, paths and math; do not embed external images, invoke shell commands, or download assets. Preserve the described scientific content and labels. Requested canvas aspect ratio: 16:9. Code:

@@ -283,3 +283,21 @@ in a live run contained carriage returns. The launch plan and saved prompt
 matched byte for byte, but the audit's text reader converted the saved line
 endings and rejected the match. The byte comparison keeps native input
 validation strict and accepts genuine mixed line endings.
+
+## R032 — Keep verified BibTeX through content revision (23 November 2026)
+
+The runtime records the bibliography style that passed the initial draft's
+BibTeX check. Each content worker receives that style and the verified
+references.bib contract. If it still emits a standard trailing inline
+bibliography, the runtime replaces that block with the established BibTeX
+declarations before the controller compiles the response. The original
+response and effective source are retained, and the provenance auditor can
+recompute the transformation. The compile gate checks the database bytes
+against the literature artifacts, checks the revision's style, and resolves
+its citation keys. Unsupported inline lists or substitutions fail readiness.
+The original review and selection rules still decide whether the revision
+is accepted. See A008.
+
+A formatting proposal rejected before the compiler starts now records only
+its scope rejection. The audit can distinguish it from a compilation that
+should have a source snapshot.

@@ -1,0 +1,1460 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 881100,
+      "db_response_time_ms": 329,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (The Discovery of the Method of Least Squares) in the title, abstract, or full text",
+        "x_new_oql": "get works with (The Discovery of the Method of Least Squares) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "The Discovery of the Method of Least Squares",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:The Discovery of the Method of Least Squares&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2065595207",
+        "doi": "https://doi.org/10.1093/biomet/59.2.239",
+        "title": "Studies in the History of Probability and Statistics. XXIX: The Discovery of the Method of Least Squares",
+        "display_name": "Studies in the History of Probability and Statistics. XXIX: The Discovery of the Method of Least Squares",
+        "alternate_titles": [],
+        "relevance_score": 242.35837,
+        "publication_year": 1972,
+        "publication_date": "1972-08-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2065595207",
+          "doi": "https://doi.org/10.1093/biomet/59.2.239",
+          "mag": "2065595207"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1093/biomet/59.2.239",
+          "doi": "https://doi.org/10.1093/biomet/59.2.239",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1093/biomet/59.2.239",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S172180718",
+            "display_name": "Biometrika",
+            "issn_l": "0006-3444",
+            "issn": [
+              "0006-3444",
+              "1464-3510"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-2",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Biometrika",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2065595207"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5085139347",
+              "display_name": "Robin L. Plackett",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I84884186",
+                "display_name": "Newcastle University",
+                "ror": "https://ror.org/01kj2bm70",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I84884186"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "R. L. PLACKETT",
+            "raw_affiliation_strings": [
+              "University of Newcastle upon Tyne"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Newcastle upon Tyne",
+                "institution_ids": [
+                  "https://openalex.org/I84884186"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5085139347"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I84884186"
+        ],
+        "apc_list": {
+          "value": 2724,
+          "currency": "GBP",
+          "value_usd": 3592
+        },
+        "apc_paid": null,
+        "fwci": 14.9237,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 220,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.98143852,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 96,
+          "max": 99
+        },
+        "biblio": {
+          "volume": "59",
+          "issue": "2",
+          "first_page": "239",
+          "last_page": "251"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T12170",
+          "display_name": "History and Theory of Mathematics",
+          "score": 0.8604000210762024,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1207",
+            "display_name": "History and Philosophy of Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/12",
+            "display_name": "Arts and Humanities"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T12170",
+            "display_name": "History and Theory of Mathematics",
+            "score": 0.8604000210762024,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1207",
+              "display_name": "History and Philosophy of Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/12",
+              "display_name": "Arts and Humanities"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14475",
+            "display_name": "History of Science and Medicine",
+            "score": 0.07670000195503235,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1207",
+              "display_name": "History and Philosophy of Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/12",
+              "display_name": "Arts and Humanities"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13500",
+            "display_name": "Probability and Statistical Research",
+            "score": 0.01600000075995922,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/method-of-least-squares",
+            "display_name": "method of least squares",
+            "score": 0.9950000047683716
+          },
+          {
+            "id": "https://openalex.org/keywords/history-of-statistics",
+            "display_name": "history of statistics",
+            "score": 0.9570000171661377
+          },
+          {
+            "id": "https://openalex.org/keywords/history-of-probability",
+            "display_name": "history of probability",
+            "score": 0.8550000190734863
+          },
+          {
+            "id": "https://openalex.org/keywords/scientific-controversy",
+            "display_name": "scientific controversy",
+            "score": 0.75
+          },
+          {
+            "id": "https://openalex.org/keywords/historical-correspondence",
+            "display_name": "historical correspondence",
+            "score": 0.6859999895095825
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.7479492425918579
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.6987735033035278
+          },
+          {
+            "id": "https://openalex.org/C43596424",
+            "wikidata": "https://www.wikidata.org/wiki/Q98124957",
+            "display_name": "Probability and statistics",
+            "level": 2,
+            "score": 0.6054275035858154
+          },
+          {
+            "id": "https://openalex.org/C6260981",
+            "wikidata": "https://www.wikidata.org/wiki/Q745328",
+            "display_name": "Mathematical statistics",
+            "level": 2,
+            "score": 0.551665723323822
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.41622740030288696
+          }
+        ],
+        "mesh": [],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "doi:10.1093/biomet/59.2.239",
+            "doi": "https://doi.org/10.1093/biomet/59.2.239",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1093/biomet/59.2.239",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S172180718",
+              "display_name": "Biometrika",
+              "issn_l": "0006-3444",
+              "issn": [
+                "0006-3444",
+                "1464-3510"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-2",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311648",
+              "host_organization_name": "Oxford University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311648",
+                "https://openalex.org/P4310311647"
+              ],
+              "host_organization_lineage_names": [
+                "Oxford University Press",
+                "University of Oxford"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Biometrika",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.2307/2334569",
+            "doi": "https://doi.org/10.2307/2334569",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/2334569",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S172180718",
+              "display_name": "Biometrika",
+              "issn_l": "0006-3444",
+              "issn": [
+                "0006-3444",
+                "1464-3510"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-2",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311648",
+              "host_organization_name": "Oxford University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311648",
+                "https://openalex.org/P4310311647"
+              ],
+              "host_organization_lineage_names": [
+                "Oxford University Press",
+                "University of Oxford"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Biometrika",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 11,
+        "referenced_works": [
+          "https://openalex.org/W567883132",
+          "https://openalex.org/W1979796434",
+          "https://openalex.org/W2045574743",
+          "https://openalex.org/W2047225935",
+          "https://openalex.org/W2054638879",
+          "https://openalex.org/W2068843130",
+          "https://openalex.org/W2071560644",
+          "https://openalex.org/W2503054239",
+          "https://openalex.org/W2796698369",
+          "https://openalex.org/W2797394743",
+          "https://openalex.org/W3148238777"
+        ],
+        "related_works": [
+          "https://openalex.org/W4251406487",
+          "https://openalex.org/W2609981146",
+          "https://openalex.org/W2324456829",
+          "https://openalex.org/W2060973058",
+          "https://openalex.org/W2188895636",
+          "https://openalex.org/W2096253522",
+          "https://openalex.org/W2498492853",
+          "https://openalex.org/W168489632",
+          "https://openalex.org/W1961005759"
+        ],
+        "abstract_inverted_index": {
+          "The": [
+            0
+          ],
+          "circumstances": [
+            1
+          ],
+          "in": [
+            2,
+            23,
+            47
+          ],
+          "which": [
+            3
+          ],
+          "the": [
+            4,
+            7,
+            15,
+            18,
+            26,
+            35,
+            38,
+            42
+          ],
+          "discovery": [
+            5
+          ],
+          "of": [
+            6,
+            9,
+            17,
+            28,
+            37,
+            44
+          ],
+          "method": [
+            8
+          ],
+          "least": [
+            10
+          ],
+          "squares": [
+            11
+          ],
+          "took": [
+            12
+          ],
+          "place": [
+            13
+          ],
+          "and": [
+            14,
+            41
+          ],
+          "course": [
+            16
+          ],
+          "ensuing": [
+            19
+          ],
+          "controversy": [
+            20
+          ],
+          "are": [
+            21,
+            32
+          ],
+          "examined": [
+            22
+          ],
+          "detail": [
+            24
+          ],
+          "with": [
+            25
+          ],
+          "aid": [
+            27
+          ],
+          "correspondence.": [
+            29
+          ],
+          "Some": [
+            30
+          ],
+          "conclusions": [
+            31
+          ],
+          "drawn": [
+            33
+          ],
+          "about": [
+            34
+          ],
+          "attitudes": [
+            36
+          ],
+          "main": [
+            39
+          ],
+          "participants": [
+            40
+          ],
+          "nature": [
+            43
+          ],
+          "historical": [
+            45
+          ],
+          "research": [
+            46
+          ],
+          "statistics.": [
+            48
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2065595207",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 7
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2060973058",
+        "doi": "https://doi.org/10.1007/bf00374703",
+        "title": "On Gauss' priority in the discovery of the method of least squares",
+        "display_name": "On Gauss' priority in the discovery of the method of least squares",
+        "alternate_titles": [],
+        "relevance_score": 202.64297,
+        "publication_year": 1996,
+        "publication_date": "1996-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2060973058",
+          "doi": "https://doi.org/10.1007/bf00374703",
+          "mag": "2060973058"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1007/bf00374703",
+          "doi": "https://doi.org/10.1007/bf00374703",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1007/bf00374703",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4501114",
+            "display_name": "Archive for History of Exact Sciences",
+            "issn_l": "0003-9519",
+            "issn": [
+              "0003-9519",
+              "1432-0657"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "dongbi-b",
+              "erih-plus",
+              "jufo-2",
+              "norway-2",
+              "poland-100",
+              "russia-white-list-2",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Archive for History of Exact Sciences",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2060973058"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5038311317",
+              "display_name": "Jacques Dutka",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Jacques Dutka",
+            "raw_affiliation_strings": [
+              "Audits & Surveys World Wide, Inc., 650 Avenue of the Americas, 10011, New York, N.Y",
+              "Audits & Surveys World Wide, Inc., New York,"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Audits & Surveys World Wide, Inc., 650 Avenue of the Americas, 10011, New York, N.Y",
+                "institution_ids": []
+              },
+              {
+                "raw_affiliation_string": "Audits & Surveys World Wide, Inc., New York,",
+                "institution_ids": []
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5038311317"
+        ],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 3090,
+          "currency": "USD",
+          "value_usd": 3090
+        },
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 19,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 86,
+          "max": 98
+        },
+        "biblio": {
+          "volume": "49",
+          "issue": "4",
+          "first_page": "355",
+          "last_page": "370"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T12170",
+          "display_name": "History and Theory of Mathematics",
+          "score": 0.9639000296592712,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1207",
+            "display_name": "History and Philosophy of Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/12",
+            "display_name": "Arts and Humanities"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T12170",
+            "display_name": "History and Theory of Mathematics",
+            "score": 0.9639000296592712,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1207",
+              "display_name": "History and Philosophy of Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/12",
+              "display_name": "Arts and Humanities"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14475",
+            "display_name": "History of Science and Medicine",
+            "score": 0.013500000350177288,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1207",
+              "display_name": "History and Philosophy of Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/12",
+              "display_name": "Arts and Humanities"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T12836",
+            "display_name": "History and Developments in Astronomy",
+            "score": 0.011500000022351742,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3103",
+              "display_name": "Astronomy and Astrophysics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/31",
+              "display_name": "Physics and Astronomy"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/method-of-least-squares",
+            "display_name": "method of least squares",
+            "score": 0.878000020980835
+          },
+          {
+            "id": "https://openalex.org/keywords/carl-friedrich-gauss",
+            "display_name": "Carl Friedrich Gauss",
+            "score": 0.9520000219345093
+          },
+          {
+            "id": "https://openalex.org/keywords/priority",
+            "display_name": "priority",
+            "score": 0.5379999876022339
+          },
+          {
+            "id": "https://openalex.org/keywords/history-of-statistics",
+            "display_name": "history of statistics",
+            "score": 0.8980000019073486
+          },
+          {
+            "id": "https://openalex.org/keywords/history-of-mathematics",
+            "display_name": "history of mathematics",
+            "score": 0.7110000252723694
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C110099512",
+            "wikidata": "https://www.wikidata.org/wiki/Q59115",
+            "display_name": "Philosophy of science",
+            "level": 2,
+            "score": 0.722822904586792
+          },
+          {
+            "id": "https://openalex.org/C161794534",
+            "wikidata": "https://www.wikidata.org/wiki/Q177493",
+            "display_name": "Gauss",
+            "level": 2,
+            "score": 0.6378017663955688
+          },
+          {
+            "id": "https://openalex.org/C9936470",
+            "wikidata": "https://www.wikidata.org/wiki/Q6510405",
+            "display_name": "Least-squares function approximation",
+            "level": 3,
+            "score": 0.4704369902610779
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.41586410999298096
+          },
+          {
+            "id": "https://openalex.org/C2777686260",
+            "wikidata": "https://www.wikidata.org/wiki/Q144037",
+            "display_name": "Calculus (dental)",
+            "level": 2,
+            "score": 0.3713069260120392
+          },
+          {
+            "id": "https://openalex.org/C28826006",
+            "wikidata": "https://www.wikidata.org/wiki/Q33521",
+            "display_name": "Applied mathematics",
+            "level": 1,
+            "score": 0.33968666195869446
+          },
+          {
+            "id": "https://openalex.org/C111472728",
+            "wikidata": "https://www.wikidata.org/wiki/Q9471",
+            "display_name": "Epistemology",
+            "level": 1,
+            "score": 0.3329876661300659
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.32402294874191284
+          },
+          {
+            "id": "https://openalex.org/C138885662",
+            "wikidata": "https://www.wikidata.org/wiki/Q5891",
+            "display_name": "Philosophy",
+            "level": 0,
+            "score": 0.3080296516418457
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.1971120834350586
+          },
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.14330017566680908
+          },
+          {
+            "id": "https://openalex.org/C121332964",
+            "wikidata": "https://www.wikidata.org/wiki/Q413",
+            "display_name": "Physics",
+            "level": 0,
+            "score": 0.09084656834602356
+          },
+          {
+            "id": "https://openalex.org/C199343813",
+            "wikidata": "https://www.wikidata.org/wiki/Q12128",
+            "display_name": "Dentistry",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C185429906",
+            "wikidata": "https://www.wikidata.org/wiki/Q1130160",
+            "display_name": "Estimator",
+            "level": 2,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C62520636",
+            "wikidata": "https://www.wikidata.org/wiki/Q944",
+            "display_name": "Quantum mechanics",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.1007/bf00374703",
+            "doi": "https://doi.org/10.1007/bf00374703",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1007/bf00374703",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4501114",
+              "display_name": "Archive for History of Exact Sciences",
+              "issn_l": "0003-9519",
+              "issn": [
+                "0003-9519",
+                "1432-0657"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [
+                "anvur-class-a",
+                "anvur-scientific",
+                "dongbi-b",
+                "erih-plus",
+                "jufo-2",
+                "norway-2",
+                "poland-100",
+                "russia-white-list-2",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319900",
+              "host_organization_name": "Springer Science+Business Media",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319900",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Springer Science+Business Media",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Archive for History of Exact Sciences",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 10,
+        "referenced_works": [
+          "https://openalex.org/W1533267276",
+          "https://openalex.org/W1541178648",
+          "https://openalex.org/W1630082356",
+          "https://openalex.org/W1967284313",
+          "https://openalex.org/W2065595207",
+          "https://openalex.org/W2070374624",
+          "https://openalex.org/W2095076281",
+          "https://openalex.org/W2244453722",
+          "https://openalex.org/W2478114083",
+          "https://openalex.org/W7075705065"
+        ],
+        "related_works": [
+          "https://openalex.org/W40015706",
+          "https://openalex.org/W3023662081",
+          "https://openalex.org/W2070374624",
+          "https://openalex.org/W4254872410",
+          "https://openalex.org/W2029396229",
+          "https://openalex.org/W2527968833",
+          "https://openalex.org/W1523254419",
+          "https://openalex.org/W2089340314",
+          "https://openalex.org/W2324456829",
+          "https://openalex.org/W2188895636"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2060973058",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-16T12:05:36.265796",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2274074387",
+        "doi": null,
+        "title": "Hydrologic and hydraulic model discovery by the method of partial least squares",
+        "display_name": "Hydrologic and hydraulic model discovery by the method of partial least squares",
+        "alternate_titles": [],
+        "relevance_score": 76.75076,
+        "publication_year": 2009,
+        "publication_date": "2009-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2274074387",
+          "mag": "2274074387"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "mag:2274074387",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "http://repository.ust.hk/ir/Record/1783.1-16164",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": null
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2274074387"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5006983860",
+              "display_name": "N. Hamdaoui",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "N. Hamdaoui",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5109885905",
+              "display_name": "Yeou\u2010Koung Tung",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Yeou\u2010Koung Tung",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 0,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": null,
+          "issue": null,
+          "first_page": null,
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10330",
+          "display_name": "Hydrology and Watershed Management Studies",
+          "score": 0.5088000297546387,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2312",
+            "display_name": "Water Science and Technology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10330",
+            "display_name": "Hydrology and Watershed Management Studies",
+            "score": 0.5088000297546387,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2312",
+              "display_name": "Water Science and Technology"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11490",
+            "display_name": "Hydrological Forecasting Using AI",
+            "score": 0.11190000176429749,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2305",
+              "display_name": "Environmental Engineering"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14427",
+            "display_name": "Environmental Monitoring and Data Management",
+            "score": 0.037300001829862595,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2308",
+              "display_name": "Management, Monitoring, Policy and Law"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/hydrological-modeling",
+            "display_name": "hydrological modeling",
+            "score": 0.8159999847412109
+          },
+          {
+            "id": "https://openalex.org/keywords/hydraulic-modeling",
+            "display_name": "hydraulic modeling",
+            "score": 0.9890000224113464
+          },
+          {
+            "id": "https://openalex.org/keywords/model-discovery",
+            "display_name": "model discovery",
+            "score": 0.7749999761581421
+          },
+          {
+            "id": "https://openalex.org/keywords/partial-least-squares",
+            "display_name": "partial least squares",
+            "score": 0.8519999980926514
+          },
+          {
+            "id": "https://openalex.org/keywords/model-selection",
+            "display_name": "model selection",
+            "score": 0.42899999022483826
+          },
+          {
+            "id": "https://openalex.org/keywords/rainfall-runoff-modeling",
+            "display_name": "rainfall-runoff modeling",
+            "score": 0.460999995470047
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C22354355",
+            "wikidata": "https://www.wikidata.org/wiki/Q422009",
+            "display_name": "Partial least squares regression",
+            "level": 2,
+            "score": 0.5736613869667053
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.38188615441322327
+          },
+          {
+            "id": "https://openalex.org/C76886044",
+            "wikidata": "https://www.wikidata.org/wiki/Q2883300",
+            "display_name": "Hydrology (agriculture)",
+            "level": 2,
+            "score": 0.34317511320114136
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.32156050205230713
+          },
+          {
+            "id": "https://openalex.org/C127313418",
+            "wikidata": "https://www.wikidata.org/wiki/Q1069",
+            "display_name": "Geology",
+            "level": 0,
+            "score": 0.28053075075149536
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.188319593667984
+          },
+          {
+            "id": "https://openalex.org/C187320778",
+            "wikidata": "https://www.wikidata.org/wiki/Q1349130",
+            "display_name": "Geotechnical engineering",
+            "level": 1,
+            "score": 0.09542319178581238
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "mag:2274074387",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://repository.ust.hk/ir/Record/1783.1-16164",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [
+          {
+            "id": "https://metadata.un.org/sdg/6",
+            "display_name": "Clean water and sanitation",
+            "score": 0.8571000099182129
+          }
+        ],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W7099532886",
+          "https://openalex.org/W7095183597",
+          "https://openalex.org/W769444855",
+          "https://openalex.org/W3087849721",
+          "https://openalex.org/W89294693",
+          "https://openalex.org/W396879661",
+          "https://openalex.org/W2902648578",
+          "https://openalex.org/W6941289716",
+          "https://openalex.org/W7096088962",
+          "https://openalex.org/W628533596"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2274074387",
+        "counts_by_year": [],
+        "updated_date": "2025-11-06T04:12:42.849631",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

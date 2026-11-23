@@ -1,0 +1,3513 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 1449772,
+      "db_response_time_ms": 438,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Cross-Validation: What Does It Estimate \"and\" How Well Does It Do It) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Cross-Validation: What Does It Estimate \"and\" How Well Does It Do It) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Cross-Validation: What Does It Estimate and How Well Does It Do It",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Cross-Validation: What Does It Estimate and How Well Does It Do It&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W3146796711",
+        "doi": "https://doi.org/10.1080/01621459.2023.2197686",
+        "title": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+        "display_name": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+        "alternate_titles": [],
+        "relevance_score": 414.29068,
+        "publication_year": 2023,
+        "publication_date": "2023-05-15",
+        "ids": {
+          "openalex": "https://openalex.org/W3146796711",
+          "doi": "https://doi.org/10.1080/01621459.2023.2197686",
+          "mag": "3146796711",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/39308484",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/11412612",
+          "arxiv": "https://arxiv.org/abs/2104.00673"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/01621459.2023.2197686",
+          "doi": "https://doi.org/10.1080/01621459.2023.2197686",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/01621459.2023.2197686",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4394736638",
+            "display_name": "Journal of the American Statistical Association",
+            "issn_l": "0162-1459",
+            "issn": [
+              "0162-1459",
+              "1537-274X"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320547",
+            "host_organization_name": "Taylor & Francis",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of the American Statistical Association",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W3146796711"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "arxiv",
+          "crossref",
+          "datacite",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11412612/pdf/nihms-1897212.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5045046961",
+              "display_name": "Stephen Bates",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-3273-8179",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3273-8179"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I95457486",
+                "display_name": "University of California, Berkeley",
+                "ror": "https://ror.org/01an7q238",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I95457486"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Stephen Bates",
+            "raw_affiliation_strings": [
+              "Department of Statistics and EECS, University of California, Berkeley",
+              "Department of Statistics and EECS, University of California, Berkeley, Berkeley, CA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-3273-8179",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics and EECS, University of California, Berkeley",
+                "institution_ids": [
+                  "https://openalex.org/I95457486"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Statistics and EECS, University of California, Berkeley, Berkeley, CA",
+                "institution_ids": [
+                  "https://openalex.org/I95457486"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5045744709",
+              "display_name": "Trevor J. Hastie",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-0164-3142",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-0164-3142"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I97018004",
+                "display_name": "Stanford University",
+                "ror": "https://ror.org/00f54p054",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I97018004"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Trevor Hastie",
+            "raw_affiliation_strings": [
+              "Department of Statistics and Biomedical Data Science, Stanford University",
+              "Department of Statistics and Biomedical Data Science, Stanford University, Stanford, CA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-0164-3142",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Statistics and Biomedical Data Science, Stanford University",
+                "institution_ids": [
+                  "https://openalex.org/I97018004"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Statistics and Biomedical Data Science, Stanford University, Stanford, CA",
+                "institution_ids": [
+                  "https://openalex.org/I97018004"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5027340494",
+              "display_name": "Robert John Tibshirani",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-0553-5090",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0553-5090"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I97018004",
+                "display_name": "Stanford University",
+                "ror": "https://ror.org/00f54p054",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I97018004"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Robert Tibshirani",
+            "raw_affiliation_strings": [
+              "Department of Biomedical Data Science and Statistics, Stanford University",
+              "Department of Biomedical Data Science and Statistics, Stanford University, Stanford, CA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biomedical Data Science and Statistics, Stanford University",
+                "institution_ids": [
+                  "https://openalex.org/I97018004"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Biomedical Data Science and Statistics, Stanford University, Stanford, CA",
+                "institution_ids": [
+                  "https://openalex.org/I97018004"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 2,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5045046961"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I95457486"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 84.8408,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 798,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99954551,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 98,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "119",
+          "issue": "546",
+          "first_page": "1434",
+          "last_page": "1445"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10136",
+          "display_name": "Statistical Methods and Inference",
+          "score": 0.8925999999046326,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.8925999999046326,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.03220000118017197,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T12535",
+            "display_name": "Machine Learning and Data Classification",
+            "score": 0.026499999687075615,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/cross-validation",
+            "display_name": "cross-validation",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/prediction-error-estimation",
+            "display_name": "prediction error estimation",
+            "score": 0.9620000123977661
+          },
+          {
+            "id": "https://openalex.org/keywords/ordinary-least-squares",
+            "display_name": "ordinary least squares",
+            "score": 0.765999972820282
+          },
+          {
+            "id": "https://openalex.org/keywords/linear-models",
+            "display_name": "linear models",
+            "score": 0.8399999737739563
+          },
+          {
+            "id": "https://openalex.org/keywords/nested-cross-validation",
+            "display_name": "nested cross-validation",
+            "score": 0.8289999961853027
+          },
+          {
+            "id": "https://openalex.org/keywords/confidence-intervals",
+            "display_name": "confidence intervals",
+            "score": 0.7940000295639038
+          },
+          {
+            "id": "https://openalex.org/keywords/coverage-probability",
+            "display_name": "coverage probability",
+            "score": 0.6949999928474426
+          },
+          {
+            "id": "https://openalex.org/keywords/variance-estimation",
+            "display_name": "variance estimation",
+            "score": 0.6880000233650208
+          },
+          {
+            "id": "https://openalex.org/keywords/data-partitioning",
+            "display_name": "data partitioning",
+            "score": 0.8830000162124634
+          },
+          {
+            "id": "https://openalex.org/keywords/bootstrap-method",
+            "display_name": "bootstrapping",
+            "score": 0.9409999847412109
+          },
+          {
+            "id": "https://openalex.org/keywords/mallows-cp",
+            "display_name": "Mallows' Cp",
+            "score": 0.9129999876022339
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C207609745",
+            "wikidata": "https://www.wikidata.org/wiki/Q4944086",
+            "display_name": "Bootstrapping (finance)",
+            "level": 2,
+            "score": 0.8118035793304443
+          },
+          {
+            "id": "https://openalex.org/C167085575",
+            "wikidata": "https://www.wikidata.org/wiki/Q6803654",
+            "display_name": "Mean squared prediction error",
+            "level": 2,
+            "score": 0.6265305876731873
+          },
+          {
+            "id": "https://openalex.org/C27181475",
+            "wikidata": "https://www.wikidata.org/wiki/Q541014",
+            "display_name": "Cross-validation",
+            "level": 2,
+            "score": 0.5290954113006592
+          },
+          {
+            "id": "https://openalex.org/C99656134",
+            "wikidata": "https://www.wikidata.org/wiki/Q2912993",
+            "display_name": "Ordinary least squares",
+            "level": 2,
+            "score": 0.49769166111946106
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.46546152234077454
+          },
+          {
+            "id": "https://openalex.org/C9936470",
+            "wikidata": "https://www.wikidata.org/wiki/Q6510405",
+            "display_name": "Least-squares function approximation",
+            "level": 3,
+            "score": 0.4462248682975769
+          },
+          {
+            "id": "https://openalex.org/C18747219",
+            "wikidata": "https://www.wikidata.org/wiki/Q620994",
+            "display_name": "Standard error",
+            "level": 2,
+            "score": 0.43498343229293823
+          },
+          {
+            "id": "https://openalex.org/C2908647359",
+            "wikidata": "https://www.wikidata.org/wiki/Q2625603",
+            "display_name": "Population",
+            "level": 2,
+            "score": 0.42520615458488464
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.42470091581344604
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.420332133769989
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.2990958094596863
+          },
+          {
+            "id": "https://openalex.org/C144024400",
+            "wikidata": "https://www.wikidata.org/wiki/Q21201",
+            "display_name": "Sociology",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C149923435",
+            "wikidata": "https://www.wikidata.org/wiki/Q37732",
+            "display_name": "Demography",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C185429906",
+            "wikidata": "https://www.wikidata.org/wiki/Q1130160",
+            "display_name": "Estimator",
+            "level": 2,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 5,
+        "locations": [
+          {
+            "id": "doi:10.1080/01621459.2023.2197686",
+            "doi": "https://doi.org/10.1080/01621459.2023.2197686",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/01621459.2023.2197686",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4394736638",
+              "display_name": "Journal of the American Statistical Association",
+              "issn_l": "0162-1459",
+              "issn": [
+                "0162-1459",
+                "1537-274X"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of the American Statistical Association",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:39308484",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39308484",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of the American Statistical Association",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:11412612",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11412612",
+            "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11412612/pdf/nihms-1897212.pdf",
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "J Am Stat Assoc",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:oai:arXiv.org:2104.00673",
+            "doi": "https://doi.org/10.48550/arxiv.2104.00673",
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/2104.00673",
+            "pdf_url": "https://arxiv.org/pdf/2104.00673",
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:RePEc:taf:jnlasa:v:119:y:2024:i:546:p:1434-1445",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://hdl.handle.net/10.1080/01621459.2023.2197686",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:pubmedcentral.nih.gov:11412612",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11412612",
+          "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11412612/pdf/nihms-1897212.pdf",
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": "J Am Stat Assoc",
+          "raw_type": "Text"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G1120653043",
+            "display_name": "Flexible Statistical Modeling",
+            "funder_award_id": "2013736",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G1355498878",
+            "display_name": null,
+            "funder_award_id": "5R01 EB, 001988-21",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G4386513994",
+            "display_name": null,
+            "funder_award_id": "5R01 EB001988-16",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G4729413389",
+            "display_name": "BIGDATA: F: Computationally Efficient Algorithms for Large-Scale Crossed Random Effects Models",
+            "funder_award_id": "1837931",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G4730458842",
+            "display_name": "New Statistical Methods for Medical Signals and Images",
+            "funder_award_id": "R01EB001988",
+            "funder_id": "https://openalex.org/F4320337363",
+            "funder_display_name": "National Institute of Biomedical Imaging and Bioengineering"
+          },
+          {
+            "id": "https://openalex.org/G7104079276",
+            "display_name": "Flexible and Adaptive Statistical Modeling",
+            "funder_award_id": "1208164",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G9000868885",
+            "display_name": "New Statistical Methods for Medical Signals and Images",
+            "funder_award_id": "R01GM134483",
+            "funder_id": "https://openalex.org/F4320337354",
+            "funder_display_name": "National Institute of General Medical Sciences"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306076",
+            "display_name": "National Science Foundation",
+            "ror": "https://ror.org/021nxhr62"
+          },
+          {
+            "id": "https://openalex.org/F4320332161",
+            "display_name": "National Institutes of Health",
+            "ror": "https://ror.org/01cwqze88"
+          },
+          {
+            "id": "https://openalex.org/F4320337354",
+            "display_name": "National Institute of General Medical Sciences",
+            "ror": "https://ror.org/04q48ey07"
+          },
+          {
+            "id": "https://openalex.org/F4320337363",
+            "display_name": "National Institute of Biomedical Imaging and Bioengineering",
+            "ror": "https://ror.org/00372qc85"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W3146796711.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W3146796711.grobid-xml"
+        },
+        "referenced_works_count": 70,
+        "referenced_works": [
+          "https://openalex.org/W98862427",
+          "https://openalex.org/W811143457",
+          "https://openalex.org/W1480376833",
+          "https://openalex.org/W1502338185",
+          "https://openalex.org/W1506069954",
+          "https://openalex.org/W1517808374",
+          "https://openalex.org/W1583837637",
+          "https://openalex.org/W1976927254",
+          "https://openalex.org/W1981251392",
+          "https://openalex.org/W1981552604",
+          "https://openalex.org/W1983854655",
+          "https://openalex.org/W1995398986",
+          "https://openalex.org/W1995945562",
+          "https://openalex.org/W1999058847",
+          "https://openalex.org/W2005065743",
+          "https://openalex.org/W2006676204",
+          "https://openalex.org/W2009772318",
+          "https://openalex.org/W2018471882",
+          "https://openalex.org/W2032481853",
+          "https://openalex.org/W2033872649",
+          "https://openalex.org/W2040615655",
+          "https://openalex.org/W2050297026",
+          "https://openalex.org/W2052664531",
+          "https://openalex.org/W2054640142",
+          "https://openalex.org/W2080951248",
+          "https://openalex.org/W2105260721",
+          "https://openalex.org/W2106564640",
+          "https://openalex.org/W2112081648",
+          "https://openalex.org/W2114892327",
+          "https://openalex.org/W2120199131",
+          "https://openalex.org/W2127314075",
+          "https://openalex.org/W2141007997",
+          "https://openalex.org/W2142635246",
+          "https://openalex.org/W2146855196",
+          "https://openalex.org/W2151699048",
+          "https://openalex.org/W2162041430",
+          "https://openalex.org/W2167277498",
+          "https://openalex.org/W2259472751",
+          "https://openalex.org/W2511743975",
+          "https://openalex.org/W2516425642",
+          "https://openalex.org/W2522776251",
+          "https://openalex.org/W2625919377",
+          "https://openalex.org/W2751886678",
+          "https://openalex.org/W2761454148",
+          "https://openalex.org/W2787894218",
+          "https://openalex.org/W2797062063",
+          "https://openalex.org/W2921312011",
+          "https://openalex.org/W2923764619",
+          "https://openalex.org/W2930308779",
+          "https://openalex.org/W2942128411",
+          "https://openalex.org/W2946570717",
+          "https://openalex.org/W2977961562",
+          "https://openalex.org/W2979632005",
+          "https://openalex.org/W2995192306",
+          "https://openalex.org/W2998678080",
+          "https://openalex.org/W3012175154",
+          "https://openalex.org/W3038472364",
+          "https://openalex.org/W3044763805",
+          "https://openalex.org/W3104887532",
+          "https://openalex.org/W3106889297",
+          "https://openalex.org/W3113318772",
+          "https://openalex.org/W3120740533",
+          "https://openalex.org/W3123294050",
+          "https://openalex.org/W3124026561",
+          "https://openalex.org/W3139205473",
+          "https://openalex.org/W4249991467",
+          "https://openalex.org/W4256183008",
+          "https://openalex.org/W4287685974",
+          "https://openalex.org/W4288276209",
+          "https://openalex.org/W4415906275"
+        ],
+        "related_works": [
+          "https://openalex.org/W4385827715",
+          "https://openalex.org/W4253865902",
+          "https://openalex.org/W2524624025",
+          "https://openalex.org/W2335107214",
+          "https://openalex.org/W4417045943",
+          "https://openalex.org/W7160496229",
+          "https://openalex.org/W2085281262",
+          "https://openalex.org/W1502338185",
+          "https://openalex.org/W1974133324",
+          "https://openalex.org/W4206802975"
+        ],
+        "abstract_inverted_index": {
+          "Cross-validation": [
+            0
+          ],
+          "is": [
+            1,
+            13,
+            45,
+            122,
+            146
+          ],
+          "a": [
+            2,
+            151
+          ],
+          "widely": [
+            3
+          ],
+          "used": [
+            4,
+            123
+          ],
+          "technique": [
+            5
+          ],
+          "to": [
+            6,
+            23,
+            37,
+            155,
+            168
+          ],
+          "estimate": [
+            7,
+            143,
+            156
+          ],
+          "prediction": [
+            8,
+            29,
+            63,
+            90,
+            105,
+            193
+          ],
+          "error,": [
+            9,
+            91
+          ],
+          "but": [
+            10
+          ],
+          "its": [
+            11
+          ],
+          "behavior": [
+            12
+          ],
+          "complex": [
+            14
+          ],
+          "and": [
+            15,
+            96,
+            127,
+            139,
+            161
+          ],
+          "not": [
+            16,
+            46,
+            201
+          ],
+          "fully": [
+            17
+          ],
+          "understood.": [
+            18
+          ],
+          "Ideally,": [
+            19
+          ],
+          "one": [
+            20,
+            199
+          ],
+          "would": [
+            21
+          ],
+          "like": [
+            22
+          ],
+          "think": [
+            24
+          ],
+          "that": [
+            25,
+            43,
+            81,
+            164,
+            187
+          ],
+          "cross-validation": [
+            26,
+            109,
+            153,
+            179
+          ],
+          "estimates": [
+            27,
+            60,
+            88
+          ],
+          "the": [
+            28,
+            32,
+            38,
+            47,
+            50,
+            61,
+            75,
+            100,
+            115,
+            133,
+            141,
+            203,
+            206,
+            212
+          ],
+          "error": [
+            30,
+            64,
+            106
+          ],
+          "for": [
+            31,
+            49,
+            85,
+            104,
+            124,
+            136,
+            192,
+            217
+          ],
+          "model": [
+            33,
+            52,
+            204
+          ],
+          "at": [
+            34
+          ],
+          "hand,": [
+            35
+          ],
+          "fit": [
+            36,
+            53,
+            67
+          ],
+          "training": [
+            39,
+            71,
+            126
+          ],
+          "data.": [
+            40
+          ],
+          "We": [
+            41,
+            78,
+            149
+          ],
+          "prove": [
+            42
+          ],
+          "this": [
+            44,
+            82,
+            157,
+            165,
+            210,
+            218
+          ],
+          "case": [
+            48
+          ],
+          "linear": [
+            51
+          ],
+          "by": [
+            54
+          ],
+          "ordinary": [
+            55
+          ],
+          "least": [
+            56
+          ],
+          "squares;": [
+            57
+          ],
+          "rather": [
+            58
+          ],
+          "it": [
+            59
+          ],
+          "average": [
+            62
+          ],
+          "of": [
+            65,
+            89,
+            144
+          ],
+          "models": [
+            66
+          ],
+          "on": [
+            68,
+            205
+          ],
+          "other": [
+            69
+          ],
+          "unseen": [
+            70
+          ],
+          "sets": [
+            72
+          ],
+          "drawn": [
+            73
+          ],
+          "from": [
+            74,
+            108
+          ],
+          "same": [
+            76
+          ],
+          "population.": [
+            77
+          ],
+          "further": [
+            79
+          ],
+          "show": [
+            80,
+            162
+          ],
+          "phenomenon": [
+            83
+          ],
+          "occurs": [
+            84
+          ],
+          "most": [
+            86
+          ],
+          "popular": [
+            87
+          ],
+          "including": [
+            92
+          ],
+          "data": [
+            93,
+            120,
+            197
+          ],
+          "splitting,": [
+            94,
+            198
+          ],
+          "bootstrapping,": [
+            95
+          ],
+          "Mallow\u2019s": [
+            97
+          ],
+          "Cp.": [
+            98
+          ],
+          "Next,": [
+            99
+          ],
+          "standard": [
+            101
+          ],
+          "confidence": [
+            102,
+            190,
+            213
+          ],
+          "intervals": [
+            103,
+            169,
+            180,
+            191
+          ],
+          "derived": [
+            107
+          ],
+          "may": [
+            110
+          ],
+          "have": [
+            111
+          ],
+          "coverage": [
+            112,
+            173
+          ],
+          "far": [
+            113
+          ],
+          "below": [
+            114
+          ],
+          "desired": [
+            116
+          ],
+          "level.": [
+            117
+          ],
+          "Because": [
+            118
+          ],
+          "each": [
+            119,
+            137
+          ],
+          "point": [
+            121
+          ],
+          "both": [
+            125
+          ],
+          "testing,": [
+            128
+          ],
+          "there": [
+            129
+          ],
+          "are": [
+            130,
+            220
+          ],
+          "correlations": [
+            131
+          ],
+          "among": [
+            132
+          ],
+          "measured": [
+            134
+          ],
+          "accuracies": [
+            135
+          ],
+          "fold,": [
+            138
+          ],
+          "so": [
+            140
+          ],
+          "usual": [
+            142
+          ],
+          "variance": [
+            145,
+            158
+          ],
+          "too": [
+            147
+          ],
+          "small.": [
+            148
+          ],
+          "introduce": [
+            150
+          ],
+          "nested": [
+            152
+          ],
+          "scheme": [
+            154
+          ],
+          "more": [
+            159
+          ],
+          "accurately,": [
+            160
+          ],
+          "empirically": [
+            163
+          ],
+          "modification": [
+            166
+          ],
+          "leads": [
+            167
+          ],
+          "with": [
+            170,
+            195
+          ],
+          "approximately": [
+            171
+          ],
+          "correct": [
+            172
+          ],
+          "in": [
+            174
+          ],
+          "many": [
+            175
+          ],
+          "examples": [
+            176
+          ],
+          "where": [
+            177
+          ],
+          "traditional": [
+            178
+          ],
+          "fail.": [
+            181
+          ],
+          "Lastly,": [
+            182
+          ],
+          "our": [
+            183
+          ],
+          "analysis": [
+            184
+          ],
+          "also": [
+            185
+          ],
+          "shows": [
+            186
+          ],
+          "when": [
+            188
+          ],
+          "producing": [
+            189
+          ],
+          "accuracy": [
+            194
+          ],
+          "simple": [
+            196
+          ],
+          "should": [
+            200
+          ],
+          "refit": [
+            202
+          ],
+          "combined": [
+            207
+          ],
+          "data,": [
+            208
+          ],
+          "since": [
+            209
+          ],
+          "invalidates": [
+            211
+          ],
+          "intervals.": [
+            214
+          ],
+          "Supplementary": [
+            215
+          ],
+          "materials": [
+            216
+          ],
+          "article": [
+            219
+          ],
+          "available": [
+            221
+          ],
+          "online.": [
+            222
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W3146796711",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 307
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 243
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 148
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 65
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 27
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 8
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2021-04-13T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2908475737",
+        "doi": "https://doi.org/10.1017/pan.2018.39",
+        "title": "How Cross-Validation Can Go Wrong and What to Do About It",
+        "display_name": "How Cross-Validation Can Go Wrong and What to Do About It",
+        "alternate_titles": [],
+        "relevance_score": 34.01297,
+        "publication_year": 2018,
+        "publication_date": "2018-12-31",
+        "ids": {
+          "openalex": "https://openalex.org/W2908475737",
+          "doi": "https://doi.org/10.1017/pan.2018.39",
+          "mag": "2908475737"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1017/pan.2018.39",
+          "doi": "https://doi.org/10.1017/pan.2018.39",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1017/pan.2018.39",
+          "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CA8C4B470E27C99892AB978CE0A3AE29/S1047198718000396a.pdf/div-class-title-how-cross-validation-can-go-wrong-and-what-to-do-about-it-div.pdf",
+          "source": {
+            "id": "https://openalex.org/S29331042",
+            "display_name": "Political Analysis",
+            "issn_l": "1047-1987",
+            "issn": [
+              "1047-1987",
+              "1476-4989"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "erih-plus",
+              "jufo-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311721",
+            "host_organization_name": "Cambridge University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311721",
+              "https://openalex.org/P4310311702"
+            ],
+            "host_organization_lineage_names": [
+              "Cambridge University Press",
+              "University of Cambridge"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Political Analysis",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2908475737"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "bronze",
+          "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CA8C4B470E27C99892AB978CE0A3AE29/S1047198718000396a.pdf/div-class-title-how-cross-validation-can-go-wrong-and-what-to-do-about-it-div.pdf",
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5063149874",
+              "display_name": "Marcel Neunhoeffer",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-9137-5785",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-9137-5785"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I177802217",
+                "display_name": "University of Mannheim",
+                "ror": "https://ror.org/031bsb921",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I177802217"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Marcel Neunhoeffer",
+            "raw_affiliation_strings": [
+              "Department of Political Science, Quantitative Methods in the Social Sciences, University of Mannheim, A\u00a05, 6, 68131 Mannheim, Germany. Email:"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-9137-5785",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Political Science, Quantitative Methods in the Social Sciences, University of Mannheim, A\u00a05, 6, 68131 Mannheim, Germany. Email:",
+                "institution_ids": [
+                  "https://openalex.org/I177802217"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5019385786",
+              "display_name": "Sebastian Sternberg",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-4225-6402",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4225-6402"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I177802217",
+                "display_name": "University of Mannheim",
+                "ror": "https://ror.org/031bsb921",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I177802217"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Sebastian Sternberg",
+            "raw_affiliation_strings": [
+              "Department of Political Science, Quantitative Methods in the Social Sciences, University of Mannheim, A\u00a05, 6, 68131 Mannheim, Germany. Email:"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Political Science, Quantitative Methods in the Social Sciences, University of Mannheim, A\u00a05, 6, 68131 Mannheim, Germany. Email:",
+                "institution_ids": [
+                  "https://openalex.org/I177802217"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5063149874"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I177802217"
+        ],
+        "apc_list": {
+          "value": 3550,
+          "currency": "USD",
+          "value_usd": 3550
+        },
+        "apc_paid": null,
+        "fwci": 2.6427,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 52,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.89739388,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 94,
+          "max": 99
+        },
+        "biblio": {
+          "volume": "27",
+          "issue": "1",
+          "first_page": "101",
+          "last_page": "106"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 0.5288000106811523,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.5288000106811523,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10108",
+            "display_name": "Electoral Systems and Political Participation",
+            "score": 0.3359000086784363,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3320",
+              "display_name": "Political Science and International Relations"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/33",
+              "display_name": "Social Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11674",
+            "display_name": "Sports Analytics and Performance",
+            "score": 0.04349999874830246,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2002",
+              "display_name": "Economics and Econometrics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/multiparty-elections",
+            "display_name": "multiparty elections",
+            "score": 0.8270000219345093
+          },
+          {
+            "id": "https://openalex.org/keywords/public-opinion-survey",
+            "display_name": "public opinion survey",
+            "score": 0.7149999737739563
+          },
+          {
+            "id": "https://openalex.org/keywords/election-forecasting",
+            "display_name": "election forecasting",
+            "score": 0.6079999804496765
+          },
+          {
+            "id": "https://openalex.org/keywords/uncertainty-calibration",
+            "display_name": "uncertainty calibration",
+            "score": 0.609000027179718
+          },
+          {
+            "id": "https://openalex.org/keywords/vote-share-prediction",
+            "display_name": "vote share prediction",
+            "score": 0.4869999885559082
+          },
+          {
+            "id": "https://openalex.org/keywords/coalition-formation",
+            "display_name": "coalition formation",
+            "score": 0.5239999890327454
+          },
+          {
+            "id": "https://openalex.org/keywords/2017-elections",
+            "display_name": "2017 elections",
+            "score": 0.8149999976158142
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C15744967",
+            "wikidata": "https://www.wikidata.org/wiki/Q9418",
+            "display_name": "Psychology",
+            "level": 0,
+            "score": 0.41591647267341614
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.3781518340110779
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.3216674327850342
+          }
+        ],
+        "mesh": [],
+        "locations_count": 3,
+        "locations": [
+          {
+            "id": "doi:10.1017/pan.2018.39",
+            "doi": "https://doi.org/10.1017/pan.2018.39",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1017/pan.2018.39",
+            "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CA8C4B470E27C99892AB978CE0A3AE29/S1047198718000396a.pdf/div-class-title-how-cross-validation-can-go-wrong-and-what-to-do-about-it-div.pdf",
+            "source": {
+              "id": "https://openalex.org/S29331042",
+              "display_name": "Political Analysis",
+              "issn_l": "1047-1987",
+              "issn": [
+                "1047-1987",
+                "1476-4989"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "erih-plus",
+                "jufo-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311721",
+              "host_organization_name": "Cambridge University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311721",
+                "https://openalex.org/P4310311702"
+              ],
+              "host_organization_lineage_names": [
+                "Cambridge University Press",
+                "University of Cambridge"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Political Analysis",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:RePEc:cup:polals:v:27:y:2019:i:01:p:101-106_00",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://www.cambridge.org/core/product/identifier/S1047198718000396/type/journal_article",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          },
+          {
+            "id": "pmh:oai:ub-madoc.bib.uni-mannheim.de:54860",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://madoc.bib.uni-mannheim.de/54860/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196315",
+              "display_name": "MADOC (University of Mannheim)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I177802217",
+              "host_organization_name": "University of Mannheim",
+              "host_organization_lineage": [
+                "https://openalex.org/I177802217"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Zeitschriftenartikel"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1017/pan.2018.39",
+          "doi": "https://doi.org/10.1017/pan.2018.39",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1017/pan.2018.39",
+          "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CA8C4B470E27C99892AB978CE0A3AE29/S1047198718000396a.pdf/div-class-title-how-cross-validation-can-go-wrong-and-what-to-do-about-it-div.pdf",
+          "source": {
+            "id": "https://openalex.org/S29331042",
+            "display_name": "Political Analysis",
+            "issn_l": "1047-1987",
+            "issn": [
+              "1047-1987",
+              "1476-4989"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "erih-plus",
+              "jufo-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311721",
+            "host_organization_name": "Cambridge University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311721",
+              "https://openalex.org/P4310311702"
+            ],
+            "host_organization_lineage_names": [
+              "Cambridge University Press",
+              "University of Cambridge"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Political Analysis",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320320879",
+            "display_name": "Deutsche Forschungsgemeinschaft",
+            "ror": "https://ror.org/018mejw64"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2908475737.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2908475737.grobid-xml"
+        },
+        "referenced_works_count": 43,
+        "referenced_works": [
+          "https://openalex.org/W1509883421",
+          "https://openalex.org/W1512685793",
+          "https://openalex.org/W1554944419",
+          "https://openalex.org/W1601519670",
+          "https://openalex.org/W1673240205",
+          "https://openalex.org/W1903153103",
+          "https://openalex.org/W1994856439",
+          "https://openalex.org/W2006617902",
+          "https://openalex.org/W2029941278",
+          "https://openalex.org/W2074616966",
+          "https://openalex.org/W2095655043",
+          "https://openalex.org/W2096291713",
+          "https://openalex.org/W2105224904",
+          "https://openalex.org/W2110084419",
+          "https://openalex.org/W2128433189",
+          "https://openalex.org/W2131830082",
+          "https://openalex.org/W2133255576",
+          "https://openalex.org/W2133561901",
+          "https://openalex.org/W2138030815",
+          "https://openalex.org/W2144960654",
+          "https://openalex.org/W2145773944",
+          "https://openalex.org/W2148752429",
+          "https://openalex.org/W2150065623",
+          "https://openalex.org/W2154776925",
+          "https://openalex.org/W2160446276",
+          "https://openalex.org/W2164535801",
+          "https://openalex.org/W2171033594",
+          "https://openalex.org/W2171060319",
+          "https://openalex.org/W2173605745",
+          "https://openalex.org/W2278972578",
+          "https://openalex.org/W2298794105",
+          "https://openalex.org/W2315367992",
+          "https://openalex.org/W2319803923",
+          "https://openalex.org/W2331253396",
+          "https://openalex.org/W2585642493",
+          "https://openalex.org/W2591090211",
+          "https://openalex.org/W2608342053",
+          "https://openalex.org/W2626934202",
+          "https://openalex.org/W3121705696",
+          "https://openalex.org/W3124700334",
+          "https://openalex.org/W3125379454",
+          "https://openalex.org/W4235051201",
+          "https://openalex.org/W4398910651"
+        ],
+        "related_works": [
+          "https://openalex.org/W2900325003",
+          "https://openalex.org/W2229990691",
+          "https://openalex.org/W4319871150",
+          "https://openalex.org/W2910506303",
+          "https://openalex.org/W7113572732",
+          "https://openalex.org/W2912744069",
+          "https://openalex.org/W3123249945",
+          "https://openalex.org/W4205754294",
+          "https://openalex.org/W2162797709",
+          "https://openalex.org/W2145067787"
+        ],
+        "abstract_inverted_index": {
+          "We": [
+            0,
+            68
+          ],
+          "offer": [
+            1
+          ],
+          "a": [
+            2,
+            53,
+            58
+          ],
+          "dynamic": [
+            3
+          ],
+          "Bayesian": [
+            4
+          ],
+          "forecasting": [
+            5,
+            23,
+            93
+          ],
+          "model": [
+            6,
+            26,
+            90,
+            114
+          ],
+          "for": [
+            7,
+            57,
+            63
+          ],
+          "multi-party": [
+            8,
+            31,
+            120
+          ],
+          "elections.": [
+            9
+          ],
+          "It": [
+            10
+          ],
+          "combines": [
+            11
+          ],
+          "data": [
+            12,
+            110
+          ],
+          "from": [
+            13,
+            21,
+            71
+          ],
+          "published": [
+            14
+          ],
+          "pre-election": [
+            15
+          ],
+          "public": [
+            16
+          ],
+          "opinion": [
+            17
+          ],
+          "polls": [
+            18
+          ],
+          "with": [
+            19
+          ],
+          "information": [
+            20
+          ],
+          "fundamentals-based": [
+            22,
+            92
+          ],
+          "models.": [
+            24
+          ],
+          "The": [
+            25
+          ],
+          "takes": [
+            27
+          ],
+          "care": [
+            28
+          ],
+          "of": [
+            29,
+            33,
+            43,
+            46,
+            52,
+            55,
+            76,
+            97,
+            102
+          ],
+          "the": [
+            30,
+            34,
+            41,
+            50,
+            61,
+            89,
+            100,
+            113
+          ],
+          "nature": [
+            32
+          ],
+          "setting": [
+            35
+          ],
+          "and": [
+            36,
+            83,
+            99,
+            107
+          ],
+          "allows": [
+            37
+          ],
+          "making": [
+            38
+          ],
+          "statements": [
+            39
+          ],
+          "about": [
+            40
+          ],
+          "probability": [
+            42,
+            51
+          ],
+          "other": [
+            44
+          ],
+          "quantities": [
+            45
+          ],
+          "interest,": [
+            47
+          ],
+          "such": [
+            48
+          ],
+          "as": [
+            49
+          ],
+          "plurality": [
+            54
+          ],
+          "votes": [
+            56
+          ],
+          "party": [
+            59
+          ],
+          "or": [
+            60
+          ],
+          "majority": [
+            62
+          ],
+          "certain": [
+            64
+          ],
+          "coalitions": [
+            65
+          ],
+          "in": [
+            66,
+            81,
+            95
+          ],
+          "parliament.": [
+            67
+          ],
+          "present": [
+            69
+          ],
+          "results": [
+            70
+          ],
+          "two": [
+            72
+          ],
+          "ex": [
+            73
+          ],
+          "ante": [
+            74
+          ],
+          "forecasts": [
+            75
+          ],
+          "elections": [
+            77
+          ],
+          "that": [
+            78,
+            88,
+            105
+          ],
+          "took": [
+            79
+          ],
+          "place": [
+            80
+          ],
+          "2017": [
+            82
+          ],
+          "are": [
+            84,
+            111
+          ],
+          "able": [
+            85
+          ],
+          "to": [
+            86,
+            118
+          ],
+          "show": [
+            87
+          ],
+          "outperforms": [
+            91
+          ],
+          "models": [
+            94
+          ],
+          "terms": [
+            96
+          ],
+          "accuracy": [
+            98
+          ],
+          "calibration": [
+            101
+          ],
+          "uncertainty.": [
+            103
+          ],
+          "Provided": [
+            104
+          ],
+          "historical": [
+            106
+          ],
+          "current": [
+            108
+          ],
+          "polling": [
+            109
+          ],
+          "available,": [
+            112
+          ],
+          "can": [
+            115
+          ],
+          "be": [
+            116
+          ],
+          "applied": [
+            117
+          ],
+          "any": [
+            119
+          ],
+          "setting.": [
+            121
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2908475737",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 3
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2019-01-11T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2785242877",
+        "doi": "https://doi.org/10.1093/qje/qjz023",
+        "title": "What do Workplace Wellness Programs do? Evidence from the Illinois Workplace Wellness Study*",
+        "display_name": "What do Workplace Wellness Programs do? Evidence from the Illinois Workplace Wellness Study*",
+        "alternate_titles": [],
+        "relevance_score": 32.26924,
+        "publication_year": 2019,
+        "publication_date": "2019-08-16",
+        "ids": {
+          "openalex": "https://openalex.org/W2785242877",
+          "doi": "https://doi.org/10.1093/qje/qjz023",
+          "mag": "2785242877",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/31564754",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/6756192"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1093/qje/qjz023",
+          "doi": "https://doi.org/10.1093/qje/qjz023",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1093/qje/qjz023",
+          "pdf_url": "https://academic.oup.com/qje/article-pdf/134/4/1747/32666232/qjz023.pdf",
+          "source": {
+            "id": "https://openalex.org/S203860005",
+            "display_name": "The Quarterly Journal of Economics",
+            "issn_l": "0033-5533",
+            "issn": [
+              "0033-5533",
+              "1531-4650"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "ft50",
+              "jufo-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The Quarterly Journal of Economics",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2785242877"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "bronze",
+          "oa_url": "https://academic.oup.com/qje/article-pdf/134/4/1747/32666232/qjz023.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5051476542",
+              "display_name": "Damon Jones",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-9941-7193",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-9941-7193"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1321305853",
+                "display_name": "National Bureau of Economic Research",
+                "ror": "https://ror.org/04grmx538",
+                "country_code": "US",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I1321305853"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I40347166",
+                "display_name": "University of Chicago",
+                "ror": "https://ror.org/024mw5h28",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I40347166"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Damon Jones",
+            "raw_affiliation_strings": [
+              "University of Chicago and NBER"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Chicago and NBER",
+                "institution_ids": [
+                  "https://openalex.org/I1321305853",
+                  "https://openalex.org/I40347166"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5035893290",
+              "display_name": "David Molitor",
+              "type": null,
+              "orcid": "https://orcid.org/0009-0006-5320-5597",
+              "observed_orcids": [
+                "https://orcid.org/0009-0006-5320-5597"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I157725225",
+                "display_name": "University of Illinois Urbana-Champaign",
+                "ror": "https://ror.org/047426m28",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "David Molitor",
+            "raw_affiliation_strings": [
+              "University of Illinois and NBER"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Illinois and NBER",
+                "institution_ids": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5103158615",
+              "display_name": "Julian Reif",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-4565-5823",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-4565-5823"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I157725225",
+                "display_name": "University of Illinois Urbana-Champaign",
+                "ror": "https://ror.org/047426m28",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Julian Reif",
+            "raw_affiliation_strings": [
+              "University of Illinois and NBER"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "University of Illinois and NBER",
+                "institution_ids": [
+                  "https://openalex.org/I157725225"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 3,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 7619,
+          "currency": "USD",
+          "value_usd": 7619
+        },
+        "apc_paid": null,
+        "fwci": 39.7037,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 522,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99924924,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 87,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "134",
+          "issue": "4",
+          "first_page": "1747",
+          "last_page": "1791"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11084",
+          "display_name": "Workplace Health and Well-being",
+          "score": 0.9829000234603882,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2739",
+            "display_name": "Public Health, Environmental and Occupational Health"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11084",
+            "display_name": "Workplace Health and Well-being",
+            "score": 0.9829000234603882,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2739",
+              "display_name": "Public Health, Environmental and Occupational Health"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10391",
+            "display_name": "Healthcare Policy and Management",
+            "score": 0.006899999920278788,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2002",
+              "display_name": "Economics and Econometrics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14212",
+            "display_name": "Health Promotion and Cardiovascular Prevention",
+            "score": 0.002199999988079071,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2739",
+              "display_name": "Public Health, Environmental and Occupational Health"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/workplace-health",
+            "display_name": "workplace health",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/employee-health",
+            "display_name": "employee health",
+            "score": 0.5080000162124634
+          },
+          {
+            "id": "https://openalex.org/keywords/health-care-costs",
+            "display_name": "health care costs",
+            "score": 0.7630000114440918
+          },
+          {
+            "id": "https://openalex.org/keywords/financial-incentives",
+            "display_name": "financial incentives",
+            "score": 0.6970000267028809
+          },
+          {
+            "id": "https://openalex.org/keywords/selection-bias",
+            "display_name": "selection bias",
+            "score": 0.5379999876022339
+          },
+          {
+            "id": "https://openalex.org/keywords/health-screening",
+            "display_name": "health screening",
+            "score": 0.847000002861023
+          },
+          {
+            "id": "https://openalex.org/keywords/health-behavior",
+            "display_name": "health behavior",
+            "score": 0.7059999704360962
+          },
+          {
+            "id": "https://openalex.org/keywords/labor-productivity",
+            "display_name": "labor productivity",
+            "score": 0.9020000100135803
+          },
+          {
+            "id": "https://openalex.org/keywords/absenteeism",
+            "display_name": "absenteeism",
+            "score": 0.9959999918937683
+          },
+          {
+            "id": "https://openalex.org/keywords/self-reported-health",
+            "display_name": "self-reported health",
+            "score": 0.8399999737739563
+          },
+          {
+            "id": "https://openalex.org/keywords/employer-sponsored-health-programs",
+            "display_name": "employer-sponsored health programs",
+            "score": 0.5870000123977661
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C15744967",
+            "wikidata": "https://www.wikidata.org/wiki/Q9418",
+            "display_name": "Psychology",
+            "level": 0,
+            "score": 0.5029081702232361
+          },
+          {
+            "id": "https://openalex.org/C74909509",
+            "wikidata": "https://www.wikidata.org/wiki/Q10387",
+            "display_name": "Gerontology",
+            "level": 1,
+            "score": 0.45001664757728577
+          },
+          {
+            "id": "https://openalex.org/C159110408",
+            "wikidata": "https://www.wikidata.org/wiki/Q121176",
+            "display_name": "Nursing",
+            "level": 1,
+            "score": 0.34659677743911743
+          },
+          {
+            "id": "https://openalex.org/C509550671",
+            "wikidata": "https://www.wikidata.org/wiki/Q126945",
+            "display_name": "Medical education",
+            "level": 1,
+            "score": 0.3405081033706665
+          },
+          {
+            "id": "https://openalex.org/C75630572",
+            "wikidata": "https://www.wikidata.org/wiki/Q538904",
+            "display_name": "Applied psychology",
+            "level": 1,
+            "score": 0.3353261947631836
+          },
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.28428274393081665
+          }
+        ],
+        "mesh": [],
+        "locations_count": 4,
+        "locations": [
+          {
+            "id": "doi:10.1093/qje/qjz023",
+            "doi": "https://doi.org/10.1093/qje/qjz023",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1093/qje/qjz023",
+            "pdf_url": "https://academic.oup.com/qje/article-pdf/134/4/1747/32666232/qjz023.pdf",
+            "source": {
+              "id": "https://openalex.org/S203860005",
+              "display_name": "The Quarterly Journal of Economics",
+              "issn_l": "0033-5533",
+              "issn": [
+                "0033-5533",
+                "1531-4650"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "ft50",
+                "jufo-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310311648",
+              "host_organization_name": "Oxford University Press",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310311648",
+                "https://openalex.org/P4310311647"
+              ],
+              "host_organization_lineage_names": [
+                "Oxford University Press",
+                "University of Oxford"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The Quarterly Journal of Economics",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:6756192",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6756192/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Q J Econ",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmid:31564754",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/31564754",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The quarterly journal of economics",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:RePEc:oup:qjecon:v:134:y:2019:i:4:p:1747-1791.",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://hdl.handle.net/10.1093/qje/qjz023",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1093/qje/qjz023",
+          "doi": "https://doi.org/10.1093/qje/qjz023",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1093/qje/qjz023",
+          "pdf_url": "https://academic.oup.com/qje/article-pdf/134/4/1747/32666232/qjz023.pdf",
+          "source": {
+            "id": "https://openalex.org/S203860005",
+            "display_name": "The Quarterly Journal of Economics",
+            "issn_l": "0033-5533",
+            "issn": [
+              "0033-5533",
+              "1531-4650"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "ft50",
+              "jufo-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The Quarterly Journal of Economics",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 0.98580002784729,
+            "id": "https://metadata.un.org/sdg/3",
+            "display_name": "Good health and well-being"
+          },
+          {
+            "score": 0.833299994468689,
+            "id": "https://metadata.un.org/sdg/8",
+            "display_name": "Decent work and economic growth"
+          }
+        ],
+        "study_designs": [
+          {
+            "id": "https://openalex.org/study-designs/randomized-controlled-trial",
+            "display_name": "Randomized Controlled Trial"
+          },
+          {
+            "id": "https://openalex.org/study-designs/clinical-trial",
+            "display_name": "Clinical Trial"
+          }
+        ],
+        "awards": [
+          {
+            "id": "https://openalex.org/G7096235133",
+            "display_name": "Illinois Wellness Study: A Field Experiment on Participation Incentives and Selection into Workplace Wellness Programs",
+            "funder_award_id": "1730546",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G850863548",
+            "display_name": "Worksite Wellness: A Field Experiment on Participation Incentives & Selection into Wellness Programs",
+            "funder_award_id": "R01AG050701",
+            "funder_id": "https://openalex.org/F4320337337",
+            "funder_display_name": "National Institute on Aging"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306076",
+            "display_name": "National Science Foundation",
+            "ror": "https://ror.org/021nxhr62"
+          },
+          {
+            "id": "https://openalex.org/F4320306139",
+            "display_name": "Robert Wood Johnson Foundation",
+            "ror": "https://ror.org/02ymmdj85"
+          },
+          {
+            "id": "https://openalex.org/F4320306534",
+            "display_name": "W.E. Upjohn Institute for Employment Research",
+            "ror": "https://ror.org/00kqye711"
+          },
+          {
+            "id": "https://openalex.org/F4320319321",
+            "display_name": "Institut f\u00fcr Arbeitsmarkt- und Berufsforschung",
+            "ror": "https://ror.org/02qcqwf93"
+          },
+          {
+            "id": "https://openalex.org/F4320332161",
+            "display_name": "National Institutes of Health",
+            "ror": "https://ror.org/01cwqze88"
+          },
+          {
+            "id": "https://openalex.org/F4320332222",
+            "display_name": "University of Illinois at Urbana-Champaign",
+            "ror": "https://ror.org/047426m28"
+          },
+          {
+            "id": "https://openalex.org/F4320337337",
+            "display_name": "National Institute on Aging",
+            "ror": "https://ror.org/049v75w11"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2785242877.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2785242877.grobid-xml"
+        },
+        "referenced_works_count": 50,
+        "referenced_works": [
+          "https://openalex.org/W192677281",
+          "https://openalex.org/W601686485",
+          "https://openalex.org/W1535337271",
+          "https://openalex.org/W1583303084",
+          "https://openalex.org/W1886275324",
+          "https://openalex.org/W1925236410",
+          "https://openalex.org/W1985791213",
+          "https://openalex.org/W2004103618",
+          "https://openalex.org/W2013276824",
+          "https://openalex.org/W2059235092",
+          "https://openalex.org/W2063425643",
+          "https://openalex.org/W2065962849",
+          "https://openalex.org/W2071138630",
+          "https://openalex.org/W2073232297",
+          "https://openalex.org/W2074814503",
+          "https://openalex.org/W2079028566",
+          "https://openalex.org/W2097915768",
+          "https://openalex.org/W2102039362",
+          "https://openalex.org/W2103010888",
+          "https://openalex.org/W2120846249",
+          "https://openalex.org/W2122649087",
+          "https://openalex.org/W2128621051",
+          "https://openalex.org/W2135818609",
+          "https://openalex.org/W2145200942",
+          "https://openalex.org/W2150118316",
+          "https://openalex.org/W2163512264",
+          "https://openalex.org/W2177023033",
+          "https://openalex.org/W2285865907",
+          "https://openalex.org/W2586379813",
+          "https://openalex.org/W2598238536",
+          "https://openalex.org/W2615300190",
+          "https://openalex.org/W2734685588",
+          "https://openalex.org/W2760925952",
+          "https://openalex.org/W2796349379",
+          "https://openalex.org/W2796856748",
+          "https://openalex.org/W2801869188",
+          "https://openalex.org/W2900171159",
+          "https://openalex.org/W2937702689",
+          "https://openalex.org/W3011760849",
+          "https://openalex.org/W3121485768",
+          "https://openalex.org/W3122161101",
+          "https://openalex.org/W3122276354",
+          "https://openalex.org/W3122294547",
+          "https://openalex.org/W3122542817",
+          "https://openalex.org/W3123575829",
+          "https://openalex.org/W4238596794",
+          "https://openalex.org/W4283391171",
+          "https://openalex.org/W4398827689",
+          "https://openalex.org/W6632077725",
+          "https://openalex.org/W6986938095"
+        ],
+        "related_works": [
+          "https://openalex.org/W2937702689",
+          "https://openalex.org/W3032055850",
+          "https://openalex.org/W2978550496",
+          "https://openalex.org/W2972182389",
+          "https://openalex.org/W4255662263",
+          "https://openalex.org/W7066230544",
+          "https://openalex.org/W1547264517",
+          "https://openalex.org/W3172289713",
+          "https://openalex.org/W2801869188",
+          "https://openalex.org/W2901019658"
+        ],
+        "abstract_inverted_index": {
+          "Workplace": [
+            0
+          ],
+          "wellness": [
+            1,
+            36
+          ],
+          "programs": [
+            2
+          ],
+          "cover": [
+            3
+          ],
+          "over": [
+            4
+          ],
+          "50": [
+            5
+          ],
+          "million": [
+            6
+          ],
+          "U.S.": [
+            7
+          ],
+          "workers": [
+            8
+          ],
+          "and": [
+            9,
+            18,
+            31,
+            42,
+            47,
+            77,
+            130
+          ],
+          "are": [
+            10
+          ],
+          "intended": [
+            11
+          ],
+          "to": [
+            12,
+            25,
+            68
+          ],
+          "reduce": [
+            13
+          ],
+          "medical": [
+            14,
+            75,
+            101,
+            128
+          ],
+          "spending,": [
+            15
+          ],
+          "increase": [
+            16
+          ],
+          "productivity,": [
+            17,
+            107
+          ],
+          "improve": [
+            19
+          ],
+          "well-being.": [
+            20
+          ],
+          "Yet": [
+            21
+          ],
+          "limited": [
+            22
+          ],
+          "evidence": [
+            23
+          ],
+          "exists": [
+            24
+          ],
+          "support": [
+            26
+          ],
+          "these": [
+            27
+          ],
+          "claims.": [
+            28
+          ],
+          "We": [
+            29,
+            58
+          ],
+          "designed": [
+            30
+          ],
+          "implemented": [
+            32
+          ],
+          "a": [
+            33,
+            39
+          ],
+          "comprehensive": [
+            34
+          ],
+          "workplace": [
+            35
+          ],
+          "program": [
+            37,
+            45,
+            71,
+            83
+          ],
+          "for": [
+            38,
+            54
+          ],
+          "large": [
+            40
+          ],
+          "employer": [
+            41
+          ],
+          "randomly": [
+            43
+          ],
+          "assigned": [
+            44
+          ],
+          "eligibility": [
+            46
+          ],
+          "financial": [
+            48
+          ],
+          "incentives": [
+            49
+          ],
+          "at": [
+            50
+          ],
+          "the": [
+            51,
+            65,
+            69
+          ],
+          "individual": [
+            52
+          ],
+          "level": [
+            53
+          ],
+          "nearly": [
+            55
+          ],
+          "5,000": [
+            56
+          ],
+          "employees.": [
+            57
+          ],
+          "find": [
+            59,
+            93
+          ],
+          "strong": [
+            60
+          ],
+          "patterns": [
+            61
+          ],
+          "of": [
+            62,
+            97,
+            124
+          ],
+          "selection:": [
+            63
+          ],
+          "during": [
+            64
+          ],
+          "year": [
+            66
+          ],
+          "prior": [
+            67
+          ],
+          "intervention,": [
+            70
+          ],
+          "participants": [
+            72
+          ],
+          "had": [
+            73
+          ],
+          "lower": [
+            74
+          ],
+          "expenditures": [
+            76
+          ],
+          "healthier": [
+            78
+          ],
+          "behaviors": [
+            79
+          ],
+          "than": [
+            80,
+            114
+          ],
+          "nonparticipants.": [
+            81
+          ],
+          "The": [
+            82
+          ],
+          "persistently": [
+            84
+          ],
+          "increased": [
+            85
+          ],
+          "health": [
+            86,
+            104,
+            110
+          ],
+          "screening": [
+            87
+          ],
+          "rates,": [
+            88
+          ],
+          "but": [
+            89
+          ],
+          "we": [
+            90
+          ],
+          "do": [
+            91
+          ],
+          "not": [
+            92
+          ],
+          "significant": [
+            94
+          ],
+          "causal": [
+            95
+          ],
+          "effects": [
+            96
+          ],
+          "treatment": [
+            98
+          ],
+          "on": [
+            99,
+            127
+          ],
+          "total": [
+            100
+          ],
+          "expenditures,": [
+            102
+          ],
+          "other": [
+            103
+          ],
+          "behaviors,": [
+            105
+          ],
+          "employee": [
+            106
+          ],
+          "or": [
+            108
+          ],
+          "self-reported": [
+            109
+          ],
+          "status": [
+            111
+          ],
+          "after": [
+            112
+          ],
+          "more": [
+            113
+          ],
+          "two": [
+            115
+          ],
+          "years.": [
+            116
+          ],
+          "Our": [
+            117
+          ],
+          "95%": [
+            118
+          ],
+          "confidence": [
+            119
+          ],
+          "intervals": [
+            120
+          ],
+          "rule": [
+            121
+          ],
+          "out": [
+            122
+          ],
+          "84%": [
+            123
+          ],
+          "previous": [
+            125
+          ],
+          "estimates": [
+            126
+          ],
+          "spending": [
+            129
+          ],
+          "absenteeism.": [
+            131
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2785242877",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 72
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 81
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 79
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 75
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 57
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 54
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 64
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 33
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2018-02-02T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

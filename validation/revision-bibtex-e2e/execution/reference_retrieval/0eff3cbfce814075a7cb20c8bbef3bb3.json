@@ -1,0 +1,35 @@
+{
+  "event": "reference_selected",
+  "provider": "openalex",
+  "query": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+  "score": 100,
+  "record": {
+    "title": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+    "authors": [
+      {
+        "name": "Stephen Bates"
+      },
+      {
+        "name": "Trevor J. Hastie"
+      },
+      {
+        "name": "Robert John Tibshirani"
+      }
+    ],
+    "venue": "Journal of the American Statistical Association",
+    "year": 2023,
+    "abstract": "Cross-validation is a widely used technique to estimate prediction error, but its behavior is complex and not fully understood. Ideally, one would like to think that cross-validation estimates the prediction error for the model at hand, fit to the training data. We prove that this is not the case for the linear model fit by ordinary least squares; rather it estimates the average prediction error of models fit on other unseen training sets drawn from the same population. We further show that this phenomenon occurs for most popular estimates of prediction error, including data splitting, bootstrapping, and Mallow\u2019s Cp. Next, the standard confidence intervals for prediction error derived from cross-validation may have coverage far below the desired level. Because each data point is used for both training and testing, there are correlations among the measured accuracies for each fold, and so the usual estimate of variance is too small. We introduce a nested cross-validation scheme to estimate this variance more accurately, and show empirically that this modification leads to intervals with approximately correct coverage in many examples where traditional cross-validation intervals fail. Lastly, our analysis also shows that when producing confidence intervals for prediction accuracy with simple data splitting, one should not refit the model on the combined data, since this invalidates the confidence intervals. Supplementary materials for this article are available online.",
+    "citationCount": 798,
+    "journal": {
+      "name": "Journal of the American Statistical Association",
+      "volume": "119",
+      "pages": "1434-1445"
+    },
+    "publicationDate": "2023-05-15",
+    "externalIds": {
+      "DOI": "https://doi.org/10.1080/01621459.2023.2197686",
+      "OpenAlex": "https://openalex.org/W3146796711"
+    },
+    "url": "https://doi.org/10.1080/01621459.2023.2197686"
+  }
+}

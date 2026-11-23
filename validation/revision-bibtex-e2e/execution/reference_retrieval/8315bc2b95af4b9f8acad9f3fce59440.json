@@ -1,0 +1,2841 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 113035,
+      "db_response_time_ms": 176,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Cautionary Note about R^2) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Cautionary Note about R^2) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Cautionary Note about R^2",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Cautionary Note about R%5E2&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2057327562",
+        "doi": "https://doi.org/10.1080/00031305.1985.10479448",
+        "title": "Cautionary Note about R 2",
+        "display_name": "Cautionary Note about R 2",
+        "alternate_titles": [],
+        "relevance_score": 346.52573,
+        "publication_year": 1985,
+        "publication_date": "1985-11-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2057327562",
+          "doi": "https://doi.org/10.1080/00031305.1985.10479448",
+          "mag": "2057327562"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/00031305.1985.10479448",
+          "doi": "https://doi.org/10.1080/00031305.1985.10479448",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/00031305.1985.10479448",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4179095",
+            "display_name": "The American Statistician",
+            "issn_l": "0003-1305",
+            "issn": [
+              "0003-1305",
+              "1537-2731"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-b",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-1",
+              "ki-jl-1",
+              "norway-1",
+              "poland-100",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320547",
+            "host_organization_name": "Taylor & Francis",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The American Statistician",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2057327562"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5033476947",
+              "display_name": "Tarald O. Kv\u00e5lseth",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-6399-735X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-6399-735X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I130238516",
+                "display_name": "University of Minnesota",
+                "ror": "https://ror.org/017zqws13",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I130238516"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Tarald O. Kv\u00e5lseth",
+            "raw_affiliation_strings": [
+              "Department of Mechanical Engineering, University of Minnesota, Minneapolis, MN, 55455, USA ; Industrial Engineering Division, University of Minnesota, Minneapolis, MN, 55455, USA",
+              "Department of Mechanical Engineering , University of Minnesota , Minneapolis , MN , 55455 , USA",
+              "Industrial Engineering Division , University of Minnesota , Minneapolis , MN , 55455 , USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Mechanical Engineering, University of Minnesota, Minneapolis, MN, 55455, USA ; Industrial Engineering Division, University of Minnesota, Minneapolis, MN, 55455, USA",
+                "institution_ids": [
+                  "https://openalex.org/I130238516"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Mechanical Engineering , University of Minnesota , Minneapolis , MN , 55455 , USA",
+                "institution_ids": [
+                  "https://openalex.org/I130238516"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Industrial Engineering Division , University of Minnesota , Minneapolis , MN , 55455 , USA",
+                "institution_ids": [
+                  "https://openalex.org/I130238516"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5033476947"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I130238516"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 7.5542,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 1573,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.97802994,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "39",
+          "issue": "4",
+          "first_page": "279",
+          "last_page": "285"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11871",
+          "display_name": "Advanced Statistical Methods and Models",
+          "score": 0.986299991607666,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.986299991607666,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.009700000286102295,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13487",
+            "display_name": "Statistical and numerical algorithms",
+            "score": 0.0007999999797903001,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2604",
+              "display_name": "Applied Mathematics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/coefficient-of-determination",
+            "display_name": "R-squared",
+            "score": 0.9359999895095825
+          },
+          {
+            "id": "https://openalex.org/keywords/goodness-of-fit",
+            "display_name": "goodness of fit",
+            "score": 0.984000027179718
+          },
+          {
+            "id": "https://openalex.org/keywords/regression-models",
+            "display_name": "regression models",
+            "score": 0.8199999928474426
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C132480984",
+            "wikidata": "https://www.wikidata.org/wiki/Q2034239",
+            "display_name": "Goodness of fit",
+            "level": 2,
+            "score": 0.6785285472869873
+          },
+          {
+            "id": "https://openalex.org/C89128539",
+            "wikidata": "https://www.wikidata.org/wiki/Q1949963",
+            "display_name": "Statistic",
+            "level": 2,
+            "score": 0.628608226776123
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.5669260621070862
+          },
+          {
+            "id": "https://openalex.org/C61797465",
+            "wikidata": "https://www.wikidata.org/wiki/Q1188986",
+            "display_name": "Term (time)",
+            "level": 2,
+            "score": 0.5396831631660461
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.5187668800354004
+          },
+          {
+            "id": "https://openalex.org/C2780009758",
+            "wikidata": "https://www.wikidata.org/wiki/Q6804172",
+            "display_name": "Measure (data warehouse)",
+            "level": 2,
+            "score": 0.5124371647834778
+          },
+          {
+            "id": "https://openalex.org/C48921125",
+            "wikidata": "https://www.wikidata.org/wiki/Q10861030",
+            "display_name": "Linear regression",
+            "level": 2,
+            "score": 0.4863496422767639
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.41089779138565063
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.2183701992034912
+          },
+          {
+            "id": "https://openalex.org/C121332964",
+            "wikidata": "https://www.wikidata.org/wiki/Q413",
+            "display_name": "Physics",
+            "level": 0,
+            "score": 0.11465707421302795
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.08904552459716797
+          },
+          {
+            "id": "https://openalex.org/C62520636",
+            "wikidata": "https://www.wikidata.org/wiki/Q944",
+            "display_name": "Quantum mechanics",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "doi:10.1080/00031305.1985.10479448",
+            "doi": "https://doi.org/10.1080/00031305.1985.10479448",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/00031305.1985.10479448",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4179095",
+              "display_name": "The American Statistician",
+              "issn_l": "0003-1305",
+              "issn": [
+                "0003-1305",
+                "1537-2731"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-b",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-1",
+                "ki-jl-1",
+                "norway-1",
+                "poland-100",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The American Statistician",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.2307/2683704",
+            "doi": "https://doi.org/10.2307/2683704",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/2683704",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4179095",
+              "display_name": "The American Statistician",
+              "issn_l": "0003-1305",
+              "issn": [
+                "0003-1305",
+                "1537-2731"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-b",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-1",
+                "ki-jl-1",
+                "norway-1",
+                "poland-100",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The American Statistician",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 19,
+        "referenced_works": [
+          "https://openalex.org/W172929394",
+          "https://openalex.org/W1968226729",
+          "https://openalex.org/W1999413284",
+          "https://openalex.org/W2008291460",
+          "https://openalex.org/W2022480405",
+          "https://openalex.org/W2025169175",
+          "https://openalex.org/W2034562813",
+          "https://openalex.org/W2080932341",
+          "https://openalex.org/W2161826494",
+          "https://openalex.org/W2489822048",
+          "https://openalex.org/W2791010518",
+          "https://openalex.org/W2797532987",
+          "https://openalex.org/W2801570556",
+          "https://openalex.org/W2895270050",
+          "https://openalex.org/W3015789953",
+          "https://openalex.org/W4230452299",
+          "https://openalex.org/W4235249285",
+          "https://openalex.org/W4300945981",
+          "https://openalex.org/W4301511718"
+        ],
+        "related_works": [
+          "https://openalex.org/W2790904653",
+          "https://openalex.org/W2054999048",
+          "https://openalex.org/W2074072839",
+          "https://openalex.org/W7215287290",
+          "https://openalex.org/W2182132050",
+          "https://openalex.org/W63065332",
+          "https://openalex.org/W1479948543",
+          "https://openalex.org/W2004612113",
+          "https://openalex.org/W2024666724",
+          "https://openalex.org/W2094834882"
+        ],
+        "abstract_inverted_index": {
+          "The": [
+            0,
+            26
+          ],
+          "coefficient": [
+            1
+          ],
+          "of": [
+            2,
+            14,
+            16,
+            29,
+            71
+          ],
+          "determination": [
+            3
+          ],
+          "(R": [
+            4
+          ],
+          "2)": [
+            5
+          ],
+          "is": [
+            6,
+            22,
+            32,
+            78
+          ],
+          "perhaps": [
+            7
+          ],
+          "the": [
+            8,
+            30,
+            42,
+            62
+          ],
+          "single": [
+            9
+          ],
+          "most": [
+            10
+          ],
+          "extensively": [
+            11
+          ],
+          "used": [
+            12
+          ],
+          "measure": [
+            13
+          ],
+          "goodness": [
+            15
+          ],
+          "fit": [
+            17
+          ],
+          "for": [
+            18,
+            35
+          ],
+          "regression": [
+            19
+          ],
+          "models.": [
+            20
+          ],
+          "It": [
+            21
+          ],
+          "also": [
+            23,
+            79
+          ],
+          "widely": [
+            24
+          ],
+          "misused.": [
+            25
+          ],
+          "primary": [
+            27
+          ],
+          "source": [
+            28
+          ],
+          "problem": [
+            31
+          ],
+          "that": [
+            33
+          ],
+          "except": [
+            34
+          ],
+          "linear": [
+            36
+          ],
+          "models": [
+            37
+          ],
+          "with": [
+            38
+          ],
+          "an": [
+            39
+          ],
+          "intercept": [
+            40
+          ],
+          "term,": [
+            41
+          ],
+          "several": [
+            43
+          ],
+          "alternative": [
+            44
+          ],
+          "R": [
+            45,
+            63
+          ],
+          "2": [
+            46
+          ],
+          "statistics": [
+            47
+          ],
+          "are": [
+            48,
+            67
+          ],
+          "not": [
+            49
+          ],
+          "generally": [
+            50
+          ],
+          "equivalent.": [
+            51
+          ],
+          "This": [
+            52
+          ],
+          "article": [
+            53
+          ],
+          "discusses": [
+            54
+          ],
+          "various": [
+            55
+          ],
+          "considerations": [
+            56
+          ],
+          "and": [
+            57
+          ],
+          "potential": [
+            58
+          ],
+          "pitfalls": [
+            59
+          ],
+          "in": [
+            60
+          ],
+          "using": [
+            61
+          ],
+          "2's.": [
+            64
+          ],
+          "Specific": [
+            65
+          ],
+          "points": [
+            66
+          ],
+          "exemplified": [
+            68
+          ],
+          "by": [
+            69
+          ],
+          "means": [
+            70
+          ],
+          "empirical": [
+            72
+          ],
+          "data.": [
+            73
+          ],
+          "A": [
+            74
+          ],
+          "new": [
+            75
+          ],
+          "resistant": [
+            76
+          ],
+          "statistic": [
+            77
+          ],
+          "introduced.": [
+            80
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2057327562",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 90
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 73
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 81
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 98
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 83
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 96
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 76
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 86
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 56
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 48
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 44
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 49
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 42
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 45
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 32
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2004612113",
+        "doi": "https://doi.org/10.1080/00031305.1988.10475573",
+        "title": "Another Cautionary Note about R 2 : Its Use in Weighted Least-Squares Regression Analysis",
+        "display_name": "Another Cautionary Note about R 2 : Its Use in Weighted Least-Squares Regression Analysis",
+        "alternate_titles": [],
+        "relevance_score": 219.27818,
+        "publication_year": 1988,
+        "publication_date": "1988-08-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2004612113",
+          "doi": "https://doi.org/10.1080/00031305.1988.10475573",
+          "mag": "2004612113"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1080/00031305.1988.10475573",
+          "doi": "https://doi.org/10.1080/00031305.1988.10475573",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1080/00031305.1988.10475573",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4179095",
+            "display_name": "The American Statistician",
+            "issn_l": "0003-1305",
+            "issn": [
+              "0003-1305",
+              "1537-2731"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-b",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-1",
+              "ki-jl-1",
+              "norway-1",
+              "poland-100",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320547",
+            "host_organization_name": "Taylor & Francis",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320547",
+              "https://openalex.org/P4310320449"
+            ],
+            "host_organization_lineage_names": [
+              "Taylor & Francis",
+              "Informa"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The American Statistician",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2004612113"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5005515303",
+              "display_name": "John B. Willett",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-7183-350X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-7183-350X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I136199984",
+                "display_name": "Harvard University",
+                "ror": "https://ror.org/03vek6s52",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "John B. Willett",
+            "raw_affiliation_strings": [
+              "Graduate School of Education, Harvard University, USA",
+              "Graduate School of Education, Harvard University , Cambridge , Massachusetts , 02138 , USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Graduate School of Education, Harvard University, USA",
+                "institution_ids": [
+                  "https://openalex.org/I136199984"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Graduate School of Education, Harvard University , Cambridge , Massachusetts , 02138 , USA",
+                "institution_ids": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5089745946",
+              "display_name": "J. David Singer",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-5828-4961",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-5828-4961"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I136199984",
+                "display_name": "Harvard University",
+                "ror": "https://ror.org/03vek6s52",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Judith D. Singer",
+            "raw_affiliation_strings": [
+              "Graduate School of Education, Harvard University, USA",
+              "Graduate School of Education, Harvard University , Cambridge , Massachusetts , 02138 , USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Graduate School of Education, Harvard University, USA",
+                "institution_ids": [
+                  "https://openalex.org/I136199984"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Graduate School of Education, Harvard University , Cambridge , Massachusetts , 02138 , USA",
+                "institution_ids": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I136199984"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 3.8713,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 190,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.93995332,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 97,
+          "max": 99
+        },
+        "biblio": {
+          "volume": "42",
+          "issue": "3",
+          "first_page": "236",
+          "last_page": "238"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11871",
+          "display_name": "Advanced Statistical Methods and Models",
+          "score": 0.9833999872207642,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.9833999872207642,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13487",
+            "display_name": "Statistical and numerical algorithms",
+            "score": 0.010300000198185444,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2604",
+              "display_name": "Applied Mathematics"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.004000000189989805,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/coefficient-of-determination",
+            "display_name": "R-squared",
+            "score": 0.9240000247955322
+          },
+          {
+            "id": "https://openalex.org/keywords/weighted-least-squares",
+            "display_name": "weighted least squares",
+            "score": 0.8939999938011169
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C89128539",
+            "wikidata": "https://www.wikidata.org/wiki/Q1949963",
+            "display_name": "Statistic",
+            "level": 2,
+            "score": 0.6998195052146912
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.6792518496513367
+          },
+          {
+            "id": "https://openalex.org/C99656134",
+            "wikidata": "https://www.wikidata.org/wiki/Q2912993",
+            "display_name": "Ordinary least squares",
+            "level": 2,
+            "score": 0.6780401468276978
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.5963628888130188
+          },
+          {
+            "id": "https://openalex.org/C185429906",
+            "wikidata": "https://www.wikidata.org/wiki/Q1130160",
+            "display_name": "Estimator",
+            "level": 2,
+            "score": 0.5782248973846436
+          },
+          {
+            "id": "https://openalex.org/C83546350",
+            "wikidata": "https://www.wikidata.org/wiki/Q1139051",
+            "display_name": "Regression",
+            "level": 2,
+            "score": 0.5507053136825562
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.5156739950180054
+          },
+          {
+            "id": "https://openalex.org/C152877465",
+            "wikidata": "https://www.wikidata.org/wiki/Q208042",
+            "display_name": "Regression analysis",
+            "level": 2,
+            "score": 0.5022616386413574
+          },
+          {
+            "id": "https://openalex.org/C527412718",
+            "wikidata": "https://www.wikidata.org/wiki/Q855395",
+            "display_name": "Interpretation (philosophy)",
+            "level": 2,
+            "score": 0.46889418363571167
+          },
+          {
+            "id": "https://openalex.org/C196083921",
+            "wikidata": "https://www.wikidata.org/wiki/Q7915758",
+            "display_name": "Variance (accounting)",
+            "level": 2,
+            "score": 0.4507923722267151
+          },
+          {
+            "id": "https://openalex.org/C162511642",
+            "wikidata": "https://www.wikidata.org/wiki/Q7120293",
+            "display_name": "PRESS statistic",
+            "level": 5,
+            "score": 0.4470601975917816
+          },
+          {
+            "id": "https://openalex.org/C9936470",
+            "wikidata": "https://www.wikidata.org/wiki/Q6510405",
+            "display_name": "Least-squares function approximation",
+            "level": 3,
+            "score": 0.43855130672454834
+          },
+          {
+            "id": "https://openalex.org/C110460608",
+            "wikidata": "https://www.wikidata.org/wiki/Q1386253",
+            "display_name": "F-test",
+            "level": 3,
+            "score": 0.21677157282829285
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.17408916354179382
+          },
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.11022570729255676
+          },
+          {
+            "id": "https://openalex.org/C141286372",
+            "wikidata": "https://www.wikidata.org/wiki/Q4753046",
+            "display_name": "Ancillary statistic",
+            "level": 4,
+            "score": 0.08537238836288452
+          },
+          {
+            "id": "https://openalex.org/C121955636",
+            "wikidata": "https://www.wikidata.org/wiki/Q4116214",
+            "display_name": "Accounting",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C199360897",
+            "wikidata": "https://www.wikidata.org/wiki/Q9143",
+            "display_name": "Programming language",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "doi:10.1080/00031305.1988.10475573",
+            "doi": "https://doi.org/10.1080/00031305.1988.10475573",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1080/00031305.1988.10475573",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4179095",
+              "display_name": "The American Statistician",
+              "issn_l": "0003-1305",
+              "issn": [
+                "0003-1305",
+                "1537-2731"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-b",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-1",
+                "ki-jl-1",
+                "norway-1",
+                "poland-100",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The American Statistician",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.2307/2685031",
+            "doi": "https://doi.org/10.2307/2685031",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/2685031",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4179095",
+              "display_name": "The American Statistician",
+              "issn_l": "0003-1305",
+              "issn": [
+                "0003-1305",
+                "1537-2731"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-b",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-1",
+                "ki-jl-1",
+                "norway-1",
+                "poland-100",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320547",
+              "host_organization_name": "Taylor & Francis",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320547",
+                "https://openalex.org/P4310320449"
+              ],
+              "host_organization_lineage_names": [
+                "Taylor & Francis",
+                "Informa"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "The American Statistician",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 11,
+        "referenced_works": [
+          "https://openalex.org/W25587163",
+          "https://openalex.org/W209215616",
+          "https://openalex.org/W2034562813",
+          "https://openalex.org/W2057327562",
+          "https://openalex.org/W2402646411",
+          "https://openalex.org/W2471907836",
+          "https://openalex.org/W2592974517",
+          "https://openalex.org/W2799466708",
+          "https://openalex.org/W2800289289",
+          "https://openalex.org/W4298359570",
+          "https://openalex.org/W4300945981"
+        ],
+        "related_works": [
+          "https://openalex.org/W1966793308",
+          "https://openalex.org/W2182132050",
+          "https://openalex.org/W2057327562",
+          "https://openalex.org/W4414745404",
+          "https://openalex.org/W2790904653",
+          "https://openalex.org/W2166740134",
+          "https://openalex.org/W1588885218",
+          "https://openalex.org/W2054999048",
+          "https://openalex.org/W2506375084",
+          "https://openalex.org/W6987290969"
+        ],
+        "abstract_inverted_index": {
+          "A": [
+            0
+          ],
+          "recent": [
+            1
+          ],
+          "article": [
+            2,
+            28,
+            45
+          ],
+          "in": [
+            3,
+            32,
+            38,
+            52,
+            98
+          ],
+          "this": [
+            4,
+            47
+          ],
+          "journal": [
+            5
+          ],
+          "presented": [
+            6
+          ],
+          "a": [
+            7,
+            103
+          ],
+          "variety": [
+            8
+          ],
+          "of": [
+            9,
+            14,
+            91,
+            94,
+            105
+          ],
+          "expressions": [
+            10,
+            22
+          ],
+          "for": [
+            11,
+            97
+          ],
+          "the": [
+            12,
+            34,
+            50,
+            70,
+            80,
+            92,
+            99,
+            106
+          ],
+          "coefficient": [
+            13
+          ],
+          "determination": [
+            15
+          ],
+          "(R": [
+            16
+          ],
+          "2)": [
+            17
+          ],
+          "and": [
+            18,
+            62,
+            108
+          ],
+          "demonstrated": [
+            19
+          ],
+          "that": [
+            20,
+            68,
+            76
+          ],
+          "these": [
+            21
+          ],
+          "were": [
+            23
+          ],
+          "generally": [
+            24
+          ],
+          "not": [
+            25
+          ],
+          "equivalent.": [
+            26
+          ],
+          "The": [
+            27,
+            43
+          ],
+          "discussed": [
+            29
+          ],
+          "potential": [
+            30
+          ],
+          "pitfalls": [
+            31
+          ],
+          "interpreting": [
+            33
+          ],
+          "R": [
+            35,
+            81
+          ],
+          "2": [
+            36,
+            82
+          ],
+          "statistic": [
+            37,
+            83
+          ],
+          "ordinary": [
+            39
+          ],
+          "least-squares": [
+            40
+          ],
+          "regression": [
+            41,
+            54
+          ],
+          "analysis.": [
+            42
+          ],
+          "current": [
+            44
+          ],
+          "extends": [
+            46
+          ],
+          "discussion": [
+            48
+          ],
+          "to": [
+            49,
+            86
+          ],
+          "case": [
+            51
+          ],
+          "which": [
+            53
+          ],
+          "models": [
+            55
+          ],
+          "are": [
+            56
+          ],
+          "fit": [
+            57
+          ],
+          "by": [
+            58,
+            112
+          ],
+          "weighted": [
+            59
+          ],
+          "least": [
+            60
+          ],
+          "squares": [
+            61
+          ],
+          "points": [
+            63
+          ],
+          "out": [
+            64
+          ],
+          "an": [
+            65,
+            87
+          ],
+          "additional": [
+            66
+          ],
+          "pitfall": [
+            67
+          ],
+          "awaits": [
+            69
+          ],
+          "unwary": [
+            71
+          ],
+          "data": [
+            72
+          ],
+          "analyst.": [
+            73
+          ],
+          "We": [
+            74,
+            101
+          ],
+          "show": [
+            75
+          ],
+          "unthinking": [
+            77
+          ],
+          "reliance": [
+            78
+          ],
+          "on": [
+            79
+          ],
+          "can": [
+            84
+          ],
+          "lead": [
+            85
+          ],
+          "overly": [
+            88
+          ],
+          "optimistic": [
+            89
+          ],
+          "interpretation": [
+            90
+          ],
+          "proportion": [
+            93
+          ],
+          "variance": [
+            95
+          ],
+          "accounted": [
+            96
+          ],
+          "regression.": [
+            100
+          ],
+          "propose": [
+            102
+          ],
+          "modification": [
+            104
+          ],
+          "estimator": [
+            107
+          ],
+          "demonstrate": [
+            109
+          ],
+          "its": [
+            110
+          ],
+          "utility": [
+            111
+          ],
+          "example.": [
+            113
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2004612113",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 17
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 15
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 6
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2012580522",
+        "doi": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+        "title": "A Cautionary Note on the Interpretation of EOFs",
+        "display_name": "A Cautionary Note on the Interpretation of EOFs",
+        "alternate_titles": [],
+        "relevance_score": 48.593506,
+        "publication_year": 2002,
+        "publication_date": "2002-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2012580522",
+          "doi": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "mag": "2012580522"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "doi": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "pdf_url": "https://journals.ametsoc.org/downloadpdf/journals/clim/15/2/1520-0442_2002_015_0216_acnoti_2.0.co_2.pdf",
+          "source": {
+            "id": "https://openalex.org/S80591372",
+            "display_name": "Journal of Climate",
+            "issn_l": "0894-8755",
+            "issn": [
+              "0894-8755",
+              "1520-0442"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-b",
+              "jufo-2",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320260",
+            "host_organization_name": "American Meteorological Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320260"
+            ],
+            "host_organization_lineage_names": [
+              "American Meteorological Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Climate",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2012580522"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "bronze",
+          "oa_url": "https://journals.ametsoc.org/downloadpdf/journals/clim/15/2/1520-0442_2002_015_0216_acnoti_2.0.co_2.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5068065835",
+              "display_name": "Dietmar Dommenget",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-5129-7719",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-5129-7719"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I149899117",
+                "display_name": "Max Planck Society",
+                "ror": "https://ror.org/01hhn8329",
+                "country_code": "DE",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I149899117"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I150209017",
+                "display_name": "Scripps Institution of Oceanography",
+                "ror": "https://ror.org/04v7hvq31",
+                "country_code": "US",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I150209017",
+                  "https://openalex.org/I36258959"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210163131",
+                "display_name": "Max Planck Institute for Meteorology",
+                "ror": "https://ror.org/05esem239",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I149899117",
+                  "https://openalex.org/I4210163131"
+                ]
+              }
+            ],
+            "countries": [
+              "DE",
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Dietmar Dommenget",
+            "raw_affiliation_strings": [
+              "Physical Oceanography Research Division , Scripps Institution of Oceanog- raphy , 9500 Gilman Dr. , La Jolla , CA 92093-0230",
+              "Physical Oceanography Research Division , Scripps Institution of Oceanography , La Jolla , California",
+              "The Ocean in the Earth System, MPI for Meteorology, Max Planck Society"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Physical Oceanography Research Division , Scripps Institution of Oceanog- raphy , 9500 Gilman Dr. , La Jolla , CA 92093-0230",
+                "institution_ids": [
+                  "https://openalex.org/I150209017"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Physical Oceanography Research Division , Scripps Institution of Oceanography , La Jolla , California",
+                "institution_ids": [
+                  "https://openalex.org/I150209017"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The Ocean in the Earth System, MPI for Meteorology, Max Planck Society",
+                "institution_ids": [
+                  "https://openalex.org/I149899117",
+                  "https://openalex.org/I4210163131"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5026612933",
+              "display_name": "Mojib Latif",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-1079-5604",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1079-5604"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I149899117",
+                "display_name": "Max Planck Society",
+                "ror": "https://ror.org/01hhn8329",
+                "country_code": "DE",
+                "type": "nonprofit",
+                "lineage": [
+                  "https://openalex.org/I149899117"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210163131",
+                "display_name": "Max Planck Institute for Meteorology",
+                "ror": "https://ror.org/05esem239",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I149899117",
+                  "https://openalex.org/I4210163131"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Mojib Latif",
+            "raw_affiliation_strings": [
+              "Max-Planck-Institut fu \u00a8r Meteorologie , Hamburg , Germany",
+              "The Ocean in the Earth System, MPI for Meteorology, Max Planck Society"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Max-Planck-Institut fu \u00a8r Meteorologie , Hamburg , Germany",
+                "institution_ids": [
+                  "https://openalex.org/I4210163131"
+                ]
+              },
+              {
+                "raw_affiliation_string": "The Ocean in the Earth System, MPI for Meteorology, Max Planck Society",
+                "institution_ids": [
+                  "https://openalex.org/I149899117",
+                  "https://openalex.org/I4210163131"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 2,
+        "institutions_distinct_count": 3,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5068065835"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I149899117",
+          "https://openalex.org/I150209017",
+          "https://openalex.org/I4210163131"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 9.3584,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 441,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.98742328,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "15",
+          "issue": "2",
+          "first_page": "216",
+          "last_page": "225"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10029",
+          "display_name": "Climate variability and models",
+          "score": 0.9961000084877014,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10029",
+            "display_name": "Climate variability and models",
+            "score": 0.9961000084877014,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2306",
+              "display_name": "Global and Planetary Change"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13141",
+            "display_name": "Statistical Methods and Applications",
+            "score": 0.0019000000320374966,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10466",
+            "display_name": "Meteorological Phenomena and Simulations",
+            "score": 0.00039999998989515007,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1902",
+              "display_name": "Atmospheric Science"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/19",
+              "display_name": "Earth and Planetary Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/empirical-orthogonal-function-analysis",
+            "display_name": "empirical orthogonal functions",
+            "score": 0.9070000052452087
+          },
+          {
+            "id": "https://openalex.org/keywords/climate-variability",
+            "display_name": "climate variability",
+            "score": 0.7049999833106995
+          },
+          {
+            "id": "https://openalex.org/keywords/boreal-winter",
+            "display_name": "boreal winter",
+            "score": 0.9330000281333923
+          },
+          {
+            "id": "https://openalex.org/keywords/spurious-modes",
+            "display_name": "spurious modes",
+            "score": 0.4699999988079071
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C13724139",
+            "wikidata": "https://www.wikidata.org/wiki/Q3042818",
+            "display_name": "Empirical orthogonal functions",
+            "level": 2,
+            "score": 0.9362896680831909
+          },
+          {
+            "id": "https://openalex.org/C49204034",
+            "wikidata": "https://www.wikidata.org/wiki/Q52139",
+            "display_name": "Climatology",
+            "level": 1,
+            "score": 0.8132216930389404
+          },
+          {
+            "id": "https://openalex.org/C2778835443",
+            "wikidata": "https://www.wikidata.org/wiki/Q39061",
+            "display_name": "Northern Hemisphere",
+            "level": 2,
+            "score": 0.7555243968963623
+          },
+          {
+            "id": "https://openalex.org/C168754636",
+            "wikidata": "https://www.wikidata.org/wiki/Q620920",
+            "display_name": "Climate model",
+            "level": 3,
+            "score": 0.5227206349372864
+          },
+          {
+            "id": "https://openalex.org/C2779547961",
+            "wikidata": "https://www.wikidata.org/wiki/Q7845752",
+            "display_name": "Tropical Atlantic",
+            "level": 3,
+            "score": 0.4968874752521515
+          },
+          {
+            "id": "https://openalex.org/C2777252438",
+            "wikidata": "https://www.wikidata.org/wiki/Q41228",
+            "display_name": "Southern Hemisphere",
+            "level": 2,
+            "score": 0.4442330002784729
+          },
+          {
+            "id": "https://openalex.org/C527412718",
+            "wikidata": "https://www.wikidata.org/wiki/Q855395",
+            "display_name": "Interpretation (philosophy)",
+            "level": 2,
+            "score": 0.43624767661094666
+          },
+          {
+            "id": "https://openalex.org/C127313418",
+            "wikidata": "https://www.wikidata.org/wiki/Q1069",
+            "display_name": "Geology",
+            "level": 0,
+            "score": 0.39697664976119995
+          },
+          {
+            "id": "https://openalex.org/C132651083",
+            "wikidata": "https://www.wikidata.org/wiki/Q7942",
+            "display_name": "Climate change",
+            "level": 2,
+            "score": 0.3942973017692566
+          },
+          {
+            "id": "https://openalex.org/C39432304",
+            "wikidata": "https://www.wikidata.org/wiki/Q188847",
+            "display_name": "Environmental science",
+            "level": 0,
+            "score": 0.35645824670791626
+          },
+          {
+            "id": "https://openalex.org/C205649164",
+            "wikidata": "https://www.wikidata.org/wiki/Q1071",
+            "display_name": "Geography",
+            "level": 0,
+            "score": 0.3230888843536377
+          },
+          {
+            "id": "https://openalex.org/C134097258",
+            "wikidata": "https://www.wikidata.org/wiki/Q1507383",
+            "display_name": "Sea surface temperature",
+            "level": 2,
+            "score": 0.25805896520614624
+          },
+          {
+            "id": "https://openalex.org/C111368507",
+            "wikidata": "https://www.wikidata.org/wiki/Q43518",
+            "display_name": "Oceanography",
+            "level": 1,
+            "score": 0.19736602902412415
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.09499400854110718
+          },
+          {
+            "id": "https://openalex.org/C199360897",
+            "wikidata": "https://www.wikidata.org/wiki/Q9143",
+            "display_name": "Programming language",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 7,
+        "locations": [
+          {
+            "id": "doi:10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+            "doi": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+            "pdf_url": "https://journals.ametsoc.org/downloadpdf/journals/clim/15/2/1520-0442_2002_015_0216_acnoti_2.0.co_2.pdf",
+            "source": {
+              "id": "https://openalex.org/S80591372",
+              "display_name": "Journal of Climate",
+              "issn_l": "0894-8755",
+              "issn": [
+                "0894-8755",
+                "1520-0442"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "dongbi-b",
+                "jufo-2",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320260",
+              "host_organization_name": "American Meteorological Society",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320260"
+              ],
+              "host_organization_lineage_names": [
+                "American Meteorological Society"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of Climate",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:oceanrep.geomar.de:12837",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://oceanrep.geomar.de/12837/2/Cautionary.pdf",
+            "pdf_url": "http://oceanrep.geomar.de/12837/2/Cautionary.pdf",
+            "source": {
+              "id": "https://openalex.org/S4306400264",
+              "display_name": "Helmholtz Centre for Ocean Research Kiel (GEOMAR)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I34403800",
+              "host_organization_name": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+              "host_organization_lineage": [
+                "https://openalex.org/I34403800"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "Journal of Climate, 15 (2). pp. 216-225.",
+            "raw_type": "Article"
+          },
+          {
+            "id": "pmh:hdl:10068/253873",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://hdl.handle.net/10068/253873",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196900",
+              "display_name": "OpenGrey (Institut de l'Information Scientifique et Technique)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1295345811",
+              "host_organization_name": "Institut de l'Information Scientifique et Technique",
+              "host_organization_lineage": [
+                "https://openalex.org/I1295345811"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "I - Miscellaneous"
+          },
+          {
+            "id": "pmh:oai:edoc.mpg.de:20045",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://edoc.mpg.de/20045",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4406922265",
+              "display_name": "Max Planck Institute for Plasma Physics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Journal of Climate, v.15, 216-225 (2002)",
+            "raw_type": "Article"
+          },
+          {
+            "id": "pmh:oai:escidoc.org:escidoc:995439",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://hdl.handle.net/11858/00-001M-0000-0012-0299-0",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407052962",
+              "display_name": "Max Planck Digital Library",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4210088280",
+              "host_organization_name": "Max Planck Digital Library",
+              "host_organization_lineage": [
+                "https://openalex.org/I4210088280"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:pure.mpg.de:item_995439",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "http://hdl.handle.net/11858/00-001M-0000-0012-0299-0",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400654",
+              "display_name": "MPG.PuRe (Max Planck Society)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I149899117",
+              "host_organization_name": "Max Planck Society",
+              "host_organization_lineage": [
+                "https://openalex.org/I149899117"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "other-oa",
+            "license_id": "https://openalex.org/licenses/other-oa",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Journal of Climate",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "mag:2183711505",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://journals.ametsoc.org/doi/pdf/10.1175/1520-0442(2002)015%3C0216%3AACNOTI%3E2.0.CO%3B2",
+            "pdf_url": null,
+            "source": null,
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": null
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "doi": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1175/1520-0442(2002)015<0216:acnoti>2.0.co;2",
+          "pdf_url": "https://journals.ametsoc.org/downloadpdf/journals/clim/15/2/1520-0442_2002_015_0216_acnoti_2.0.co_2.pdf",
+          "source": {
+            "id": "https://openalex.org/S80591372",
+            "display_name": "Journal of Climate",
+            "issn_l": "0894-8755",
+            "issn": [
+              "0894-8755",
+              "1520-0442"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-b",
+              "jufo-2",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320260",
+            "host_organization_name": "American Meteorological Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320260"
+            ],
+            "host_organization_lineage_names": [
+              "American Meteorological Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Climate",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "display_name": "Climate action",
+            "score": 0.5351999998092651,
+            "id": "https://metadata.un.org/sdg/13"
+          }
+        ],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2012580522.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2012580522.grobid-xml"
+        },
+        "referenced_works_count": 23,
+        "referenced_works": [
+          "https://openalex.org/W1978400574",
+          "https://openalex.org/W1988245413",
+          "https://openalex.org/W1995349031",
+          "https://openalex.org/W1997320786",
+          "https://openalex.org/W1999082446",
+          "https://openalex.org/W1999518711",
+          "https://openalex.org/W2002856850",
+          "https://openalex.org/W2008505918",
+          "https://openalex.org/W2048111821",
+          "https://openalex.org/W2062914653",
+          "https://openalex.org/W2069370213",
+          "https://openalex.org/W2070062576",
+          "https://openalex.org/W2082001988",
+          "https://openalex.org/W2092855961",
+          "https://openalex.org/W2120115499",
+          "https://openalex.org/W2123909439",
+          "https://openalex.org/W2160439533",
+          "https://openalex.org/W2172758539",
+          "https://openalex.org/W2172830170",
+          "https://openalex.org/W2173251738",
+          "https://openalex.org/W2175808424",
+          "https://openalex.org/W2178955519",
+          "https://openalex.org/W2467630059"
+        ],
+        "related_works": [
+          "https://openalex.org/W2144853430",
+          "https://openalex.org/W2112519338",
+          "https://openalex.org/W2129406503",
+          "https://openalex.org/W2022831624",
+          "https://openalex.org/W1985757053",
+          "https://openalex.org/W2607403004",
+          "https://openalex.org/W2050445312",
+          "https://openalex.org/W3158512639"
+        ],
+        "abstract_inverted_index": {
+          "Empirical": [
+            0
+          ],
+          "orthogonal": [
+            1
+          ],
+          "function": [
+            2
+          ],
+          "(EOF)": [
+            3
+          ],
+          "analyses": [
+            4,
+            25,
+            99
+          ],
+          "(rotated": [
+            5
+          ],
+          "or": [
+            6
+          ],
+          "not)": [
+            7
+          ],
+          "are": [
+            8
+          ],
+          "widely": [
+            9
+          ],
+          "used": [
+            10,
+            27,
+            74
+          ],
+          "in": [
+            11,
+            22,
+            59
+          ],
+          "climate": [
+            12,
+            35,
+            110
+          ],
+          "research.": [
+            13
+          ],
+          "In": [
+            14,
+            64
+          ],
+          "recent": [
+            15
+          ],
+          "years": [
+            16
+          ],
+          "there": [
+            17
+          ],
+          "have": [
+            18
+          ],
+          "been": [
+            19
+          ],
+          "several": [
+            20,
+            39
+          ],
+          "studies": [
+            21
+          ],
+          "which": [
+            23
+          ],
+          "EOF": [
+            24,
+            98
+          ],
+          "were": [
+            26,
+            42
+          ],
+          "to": [
+            28,
+            77
+          ],
+          "highlight": [
+            29
+          ],
+          "potential": [
+            30
+          ],
+          "physical": [
+            31
+          ],
+          "mechanisms": [
+            32
+          ],
+          "associated": [
+            33,
+            106
+          ],
+          "with": [
+            34,
+            107
+          ],
+          "variability.": [
+            36
+          ],
+          "For": [
+            37
+          ],
+          "example,": [
+            38
+          ],
+          "SST": [
+            40
+          ],
+          "modes": [
+            41,
+            58,
+            82
+          ],
+          "identified": [
+            43
+          ],
+          "such": [
+            44
+          ],
+          "as": [
+            45
+          ],
+          "the": [
+            46,
+            50,
+            60
+          ],
+          "\u201cTropical": [
+            47,
+            51
+          ],
+          "Atlantic": [
+            48
+          ],
+          "Dipole,\u201d": [
+            49,
+            54
+          ],
+          "Indian": [
+            52
+          ],
+          "Ocean": [
+            53
+          ],
+          "and": [
+            55,
+            83,
+            105
+          ],
+          "different": [
+            56
+          ],
+          "SLP": [
+            57
+          ],
+          "Northern": [
+            61
+          ],
+          "Hemisphere": [
+            62
+          ],
+          "winter.": [
+            63
+          ],
+          "this": [
+            65
+          ],
+          "note": [
+            66
+          ],
+          "it": [
+            67,
+            91
+          ],
+          "is": [
+            68,
+            92
+          ],
+          "emphasized": [
+            69
+          ],
+          "that": [
+            70,
+            94
+          ],
+          "caution": [
+            71
+          ],
+          "should": [
+            72
+          ],
+          "be": [
+            73,
+            101
+          ],
+          "when": [
+            75
+          ],
+          "trying": [
+            76
+          ],
+          "interpret": [
+            78
+          ],
+          "these": [
+            79
+          ],
+          "statistically": [
+            80
+          ],
+          "derived": [
+            81,
+            96
+          ],
+          "their": [
+            84
+          ],
+          "significance.": [
+            85
+          ],
+          "Indeed,": [
+            86
+          ],
+          "from": [
+            87,
+            97
+          ],
+          "a": [
+            88
+          ],
+          "synthetic": [
+            89
+          ],
+          "example": [
+            90
+          ],
+          "shown": [
+            93
+          ],
+          "patterns": [
+            95
+          ],
+          "can": [
+            100
+          ],
+          "misleading": [
+            102
+          ],
+          "at": [
+            103
+          ],
+          "times": [
+            104
+          ],
+          "very": [
+            108
+          ],
+          "little": [
+            109
+          ],
+          "physics.": [
+            111
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2012580522",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 20
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 20
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 17
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 18
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 25
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 30
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 19
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 27
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 22
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 24
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

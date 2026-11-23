@@ -50,6 +50,11 @@ revision follows the original compilation-failure path; no extra revision loops
 are added. These user-requested changes are documented as R027/R028 and A005/A006
 in the adaptation ledgers. See the [reference validation report](validation/REFERENCE-FIX-REPORT.md).
 
+Content revisions keep the verified BibTeX database and style. The runtime
+can restore those declarations when a revision returns a recognizable trailing
+inline reference list. The same citation and review checks apply to the revised
+manuscript. See [live content revision validation](validation/REVISION-BIBTEX-E2E.md).
+
 Formatting preserves the last accepted scientific text and its citations. The
 formatter can change supported figure and table layout options. The driver
 rejects source changes outside that scope and retains the accepted draft.
@@ -257,7 +262,7 @@ python paper-orchestra/scripts/verify_upstream.py --source upstream
 
 Four tests are optional when the separate upstream checkout and older historical
 raw run are absent from a fresh clone. The complete development suite passes all
-327 tests. Earlier clean-publication-export results and the four optional skips are
+330 tests. Earlier clean-publication-export results and the four optional skips are
 documented with their exact input commit and environment in the validation report.
 
 The source verifier checks bundled hashes, the actual upstream Git commit and
@@ -268,7 +273,7 @@ execution evidence for the final installed provenance build is retained in
 `validation/provenance-e2e-final/`: 57 separate Codex sessions with source
 propagation, aggregation, rejection/reversion and stopping. Its seven successful
 figure attempts replayed identically with zero model calls in
-`validation/provenance-e2e-final-replay/`. The current full suite has 327 passing tests;
+`validation/provenance-e2e-final-replay/`. The current full suite has 330 passing tests;
 160 were present at the time of that full workflow run.
 
 See `validation/REPORT.md` for the observed run, checks and limits. The corrected

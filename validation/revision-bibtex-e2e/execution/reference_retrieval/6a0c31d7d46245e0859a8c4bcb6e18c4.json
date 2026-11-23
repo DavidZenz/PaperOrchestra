@@ -1,0 +1,3286 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 485671,
+      "db_response_time_ms": 407,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Assessing the Performance of Prediction Models: A Framework for Traditional \"and\" Novel Measures) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Assessing the Performance of Prediction Models: A Framework for Traditional \"and\" Novel Measures) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2119910794",
+        "doi": "https://doi.org/10.1097/ede.0b013e3181c30fb2",
+        "title": "Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures",
+        "display_name": "Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures",
+        "alternate_titles": [],
+        "relevance_score": 376.14624,
+        "publication_year": 2009,
+        "publication_date": "2009-12-09",
+        "ids": {
+          "openalex": "https://openalex.org/W2119910794",
+          "doi": "https://doi.org/10.1097/ede.0b013e3181c30fb2",
+          "mag": "2119910794",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/20010215",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/3575184"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1097/ede.0b013e3181c30fb2",
+          "doi": "https://doi.org/10.1097/ede.0b013e3181c30fb2",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1097/ede.0b013e3181c30fb2",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S15470582",
+            "display_name": "Epidemiology",
+            "issn_l": "1044-3983",
+            "issn": [
+              "1044-3983",
+              "1531-5487"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-3",
+              "ki-jl-2",
+              "medline",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310315671",
+            "host_organization_name": "Lippincott Williams & Wilkins",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310315671",
+              "https://openalex.org/P4310318547"
+            ],
+            "host_organization_lineage_names": [
+              "Lippincott Williams & Wilkins",
+              "Wolters Kluwer"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Epidemiology",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2119910794"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/3575184",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5091435927",
+              "display_name": "Ewout Willem Steyerberg",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-7787-0122",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-7787-0122"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2801952686",
+                "display_name": "Erasmus MC",
+                "ror": "https://ror.org/018906e22",
+                "country_code": "NL",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I2801952686"
+                ]
+              }
+            ],
+            "countries": [
+              "NL"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Ewout W. Steyerberg",
+            "raw_affiliation_strings": [
+              "Department of Public Health, Erasmus MC, Rotterdam, The Netherlands. e.steyerberg@erasmusmc.nl",
+              "Department of Public Health, Erasmus MC, Rotterdam, The Netherlands"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Public Health, Erasmus MC, Rotterdam, The Netherlands. e.steyerberg@erasmusmc.nl",
+                "institution_ids": [
+                  "https://openalex.org/I2801952686"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Public Health, Erasmus MC, Rotterdam, The Netherlands",
+                "institution_ids": [
+                  "https://openalex.org/I2801952686"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5025886998",
+              "display_name": "Andrew Julian Vickers",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-1525-6503",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1525-6503"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1334819555",
+                "display_name": "Memorial Sloan Kettering Cancer Center",
+                "ror": "https://ror.org/02yrq0923",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1334819555"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Andrew J. Vickers",
+            "raw_affiliation_strings": [
+              "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center; New York, NY;",
+              "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center",
+              "New York, NY"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center; New York, NY;",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              },
+              {
+                "raw_affiliation_string": "New York, NY",
+                "institution_ids": []
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5084857746",
+              "display_name": "Nancy R. Cook",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-9705-0842",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-9705-0842"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1283280774",
+                "display_name": "Brigham and Women's Hospital",
+                "ror": "https://ror.org/04b6nzv94",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I121934306",
+                  "https://openalex.org/I1283280774",
+                  "https://openalex.org/I48633490"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I136199984",
+                "display_name": "Harvard University",
+                "ror": "https://ror.org/03vek6s52",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Nancy R. Cook",
+            "raw_affiliation_strings": [
+              "Brigham and Women's Hospital, Harvard Medical School, Boston, MA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Brigham and Women's Hospital, Harvard Medical School, Boston, MA",
+                "institution_ids": [
+                  "https://openalex.org/I1283280774",
+                  "https://openalex.org/I136199984"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5088993988",
+              "display_name": "Thomas Alexander Gerds",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-5955-816X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-5955-816X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I124055696",
+                "display_name": "University of Copenhagen",
+                "ror": "https://ror.org/035b05819",
+                "country_code": "DK",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I124055696"
+                ]
+              }
+            ],
+            "countries": [
+              "DK"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Thomas Gerds",
+            "raw_affiliation_strings": [
+              "Institute of Public Health, University of Copenhagen, Copenhagen, Denmark"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Public Health, University of Copenhagen, Copenhagen, Denmark",
+                "institution_ids": [
+                  "https://openalex.org/I124055696"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5051277222",
+              "display_name": "Mithat G\u00f6nen",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-8683-8477",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-8683-8477"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1334819555",
+                "display_name": "Memorial Sloan Kettering Cancer Center",
+                "ror": "https://ror.org/02yrq0923",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1334819555"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Mithat Gonen",
+            "raw_affiliation_strings": [
+              "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center; New York, NY;",
+              "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center",
+              "New York, NY"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center; New York, NY;",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Epidemiology and Biostatistics, Memorial Sloan-Kettering Cancer Center",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              },
+              {
+                "raw_affiliation_string": "New York, NY",
+                "institution_ids": []
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5086399744",
+              "display_name": "Nancy A. Obuchowski",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-1891-7477",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1891-7477"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1316902750",
+                "display_name": "Cleveland Clinic",
+                "ror": "https://ror.org/03xjacd83",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1316902750"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Nancy Obuchowski",
+            "raw_affiliation_strings": [
+              "Department of Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH",
+                "institution_ids": [
+                  "https://openalex.org/I1316902750"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5064002558",
+              "display_name": "Michael J. Pencina",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-1968-2641",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-1968-2641",
+                "https://orcid.org/0000-0001-5798-8855"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I111088046",
+                "display_name": "Boston University",
+                "ror": "https://ror.org/05qwgg493",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I111088046"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Michael J. Pencina",
+            "raw_affiliation_strings": [
+              "Department of Mathematics and Statistics, Boston University, Boston, MA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Mathematics and Statistics, Boston University, Boston, MA",
+                "institution_ids": [
+                  "https://openalex.org/I111088046"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5054374857",
+              "display_name": "Michael W. Kattan",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-3840-4161",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3840-4161"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1316902750",
+                "display_name": "Cleveland Clinic",
+                "ror": "https://ror.org/03xjacd83",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1316902750"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Michael W. Kattan",
+            "raw_affiliation_strings": [
+              "Department of Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH",
+                "institution_ids": [
+                  "https://openalex.org/I1316902750"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 3,
+        "institutions_distinct_count": 7,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5091435927"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I2801952686"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 50.7857,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 6236,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.9990356,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "21",
+          "issue": "1",
+          "first_page": "128",
+          "last_page": "138"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T14374",
+          "display_name": "Statistical Methods in Epidemiology",
+          "score": 0.9667999744415283,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T14374",
+            "display_name": "Statistical Methods in Epidemiology",
+            "score": 0.9667999744415283,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.009100000374019146,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10206",
+            "display_name": "Meta-analysis and systematic reviews",
+            "score": 0.003599999938160181,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1804",
+              "display_name": "Statistics, Probability and Uncertainty"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/predictive-model-performance",
+            "display_name": "prediction model performance",
+            "score": 0.8759999871253967
+          },
+          {
+            "id": "https://openalex.org/keywords/discrimination-statistics",
+            "display_name": "discrimination (statistics)",
+            "score": 0.7400000095367432
+          },
+          {
+            "id": "https://openalex.org/keywords/calibration",
+            "display_name": "calibration",
+            "score": 0.9879999756813049
+          },
+          {
+            "id": "https://openalex.org/keywords/brier-score",
+            "display_name": "Brier score",
+            "score": 0.9079999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/net-reclassification-improvement",
+            "display_name": "net reclassification improvement",
+            "score": 0.8460000157356262
+          },
+          {
+            "id": "https://openalex.org/keywords/integrated-discrimination-improvement",
+            "display_name": "integrated discrimination improvement",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/decision-curves",
+            "display_name": "decision curves",
+            "score": 0.8349999785423279
+          },
+          {
+            "id": "https://openalex.org/keywords/testicular-cancer",
+            "display_name": "testicular cancer",
+            "score": 0.7829999923706055
+          },
+          {
+            "id": "https://openalex.org/keywords/external-validation",
+            "display_name": "external validation",
+            "score": 0.5709999799728394
+          },
+          {
+            "id": "https://openalex.org/keywords/binary-outcomes",
+            "display_name": "binary outcomes",
+            "score": 0.6320000290870667
+          },
+          {
+            "id": "https://openalex.org/keywords/survival-outcomes",
+            "display_name": "survival outcomes",
+            "score": 0.9639999866485596
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C35405484",
+            "wikidata": "https://www.wikidata.org/wiki/Q4967066",
+            "display_name": "Brier score",
+            "level": 2,
+            "score": 0.8589895963668823
+          },
+          {
+            "id": "https://openalex.org/C97931131",
+            "wikidata": "https://www.wikidata.org/wiki/Q5282087",
+            "display_name": "Discriminative model",
+            "level": 2,
+            "score": 0.7368063926696777
+          },
+          {
+            "id": "https://openalex.org/C58471807",
+            "wikidata": "https://www.wikidata.org/wiki/Q327120",
+            "display_name": "Receiver operating characteristic",
+            "level": 2,
+            "score": 0.628616452217102
+          },
+          {
+            "id": "https://openalex.org/C160798450",
+            "wikidata": "https://www.wikidata.org/wiki/Q4230870",
+            "display_name": "Concordance",
+            "level": 2,
+            "score": 0.6229437589645386
+          },
+          {
+            "id": "https://openalex.org/C89128539",
+            "wikidata": "https://www.wikidata.org/wiki/Q1949963",
+            "display_name": "Statistic",
+            "level": 2,
+            "score": 0.6055372953414917
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.5693986415863037
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.5381961464881897
+          },
+          {
+            "id": "https://openalex.org/C45804977",
+            "wikidata": "https://www.wikidata.org/wiki/Q7239673",
+            "display_name": "Predictive modelling",
+            "level": 2,
+            "score": 0.5372374653816223
+          },
+          {
+            "id": "https://openalex.org/C165838908",
+            "wikidata": "https://www.wikidata.org/wiki/Q736777",
+            "display_name": "Calibration",
+            "level": 2,
+            "score": 0.5052724480628967
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.4771822690963745
+          },
+          {
+            "id": "https://openalex.org/C132480984",
+            "wikidata": "https://www.wikidata.org/wiki/Q2034239",
+            "display_name": "Goodness of fit",
+            "level": 2,
+            "score": 0.45453861355781555
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.4369455575942993
+          },
+          {
+            "id": "https://openalex.org/C155512373",
+            "wikidata": "https://www.wikidata.org/wiki/Q287450",
+            "display_name": "Residual",
+            "level": 2,
+            "score": 0.423740029335022
+          },
+          {
+            "id": "https://openalex.org/C167651023",
+            "wikidata": "https://www.wikidata.org/wiki/Q1474611",
+            "display_name": "Plot (graphics)",
+            "level": 2,
+            "score": 0.41518735885620117
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.37920594215393066
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.23325183987617493
+          },
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.21599668264389038
+          },
+          {
+            "id": "https://openalex.org/C126322002",
+            "wikidata": "https://www.wikidata.org/wiki/Q11180",
+            "display_name": "Internal medicine",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C11413529",
+            "wikidata": "https://www.wikidata.org/wiki/Q8366",
+            "display_name": "Algorithm",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D011379",
+            "descriptor_name": "Prognosis",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D012372",
+            "descriptor_name": "ROC Curve",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015203",
+            "descriptor_name": "Reproducibility of Results",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015233",
+            "descriptor_name": "Models, Statistical",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D016021",
+            "descriptor_name": "Epidemiologic Studies",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D018570",
+            "descriptor_name": "Risk Assessment",
+            "qualifier_ui": "Q000379",
+            "qualifier_name": "methods",
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D018570",
+            "descriptor_name": "Risk Assessment",
+            "qualifier_ui": "Q000592",
+            "qualifier_name": "standards",
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D018570",
+            "descriptor_name": "Risk Assessment",
+            "qualifier_ui": "Q000706",
+            "qualifier_name": "statistics & numerical data",
+            "is_major_topic": false
+          }
+        ],
+        "locations_count": 8,
+        "locations": [
+          {
+            "id": "doi:10.1097/ede.0b013e3181c30fb2",
+            "doi": "https://doi.org/10.1097/ede.0b013e3181c30fb2",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1097/ede.0b013e3181c30fb2",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S15470582",
+              "display_name": "Epidemiology",
+              "issn_l": "1044-3983",
+              "issn": [
+                "1044-3983",
+                "1531-5487"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-3",
+                "ki-jl-2",
+                "medline",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310315671",
+              "host_organization_name": "Lippincott Williams & Wilkins",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310315671",
+                "https://openalex.org/P4310318547"
+              ],
+              "host_organization_lineage_names": [
+                "Lippincott Williams & Wilkins",
+                "Wolters Kluwer"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Epidemiology",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:20010215",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/20010215",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Epidemiology (Cambridge, Mass.)",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pure.atira.dk:openaire_cris_publications/b6daa540-ec9c-11df-b6d2-000ea68e967b",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://researchprofiles.ku.dk/da/publications/b6daa540-ec9c-11df-b6d2-000ea68e967b",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401983",
+              "display_name": "Research at the University of Copenhagen (University of Copenhagen)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I124055696",
+              "host_organization_name": "University of Copenhagen",
+              "host_organization_lineage": [
+                "https://openalex.org/I124055696"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Steyerberg, E W, Vickers, A J, Cook, N R, Gerds, T, Gonen, M, Obuchowski, N, Pencina, M J & Kattan, M W 2010, 'Assessing the performance of prediction models: a framework for traditional and novel measures', Epidemiology, vol. 21, no. 1, pp. 128-38. https://doi.org/10.1097/EDE.0b013e3181c30fb2",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:pure.eur.nl:openaire_cris_publications/e2e861d0-ad14-4d88-8cec-9606862fe57b",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pure.eur.nl/en/publications/e2e861d0-ad14-4d88-8cec-9606862fe57b",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401266",
+              "display_name": "EUR Research Repository (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Steyerberg, E, Vickers, AJ, Cook, NR, Gerds, T, Gonen, M, Obuchowski, N, Pencina, MJ & Kattan, MW 2010, 'Assessing the Performance of Prediction Models A Framework for Traditional and Novel Measures', Epidemiology, vol. 21, no. 1, pp. 128-138. https://doi.org/10.1097/EDE.0b013e3181c30fb2",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:europepmc.org:2573881",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/3575184",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400806",
+              "display_name": "Europe PMC (PubMed Central)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1303153112",
+              "host_organization_name": "European Bioinformatics Institute",
+              "host_organization_lineage": [
+                "https://openalex.org/I1303153112"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:3575184",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3575184/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "Epidemiology",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmh:eur:oai:pure.eur.nl:publications/e2e861d0-ad14-4d88-8cec-9606862fe57b",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pure.eur.nl/en/publications/e2e861d0-ad14-4d88-8cec-9606862fe57b",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401266",
+              "display_name": "EUR Research Repository (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Epidemiology, 21(1), 128 - 138. Lippincott Williams &amp; Wilkins",
+            "raw_type": "info:eu-repo/semantics/article"
+          },
+          {
+            "id": "pmh:oai:repub.eur.nl:28287",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://repub.eur.nl/pub/28287",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196287",
+              "display_name": "RePub (Erasmus University Rotterdam)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I913958620",
+              "host_organization_name": "Erasmus University Rotterdam",
+              "host_organization_lineage": [
+                "https://openalex.org/I913958620"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Epidemiology vol. 21 no. 1, pp. 128-138",
+            "raw_type": "info:eu-repo/semantics/other"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:europepmc.org:2573881",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/3575184",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400806",
+            "display_name": "Europe PMC (PubMed Central)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1303153112",
+            "host_organization_name": "European Bioinformatics Institute",
+            "host_organization_lineage": [
+              "https://openalex.org/I1303153112"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Text"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 0.6240000128746033,
+            "id": "https://metadata.un.org/sdg/3",
+            "display_name": "Good health and well-being"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G7245963922",
+            "display_name": "Long-term prediction of prostate cancer death from kallikreins measured in blood",
+            "funder_award_id": "R33CA127768",
+            "funder_id": "https://openalex.org/F4320337351",
+            "funder_display_name": "National Cancer Institute"
+          },
+          {
+            "id": "https://openalex.org/G9000900376",
+            "display_name": "SPORE in Prostate Cancer",
+            "funder_award_id": "P50CA092629",
+            "funder_id": "https://openalex.org/F4320337351",
+            "funder_display_name": "National Cancer Institute"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320309680",
+            "display_name": "Cleveland Clinic",
+            "ror": "https://ror.org/03xjacd83"
+          },
+          {
+            "id": "https://openalex.org/F4320310094",
+            "display_name": "University of Washington",
+            "ror": "https://ror.org/00cvxb145"
+          },
+          {
+            "id": "https://openalex.org/F4320337351",
+            "display_name": "National Cancer Institute",
+            "ror": "https://ror.org/040gcmg81"
+          }
+        ],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 68,
+        "referenced_works": [
+          "https://openalex.org/W48332454",
+          "https://openalex.org/W650692540",
+          "https://openalex.org/W1554131431",
+          "https://openalex.org/W1582539699",
+          "https://openalex.org/W1916404790",
+          "https://openalex.org/W1967271902",
+          "https://openalex.org/W1971052617",
+          "https://openalex.org/W1972987731",
+          "https://openalex.org/W1997812541",
+          "https://openalex.org/W1999668242",
+          "https://openalex.org/W2004655916",
+          "https://openalex.org/W2005060666",
+          "https://openalex.org/W2008188706",
+          "https://openalex.org/W2013558682",
+          "https://openalex.org/W2019273574",
+          "https://openalex.org/W2019474022",
+          "https://openalex.org/W2024623357",
+          "https://openalex.org/W2026086741",
+          "https://openalex.org/W2028241603",
+          "https://openalex.org/W2038202546",
+          "https://openalex.org/W2038981426",
+          "https://openalex.org/W2041990424",
+          "https://openalex.org/W2045030989",
+          "https://openalex.org/W2052238783",
+          "https://openalex.org/W2053024215",
+          "https://openalex.org/W2060374620",
+          "https://openalex.org/W2062383335",
+          "https://openalex.org/W2068283389",
+          "https://openalex.org/W2073241381",
+          "https://openalex.org/W2074932800",
+          "https://openalex.org/W2089463633",
+          "https://openalex.org/W2093194558",
+          "https://openalex.org/W2094681746",
+          "https://openalex.org/W2094969018",
+          "https://openalex.org/W2098199441",
+          "https://openalex.org/W2100078522",
+          "https://openalex.org/W2109242212",
+          "https://openalex.org/W2112316706",
+          "https://openalex.org/W2114869070",
+          "https://openalex.org/W2121514893",
+          "https://openalex.org/W2123162799",
+          "https://openalex.org/W2123377260",
+          "https://openalex.org/W2124537635",
+          "https://openalex.org/W2124583370",
+          "https://openalex.org/W2124704085",
+          "https://openalex.org/W2125663761",
+          "https://openalex.org/W2126436234",
+          "https://openalex.org/W2130644475",
+          "https://openalex.org/W2139372732",
+          "https://openalex.org/W2140468511",
+          "https://openalex.org/W2143717212",
+          "https://openalex.org/W2149833112",
+          "https://openalex.org/W2150215887",
+          "https://openalex.org/W2151680906",
+          "https://openalex.org/W2152575748",
+          "https://openalex.org/W2157995113",
+          "https://openalex.org/W2158485250",
+          "https://openalex.org/W2161441016",
+          "https://openalex.org/W2163631231",
+          "https://openalex.org/W2165139489",
+          "https://openalex.org/W2168856363",
+          "https://openalex.org/W2297716127",
+          "https://openalex.org/W2319997019",
+          "https://openalex.org/W2403444459",
+          "https://openalex.org/W3175417087",
+          "https://openalex.org/W4317675917",
+          "https://openalex.org/W4323966288",
+          "https://openalex.org/W7075607766"
+        ],
+        "related_works": [
+          "https://openalex.org/W96520271",
+          "https://openalex.org/W3111143494",
+          "https://openalex.org/W4244109532",
+          "https://openalex.org/W2017217416",
+          "https://openalex.org/W4312194384",
+          "https://openalex.org/W2593300016",
+          "https://openalex.org/W2227579812",
+          "https://openalex.org/W2073886650",
+          "https://openalex.org/W2084033659",
+          "https://openalex.org/W1493363854"
+        ],
+        "abstract_inverted_index": {
+          "The": [
+            0
+          ],
+          "performance": [
+            1,
+            124,
+            195
+          ],
+          "of": [
+            2,
+            11,
+            65,
+            70,
+            114,
+            122,
+            125,
+            135,
+            139,
+            194,
+            212
+          ],
+          "prediction": [
+            3,
+            126,
+            174
+          ],
+          "models": [
+            4
+          ],
+          "can": [
+            5,
+            60
+          ],
+          "be": [
+            6,
+            61,
+            170,
+            179,
+            187,
+            197
+          ],
+          "assessed": [
+            7
+          ],
+          "using": [
+            8
+          ],
+          "a": [
+            9,
+            132,
+            173,
+            214
+          ],
+          "variety": [
+            10
+          ],
+          "methods": [
+            12
+          ],
+          "and": [
+            13,
+            19,
+            48,
+            82,
+            166
+          ],
+          "metrics.": [
+            14
+          ],
+          "Traditional": [
+            15
+          ],
+          "measures": [
+            16,
+            54,
+            89,
+            177,
+            193
+          ],
+          "for": [
+            17,
+            36,
+            51,
+            74,
+            153,
+            159,
+            172,
+            189
+          ],
+          "binary": [
+            18
+          ],
+          "survival": [
+            20
+          ],
+          "outcomes": [
+            21
+          ],
+          "include": [
+            22
+          ],
+          "the": [
+            23,
+            31,
+            42,
+            71,
+            98,
+            112,
+            120,
+            123,
+            137,
+            182,
+            210
+          ],
+          "Brier": [
+            24
+          ],
+          "score": [
+            25
+          ],
+          "to": [
+            26,
+            96,
+            110,
+            186,
+            206,
+            217
+          ],
+          "indicate": [
+            27
+          ],
+          "overall": [
+            28
+          ],
+          "model": [
+            29,
+            107,
+            154,
+            184
+          ],
+          "performance,": [
+            30
+          ],
+          "concordance": [
+            32
+          ],
+          "(or": [
+            33,
+            39
+          ],
+          "c)": [
+            34
+          ],
+          "statistic": [
+            35,
+            73
+          ],
+          "discriminative": [
+            37
+          ],
+          "ability": [
+            38
+          ],
+          "area": [
+            40
+          ],
+          "under": [
+            41
+          ],
+          "receiver": [
+            43
+          ],
+          "operating": [
+            44
+          ],
+          "characteristic": [
+            45
+          ],
+          "[ROC]": [
+            46
+          ],
+          "curve),": [
+            47
+          ],
+          "goodness-of-fit": [
+            49
+          ],
+          "statistics": [
+            50
+          ],
+          "calibration.Several": [
+            52
+          ],
+          "new": [
+            53
+          ],
+          "have": [
+            55,
+            90
+          ],
+          "recently": [
+            56
+          ],
+          "been": [
+            57,
+            91
+          ],
+          "proposed": [
+            58
+          ],
+          "that": [
+            59,
+            163
+          ],
+          "seen": [
+            62
+          ],
+          "as": [
+            63,
+            203
+          ],
+          "refinements": [
+            64
+          ],
+          "discrimination": [
+            66,
+            84,
+            165
+          ],
+          "measures,": [
+            67
+          ],
+          "including": [
+            68,
+            93
+          ],
+          "variants": [
+            69
+          ],
+          "c": [
+            72
+          ],
+          "survival,": [
+            75
+          ],
+          "reclassification": [
+            76,
+            79,
+            204
+          ],
+          "tables,": [
+            77
+          ],
+          "net": [
+            78,
+            99
+          ],
+          "improvement": [
+            80,
+            85
+          ],
+          "(NRI),": [
+            81
+          ],
+          "integrated": [
+            83
+          ],
+          "(IDI).": [
+            86
+          ],
+          "Moreover,": [
+            87
+          ],
+          "decision-analytic": [
+            88
+          ],
+          "proposed,": [
+            92
+          ],
+          "decision": [
+            94
+          ],
+          "curves": [
+            95
+          ],
+          "plot": [
+            97
+          ],
+          "benefit": [
+            100
+          ],
+          "achieved": [
+            101
+          ],
+          "by": [
+            102
+          ],
+          "making": [
+            103
+          ],
+          "decisions": [
+            104
+          ],
+          "based": [
+            105
+          ],
+          "on": [
+            106
+          ],
+          "predictions.We": [
+            108
+          ],
+          "aimed": [
+            109
+          ],
+          "define": [
+            111
+          ],
+          "role": [
+            113
+          ],
+          "these": [
+            115
+          ],
+          "relatively": [
+            116
+          ],
+          "novel": [
+            117,
+            215
+          ],
+          "approaches": [
+            118
+          ],
+          "in": [
+            119,
+            145,
+            199
+          ],
+          "evaluation": [
+            121
+          ],
+          "models.": [
+            127
+          ],
+          "For": [
+            128
+          ],
+          "illustration,": [
+            129
+          ],
+          "we": [
+            130
+          ],
+          "present": [
+            131
+          ],
+          "case": [
+            133
+          ],
+          "study": [
+            134
+          ],
+          "predicting": [
+            136
+          ],
+          "presence": [
+            138
+          ],
+          "residual": [
+            140
+          ],
+          "tumor": [
+            141
+          ],
+          "versus": [
+            142
+          ],
+          "benign": [
+            143
+          ],
+          "tissue": [
+            144
+          ],
+          "patients": [
+            146
+          ],
+          "with": [
+            147
+          ],
+          "testicular": [
+            148
+          ],
+          "cancer": [
+            149
+          ],
+          "(n": [
+            150
+          ],
+          "=": [
+            151,
+            157
+          ],
+          "544": [
+            152
+          ],
+          "development,": [
+            155
+          ],
+          "n": [
+            156
+          ],
+          "273": [
+            158
+          ],
+          "external": [
+            160
+          ],
+          "validation).We": [
+            161
+          ],
+          "suggest": [
+            162
+          ],
+          "reporting": [
+            164
+          ],
+          "calibration": [
+            167
+          ],
+          "will": [
+            168
+          ],
+          "always": [
+            169
+          ],
+          "important": [
+            171
+          ],
+          "model.": [
+            175,
+            220
+          ],
+          "Decision-analytic": [
+            176
+          ],
+          "should": [
+            178
+          ],
+          "reported": [
+            180
+          ],
+          "if": [
+            181
+          ],
+          "predictive": [
+            183
+          ],
+          "is": [
+            185
+          ],
+          "used": [
+            188
+          ],
+          "clinical": [
+            190
+          ],
+          "decisions.": [
+            191
+          ],
+          "Other": [
+            192
+          ],
+          "may": [
+            196
+          ],
+          "warranted": [
+            198
+          ],
+          "specific": [
+            200
+          ],
+          "applications,": [
+            201
+          ],
+          "such": [
+            202
+          ],
+          "metrics": [
+            205
+          ],
+          "gain": [
+            207
+          ],
+          "insight": [
+            208
+          ],
+          "into": [
+            209
+          ],
+          "value": [
+            211
+          ],
+          "adding": [
+            213
+          ],
+          "predictor": [
+            216
+          ],
+          "an": [
+            218
+          ],
+          "established": [
+            219
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2119910794",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 1346
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 512
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 443
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 441
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 530
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 509
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 486
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 341
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 326
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 292
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 242
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 208
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 167
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 154
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 128
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2071727133",
+        "doi": "https://doi.org/10.1016/j.urology.2010.06.019",
+        "title": "Everything You Always Wanted to Know About Evaluating Prediction Models (But Were Too Afraid to Ask)",
+        "display_name": "Everything You Always Wanted to Know About Evaluating Prediction Models (But Were Too Afraid to Ask)",
+        "alternate_titles": [],
+        "relevance_score": 33.56815,
+        "publication_year": 2010,
+        "publication_date": "2010-10-28",
+        "ids": {
+          "openalex": "https://openalex.org/W2071727133",
+          "doi": "https://doi.org/10.1016/j.urology.2010.06.019",
+          "mag": "2071727133",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/21030068",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/2997853"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1016/j.urology.2010.06.019",
+          "doi": "https://doi.org/10.1016/j.urology.2010.06.019",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/j.urology.2010.06.019",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S196979320",
+            "display_name": "Urology",
+            "issn_l": "0090-4295",
+            "issn": [
+              "0090-4295",
+              "1527-9995"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-1",
+              "ki-jl-1",
+              "medline",
+              "norway-2",
+              "poland-100",
+              "russia-white-list-2",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Urology",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2071727133"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2997853/",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5025886998",
+              "display_name": "Andrew Julian Vickers",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-1525-6503",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-1525-6503"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1334819555",
+                "display_name": "Memorial Sloan Kettering Cancer Center",
+                "ror": "https://ror.org/02yrq0923",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1334819555"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Andrew J. Vickers",
+            "raw_affiliation_strings": [
+              "Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, 307 East 63 Rd. Street, NY, NY 10021, USA. vickersa@mskcc.org",
+              "Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, 307 East 63 Rd. Street, NY, NY 10021, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, 307 East 63 Rd. Street, NY, NY 10021, USA. vickersa@mskcc.org",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, 307 East 63 Rd. Street, NY, NY 10021, USA",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5110167899",
+              "display_name": "Angel M. Cronin",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1334819555",
+                "display_name": "Memorial Sloan Kettering Cancer Center",
+                "ror": "https://ror.org/02yrq0923",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1334819555"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Angel M. Cronin",
+            "raw_affiliation_strings": [
+              "Memorial Sloan-Kettering Cancer Center, New York, NY"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Memorial Sloan-Kettering Cancer Center, New York, NY",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5025886998"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I1334819555"
+        ],
+        "apc_list": {
+          "value": 3200,
+          "currency": "USD",
+          "value_usd": 3200
+        },
+        "apc_paid": null,
+        "fwci": 2.5586,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 121,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.91999699,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 92,
+          "max": 99
+        },
+        "biblio": {
+          "volume": "76",
+          "issue": "6",
+          "first_page": "1298",
+          "last_page": "1301"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T14374",
+          "display_name": "Statistical Methods in Epidemiology",
+          "score": 0.9771000146865845,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2613",
+            "display_name": "Statistics and Probability"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T14374",
+            "display_name": "Statistical Methods in Epidemiology",
+            "score": 0.9771000146865845,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10206",
+            "display_name": "Meta-analysis and systematic reviews",
+            "score": 0.005400000140070915,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1804",
+              "display_name": "Statistics, Probability and Uncertainty"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10136",
+            "display_name": "Statistical Methods and Inference",
+            "score": 0.0019000000320374966,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/prediction-model-evaluation",
+            "display_name": "prediction model evaluation",
+            "score": 0.7960000038146973
+          },
+          {
+            "id": "https://openalex.org/keywords/nomogram",
+            "display_name": "nomogram",
+            "score": 0.8849999904632568
+          },
+          {
+            "id": "https://openalex.org/keywords/prognostic-model",
+            "display_name": "prognostic model",
+            "score": 0.8640000224113464
+          },
+          {
+            "id": "https://openalex.org/keywords/model-validation",
+            "display_name": "model validation",
+            "score": 0.574999988079071
+          },
+          {
+            "id": "https://openalex.org/keywords/calibration",
+            "display_name": "calibration",
+            "score": 0.4970000088214874
+          },
+          {
+            "id": "https://openalex.org/keywords/discrimination-statistics",
+            "display_name": "discrimination (statistics)",
+            "score": 0.6700000166893005
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-prediction",
+            "display_name": "risk prediction",
+            "score": 0.3889999985694885
+          },
+          {
+            "id": "https://openalex.org/keywords/prostate-cancer",
+            "display_name": "prostate cancer",
+            "score": 0.6830000281333923
+          },
+          {
+            "id": "https://openalex.org/keywords/kidney-cancer",
+            "display_name": "kidney cancer",
+            "score": 0.7919999957084656
+          },
+          {
+            "id": "https://openalex.org/keywords/bladder-cancer",
+            "display_name": "bladder cancer",
+            "score": 0.671999990940094
+          },
+          {
+            "id": "https://openalex.org/keywords/statistical-principles",
+            "display_name": "statistical principles",
+            "score": 0.3959999978542328
+          },
+          {
+            "id": "https://openalex.org/keywords/overfitting",
+            "display_name": "overfitting",
+            "score": 0.5009999871253967
+          },
+          {
+            "id": "https://openalex.org/keywords/external-validation",
+            "display_name": "external validation",
+            "score": 0.4860000014305115
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-stratification",
+            "display_name": "risk stratification",
+            "score": 0.33399999141693115
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-communication-tools",
+            "display_name": "risk communication tools",
+            "score": 0.9769999980926514
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C34626388",
+            "wikidata": "https://www.wikidata.org/wiki/Q721129",
+            "display_name": "Nomogram",
+            "level": 2,
+            "score": 0.796061098575592
+          },
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.6321693062782288
+          },
+          {
+            "id": "https://openalex.org/C83867959",
+            "wikidata": "https://www.wikidata.org/wiki/Q371467",
+            "display_name": "Scopus",
+            "level": 3,
+            "score": 0.6172797083854675
+          },
+          {
+            "id": "https://openalex.org/C2779473830",
+            "wikidata": "https://www.wikidata.org/wiki/Q1540899",
+            "display_name": "MEDLINE",
+            "level": 2,
+            "score": 0.4370518624782562
+          },
+          {
+            "id": "https://openalex.org/C148863701",
+            "wikidata": "https://www.wikidata.org/wiki/Q5292",
+            "display_name": "Encyclopedia",
+            "level": 2,
+            "score": 0.4106552004814148
+          },
+          {
+            "id": "https://openalex.org/C161191863",
+            "wikidata": "https://www.wikidata.org/wiki/Q199655",
+            "display_name": "Library science",
+            "level": 1,
+            "score": 0.3603578209877014
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.27931487560272217
+          },
+          {
+            "id": "https://openalex.org/C126322002",
+            "wikidata": "https://www.wikidata.org/wiki/Q11180",
+            "display_name": "Internal medicine",
+            "level": 1,
+            "score": 0.14920496940612793
+          },
+          {
+            "id": "https://openalex.org/C199539241",
+            "wikidata": "https://www.wikidata.org/wiki/Q7748",
+            "display_name": "Law",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C17744445",
+            "wikidata": "https://www.wikidata.org/wiki/Q36442",
+            "display_name": "Political science",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D002138",
+            "descriptor_name": "Calibration",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D005544",
+            "descriptor_name": "Forecasting",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D006801",
+            "descriptor_name": "Humans",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D011237",
+            "descriptor_name": "Predictive Value of Tests",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D011336",
+            "descriptor_name": "Probability",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015203",
+            "descriptor_name": "Reproducibility of Results",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015233",
+            "descriptor_name": "Models, Statistical",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D019540",
+            "descriptor_name": "Area Under Curve",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D049451",
+            "descriptor_name": "Nomograms",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          }
+        ],
+        "locations_count": 3,
+        "locations": [
+          {
+            "id": "doi:10.1016/j.urology.2010.06.019",
+            "doi": "https://doi.org/10.1016/j.urology.2010.06.019",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1016/j.urology.2010.06.019",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S196979320",
+              "display_name": "Urology",
+              "issn_l": "0090-4295",
+              "issn": [
+                "0090-4295",
+                "1527-9995"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-1",
+                "ki-jl-1",
+                "medline",
+                "norway-2",
+                "poland-100",
+                "russia-white-list-2",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320990",
+              "host_organization_name": "Elsevier BV",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320990"
+              ],
+              "host_organization_lineage_names": [
+                "Elsevier BV"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Urology",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:21030068",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/21030068",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Urology",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:2997853",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2997853/",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "Urology",
+            "raw_type": "Text"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:pubmedcentral.nih.gov:2997853",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2997853/",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": "Urology",
+          "raw_type": "Text"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 0.8048999905586243,
+            "id": "https://metadata.un.org/sdg/3",
+            "display_name": "Good health and well-being"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G6457718916",
+            "display_name": null,
+            "funder_award_id": "P50 CA92629",
+            "funder_id": "https://openalex.org/F4320334039",
+            "funder_display_name": "Sidney Kimmel Center for Prostate and Urologic Cancers"
+          },
+          {
+            "id": "https://openalex.org/G9000900376",
+            "display_name": "SPORE in Prostate Cancer",
+            "funder_award_id": "P50CA092629",
+            "funder_id": "https://openalex.org/F4320337351",
+            "funder_display_name": "National Cancer Institute"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306163",
+            "display_name": "Prostate Cancer Foundation",
+            "ror": "https://ror.org/01npwtv09"
+          },
+          {
+            "id": "https://openalex.org/F4320334039",
+            "display_name": "Sidney Kimmel Center for Prostate and Urologic Cancers",
+            "ror": "https://ror.org/037e5pc19"
+          },
+          {
+            "id": "https://openalex.org/F4320337351",
+            "display_name": "National Cancer Institute",
+            "ror": "https://ror.org/040gcmg81"
+          }
+        ],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 11,
+        "referenced_works": [
+          "https://openalex.org/W1991418021",
+          "https://openalex.org/W1999313618",
+          "https://openalex.org/W1999799977",
+          "https://openalex.org/W2005567712",
+          "https://openalex.org/W2017217416",
+          "https://openalex.org/W2053583905",
+          "https://openalex.org/W2066172202",
+          "https://openalex.org/W2119910794",
+          "https://openalex.org/W2168282586",
+          "https://openalex.org/W2297716127",
+          "https://openalex.org/W7075607766"
+        ],
+        "related_works": [
+          "https://openalex.org/W2554074561",
+          "https://openalex.org/W4247601542",
+          "https://openalex.org/W4315489477",
+          "https://openalex.org/W4409527218",
+          "https://openalex.org/W51558887",
+          "https://openalex.org/W2040449627",
+          "https://openalex.org/W2492567041",
+          "https://openalex.org/W7167813553",
+          "https://openalex.org/W2057400233",
+          "https://openalex.org/W3009182324"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2071727133",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 11
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 10
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 5
+          }
+        ],
+        "updated_date": "2026-11-21T10:27:49.728292",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2350228518",
+        "doi": "https://doi.org/10.1038/nrclinonc.2016.81",
+        "title": "The STHLM3 prostate cancer diagnostic study: calibration, clarification, and comments",
+        "display_name": "The STHLM3 prostate cancer diagnostic study: calibration, clarification, and comments",
+        "alternate_titles": [],
+        "relevance_score": 32.301823,
+        "publication_year": 2016,
+        "publication_date": "2016-05-10",
+        "ids": {
+          "openalex": "https://openalex.org/W2350228518",
+          "doi": "https://doi.org/10.1038/nrclinonc.2016.81",
+          "mag": "2350228518",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/27161937"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1038/nrclinonc.2016.81",
+          "doi": "https://doi.org/10.1038/nrclinonc.2016.81",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1038/nrclinonc.2016.81",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S41981144",
+            "display_name": "Nature Reviews Clinical Oncology",
+            "issn_l": "1759-4774",
+            "issn": [
+              "1759-4774",
+              "1759-4782"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "jufo-2",
+              "ki-jl-2",
+              "medline",
+              "norway-1",
+              "poland-200",
+              "russia-white-list-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Nature Reviews Clinical Oncology",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2350228518"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5087481089",
+              "display_name": "Sigrid Carlsson",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-3553-5710",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-3553-5710"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1334819555",
+                "display_name": "Memorial Sloan Kettering Cancer Center",
+                "ror": "https://ror.org/02yrq0923",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1334819555"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I881427289",
+                "display_name": "University of Gothenburg",
+                "ror": "https://ror.org/01tm6cn81",
+                "country_code": "SE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I881427289"
+                ]
+              }
+            ],
+            "countries": [
+              "SE",
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Sigrid V. Carlsson",
+            "raw_affiliation_strings": [
+              "Department of Surgery and the Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, 485 Lexington Avenue, New York, New York 10017, USA; and at the Department of Urology, Sahlgrenska Academy at Gothenburg University, Bruna Str\u00e5ket 11B, 41345 Gothenburg, Sweden",
+              "Sigrid V. Carlsson is at the Department of Surgery and the Department of Epidemiology and Biostatistics, USA",
+              "at the Department of Urology, Memorial Sloan Kettering Cancer Center, 485 Lexington Avenue, New York, New York 10017, Sahlgrenska Academy at Gothenburg University, Bruna Str\u00e5ket 11B, 41345 Gothenburg, Sweden.,"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Surgery and the Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, 485 Lexington Avenue, New York, New York 10017, USA; and at the Department of Urology, Sahlgrenska Academy at Gothenburg University, Bruna Str\u00e5ket 11B, 41345 Gothenburg, Sweden",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555",
+                  "https://openalex.org/I881427289"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Sigrid V. Carlsson is at the Department of Surgery and the Department of Epidemiology and Biostatistics, USA",
+                "institution_ids": []
+              },
+              {
+                "raw_affiliation_string": "at the Department of Urology, Memorial Sloan Kettering Cancer Center, 485 Lexington Avenue, New York, New York 10017, Sahlgrenska Academy at Gothenburg University, Bruna Str\u00e5ket 11B, 41345 Gothenburg, Sweden.,",
+                "institution_ids": [
+                  "https://openalex.org/I1334819555",
+                  "https://openalex.org/I881427289"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5054374857",
+              "display_name": "Michael W. Kattan",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-3840-4161",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3840-4161"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1316902750",
+                "display_name": "Cleveland Clinic",
+                "ror": "https://ror.org/03xjacd83",
+                "country_code": "US",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I1316902750"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Michael W. Kattan",
+            "raw_affiliation_strings": [
+              "Department of Quantitative Health Sciences, Cleveland Clinic Foundation, 9500 Euclid Avenue, Cleveland, Ohio 44195, USA",
+              "Michael W. Kattan is at the Department of Quantitative Health Sciences, Cleveland Clinic Foundation, 9500 Euclid Avenue, Cleveland, Ohio 44195, USA.,"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Quantitative Health Sciences, Cleveland Clinic Foundation, 9500 Euclid Avenue, Cleveland, Ohio 44195, USA",
+                "institution_ids": [
+                  "https://openalex.org/I1316902750"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Michael W. Kattan is at the Department of Quantitative Health Sciences, Cleveland Clinic Foundation, 9500 Euclid Avenue, Cleveland, Ohio 44195, USA.,",
+                "institution_ids": [
+                  "https://openalex.org/I1316902750"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 2,
+        "institutions_distinct_count": 3,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5054374857",
+          "https://openalex.org/A5087481089"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I1316902750",
+          "https://openalex.org/I1334819555",
+          "https://openalex.org/I881427289"
+        ],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.2735,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 4,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.57011456,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 86,
+          "max": 92
+        },
+        "biblio": {
+          "volume": "13",
+          "issue": "6",
+          "first_page": "394",
+          "last_page": "394"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10124",
+          "display_name": "Prostate Cancer Diagnosis and Treatment",
+          "score": 0.9735999703407288,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2748",
+            "display_name": "Urology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/27",
+            "display_name": "Medicine"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/4",
+            "display_name": "Health Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10124",
+            "display_name": "Prostate Cancer Diagnosis and Treatment",
+            "score": 0.9735999703407288,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2748",
+              "display_name": "Urology"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10556",
+            "display_name": "Global Cancer Incidence and Screening",
+            "score": 0.00419999985024333,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2730",
+              "display_name": "Oncology"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14374",
+            "display_name": "Statistical Methods in Epidemiology",
+            "score": 0.0038999998942017555,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/prostate-cancer",
+            "display_name": "prostate cancer",
+            "score": 0.8920000195503235
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-prediction-model",
+            "display_name": "risk prediction model",
+            "score": 0.7139999866485596
+          },
+          {
+            "id": "https://openalex.org/keywords/psa-screening",
+            "display_name": "PSA screening",
+            "score": 0.7630000114440918
+          },
+          {
+            "id": "https://openalex.org/keywords/model-calibration",
+            "display_name": "model calibration",
+            "score": 0.621999979019165
+          },
+          {
+            "id": "https://openalex.org/keywords/predictive-model-performance",
+            "display_name": "prediction model performance",
+            "score": 0.6370000243186951
+          },
+          {
+            "id": "https://openalex.org/keywords/risk-stratification",
+            "display_name": "risk stratification",
+            "score": 0.5320000052452087
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C71924100",
+            "wikidata": "https://www.wikidata.org/wiki/Q11190",
+            "display_name": "Medicine",
+            "level": 0,
+            "score": 0.8915499448776245
+          },
+          {
+            "id": "https://openalex.org/C2780192828",
+            "wikidata": "https://www.wikidata.org/wiki/Q181257",
+            "display_name": "Prostate cancer",
+            "level": 3,
+            "score": 0.8018314838409424
+          },
+          {
+            "id": "https://openalex.org/C19527891",
+            "wikidata": "https://www.wikidata.org/wiki/Q1120908",
+            "display_name": "Medical physics",
+            "level": 1,
+            "score": 0.5269722938537598
+          },
+          {
+            "id": "https://openalex.org/C165838908",
+            "wikidata": "https://www.wikidata.org/wiki/Q736777",
+            "display_name": "Calibration",
+            "level": 2,
+            "score": 0.4588615894317627
+          },
+          {
+            "id": "https://openalex.org/C143998085",
+            "wikidata": "https://www.wikidata.org/wiki/Q162555",
+            "display_name": "Oncology",
+            "level": 1,
+            "score": 0.43622541427612305
+          },
+          {
+            "id": "https://openalex.org/C121608353",
+            "wikidata": "https://www.wikidata.org/wiki/Q12078",
+            "display_name": "Cancer",
+            "level": 2,
+            "score": 0.41725456714630127
+          },
+          {
+            "id": "https://openalex.org/C29456083",
+            "wikidata": "https://www.wikidata.org/wiki/Q1221899",
+            "display_name": "Gynecology",
+            "level": 1,
+            "score": 0.3452634811401367
+          },
+          {
+            "id": "https://openalex.org/C126322002",
+            "wikidata": "https://www.wikidata.org/wiki/Q11180",
+            "display_name": "Internal medicine",
+            "level": 1,
+            "score": 0.3206854462623596
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.09337493777275085
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D002138",
+            "descriptor_name": "Calibration",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D006801",
+            "descriptor_name": "Humans",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D008297",
+            "descriptor_name": "Male",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D011471",
+            "descriptor_name": "Prostatic Neoplasms",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          },
+          {
+            "descriptor_ui": "D017430",
+            "descriptor_name": "Prostate-Specific Antigen",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": true
+          }
+        ],
+        "locations_count": 2,
+        "locations": [
+          {
+            "id": "doi:10.1038/nrclinonc.2016.81",
+            "doi": "https://doi.org/10.1038/nrclinonc.2016.81",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1038/nrclinonc.2016.81",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S41981144",
+              "display_name": "Nature Reviews Clinical Oncology",
+              "issn_l": "1759-4774",
+              "issn": [
+                "1759-4774",
+                "1759-4782"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "jufo-2",
+                "ki-jl-2",
+                "medline",
+                "norway-1",
+                "poland-200",
+                "russia-white-list-1"
+              ],
+              "host_organization": "https://openalex.org/P4310319908",
+              "host_organization_name": "Nature Portfolio",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319908",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Nature Portfolio",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Nature Reviews Clinical Oncology",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:27161937",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/27161937",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Nature reviews. Clinical oncology",
+            "raw_type": "Journal Article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [
+          {
+            "score": 0.98580002784729,
+            "id": "https://metadata.un.org/sdg/3",
+            "display_name": "Good health and well-being"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G2051006376",
+            "display_name": null,
+            "funder_award_id": "CA008748",
+            "funder_id": "https://openalex.org/F4320309468",
+            "funder_display_name": "Memorial Sloan-Kettering Cancer Center"
+          },
+          {
+            "id": "https://openalex.org/G9000856728",
+            "display_name": "Cancer Center Support Grant",
+            "funder_award_id": "P30CA008748",
+            "funder_id": "https://openalex.org/F4320337351",
+            "funder_display_name": "National Cancer Institute"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320309468",
+            "display_name": "Memorial Sloan-Kettering Cancer Center",
+            "ror": "https://ror.org/02yrq0923"
+          },
+          {
+            "id": "https://openalex.org/F4320321413",
+            "display_name": "AFA F\u00f6rs\u00e4kring",
+            "ror": "https://ror.org/02e1fjy29"
+          },
+          {
+            "id": "https://openalex.org/F4320337351",
+            "display_name": "National Cancer Institute",
+            "ror": "https://ror.org/040gcmg81"
+          }
+        ],
+        "has_content": {
+          "pdf": false,
+          "grobid_xml": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 5,
+        "referenced_works": [
+          "https://openalex.org/W2119910794",
+          "https://openalex.org/W2133022545",
+          "https://openalex.org/W2140409791",
+          "https://openalex.org/W2272966210",
+          "https://openalex.org/W2358356537"
+        ],
+        "related_works": [
+          "https://openalex.org/W2140409791",
+          "https://openalex.org/W2589975528",
+          "https://openalex.org/W2340237006",
+          "https://openalex.org/W2128409425",
+          "https://openalex.org/W2142157046",
+          "https://openalex.org/W2556512152",
+          "https://openalex.org/W2891406695",
+          "https://openalex.org/W2588605153",
+          "https://openalex.org/W2897513376",
+          "https://openalex.org/W2149626611"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2350228518",
+        "counts_by_year": [
+          {
+            "year": 2023,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-13T13:42:25.865203",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

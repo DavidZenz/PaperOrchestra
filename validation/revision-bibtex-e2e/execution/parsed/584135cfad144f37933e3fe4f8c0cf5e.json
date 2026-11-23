@@ -1,0 +1,75 @@
+{
+  "section_name": "Additive Offset Adjustment and Intercept Recalibration under Squared Error Loss",
+  "candidates": [
+    {
+      "title": "Greedy Function Approximation: A Gradient Boosting Machine",
+      "year": 2001,
+      "reason": "Provides the foundational additive stagewise formulation where the initial baseline predictor is determined by minimizing squared error loss via a constant additive offset, yielding the sample mean, and subsequent stages fit fixed residuals."
+    },
+    {
+      "title": "A calibration hierarchy for risk models was defined: from utopia to empirical data",
+      "year": 2016,
+      "reason": "Formulates the canonical hierarchy of predictive recalibration, formally defining Level 1 calibration (mean calibration / calibration-in-the-large) as adjusting solely an additive intercept while keeping the underlying predictor completely fixed."
+    },
+    {
+      "title": "Updating methods improved the performance of a clinical prediction model in new patients",
+      "year": 2008,
+      "reason": "Directly analyzes intercept updating (recalibration-in-the-large) holding the predictor fixed as an offset variable, demonstrating that an additive constant adjustment corrects systematic mean prediction error without modifying predictor discrimination."
+    },
+    {
+      "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+      "year": 2004,
+      "reason": "Examines the mathematics and sample size implications of adjusting only the intercept parameter while holding the linear predictor fixed, proving that this isolates and corrects constant baseline shift."
+    },
+    {
+      "title": "A closed testing procedure to select an appropriate method for updating a prediction model",
+      "year": 2017,
+      "reason": "Presents a formal statistical framework testing whether updating only the additive intercept while constraining the predictor slope to unity suffices to remove systematic prediction bias."
+    },
+    {
+      "title": "Partial Time Regressions as Compared with Individual Trends",
+      "year": 1933,
+      "reason": "Establishes the seminal Frisch-Waugh theorem showing that partialling out a constant intercept term under least squares is mathematically identical to subtracting the sample mean of the residuals."
+    },
+    {
+      "title": "Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis",
+      "year": 1963,
+      "reason": "Generalizes the Frisch-Waugh-Lovell theorem, proving algebraically that least-squares projection onto a constant vector forces the sample mean of the residual errors to exactly zero."
+    },
+    {
+      "title": "Generalized Linear Models",
+      "year": 1972,
+      "reason": "Introduces the formal mathematical formulation of an offset term (a predictor component with a fixed unit coefficient) and demonstrates that fitting an intercept with an identity link minimizes squared error by estimating the mean residual."
+    },
+    {
+      "title": "A New Vector Partition of the Probability Score",
+      "year": 1973,
+      "reason": "Derives the algebraic decomposition of mean squared error into calibration/reliability and resolution components, showing analytically that an additive prediction shift directly eliminates the calibration error component."
+    },
+    {
+      "title": "Neural Networks and the Bias/Variance Dilemma",
+      "year": 1992,
+      "reason": "Provides the foundational bias-variance decomposition under squared error loss, showing that a fixed, uniform prediction error acts as an isolated additive bias term that can be eliminated without altering predictor variance."
+    },
+    {
+      "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+      "year": 2018,
+      "reason": "Formulates post-hoc recalibration techniques for continuous regression settings, holding the underlying predictor fixed while updating output parameters to align predictions with empirical observation."
+    },
+    {
+      "title": "Evaluating and Calibrating Uncertainty Prediction in Regression Tasks",
+      "year": 2022,
+      "reason": "Investigates regression recalibration under squared error and residual variance evaluation, analyzing post-processing adjustments applied to fixed predictor outputs."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Systematically compares post-processing calibration functions where underlying representations or predictor outputs remain frozen, evaluating affine transformations that include additive intercept shifts."
+    },
+    {
+      "title": "Predicting Good Probabilities With Supervised Learning",
+      "year": 2005,
+      "reason": "Analyzes post-hoc calibration methods holding model predictions fixed, evaluating squared error (Brier score) improvements achieved by fitting intercept and scaling parameters on validation sets."
+    }
+  ]
+}

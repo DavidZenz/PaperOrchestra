@@ -1,0 +1,783 @@
+{
+    "Nelder1972GeneralizedLinear": {
+        "citation_key": "Nelder1972GeneralizedLinear",
+        "title": "Generalized Linear Models",
+        "authors": [
+            "John Ashworth Nelder",
+            "R. W. M. Wedderburn"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series A (General)",
+        "year": 1972,
+        "abstract": "The technique of iterative weighted linear regression can be used to obtain maximum likelihood estimates of the parameters with observations distributed according to some exponential family and systematic effects that can be made linear by a suitable transformation. A generalization of the analysis of variance is given for these models using log-likelihoods. These generalized linear models are illustrated by examples relating to four distributions; the Normal, Binomial (probit analysis, etc.), Poisson (contingency tables) and gamma (variance components). The implications of the approach in designing statistics courses are discussed."
+    },
+    "Copas1983RegressionPrediction": {
+        "citation_key": "Copas1983RegressionPrediction",
+        "title": "Regression, Prediction and Shrinkage",
+        "authors": [
+            "J. B. Copas"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "year": 1983,
+        "abstract": "Summary \n                The fit of a regression predictor to new data is nearly always worse than its fit to the original data. Anticipating this shrinkage leads to Stein-type predictors which, under certain assumptions, give a uniformly lower prediction mean squared error than least squares. Shrinkage can be particularly marked when stepwise fitting is used: the shrinkage is then closer to that expected of the full regression rather than of the subset regression actually fitted. Preshrunk predictors for selected subsets are proposed and tested on a number of practical examples. Both multiple and binary (logistic) regression models are considered."
+    },
+    "Miller1991ValidationTechniques": {
+        "citation_key": "Miller1991ValidationTechniques",
+        "title": "Validation techniques for logistic regression models",
+        "authors": [
+            "Michael E. Miller",
+            "Siu L. Hui",
+            "William M. Tierney"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 1991,
+        "abstract": "Abstract  This paper presents a comprehensive approach to the validation of logistic prediction models. It reviews measures of overall goodness\u2010of\u2010fit, and indices of calibration and refinement. Using a model\u2010based approach developed by Cox, we adapt logistic regression diagnostic techniques for use in model validation. This allows identification of problematic predictor variables in the prediction model as well as influential observations in the validation data that adversely affect the fit of the model. In appropriate situations, recommendations are made for correction of models that provide poor fit."
+    },
+    "Harrell1996MultivariablePrognostic": {
+        "citation_key": "Harrell1996MultivariablePrognostic",
+        "title": "MULTIVARIABLE PROGNOSTIC MODELS: ISSUES IN DEVELOPING MODELS, EVALUATING ASSUMPTIONS AND ADEQUACY, AND MEASURING AND REDUCING ERRORS",
+        "authors": [
+            "Frank E. Harrell",
+            "Kerry L. Lee",
+            "Daniel B. Mark"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 1996,
+        "abstract": "Multivariable regression models are powerful tools that are used frequently in studies of clinical outcomes. These models can use a mixture of categorical and continuous variables and can handle partially observed (censored) responses. However, uncritical application of modelling techniques can result in models that poorly fit the dataset at hand, or, even more likely, inaccurately predict outcomes on new subjects. One must know how to measure qualities of a model's fit in order to avoid poorly fitted or overfitted models. Measurement of predictive accuracy can be difficult for survival time data in the presence of censoring. We discuss an easily interpretable index of predictive discrimination as well as methods for assessing calibration of predicted survival probabilities. Both types of predictive accuracy should be unbiasedly validated using bootstrapping or cross-validation, before using predictions in a new data series. We discuss some of the hazards of poorly fitted and overfitted regression models and present one modelling strategy that avoids many of the problems discussed. The methods described are applicable to all regression models, but are particularly needed for binary, ordinal, and time-to-event outcomes. Methods are illustrated with a survival analysis in prostate cancer using Cox regression."
+    },
+    "Platt1999ProbabilisticOutputs": {
+        "citation_key": "Platt1999ProbabilisticOutputs",
+        "title": "Probabilistic Outputs for Support vector Machines and Comparisons to Regularized Likelihood Methods",
+        "authors": [
+            "John C. Platt"
+        ],
+        "venue": "arXiv",
+        "year": 1999,
+        "abstract": "The output of a classifier should be a calibrated posterior probability to enable post-processing. Standard SVMs do not provide such probabilities. One method to create probabilities is to directly train a kernel classifier with a logit link function and a regularized maximum likelihood score. However, training with a maximum likelihood score will produce non-sparse kernel machines. Instead, we train an SVM, then train the parameters of an additional sigmoid function to map the SVM outputs into probabilities. This chapter compares classification error rate and likelihood scores for an SVM plus sigmoid versus a kernel method trained with a regularized likelihood error function. These methods are tested on three data-mining-style data sets. The SVM+sigmoid yields probabilities of comparable quality to the regularized maximum likelihood kernel method, while still retaining the sparseness of the SVM."
+    },
+    "Friedman2001GreedyFunction": {
+        "citation_key": "Friedman2001GreedyFunction",
+        "title": "Greedy function approximation: A gradient boosting machine.",
+        "authors": [
+            "Jerome H. Friedman"
+        ],
+        "venue": "The Annals of Statistics",
+        "year": 2001,
+        "abstract": "Function estimation/approximation is viewed from the perspective of numerical optimization in function space, rather than parameter space. A connection is made between stagewise additive expansions and steepest-descent minimization. A general gradient descent \u201cboosting\u201d paradigm is developed for additive expansions based on any fitting criterion.Specific algorithms are presented for least-squares, least absolute deviation, and Huber-M loss functions for regression, and multiclass logistic likelihood for classification. Special enhancements are derived for the particular case where the individual additive components are regression trees, and tools for interpreting such \u201cTreeBoost\u201d models are presented. Gradient boosting of regression trees produces competitive, highly robust, interpretable procedures for both regression and classification, especially appropriate for mining less than clean data. Connections between this approach and the boosting methods of Freund and Shapire and Friedman, Hastie and Tibshirani are discussed."
+    },
+    "Steyerberg2009AssessingPerformance": {
+        "citation_key": "Steyerberg2009AssessingPerformance",
+        "title": "Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures",
+        "authors": [
+            "Ewout Willem Steyerberg",
+            "Andrew Julian Vickers",
+            "Nancy R. Cook",
+            "Thomas Alexander Gerds",
+            "Mithat G\u00f6nen",
+            "Nancy A. Obuchowski",
+            "Michael J. Pencina",
+            "Michael W. Kattan"
+        ],
+        "venue": "Epidemiology",
+        "year": 2009,
+        "abstract": "The performance of prediction models can be assessed using a variety of methods and metrics. Traditional measures for binary and survival outcomes include the Brier score to indicate overall model performance, the concordance (or c) statistic for discriminative ability (or area under the receiver operating characteristic [ROC] curve), and goodness-of-fit statistics for calibration.Several new measures have recently been proposed that can be seen as refinements of discrimination measures, including variants of the c statistic for survival, reclassification tables, net reclassification improvement (NRI), and integrated discrimination improvement (IDI). Moreover, decision-analytic measures have been proposed, including decision curves to plot the net benefit achieved by making decisions based on model predictions.We aimed to define the role of these relatively novel approaches in the evaluation of the performance of prediction models. For illustration, we present a case study of predicting the presence of residual tumor versus benign tissue in patients with testicular cancer (n = 544 for model development, n = 273 for external validation).We suggest that reporting discrimination and calibration will always be important for a prediction model. Decision-analytic measures should be reported if the predictive model is to be used for clinical decisions. Other measures of performance may be warranted in specific applications, such as reclassification metrics to gain insight into the v... [Truncated]"
+    },
+    "Guo2017CalibrationModern": {
+        "citation_key": "Guo2017CalibrationModern",
+        "title": "On Calibration of Modern Neural Networks",
+        "authors": [
+            "Chuan Guo",
+            "Geoff Pleiss",
+            "Yu Sun",
+            "Kilian Q. Weinberger"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "year": 2017,
+        "abstract": "Confidence calibration -- the problem of predicting probability estimates representative of the true correctness likelihood -- is important for classification models in many applications. We discover that modern neural networks, unlike those from a decade ago, are poorly calibrated. Through extensive experiments, we observe that depth, width, weight decay, and Batch Normalization are important factors influencing calibration. We evaluate the performance of various post-processing calibration methods on state-of-the-art architectures with image and document classification datasets. Our analysis and experiments not only offer insights into neural network learning, but also provide a simple and straightforward recipe for practical settings: on most datasets, temperature scaling -- a single-parameter variant of Platt Scaling -- is surprisingly effective at calibrating predictions."
+    },
+    "Initiative2019CalibrationAchilles": {
+        "citation_key": "Initiative2019CalibrationAchilles",
+        "title": "Calibration: the Achilles heel of predictive analytics",
+        "authors": [
+            "On behalf of Topic Group \u2018Evaluating diagnostic tests and prediction models\u2019 of the STRATOS initiative",
+            "Ben Van Calster",
+            "David J. McLernon",
+            "Maarten van Smeden",
+            "Laure Wynants",
+            "Ewout W. Steyerberg"
+        ],
+        "venue": "BMC Medicine",
+        "year": 2019,
+        "abstract": "Abstract \n                   \n                     Background \n                     The assessment of calibration performance of risk prediction models based on regression or more flexible machine learning algorithms receives little attention. \n                   \n                   \n                     Main text \n                     Herein, we argue that this needs to change immediately because poorly calibrated algorithms can be misleading and potentially harmful for clinical decision-making. We summarize how to avoid poor calibration at algorithm development and how to assess calibration at algorithm validation, emphasizing balance between model complexity and the available sample size. At external validation, calibration curves require sufficiently large samples. Algorithm updating should be considered for appropriate support of clinical practice. \n                   \n                   \n                     Conclusion \n                     Efforts are required to avoid poor calibration when developing prediction models, to evaluate calibration when validating models, and to update models when indicated. The ultimate aim is to optimize the utility of predictive analytics for shared decision-making and patient counseling."
+    },
+    "Clements1996InterceptCorrections": {
+        "citation_key": "Clements1996InterceptCorrections",
+        "title": "Intercept corrections and structural change",
+        "authors": [
+            "Michael P. Clements",
+            "David Forbes Hendry"
+        ],
+        "venue": "Journal of Applied Econometrics",
+        "year": 1996,
+        "abstract": "Analyses of forecasting that assume a constant, time-invariant data generating process (DGP), and so implicitly rule out structural change or regime shifts in the economy, ignore an aspect of the real world responsible for some of the more dramatic historical episodes of predictive failure. Some models may offer greater protection against unforeseen structural breaks than others, and various tricks may be employed to robustify forecasts to change. We show that in certain states of nature, vector autoregressions in the differences of the variables (in the spirit of Box-Jenkins time-series modelling), can outperform vector \u2018equilibrium-correction\u2019 mechanisms. However, appropriate intercept corrections can enhance the performance of the latter, albeit that reductions in forecast bias may only be achieved at the cost of inflated forecast error variances."
+    },
+    "Clements1998ForecastingEconomic": {
+        "citation_key": "Clements1998ForecastingEconomic",
+        "title": "Forecasting Economic Time Series",
+        "authors": [
+            "Michael P. Clements",
+            "David Forbes Hendry"
+        ],
+        "venue": "Cambridge University Press eBooks",
+        "year": 1998,
+        "abstract": "This book provides a formal analysis of the models, procedures, and measures of economic forecasting with a view to improving forecasting practice. David Hendry and Michael Clements base the analyses on assumptions pertinent to the economies to be forecast, viz. a non-constant, evolving economic system, and econometric models whose form and structure are unknown a priori. The authors find that conclusions which can be established formally for constant-parameter stationary processes and correctly-specified models often do not hold when unrealistic assumptions are relaxed. Despite the difficulty of proceeding formally when models are mis-specified in unknown ways for non-stationary processes that are subject to structural breaks, Hendry and Clements show that significant insights can be gleaned. For example, a formal taxonomy of forecasting errors can be developed, the role of causal information clarified, intercept corrections re-established as a method for achieving robustness against forms of structural change, and measures of forecast accuracy re-interpreted."
+    },
+    "Turner1990RoleJudgement": {
+        "citation_key": "Turner1990RoleJudgement",
+        "title": "The role of judgement in macroeconomic forecasting",
+        "authors": [
+            "D. S. Turner"
+        ],
+        "venue": "Journal of Forecasting",
+        "year": 1990,
+        "abstract": "Abstract  This paper examines the rationale for, and influence of, judgemental adjustments in macroeconomic forecasting, using two particular forecasts for the UK economy recently published by the National Institute of Economic and Social Research and the London Business School. It is found that in some cases such adjustments have a major effect on the forecasts and can also explain some of the differences in the two rival forecasts. However the number of adjustments for which this is true is not great. An implication of these findings is that, if these forecasts can be regarded as typical, then macroeconomic forecasters should be urged to give a reasonable account of the role of judgemental adjustments in their forecasts, particularly since the amount of information which would be required is not likely to be excessive."
+    },
+    "Steyerberg2004ValidationUpdating": {
+        "citation_key": "Steyerberg2004ValidationUpdating",
+        "title": "Validation and updating of predictive logistic regression models: a study on sample size and shrinkage",
+        "authors": [
+            "Ewout W. Steyerberg",
+            "Gerard J. J. M. Borsboom",
+            "Hans C. van Houwelingen",
+            "Marinus J. C. Eijkemans",
+            "J. Dik F. Habbema"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 2004,
+        "abstract": "Abstract  A logistic regression model may be used to provide predictions of outcome for individual patients at another centre than where the model was developed. When empirical data are available from this centre, the validity of predictions can be assessed by comparing observed outcomes and predicted probabilities. Subsequently, the model may be updated to improve predictions for future patients.  As an example, we analysed 30\u2010day mortality after acute myocardial infarction in a large data set (GUSTO\u2010I, n = 40 830). We validated and updated a previously published model from another study (TIMI\u2010II, n = 3339) in validation samples ranging from small (200 patients, 14 deaths) to large (10 000 patients, 700 deaths). Updated models were tested on independent patients. Updating methods included re\u2010calibration (re\u2010estimation of the intercept or slope of the linear predictor) and more structural model revisions (re\u2010estimation of some or all regression coefficients, model extension with more predictors). We applied heuristic shrinkage approaches in the model revision methods, such that regression coefficients were shrunken towards their re\u2010calibrated values. Parsimonious updating methods were found preferable to more extensive model revisions, which should only be attempted with relatively large validation samples in combination with shrinkage. Copyright \u00a9 2004 John Wiley & Sons, Ltd."
+    },
+    "Su2016ReviewStatistical": {
+        "citation_key": "Su2016ReviewStatistical",
+        "title": "A review of statistical updating methods for clinical prediction models",
+        "authors": [
+            "Ting-Li Su",
+            "Thomas Jaki",
+            "Graeme L Hickey",
+            "Iain Buchan",
+            "Matthew Sperrin"
+        ],
+        "venue": "Statistical Methods in Medical Research",
+        "year": 2016,
+        "abstract": "A clinical prediction model is a tool for predicting healthcare outcomes, usually within a specific population and context. A common approach is to develop a new clinical prediction model for each population and context; however, this wastes potentially useful historical information. A better approach is to update or incorporate the existing clinical prediction models already developed for use in similar contexts or populations. In addition, clinical prediction models commonly become miscalibrated over time, and need replacing or updating. In this article, we review a range of approaches for re-using and updating clinical prediction models; these fall in into three main categories: simple coefficient updating, combining multiple previous clinical prediction models in a meta-model and dynamic updating of models. We evaluated the performance (discrimination and calibration) of the different strategies using data on mortality following cardiac surgery in the United Kingdom: We found that no single strategy performed sufficiently well to be used to the exclusion of the others. In conclusion, useful tools exist for updating existing clinical prediction models to a new population or context, and these should be implemented rather than developing a new clinical prediction model from scratch, using a breadth of complementary statistical methods."
+    },
+    "Glahn1972UseModel": {
+        "citation_key": "Glahn1972UseModel",
+        "title": "The Use of Model Output Statistics (MOS) in Objective Weather Forecasting",
+        "authors": [
+            "Harry R. Glahn",
+            "Dale A. Lowry"
+        ],
+        "venue": "Journal of applied meteorology",
+        "year": 1972,
+        "abstract": "Model Output Statistics (MOS) is an objective weather forecasting technique which consists of determining a statistical relationship between a predictand and variables forecast by a numerical model at some projection time(s). It is, in effect, the determination of the \u201cweather related\u201d statistics of a numerical model. This technique, together with screening regression, has been applied to the prediction of surface wind, probability of precipitation, maximum temperature, cloud amount, and conditional probability of frozen precipitation. Predictors used include surface observations at initial time and predictions from the Subsynoptic Advection Model (SAM) and the Primitive Equation model used operationally by the National Weather Service. Verification scores have been computed, and, where possible, compared to scores for forecasts from other objective techniques and for the official forecasts. MOS forecasts of surface wind, probability of precipitation, and conditional probability of frozen precipitation are being disseminated by the National Weather Service over teletype and facsimile. It is concluded that MOS is a useful technique in objective weather forecasting."
+    },
+    "Anscombe1963ExaminationAnalysis": {
+        "citation_key": "Anscombe1963ExaminationAnalysis",
+        "title": "The Examination and Analysis of Residuals",
+        "authors": [
+            "Francis John Anscombe",
+            "John W. Tukey"
+        ],
+        "venue": "Technometrics",
+        "year": 1963,
+        "abstract": "A number of methods for examining the residuals remaining after a conventional analysis of variance or least-squares fitting have been explored during the past few years. These give information on various questions of interest, and in particular, aid in assessing the validity or appropriateness of the conventional analysis. The purpose of this paper is to make a variety of these techniques more easily available, so that they can be tried out more widely. Techniques of analysis, some graphical, some wholly numerical, and others mixed, are discussed in terms of the residuals that result from fitting row and column means to entries in a two-way array (or in several two-way arrays). Extensions to more complex situations, and some of the uses of the results of examination, are indicated."
+    },
+    "Cox1968GeneralDefinition": {
+        "citation_key": "Cox1968GeneralDefinition",
+        "title": "A General Definition of Residuals",
+        "authors": [
+            "D. R. Cox",
+            "E. J. Snell"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "year": 1968,
+        "abstract": "Summary \n                Residuals are usually defined in connection with linear models. Here a more general definition is given and some asymptotic properties found. Some illustrative examples are discussed, including a regression problem involving exponentially distributed errors and some problems concerning Poisson and binomially distributed observations."
+    },
+    "Stone1974CrossvalidatoryChoice": {
+        "citation_key": "Stone1974CrossvalidatoryChoice",
+        "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+        "authors": [
+            "M. Stone"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "year": 1974,
+        "abstract": "Summary \n                A generalized form of the cross-validation criterion is applied to the choice and assessment of prediction using the data-analytic concept of a prescription. The examples used to illustrate the application are drawn from the problem areas of univariate estimation, linear regression and analysis of variance."
+    },
+    "Box1976ScienceStatistics": {
+        "citation_key": "Box1976ScienceStatistics",
+        "title": "Science and Statistics",
+        "authors": [
+            "George E. P. Box"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1976,
+        "abstract": "Aspects of scientific method are discussed: In particular, its representation as a motivated iteration in which, in succession, practice confronts theory, and theory, practice. Rapid progress requires sufficient flexibility to profit from such confrontations, and the ability to devise parsimonious but effective models, to worry selectively about model inadequacies and to employ mathematics skillfully but appropriately. The development of statistical methods at Rothamsted Experimental Station by Sir Ronald Fisher is used to illustrate these themes."
+    },
+    "Belsley1980RegressionDiagnostics": {
+        "citation_key": "Belsley1980RegressionDiagnostics",
+        "title": "Regression Diagnostics: Identifying Influential Data and Sources of Collinearity",
+        "authors": [
+            "David A. Belsley",
+            "Edwin Kuh",
+            "Roy E. Welsch"
+        ],
+        "venue": "Wiley series in probability and statistics",
+        "year": 1980,
+        "abstract": "This book provides practicing statisticians and econometricians with new tools for assessing quality and reliability of regression estimates. Diagnostic techniques are developed that aid in the systematic location of data points that are unusual or inordinately influential, and measure the presence and intensity of collinear relations among the regression data and help to identify variables involved in each and pinpoint estimated coefficients potentially most adversely affected. It emphasizes diagnostics and includes suggestions for remedial action."
+    },
+    "Willmott1981ValidationModels": {
+        "citation_key": "Willmott1981ValidationModels",
+        "title": "ON THE VALIDATION OF MODELS",
+        "authors": [
+            "Cort J. Willmott"
+        ],
+        "venue": "Physical Geography",
+        "year": 1981,
+        "abstract": "Traditional methods of evaluating geographic models by statistical comparisons between observed and simulated variates are criticized. In particular, it is suggested that the correlation coefficient (r), its square and tests of their statistical significance are inadequate for such purposes. The root mean squared error (RMSE) and related measures as well as a new index of agreement (d) are alternatively presented as superior indices for making such comparisons. Arguments are made for increasing the number of digital algorithms and data plots being published."
+    },
+    "Ling1984ResidualsInfluence": {
+        "citation_key": "Ling1984ResidualsInfluence",
+        "title": "Residuals and Influence in Regression",
+        "authors": [
+            "Robert F. Ling",
+            "R. Dennis Cook",
+            "Sanford Weisberg"
+        ],
+        "venue": "Technometrics",
+        "year": 1984,
+        "abstract": "Author affiliations: University of Minnesota, Twin Cities, School of Statistics."
+    },
+    "Willmott1985StatisticsEvaluation": {
+        "citation_key": "Willmott1985StatisticsEvaluation",
+        "title": "Statistics for the evaluation and comparison of models",
+        "authors": [
+            "Cort J. Willmott",
+            "Steven G. Ackleson",
+            "Robert E. Davis",
+            "Johannes J. Feddema",
+            "Katherine M. Klink",
+            "David R. Legates",
+            "James O'Donnell",
+            "Clinton M. Rowe"
+        ],
+        "venue": "Journal of Geophysical Research: Oceans",
+        "year": 1985,
+        "abstract": "Procedures that may be used to evaluate the operational performance of a wide spectrum of geophysical models are introduced. Primarily using a complementary set of difference measures, both model accuracy and precision can be meaningfully estimated, regardless of whether the model predictions are manifested as scalars, directions, or vectors. It is additionally suggested that the reliability of the accuracy and precision measures can be determined from bootstrap estimates of confidence and significance. Recommended procedures are illustrated with a comparative evaluation of two models that estimate wind velocity over the South Atlantic Bight."
+    },
+    "Hastie1986GeneralizedAdditive": {
+        "citation_key": "Hastie1986GeneralizedAdditive",
+        "title": "Generalized Additive Models",
+        "authors": [
+            "Trevor J. Hastie",
+            "Robert John Tibshirani"
+        ],
+        "venue": "Statistical Science",
+        "year": 1986,
+        "abstract": "Likelihood-based regression models such as the normal linear regression model and the linear logistic model, assume a linear (or some other parametric) form for the covariates $X_1, X_2, \\cdots, X_p$. We introduce the class of generalized additive models which replaces the linear form $\\sum \\beta_jX_j$ by a sum of smooth functions $\\sum s_j(X_j)$. The $s_j(\\cdot)$'s are unspecified functions that are estimated using a scatterplot smoother, in an iterative procedure we call the local scoring algorithm. The technique is applicable to any likelihood-based regression model: the class of generalized linear models contains many of these. In this class the linear predictor $\\eta = \\Sigma \\beta_jX_j$ is replaced by the additive predictor $\\Sigma s_j(X_j)$; hence, the name generalized additive models. We illustrate the technique with binary response and survival data. In both cases, the method proves to be useful in uncovering nonlinear covariate effects. It has the advantage of being completely automatic, i.e., no \"detective work\" is needed on the part of the statistician. As a theoretical underpinning, the technique is viewed as an empirical method of maximizing the expected log likelihood, or equivalently, of minimizing the Kullback-Leibler distance to the true model."
+    },
+    "Efron1986HowBiased": {
+        "citation_key": "Efron1986HowBiased",
+        "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+        "authors": [
+            "Bradley Efron"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1986,
+        "abstract": "A regression model is fitted to an observed set of data. How accurate is the model for predicting future observations? The apparent error rate tends to underestimate the true error rate because the data have been used twice, both to fit the model and to check its accuracy. We provide simple estimates for the downward bias of the apparent error rate. The theory applies to general exponential family linear models and general measures of prediction error. Special attention is given to the case of logistic regression on binary data, with error rates measured by the proportion of misclassified cases. Several connected ideas are compared: Mallows's Cp , cross-validation, generalized cross-validation, the bootstrap, and Akaike's information criterion."
+    },
+    "Murphy1987GeneralFramework": {
+        "citation_key": "Murphy1987GeneralFramework",
+        "title": "A General Framework for Forecast Verification",
+        "authors": [
+            "Allan H. Murphy",
+            "Robert L. Winkler"
+        ],
+        "venue": "Monthly Weather Review",
+        "year": 1987,
+        "abstract": "A general framework for forecast verification based on the joint distribution of forecasts and observations is described. For further elaboration of the framework, two factorizations of the joint distribution are investigated: 1) the calibration-refinement factorization, which involves the conditional distributions of observations given forecasts and the marginal distribution of forecasts, and 2) the likelihood-base factorization, which involve the conditional distributions of forecasts given observations and the marginal distribution of observations. The names given to the factorizations reflect the fact that they relate to different attributes of the forecasts and/or observations. Several examples are used to illustrate the interpretation of these factorizations in the context of verification and to describe the relationship between the respective factorizations. Some insight into the potential utility of the framework is provided by demonstrating that basic elements and summary measures of the joint, conditional, and marginal distributions play key roles in current verification methods. The need for further investigation of the implications of this framework for verification theory and practice is emphasized, and some possible directions for future research in this area are identified."
+    },
+    "Murphy1988SkillScores": {
+        "citation_key": "Murphy1988SkillScores",
+        "title": "Skill Scores Based on the Mean Square Error and Their Relationships to the Correlation Coefficient",
+        "authors": [
+            "Allan H. Murphy"
+        ],
+        "venue": "Monthly Weather Review",
+        "year": 1988,
+        "abstract": "Several skill scores are defined, based on the mean-square-error measure of accuracy and alternative climatological standards of reference. Decompositions of these skill scores are formulated, each of which is shown to possess terms involving 1) the coefficient of correlation between the forecasts and observations, 2) a measure of the nonsystematic (i.e., conditional) bias in the forecast, and 3) a measure of the systematic (i.e., unconditional) bias in the forecasts. Depending on the choice of standard of reference, a particular decomposition may also contain terms relating to the degree of association between the reference forecasts and the observations. These decompositions yield analytical relationships between the respective skill scores and the correlation coefficient, document fundamental deficiencies in the correlation coefficient as a measure of performance, and provide additional insight into basic characteristics of forecasting performance. Samples of operational precipitation probability and minimum temperature forecasts are used to investigate the typical magnitudes of the terms in the decompositions. Some implications of the results for the practice of forecast verification are discussed."
+    },
+    "Geman1992NeuralNetworks": {
+        "citation_key": "Geman1992NeuralNetworks",
+        "title": "Neural Networks and the Bias/Variance Dilemma",
+        "authors": [
+            "Stuart Geman",
+            "Elie Bienenstock",
+            "Ren\u00e9 Doursat"
+        ],
+        "venue": "Neural Computation",
+        "year": 1992,
+        "abstract": "Feedforward neural networks trained by error backpropagation are examples of nonparametric regression estimators. We present a tutorial on nonparametric inference and its relation to neural networks, and we use the statistical viewpoint to highlight strengths and weaknesses of neural models. We illustrate the main points with some recognition experiments involving artificial data as well as handwritten numerals. In way of conclusion, we suggest that current-generation feedforward neural networks are largely inadequate for difficult problems in machine perception and machine learning, regardless of parallel-versus-serial hardware or other implementation issues. Furthermore, we suggest that the fundamental challenges in neural modeling are about representation rather than learning per se. This last point is supported by additional experiments with handwritten numerals."
+    },
+    "Cook1977DetectionInfluential": {
+        "citation_key": "Cook1977DetectionInfluential",
+        "title": "Detection of Influential Observation in Linear Regression",
+        "authors": [
+            "R. Dennis Cook"
+        ],
+        "venue": "Technometrics",
+        "year": 1977,
+        "abstract": "A new measure based on confidence ellipsoids is developed for judging the contribution of each data point to the determination of the least squares estimate of the parameter vector in full rank linear regression models. It is shown that the measure combines information from the studentized residuals and the variances of the residuals and predicted values. Two examples are presented."
+    },
+    "Hoaglin1978HatMatrix": {
+        "citation_key": "Hoaglin1978HatMatrix",
+        "title": "The Hat Matrix in Regression and ANOVA",
+        "authors": [
+            "David C. Hoaglin",
+            "Roy E. Welsch"
+        ],
+        "venue": "The American Statistician",
+        "year": 1978,
+        "abstract": "In least-squares fitting it is important to understand the influence which a data y value will have on each fitted y value. A projection matrix known as the hat matrix contains this information and, together with the Studentized residuals, provides a means of identifying exceptional data points. This approach also simplifies the calculations involved in removing a data point, and it requires only simple modifications in the preferred numerical least-squares algorithms."
+    },
+    "Bollen1985RegressionDiagnostics": {
+        "citation_key": "Bollen1985RegressionDiagnostics",
+        "title": "Regression Diagnostics: An Expository Treatment of Outliers and Influential Cases",
+        "authors": [
+            "Kenneth A. Bollen",
+            "Robert W. Jackman"
+        ],
+        "venue": "Sociological Methods & Research",
+        "year": 1985,
+        "abstract": "Gauging the robustness of regression estimates is especially important in small-sample analyses. Here, we examine recent developments in the detection and analysis of outliers and influential cases in multivariate studies. Specifically, we review five diagnostic procedures: partial regression plots, the \u201chat\u201d matrix, studentized residuals, DFITS i , and DFBETAS ij . The main part of the article presents two empirical applications (drawn from recent cross-national studies) that show (a) how the diagnostic procedures can be incorporated into the research process, and (b) what we can learn from them. These applications serve to underscore the point that the diagnostics cannot be employed mechanically. Instead, once a case is diagnosed as influential, remedial action requires a firm substantive grounding. Although case deletion may be warranted in some circumstances, it is an extreme remedy of last resort that should not be routinely followed. The more fruitful approach is to ask why a given case is influential. As our applications indicate, the diagnostics can be helpful in isolating such problems as sample composition, specification error, and errors in measurement."
+    },
+    "Chatterjee1986InfluentialObservations": {
+        "citation_key": "Chatterjee1986InfluentialObservations",
+        "title": "Influential Observations, High Leverage Points, and Outliers in Linear Regression",
+        "authors": [
+            "Samprit Chatterjee",
+            "Ali S. Hadi"
+        ],
+        "venue": "Statistical Science",
+        "year": 1986,
+        "abstract": "A bewilderingly large number of statistical quantities have been proposed to study outliers and influence of individual observations in regression analysis. In this article we describe the inter-relationships which exist among the proposed measures. An examination of these relationships leads us to conclude that only three of these measures along with some graphical displays can provide an analyst a complete picture of outliers (major discrepant points) and points which excessively influence the fitted regression equation. Illustrative examples based on real data are presented."
+    },
+    "Davison1992RegressionModel": {
+        "citation_key": "Davison1992RegressionModel",
+        "title": "Regression Model Diagnostics",
+        "authors": [
+            "Anthony C. Davison",
+            "C.-L. Tsai"
+        ],
+        "venue": "International Statistical Review",
+        "year": 1992,
+        "abstract": "Various diagnostics for generalized linear models are reviewed and extended to more general models. These include some models for censored and grouped data, and regressions that are nonlinear, or where the response does not have an exponential family distribution. Among diagnostics considered are score tests, various types of residual, and approximate Cook statistics. Diagnostics for models with incidental parameters orthogonal to the regression parameters are discussed. Examples are given and the adequacy of approximations is considered."
+    },
+    "Efron2004EstimationPrediction": {
+        "citation_key": "Efron2004EstimationPrediction",
+        "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+        "authors": [
+            "Bradley Efron"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 2004,
+        "abstract": "Having constructed a data-based estimation rule, perhaps a logistic regression or a classification tree, the statistician would like to know its performance as a predictor of future cases. There are two main theories concerning prediction error: (1) penalty methods such as Cp, Akaike's information criterion, and Stein's unbiased risk estimate that depend on the covariance between data points and their corresponding predictions; and (2) cross-validation and related nonparametric bootstrap techniques. This article concerns the connection between the two theories. A Rao\u2013Blackwell type of relation is derived in which nonparametric methods such as cross-validation are seen to be randomized versions of their covariance penalty counterparts. The model-based penalty methods offer substantially better accuracy, assuming that the model is believable."
+    },
+    "Vergouwe2016ClosedTesting": {
+        "citation_key": "Vergouwe2016ClosedTesting",
+        "title": "A closed testing procedure to select an appropriate method for updating prediction models",
+        "authors": [
+            "Yvonne Vergouwe",
+            "Daan Nieboer",
+            "Rianne Oostenbrink",
+            "Thomas P. A. Debray",
+            "Gordon D. Murray",
+            "Michael W. Kattan",
+            "Hendrik Koffijberg",
+            "Karel G. M. Moons",
+            "Ewout W. Steyerberg"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 2016,
+        "abstract": "Prediction models fitted with logistic regression often show poor performance when applied in populations other than the development population. Model updating may improve predictions. Previously suggested methods vary in their extensiveness of updating the model. We aim to define a strategy in selecting an appropriate update method that considers the balance between the amount of evidence for updating in the new patient sample and the danger of overfitting. We consider recalibration in the large (re\u2010estimation of model intercept); recalibration (re\u2010estimation of intercept and slope) and model revision (re\u2010estimation of all coefficients) as update methods. We propose a closed testing procedure that allows the extensiveness of the updating to increase progressively from a minimum (the original model) to a maximum (a completely revised model). The procedure involves multiple testing with maintaining approximately the chosen type I error rate. We illustrate this approach with three clinical examples: patients with prostate cancer, traumatic brain injury and children presenting with fever. The need for updating the prostate cancer model was completely driven by a different model intercept in the update sample (adjustment: 2.58). Separate testing of model revision against the original model showed statistically significant results, but led to overfitting (calibration slope at internal validation\u2009=\u20090.86). The closed testing procedure selected recalibration in the large as update me... [Truncated]"
+    },
+    "Lovell1963SeasonalAdjustment": {
+        "citation_key": "Lovell1963SeasonalAdjustment",
+        "title": "Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis",
+        "authors": [
+            "Michael C. Lovell"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1963,
+        "abstract": "The logical implications of certain simple consistency requirements for appraising alternative procedures for seasonal adjustment constitute the first problem considered in this paper. It is shown that any sum preserving technique of seasonal adjustment that satisfies the quite reasonable requirements of orthogonality and idempotency can be executed on the electronic computer by standard least squares regression procedures. Problems involved in utilizing seasonally adjusted data when estimating the parameters of econometric models are examined. Extending the fundamental Frisch-Waugh theorem concerning trend and regression analysis to encompass problems of seasonality facilitates the comparison of the implications of running regressions on data subjected to prior seasonal adjustment with the effects of including dummy variables with unadjusted data. Complicated types of moving seasonal patterns that may be handled by the dummy variable procedure are considered. Although efficient estimates of the parameters of the econometric model may be obtained in appropriate circumstances when data subjected to prior seasonal adjustment by the least squares procedure are employed, there is an inherent tendency to overstate the significance of the regression coefficients; a correction procedure is suggested. When seasonally adjusted data are employed, certain special complications must be taken into account in applying Aitken's generalized least squares procedure in order to deal with autoc... [Truncated]"
+    },
+    "Murphy1973NewVector": {
+        "citation_key": "Murphy1973NewVector",
+        "title": "A New Vector Partition of the Probability Score",
+        "authors": [
+            "Allan H. Murphy"
+        ],
+        "venue": "Journal of applied meteorology",
+        "year": 1973,
+        "abstract": "A new vector partition of the probability, or Brier, score (PS) is formulated and the nature and properties of this partition are described. The relationships between the terms in this partition and the terms in the original vector partition of the PS are indicated. The new partition consists of three terms: 1) a measure of the uncertainty inherent in the events, or states, on the occasions of concern (namely, the PS for the sample relative frequencies); 2) a measure of the reliability of the forecasts; and 3) a new measure of the resolution of the forecasts. These measures of reliability and resolution are and are not, respectively, equivalent (i.e., linearly related) to the measures of reliability and resolution provided by the original partition. Two sample collections of probability forecasts are used to illustrate the differences and relationships between these partitions. Finally, the two partitions are compared, with particular reference to the attributes of the forecasts with which the partitions are concerned, the interpretation of the partitions in geometric terms, and the use of the partitions as the bases for the formulation of measures to evaluate probability forecasts. The results of these comparisons indicate that the new partition offers certain advantages vis-\u00e0-vis the original partition."
+    },
+    "Kuleshov2018AccurateUncertainties": {
+        "citation_key": "Kuleshov2018AccurateUncertainties",
+        "title": "Accurate Uncertainties for Deep Learning Using Calibrated Regression",
+        "authors": [
+            "Volodymyr Kuleshov",
+            "Nathan Fenner",
+            "Stefano Ermon"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "year": 2018,
+        "abstract": "Methods for reasoning under uncertainty are a key building block of accurate and reliable machine learning systems. Bayesian methods provide a general framework to quantify uncertainty. However, because of model misspecification and the use of approximate inference, Bayesian uncertainty estimates are often inaccurate -- for example, a 90% credible interval may not contain the true outcome 90% of the time. Here, we propose a simple procedure for calibrating any regression algorithm; when applied to Bayesian and probabilistic models, it is guaranteed to produce calibrated uncertainty estimates given enough data. Our procedure is inspired by Platt scaling and extends previous work on classification. We evaluate this approach on Bayesian linear regression, feedforward, and recurrent neural networks, and find that it consistently outputs well-calibrated credible intervals while improving performance on time series forecasting and model-based reinforcement learning tasks."
+    },
+    "Levi2022EvaluatingCalibrating": {
+        "citation_key": "Levi2022EvaluatingCalibrating",
+        "title": "Evaluating and Calibrating Uncertainty Prediction in Regression Tasks",
+        "authors": [
+            "Dan Levi",
+            "Liran Gispan",
+            "Niv Giladi",
+            "Ethan Fetaya"
+        ],
+        "venue": "Sensors",
+        "year": 2022,
+        "abstract": "Predicting not only the target but also an accurate measure of uncertainty is important for many machine learning applications, and in particular, safety-critical ones. In this work, we study the calibration of uncertainty prediction for regression tasks which often arise in real-world systems. We show that the existing definition for the calibration of regression uncertainty has severe limitations in distinguishing informative from non-informative uncertainty predictions. We propose a new definition that escapes this caveat and an evaluation method using a simple histogram-based approach. Our method clusters examples with similar uncertainty prediction and compares the prediction with the empirical uncertainty on these examples. We also propose a simple, scaling-based calibration method that preforms as well as much more complex ones. We show results on both a synthetic, controlled problem and on the object detection bounding-box regression task using the COCO and KITTI datasets."
+    },
+    "Niculescumizil2005PredictingGood": {
+        "citation_key": "Niculescumizil2005PredictingGood",
+        "title": "Predicting good probabilities with supervised learning",
+        "authors": [
+            "Alexandru Niculescu-Mizil",
+            "Rich Caruana"
+        ],
+        "venue": "International Conference on Machine Learning",
+        "year": 2005,
+        "abstract": "We examine the relationship between the predictions made by different learning algorithms and true posterior probabilities. We show that maximum margin methods such as boosted trees and boosted stumps push probability mass away from 0 and 1 yielding a characteristic sigmoid shaped distortion in the predicted probabilities. Models such as Naive Bayes, which make unrealistic independence assumptions, push probabilities toward 0 and 1. Other models such as neural nets and bagged trees do not have these biases and predict well calibrated probabilities. We experiment with two ways of correcting the biased probabilities predicted by some learning methods: Platt Scaling and Isotonic Regression. We qualitatively examine what kinds of distortions these calibration methods are suitable for and quantitatively examine how much data they need to be effective. The empirical results show that after calibration boosted trees, random forests, and SVMs predict the best probabilities."
+    },
+    "Ihaka1996RLanguage": {
+        "citation_key": "Ihaka1996RLanguage",
+        "title": "R: A Language for Data Analysis and Graphics",
+        "authors": [
+            "Ross Ihaka",
+            "Robert C. Gentleman"
+        ],
+        "venue": "Journal of Computational and Graphical Statistics",
+        "year": 1996,
+        "abstract": "In this article we discuss our experience designing and implementing a statistical computing language. In developing this new language, we sought to combine what we felt were useful features from two existing computer languages. We feel that the new language provides advantages in the areas of portability, computational efficiency, memory management, and scoping."
+    },
+    "Efron1983EstimatingError": {
+        "citation_key": "Efron1983EstimatingError",
+        "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+        "authors": [
+            "Bradley Efron"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1983,
+        "abstract": "We construct a prediction rule on the basis of some data, and then wish to estimate the error rate of this rule in classifying future observations. Cross-validation provides a nearly unbiased estimate, using only the original data. Cross-validation turns out to be related closely to the bootstrap estimate of the error rate. This article has two purposes: to understand better the theoretical basis of the prediction problem, and to investigate some related estimators, which seem to offer considerably improved estimation in small samples."
+    },
+    "Hoerl1970RidgeRegression": {
+        "citation_key": "Hoerl1970RidgeRegression",
+        "title": "Ridge Regression: Biased Estimation for Nonorthogonal Problems",
+        "authors": [
+            "Arthur E. Hoerl",
+            "Robert W. Kennard"
+        ],
+        "venue": "Technometrics",
+        "year": 1970,
+        "abstract": "In multiple regression it is shown that parameter estimates based on minimum residual sum of squares have a high probability of being unsatisfactory, if not incorrect, if the prediction vectors are not orthogonal. Proposed is an estimation procedure based on adding small positive quantities to the diagonal of X\u2032X. Introduced is the ridge trace, a method for showing in two dimensions the effects of nonorthogonality. It is then shown how to augment X\u2032X to obtain biased estimates with smaller mean square error."
+    },
+    "Kennedy2021CommentStatistical": {
+        "citation_key": "Kennedy2021CommentStatistical",
+        "title": "Comment on \"Statistical Modeling: The Two Cultures\" by Leo Breiman",
+        "authors": [
+            "Edward H. Kennedy",
+            "Matteo Bonvini",
+            "Alan Mishler"
+        ],
+        "venue": "Observational Studies",
+        "year": 2021,
+        "abstract": "Motivated by Breiman's rousing 2001 paper on the \"two cultures\" in statistics, we consider the role that different modeling approaches play in causal inference. We discuss the relationship between model complexity and causal (mis)interpretation, the relative merits of plug-in versus targeted estimation, issues that arise in tuning flexible estimators of causal effects, and some outstanding cultural divisions in causal inference."
+    },
+    "Gelman1996PosteriorPredictive": {
+        "citation_key": "Gelman1996PosteriorPredictive",
+        "title": "POSTERIOR PREDICTIVE ASSESSMENT OF MODEL FITNESS VIA REALIZED DISCREPANCIES",
+        "authors": [
+            "Andrew Gelman",
+            "Xiao\u2010Li Meng",
+            "Hal S. Stern"
+        ],
+        "venue": "arXiv",
+        "year": 1996,
+        "abstract": "Abstract: This paper considers Bayesian counterparts of the classical tests for goodness of fit and their use in judging the fit of a single Bayesian model to the observed data. We focus on posterior predictive assessment, in a framework that also includes conditioning on auxiliary statistics. The Bayesian formulation facilitates the construction and calculation of a meaningful reference distribution not only for any (classical) statistic, but also for any parameter-dependent \u201cstatistic \u201d or discrepancy. The latter allows us to propose the realized discrepancy assessment of model fitness, which directly measures the true discrepancy between data and the posited model, for any aspect of the model which we want to explore. The computation required for the realized discrepancy assessment is a straightforward byproduct of the posterior simulation used for the original Bayesian analysis. We illustrate with three applied examples. The first example, which serves mainly to motivate the work, illustrates the difficulty of classical tests in assessing the fitness of a Poisson model to a positron emission tomography image that is constrained to be nonnegative. The second and third examples illustrate the details of the posterior predictive approach in two problems: estimation in a model with inequality constraints on the parameters, and estimation in a mixture model. In all three examples, standard test statistics (either a \u03c7 2 or a likelihood ratio) are not pivotal: the difficulty is ... [Truncated]"
+    },
+    "Hahn1977FittingRegression": {
+        "citation_key": "Hahn1977FittingRegression",
+        "title": "Fitting Regression Models with No Intercept Term",
+        "authors": [
+            "Gerald J. Hahn"
+        ],
+        "venue": "Journal of Quality Technology",
+        "year": 1977,
+        "abstract": "The no-intercept model \u201c\u03b3 = \u03b2X + error\u201d is applicable in many practical situations. This article describes some of these applications, discusses special considerations in fitting the no-intercept model to data and indicates possible pitfalls. Caution in the use of the model is advised."
+    },
+    "Hawkins1980NoteFitting": {
+        "citation_key": "Hawkins1980NoteFitting",
+        "title": "A Note on Fitting a Regression without an Intercept Term",
+        "authors": [
+            "Douglas M. Hawkins"
+        ],
+        "venue": "The American Statistician",
+        "year": 1980,
+        "abstract": "By entering the data (y i ,x i ) followed by (\u2013y i ,\u2013x i ), one can obtain an intercept-free regression Y = X\u03b2 + \u03b5 from a program package that normally uses an intercept term. There is no bias in the resultant regression coefficients, but a minor postanalysis adjustment is needed to the residual variance and standard errors."
+    },
+    "Gordon1981ErrorsComputer": {
+        "citation_key": "Gordon1981ErrorsComputer",
+        "title": "Errors in Computer Packages. Least Squares Regression Through the Origin",
+        "authors": [
+            "Hugh Gordon"
+        ],
+        "venue": "Journal of the Royal Statistical Society Series D (The Statistician)",
+        "year": 1981,
+        "abstract": "In many regression packages, the \"regression through the origin\" module employs a standard least squares approach to estimate the values of the regression coefficient(s). In so doing, it is assumed that E(\u03b5) = 0, where \u03b5 represents the residual error. In practice, this leads to positively biased estimates of R 2 , the coefficient of determination, and of the F ratio from the resultant analysis of variance. These biased estimates are a direct consequence of an erroneous definition of the \"variance\" to be analysed. Within the paper the author indicates how the presence of these errors in definition can be identified and corrected."
+    },
+    "Casella1983LeverageRegression": {
+        "citation_key": "Casella1983LeverageRegression",
+        "title": "Leverage and Regression Through the Origin",
+        "authors": [
+            "George Casella"
+        ],
+        "venue": "The American Statistician",
+        "year": 1983,
+        "abstract": "The problem of deciding whether an intercept model or a no-intercept model is more appropriate for a given set of data is a problem with no simple solution. Often, the underlying physical situation will suggest an appropriate model; however, there still may be interest in assessing which model best fits the data or is the better predictor. In this article a different interpretation of regression through the origin is derived, that of a full fit to the original data set augmented by one further point. Examination of the leverage and influence of the augmented data point can provide help in comparing the models."
+    },
+    "Kvlseth1985CautionaryNote": {
+        "citation_key": "Kvlseth1985CautionaryNote",
+        "title": "Cautionary Note about R 2",
+        "authors": [
+            "Tarald O. Kv\u00e5lseth"
+        ],
+        "venue": "The American Statistician",
+        "year": 1985,
+        "abstract": "The coefficient of determination (R 2) is perhaps the single most extensively used measure of goodness of fit for regression models. It is also widely misused. The primary source of the problem is that except for linear models with an intercept term, the several alternative R 2 statistics are not generally equivalent. This article discusses various considerations and potential pitfalls in using the R 2's. Specific points are exemplified by means of empirical data. A new resistant statistic is also introduced."
+    },
+    "Belsley1984DemeaningConditioning": {
+        "citation_key": "Belsley1984DemeaningConditioning",
+        "title": "Demeaning Conditioning Diagnostics through Centering",
+        "authors": [
+            "David A. Belsley"
+        ],
+        "venue": "The American Statistician",
+        "year": 1984,
+        "abstract": "It is often thought that regression data should be mean-centered before being diagnosed for collinearity (ill conditioning). This view is shown not generally to be correct. Such centering can mask elements of ill conditioning and produce meaningless and misleading collinearity diagnostics. In order to assess conditioning meaningfully, the data must be in a form that possesses structural interpretability."
+    },
+    "Eisenhauer2003RegressionThrough": {
+        "citation_key": "Eisenhauer2003RegressionThrough",
+        "title": "Regression through the Origin",
+        "authors": [
+            "Joseph G. Eisenhauer"
+        ],
+        "venue": "Teaching Statistics",
+        "year": 2003,
+        "abstract": "Summary  This article describes situations in which regression through the origin is appropriate, derives the normal equation for such a regression and explains the controversy regarding its evaluative statistics. Differences between three popular software packages that allow regression through the origin are illustrated using examples from previous issues of  Teaching Statistics ."
+    },
+    "Houwelingen2000ValidationCalibration": {
+        "citation_key": "Houwelingen2000ValidationCalibration",
+        "title": "Validation, calibration, revision and combination of prognostic survival models",
+        "authors": [
+            "Hans C. van Houwelingen"
+        ],
+        "venue": "Statistics in Medicine",
+        "year": 2000,
+        "abstract": "The problem of assessing the validity and value of prognostic survival models presented in the literature for a particular population for which some data has been collected is discussed. Methods are sketched to perform validation through 'calibration', that is by embedding the literature model in a larger calibration model. This general approach is exemplified for x-year survival probabilities, Cox regression and general non-proportional hazards models. Some comments are made on basic structural changes to the model, described as 'revision'. Finally, general methods are discussed to combine models from different sources. The methods are illustrated with a model for non-Hodgkin's lymphoma validated on a Dutch data set."
+    },
+    "Ye1998MeasuringCorrecting": {
+        "citation_key": "Ye1998MeasuringCorrecting",
+        "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+        "authors": [
+            "Jianming Ye"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1998,
+        "abstract": "In the theory of linear models, the concept of degrees of freedom plays an important role. This concept is often used for measurement of model complexity, for obtaining an unbiased estimate of the error variance, and for comparison of different models. I have developed a concept of generalized degrees of freedom (GDF) that is applicable to complex modeling procedures. The definition is based on the sum of the sensitivity of each fitted value to perturbation in the corresponding observed value. The concept is nonasymptotic in nature and does not require analytic knowledge of the modeling procedures. The concept of GDF offers a unified framework under which complex and highly irregular modeling procedures can be analyzed in the same way as classical linear models. By using this framework, many difficult problems can be solved easily. For example, one can now measure the number of observations used in a variable selection process. Different modeling procedures, such as a tree-based regression and a projection pursuit regression, can be compared on the basis of their residual sums of squares and the GDF that they cost. I apply the proposed framework to measure the effect of variable selection in linear models, leading to corrections of selection bias in various goodness-of-fit statistics. The theory also has interesting implications for the effect of general model searching by a human modeler."
+    },
+    "Akaike1974NewLook": {
+        "citation_key": "Akaike1974NewLook",
+        "title": "A new look at the statistical model identification",
+        "authors": [
+            "Hirotugu Akaike"
+        ],
+        "venue": "IEEE Transactions on Automatic Control",
+        "year": 1974,
+        "abstract": "The history of the development of statistical hypothesis testing in time series analysis is reviewed briefly and it is pointed out that the hypothesis testing procedure is not adequately defined as the procedure for statistical model identification. The classical maximum likelihood estimation procedure is reviewed and a new estimate minimum information theoretical criterion (AIC) estimate (MAICE) which is designed for the purpose of statistical identification is introduced. When there are several competing models the MAICE is defined by the model and the maximum likelihood estimates of the parameters which give the minimum of AIC defined by AIC = (-2)log-(maximum likelihood) + 2(number of independently adjusted parameters within the model). MAICE provides a versatile procedure for statistical model identification which is free from the ambiguities inherent in the application of conventional hypothesis testing procedure. The practical utility of MAICE in time series analysis is demonstrated with some numerical examples."
+    },
+    "Geisser1975PredictiveSample": {
+        "citation_key": "Geisser1975PredictiveSample",
+        "title": "The Predictive Sample Reuse Method with Applications",
+        "authors": [
+            "Seymour Geisser"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 1975,
+        "abstract": "An account is given of a recently devised method of prediction based on sample reuse techniques. It is most useful in low structure data paradigms that involve minimal assumptions. A series of applications demonstrating the technique is presented."
+    },
+    "Breiman1992SubmodelSelection": {
+        "citation_key": "Breiman1992SubmodelSelection",
+        "title": "Submodel Selection and Evaluation in Regression. The X-Random Case",
+        "authors": [
+            "Leo Breiman",
+            "Philip C. Spector"
+        ],
+        "venue": "International Statistical Review",
+        "year": 1992,
+        "abstract": "Often, in a regression situation with many variables, a sequence of submodels is generated containing fewer variables by using such methods as stepwise addition or deletion of variables, or 'best subsets'. The question is which of this sequence of submodels is 'best', and how can submodel performance be evaluated. This was explored in Breiman (1988) for a fixed X-design. This is a sequel exploring the case of random X-designs. Analytical results are difficult, if not impossible. This study involved an extensive simulation. The basis of the study is the theoretical definition of prediction error (PE) as the expected squared error produced by applying a prediction equation to the distributional universe of (y, x) values. This definition is used throughout to compare various submodels. There can be startling differences between the x-fixed and x-random situations and different PE estimates are appropriate. Non-resampling estimates such as CP, adjusted R2, etc. turn out to be highly biased methods for submodel selection. The two best methods are cross-validation and bootstrap. One surprise is that 5 fold cross-validation (leave out 20% of the data) is better at submodel selection and evaluation than leave-one-out cross-validation. There are a number of other surprises."
+    },
+    "Kohavi1995CrossvalidationBootstrap": {
+        "citation_key": "Kohavi1995CrossvalidationBootstrap",
+        "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+        "authors": [
+            "Ron Kohavi"
+        ],
+        "venue": "Memoria digital de Canarias (Universidad de Las Palmas de Gran Canaria)",
+        "year": 1995,
+        "abstract": "We review accuracy estimation methods and compare the two most common methods: crossvalidation and bootstrap. Recent experimental results on arti cial data and theoretical results in restricted settings have shown that for selecting a good classi er from a set of classiers (model selection), ten-fold cross-validation may be better than the more expensive leaveone-out cross-validation. We report on a largescale experiment| over half a million runs of C4. 5 and a Naive-Bayes algorithm| to estimate the e ects of di erent parameters on these algorithms on real-world datasets. For crossvalidation, we vary the number of folds and whether the folds are strati ed or not; for bootstrap, we vary the number of bootstrap samples. Our results indicate that for real-word datasets similar to ours, the best method to use for model selection is ten-fold strati ed cross validation, even if computation power allows using more folds."
+    },
+    "Varma2006BiasError": {
+        "citation_key": "Varma2006BiasError",
+        "title": "Bias in error estimation when using cross-validation for model selection",
+        "authors": [
+            "Sudhir Varma",
+            "Richard Simon"
+        ],
+        "venue": "BMC Bioinformatics",
+        "year": 2006,
+        "abstract": "Abstract \n                   \n                     Background \n                     Cross-validation (CV) is an effective method for estimating the prediction error of a classifier. Some recent articles have proposed methods for optimizing classifiers by choosing classifier parameter values that minimize the CV error estimate. We have evaluated the validity of using the CV error estimate of the optimized classifier as an estimate of the true error expected on independent data. \n                   \n                   \n                     Results \n                     We used CV to optimize the classification parameters for two kinds of classifiers; Shrunken Centroids and Support Vector Machines (SVM). Random training datasets were created, with no difference in the distribution of the features between the two classes. Using these \"null\" datasets, we selected classifier parameter values that minimized the CV error estimate. 10-fold CV was used for Shrunken Centroids while Leave-One-Out-CV (LOOCV) was used for the SVM. Independent test data was created to estimate the true error. With \"null\" and \"non null\" (with differential expression between the classes) data, we also tested a nested CV procedure, where an inner CV loop is used to perform the tuning of the parameters while an outer CV is used to compute an estimate of the error. \n                     The CV error estimate for the classifier with the optimal parameters was found to be a substantially biased estimate of the tru... [Truncated]"
+    },
+    "Arlot2010SurveyCrossvalidation": {
+        "citation_key": "Arlot2010SurveyCrossvalidation",
+        "title": "A survey of cross-validation procedures for model selection",
+        "authors": [
+            "Sylvain Arlot",
+            "Alain Celisse"
+        ],
+        "venue": "Statistics Surveys",
+        "year": 2010,
+        "abstract": "Used to estimate the risk of an estimator or to perform model selection, cross-validation is a widespread strategy because of its simplicity and its (apparent) universality. Many results exist on model selection performances of cross-validation procedures. This survey intends to relate these results to the most recent advances of model selection theory, with a particular emphasis on distinguishing empirical statements from rigorous theoretical results. As a conclusion, guidelines are provided for choosing the best cross-validation procedure according to the particular features of the problem in hand."
+    },
+    "Clements1994TowardsTheory": {
+        "citation_key": "Clements1994TowardsTheory",
+        "title": "Towards a theory of economic forecasting",
+        "authors": [
+            "Michael P Clements",
+            "David F Hendry"
+        ],
+        "venue": "Nonstationary Time Series Analysis and Cointegration",
+        "year": 1994,
+        "abstract": "Abstract \n                   Some recent developments in the theory of economic forecasting using econometric systems are reviewed. Measures of forecast uncertainty for conditional and unconditional forecasts suggest a limit to forecastability and show the potential advantages of combining types of forecast to improve accuracy; but pooling forecasts from rival econometric models violates encompassing. Mean square forecast error comparisons are criticized in favour of generalized forecast error second moments: only the latter are invariant to linear transformations. We delineate five sources of forecast uncertainty: parameter non-constancy; estimation uncertainty; variable uncertainty; innovation uncertainty; and model misspecification. A theory of intercept corrections to mitigate such errors is discussed. Asymptotic forecast error variance formulae for nonstationary economic time series depend on the treatment of unit roots and cointegration but work well in finite samples, and show that forecast evaluation based on differenced data may fail to reveal inadequate models."
+    },
+    "Lachenbruch1968EstimationError": {
+        "citation_key": "Lachenbruch1968EstimationError",
+        "title": "Estimation of Error Rates in Discriminant Analysis",
+        "authors": [
+            "Peter A. Lachenbruch",
+            "M. R. Mickey"
+        ],
+        "venue": "Technometrics",
+        "year": 1968,
+        "abstract": "Several methods of estimating error rates in Discriminant Analysis are evaluated by sampling methods. Multivariate normal samples are generated on a computer which have various true probabilities of misclassification for different combinations of sample sizes and different numbers of parameters. The two methods in most common use are found to be significantly poorer than some new methods that are proposed."
+    },
+    "Allen1974RelationshipBetween": {
+        "citation_key": "Allen1974RelationshipBetween",
+        "title": "The Relationship Between Variable Selection and Data Agumentation and a Method for Prediction",
+        "authors": [
+            "David M. Allen"
+        ],
+        "venue": "Technometrics",
+        "year": 1974,
+        "abstract": "We show that data augmentation provides a rather general formulation for the study of biased prediction techniques using multiple linear regression. Variable selection is a limiting case, and Ridge regression is a special case of data augmentation. We propose a way to obtain predictors given a credible criterion of good prediction."
+    },
+    "Willmott2005AdvantagesMean": {
+        "citation_key": "Willmott2005AdvantagesMean",
+        "title": "Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance",
+        "authors": [
+            "C. J. Willmott",
+            "Kenji Matsuura"
+        ],
+        "venue": "Climate Research",
+        "year": 2005,
+        "abstract": "CR Climate Research Contact the journal Facebook Twitter RSS Mailing List Subscribe to our mailing list via Mailchimp HomeLatest VolumeAbout the JournalEditorsSpecials CR 30:79-82 (2005) - doi:10.3354/cr030079 Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance Cort J. Willmott*, Kenji Matsuura Center for Climatic Research, Department of Geography, University of Delaware. Newark, Delaware 19716, USA *Email: willmott@udel.edu ABSTRACT: The relative abilities of 2, dimensioned statistics\u0097the root-mean-square error (RMSE) and the mean absolute error (MAE)\u0097to describe average model-performance error are examined. The RMSE is of special interest because it is widely reported in the climatic and environmental literature; nevertheless, it is an inappropriate and misinterpreted measure of average error. RMSE is inappropriate because it is a function of 3 characteristics of a set of errors, rather than of one (the average error). RMSE varies with the variability within the distribution of error magnitudes and with the square root of the number of errors (n1/2), as well as with the average-error magnitude (MAE). Our findings indicate that MAE is a more natural measure of average error, and (unlike RMSE) is unambiguous. Dimensioned evaluations and inter-comparisons of average model-performance error, therefore, should be based on MAE. KEY WORDS: Model-performance measures \u00b7 Root-mean-square error \u00b7 Mean absolute error... [Truncated]"
+    },
+    "Wickham2009LayeredGrammar": {
+        "citation_key": "Wickham2009LayeredGrammar",
+        "title": "A Layered Grammar of Graphics",
+        "authors": [
+            "Hadley Wickham"
+        ],
+        "venue": "Journal of Computational and Graphical Statistics",
+        "year": 2009,
+        "abstract": "A grammar of graphics is a tool that enables us to concisely describe the components of a graphic. Such a grammar allows us to move beyond named graphics (e.g., the \u201cscatterplot\u201d) and gain insight into the deep structure that underlies statistical graphics. This article builds on Wilkinson, Anand, and Grossman (2005), describing extensions and refinements developed while building an open source implementation of the grammar of graphics for R, ggplot2. The topics in this article include an introduction to the grammar by working through the process of creating a plot, and discussing the components that we need. The grammar is then presented formally and compared to Wilkinson\u2019s grammar, highlighting the hierarchy of defaults, and the implications of embedding a graphical grammar into a programming language. The power of the grammar is illustrated with a selection of examples that explore different components and their interactions, in more detail. The article concludes by discussing some perceptual issues, and thinking about how we can build on the grammar to learn how to create graphical \u201cpoems.\u201d Supplemental materials are available online."
+    },
+    "Chernozhukov2018DoubledebiasedMachine": {
+        "citation_key": "Chernozhukov2018DoubledebiasedMachine",
+        "title": "Double/debiased machine learning for treatment and structural parameters",
+        "authors": [
+            "Victor Chernozhukov",
+            "Denis Chetverikov",
+            "Mert Demirer",
+            "Esther Duflo",
+            "Christian Hansen",
+            "Whitney K. Newey",
+            "James M. Robins"
+        ],
+        "venue": "Econometrics Journal",
+        "year": 2018,
+        "abstract": "We revisit the classic semi\u2010parametric problem of inference on a low\u2010dimensional parameter \u03b80 in the presence of high\u2010dimensional nuisance parameters \u03b70. We depart from the classical setting by allowing for \u03b70 to be so high\u2010dimensional that the traditional assumptions (e.g. Donsker properties) that limit complexity of the parameter space for this object break down. To estimate \u03b70, we consider the use of statistical or machine learning (ML) methods, which are particularly well suited to estimation in modern, very high\u2010dimensional cases. ML methods perform well by employing regularization to reduce variance and trading off regularization bias with overfitting in practice. However, both regularization bias and overfitting in estimating \u03b70 cause a heavy bias in estimators of \u03b80 that are obtained by naively plugging ML estimators of \u03b70 into estimating equations for \u03b80. This bias results in the naive estimator failing to be N\u22121/2 consistent, where N is the sample size. We show that the impact of regularization bias and overfitting on estimation of the parameter of interest \u03b80 can be removed by using two simple, yet critical, ingredients: (1) using Neyman\u2010orthogonal moments/scores that have reduced sensitivity with respect to nuisance parameters to estimate \u03b80; (2) making use of cross\u2010fitting, which provides an efficient form of data\u2010splitting. We call the resulting set of methods double or debiased ML (DML). We verify that DML delivers point estimators that concentrate in an N\u22121/2\u2010... [Truncated]"
+    },
+    "Lei2018DistributionfreePredictive": {
+        "citation_key": "Lei2018DistributionfreePredictive",
+        "title": "Distribution-Free Predictive Inference for Regression",
+        "authors": [
+            "Jing Lei",
+            "Max G\u2019Sell",
+            "Alessandro Rinaldo",
+            "Ryan J. Tibshirani",
+            "Larry Wasserman"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 2018,
+        "abstract": "We develop a general framework for distribution-free predictive inference in regression, using conformal inference. The proposed methodology allows for the construction of a prediction band for the response variable using any estimator of the regression function. The resulting prediction band preserves the consistency properties of the original estimator under standard assumptions, while guaranteeing finite-sample marginal coverage even when these assumptions do not hold. We analyze and compare, both empirically and theoretically, the two major variants of our conformal framework: full conformal inference and split conformal inference, along with a related jackknife method. These methods offer different tradeoffs between statistical accuracy (length of resulting prediction intervals) and computational efficiency. As extensions, we develop a method for constructing valid in-sample prediction intervals called rank-one-out conformal inference, which has essentially the same computational efficiency as split conformal inference. We also describe an extension of our procedures for producing prediction bands with locally varying length, to adapt to heteroscedasticity in the data. Finally, we propose a model-free notion of variable importance, called leave-one-covariate-out or LOCO inference. Accompanying this article is an R package conformalInference that implements all of the proposals we have introduced. In the spirit of reproducibility, all of our empirical results can also be ... [Truncated]"
+    },
+    "Bates2023CrossvalidationWhat": {
+        "citation_key": "Bates2023CrossvalidationWhat",
+        "title": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+        "authors": [
+            "Stephen Bates",
+            "Trevor J. Hastie",
+            "Robert John Tibshirani"
+        ],
+        "venue": "Journal of the American Statistical Association",
+        "year": 2023,
+        "abstract": "Cross-validation is a widely used technique to estimate prediction error, but its behavior is complex and not fully understood. Ideally, one would like to think that cross-validation estimates the prediction error for the model at hand, fit to the training data. We prove that this is not the case for the linear model fit by ordinary least squares; rather it estimates the average prediction error of models fit on other unseen training sets drawn from the same population. We further show that this phenomenon occurs for most popular estimates of prediction error, including data splitting, bootstrapping, and Mallow\u2019s Cp. Next, the standard confidence intervals for prediction error derived from cross-validation may have coverage far below the desired level. Because each data point is used for both training and testing, there are correlations among the measured accuracies for each fold, and so the usual estimate of variance is too small. We introduce a nested cross-validation scheme to estimate this variance more accurately, and show empirically that this modification leads to intervals with approximately correct coverage in many examples where traditional cross-validation intervals fail. Lastly, our analysis also shows that when producing confidence intervals for prediction accuracy with simple data splitting, one should not refit the model on the combined data, since this invalidates the confidence intervals. Supplementary materials for this article are available online."
+    },
+    "Kapoor2023LeakageReproducibility": {
+        "citation_key": "Kapoor2023LeakageReproducibility",
+        "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+        "authors": [
+            "Sayash Kapoor",
+            "Arvind Narayanan"
+        ],
+        "venue": "Patterns",
+        "year": 2023,
+        "abstract": "Machine-learning (ML) methods have gained prominence in the quantitative sciences. However, there are many known methodological pitfalls, including data leakage, in ML-based science. We systematically investigate reproducibility issues in ML-based science. Through a survey of literature in fields that have adopted ML methods, we find 17 fields where leakage has been found, collectively affecting 294 papers and, in some cases, leading to wildly overoptimistic conclusions. Based on our survey, we introduce a detailed taxonomy of eight types of leakage, ranging from textbook errors to open research problems. We propose that researchers test for each type of leakage by filling out model info sheets, which we introduce. Finally, we conduct a reproducibility study of civil war prediction, where complex ML models are believed to vastly outperform traditional statistical models such as logistic regression (LR). When the errors are corrected, complex ML models do not perform substantively better than decades-old LR models."
+    }
+}

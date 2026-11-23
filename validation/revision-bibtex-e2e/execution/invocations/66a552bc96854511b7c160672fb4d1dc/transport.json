@@ -1,0 +1,41 @@
+{
+  "backend": "mistral-vibe",
+  "mode": "acp",
+  "command": [
+    "vibe-acp"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\nYou are an expert statistical plot illustrator. Write code to generate high-quality statistical plots based on user requests.\n\nUse R with ggplot2 to generate a statistical plot based on the following detailed description: # Figure Description: `fig_intercept_error`\n\n## Title and caption\n\n- **Title:** Recorded Mean Squared Error at Three Intercept Corrections\n- **Caption (for manuscript text only, excluded from figure visual):** One deterministic calculation evaluated on the same five observations used to determine the correction (b = 3). No stochastic repetitions, optimizer, external dataset, held-out evaluation, uncertainty intervals, or interpolated/extrapolated values are shown.\n\n## Content: variable mapping\n\n- **x-axis:** intercept correction *b*, continuous, label \"Intercept correction b\". Breaks at 0, 1.5, 3 with formatted labels \"0\", \"1.5\", \"3\".\n- **y-axis:** mean squared error (MSE), continuous, label \"Mean squared error (MSE)\". Breaks at 0, 3, 6, 9.\n- **Visual channels:** position only. Single series.\n- **Geometry:** scatter points only. No connecting line, fitted curve, ribbon, or error bar.\n\n## Complete list of plotted points\n\n| # | b (x) | MSE (y) | Label above point | Source row in log |\n|---:|---:|---:|---:|---|\n| 1 | 0 | 9 | \"9\" | Added b = 0 (MAE 3, MSE 9) |\n| 2 | 1.5 | 2.25 | \"2.25\" | Added b = 1.5 (MAE 1.5, MSE 2.25) |\n| 3 | 3 | 0 | \"0\" | Added b = 3 (MAE 0, MSE 0) |\n\n## Presentation\n\n**Canvas**\n- Size: 5.0 in \u00d7 3.5 in, single-column manuscript figure.\n- Background: white (`#FFFFFF`). No plot border.\n- Font family: standard sans-serif (Helvetica / Arial / system sans).\n\n**Axes**\n- x-limits: [-0.25, 3.25]; breaks: c(0, 1.5, 3), labels: c(\"0\", \"1.5\", \"3\").\n- y-limits: [-0.5, 10]; breaks: c(0, 3, 6, 9).\n- Axis lines: `#222222`, 0.4 pt linewidth on left and bottom edges.\n- Tick marks: `#222222`, 0.4 pt, length 2.5 pt, outward.\n- Tick labels: 10 pt, `#222222`.\n- Axis titles: 12 pt, `#222222`.\n\n**Title**\n- 13 pt, bold, `#222222`, left-aligned at panel edge.\n- Caption: Excluded from figure canvas per publication guidelines.\n\n**Markers**\n- Shape 16 (filled circle), size 3.2 mm diameter (approx. 9 pt).\n- Fill and stroke: `#1F4E79`.\n\n**Value labels**\n- Text: \"9\", \"2.25\", \"0\", positioned 0.5 units above each point.\n- Font: 10 pt, regular, `#1F4E79`.\n\n**Grid**\n- Major horizontal gridlines only: `#D9D9D9`, 0.3 pt linewidth.\n- No vertical or minor gridlines.\n\n**Legend**\n- None (`legend.position = \"none\"`).\n\n## Reproducibility code (R / ggplot2)\n\nr\nlibrary(ggplot2)\n\ndf <- data.frame(\n  b   = c(0, 1.5, 3),\n  mse = c(9, 2.25, 0),\n  lab = c(\"9\", \"2.25\", \"0\")\n)\n\np <- ggplot(df, aes(x = b, y = mse)) +\n  geom_point(shape = 16, size = 3.2, colour = \"#1F4E79\") +\n  geom_text(aes(label = lab), nudge_y = 0.5, size = 3.5,\n            colour = \"#1F4E79\", family = \"sans\") +\n  scale_x_continuous(name = \"Intercept correction b\",\n                     breaks = c(0, 1.5, 3),\n                     labels = c(\"0\", \"1.5\", \"3\"),\n                     limits = c(-0.25, 3.25)) +\n  scale_y_continuous(name = \"Mean squared error (MSE)\",\n                     breaks = c(0, 3, 6, 9),\n                     limits = c(-0.5, 10)) +\n  labs(title = \"Recorded Mean Squared Error at Three Intercept Corrections\") +\n  theme_classic(base_size = 10, base_family = \"sans\") +\n  theme(\n    plot.title         = element_text(size = 13, face = \"bold\", colour = \"#222222\", hjust = 0),\n    axis.title         = element_text(size = 12, colour = \"#222222\"),\n    axis.text          = element_text(size = 10, colour = \"#222222\"),\n    axis.line          = element_line(linewidth = 0.4, colour = \"#222222\"),\n    axis.ticks         = element_line(linewidth = 0.4, colour = \"#222222\"),\n    axis.ticks.length  = unit(2.5, \"pt\"),\n    panel.grid.major.y = element_line(linewidth = 0.3, colour = \"#D9D9D9\"),\n    panel.grid.major.x = element_blank(),\n    panel.grid.minor   = element_blank(),\n    legend.position    = \"none\",\n    plot.background    = element_rect(fill = \"#FFFFFF\", colour = NA)\n  )\n\nggsave(\"fig_intercept_error.pdf\", p, device = cairo_pdf, width = 5, height = 3.5)\nggsave(\"fig_intercept_error.png\", p, width = 5, height = 3.5, dpi = 300)\n\nReturn R code only. Define the final ggplot object as p. Do not save files: the rendering wrapper exports p to PDF and JPEG. Use only base R and ggplot2, with built-in serif, sans or mono font families. Use the supplied numeric data exactly; do not simulate or invent observations. Do not install packages or download data. The runtime sets set.seed(0). Requested canvas aspect ratio: 4:3. Code:",
+  "env": {
+    "VIBE_DEFAULT_AGENT": "ask",
+    "VIBE_ENABLED_AGENTS": "[\"ask\"]",
+    "VIBE_ENABLE_SUBAGENTS": "false",
+    "VIBE_ENABLE_MCP": "false",
+    "VIBE_ENABLE_CONNECTORS": "false",
+    "VIBE_ENABLED_TOOLS": "[]",
+    "VIBE_DISABLED_TOOLS": "[\"*\"]",
+    "VIBE_DISABLED_SKILLS": "[\"*\"]",
+    "VIBE_INCLUDE_PROJECT_CONTEXT": "false",
+    "VIBE_OUTSIDE_WORKDIR": "deny",
+    "VIBE_SESSION_LOGGING__ENABLED": "false",
+    "VIBE_SESSION_LOGGING__GENERATE_TITLES": "false",
+    "VIBE_ENABLE_UPDATE_CHECKS": "false",
+    "VIBE_ENABLE_NOTIFICATIONS": "false",
+    "VIBE_ENABLE_TELEMETRY": "false",
+    "VIBE_EXPERIMENTS__ENABLE": "false",
+    "VIBE_OUTPUT_LIMIT_RETRIES": "0",
+    "VIBE_ACTIVE_MODEL": "zai-glm-5-3",
+    "VIBE_MODELS": "{\"zai-glm-5-3\": {\"alias\": \"zai-glm-5-3\", \"name\": \"zai-glm-5-3\", \"provider\": \"mistral\", \"supports_images\": false, \"thinking\": \"high\", \"thinking_levels\": [\"low\", \"high\", \"max\"]}}"
+  },
+  "images": [],
+  "acp": {
+    "config_strategy": "preconfigured",
+    "model": "zai-glm-5-3",
+    "effort": "high",
+    "model_option": "model",
+    "effort_option": "thinking",
+    "allowed_search_tools": [],
+    "allowed_auxiliary_tools": [],
+    "image_limit": 8,
+    "image_max_bytes": 10485760
+  }
+}

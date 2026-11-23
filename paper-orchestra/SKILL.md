@@ -34,6 +34,10 @@ its BibTeX keys must match a nonempty citation map. Compiled candidates must
 contain resolved permitted citations and a visible reference list; an invalid
 revision follows the original compile-failure path. Final completion rechecks
 the accepted TeX/PDF and compiled bibliography. A PDF alone is insufficient.
+Content revisions keep the accepted BibTeX style and the original verified
+references.bib. The runtime can replace a recognizable trailing inline
+bibliography with those declarations. It preserves the revision's citation
+commands and checks their keys at compile time. See R032 and A008.
 
 Obtain the user's material directory, template directory, fresh output directory,
 and research cutoff (`YYYY-MM`). The material directory needs `idea_sparse.md`

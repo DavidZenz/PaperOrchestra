@@ -1,0 +1,44 @@
+{
+  "Summary": "The manuscript is a short teaching note that works through an additive intercept correction on five synthetic observations satisfying y = 2x + 3, using a fixed predictor 2x. The residuals against the fixed predictor are all equal to 3, so their mean b = 3 is added to the predictor, which then reproduces every target exactly. The note reports MSE values of 9, 2.25, and 0 and MAE values of 3, 1.5, and 0 at b = 0, 1.5, and 3, and provides closed-form identities MAE(b) = |3\u2212b| and MSE(b) = (3\u2212b)\u00b2. It includes an error table, two figures (a TikZ workflow diagram and an R/ggplot2 error plot), and a provenance section. The authors explicitly state that correction and evaluation reuse the same five observations, so the result carries no evidence about unseen data.",
+  "Strengths": [
+    "The arithmetic is correct: the residuals are constant at 3, the mean-residual correction removes them exactly, and the logged MAE and MSE values match the closed forms in Eqs. (1)\u2013(2) at all three settings of b.",
+    "The authors are transparent about the evaluation scope. They repeatedly state that the zero error is same-sample agreement and that no held-out or generalization claim is made.",
+    "The decomposition of mean squared error into variance and squared-bias components, (b \u2212 r\u0304)\u00b2 plus the residual variance, is stated correctly and clarifies why the mean is the minimizer.",
+    "The calculation is fully deterministic and small enough to verify by hand, which suits a pedagogical purpose.",
+    "Figure and table provenance is documented with source paths and checksums, which supports reproducibility of the rendered artifacts."
+  ],
+  "Weaknesses": [
+    "The methodological contribution is essentially the textbook fact that the sample mean minimizes squared deviations. The note does not add a new method, derivation, or insight beyond this.",
+    "The Related Work section is disproportionate to the content, citing about 60 references across regression through the origin, forecast intercept adjustment, clinical model updating, probability calibration, conformal prediction, and ML leakage. The authors concede in the text that most of these are only 'contextual' or 'distinct objectives,' so the citations do not support the note's claims and read as padding.",
+    "The title ('A Finite Intercept Correction Calculation') and the abstract's 'reproducible technical teaching note' framing sit awkwardly with the absence of any comparison, generalization result, or novel procedure. It is unclear what audience the note targets.",
+    "The bibliography contains several defective entries: duplicated page ranges (e.g., '337\u2013337' for Davison and Tsai, '291\u2013291' for Breiman and Spector, '23\u201323' for Gordon, '370\u2013370' for Nelder and Wedderburn), placeholder or incorrect venues (e.g., Kohavi 1995 listed under 'Memoria digital de Canarias', Gelman et al. 1996 and Platt 1999 listed only as 'In arXiv'), and at least one citation whose key does not match the claimed content.",
+    "The 'zero error' result holds by construction, since b is defined as the mean of the residuals on the same sample. The note acknowledges this, but the pedagogical value of a construction that is guaranteed to succeed is limited without a contrast case where the residuals vary.",
+    "The experimental log is described as the 'sole measured-data source,' yet the entire dataset is synthetic and deterministic. The term 'measured' is misleading and should be replaced with 'computed'.",
+    "The figure caption for Figure 1 describes the diagram as showing a 'dashed path' for reuse of observations, but the in-text description is somewhat repetitive with the abstract and conclusion, and the manuscript repeats the same scope disclaimer in at least five places."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 3,
+  "Significance": 1,
+  "Questions": [
+    "What is the intended venue and audience? If this is a teaching note, what pedagogical gap does it fill that standard regression texts do not already cover?",
+    "Why are roughly 60 references included when the authors themselves state that most of them address distinct objectives? Which claims in the paper depend on each citation?",
+    "Would the authors extend the example to a case where residuals vary across observations, so that the mean correction is not exact, and report the resulting MSE decomposition on that case?",
+    "Can the authors correct the bibliography entries with duplicated page ranges, missing venues, and arXiv placeholders, and confirm the citation keys match the claims they support?",
+    "Why is the experimental log described as 'measured' data when it is a deterministic synthetic computation?"
+  ],
+  "Limitations": [
+    "The note has no held-out or generalization evidence, as the authors state, so it cannot support any claim about predictive performance on unseen data.",
+    "The example is a five-point, noise-free, perfectly linear case, so the results do not illustrate behavior under noise, misspecification, or heterogeneous residuals.",
+    "The correction is fitted and evaluated on the same observations, so the zero error is optimistic by construction and should not be presented as a performance result.",
+    "The note offers no discussion of the risks of applying a constant intercept correction in practice, such as when residual offsets drift over time, which is the common concern in forecasting literature it cites.",
+    "No negative societal impact is expected from this work."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 2,
+  "Contribution": 1,
+  "Overall": 3,
+  "Confidence": 4,
+  "Decision": "Reject"
+}

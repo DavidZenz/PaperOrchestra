@@ -1,0 +1,35 @@
+{
+  "backend": "antigravity",
+  "mode": "acp",
+  "command": [
+    "/opt/homebrew/bin/agy",
+    "--settings",
+    "{\"agentMode\":\"\",\"toolPermission\":\"request-review\",\"permissions\":{\"deny\":[\"command(*)\",\"unsandboxed(*)\",\"write_file(*)\",\"read_file(*)\",\"execute_url(*)\",\"mcp(*)\"],\"allow\":[\"read_url(*)\"]}}",
+    "acp",
+    "--process-per-session",
+    "--sandbox",
+    "--include-default-customizations=false",
+    "--agent",
+    "paper-orchestra-isolated-worker",
+    "--disable-telemetry",
+    "--log-file",
+    "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/b61df5ca55924cf8a755f7d25fdaf65f/acp-server.log"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\n\n            Find 10-15 highly relevant, influential academic papers matching the search task. Do not force results; only return strictly relevant papers.\n            \n            SEARCH TASK: Search 'review fitted sample error versus held out prediction assessment' for broad context explaining the limits of evaluating on observations used to determine a correction.\n            CONTEXT FOR TASK: Hook: Foundational or survey literature may establish why separating systematic prediction offsets from residual error is useful for explaining prediction assessment. Verify this educational motivation without asserting real-world urgency or an application impact unsupported by the supplied materials.. Gap: The teaching question is whether adding the mean residual removes the fixed offset of the supplied predictor on exactly x=[-2,-1,0,1,2] with y=2x+3. The supplied calculation answers only this finite, same-sample question; it establishes no literature gap, algorithmic novelty, benchmark advantage, or held-out performance.\n            BROADER PROJECT PROBLEM: The teaching question is whether adding the mean residual removes the fixed offset of the supplied predictor on exactly x=[-2,-1,0,1,2] with y=2x+3. The supplied calculation answers only this finite, same-sample question; it establishes no literature gap, algorithmic novelty, benchmark advantage, or held-out performance.\n            CUTOFF DATE: Published BEFORE 2026-11\n            \n            INSTRUCTIONS:\n            1. Use Google Search to find REAL papers (ArXiv, CVPR, NeurIPS, ICML, ICLR, etc.).\n            2. Only return papers published in top-tier conferences or journals, or highly-cited works, or the exact state-of-the-art relevant to the task.\n\n            YOU MUST return the results in json format (```json content```) following this schema:\n            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}\n            \n\n[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.",
+  "env": {},
+  "images": [],
+  "acp": {
+    "config_strategy": "session-options",
+    "model": "gemini-3.8-flash",
+    "effort": "medium",
+    "model_option": "model",
+    "effort_option": "thought_level",
+    "expected_mode": "default",
+    "allowed_search_tools": [
+      "search_web"
+    ],
+    "search_evidence": "native matched search_web query/status; result body is not emitted by ACP 1.5.9",
+    "agent_file": "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/b61df5ca55924cf8a755f7d25fdaf65f/.agents/agents/paper-orchestra-isolated-worker.md",
+    "agent_file_sha256": "7365b33a7432fdaeff3a9edcf9589593fac21d8f8cc87d6a549365b211adae0b"
+  }
+}

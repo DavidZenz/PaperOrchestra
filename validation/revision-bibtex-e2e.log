@@ -1,0 +1,276 @@
+Matplotlib is building the font cache; this may take a moment.
+outline.json output written to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/outline.json
+[DEBUG] Starting run_literature_agent[DEBUG] Starting run_plotting_agent
+
+🚀 Starting Fast Hybrid Literature Agent (Cutoff: 2026-11, Threads: 3)...
+📚 Phase 1: Analyzing Plan & Executing Search Tasks...
+    -> Identified 17 distinct search tasks.
+   🔎 Phase 1a: Google Candidates Discovery (MaxPool=10)...
+   🔎 Exploration [Introduction]: 'Search foundational or review literature for 'prediction systematic additive offset residual interpretation'; assess whether it supports the teaching motivation without importing application results.'
+   🔎 Exploration [Introduction]: 'Search 'survey regression residual analysis prediction error assessment' for broad terminology and conceptual context.'
+Processing figure: fig_intercept_error
+   🔎 Exploration [Introduction]: 'Search 'review fitted sample error versus held out prediction assessment' for broad context explaining the limits of evaluating on observations used to determine a correction.'
+   🔎 Exploration [Introduction]: 'Identify 3–5 foundational sources among the screened candidates, verifying their bibliographic records before recommending any citation.'
+   🔎 Exploration [Introduction]: 'Search 'foundations fixed slope intercept least squares residual mean' to identify foundational treatments of scalar intercept estimation.'
+   🔎 Exploration [Related Work: Research cluster: Fixed-Predictor Additive Intercept Adjustment]: '"fixed slope" "intercept" "mean residual"'
+   🔎 Exploration [Related Work: Research cluster: Fixed-Predictor Additive Intercept Adjustment]: '"fixed predictor" "intercept correction"'
+Processing figure: fig_residual_workflow
+   🔎 Exploration [Related Work: Research cluster: Fixed-Predictor Additive Intercept Adjustment]: '"additive prediction offset" "squared error"'
+   🔎 Exploration [Related Work: Research cluster: Residual-Based Scalar Correction and Evaluation]: '"mean residual correction" "same sample"'
+[fig_intercept_error] Retrieving few-shot examples...
+   🔎 Exploration [Related Work: Research cluster: Residual-Based Scalar Correction and Evaluation]: '"intercept adjustment" "in sample error"'
+Warn: /Users/davidzenz/.codex/skills/paper-orchestra/vendor/utils/../../PaperBanana/data/PaperBananaBench/plot/ref.json not found. Proceeding without few-shot.
+[fig_intercept_error] Planning figure content...
+[fig_residual_workflow] Retrieving few-shot examples...
+Warn: /Users/davidzenz/.codex/skills/paper-orchestra/vendor/utils/../../PaperBanana/data/PaperBananaBench/diagram/ref.json not found. Proceeding without few-shot.
+[fig_residual_workflow] Planning figure content...
+[fig_residual_workflow] Styling figure content...
+[fig_intercept_error] Styling figure content...
+[fig_residual_workflow] Generating initial visual with aspect ratio 16:9...
+[fig_intercept_error] Generating initial visual with aspect ratio 4:3...
+[fig_intercept_error] Running critic round 1/3...
+Warning: Gemini API call failed on attempt 1 of 5. Error: Parsed response is None, Here is the raw response:
+```json
+{
+  "section_name": "Fitted Sample Error versus Held-Out Prediction Assessment",
+  "candidates": [
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Foundational paper that defines apparent error on the training sample versus true prediction error and introduces the bootstrap formulation of optimism to correct for in-sample evaluation bias."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal work establishing cross-validation and explaining why assessing a predictive rule on the exact observations used to fit or determine corrections gives an overly optimistic assessment."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Classic paper establishing sample-reuse principles to prevent circularity when evaluating prediction rules on the same data sample used to tune or estimate parameters."
+    },
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Derives explicit analytical expressions for the downward bias of in-sample error rates, formally demonstrating why apparent error on fitted observations understates generalization error."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Unifies in-sample residual corrections and cross-validation through covariance penalties, explaining how parameter fitting mechanically reduces sample residuals without guaranteeing true prediction improvement."
+    },
+    {
+      "title": "The Elements of Statistical Learning: Data Mining, Inference, and Prediction",
+      "year": 2009,
+      "reason": "Influential reference whose model assessment and selection chapters clearly contrast training error, optimism, and held-out validation error in educational and methodological settings."
+    },
+    {
+      "title": "A survey of cross-validation procedures for model selection",
+      "year": 2010
+      "reason": "Comprehensive review examining the theoretical foundations and limitations of cross-validation versus apparent error when assessing predictive models."
+    },
+    {
+      "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+      "year": 1995,
+      "reason": "Highly cited benchmark study investigating the bias and variance of evaluation methods when comparing fitted sample accuracy to held-out test accuracy."
+    },
+    {
+      "title": "No Unbiased Estimator of the Variance of K-Fold Cross-Validation",
+      "year": 2004,
+      "reason": "Examines the theoretical limits and dependencies inherent in resampling-based prediction error estimates relative to the training sample."
+    },
+    {
+      "title": "Internal validation of predictive models: efficiency of some procedures for logistic regression analysis",
+      "year": 2001,
+      "reason": "Analyzes apparent performance, optimism correction, and calibration, demonstrating why evaluating model adjustments on the derivation sample overestimates true predictive performance."
+    },
+    {
+      "title": "The reusable holdout: Preserving validity in adaptive data analysis",
+      "year": 2015,
+      "reason": "Explores how repeatedly evaluating and adapting predictions on holdout observations leads to overfitting the holdout, clarifying the limits of sample reuse for prediction adjustments."
+    },
+    {
+      "title": "Cross-validation: what does it estimate and how well does it do it?",
+      "year": 2023,
+      "reason": "Analyzes the exact theoretical estimand of held-out assessment versus the in-sample fitted model performance, highlighting what same-sample evaluations fail to capture."
+    }
+  ]
+}
+```
+Retrying in 0 seconds...
+[fig_intercept_error] Critic round 1: Changes needed. Re-generating based on suggestions...
+[fig_intercept_error] Running critic round 2/3...
+[fig_intercept_error] Critic round 2: No changes needed. Finishing refinement.
+[fig_intercept_error] Generating caption...
+[fig_intercept_error] Figure processing complete.
+[fig_residual_workflow] Running critic round 1/3...
+   🔎 Exploration [Related Work: Research cluster: Residual-Based Scalar Correction and Evaluation]: '"residual correction" "held out evaluation"'
+   🎯 Targeted Search [3. Method - 3.2 Error Definitions and Reproducible Calculation]: 'research paper or technical report introducing 'Mean absolute error''
+   🎯 Targeted Search [3. Method - 3.2 Error Definitions and Reproducible Calculation]: 'research paper or technical report introducing 'Mean squared error''
+   🎯 Targeted Search [3. Method - 3.2 Error Definitions and Reproducible Calculation]: 'research paper or technical report introducing 'R''
+   🎯 Targeted Search [3. Method - 3.2 Error Definitions and Reproducible Calculation]: 'research paper or technical report introducing 'ggplot2''
+[fig_residual_workflow] Critic round 1: Changes needed. Re-generating based on suggestions...
+   🎯 Targeted Search [4. Experiments - 4.2 Recorded Errors and Their Interpretation]: 'research paper or technical report introducing 'Mean absolute error''
+   🎯 Targeted Search [4. Experiments - 4.2 Recorded Errors and Their Interpretation]: 'research paper or technical report introducing 'Mean squared error''
+[fig_residual_workflow] Running critic round 2/3...
+[fig_residual_workflow] Critic round 2: Changes needed. Re-generating based on suggestions...
+   📊 Phase 1b: Semantic Scholar Enrichment (Rate-limited, sequential)...
+      -> 📚 Added enriched paper: Generalized Linear Models
+      -> 📚 Added enriched paper: Regression, Prediction and Shrinkage
+      -> 📚 Added enriched paper: Validation techniques for logistic regression models
+      -> 📚 Added enriched paper: MULTIVARIABLE PROGNOSTIC MODELS: ISSUES IN DEVELOPING MODELS, EVALUATING ASSUMPTIONS AND ADEQUACY, AND MEASURING AND REDUCING ERRORS
+      -> 📚 Added enriched paper: Probabilistic Outputs for Support vector Machines and Comparisons to Regularized Likelihood Methods
+      -> 📚 Added enriched paper: Greedy function approximation: A gradient boosting machine.
+      -> 📚 Added enriched paper: Assessing the Performance of Prediction Models: A Framework for Traditional and Novel Measures
+      -> 📚 Added enriched paper: On Calibration of Modern Neural Networks
+      -> 📚 Added enriched paper: Calibration: the Achilles heel of predictive analytics
+      -> 📚 Added enriched paper: Intercept corrections and structural change
+      -> 📚 Added enriched paper: Forecasting Economic Time Series
+      -> 📚 Added enriched paper: The role of judgement in macroeconomic forecasting
+      -> 📚 Added enriched paper: Validation and updating of predictive logistic regression models: a study on sample size and shrinkage
+      -> 📚 Added enriched paper: A review of statistical updating methods for clinical prediction models
+      -> 📚 Added enriched paper: The Use of Model Output Statistics (MOS) in Objective Weather Forecasting
+      -> 📚 Added enriched paper: The Examination and Analysis of Residuals
+      -> 📚 Added enriched paper: A General Definition of Residuals
+[fig_residual_workflow] Running critic round 3/3...
+      -> 📚 Added enriched paper: Cross-Validatory Choice and Assessment of Statistical Predictions
+      -> 📚 Added enriched paper: Science and Statistics
+      -> 📚 Added enriched paper: Regression Diagnostics: Identifying Influential Data and Sources of Collinearity
+      -> 📚 Added enriched paper: ON THE VALIDATION OF MODELS
+      -> 📚 Added enriched paper: Residuals and Influence in Regression
+      -> 📚 Added enriched paper: Statistics for the evaluation and comparison of models
+      -> 📚 Added enriched paper: Generalized Additive Models
+      -> 📚 Added enriched paper: How Biased is the Apparent Error Rate of a Prediction Rule?
+      -> 📚 Added enriched paper: A General Framework for Forecast Verification
+      -> 📚 Added enriched paper: Skill Scores Based on the Mean Square Error and Their Relationships to the Correlation Coefficient
+      -> 📚 Added enriched paper: Neural Networks and the Bias/Variance Dilemma
+      -> 📚 Added enriched paper: Detection of Influential Observation in Linear Regression
+      -> 📚 Added enriched paper: The Hat Matrix in Regression and ANOVA
+[fig_residual_workflow] Critic round 3: Changes needed. Re-generating based on suggestions...
+      -> 📚 Added enriched paper: Regression Diagnostics: An Expository Treatment of Outliers and Influential Cases
+      -> 📚 Added enriched paper: Influential Observations, High Leverage Points, and Outliers in Linear Regression
+      -> 📚 Added enriched paper: Regression Model Diagnostics
+      -> 📚 Added enriched paper: The Estimation of Prediction Error: Covariance Penalties and Cross-Validation
+      -> 📚 Added enriched paper: A closed testing procedure to select an appropriate method for updating prediction models
+      -> 📚 Added enriched paper: Seasonal Adjustment of Economic Time Series and Multiple Regression Analysis
+      -> 📚 Added enriched paper: A New Vector Partition of the Probability Score
+      -> 📚 Added enriched paper: Accurate Uncertainties for Deep Learning Using Calibrated Regression
+      -> 📚 Added enriched paper: Evaluating and Calibrating Uncertainty Prediction in Regression Tasks
+      -> 📚 Added enriched paper: Predicting good probabilities with supervised learning
+      -> 📚 Added enriched paper: R: A Language for Data Analysis and Graphics
+      -> 📚 Added enriched paper: Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation
+      -> 📚 Added enriched paper: Ridge Regression: Biased Estimation for Nonorthogonal Problems
+      -> 📚 Added enriched paper: Comment on "Statistical Modeling: The Two Cultures" by Leo Breiman
+      -> 📚 Added enriched paper: POSTERIOR PREDICTIVE ASSESSMENT OF MODEL FITNESS VIA REALIZED DISCREPANCIES
+      -> 📚 Added enriched paper: Fitting Regression Models with No Intercept Term
+      -> 📚 Added enriched paper: A Note on Fitting a Regression without an Intercept Term
+      -> 📚 Added enriched paper: Errors in Computer Packages. Least Squares Regression Through the Origin
+      -> 📚 Added enriched paper: Leverage and Regression Through the Origin
+      -> 📚 Added enriched paper: Cautionary Note about R 2
+      -> 📚 Added enriched paper: Demeaning Conditioning Diagnostics through Centering
+      -> 📚 Added enriched paper: Regression through the Origin
+      -> 📚 Added enriched paper: Validation, calibration, revision and combination of prognostic survival models
+[fig_residual_workflow] Generating caption...
+      -> 📚 Added enriched paper: On Measuring and Correcting the Effects of Data Mining and Model Selection
+      -> 📚 Added enriched paper: A new look at the statistical model identification
+      -> 📚 Added enriched paper: The Predictive Sample Reuse Method with Applications
+[fig_residual_workflow] Figure processing complete.
+Saved /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/figures/fig_intercept_error.jpg
+Saved /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/figures/fig_residual_workflow.jpg
+[DEBUG] Finished run_plotting_agent
+      -> 📚 Added enriched paper: Submodel Selection and Evaluation in Regression. The X-Random Case
+      -> 📚 Added enriched paper: A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection
+      -> 📚 Added enriched paper: Bias in error estimation when using cross-validation for model selection
+      -> 📚 Added enriched paper: A survey of cross-validation procedures for model selection
+      -> 📚 Added enriched paper: Towards a theory of economic forecasting
+      -> 📚 Added enriched paper: Estimation of Error Rates in Discriminant Analysis
+      -> 📚 Added enriched paper: The Relationship Between Variable Selection and Data Agumentation and a Method for Prediction
+      -> 📚 Added enriched paper: Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance
+      -> 📚 Added enriched paper: A Layered Grammar of Graphics
+      -> 📚 Added enriched paper: Double/debiased machine learning for treatment and structural parameters
+      -> 📚 Added enriched paper: Distribution-Free Predictive Inference for Regression
+      -> 📚 Added enriched paper: Cross-Validation: What Does It Estimate and How Well Does It Do It?
+      -> 📚 Added enriched paper: Leakage and the reproducibility crisis in machine-learning-based science
+
+✨ Final Count: 69 unique enriched papers retrieved.
+🔄 Injecting citations back into Outline...
+✍️  Phase 3: Writing Introduction & Related Work...
+✅ Done! Literature Review Outputs saved to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/literature_agent_output/
+[DEBUG] Finished run_literature_agent
+ > Agent SectionWritingAgent starting...
+ > Generating paper content with Multimodal Images...
+ > Paper saved to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/latex_writeup/raw_draft_paper.tex
+ >> Work directory: /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir
+
+=== Initial Baseline Review ===
+ >> Initial PDF saved to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir/initial_draft.pdf
+ >> Generating snapshots for V0...
+ >> [AgentReview] Generating feedback for initial paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for initial: 2/10
+
+=== Refinement Iteration 1/3 ===
+ >> calling Refinement Agent...
+ >> Compiling new draft...
+ >> New PDF saved to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir/refined_paper_v1.pdf
+ >> Generating snapshots for v1...
+ >> [AgentReview] Generating feedback for v1 paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for v1: 3/10
+ >> Score Analysis v1:
+    Overall: 2.0 -> 3.0
+    Sub-axes Gain: +2.0 | Drop: -0.0
+    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 0.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 1.0, 'Contribution': 1.0}
+ >> SUCCESS: Overall Score increased! Progressing to next iteration...
+
+=== Refinement Iteration 2/3 ===
+ >> calling Refinement Agent...
+ >> Compiling new draft...
+ >> New PDF saved to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir/refined_paper_v2.pdf
+ >> Generating snapshots for v2...
+ >> [AgentReview] Generating feedback for v2 paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for v2: 3/10
+ >> Score Analysis v2:
+    Overall: 3.0 -> 3.0
+    Sub-axes Gain: +1.0 | Drop: -0.0
+    Sub-axes Deltas: {'Originality': 0.0, 'Quality': 1.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}
+ >> ACCEPT & CONTINUE: Overall same, internal metrics stable/improved. Progressing to next iteration...
+
+=== Refinement Iteration 3/3 ===
+ >> calling Refinement Agent...
+ >> Compiling new draft...
+ >> New PDF saved to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir/refined_paper_v3.pdf
+ >> Generating snapshots for v3...
+ >> [AgentReview] Generating feedback for v3 paper...
+Start paper reviewing using model: `gemini-3.1-pro-preview`
+Generating ensemble review 1/3...
+Generating ensemble review 2/3...
+Generating ensemble review 3/3...
+ >> [Reviewer] Score for v3: 3/10
+ >> Score Analysis v3:
+    Overall: 3.0 -> 3.0
+    Sub-axes Gain: +0.0 | Drop: -1.0
+    Sub-axes Deltas: {'Originality': 0.0, 'Quality': -1.0, 'Clarity': 0.0, 'Significance': 0.0, 'Soundness': 0.0, 'Presentation': 0.0, 'Contribution': 0.0}
+ >> STOP: Overall same, but sub-axes degraded (Drop > Gain). Reverting.
+ >> Generating snapshots for format v0...
+ >> Starting dedicated formatting loop...
+
+=== Formatting Iteration 1/1 ===
+ >> [VLM] Generating formatting feedback for fmt_loop_1 paper...
+ >> [VLM] Found formatting issues. Calling Gemini to fix...
+ >> Formatting iteration 1 compiled successfully.
+ >> Process Complete. Final Score: 3.0, Final PDF at: /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir/final_refined_paper.pdf
+ >> Copying final PDF from  /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/content_refinement_workdir/final_refined_paper.pdf to /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/final_paper.pdf...
+
+ >> Final PDF saved to:
+ /Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/final_paper.pdf

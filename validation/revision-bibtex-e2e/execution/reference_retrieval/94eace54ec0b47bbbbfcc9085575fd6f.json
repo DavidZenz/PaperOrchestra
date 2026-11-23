@@ -1,0 +1,2878 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 965445,
+      "db_response_time_ms": 241,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Robust Approaches to Forecasting) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Robust Approaches to Forecasting) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Robust Approaches to Forecasting",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Robust Approaches to Forecasting&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W1969495987",
+        "doi": "https://doi.org/10.1016/j.ijforecast.2014.11.002",
+        "title": "Robust approaches to forecasting",
+        "display_name": "Robust approaches to forecasting",
+        "alternate_titles": [],
+        "relevance_score": 204.15619,
+        "publication_year": 2014,
+        "publication_date": "2014-11-24",
+        "ids": {
+          "openalex": "https://openalex.org/W1969495987",
+          "doi": "https://doi.org/10.1016/j.ijforecast.2014.11.002",
+          "mag": "1969495987"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1016/j.ijforecast.2014.11.002",
+          "doi": "https://doi.org/10.1016/j.ijforecast.2014.11.002",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/j.ijforecast.2014.11.002",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S39841227",
+            "display_name": "International Journal of Forecasting",
+            "issn_l": "0169-2070",
+            "issn": [
+              "0169-2070",
+              "1872-8200"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "erih-plus",
+              "fnege-3",
+              "jufo-2",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "International Journal of Forecasting",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W1969495987"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://ora.ox.ac.uk/objects/uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23/files/szp38wd12r",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5057395668",
+              "display_name": "Jennifer L. Castle",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-9325-8024",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9325-8024"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I40120149",
+                "display_name": "University of Oxford",
+                "ror": "https://ror.org/052gg0110",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Jennifer L. Castle",
+            "raw_affiliation_strings": [
+              "Magdalen College and Institute for New Economic Thinking, Oxford Martin School, University of Oxford, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Magdalen College and Institute for New Economic Thinking, Oxford Martin School, University of Oxford, UK",
+                "institution_ids": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5087571137",
+              "display_name": "Michael P. Clements",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-6329-1341",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-6329-1341"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I2799429437",
+                "display_name": "ICMA Centre",
+                "ror": "https://ror.org/05bmj6719",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I2799429437"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I40120149",
+                "display_name": "University of Oxford",
+                "ror": "https://ror.org/052gg0110",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I40120149"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I71052956",
+                "display_name": "University of Reading",
+                "ror": "https://ror.org/05v62cm79",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I71052956"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Michael P. Clements",
+            "raw_affiliation_strings": [
+              "ICMA Centre, University of Reading, and Institute for New Economic Thinking, Oxford Martin School, University of Oxford, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "ICMA Centre, University of Reading, and Institute for New Economic Thinking, Oxford Martin School, University of Oxford, UK",
+                "institution_ids": [
+                  "https://openalex.org/I2799429437",
+                  "https://openalex.org/I40120149",
+                  "https://openalex.org/I71052956"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5014898803",
+              "display_name": "David Forbes Hendry",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-8013-576X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8013-576X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I40120149",
+                "display_name": "University of Oxford",
+                "ror": "https://ror.org/052gg0110",
+                "country_code": "GB",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ],
+            "countries": [
+              "GB"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "David F. Hendry",
+            "raw_affiliation_strings": [
+              "Economics Department and Institute for New Economic Thinking, Oxford Martin School, University of Oxford, UK"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Economics Department and Institute for New Economic Thinking, Oxford Martin School, University of Oxford, UK",
+                "institution_ids": [
+                  "https://openalex.org/I40120149"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 3,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5057395668"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I40120149"
+        ],
+        "apc_list": {
+          "value": 2800,
+          "currency": "USD",
+          "value_usd": 2800
+        },
+        "apc_paid": null,
+        "fwci": 4.7768,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 83,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.94700742,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 86,
+          "max": 99
+        },
+        "biblio": {
+          "volume": "31",
+          "issue": "1",
+          "first_page": "99",
+          "last_page": "112"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 0.9984999895095825,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.9984999895095825,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 0.0005000000237487257,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.0003000000142492354,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/robust-forecasting",
+            "display_name": "robust forecasting",
+            "score": 0.9760000109672546
+          },
+          {
+            "id": "https://openalex.org/keywords/robust-regression",
+            "display_name": "robust regression",
+            "score": 0.4480000138282776
+          },
+          {
+            "id": "https://openalex.org/keywords/equilibrium-correction-model",
+            "display_name": "equilibrium correction model",
+            "score": 0.8529999852180481
+          },
+          {
+            "id": "https://openalex.org/keywords/measurement-error",
+            "display_name": "measurement error",
+            "score": 0.7239999771118164
+          },
+          {
+            "id": "https://openalex.org/keywords/omitted-variables",
+            "display_name": "omitted variables",
+            "score": 0.7590000033378601
+          },
+          {
+            "id": "https://openalex.org/keywords/structural-breaks",
+            "display_name": "structural breaks",
+            "score": 0.7179999947547913
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-bias",
+            "display_name": "forecast bias",
+            "score": 0.875
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-error-variance",
+            "display_name": "forecast error variance",
+            "score": 0.9309999942779541
+          },
+          {
+            "id": "https://openalex.org/keywords/autoregressive-models",
+            "display_name": "autoregressive models",
+            "score": 0.8489999771118164
+          },
+          {
+            "id": "https://openalex.org/keywords/factor-models",
+            "display_name": "factor models",
+            "score": 0.6690000295639038
+          },
+          {
+            "id": "https://openalex.org/keywords/great-recession",
+            "display_name": "Great Recession",
+            "score": 0.875
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.7666394710540771
+          },
+          {
+            "id": "https://openalex.org/C159877910",
+            "wikidata": "https://www.wikidata.org/wiki/Q2202883",
+            "display_name": "Autoregressive model",
+            "level": 2,
+            "score": 0.7162390947341919
+          },
+          {
+            "id": "https://openalex.org/C120954023",
+            "wikidata": "https://www.wikidata.org/wiki/Q1127277",
+            "display_name": "Consensus forecast",
+            "level": 2,
+            "score": 0.4876910448074341
+          },
+          {
+            "id": "https://openalex.org/C204323151",
+            "wikidata": "https://www.wikidata.org/wiki/Q905424",
+            "display_name": "Range (aeronautics)",
+            "level": 2,
+            "score": 0.48134908080101013
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.4271603226661682
+          },
+          {
+            "id": "https://openalex.org/C174303752",
+            "wikidata": "https://www.wikidata.org/wiki/Q3624438",
+            "display_name": "Forecast error",
+            "level": 2,
+            "score": 0.41657018661499023
+          },
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.404499888420105
+          },
+          {
+            "id": "https://openalex.org/C127413603",
+            "wikidata": "https://www.wikidata.org/wiki/Q11023",
+            "display_name": "Engineering",
+            "level": 0,
+            "score": 0.07168149948120117
+          },
+          {
+            "id": "https://openalex.org/C146978453",
+            "wikidata": "https://www.wikidata.org/wiki/Q3798668",
+            "display_name": "Aerospace engineering",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 6,
+        "locations": [
+          {
+            "id": "doi:10.1016/j.ijforecast.2014.11.002",
+            "doi": "https://doi.org/10.1016/j.ijforecast.2014.11.002",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1016/j.ijforecast.2014.11.002",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S39841227",
+              "display_name": "International Journal of Forecasting",
+              "issn_l": "0169-2070",
+              "issn": [
+                "0169-2070",
+                "1872-8200"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "erih-plus",
+                "fnege-3",
+                "jufo-2",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320990",
+              "host_organization_name": "Elsevier BV",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320990"
+              ],
+              "host_organization_lineage_names": [
+                "Elsevier BV"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "International Journal of Forecasting",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:ora.ox.ac.uk:uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://ora.ox.ac.uk/objects/uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23/files/szp38wd12r",
+            "pdf_url": "https://ora.ox.ac.uk/objects/uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23/files/szp38wd12r",
+            "source": {
+              "id": "https://openalex.org/S4306402636",
+              "display_name": "Oxford University Research Archive (ORA) (University of Oxford)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I40120149",
+              "host_organization_name": "University of Oxford",
+              "host_organization_lineage": [
+                "https://openalex.org/I40120149"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Symplectic Elements",
+            "raw_type": "http://purl.org/coar/resource_type/c_8042"
+          },
+          {
+            "id": "pmh:oai:ora.ox.ac.uk:uuid:e292702d-7c39-49de-8696-d9b893123ff7",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://ora.ox.ac.uk/objects/uuid:e292702d-7c39-49de-8696-d9b893123ff7",
+            "pdf_url": "https://ora.ox.ac.uk/objects/uuid:e292702d-7c39-49de-8696-d9b893123ff7/files/m7f1d744215258bca184f4e069a0c1e99",
+            "source": {
+              "id": "https://openalex.org/S4306402636",
+              "display_name": "Oxford University Research Archive (ORA) (University of Oxford)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I40120149",
+              "host_organization_name": "University of Oxford",
+              "host_organization_lineage": [
+                "https://openalex.org/I40120149"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "acceptedVersion",
+            "is_accepted": true,
+            "is_published": false,
+            "raw_source_name": "Symplectic Elements at Oxford",
+            "raw_type": "Journal article"
+          },
+          {
+            "id": "mag:3125938639",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://econpapers.repec.org/RePEc:oxf:wpaper:697",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "RePEc: Research Papers in Economics",
+            "raw_type": null
+          },
+          {
+            "id": "pmh:oai:RePEc:eee:intfor:v:31:y:2015:i:1:p:99-112",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://www.sciencedirect.com/science/article/pii/S0169207014001496",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          },
+          {
+            "id": "pmh:oai:RePEc:oxf:wpaper:697",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://ora.ox.ac.uk/objects/uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "preprint"
+          }
+        ],
+        "best_oa_location": {
+          "id": "pmh:oai:ora.ox.ac.uk:uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://ora.ox.ac.uk/objects/uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23/files/szp38wd12r",
+          "pdf_url": "https://ora.ox.ac.uk/objects/uuid:2a4ae346-b9ae-4450-bb5a-5b18bcffce23/files/szp38wd12r",
+          "source": {
+            "id": "https://openalex.org/S4306402636",
+            "display_name": "Oxford University Research Archive (ORA) (University of Oxford)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I40120149",
+            "host_organization_name": "University of Oxford",
+            "host_organization_lineage": [
+              "https://openalex.org/I40120149"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Symplectic Elements",
+          "raw_type": "http://purl.org/coar/resource_type/c_8042"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306189",
+            "display_name": "Open Society Foundations",
+            "ror": "https://ror.org/00qnfvz68"
+          },
+          {
+            "id": "https://openalex.org/F4320334902",
+            "display_name": "Oxford Martin School, University of Oxford",
+            "ror": null
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W1969495987.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W1969495987.grobid-xml"
+        },
+        "referenced_works_count": 38,
+        "referenced_works": [
+          "https://openalex.org/W1528512439",
+          "https://openalex.org/W1533949666",
+          "https://openalex.org/W1536145750",
+          "https://openalex.org/W1546736513",
+          "https://openalex.org/W1559361175",
+          "https://openalex.org/W1573414451",
+          "https://openalex.org/W1597170474",
+          "https://openalex.org/W1971116855",
+          "https://openalex.org/W1984291625",
+          "https://openalex.org/W1991135386",
+          "https://openalex.org/W1993940928",
+          "https://openalex.org/W2011427904",
+          "https://openalex.org/W2018100303",
+          "https://openalex.org/W2028148133",
+          "https://openalex.org/W2039864532",
+          "https://openalex.org/W2051794781",
+          "https://openalex.org/W2062113971",
+          "https://openalex.org/W2098048444",
+          "https://openalex.org/W2103321386",
+          "https://openalex.org/W2109688870",
+          "https://openalex.org/W2111286399",
+          "https://openalex.org/W2111345445",
+          "https://openalex.org/W2119490449",
+          "https://openalex.org/W2121053422",
+          "https://openalex.org/W2130052471",
+          "https://openalex.org/W2177791359",
+          "https://openalex.org/W2339782657",
+          "https://openalex.org/W2493647452",
+          "https://openalex.org/W2506428136",
+          "https://openalex.org/W3020866103",
+          "https://openalex.org/W3121405323",
+          "https://openalex.org/W3122840906",
+          "https://openalex.org/W3122896422",
+          "https://openalex.org/W3123497362",
+          "https://openalex.org/W3125100385",
+          "https://openalex.org/W4212808836",
+          "https://openalex.org/W4247829974",
+          "https://openalex.org/W6676610058"
+        ],
+        "related_works": [
+          "https://openalex.org/W2134575624",
+          "https://openalex.org/W2132789450",
+          "https://openalex.org/W196725850",
+          "https://openalex.org/W4285290928",
+          "https://openalex.org/W2906181013",
+          "https://openalex.org/W2024783368",
+          "https://openalex.org/W2973062343",
+          "https://openalex.org/W3023594292",
+          "https://openalex.org/W3122723693",
+          "https://openalex.org/W2562317588"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W1969495987",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 10
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 5
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 8
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-21T10:27:49.728292",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W7127589838",
+        "doi": "https://doi.org/10.21844/mijia.21.2.11",
+        "title": "A Robust Approach for Forecasting and Planning Municipal Solid Waste Generation: A SARIMA Model",
+        "display_name": "A Robust Approach for Forecasting and Planning Municipal Solid Waste Generation: A SARIMA Model",
+        "alternate_titles": [],
+        "relevance_score": 106.903275,
+        "publication_year": 2025,
+        "publication_date": "2025-12-31",
+        "ids": {
+          "openalex": "https://openalex.org/W7127589838",
+          "doi": "https://doi.org/10.21844/mijia.21.2.11"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.21844/mijia.21.2.11",
+          "doi": "https://doi.org/10.21844/mijia.21.2.11",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.21844/mijia.21.2.11",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S2764671994",
+            "display_name": "Management Insight - The Journal of Incisive Analysers",
+            "issn_l": "0973-936X",
+            "issn": [
+              "0973-936X",
+              "2456-0936"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I4405257256",
+            "host_organization_name": "School of Management Sciences, Varanasi",
+            "host_organization_lineage": [
+              "https://openalex.org/I4405257256"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Management Insight",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W7127589838"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "diamond",
+          "oa_url": "https://doi.org/10.21844/mijia.21.2.11",
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5125096343",
+              "display_name": "Parul Jain",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Parul Jain",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5124974789",
+              "display_name": "Raunak Kumar Gupta",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Raunak Kumar Gupta",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": null,
+        "apc_paid": null,
+        "fwci": 0.0,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 0,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.0,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": null,
+        "biblio": {
+          "volume": "21",
+          "issue": "02",
+          "first_page": "144",
+          "last_page": "154"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11108",
+          "display_name": "Municipal Solid Waste Management",
+          "score": 0.9955999851226807,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2311",
+            "display_name": "Waste Management and Disposal"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11108",
+            "display_name": "Municipal Solid Waste Management",
+            "score": 0.9955999851226807,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2311",
+              "display_name": "Waste Management and Disposal"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14179",
+            "display_name": "Waste Management and Recycling",
+            "score": 0.002099999925121665,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2311",
+              "display_name": "Waste Management and Disposal"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/23",
+              "display_name": "Environmental Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.000699999975040555,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/municipal-solid-waste-generation",
+            "display_name": "municipal solid waste generation",
+            "score": 0.8930000066757202
+          },
+          {
+            "id": "https://openalex.org/keywords/waste-generation-prediction",
+            "display_name": "waste generation forecasting",
+            "score": 0.8840000033378601
+          },
+          {
+            "id": "https://openalex.org/keywords/sarima-model",
+            "display_name": "SARIMA",
+            "score": 0.8500000238418579
+          },
+          {
+            "id": "https://openalex.org/keywords/varanasi",
+            "display_name": "Varanasi",
+            "score": 0.6420000195503235
+          },
+          {
+            "id": "https://openalex.org/keywords/source-segregation",
+            "display_name": "source segregation",
+            "score": 0.5659999847412109
+          },
+          {
+            "id": "https://openalex.org/keywords/open-dumping",
+            "display_name": "open dumping",
+            "score": 0.7260000109672546
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C75779659",
+            "wikidata": "https://www.wikidata.org/wiki/Q18538",
+            "display_name": "Municipal solid waste",
+            "level": 2,
+            "score": 0.7149999737739563
+          },
+          {
+            "id": "https://openalex.org/C66204764",
+            "wikidata": "https://www.wikidata.org/wiki/Q219416",
+            "display_name": "Sustainability",
+            "level": 2,
+            "score": 0.6805999875068665
+          },
+          {
+            "id": "https://openalex.org/C91375879",
+            "wikidata": "https://www.wikidata.org/wiki/Q15473274",
+            "display_name": "Environmental planning",
+            "level": 1,
+            "score": 0.5590999722480774
+          },
+          {
+            "id": "https://openalex.org/C144133560",
+            "wikidata": "https://www.wikidata.org/wiki/Q4830453",
+            "display_name": "Business",
+            "level": 0,
+            "score": 0.5008000135421753
+          },
+          {
+            "id": "https://openalex.org/C2908647359",
+            "wikidata": "https://www.wikidata.org/wiki/Q2625603",
+            "display_name": "Population",
+            "level": 2,
+            "score": 0.44690001010894775
+          },
+          {
+            "id": "https://openalex.org/C49545453",
+            "wikidata": "https://www.wikidata.org/wiki/Q69883",
+            "display_name": "Urban planning",
+            "level": 2,
+            "score": 0.4343000054359436
+          },
+          {
+            "id": "https://openalex.org/C552854447",
+            "wikidata": "https://www.wikidata.org/wiki/Q131201",
+            "display_name": "Sustainable development",
+            "level": 2,
+            "score": 0.41830000281333923
+          },
+          {
+            "id": "https://openalex.org/C134560507",
+            "wikidata": "https://www.wikidata.org/wiki/Q753291",
+            "display_name": "Environmental economics",
+            "level": 1,
+            "score": 0.4007999897003174
+          },
+          {
+            "id": "https://openalex.org/C2779530757",
+            "wikidata": "https://www.wikidata.org/wiki/Q1207505",
+            "display_name": "Quality (philosophy)",
+            "level": 2,
+            "score": 0.3840999901294708
+          },
+          {
+            "id": "https://openalex.org/C48243021",
+            "wikidata": "https://www.wikidata.org/wiki/Q932522",
+            "display_name": "Strategic planning",
+            "level": 2,
+            "score": 0.35179999470710754
+          },
+          {
+            "id": "https://openalex.org/C127413603",
+            "wikidata": "https://www.wikidata.org/wiki/Q11023",
+            "display_name": "Engineering",
+            "level": 0,
+            "score": 0.3513999879360199
+          },
+          {
+            "id": "https://openalex.org/C200630231",
+            "wikidata": "https://www.wikidata.org/wiki/Q1099428",
+            "display_name": "Cleaner production",
+            "level": 3,
+            "score": 0.32829999923706055
+          },
+          {
+            "id": "https://openalex.org/C2986463069",
+            "wikidata": "https://www.wikidata.org/wiki/Q180388",
+            "display_name": "Solid waste management",
+            "level": 3,
+            "score": 0.3262999951839447
+          },
+          {
+            "id": "https://openalex.org/C521786372",
+            "wikidata": "https://www.wikidata.org/wiki/Q1324934",
+            "display_name": "Waste collection",
+            "level": 3,
+            "score": 0.32260000705718994
+          },
+          {
+            "id": "https://openalex.org/C2778368647",
+            "wikidata": "https://www.wikidata.org/wiki/Q702492",
+            "display_name": "Urban area",
+            "level": 2,
+            "score": 0.322299987077713
+          },
+          {
+            "id": "https://openalex.org/C77352025",
+            "wikidata": "https://www.wikidata.org/wiki/Q386191",
+            "display_name": "Population growth",
+            "level": 3,
+            "score": 0.3068999946117401
+          },
+          {
+            "id": "https://openalex.org/C171834893",
+            "wikidata": "https://www.wikidata.org/wiki/Q1380395",
+            "display_name": "Municipal or urban engineering",
+            "level": 2,
+            "score": 0.2989000082015991
+          },
+          {
+            "id": "https://openalex.org/C107826830",
+            "wikidata": "https://www.wikidata.org/wiki/Q929380",
+            "display_name": "Environmental resource management",
+            "level": 1,
+            "score": 0.29580000042915344
+          },
+          {
+            "id": "https://openalex.org/C18762648",
+            "wikidata": "https://www.wikidata.org/wiki/Q42213",
+            "display_name": "Work (physics)",
+            "level": 2,
+            "score": 0.29440000653266907
+          },
+          {
+            "id": "https://openalex.org/C2780032489",
+            "wikidata": "https://www.wikidata.org/wiki/Q652360",
+            "display_name": "Sustainable city",
+            "level": 3,
+            "score": 0.2928999960422516
+          },
+          {
+            "id": "https://openalex.org/C2777976496",
+            "wikidata": "https://www.wikidata.org/wiki/Q541936",
+            "display_name": "Public participation",
+            "level": 2,
+            "score": 0.2865999937057495
+          },
+          {
+            "id": "https://openalex.org/C133462117",
+            "wikidata": "https://www.wikidata.org/wiki/Q4929239",
+            "display_name": "Data collection",
+            "level": 2,
+            "score": 0.2851000130176544
+          },
+          {
+            "id": "https://openalex.org/C70798638",
+            "wikidata": "https://www.wikidata.org/wiki/Q4575211",
+            "display_name": "Environmental quality",
+            "level": 2,
+            "score": 0.2761000096797943
+          },
+          {
+            "id": "https://openalex.org/C2780748813",
+            "wikidata": "https://www.wikidata.org/wiki/Q7649683",
+            "display_name": "Sustainable management",
+            "level": 3,
+            "score": 0.27410000562667847
+          },
+          {
+            "id": "https://openalex.org/C175605778",
+            "wikidata": "https://www.wikidata.org/wiki/Q3299701",
+            "display_name": "Natural resource economics",
+            "level": 1,
+            "score": 0.27309998869895935
+          },
+          {
+            "id": "https://openalex.org/C26517878",
+            "wikidata": "https://www.wikidata.org/wiki/Q228039",
+            "display_name": "Key (lock)",
+            "level": 2,
+            "score": 0.2660999894142151
+          },
+          {
+            "id": "https://openalex.org/C39853841",
+            "wikidata": "https://www.wikidata.org/wiki/Q161078",
+            "display_name": "Urbanization",
+            "level": 2,
+            "score": 0.257999986410141
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.21844/mijia.21.2.11",
+            "doi": "https://doi.org/10.21844/mijia.21.2.11",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.21844/mijia.21.2.11",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S2764671994",
+              "display_name": "Management Insight - The Journal of Incisive Analysers",
+              "issn_l": "0973-936X",
+              "issn": [
+                "0973-936X",
+                "2456-0936"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4405257256",
+              "host_organization_name": "School of Management Sciences, Varanasi",
+              "host_organization_lineage": [
+                "https://openalex.org/I4405257256"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Management Insight",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.21844/mijia.21.2.11",
+          "doi": "https://doi.org/10.21844/mijia.21.2.11",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.21844/mijia.21.2.11",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S2764671994",
+            "display_name": "Management Insight - The Journal of Incisive Analysers",
+            "issn_l": "0973-936X",
+            "issn": [
+              "0973-936X",
+              "2456-0936"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I4405257256",
+            "host_organization_name": "School of Management Sciences, Varanasi",
+            "host_organization_lineage": [
+              "https://openalex.org/I4405257256"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Management Insight",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "id": "https://metadata.un.org/sdg/11",
+            "score": 1.0,
+            "display_name": "Sustainable cities and communities"
+          },
+          {
+            "id": "https://metadata.un.org/sdg/13",
+            "score": 0.5351999998092651,
+            "display_name": "Climate action"
+          },
+          {
+            "id": "https://metadata.un.org/sdg/6",
+            "score": 0.53329998254776,
+            "display_name": "Clean water and sanitation"
+          }
+        ],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W7132819076",
+          "https://openalex.org/W3115452202",
+          "https://openalex.org/W7117298897",
+          "https://openalex.org/W7166725483",
+          "https://openalex.org/W1969002952",
+          "https://openalex.org/W2978763272",
+          "https://openalex.org/W2078279201",
+          "https://openalex.org/W4378746112",
+          "https://openalex.org/W4312336565",
+          "https://openalex.org/W7168360803"
+        ],
+        "abstract_inverted_index": {
+          "Mission": [
+            0
+          ],
+          "(SCM)": [
+            1
+          ],
+          "the": [
+            2,
+            6,
+            28,
+            65,
+            78,
+            95,
+            135,
+            145,
+            222
+          ],
+          "ambitious": [
+            3
+          ],
+          "goal": [
+            4
+          ],
+          "of": [
+            5,
+            16,
+            87,
+            194,
+            224
+          ],
+          "smart": [
+            7
+          ],
+          "city": [
+            8,
+            82
+          ],
+          "mission": [
+            9
+          ],
+          "in": [
+            10,
+            31,
+            152,
+            182,
+            199,
+            209,
+            217,
+            230
+          ],
+          "Varanasi-": [
+            11
+          ],
+          "aimed": [
+            12
+          ],
+          "at": [
+            13
+          ],
+          "improving": [
+            14,
+            231
+          ],
+          "quality": [
+            15
+          ],
+          "life,": [
+            17
+          ],
+          "sustainability": [
+            18
+          ],
+          "and": [
+            19,
+            52,
+            64,
+            71,
+            80,
+            90,
+            110,
+            149,
+            155,
+            173,
+            202,
+            220,
+            227
+          ],
+          "urban": [
+            20,
+            174,
+            232
+          ],
+          "efficiency": [
+            21
+          ],
+          "which": [
+            22
+          ],
+          "remain": [
+            23
+          ],
+          "fundamentally": [
+            24
+          ],
+          "unachievable": [
+            25
+          ],
+          "without": [
+            26
+          ],
+          "addressing": [
+            27
+          ],
+          "pervasive": [
+            29
+          ],
+          "challenges": [
+            30,
+            104
+          ],
+          "its": [
+            32
+          ],
+          "municipal": [
+            33,
+            96,
+            218
+          ],
+          "solid": [
+            34
+          ],
+          "waste": [
+            35,
+            153,
+            165,
+            183,
+            207,
+            233
+          ],
+          "management.": [
+            36
+          ],
+          "Current": [
+            37
+          ],
+          "SWM": [
+            38
+          ],
+          "practices,": [
+            39
+          ],
+          "marked": [
+            40
+          ],
+          "by": [
+            41,
+            171
+          ],
+          "issues": [
+            42
+          ],
+          "such": [
+            43
+          ],
+          "as": [
+            44
+          ],
+          "insufficient": [
+            45
+          ],
+          "source": [
+            46
+          ],
+          "segregation,": [
+            47
+          ],
+          "reliance": [
+            48
+          ],
+          "on": [
+            49
+          ],
+          "open": [
+            50
+          ],
+          "dumping,": [
+            51
+          ],
+          "inadequate": [
+            53
+          ],
+          "processing": [
+            54
+          ],
+          "infrastructure": [
+            55
+          ],
+          "(despite": [
+            56
+          ],
+          "some": [
+            57
+          ],
+          "progresses": [
+            58
+          ],
+          "with": [
+            59,
+            187
+          ],
+          "door": [
+            60,
+            62
+          ],
+          "to": [
+            61,
+            106,
+            130
+          ],
+          "collection": [
+            63
+          ],
+          "Karsada": [
+            66
+          ],
+          "plant)": [
+            67
+          ],
+          "present": [
+            68
+          ],
+          "significant": [
+            69,
+            168
+          ],
+          "environmental": [
+            70
+          ],
+          "public": [
+            72,
+            225
+          ],
+          "health": [
+            73
+          ],
+          "risk": [
+            74
+          ],
+          "that": [
+            75,
+            164
+          ],
+          "directly": [
+            76
+          ],
+          "counteract": [
+            77
+          ],
+          "\u201csmart\u201d": [
+            79
+          ],
+          "\u201cclean\u201d": [
+            81
+          ],
+          "vision.": [
+            83
+          ],
+          "Varanasi": [
+            84,
+            136
+          ],
+          "being": [
+            85
+          ],
+          "one": [
+            86
+          ],
+          "India's": [
+            88
+          ],
+          "oldest": [
+            89
+          ],
+          "most": [
+            91
+          ],
+          "densely": [
+            92
+          ],
+          "populated": [
+            93
+          ],
+          "cities,": [
+            94
+          ],
+          "Solid": [
+            97
+          ],
+          "Waste": [
+            98
+          ],
+          "Management": [
+            99
+          ],
+          "(MSW)": [
+            100
+          ],
+          "system": [
+            101
+          ],
+          "faces": [
+            102
+          ],
+          "escalating": [
+            103
+          ],
+          "due": [
+            105
+          ],
+          "urbanization,": [
+            107
+          ],
+          "population": [
+            108
+          ],
+          "growth": [
+            109
+          ],
+          "tourism,": [
+            111
+          ],
+          "making": [
+            112
+          ],
+          "accurate": [
+            113
+          ],
+          "forecasting": [
+            114,
+            196,
+            215
+          ],
+          "essential": [
+            115
+          ],
+          "for": [
+            116,
+            159,
+            205
+          ],
+          "sustainable": [
+            117,
+            206
+          ],
+          "planning.": [
+            118
+          ],
+          "This": [
+            119
+          ],
+          "study": [
+            120,
+            212
+          ],
+          "presents": [
+            121
+          ],
+          "a": [
+            122,
+            179
+          ],
+          "robust": [
+            123
+          ],
+          "monthly": [
+            124
+          ],
+          "MSW": [
+            125
+          ],
+          "data": [
+            126
+          ],
+          "from": [
+            127,
+            134
+          ],
+          "January": [
+            128
+          ],
+          "2020": [
+            129
+          ],
+          "December": [
+            131
+          ],
+          "2024": [
+            132
+          ],
+          "collected": [
+            133
+          ],
+          "Nagar": [
+            137
+          ],
+          "Nigam": [
+            138
+          ],
+          "office.": [
+            139
+          ],
+          "Using": [
+            140
+          ],
+          "SARIMA": [
+            141
+          ],
+          "(2,0,2)": [
+            142
+          ],
+          "(1,0,0)": [
+            143
+          ],
+          "[12],": [
+            144
+          ],
+          "research": [
+            146
+          ],
+          "captures": [
+            147
+          ],
+          "seasonal": [
+            148
+          ],
+          "non-seasonal": [
+            150
+          ],
+          "trends": [
+            151,
+            158
+          ],
+          "generation": [
+            154,
+            166,
+            184
+          ],
+          "projects": [
+            156
+          ],
+          "future": [
+            157
+          ],
+          "2025\u20132027.": [
+            160
+          ],
+          "The": [
+            161,
+            192,
+            211
+          ],
+          "analysis": [
+            162
+          ],
+          "confirms": [
+            163
+          ],
+          "exhibits": [
+            167
+          ],
+          "seasonality": [
+            169
+          ],
+          "influenced": [
+            170
+          ],
+          "festivals": [
+            172
+          ],
+          "activities.": [
+            175
+          ],
+          "Key": [
+            176
+          ],
+          "findings": [
+            177
+          ],
+          "suggest": [
+            178
+          ],
+          "consistent": [
+            180
+          ],
+          "increase": [
+            181
+          ],
+          "over": [
+            185
+          ],
+          "time": [
+            186
+          ],
+          "peaks": [
+            188
+          ],
+          "during": [
+            189
+          ],
+          "festival": [
+            190
+          ],
+          "seasons.": [
+            191
+          ],
+          "results": [
+            193
+          ],
+          "this": [
+            195
+          ],
+          "can": [
+            197
+          ],
+          "aid": [
+            198
+          ],
+          "policy\ufffdmaking,": [
+            200
+          ],
+          "budgeting,": [
+            201
+          ],
+          "strategic": [
+            203
+          ],
+          "planning": [
+            204,
+            219
+          ],
+          "management": [
+            208
+          ],
+          "Varanasi.": [
+            210
+          ],
+          "recommends": [
+            213
+          ],
+          "incorporating": [
+            214
+          ],
+          "tools": [
+            216
+          ],
+          "highlights": [
+            221
+          ],
+          "importance": [
+            223
+          ],
+          "participation": [
+            226
+          ],
+          "technological": [
+            228
+          ],
+          "innovation": [
+            229
+          ],
+          "systems.": [
+            234
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W7127589838",
+        "counts_by_year": [],
+        "updated_date": "2026-11-20T13:11:24.684918",
+        "created_date": "2026-02-06T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2126771422",
+        "doi": "https://doi.org/10.1016/j.csda.2006.07.028",
+        "title": "Robust forecasting of mortality and fertility rates: A functional data approach",
+        "display_name": "Robust forecasting of mortality and fertility rates: A functional data approach",
+        "alternate_titles": [],
+        "relevance_score": 92.98827,
+        "publication_year": 2006,
+        "publication_date": "2006-08-15",
+        "ids": {
+          "openalex": "https://openalex.org/W2126771422",
+          "doi": "https://doi.org/10.1016/j.csda.2006.07.028",
+          "mag": "2126771422"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1016/j.csda.2006.07.028",
+          "doi": "https://doi.org/10.1016/j.csda.2006.07.028",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/j.csda.2006.07.028",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S132362803",
+            "display_name": "Computational Statistics & Data Analysis",
+            "issn_l": "0167-9473",
+            "issn": [
+              "0167-9473",
+              "1872-7352"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-b",
+              "doyens",
+              "jufo-1",
+              "ki-jl-1",
+              "norway-1",
+              "poland-100",
+              "russia-white-list-2",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Computational Statistics &amp; Data Analysis",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2126771422"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "datacite"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "green",
+          "oa_url": "https://doi.org/10.26180/5080543",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5009379140",
+              "display_name": "Rob J. Hyndman",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-2140-5352",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2140-5352"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I56590836",
+                "display_name": "Monash University",
+                "ror": "https://ror.org/02bfwt286",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I56590836"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Rob J. Hyndman",
+            "raw_affiliation_strings": [
+              "Department of Econometrics and Business Statistics, Monash University, VIC 3800, Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Econometrics and Business Statistics, Monash University, VIC 3800, Australia",
+                "institution_ids": [
+                  "https://openalex.org/I56590836"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": null,
+              "display_name": "Md. Shahid Ullah",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I56590836",
+                "display_name": "Monash University",
+                "ror": "https://ror.org/02bfwt286",
+                "country_code": "AU",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I56590836"
+                ]
+              }
+            ],
+            "countries": [
+              "AU"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Md. Shahid Ullah",
+            "raw_affiliation_strings": [
+              "Department of Econometrics and Business Statistics, Monash University, VIC 3800, Australia"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Econometrics and Business Statistics, Monash University, VIC 3800, Australia",
+                "institution_ids": [
+                  "https://openalex.org/I56590836"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5009379140"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I56590836"
+        ],
+        "apc_list": {
+          "value": 3540,
+          "currency": "USD",
+          "value_usd": 3540
+        },
+        "apc_paid": null,
+        "fwci": 19.5274,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 835,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99386077,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 99,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "51",
+          "issue": "10",
+          "first_page": "4942",
+          "last_page": "4956"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T12011",
+          "display_name": "Insurance, Mortality, Demography, Risk Management",
+          "score": 0.9965999722480774,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3317",
+            "display_name": "Demography"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/33",
+            "display_name": "Social Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T12011",
+            "display_name": "Insurance, Mortality, Demography, Risk Management",
+            "score": 0.9965999722480774,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3317",
+              "display_name": "Demography"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/33",
+              "display_name": "Social Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11871",
+            "display_name": "Advanced Statistical Methods and Models",
+            "score": 0.0019000000320374966,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2613",
+              "display_name": "Statistics and Probability"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/26",
+              "display_name": "Mathematics"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.0005000000237487257,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/mortality-forecasting",
+            "display_name": "mortality forecasting",
+            "score": 0.9620000123977661
+          },
+          {
+            "id": "https://openalex.org/keywords/fertility-prediction",
+            "display_name": "fertility prediction",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/keywords/age-specific-rates",
+            "display_name": "age-specific rates",
+            "score": 0.8539999723434448
+          },
+          {
+            "id": "https://openalex.org/keywords/functional-time-series",
+            "display_name": "functional time series",
+            "score": 0.7799999713897705
+          },
+          {
+            "id": "https://openalex.org/keywords/lee-carter-model",
+            "display_name": "Lee-Carter model",
+            "score": 0.8420000076293945
+          },
+          {
+            "id": "https://openalex.org/keywords/robust-smoothing",
+            "display_name": "robust smoothing",
+            "score": 0.5479999780654907
+          },
+          {
+            "id": "https://openalex.org/keywords/nonparametric-smoothing",
+            "display_name": "nonparametric smoothing",
+            "score": 0.8410000205039978
+          },
+          {
+            "id": "https://openalex.org/keywords/functional-data-analysis",
+            "display_name": "functional data analysis",
+            "score": 0.7350000143051147
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C518429986",
+            "wikidata": "https://www.wikidata.org/wiki/Q964401",
+            "display_name": "Fertility",
+            "level": 3,
+            "score": 0.7196151614189148
+          },
+          {
+            "id": "https://openalex.org/C177148314",
+            "wikidata": "https://www.wikidata.org/wiki/Q170084",
+            "display_name": "Generalization",
+            "level": 2,
+            "score": 0.6402181386947632
+          },
+          {
+            "id": "https://openalex.org/C102366305",
+            "wikidata": "https://www.wikidata.org/wiki/Q1097688",
+            "display_name": "Nonparametric statistics",
+            "level": 2,
+            "score": 0.6370729207992554
+          },
+          {
+            "id": "https://openalex.org/C3770464",
+            "wikidata": "https://www.wikidata.org/wiki/Q775963",
+            "display_name": "Smoothing",
+            "level": 2,
+            "score": 0.6008589267730713
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.5353862047195435
+          },
+          {
+            "id": "https://openalex.org/C51820054",
+            "wikidata": "https://www.wikidata.org/wiki/Q5508814",
+            "display_name": "Functional data analysis",
+            "level": 2,
+            "score": 0.5343126058578491
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.515637993812561
+          },
+          {
+            "id": "https://openalex.org/C151406439",
+            "wikidata": "https://www.wikidata.org/wiki/Q186588",
+            "display_name": "Time series",
+            "level": 2,
+            "score": 0.4685690701007843
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.4629861116409302
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.33928823471069336
+          },
+          {
+            "id": "https://openalex.org/C2908647359",
+            "wikidata": "https://www.wikidata.org/wiki/Q2625603",
+            "display_name": "Population",
+            "level": 2,
+            "score": 0.150604248046875
+          },
+          {
+            "id": "https://openalex.org/C149923435",
+            "wikidata": "https://www.wikidata.org/wiki/Q37732",
+            "display_name": "Demography",
+            "level": 1,
+            "score": 0.11847120523452759
+          },
+          {
+            "id": "https://openalex.org/C134306372",
+            "wikidata": "https://www.wikidata.org/wiki/Q7754",
+            "display_name": "Mathematical analysis",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C144024400",
+            "wikidata": "https://www.wikidata.org/wiki/Q21201",
+            "display_name": "Sociology",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 9,
+        "locations": [
+          {
+            "id": "doi:10.1016/j.csda.2006.07.028",
+            "doi": "https://doi.org/10.1016/j.csda.2006.07.028",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1016/j.csda.2006.07.028",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S132362803",
+              "display_name": "Computational Statistics & Data Analysis",
+              "issn_l": "0167-9473",
+              "issn": [
+                "0167-9473",
+                "1872-7352"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-b",
+                "doyens",
+                "jufo-1",
+                "ki-jl-1",
+                "norway-1",
+                "poland-100",
+                "russia-white-list-2",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320990",
+              "host_organization_name": "Elsevier BV",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320990"
+              ],
+              "host_organization_lineage_names": [
+                "Elsevier BV"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Computational Statistics &amp; Data Analysis",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:RePEc:msh:ebswps:2005-2",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://www.buseco.monash.edu.au/ebs/pubs/wpapers/2005/wp2-05.pdf",
+            "pdf_url": "http://www.buseco.monash.edu.au/ebs/pubs/wpapers/2005/wp2-05.pdf",
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "preprint"
+          },
+          {
+            "id": "pmh:vital:4448",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://researchonline.federation.edu.au/vital/access/HandleResolver/1959.17/65805",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306400234",
+              "display_name": "FedUni ResearchOnline (Federation University Australia)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4210158496",
+              "host_organization_name": "Australian Federation of University Women \u2013 South Australia",
+              "host_organization_lineage": [
+                "https://openalex.org/I4210158496"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Text"
+          },
+          {
+            "id": "mag:3123931850",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://econpapers.repec.org/RePEc:msh:ebswps:2005-2",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "RePEc: Research Papers in Economics",
+            "raw_type": null
+          },
+          {
+            "id": "pmh:oai:RePEc:eee:csdana:v:51:y:2007:i:10:p:4942-4956",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "http://www.sciencedirect.com/science/article/pii/S0167-9473(06)00245-3",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          },
+          {
+            "id": "pmh:oai:figshare.com:article/5080543",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://figshare.com/articles/journal_contribution/Robust_forecasting_of_mortality_and_fertility_rates_a_functional_data_approach/5080543",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4377196282",
+              "display_name": "Figshare",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I4210132348",
+              "host_organization_name": "Figshare (United Kingdom)",
+              "host_organization_lineage": [
+                "https://openalex.org/I4210132348"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "",
+            "raw_type": "Text"
+          },
+          {
+            "id": "doi:10.26180/5080543",
+            "doi": "https://doi.org/10.26180/5080543",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.26180/5080543",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407052105",
+              "display_name": "Monash University",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "JournalArticle"
+          },
+          {
+            "id": "doi:10.26180/5080543.v1",
+            "doi": "https://doi.org/10.26180/5080543.v1",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.26180/5080543.v1",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407052105",
+              "display_name": "Monash University",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "JournalArticle"
+          },
+          {
+            "id": "doi:10.4225/03/5935fecfed61c",
+            "doi": "https://doi.org/10.4225/03/5935fecfed61c",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.4225/03/5935fecfed61c",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407052105",
+              "display_name": "Monash University",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article-journal"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.26180/5080543",
+          "doi": "https://doi.org/10.26180/5080543",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.26180/5080543",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S7407052105",
+            "display_name": "Monash University",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "JournalArticle"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W2126771422.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W2126771422.grobid-xml"
+        },
+        "referenced_works_count": 47,
+        "referenced_works": [
+          "https://openalex.org/W45219206",
+          "https://openalex.org/W163215356",
+          "https://openalex.org/W345425630",
+          "https://openalex.org/W1423766661",
+          "https://openalex.org/W1511761393",
+          "https://openalex.org/W1594738692",
+          "https://openalex.org/W1964411117",
+          "https://openalex.org/W1969498530",
+          "https://openalex.org/W1972479812",
+          "https://openalex.org/W1979486458",
+          "https://openalex.org/W1983960282",
+          "https://openalex.org/W1984643937",
+          "https://openalex.org/W1988861237",
+          "https://openalex.org/W1995496685",
+          "https://openalex.org/W2000760326",
+          "https://openalex.org/W2007570981",
+          "https://openalex.org/W2024156182",
+          "https://openalex.org/W2037213523",
+          "https://openalex.org/W2040375181",
+          "https://openalex.org/W2042636783",
+          "https://openalex.org/W2048315575",
+          "https://openalex.org/W2049649231",
+          "https://openalex.org/W2058496912",
+          "https://openalex.org/W2063016434",
+          "https://openalex.org/W2077269078",
+          "https://openalex.org/W2092603742",
+          "https://openalex.org/W2103041471",
+          "https://openalex.org/W2124449497",
+          "https://openalex.org/W2130924601",
+          "https://openalex.org/W2134747174",
+          "https://openalex.org/W2140308441",
+          "https://openalex.org/W2162174678",
+          "https://openalex.org/W2168500551",
+          "https://openalex.org/W2208308156",
+          "https://openalex.org/W2313953460",
+          "https://openalex.org/W2408028853",
+          "https://openalex.org/W2571446175",
+          "https://openalex.org/W2766432903",
+          "https://openalex.org/W3021971632",
+          "https://openalex.org/W3023807737",
+          "https://openalex.org/W3099514962",
+          "https://openalex.org/W3137136951",
+          "https://openalex.org/W4244637328",
+          "https://openalex.org/W4292933682",
+          "https://openalex.org/W4295134715",
+          "https://openalex.org/W4296472359",
+          "https://openalex.org/W7128642485"
+        ],
+        "related_works": [
+          "https://openalex.org/W7100548894",
+          "https://openalex.org/W2035025883",
+          "https://openalex.org/W130689069",
+          "https://openalex.org/W3046735695",
+          "https://openalex.org/W2600172627",
+          "https://openalex.org/W2439169639",
+          "https://openalex.org/W2092603742",
+          "https://openalex.org/W3015525503",
+          "https://openalex.org/W4220745557"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2126771422",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 52
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 55
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 51
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 51
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 70
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 75
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 72
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 47
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 55
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 48
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 53
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 42
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 32
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 29
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 28
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2016-06-24T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

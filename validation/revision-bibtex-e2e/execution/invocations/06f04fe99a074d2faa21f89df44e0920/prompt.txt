@@ -1,0 +1,114 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+You are an expert statistical plot illustrator. Write code to generate high-quality statistical plots based on user requests.
+
+Use R with ggplot2 to generate a statistical plot based on the following detailed description: # Figure Description: `fig_intercept_error`
+
+## Title and caption
+
+- **Title:** Recorded Mean Squared Error at Three Intercept Corrections
+- **Caption:** One deterministic calculation evaluated on the same five observations used to determine the correction (b = 3). No stochastic repetitions, optimizer, external dataset, held-out evaluation, uncertainty intervals, or interpolated/extrapolated values are shown.
+
+## Content: variable mapping
+
+- **x-axis:** intercept correction *b*, continuous, label "Intercept correction b".
+- **y-axis:** mean squared error (MSE), continuous, label "Mean squared error (MSE)".
+- **Visual channels:** position only. There is no hue, shape, or size mapping, since the figure has one series.
+- **Geometry:** scatter points only. No connecting line, fitted curve, ribbon, or error bar.
+
+## Complete list of plotted points
+
+| # | b (x) | MSE (y) | Label above point | Source row in log |
+|---:|---:|---:|---:|---|
+| 1 | 0 | 9 | "9" | Added b = 0 (MAE 3, MSE 9) |
+| 2 | 1.5 | 2.25 | "2.25" | Added b = 1.5 (MAE 1.5, MSE 2.25) |
+| 3 | 3 | 0 | "0" | Added b = 3 (MAE 0, MSE 0) |
+
+Only these three pairs are drawn. The five (x, y) observations appear in the caption and the log, not on the plot.
+
+## Presentation
+
+**Canvas**
+- Size: 5.0 in × 3.5 in, for a single-column manuscript figure.
+- Background: white (`#FFFFFF`). No plot border.
+- Font family: a single sans-serif family (Helvetica or Arial, falling back to the system sans) for all text, so the figure matches the manuscript body in embedded PDF output.
+- Margins: default ggplot margins, with enough top room for the title and bottom room for the wrapped caption so neither is clipped.
+
+**Axes**
+- x-limits: [-0.25, 3.25]; breaks at 0, 1.5, 3.
+- y-limits: [-0.5, 10]; breaks at 0, 3, 6, 9.
+- Axis lines: `#222222`, 0.4 pt linewidth, drawn on the left and bottom edges only.
+- Tick marks: `#222222`, 0.4 pt, length 2.5 pt, outward.
+- Tick labels: 10 pt, `#222222`.
+- Axis titles: 12 pt, `#222222`.
+
+**Title**
+- 13 pt, bold, `#222222`, left-aligned at the panel edge.
+- Caption: 9 pt, italic, `#555555`, below the plot, left-aligned and wrapped to the figure width (5.0 in).
+
+**Markers**
+- Shape 16 (filled circle), size 3.2 mm diameter (about 9 pt).
+- Fill and stroke: `#1F4E79`.
+
+**Value labels**
+- Text: "9", "2.25", "0", placed 0.5 data units above each point, so the label for b = 0 sits at y = 9.5 and stays inside the y-limit of 10.
+- Font: 10 pt, regular, `#1F4E79`.
+
+**Grid**
+- Major horizontal gridlines only: `#D9D9D9`, 0.3 pt linewidth.
+- No vertical gridlines.
+- No minor gridlines.
+
+**Legend**
+- None. A legend is unnecessary for one series, so `legend.position = "none"`.
+
+## Reproducibility code (R / ggplot2)
+
+```r
+library(ggplot2)
+
+df <- data.frame(
+  b   = c(0, 1.5, 3),
+  mse = c(9, 2.25, 0),
+  lab = c("9", "2.25", "0")
+)
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_point(shape = 16, size = 3.2, colour = "#1F4E79") +
+  geom_text(aes(label = lab), nudge_y = 0.5, size = 3.5,
+            colour = "#1F4E79", family = "sans") +
+  scale_x_continuous(name = "Intercept correction b",
+                     breaks = c(0, 1.5, 3), limits = c(-0.25, 3.25)) +
+  scale_y_continuous(name = "Mean squared error (MSE)",
+                     breaks = c(0, 3, 6, 9), limits = c(-0.5, 10)) +
+  labs(title = "Recorded Mean Squared Error at Three Intercept Corrections",
+       caption = paste("One deterministic calculation evaluated on the same",
+                       "five observations used to determine the correction (b = 3).")) +
+  theme_classic(base_size = 10, base_family = "sans") +
+  theme(
+    plot.title         = element_text(size = 13, face = "bold", colour = "#222222", hjust = 0),
+    plot.caption       = element_text(size = 9, face = "italic", colour = "#555555", hjust = 0),
+    axis.title         = element_text(size = 12, colour = "#222222"),
+    axis.text          = element_text(size = 10, colour = "#222222"),
+    axis.line          = element_line(linewidth = 0.4, colour = "#222222"),
+    axis.ticks         = element_line(linewidth = 0.4, colour = "#222222"),
+    axis.ticks.length  = unit(2.5, "pt"),
+    panel.grid.major.y = element_line(linewidth = 0.3, colour = "#D9D9D9"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position    = "none",
+    plot.background    = element_rect(fill = "#FFFFFF", colour = NA)
+  )
+
+# Downstream artifacts: editable source, vector PDF, manuscript-compatible preview
+ggsave("fig_intercept_error.pdf", p, device = cairo_pdf, width = 5, height = 3.5)
+ggsave("fig_intercept_error.png", p, width = 5, height = 3.5, dpi = 300)
+```
+
+## Choices I made
+
+- Chose a single blue (`#1F4E79`) for points and labels, and neutral grays for structure, for a restrained scientific look. The blue-gray pairing stays distinguishable under common color-vision deficiencies, and the figure remains readable in grayscale.
+- Chose horizontal gridlines only, so the reader can compare MSE levels without clutter.
+- Set the x-range slightly beyond the data so the markers at b = 0 and b = 3 are not clipped.
+- Set one sans-serif family throughout, so the text in the vector PDF matches the manuscript body.
+Return R code only. Define the final ggplot object as p. Do not save files: the rendering wrapper exports p to PDF and JPEG. Use only base R and ggplot2, with built-in serif, sans or mono font families. Use the supplied numeric data exactly; do not simulate or invent observations. Do not install packages or download data. The runtime sets set.seed(0). Requested canvas aspect ratio: 4:3. Code:

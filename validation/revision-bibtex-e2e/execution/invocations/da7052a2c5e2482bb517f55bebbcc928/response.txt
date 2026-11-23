@@ -1,0 +1,72 @@
+```json
+{
+  "section_name": "Residual Correction and Same-Sample Evaluation Scope",
+  "candidates": [
+    {
+      "title": "How Biased is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Formalizes the concept of optimism and the mathematical bias incurred when evaluating a prediction rule on the identical observations used to estimate its parameters, explaining why zero apparent error on derivation samples does not translate to unseen observations."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Demonstrates the systematic downward bias of the apparent error rate resulting from 'using data twice'—first to calculate parameter adjustments (such as residual offsets) and then to evaluate predictive performance."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Derives the covariance penalty framework proving that residual-derived scalar adjustments introduce an optimism penalty proportional to the in-sample covariance between fitted values and observed targets."
+    },
+    {
+      "title": "Intercept Corrections and Structural Change",
+      "year": 1996,
+      "reason": "Directly analyzes residual-derived scalar intercept corrections used to eliminate systematic prediction offsets, demonstrating that while shifting predictions by historical mean errors eliminates sample bias, it does not guarantee out-of-sample performance."
+    },
+    {
+      "title": "Towards a Theory of Economic Forecasting",
+      "year": 1994,
+      "reason": "Develops a formal taxonomy of forecast errors and evaluates intercept corrections derived from recent residuals, showing that mechanical zero-mean error properties on derivation sets do not ensure generalization under changing data distributions."
+    },
+    {
+      "title": "Economic Forecasts and Policy",
+      "year": 1961,
+      "reason": "Introduces the mean square error decomposition into bias, variance, and covariance proportions, establishing that adjusting a predictor to have zero mean residual on a specific evaluation sample merely zeros out the sample bias component without verifying overall predictive fidelity."
+    },
+    {
+      "title": "The Evaluation of Economic Forecasts",
+      "year": 1969,
+      "reason": "Establishes canonical regression diagnostics for forecast unbiasedness and intercept corrections, formalizing the distinction between mechanical sample-specific offset elimination and true out-of-sample forecast validity."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal foundation distinguishing between assessing a predictor on its estimation sample versus independent holdout observations, proving that same-sample assessment provides no evidence of external validity."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Formulates the sample reuse principle, clarifying why evaluating models on the exact sample used for calibration offers no valid statistical assessment of predictive performance for unseen inputs."
+    },
+    {
+      "title": "Estimation of Error Rates in Discriminant Analysis",
+      "year": 1968,
+      "reason": "Provides early empirical and theoretical proofs showing that resubstitution (same-sample) evaluation severely underestimates error when parameters are fit to sample data."
+    },
+    {
+      "title": "The Relationship Between Variable Selection and Data Augmentation and a Method for Prediction",
+      "year": 1974,
+      "reason": "Introduces the prediction sum of squares (PRESS) framework, establishing that residual zero-sum properties on an estimation design represent mathematical artifacts of the sample rather than true prediction capability."
+    },
+    {
+      "title": "Submodel Selection and Evaluation in Regression: The X-Random Case",
+      "year": 1992,
+      "reason": "Analyzes the failure of in-sample goodness-of-fit metrics to reflect prediction error on new points, reinforcing that evaluating a model on derivation observations cannot establish whether accuracy holds on unseen targets."
+    },
+    {
+      "title": "The Shrinkage of the Coefficient of Multiple Correlation",
+      "year": 1931,
+      "reason": "Classic study demonstrating that apparent performance derived on a specific sample shrinks when tested externally, explaining why perfect calibration on a finite five-point set does not generalize automatically."
+    }
+  ]
+}
+```

@@ -1,0 +1,19 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Find 10-15 highly relevant, influential academic papers matching the search task. Do not force results; only return strictly relevant papers.
+            
+            SEARCH TASK: "additive prediction offset" "squared error"
+            CONTEXT FOR TASK: Mission: Find technically relevant treatments available through 2026-11, including recent discussions where useful, of adjusting an additive intercept while holding the predictor fixed. Record assumptions and formulations for context. Do not seek new competitors to beat or describe any discovered method as experimentally evaluated here.. Hypothesis: For the supplied observations, the unadjusted predictor 2x leaves a residual of 3 at every point. This is a directly observed limitation of this particular fixed predictor, not evidence that a broader family of methods fails.
+            BROADER PROJECT PROBLEM: The teaching question is whether adding the mean residual removes the fixed offset of the supplied predictor on exactly x=[-2,-1,0,1,2] with y=2x+3. The supplied calculation answers only this finite, same-sample question; it establishes no literature gap, algorithmic novelty, benchmark advantage, or held-out performance.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find REAL papers (ArXiv, CVPR, NeurIPS, ICML, ICLR, etc.).
+            2. Only return papers published in top-tier conferences or journals, or highly-cited works, or the exact state-of-the-art relevant to the task.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

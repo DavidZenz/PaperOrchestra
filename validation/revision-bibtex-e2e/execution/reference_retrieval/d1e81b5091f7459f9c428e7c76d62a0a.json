@@ -1,0 +1,1316 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 1062008,
+      "db_response_time_ms": 811,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Economic Forecasts \"and\" Policy) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Economic Forecasts \"and\" Policy) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Economic Forecasts and Policy",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Economic Forecasts and Policy&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2081951886",
+        "doi": "https://doi.org/10.2307/1911296",
+        "title": "Economic Forecasts and Policy",
+        "display_name": "Economic Forecasts and Policy",
+        "alternate_titles": [],
+        "relevance_score": 226.0703,
+        "publication_year": 1962,
+        "publication_date": "1962-01-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2081951886",
+          "doi": "https://doi.org/10.2307/1911296",
+          "mag": "2081951886"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.2307/1911296",
+          "doi": "https://doi.org/10.2307/1911296",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.2307/1911296",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S95464858",
+            "display_name": "Econometrica",
+            "issn_l": "0012-9682",
+            "issn": [
+              "0012-9682",
+              "1468-0262"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "fnege-1-star",
+              "ft50",
+              "jufo-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Econometrica",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2081951886"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5032636004",
+              "display_name": "Carl F. Christ",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Carl F. Christ",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5113443214",
+              "display_name": "Henri Theil",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-8634-4781",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8634-4781"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "H. Theil",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 5290,
+          "currency": "USD",
+          "value_usd": 5290
+        },
+        "apc_paid": null,
+        "fwci": 23.9506,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 1001,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 1.0,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 87,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "30",
+          "issue": "1",
+          "first_page": "209",
+          "last_page": "209"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 0.5015000104904175,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.5015000104904175,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 0.4832000136375427,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14112",
+            "display_name": "Economic, financial, and policy analysis",
+            "score": 0.003000000026077032,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/economic-forecasting",
+            "display_name": "economic forecasting",
+            "score": 0.8759999871253967
+          },
+          {
+            "id": "https://openalex.org/keywords/economic-policy",
+            "display_name": "economic policy",
+            "score": 0.8460000157356262
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-accuracy",
+            "display_name": "forecast accuracy",
+            "score": 0.46799999475479126
+          },
+          {
+            "id": "https://openalex.org/keywords/policy-evaluation",
+            "display_name": "policy evaluation",
+            "score": 0.5220000147819519
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.6740927696228027
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.3583598732948303
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.34672489762306213
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.2307/1911296",
+            "doi": "https://doi.org/10.2307/1911296",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/1911296",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S95464858",
+              "display_name": "Econometrica",
+              "issn_l": "0012-9682",
+              "issn": [
+                "0012-9682",
+                "1468-0262"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "fnege-1-star",
+                "ft50",
+                "jufo-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320595",
+              "host_organization_name": "Wiley",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320595"
+              ],
+              "host_organization_lineage_names": [
+                "Wiley"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Econometrica",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W2317057836",
+          "https://openalex.org/W2481575508",
+          "https://openalex.org/W4230912890",
+          "https://openalex.org/W4301877275",
+          "https://openalex.org/W2045798479",
+          "https://openalex.org/W4239313115",
+          "https://openalex.org/W1971565946",
+          "https://openalex.org/W2312584373",
+          "https://openalex.org/W2599019630",
+          "https://openalex.org/W2999900297"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2081951886",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 4
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 3
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 28
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 23
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 22
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 24
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 28
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 30
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 36
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 24
+          }
+        ],
+        "updated_date": "2026-11-20T13:11:24.684918",
+        "created_date": "2016-06-24T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W2802241598",
+        "doi": "https://doi.org/10.2307/1909918",
+        "title": "Economic Forecasts and Policy",
+        "display_name": "Economic Forecasts and Policy",
+        "alternate_titles": [],
+        "relevance_score": 216.56667,
+        "publication_year": 1962,
+        "publication_date": "1962-07-01",
+        "ids": {
+          "openalex": "https://openalex.org/W2802241598",
+          "doi": "https://doi.org/10.2307/1909918",
+          "mag": "2802241598"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.2307/1909918",
+          "doi": "https://doi.org/10.2307/1909918",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.2307/1909918",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S95464858",
+            "display_name": "Econometrica",
+            "issn_l": "0012-9682",
+            "issn": [
+              "0012-9682",
+              "1468-0262"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a-star",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "dongbi-a",
+              "doyens",
+              "fnege-1-star",
+              "ft50",
+              "jufo-3",
+              "norway-2",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Econometrica",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W2802241598"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5017246839",
+              "display_name": "Ernest James Mosbaek",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Ernest J. Mosbaek",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5113443214",
+              "display_name": "Henri Theil",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-8634-4781",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8634-4781"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "H. Theil",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 5290,
+          "currency": "USD",
+          "value_usd": 5290
+        },
+        "apc_paid": null,
+        "fwci": 0.7044,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 424,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.56553148,
+          "is_in_top_1_percent": false,
+          "is_in_top_10_percent": false
+        },
+        "cited_by_percentile_year": {
+          "min": 98,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "30",
+          "issue": "3",
+          "first_page": "620",
+          "last_page": "620"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11918",
+          "display_name": "Forecasting Techniques and Applications",
+          "score": 0.5015000104904175,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1803",
+            "display_name": "Management Science and Operations Research"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.5015000104904175,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 0.4832000136375427,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14112",
+            "display_name": "Economic, financial, and policy analysis",
+            "score": 0.003000000026077032,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/economic-forecasting",
+            "display_name": "economic forecasting",
+            "score": 0.8759999871253967
+          },
+          {
+            "id": "https://openalex.org/keywords/economic-policy",
+            "display_name": "economic policy",
+            "score": 0.8460000157356262
+          },
+          {
+            "id": "https://openalex.org/keywords/forecast-accuracy",
+            "display_name": "forecast accuracy",
+            "score": 0.46799999475479126
+          },
+          {
+            "id": "https://openalex.org/keywords/policy-evaluation",
+            "display_name": "policy evaluation",
+            "score": 0.5220000147819519
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.7336691617965698
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.4190811216831207
+          },
+          {
+            "id": "https://openalex.org/C149782125",
+            "wikidata": "https://www.wikidata.org/wiki/Q160039",
+            "display_name": "Econometrics",
+            "level": 1,
+            "score": 0.3208778500556946
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.2307/1909918",
+            "doi": "https://doi.org/10.2307/1909918",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/1909918",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S95464858",
+              "display_name": "Econometrica",
+              "issn_l": "0012-9682",
+              "issn": [
+                "0012-9682",
+                "1468-0262"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a-star",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "dongbi-a",
+                "doyens",
+                "fnege-1-star",
+                "ft50",
+                "jufo-3",
+                "norway-2",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320595",
+              "host_organization_name": "Wiley",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320595"
+              ],
+              "host_organization_lineage_names": [
+                "Wiley"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Econometrica",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W2317057836",
+          "https://openalex.org/W2481575508",
+          "https://openalex.org/W4230912890",
+          "https://openalex.org/W4301877275",
+          "https://openalex.org/W2045798479",
+          "https://openalex.org/W4239313115",
+          "https://openalex.org/W1971565946",
+          "https://openalex.org/W2312584373",
+          "https://openalex.org/W2599019630",
+          "https://openalex.org/W2999900297"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2802241598",
+        "counts_by_year": [
+          {
+            "year": 2021,
+            "cited_by_count": 17
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 15
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 7
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 16
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 16
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 17
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 10
+          }
+        ],
+        "updated_date": "2026-11-20T13:11:24.684918",
+        "created_date": "2018-05-17T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4300032880",
+        "doi": "https://doi.org/10.2307/2550873",
+        "title": "Economic Forecasts and Policy.",
+        "display_name": "Economic Forecasts and Policy.",
+        "alternate_titles": [],
+        "relevance_score": 213.01169,
+        "publication_year": 1959,
+        "publication_date": "1959-11-01",
+        "ids": {
+          "openalex": "https://openalex.org/W4300032880",
+          "doi": "https://doi.org/10.2307/2550873"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.2307/2550873",
+          "doi": "https://doi.org/10.2307/2550873",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.2307/2550873",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S108845946",
+            "display_name": "Economica",
+            "issn_l": "0013-0427",
+            "issn": [
+              "0013-0427",
+              "1468-0335"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "abdc-a",
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "erih-plus",
+              "fnege-3",
+              "jufo-2",
+              "norway-2",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Economica",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4300032880"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref"
+        ],
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5025320500",
+              "display_name": "Louis Dicks-Mireaux",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "L. A. Dicks-Mireaux",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5113443214",
+              "display_name": "Henri Theil",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-8634-4781",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-8634-4781"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "H. Theil",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5112821161",
+              "display_name": "Jan Salomon Cramer",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "J. S. Cramer",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": null,
+              "display_name": "H. Moerman",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "H. Moerman",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5067177547",
+              "display_name": "A. Russchen",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "A. Russchen",
+            "raw_affiliation_strings": [],
+            "raw_orcid": null,
+            "affiliations": []
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 0,
+        "institutions_distinct_count": 0,
+        "corresponding_author_ids": [],
+        "corresponding_institution_ids": [],
+        "apc_list": {
+          "value": 3400,
+          "currency": "USD",
+          "value_usd": 3400
+        },
+        "apc_paid": null,
+        "fwci": 36.4918,
+        "is_authors_truncated": false,
+        "has_fulltext": false,
+        "cited_by_count": 325,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99910072,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 89,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "26",
+          "issue": "104",
+          "first_page": "359",
+          "last_page": "359"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10007",
+          "display_name": "Monetary Policy and Economic Impact",
+          "score": 0.5116999745368958,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2000",
+            "display_name": "General Economics, Econometrics and Finance"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/20",
+            "display_name": "Economics, Econometrics and Finance"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10007",
+            "display_name": "Monetary Policy and Economic Impact",
+            "score": 0.5116999745368958,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11918",
+            "display_name": "Forecasting Techniques and Applications",
+            "score": 0.4311999976634979,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1803",
+              "display_name": "Management Science and Operations Research"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T14112",
+            "display_name": "Economic, financial, and policy analysis",
+            "score": 0.024700000882148743,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2000",
+              "display_name": "General Economics, Econometrics and Finance"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/20",
+              "display_name": "Economics, Econometrics and Finance"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/economic-forecasting",
+            "display_name": "economic forecasting",
+            "score": 0.8769999742507935
+          },
+          {
+            "id": "https://openalex.org/keywords/economic-policy",
+            "display_name": "economic policy",
+            "score": 0.9900000095367432
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.6237144470214844
+          },
+          {
+            "id": "https://openalex.org/C105639569",
+            "wikidata": "https://www.wikidata.org/wiki/Q582577",
+            "display_name": "Economic policy",
+            "level": 1,
+            "score": 0.3480309844017029
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.34036785364151
+          }
+        ],
+        "mesh": [],
+        "locations_count": 1,
+        "locations": [
+          {
+            "id": "doi:10.2307/2550873",
+            "doi": "https://doi.org/10.2307/2550873",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.2307/2550873",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S108845946",
+              "display_name": "Economica",
+              "issn_l": "0013-0427",
+              "issn": [
+                "0013-0427",
+                "1468-0335"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "abdc-a",
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "erih-plus",
+                "fnege-3",
+                "jufo-2",
+                "norway-2",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320595",
+              "host_organization_name": "Wiley",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320595"
+              ],
+              "host_organization_lineage_names": [
+                "Wiley"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Economica",
+            "raw_type": "journal-article"
+          }
+        ],
+        "best_oa_location": null,
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [],
+        "funders": [],
+        "has_content": {
+          "grobid_xml": false,
+          "pdf": false
+        },
+        "content_urls": null,
+        "referenced_works_count": 0,
+        "referenced_works": [],
+        "related_works": [
+          "https://openalex.org/W4240209243",
+          "https://openalex.org/W4246807036",
+          "https://openalex.org/W2481575508",
+          "https://openalex.org/W4301877275",
+          "https://openalex.org/W1965800294",
+          "https://openalex.org/W2599019630",
+          "https://openalex.org/W4244790998",
+          "https://openalex.org/W2045798479",
+          "https://openalex.org/W4299379030",
+          "https://openalex.org/W4229821375"
+        ],
+        "abstract_inverted_index": null,
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W4300032880",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 14
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2021,
+            "cited_by_count": 13
+          },
+          {
+            "year": 2020,
+            "cited_by_count": 2
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2018,
+            "cited_by_count": 12
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2016,
+            "cited_by_count": 10
+          },
+          {
+            "year": 2015,
+            "cited_by_count": 6
+          },
+          {
+            "year": 2014,
+            "cited_by_count": 9
+          },
+          {
+            "year": 2013,
+            "cited_by_count": 18
+          },
+          {
+            "year": 2012,
+            "cited_by_count": 5
+          }
+        ],
+        "updated_date": "2026-11-22T12:46:00.618207",
+        "created_date": "2022-10-03T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

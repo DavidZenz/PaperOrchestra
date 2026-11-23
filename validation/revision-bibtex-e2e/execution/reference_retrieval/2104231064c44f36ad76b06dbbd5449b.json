@@ -1,0 +1,4819 @@
+{
+  "event": "reference_response",
+  "provider": "openalex",
+  "attempt": 1,
+  "status": 200,
+  "response": {
+    "meta": {
+      "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+      "count": 7348,
+      "db_response_time_ms": 121,
+      "page": 1,
+      "per_page": 3,
+      "groups_count": null,
+      "x_query": {
+        "oql": "get works with (Leakage \"and\" the Reproducibility Crisis in Machine-Learning-Based Science) in the title, abstract, or full text",
+        "x_new_oql": "get works with (Leakage \"and\" the Reproducibility Crisis in Machine-Learning-Based Science) in the title, abstract, or full text",
+        "oqo": {
+          "get_rows": "works",
+          "filter_rows": [
+            {
+              "column_id": "fulltext.search",
+              "value": "Leakage and the Reproducibility Crisis in Machine-Learning-Based Science",
+              "operator": "has"
+            }
+          ]
+        },
+        "url": "/works?filter=fulltext.search:Leakage and the Reproducibility Crisis in Machine-Learning-Based Science&per_page=3",
+        "order": "best matches first",
+        "order_default": true
+      },
+      "cost_usd": 0.001
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W4385576721",
+        "doi": "https://doi.org/10.1016/j.patter.2023.100804",
+        "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+        "display_name": "Leakage and the reproducibility crisis in machine-learning-based science",
+        "alternate_titles": [],
+        "relevance_score": 435.73404,
+        "publication_year": 2023,
+        "publication_date": "2023-08-04",
+        "ids": {
+          "openalex": "https://openalex.org/W4385576721",
+          "doi": "https://doi.org/10.1016/j.patter.2023.100804",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/37720327",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/10499856",
+          "arxiv": "https://arxiv.org/abs/2207.07048"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1016/j.patter.2023.100804",
+          "doi": "https://doi.org/10.1016/j.patter.2023.100804",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1016/j.patter.2023.100804",
+          "pdf_url": "http://www.cell.com/article/S2666389923001599/pdf",
+          "source": {
+            "id": "https://openalex.org/S4210198061",
+            "display_name": "Patterns",
+            "issn_l": "2666-3899",
+            "issn": [
+              "2666-3899"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "jufo-1",
+              "ki-jl-1",
+              "norway-1",
+              "poland-20",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Patterns",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4385576721"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "arxiv",
+          "crossref",
+          "datacite",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "gold",
+          "oa_url": "http://www.cell.com/article/S2666389923001599/pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5063345981",
+              "display_name": "Sayash Kapoor",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-5695-280X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5695-280X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I20089843",
+                "display_name": "Princeton University",
+                "ror": "https://ror.org/00hx57361",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I20089843"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Sayash Kapoor",
+            "raw_affiliation_strings": [
+              "Department of Computer Science and Center for Information Technology Policy, Princeton University, Princeton, NJ 08540, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0001-5695-280X",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Computer Science and Center for Information Technology Policy, Princeton University, Princeton, NJ 08540, USA",
+                "institution_ids": [
+                  "https://openalex.org/I20089843"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5058102069",
+              "display_name": "Arvind Narayanan",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-7176-4479",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-7176-4479"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I20089843",
+                "display_name": "Princeton University",
+                "ror": "https://ror.org/00hx57361",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I20089843"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Arvind Narayanan",
+            "raw_affiliation_strings": [
+              "Department of Computer Science and Center for Information Technology Policy, Princeton University, Princeton, NJ 08540, USA"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Computer Science and Center for Information Technology Policy, Princeton University, Princeton, NJ 08540, USA",
+                "institution_ids": [
+                  "https://openalex.org/I20089843"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 1,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5063345981"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I20089843"
+        ],
+        "apc_list": {
+          "value": 8900,
+          "currency": "USD",
+          "value_usd": 8900
+        },
+        "apc_paid": {
+          "value": 8900,
+          "currency": "USD",
+          "value_usd": 8900
+        },
+        "fwci": 249.783,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 3088,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 1.0,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 86,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "4",
+          "issue": "9",
+          "first_page": "100804",
+          "last_page": "100804"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T11986",
+          "display_name": "Scientific Computing and Data Management",
+          "score": 0.3206000030040741,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1802",
+            "display_name": "Information Systems and Management"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/18",
+            "display_name": "Decision Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/2",
+            "display_name": "Social Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T11986",
+            "display_name": "Scientific Computing and Data Management",
+            "score": 0.3206000030040741,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1802",
+              "display_name": "Information Systems and Management"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/18",
+              "display_name": "Decision Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T12535",
+            "display_name": "Machine Learning and Data Classification",
+            "score": 0.21410000324249268,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13910",
+            "display_name": "Computational and Text Analysis Methods",
+            "score": 0.08569999784231186,
+            "subfield": {
+              "id": "https://openalex.org/subfields/3300",
+              "display_name": "General Social Sciences"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/33",
+              "display_name": "Social Sciences"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/2",
+              "display_name": "Social Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/data-leakage",
+            "display_name": "data leakage",
+            "score": 0.9919999837875366
+          },
+          {
+            "id": "https://openalex.org/keywords/replication-crisis",
+            "display_name": "replication crisis",
+            "score": 0.9539999961853027
+          },
+          {
+            "id": "https://openalex.org/keywords/machine-learning",
+            "display_name": "machine learning",
+            "score": 0.609000027179718
+          },
+          {
+            "id": "https://openalex.org/keywords/logistic-regression",
+            "display_name": "logistic regression",
+            "score": 0.7649999856948853
+          },
+          {
+            "id": "https://openalex.org/keywords/overfitting",
+            "display_name": "overfitting",
+            "score": 0.8009999990463257
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C9893847",
+            "wikidata": "https://www.wikidata.org/wiki/Q1425625",
+            "display_name": "Reproducibility",
+            "level": 2,
+            "score": 0.7695128917694092
+          },
+          {
+            "id": "https://openalex.org/C2777042071",
+            "wikidata": "https://www.wikidata.org/wiki/Q6509304",
+            "display_name": "Leakage (economics)",
+            "level": 2,
+            "score": 0.6309176683425903
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.5587246417999268
+          },
+          {
+            "id": "https://openalex.org/C151956035",
+            "wikidata": "https://www.wikidata.org/wiki/Q1132755",
+            "display_name": "Logistic regression",
+            "level": 2,
+            "score": 0.48956069350242615
+          },
+          {
+            "id": "https://openalex.org/C83546350",
+            "wikidata": "https://www.wikidata.org/wiki/Q1139051",
+            "display_name": "Regression",
+            "level": 2,
+            "score": 0.45459747314453125
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.43747377395629883
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.4321483373641968
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.38359102606773376
+          },
+          {
+            "id": "https://openalex.org/C105795698",
+            "wikidata": "https://www.wikidata.org/wiki/Q12483",
+            "display_name": "Statistics",
+            "level": 1,
+            "score": 0.2751483917236328
+          },
+          {
+            "id": "https://openalex.org/C33923547",
+            "wikidata": "https://www.wikidata.org/wiki/Q395",
+            "display_name": "Mathematics",
+            "level": 0,
+            "score": 0.17254990339279175
+          },
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 4,
+        "locations": [
+          {
+            "id": "doi:10.1016/j.patter.2023.100804",
+            "doi": "https://doi.org/10.1016/j.patter.2023.100804",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1016/j.patter.2023.100804",
+            "pdf_url": "http://www.cell.com/article/S2666389923001599/pdf",
+            "source": {
+              "id": "https://openalex.org/S4210198061",
+              "display_name": "Patterns",
+              "issn_l": "2666-3899",
+              "issn": [
+                "2666-3899"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "doaj",
+                "dongbi-b",
+                "jufo-1",
+                "ki-jl-1",
+                "norway-1",
+                "poland-20",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310320990",
+              "host_organization_name": "Elsevier BV",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320990"
+              ],
+              "host_organization_lineage_names": [
+                "Elsevier BV"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Patterns",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:10499856",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10499856",
+            "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10499856/pdf/main.pdf",
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Patterns (N Y)",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmid:37720327",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/37720327",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Patterns (New York, N.Y.)",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:arXiv.org:2207.07048",
+            "doi": "https://doi.org/10.48550/arxiv.2207.07048",
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/2207.07048",
+            "pdf_url": "https://arxiv.org/pdf/2207.07048",
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1016/j.patter.2023.100804",
+          "doi": "https://doi.org/10.1016/j.patter.2023.100804",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1016/j.patter.2023.100804",
+          "pdf_url": "http://www.cell.com/article/S2666389923001599/pdf",
+          "source": {
+            "id": "https://openalex.org/S4210198061",
+            "display_name": "Patterns",
+            "issn_l": "2666-3899",
+            "issn": [
+              "2666-3899"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "doaj",
+              "dongbi-b",
+              "jufo-1",
+              "ki-jl-1",
+              "norway-1",
+              "poland-20",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Patterns",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G2993750879",
+            "display_name": "RI: Medium: Recognizing, Mitigating and Governing Bias in AI",
+            "funder_award_id": "1763642",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306076",
+            "display_name": "National Science Foundation",
+            "ror": "https://ror.org/021nxhr62"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W4385576721.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W4385576721.grobid-xml"
+        },
+        "referenced_works_count": 114,
+        "referenced_works": [
+          "https://openalex.org/W27126766",
+          "https://openalex.org/W46790137",
+          "https://openalex.org/W429766147",
+          "https://openalex.org/W1622128722",
+          "https://openalex.org/W1673923490",
+          "https://openalex.org/W1677182931",
+          "https://openalex.org/W1897139626",
+          "https://openalex.org/W1957051317",
+          "https://openalex.org/W1979450493",
+          "https://openalex.org/W1998392635",
+          "https://openalex.org/W2006617902",
+          "https://openalex.org/W2019694480",
+          "https://openalex.org/W2076602957",
+          "https://openalex.org/W2084341220",
+          "https://openalex.org/W2092444470",
+          "https://openalex.org/W2117539524",
+          "https://openalex.org/W2125186487",
+          "https://openalex.org/W2127841934",
+          "https://openalex.org/W2131830082",
+          "https://openalex.org/W2137195266",
+          "https://openalex.org/W2151780178",
+          "https://openalex.org/W2158698691",
+          "https://openalex.org/W2162772535",
+          "https://openalex.org/W2167277498",
+          "https://openalex.org/W2167940296",
+          "https://openalex.org/W2278972578",
+          "https://openalex.org/W2281120182",
+          "https://openalex.org/W2284729062",
+          "https://openalex.org/W2342755296",
+          "https://openalex.org/W2472069995",
+          "https://openalex.org/W2557007068",
+          "https://openalex.org/W2557088923",
+          "https://openalex.org/W2560136348",
+          "https://openalex.org/W2581920208",
+          "https://openalex.org/W2581974582",
+          "https://openalex.org/W2582861947",
+          "https://openalex.org/W2584419678",
+          "https://openalex.org/W2591090211",
+          "https://openalex.org/W2599674900",
+          "https://openalex.org/W2736287575",
+          "https://openalex.org/W2747402019",
+          "https://openalex.org/W2749093116",
+          "https://openalex.org/W2755142264",
+          "https://openalex.org/W2783880833",
+          "https://openalex.org/W2785011159",
+          "https://openalex.org/W2791681873",
+          "https://openalex.org/W2793993424",
+          "https://openalex.org/W2795038878",
+          "https://openalex.org/W2811374795",
+          "https://openalex.org/W2888592790",
+          "https://openalex.org/W2897042519",
+          "https://openalex.org/W2899369852",
+          "https://openalex.org/W2900246877",
+          "https://openalex.org/W2902617128",
+          "https://openalex.org/W2903488876",
+          "https://openalex.org/W2906730591",
+          "https://openalex.org/W2908449268",
+          "https://openalex.org/W2908475737",
+          "https://openalex.org/W2911926566",
+          "https://openalex.org/W2913668833",
+          "https://openalex.org/W2913997948",
+          "https://openalex.org/W2914509225",
+          "https://openalex.org/W2916482918",
+          "https://openalex.org/W2922705140",
+          "https://openalex.org/W2951243568",
+          "https://openalex.org/W2953937638",
+          "https://openalex.org/W2966686526",
+          "https://openalex.org/W2984916588",
+          "https://openalex.org/W2990091959",
+          "https://openalex.org/W3006027555",
+          "https://openalex.org/W3007502937",
+          "https://openalex.org/W3012435359",
+          "https://openalex.org/W3013182397",
+          "https://openalex.org/W3013294478",
+          "https://openalex.org/W3016970897",
+          "https://openalex.org/W3017867703",
+          "https://openalex.org/W3019226033",
+          "https://openalex.org/W3022995359",
+          "https://openalex.org/W3029827716",
+          "https://openalex.org/W3099348293",
+          "https://openalex.org/W3104239639",
+          "https://openalex.org/W3109268737",
+          "https://openalex.org/W3112501082",
+          "https://openalex.org/W3119527628",
+          "https://openalex.org/W3127531196",
+          "https://openalex.org/W3128540648",
+          "https://openalex.org/W3138114698",
+          "https://openalex.org/W3154124171",
+          "https://openalex.org/W3154727635",
+          "https://openalex.org/W3155717344",
+          "https://openalex.org/W3160678577",
+          "https://openalex.org/W3168318937",
+          "https://openalex.org/W3168499785",
+          "https://openalex.org/W3170561227",
+          "https://openalex.org/W3174174150",
+          "https://openalex.org/W3174292387",
+          "https://openalex.org/W3175126868",
+          "https://openalex.org/W3184231327",
+          "https://openalex.org/W3189633508",
+          "https://openalex.org/W3189849087",
+          "https://openalex.org/W3192401439",
+          "https://openalex.org/W3205127938",
+          "https://openalex.org/W3213728903",
+          "https://openalex.org/W3217314753",
+          "https://openalex.org/W4205172069",
+          "https://openalex.org/W4221165557",
+          "https://openalex.org/W4241857777",
+          "https://openalex.org/W4244185376",
+          "https://openalex.org/W4248754047",
+          "https://openalex.org/W4253752119",
+          "https://openalex.org/W4389879592",
+          "https://openalex.org/W4401951602",
+          "https://openalex.org/W4403760382",
+          "https://openalex.org/W7100070938"
+        ],
+        "related_works": [
+          "https://openalex.org/W4288034514",
+          "https://openalex.org/W4415381558",
+          "https://openalex.org/W4409415146",
+          "https://openalex.org/W4396541948",
+          "https://openalex.org/W7165555699",
+          "https://openalex.org/W4385018165",
+          "https://openalex.org/W6946542682",
+          "https://openalex.org/W7154077305"
+        ],
+        "abstract_inverted_index": {
+          "Machine-learning": [
+            0
+          ],
+          "(ML)": [
+            1
+          ],
+          "methods": [
+            2
+          ],
+          "have": [
+            3,
+            39
+          ],
+          "gained": [
+            4
+          ],
+          "prominence": [
+            5
+          ],
+          "in": [
+            6,
+            20,
+            28,
+            36,
+            57
+          ],
+          "the": [
+            7,
+            134
+          ],
+          "quantitative": [
+            8
+          ],
+          "sciences.": [
+            9
+          ],
+          "However,": [
+            10
+          ],
+          "there": [
+            11
+          ],
+          "are": [
+            12,
+            120,
+            136
+          ],
+          "many": [
+            13
+          ],
+          "known": [
+            14
+          ],
+          "methodological": [
+            15
+          ],
+          "pitfalls,": [
+            16
+          ],
+          "including": [
+            17
+          ],
+          "data": [
+            18
+          ],
+          "leakage,": [
+            19,
+            78
+          ],
+          "ML-based": [
+            21,
+            29
+          ],
+          "science.": [
+            22,
+            30
+          ],
+          "We": [
+            23,
+            87
+          ],
+          "systematically": [
+            24
+          ],
+          "investigate": [
+            25
+          ],
+          "reproducibility": [
+            26,
+            110
+          ],
+          "issues": [
+            27
+          ],
+          "Through": [
+            31
+          ],
+          "a": [
+            32,
+            71,
+            109
+          ],
+          "survey": [
+            33
+          ],
+          "of": [
+            34,
+            74,
+            77,
+            95,
+            112
+          ],
+          "literature": [
+            35
+          ],
+          "fields": [
+            37,
+            46
+          ],
+          "that": [
+            38,
+            89
+          ],
+          "adopted": [
+            40
+          ],
+          "ML": [
+            41,
+            118,
+            139
+          ],
+          "methods,": [
+            42
+          ],
+          "we": [
+            43,
+            69,
+            104,
+            107
+          ],
+          "find": [
+            44
+          ],
+          "17": [
+            45
+          ],
+          "where": [
+            47,
+            116
+          ],
+          "leakage": [
+            48,
+            96
+          ],
+          "has": [
+            49
+          ],
+          "been": [
+            50
+          ],
+          "found,": [
+            51
+          ],
+          "collectively": [
+            52
+          ],
+          "affecting": [
+            53
+          ],
+          "294": [
+            54
+          ],
+          "papers": [
+            55
+          ],
+          "and,": [
+            56
+          ],
+          "some": [
+            58
+          ],
+          "cases,": [
+            59
+          ],
+          "leading": [
+            60
+          ],
+          "to": [
+            61,
+            83,
+            122
+          ],
+          "wildly": [
+            62
+          ],
+          "overoptimistic": [
+            63
+          ],
+          "conclusions.": [
+            64
+          ],
+          "Based": [
+            65
+          ],
+          "on": [
+            66
+          ],
+          "our": [
+            67
+          ],
+          "survey,": [
+            68
+          ],
+          "introduce": [
+            70
+          ],
+          "detailed": [
+            72
+          ],
+          "taxonomy": [
+            73
+          ],
+          "eight": [
+            75
+          ],
+          "types": [
+            76
+          ],
+          "ranging": [
+            79
+          ],
+          "from": [
+            80
+          ],
+          "textbook": [
+            81
+          ],
+          "errors": [
+            82,
+            135
+          ],
+          "open": [
+            84
+          ],
+          "research": [
+            85
+          ],
+          "problems.": [
+            86
+          ],
+          "propose": [
+            88
+          ],
+          "researchers": [
+            90
+          ],
+          "test": [
+            91
+          ],
+          "for": [
+            92
+          ],
+          "each": [
+            93
+          ],
+          "type": [
+            94
+          ],
+          "by": [
+            97
+          ],
+          "filling": [
+            98
+          ],
+          "out": [
+            99
+          ],
+          "model": [
+            100
+          ],
+          "info": [
+            101
+          ],
+          "sheets,": [
+            102
+          ],
+          "which": [
+            103
+          ],
+          "introduce.": [
+            105
+          ],
+          "Finally,": [
+            106
+          ],
+          "conduct": [
+            108
+          ],
+          "study": [
+            111
+          ],
+          "civil": [
+            113
+          ],
+          "war": [
+            114
+          ],
+          "prediction,": [
+            115
+          ],
+          "complex": [
+            117,
+            138
+          ],
+          "models": [
+            119,
+            127,
+            140
+          ],
+          "believed": [
+            121
+          ],
+          "vastly": [
+            123
+          ],
+          "outperform": [
+            124
+          ],
+          "traditional": [
+            125
+          ],
+          "statistical": [
+            126
+          ],
+          "such": [
+            128
+          ],
+          "as": [
+            129
+          ],
+          "logistic": [
+            130
+          ],
+          "regression": [
+            131
+          ],
+          "(LR).": [
+            132
+          ],
+          "When": [
+            133
+          ],
+          "corrected,": [
+            137
+          ],
+          "do": [
+            141
+          ],
+          "not": [
+            142
+          ],
+          "perform": [
+            143
+          ],
+          "substantively": [
+            144
+          ],
+          "better": [
+            145
+          ],
+          "than": [
+            146
+          ],
+          "decades-old": [
+            147
+          ],
+          "LR": [
+            148
+          ],
+          "models.": [
+            149
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W4385576721",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 2234
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 404
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 270
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 146
+          },
+          {
+            "year": 2022,
+            "cited_by_count": 31
+          },
+          {
+            "year": 2019,
+            "cited_by_count": 1
+          },
+          {
+            "year": 2017,
+            "cited_by_count": 1
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2023-08-05T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4392232009",
+        "doi": "https://doi.org/10.1038/s41467-024-46150-w",
+        "title": "Data leakage inflates prediction performance in connectome-based machine learning models",
+        "display_name": "Data leakage inflates prediction performance in connectome-based machine learning models",
+        "alternate_titles": [],
+        "relevance_score": 57.30239,
+        "publication_year": 2024,
+        "publication_date": "2024-02-28",
+        "ids": {
+          "openalex": "https://openalex.org/W4392232009",
+          "doi": "https://doi.org/10.1038/s41467-024-46150-w",
+          "pmid": "https://pubmed.ncbi.nlm.nih.gov/38418819",
+          "pmcid": "https://www.ncbi.nlm.nih.gov/pmc/articles/10901797"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1038/s41467-024-46150-w",
+          "doi": "https://doi.org/10.1038/s41467-024-46150-w",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41467-024-46150-w",
+          "pdf_url": "https://www.nature.com/articles/s41467-024-46150-w.pdf",
+          "source": {
+            "id": "https://openalex.org/S64187185",
+            "display_name": "Nature Communications",
+            "issn_l": "2041-1723",
+            "issn": [
+              "2041-1723"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "oarl",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Nature Communications",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4392232009"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "crossref",
+          "doaj",
+          "pubmed"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "gold",
+          "oa_url": "https://www.nature.com/articles/s41467-024-46150-w.pdf",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5060428905",
+              "display_name": "Matthew Rosenblatt",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-3894-6198",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-3894-6198"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I32971472",
+                "display_name": "Yale University",
+                "ror": "https://ror.org/03v76x132",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Matthew Rosenblatt",
+            "raw_affiliation_strings": [
+              "Department of Biomedical Engineering, Yale University, New Haven, CT, USA. matthew.rosenblatt@yale.edu",
+              "Department of Biomedical Engineering, Yale University, New Haven, CT, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-3894-6198",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biomedical Engineering, Yale University, New Haven, CT, USA. matthew.rosenblatt@yale.edu",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Biomedical Engineering, Yale University, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5044673394",
+              "display_name": "Link Tejavibulya",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-5643-9133",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5643-9133"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I32971472",
+                "display_name": "Yale University",
+                "ror": "https://ror.org/03v76x132",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Link Tejavibulya",
+            "raw_affiliation_strings": [
+              "Interdepartmental Neuroscience Program, Yale University, New Haven, CT, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0001-5643-9133",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Interdepartmental Neuroscience Program, Yale University, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5013717612",
+              "display_name": "Rongtao Jiang",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-4657-0079",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4657-0079"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I32971472",
+                "display_name": "Yale University",
+                "ror": "https://ror.org/03v76x132",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Rongtao Jiang",
+            "raw_affiliation_strings": [
+              "Department of Radiology & Biomedical Imaging, Yale School of Medicine, New Haven, CT, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0003-4657-0079",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Radiology & Biomedical Imaging, Yale School of Medicine, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5042339320",
+              "display_name": "Stephanie Noble",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-4804-5553",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-4804-5553"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I12912129",
+                "display_name": "Northeastern University",
+                "ror": "https://ror.org/04t5xt781",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I12912129"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I32971472",
+                "display_name": "Yale University",
+                "ror": "https://ror.org/03v76x132",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Stephanie Noble",
+            "raw_affiliation_strings": [
+              "Department of Bioengineering, Northeastern University, Boston, MA, USA",
+              "Department of Psychology, Northeastern University, Boston, MA, USA",
+              "Department of Radiology & Biomedical Imaging, Yale School of Medicine, New Haven, CT, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-4804-5553",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Bioengineering, Northeastern University, Boston, MA, USA",
+                "institution_ids": [
+                  "https://openalex.org/I12912129"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Psychology, Northeastern University, Boston, MA, USA",
+                "institution_ids": [
+                  "https://openalex.org/I12912129"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Radiology & Biomedical Imaging, Yale School of Medicine, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5032271246",
+              "display_name": "Dustin Scheinost",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-6301-1167",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-6301-1167"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I32971472",
+                "display_name": "Yale University",
+                "ror": "https://ror.org/03v76x132",
+                "country_code": "US",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "Dustin Scheinost",
+            "raw_affiliation_strings": [
+              "Child Study Center, Yale School of Medicine, New Haven, CT, USA",
+              "Department of Biomedical Engineering, Yale University, New Haven, CT, USA",
+              "Department of Radiology & Biomedical Imaging, Yale School of Medicine, New Haven, CT, USA",
+              "Department of Statistics & Data Science, Yale University, New Haven, CT, USA",
+              "Interdepartmental Neuroscience Program, Yale University, New Haven, CT, USA"
+            ],
+            "raw_orcid": "https://orcid.org/0000-0002-6301-1167",
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Child Study Center, Yale School of Medicine, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Biomedical Engineering, Yale University, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Radiology & Biomedical Imaging, Yale School of Medicine, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Department of Statistics & Data Science, Yale University, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Interdepartmental Neuroscience Program, Yale University, New Haven, CT, USA",
+                "institution_ids": [
+                  "https://openalex.org/I32971472"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 1,
+        "institutions_distinct_count": 2,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5060428905"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I32971472"
+        ],
+        "apc_list": {
+          "value": 6790,
+          "currency": "USD",
+          "value_usd": 6790
+        },
+        "apc_paid": {
+          "value": 6790,
+          "currency": "USD",
+          "value_usd": 6790
+        },
+        "fwci": 58.0539,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 389,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99996988,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 92,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "15",
+          "issue": "1",
+          "first_page": "1829",
+          "last_page": "1829"
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T10241",
+          "display_name": "Functional Brain Connectivity Studies",
+          "score": 0.9965999722480774,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2805",
+            "display_name": "Cognitive Neuroscience"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/28",
+            "display_name": "Neuroscience"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T10241",
+            "display_name": "Functional Brain Connectivity Studies",
+            "score": 0.9965999722480774,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2805",
+              "display_name": "Cognitive Neuroscience"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/28",
+              "display_name": "Neuroscience"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/1",
+              "display_name": "Life Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11304",
+            "display_name": "Advanced Neuroimaging Techniques and Applications",
+            "score": 0.0012000000569969416,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2741",
+              "display_name": "Radiology, Nuclear Medicine and Imaging"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T10378",
+            "display_name": "Advanced MRI Techniques and Applications",
+            "score": 9.999999747378752e-05,
+            "subfield": {
+              "id": "https://openalex.org/subfields/2741",
+              "display_name": "Radiology, Nuclear Medicine and Imaging"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/27",
+              "display_name": "Medicine"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/4",
+              "display_name": "Health Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/data-leakage",
+            "display_name": "data leakage",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/connectome-based-predictive-modeling",
+            "display_name": "connectome-based predictive modeling",
+            "score": 0.699999988079071
+          },
+          {
+            "id": "https://openalex.org/keywords/functional-connectome",
+            "display_name": "functional connectome",
+            "score": 0.7749999761581421
+          },
+          {
+            "id": "https://openalex.org/keywords/structural-connectome",
+            "display_name": "structural connectome",
+            "score": 1.0
+          },
+          {
+            "id": "https://openalex.org/keywords/brain-behavior-relationship",
+            "display_name": "brain-behavior relationship",
+            "score": 0.8569999933242798
+          },
+          {
+            "id": "https://openalex.org/keywords/small-sample-size",
+            "display_name": "small sample size",
+            "score": 0.6349999904632568
+          },
+          {
+            "id": "https://openalex.org/keywords/model-generalization",
+            "display_name": "model generalization",
+            "score": 0.7590000033378601
+          },
+          {
+            "id": "https://openalex.org/keywords/reproducibility",
+            "display_name": "reproducibility",
+            "score": 0.9200000166893005
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C27158222",
+            "wikidata": "https://www.wikidata.org/wiki/Q5532422",
+            "display_name": "Generalizability theory",
+            "level": 2,
+            "score": 0.7065229415893555
+          },
+          {
+            "id": "https://openalex.org/C45715564",
+            "wikidata": "https://www.wikidata.org/wiki/Q1292103",
+            "display_name": "Connectome",
+            "level": 3,
+            "score": 0.6952424645423889
+          },
+          {
+            "id": "https://openalex.org/C2777042071",
+            "wikidata": "https://www.wikidata.org/wiki/Q6509304",
+            "display_name": "Leakage (economics)",
+            "level": 2,
+            "score": 0.6869099140167236
+          },
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.6507284641265869
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.6303352117538452
+          },
+          {
+            "id": "https://openalex.org/C119043178",
+            "wikidata": "https://www.wikidata.org/wiki/Q320723",
+            "display_name": "Covariate",
+            "level": 2,
+            "score": 0.6216211915016174
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.5752834677696228
+          },
+          {
+            "id": "https://openalex.org/C58693492",
+            "wikidata": "https://www.wikidata.org/wiki/Q551875",
+            "display_name": "Neuroimaging",
+            "level": 2,
+            "score": 0.5560368299484253
+          },
+          {
+            "id": "https://openalex.org/C148483581",
+            "wikidata": "https://www.wikidata.org/wiki/Q446488",
+            "display_name": "Feature selection",
+            "level": 2,
+            "score": 0.5338500738143921
+          },
+          {
+            "id": "https://openalex.org/C45804977",
+            "wikidata": "https://www.wikidata.org/wiki/Q7239673",
+            "display_name": "Predictive modelling",
+            "level": 2,
+            "score": 0.4473065733909607
+          },
+          {
+            "id": "https://openalex.org/C124101348",
+            "wikidata": "https://www.wikidata.org/wiki/Q172491",
+            "display_name": "Data mining",
+            "level": 1,
+            "score": 0.33609843254089355
+          },
+          {
+            "id": "https://openalex.org/C3018011982",
+            "wikidata": "https://www.wikidata.org/wiki/Q7316120",
+            "display_name": "Functional connectivity",
+            "level": 2,
+            "score": 0.20395222306251526
+          },
+          {
+            "id": "https://openalex.org/C15744967",
+            "wikidata": "https://www.wikidata.org/wiki/Q9418",
+            "display_name": "Psychology",
+            "level": 0,
+            "score": 0.1482999622821808
+          },
+          {
+            "id": "https://openalex.org/C169760540",
+            "wikidata": "https://www.wikidata.org/wiki/Q207011",
+            "display_name": "Neuroscience",
+            "level": 1,
+            "score": 0.13312163949012756
+          },
+          {
+            "id": "https://openalex.org/C138496976",
+            "wikidata": "https://www.wikidata.org/wiki/Q175002",
+            "display_name": "Developmental psychology",
+            "level": 1,
+            "score": 0.09010735154151917
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [
+          {
+            "descriptor_ui": "D000069550",
+            "descriptor_name": "Machine Learning",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D001921",
+            "descriptor_name": "Brain",
+            "qualifier_ui": "Q000000981",
+            "qualifier_name": "diagnostic imaging",
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D006801",
+            "descriptor_name": "Humans",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D008279",
+            "descriptor_name": "Magnetic Resonance Imaging",
+            "qualifier_ui": "Q000379",
+            "qualifier_name": "methods",
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D015203",
+            "descriptor_name": "Reproducibility of Results",
+            "qualifier_ui": null,
+            "qualifier_name": null,
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D059906",
+            "descriptor_name": "Neuroimaging",
+            "qualifier_ui": "Q000379",
+            "qualifier_name": "methods",
+            "is_major_topic": false
+          },
+          {
+            "descriptor_ui": "D063132",
+            "descriptor_name": "Connectome",
+            "qualifier_ui": "Q000379",
+            "qualifier_name": "methods",
+            "is_major_topic": true
+          }
+        ],
+        "locations_count": 8,
+        "locations": [
+          {
+            "id": "doi:10.1038/s41467-024-46150-w",
+            "doi": "https://doi.org/10.1038/s41467-024-46150-w",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1038/s41467-024-46150-w",
+            "pdf_url": "https://www.nature.com/articles/s41467-024-46150-w.pdf",
+            "source": {
+              "id": "https://openalex.org/S64187185",
+              "display_name": "Nature Communications",
+              "issn_l": "2041-1723",
+              "issn": [
+                "2041-1723"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": true,
+              "listed_in": [
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "doaj",
+                "dongbi-a",
+                "doyens",
+                "jufo-3",
+                "ki-jl-3",
+                "medline",
+                "norway-2",
+                "oarl",
+                "poland-200",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319908",
+              "host_organization_name": "Nature Portfolio",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319908",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Nature Portfolio",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Nature Communications",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "doi:10.1101/2023.06.09.544383",
+            "doi": "https://doi.org/10.1101/2023.06.09.544383",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1101/2023.06.09.544383",
+            "pdf_url": "https://www.biorxiv.org/content/biorxiv/early/2023/06/11/2023.06.09.544383.full.pdf",
+            "source": {
+              "id": "https://openalex.org/S4306402567",
+              "display_name": "bioRxiv (Cold Spring Harbor Laboratory)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I2750212522",
+              "host_organization_name": "Cold Spring Harbor Laboratory",
+              "host_organization_lineage": [
+                "https://openalex.org/I2750212522"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by-nc-nd",
+            "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "bioRxiv",
+            "raw_type": "posted-content"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:10901797",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10901797",
+            "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10901797/pdf/41467_2024_Article_46150.pdf",
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Nat Commun",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmid:38418819",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38418819",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Nature communications",
+            "raw_type": "Journal Article"
+          },
+          {
+            "id": "pmh:oai:pubmedcentral.nih.gov:10793416",
+            "doi": null,
+            "is_oa": true,
+            "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10793416",
+            "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10793416/pdf/nihpp-2023.06.09.544383v2.pdf",
+            "source": {
+              "id": "https://openalex.org/S2764455111",
+              "display_name": "PubMed Central",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": "cc-by-nd",
+            "license_id": "https://openalex.org/licenses/cc-by-nd",
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "bioRxiv",
+            "raw_type": "Text"
+          },
+          {
+            "id": "pmid:38234740",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38234740",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "bioRxiv : the preprint server for biology",
+            "raw_type": "Preprint"
+          },
+          {
+            "id": "pmh:oai:RePEc:nat:natcom:v:15:y:2024:i:1:d:10.1038_s41467-024-46150-w",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://www.nature.com/articles/s41467-024-46150-w",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401271",
+              "display_name": "RePEc: Research Papers in Economics",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I77793887",
+              "host_organization_name": "Federal Reserve Bank of St. Louis",
+              "host_organization_lineage": [
+                "https://openalex.org/I77793887"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article"
+          },
+          {
+            "id": "pmh:oai:doaj.org/article:dd2bea4ec50b4543bdd42bc468cb5294",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://doaj.org/article/dd2bea4ec50b4543bdd42bc468cb5294",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401280",
+              "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Nature Communications, Vol 15, Iss 1, Pp 1-15 (2024)",
+            "raw_type": "article"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1038/s41467-024-46150-w",
+          "doi": "https://doi.org/10.1038/s41467-024-46150-w",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1038/s41467-024-46150-w",
+          "pdf_url": "https://www.nature.com/articles/s41467-024-46150-w.pdf",
+          "source": {
+            "id": "https://openalex.org/S64187185",
+            "display_name": "Nature Communications",
+            "issn_l": "2041-1723",
+            "issn": [
+              "2041-1723"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-a",
+              "doyens",
+              "jufo-3",
+              "ki-jl-3",
+              "medline",
+              "norway-2",
+              "oarl",
+              "poland-200",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319908",
+            "host_organization_name": "Nature Portfolio",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319908",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Nature Portfolio",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Nature Communications",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [
+          {
+            "score": 0.8048999905586243,
+            "id": "https://metadata.un.org/sdg/3",
+            "display_name": "Good health and well-being"
+          }
+        ],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G1109564673",
+            "display_name": "Neurodevelopmental Genomics: Trajectories of Complex Phenotypes",
+            "funder_award_id": "RC2MH089983",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G1290231360",
+            "display_name": null,
+            "funder_award_id": "R01MH121095",
+            "funder_id": "https://openalex.org/F4320332884",
+            "funder_display_name": "McDonnell Center for Systems Neuroscience"
+          },
+          {
+            "id": "https://openalex.org/G1312176601",
+            "display_name": "An Individualized, Multidimensional Dimensional Approach to Psychopathology",
+            "funder_award_id": "R01MH121095",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G1363190437",
+            "display_name": null,
+            "funder_award_id": "U01DA041089",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G1548113041",
+            "display_name": null,
+            "funder_award_id": "U01DA041106",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G2851894311",
+            "display_name": null,
+            "funder_award_id": "K00MH122372",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G2900249791",
+            "display_name": "Graduate Research Fellowship Program (GRFP)",
+            "funder_award_id": "2139841",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G3156988136",
+            "display_name": null,
+            "funder_award_id": "U01DA051037",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G3271843115",
+            "display_name": null,
+            "funder_award_id": "RC2MH089924",
+            "funder_id": "https://openalex.org/F4320332884",
+            "funder_display_name": "McDonnell Center for Systems Neuroscience"
+          },
+          {
+            "id": "https://openalex.org/G3774909143",
+            "display_name": null,
+            "funder_award_id": "U24DA041147",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G407593949",
+            "display_name": null,
+            "funder_award_id": "U01DA041156",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G4158548775",
+            "display_name": null,
+            "funder_award_id": "U01DA041025",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G5126328284",
+            "display_name": "2/2 Neurodevelopmental Genomics: Trajectories of Complex Phenotypes",
+            "funder_award_id": "RC2MH089924",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G5264564855",
+            "display_name": null,
+            "funder_award_id": "U01DA050989",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G5418428649",
+            "display_name": null,
+            "funder_award_id": "U01DA041022",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G5926695431",
+            "display_name": null,
+            "funder_award_id": "U24DA041123",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G6077843296",
+            "display_name": null,
+            "funder_award_id": "U01DA041117",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G638286025",
+            "display_name": null,
+            "funder_award_id": "U01DA050988",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G6510595329",
+            "display_name": null,
+            "funder_award_id": "U01DA041148",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G6546238116",
+            "display_name": null,
+            "funder_award_id": "U01DA041048, U01DA050989, U01DA051016, U01DA041022, U01DA051018, U01DA051037, U01DA050987, U01DA041174, U01DA041106, U01DA041117, U01DA041028, U01DA041134, U01DA050988, U01DA051039, U01DA041156, U01DA041025, U01DA041120, U01DA051038, U01DA041148, U01DA041093, U01DA041089, U24DA041123, and U24DA041147",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G6667231380",
+            "display_name": null,
+            "funder_award_id": "U01DA041028",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G6754538670",
+            "display_name": null,
+            "funder_award_id": "R00MH130894",
+            "funder_id": "https://openalex.org/F4320306085",
+            "funder_display_name": "U.S. Department of Health and Human Services"
+          },
+          {
+            "id": "https://openalex.org/G6774021418",
+            "display_name": null,
+            "funder_award_id": "U01DA051038",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G7534917452",
+            "display_name": null,
+            "funder_award_id": "U01DA051039",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G7626434999",
+            "display_name": null,
+            "funder_award_id": "U01DA051018",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G7626942172",
+            "display_name": null,
+            "funder_award_id": "U01DA041120",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G8003134535",
+            "display_name": null,
+            "funder_award_id": "U01DA041174",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G8029920266",
+            "display_name": "Mapping the Human Connectome During Typical Development",
+            "funder_award_id": "U01MH109589",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G8185920158",
+            "display_name": "Constrained Network-Based Multiple Comparison Correction",
+            "funder_award_id": "K00MH122372",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G8336883286",
+            "display_name": null,
+            "funder_award_id": "U01DA050987",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G8377273181",
+            "display_name": null,
+            "funder_award_id": "U01DA041048",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G8414548736",
+            "display_name": null,
+            "funder_award_id": "RC2MH089983",
+            "funder_id": "https://openalex.org/F4320332884",
+            "funder_display_name": "McDonnell Center for Systems Neuroscience"
+          },
+          {
+            "id": "https://openalex.org/G8558434156",
+            "display_name": null,
+            "funder_award_id": "U01DA041134",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G869166675",
+            "display_name": null,
+            "funder_award_id": "U01DA051016",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G9000856496",
+            "display_name": "9/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT U MICHIGAN",
+            "funder_award_id": "U01DA041106",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000860152",
+            "display_name": "20/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT VCU",
+            "funder_award_id": "U01DA051037",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000861190",
+            "display_name": "3/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT U MINNESOTA",
+            "funder_award_id": "U01DA041120",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000863647",
+            "display_name": "4/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT FIU",
+            "funder_award_id": "U01DA041156",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000863895",
+            "display_name": "7/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT YALE",
+            "funder_award_id": "U01DA041174",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000869811",
+            "display_name": "17/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT UCLA",
+            "funder_award_id": "U01DA050987",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000870566",
+            "display_name": "15/21 ABCD-USA Consortium: Research Project Site at LIBR",
+            "funder_award_id": "U01DA050989",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000870846",
+            "display_name": "16/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT UNIVERSITY OF ROCHESTER",
+            "funder_award_id": "U01DA050988",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000879158",
+            "display_name": "8/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT CHLA",
+            "funder_award_id": "U01DA041048",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000880002",
+            "display_name": "ABCD-USA Consortium: Coordinating Center",
+            "funder_award_id": "U24DA041147",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000884135",
+            "display_name": "6/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT OHSU",
+            "funder_award_id": "U01DA041148",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000884642",
+            "display_name": "10/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT SRI",
+            "funder_award_id": "U01DA041022",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000885027",
+            "display_name": "12/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT U PITTSBURGH",
+            "funder_award_id": "U01DA041028",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000885542",
+            "display_name": "19/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT UVM",
+            "funder_award_id": "U01DA051039",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000887536",
+            "display_name": "1/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT U UTAH",
+            "funder_award_id": "U01DA041134",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000900872",
+            "display_name": "11/21 ABCD-USA Consortium: Research Project Site at UWM",
+            "funder_award_id": "U01DA041025",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000905448",
+            "display_name": "Yale Clinical and Translational Science Award",
+            "funder_award_id": "UL1TR001863",
+            "funder_id": "https://openalex.org/F4320332161",
+            "funder_display_name": "National Institutes of Health"
+          },
+          {
+            "id": "https://openalex.org/G9000911928",
+            "display_name": "ABCD-USA Consortium: Data Analysis, Informatics and Resource Center",
+            "funder_award_id": "U24DA041123",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000911931",
+            "display_name": "21/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT WUSTL",
+            "funder_award_id": "U01DA051038",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000911940",
+            "display_name": "13/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT MUSC",
+            "funder_award_id": "U01DA041093",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000912371",
+            "display_name": "5/21 ABCD-USA Consortium: Research Project Site at UC San Diego",
+            "funder_award_id": "U01DA041089",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000914057",
+            "display_name": "Empirical Power Analysis Tool for fMRI",
+            "funder_award_id": "R00MH130894",
+            "funder_id": "https://openalex.org/F4320337346",
+            "funder_display_name": "National Institute of Mental Health"
+          },
+          {
+            "id": "https://openalex.org/G9000914550",
+            "display_name": "18/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT THE UNIVERSITY OF FLORIDA",
+            "funder_award_id": "U01DA051016",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000914652",
+            "display_name": "2/21 ABCD-USA CONSORTIUM: RESEARCH PROJECT SITE AT UMB",
+            "funder_award_id": "U01DA041117",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G9000919995",
+            "display_name": "14/21 ABCD-USA Consortium: Research Project Site at CU Boulder",
+            "funder_award_id": "U01DA051018",
+            "funder_id": "https://openalex.org/F4320337347",
+            "funder_display_name": "National Institute on Drug Abuse"
+          },
+          {
+            "id": "https://openalex.org/G969279314",
+            "display_name": null,
+            "funder_award_id": "U01DA041093",
+            "funder_id": "https://openalex.org/F4320306076",
+            "funder_display_name": "National Science Foundation"
+          },
+          {
+            "id": "https://openalex.org/G995195522",
+            "display_name": null,
+            "funder_award_id": "R01MH121095",
+            "funder_id": "https://openalex.org/F4320306085",
+            "funder_display_name": "U.S. Department of Health and Human Services"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320306076",
+            "display_name": "National Science Foundation",
+            "ror": "https://ror.org/021nxhr62"
+          },
+          {
+            "id": "https://openalex.org/F4320306085",
+            "display_name": "U.S. Department of Health and Human Services",
+            "ror": "https://ror.org/033jnv181"
+          },
+          {
+            "id": "https://openalex.org/F4320306199",
+            "display_name": "Hearst Foundations",
+            "ror": "https://ror.org/03s96de24"
+          },
+          {
+            "id": "https://openalex.org/F4320308380",
+            "display_name": "Yale University",
+            "ror": "https://ror.org/03v76x132"
+          },
+          {
+            "id": "https://openalex.org/F4320309650",
+            "display_name": "Washington University in St. Louis",
+            "ror": "https://ror.org/01yc7t268"
+          },
+          {
+            "id": "https://openalex.org/F4320322565",
+            "display_name": "Stavros Niarchos Foundation",
+            "ror": "https://ror.org/0210rze73"
+          },
+          {
+            "id": "https://openalex.org/F4320332161",
+            "display_name": "National Institutes of Health",
+            "ror": "https://ror.org/01cwqze88"
+          },
+          {
+            "id": "https://openalex.org/F4320332884",
+            "display_name": "McDonnell Center for Systems Neuroscience",
+            "ror": "https://ror.org/01yc7t268"
+          },
+          {
+            "id": "https://openalex.org/F4320337346",
+            "display_name": "National Institute of Mental Health",
+            "ror": "https://ror.org/04xeg9z08"
+          },
+          {
+            "id": "https://openalex.org/F4320337347",
+            "display_name": "National Institute on Drug Abuse",
+            "ror": "https://ror.org/00fq5cm18"
+          },
+          {
+            "id": "https://openalex.org/F4320337472",
+            "display_name": "National Center for Advancing Translational Sciences",
+            "ror": "https://ror.org/04pw6fb54"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W4392232009.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W4392232009.grobid-xml"
+        },
+        "referenced_works_count": 71,
+        "referenced_works": [
+          "https://openalex.org/W254965819",
+          "https://openalex.org/W1606491053",
+          "https://openalex.org/W1979450493",
+          "https://openalex.org/W1990043440",
+          "https://openalex.org/W2005900392",
+          "https://openalex.org/W2016444985",
+          "https://openalex.org/W2018634603",
+          "https://openalex.org/W2030561475",
+          "https://openalex.org/W2056792865",
+          "https://openalex.org/W2069088601",
+          "https://openalex.org/W2085561705",
+          "https://openalex.org/W2101234009",
+          "https://openalex.org/W2107665951",
+          "https://openalex.org/W2141265035",
+          "https://openalex.org/W2146683693",
+          "https://openalex.org/W2421101021",
+          "https://openalex.org/W2571093196",
+          "https://openalex.org/W2587272693",
+          "https://openalex.org/W2736287575",
+          "https://openalex.org/W2760367745",
+          "https://openalex.org/W2770241596",
+          "https://openalex.org/W2780601052",
+          "https://openalex.org/W2789530810",
+          "https://openalex.org/W2888149555",
+          "https://openalex.org/W2915132455",
+          "https://openalex.org/W2920509382",
+          "https://openalex.org/W2946930197",
+          "https://openalex.org/W2949222200",
+          "https://openalex.org/W2950030754",
+          "https://openalex.org/W2950086191",
+          "https://openalex.org/W2950181023",
+          "https://openalex.org/W2952810115",
+          "https://openalex.org/W2985923507",
+          "https://openalex.org/W2990091959",
+          "https://openalex.org/W2997591727",
+          "https://openalex.org/W3003257820",
+          "https://openalex.org/W3008923041",
+          "https://openalex.org/W3035965352",
+          "https://openalex.org/W3041300531",
+          "https://openalex.org/W3048710731",
+          "https://openalex.org/W3092041776",
+          "https://openalex.org/W3114072530",
+          "https://openalex.org/W3127091844",
+          "https://openalex.org/W3130801515",
+          "https://openalex.org/W3183267169",
+          "https://openalex.org/W4220806390",
+          "https://openalex.org/W4220838968",
+          "https://openalex.org/W4220876827",
+          "https://openalex.org/W4220992429",
+          "https://openalex.org/W4225274087",
+          "https://openalex.org/W4226026390",
+          "https://openalex.org/W4229369332",
+          "https://openalex.org/W4282552232",
+          "https://openalex.org/W4282923149",
+          "https://openalex.org/W4283756697",
+          "https://openalex.org/W4289847319",
+          "https://openalex.org/W4293191727",
+          "https://openalex.org/W4311287493",
+          "https://openalex.org/W4312056427",
+          "https://openalex.org/W4318577470",
+          "https://openalex.org/W4321205102",
+          "https://openalex.org/W4323295479",
+          "https://openalex.org/W4323546552",
+          "https://openalex.org/W4361298408",
+          "https://openalex.org/W4362673421",
+          "https://openalex.org/W4376610715",
+          "https://openalex.org/W4376611936",
+          "https://openalex.org/W4385576721",
+          "https://openalex.org/W4387210595",
+          "https://openalex.org/W6948790861",
+          "https://openalex.org/W6969259846"
+        ],
+        "related_works": [
+          "https://openalex.org/W4409190375",
+          "https://openalex.org/W3205360111",
+          "https://openalex.org/W4225274087",
+          "https://openalex.org/W4376602474",
+          "https://openalex.org/W7030004662",
+          "https://openalex.org/W7126054717",
+          "https://openalex.org/W7056833368",
+          "https://openalex.org/W4405194897",
+          "https://openalex.org/W2747503395",
+          "https://openalex.org/W4403455778"
+        ],
+        "abstract_inverted_index": {
+          "Predictive": [
+            0
+          ],
+          "modeling": [
+            1
+          ],
+          "is": [
+            2,
+            38
+          ],
+          "a": [
+            3
+          ],
+          "central": [
+            4
+          ],
+          "technique": [
+            5
+          ],
+          "in": [
+            6,
+            46
+          ],
+          "neuroimaging": [
+            7,
+            53
+          ],
+          "to": [
+            8,
+            16,
+            138
+          ],
+          "identify": [
+            9
+          ],
+          "brain-behavior": [
+            10
+          ],
+          "relationships": [
+            11
+          ],
+          "and": [
+            12,
+            34,
+            77,
+            82,
+            91,
+            98,
+            130,
+            142
+          ],
+          "test": [
+            13,
+            35
+          ],
+          "their": [
+            14
+          ],
+          "generalizability": [
+            15
+          ],
+          "unseen": [
+            17
+          ],
+          "data.": [
+            18,
+            36
+          ],
+          "However,": [
+            19
+          ],
+          "data": [
+            20,
+            136
+          ],
+          "leakage": [
+            21,
+            59,
+            109,
+            129,
+            137
+          ],
+          "undermines": [
+            22
+          ],
+          "the": [
+            23,
+            30,
+            66,
+            117,
+            125,
+            132,
+            140
+          ],
+          "validity": [
+            24,
+            141
+          ],
+          "of": [
+            25,
+            68,
+            71,
+            108,
+            119,
+            128,
+            134,
+            144
+          ],
+          "predictive": [
+            26,
+            54,
+            145
+          ],
+          "models": [
+            27,
+            55,
+            87
+          ],
+          "by": [
+            28
+          ],
+          "breaching": [
+            29
+          ],
+          "separation": [
+            31
+          ],
+          "between": [
+            32,
+            79
+          ],
+          "training": [
+            33
+          ],
+          "Leakage": [
+            37,
+            94
+          ],
+          "always": [
+            39
+          ],
+          "an": [
+            40
+          ],
+          "incorrect": [
+            41
+          ],
+          "practice": [
+            42
+          ],
+          "but": [
+            43
+          ],
+          "still": [
+            44
+          ],
+          "pervasive": [
+            45
+          ],
+          "machine": [
+            47,
+            85
+          ],
+          "learning.": [
+            48
+          ],
+          "Understanding": [
+            49
+          ],
+          "its": [
+            50
+          ],
+          "effects": [
+            51,
+            67,
+            118,
+            127
+          ],
+          "on": [
+            52
+          ],
+          "can": [
+            56
+          ],
+          "inform": [
+            57
+          ],
+          "how": [
+            58
+          ],
+          "affects": [
+            60
+          ],
+          "existing": [
+            61
+          ],
+          "literature.": [
+            62
+          ],
+          "Here,": [
+            63
+          ],
+          "we": [
+            64
+          ],
+          "investigate": [
+            65
+          ],
+          "five": [
+            69
+          ],
+          "forms": [
+            70,
+            107
+          ],
+          "leakage\u2013involving": [
+            72
+          ],
+          "feature": [
+            73,
+            96
+          ],
+          "selection,": [
+            74
+          ],
+          "covariate": [
+            75
+          ],
+          "correction,": [
+            76
+          ],
+          "dependence": [
+            78
+          ],
+          "subjects\u2013on": [
+            80
+          ],
+          "functional": [
+            81
+          ],
+          "structural": [
+            83
+          ],
+          "connectome-based": [
+            84
+          ],
+          "learning": [
+            86
+          ],
+          "across": [
+            88
+          ],
+          "four": [
+            89
+          ],
+          "datasets": [
+            90,
+            115
+          ],
+          "three": [
+            92
+          ],
+          "phenotypes.": [
+            93
+          ],
+          "via": [
+            95
+          ],
+          "selection": [
+            97
+          ],
+          "repeated": [
+            99
+          ],
+          "subjects": [
+            100
+          ],
+          "drastically": [
+            101
+          ],
+          "inflates": [
+            102
+          ],
+          "prediction": [
+            103
+          ],
+          "performance,": [
+            104
+          ],
+          "whereas": [
+            105
+          ],
+          "other": [
+            106
+          ],
+          "have": [
+            110
+          ],
+          "minor": [
+            111
+          ],
+          "effects.": [
+            112
+          ],
+          "Furthermore,": [
+            113
+          ],
+          "small": [
+            114
+          ],
+          "exacerbate": [
+            116
+          ],
+          "leakage.": [
+            120
+          ],
+          "Overall,": [
+            121
+          ],
+          "our": [
+            122
+          ],
+          "results": [
+            123
+          ],
+          "illustrate": [
+            124
+          ],
+          "variable": [
+            126
+          ],
+          "underscore": [
+            131
+          ],
+          "importance": [
+            133
+          ],
+          "avoiding": [
+            135
+          ],
+          "improve": [
+            139
+          ],
+          "reproducibility": [
+            143
+          ],
+          "modeling.": [
+            146
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W4392232009",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 279
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 80
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 28
+          },
+          {
+            "year": 2023,
+            "cited_by_count": 2
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2024-03-05T00:00:00"
+      },
+      {
+        "id": "https://openalex.org/W4410859924",
+        "doi": "https://doi.org/10.1186/s40537-025-01193-8",
+        "title": "Overview of leakage scenarios in supervised machine learning",
+        "display_name": "Overview of leakage scenarios in supervised machine learning",
+        "alternate_titles": [],
+        "relevance_score": 54.65854,
+        "publication_year": 2025,
+        "publication_date": "2025-05-29",
+        "ids": {
+          "openalex": "https://openalex.org/W4410859924",
+          "doi": "https://doi.org/10.1186/s40537-025-01193-8",
+          "arxiv": "https://arxiv.org/abs/2311.04179"
+        },
+        "language": "en",
+        "primary_location": {
+          "id": "doi:10.1186/s40537-025-01193-8",
+          "doi": "https://doi.org/10.1186/s40537-025-01193-8",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1186/s40537-025-01193-8",
+          "pdf_url": "https://journalofbigdata.springeropen.com/counter/pdf/10.1186/s40537-025-01193-8",
+          "source": {
+            "id": "https://openalex.org/S2737955091",
+            "display_name": "Journal Of Big Data",
+            "issn_l": "2196-1115",
+            "issn": [
+              "2196-1115"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-d",
+              "jufo-1",
+              "norway-1",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Big Data",
+          "raw_type": "journal-article"
+        },
+        "parent_works": [],
+        "lineage": [
+          "https://openalex.org/W4410859924"
+        ],
+        "child_works_count": 0,
+        "pull_notice_works": [],
+        "type": "article",
+        "is_traditional": true,
+        "indexed_in": [
+          "arxiv",
+          "crossref",
+          "datacite",
+          "doaj"
+        ],
+        "open_access": {
+          "is_oa": true,
+          "oa_status": "gold",
+          "oa_url": "https://journalofbigdata.springeropen.com/counter/pdf/10.1186/s40537-025-01193-8",
+          "any_repository_has_fulltext": true
+        },
+        "authorships": [
+          {
+            "author_position": "first",
+            "author": {
+              "id": "https://openalex.org/A5043815564",
+              "display_name": "Leonard Sasse",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-2400-3404",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-2400-3404"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "L. Sasse",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+              "Max Planck School of Cognition, Stephanstrasse 1a, Leipzig, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Max Planck School of Cognition, Stephanstrasse 1a, Leipzig, Germany",
+                "institution_ids": []
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5001220330",
+              "display_name": "Eliana Nicolaisen\u2010Sobesky",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-4806-2863",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-4806-2863"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "E. Nicolaisen-Sobesky",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5059906003",
+              "display_name": "Juergen Dukart",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-0492-5644",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0492-5644"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "J. Dukart",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5007313280",
+              "display_name": "Simon Bodo Eickhoff",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-6363-2759",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-6363-2759"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "S. B. Eickhoff",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5110148964",
+              "display_name": "MICHAEL A. GOETZ",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-0984-224X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-0984-224X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I196349391",
+                "display_name": "Universit\u00e4t Ulm",
+                "ror": "https://ror.org/032000t02",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I196349391"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I4210155144",
+                "display_name": "University Hospital Ulm",
+                "ror": "https://ror.org/05emabm63",
+                "country_code": "DE",
+                "type": "healthcare",
+                "lineage": [
+                  "https://openalex.org/I4210155144"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "M. G\u00f6tz",
+            "raw_affiliation_strings": [
+              "Division of Experimental Radiology, Department for Diagnostic and Interventional Radiology, Ulm University Medical Center, Ulm, Germany",
+              "Experimental Radiology, University Ulm, Ulm, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Division of Experimental Radiology, Department for Diagnostic and Interventional Radiology, Ulm University Medical Center, Ulm, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I4210155144"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Experimental Radiology, University Ulm, Ulm, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I196349391"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5000346378",
+              "display_name": "Sami Hamdan",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-5072-542X",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-5072-542X"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "S. Hamdan",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5092820208",
+              "display_name": "Vera Komeyer",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0001-9486-0922",
+              "observed_orcids": [
+                "https://orcid.org/0000-0001-9486-0922"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "V. Komeyer",
+            "raw_affiliation_strings": [
+              "Department of Biology, Faculty of Mathematics and Natural Sciences, Heinrich Heine University Duesseldorf, Duesseldorf, Germany",
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Department of Biology, Faculty of Mathematics and Natural Sciences, Heinrich Heine University Duesseldorf, Duesseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5110113414",
+              "display_name": "Abhijit J. Kulkarni",
+              "type": null,
+              "orcid": null,
+              "observed_orcids": []
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [],
+            "countries": [],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "A. Kulkarni",
+            "raw_affiliation_strings": [
+              "Principal Global Services, Pune, India"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Principal Global Services, Pune, India",
+                "institution_ids": []
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5036568583",
+              "display_name": "Juha M. Lahnakoski",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-5223-7822",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-5223-7822"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "J. M. Lahnakoski",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5069362336",
+              "display_name": "Bradley C. Love",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-7883-7076",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-7883-7076"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I1343871089",
+                "display_name": "Los Alamos National Laboratory",
+                "ror": "https://ror.org/01e41cf67",
+                "country_code": "US",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1330989302",
+                  "https://openalex.org/I1343871089",
+                  "https://openalex.org/I198811213",
+                  "https://openalex.org/I4210120050"
+                ]
+              }
+            ],
+            "countries": [
+              "US"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "B. C. Love",
+            "raw_affiliation_strings": [
+              "Computer, Computational, and Statistical Sciences, Los Alamos National Laboratory, Los Alamos, United States of America"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Computer, Computational, and Statistical Sciences, Los Alamos National Laboratory, Los Alamos, United States of America",
+                "institution_ids": [
+                  "https://openalex.org/I1343871089"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "middle",
+            "author": {
+              "id": "https://openalex.org/A5053862168",
+              "display_name": "Federico Raimondo",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0003-4087-8259",
+              "observed_orcids": [
+                "https://orcid.org/0000-0003-4087-8259"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE"
+            ],
+            "is_corresponding": false,
+            "contributor_roles": [],
+            "raw_author_name": "F. Raimondo",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ]
+          },
+          {
+            "author_position": "last",
+            "author": {
+              "id": "https://openalex.org/A5083494075",
+              "display_name": "Kaustubh R. Patil",
+              "type": null,
+              "orcid": "https://orcid.org/0000-0002-0289-5480",
+              "observed_orcids": [
+                "https://orcid.org/0000-0002-0289-5480"
+              ]
+            },
+            "acted_on_behalf_of": [],
+            "institutions": [
+              {
+                "id": "https://openalex.org/I162827531",
+                "display_name": "Indian Institute of Technology Bombay",
+                "ror": "https://ror.org/02qyf5152",
+                "country_code": "IN",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I162827531"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I171892758",
+                "display_name": "Forschungszentrum J\u00fclich",
+                "ror": "https://ror.org/02nv7yv05",
+                "country_code": "DE",
+                "type": "facility",
+                "lineage": [
+                  "https://openalex.org/I1305996414",
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "id": "https://openalex.org/I44260953",
+                "display_name": "Heinrich Heine University D\u00fcsseldorf",
+                "ror": "https://ror.org/024z2rq82",
+                "country_code": "DE",
+                "type": "education",
+                "lineage": [
+                  "https://openalex.org/I44260953"
+                ]
+              }
+            ],
+            "countries": [
+              "DE",
+              "IN"
+            ],
+            "is_corresponding": true,
+            "contributor_roles": [],
+            "raw_author_name": "Kaustubh R. Patil",
+            "raw_affiliation_strings": [
+              "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+              "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+              "Koita Centre for Digital Health, IIT Bombay, Mumbai, 400076, India"
+            ],
+            "raw_orcid": null,
+            "affiliations": [
+              {
+                "raw_affiliation_string": "Institute of Neuroscience and Medicine, Brain and Behaviour (INM-7), Forschungszentrum J\u00fclich, J\u00fclich, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I171892758"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Institute of Systems Neuroscience, Medical Faculty, Heinrich-Heine-University D\u00fcsseldorf, D\u00fcsseldorf, Germany",
+                "institution_ids": [
+                  "https://openalex.org/I44260953"
+                ]
+              },
+              {
+                "raw_affiliation_string": "Koita Centre for Digital Health, IIT Bombay, Mumbai, 400076, India",
+                "institution_ids": [
+                  "https://openalex.org/I162827531"
+                ]
+              }
+            ]
+          }
+        ],
+        "institutions": [],
+        "countries_distinct_count": 3,
+        "institutions_distinct_count": 6,
+        "corresponding_author_ids": [
+          "https://openalex.org/A5083494075"
+        ],
+        "corresponding_institution_ids": [
+          "https://openalex.org/I162827531",
+          "https://openalex.org/I171892758",
+          "https://openalex.org/I44260953"
+        ],
+        "apc_list": {
+          "value": 2290,
+          "currency": "USD",
+          "value_usd": 2290
+        },
+        "apc_paid": {
+          "value": 2290,
+          "currency": "USD",
+          "value_usd": 2290
+        },
+        "fwci": 26.3989,
+        "is_authors_truncated": false,
+        "has_fulltext": true,
+        "cited_by_count": 153,
+        "reviewed_by_count": 0,
+        "citation_normalized_percentile": {
+          "value": 0.99770156,
+          "is_in_top_1_percent": true,
+          "is_in_top_10_percent": true
+        },
+        "cited_by_percentile_year": {
+          "min": 92,
+          "max": 100
+        },
+        "biblio": {
+          "volume": "12",
+          "issue": "1",
+          "first_page": "135",
+          "last_page": null
+        },
+        "is_retracted": false,
+        "is_pulled": false,
+        "is_paratext": false,
+        "is_xpac": false,
+        "primary_topic": {
+          "id": "https://openalex.org/T12535",
+          "display_name": "Machine Learning and Data Classification",
+          "score": 0.9243000149726868,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        "topics": [
+          {
+            "id": "https://openalex.org/T12535",
+            "display_name": "Machine Learning and Data Classification",
+            "score": 0.9243000149726868,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T13373",
+            "display_name": "Data Mining and Machine Learning Applications",
+            "score": 0.010900000110268593,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1710",
+              "display_name": "Information Systems"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          },
+          {
+            "id": "https://openalex.org/T11652",
+            "display_name": "Imbalanced Data Classification Techniques",
+            "score": 0.007199999876320362,
+            "subfield": {
+              "id": "https://openalex.org/subfields/1702",
+              "display_name": "Artificial Intelligence"
+            },
+            "field": {
+              "id": "https://openalex.org/fields/17",
+              "display_name": "Computer Science"
+            },
+            "domain": {
+              "id": "https://openalex.org/domains/3",
+              "display_name": "Physical Sciences"
+            }
+          }
+        ],
+        "keywords": [
+          {
+            "id": "https://openalex.org/keywords/data-leakage",
+            "display_name": "data leakage",
+            "score": 0.9229999780654907
+          },
+          {
+            "id": "https://openalex.org/keywords/supervised-learning",
+            "display_name": "supervised learning",
+            "score": 0.8410000205039978
+          },
+          {
+            "id": "https://openalex.org/keywords/overfitting",
+            "display_name": "overfitting",
+            "score": 0.675000011920929
+          },
+          {
+            "id": "https://openalex.org/keywords/generalization",
+            "display_name": "generalization",
+            "score": 0.5839999914169312
+          },
+          {
+            "id": "https://openalex.org/keywords/model-evaluation",
+            "display_name": "model evaluation",
+            "score": 0.7350000143051147
+          },
+          {
+            "id": "https://openalex.org/keywords/performance-overestimation",
+            "display_name": "overestimation of performance",
+            "score": 0.48500001430511475
+          }
+        ],
+        "concepts": [
+          {
+            "id": "https://openalex.org/C41008148",
+            "wikidata": "https://www.wikidata.org/wiki/Q21198",
+            "display_name": "Computer science",
+            "level": 0,
+            "score": 0.8186594843864441
+          },
+          {
+            "id": "https://openalex.org/C68597687",
+            "wikidata": "https://www.wikidata.org/wiki/Q362601",
+            "display_name": "Computational Science and Engineering",
+            "level": 2,
+            "score": 0.6965625286102295
+          },
+          {
+            "id": "https://openalex.org/C2777042071",
+            "wikidata": "https://www.wikidata.org/wiki/Q6509304",
+            "display_name": "Leakage (economics)",
+            "level": 2,
+            "score": 0.5943772196769714
+          },
+          {
+            "id": "https://openalex.org/C119857082",
+            "wikidata": "https://www.wikidata.org/wiki/Q2539",
+            "display_name": "Machine learning",
+            "level": 1,
+            "score": 0.5241292119026184
+          },
+          {
+            "id": "https://openalex.org/C154945302",
+            "wikidata": "https://www.wikidata.org/wiki/Q11660",
+            "display_name": "Artificial intelligence",
+            "level": 1,
+            "score": 0.5016047954559326
+          },
+          {
+            "id": "https://openalex.org/C2522767166",
+            "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+            "display_name": "Data science",
+            "level": 1,
+            "score": 0.33484768867492676
+          },
+          {
+            "id": "https://openalex.org/C139719470",
+            "wikidata": "https://www.wikidata.org/wiki/Q39680",
+            "display_name": "Macroeconomics",
+            "level": 1,
+            "score": 0.0
+          },
+          {
+            "id": "https://openalex.org/C162324750",
+            "wikidata": "https://www.wikidata.org/wiki/Q8134",
+            "display_name": "Economics",
+            "level": 0,
+            "score": 0.0
+          }
+        ],
+        "mesh": [],
+        "locations_count": 4,
+        "locations": [
+          {
+            "id": "doi:10.1186/s40537-025-01193-8",
+            "doi": "https://doi.org/10.1186/s40537-025-01193-8",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1186/s40537-025-01193-8",
+            "pdf_url": "https://journalofbigdata.springeropen.com/counter/pdf/10.1186/s40537-025-01193-8",
+            "source": {
+              "id": "https://openalex.org/S2737955091",
+              "display_name": "Journal Of Big Data",
+              "issn_l": "2196-1115",
+              "issn": [
+                "2196-1115"
+              ],
+              "is_oa": true,
+              "is_in_doaj": true,
+              "is_core": true,
+              "listed_in": [
+                "anvur-class-a",
+                "anvur-scientific",
+                "cwts-core",
+                "doaj",
+                "dongbi-d",
+                "jufo-1",
+                "norway-1",
+                "poland-140",
+                "russia-white-list-1",
+                "vabb-shw"
+              ],
+              "host_organization": "https://openalex.org/P4310319900",
+              "host_organization_name": "Springer Science+Business Media",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310319900",
+                "https://openalex.org/P4310319965"
+              ],
+              "host_organization_lineage_names": [
+                "Springer Science+Business Media",
+                "Springer Nature"
+              ],
+              "type": "journal"
+            },
+            "license": "cc-by",
+            "license_id": "https://openalex.org/licenses/cc-by",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of Big Data",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmh:oai:arXiv.org:2311.04179",
+            "doi": "https://doi.org/10.48550/arxiv.2311.04179",
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/2311.04179",
+            "pdf_url": "https://arxiv.org/pdf/2311.04179",
+            "source": {
+              "id": "https://openalex.org/S4306400194",
+              "display_name": "arXiv (Cornell University)",
+              "issn_l": "2331-8422",
+              "issn": [
+                "2331-8422"
+              ],
+              "is_oa": true,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I205783295",
+              "host_organization_name": "Cornell University",
+              "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "text"
+          },
+          {
+            "id": "pmh:oai:doaj.org/article:c4eff38ec60c42c6ae034b5c6bf96965",
+            "doi": null,
+            "is_oa": false,
+            "landing_page_url": "https://doaj.org/article/c4eff38ec60c42c6ae034b5c6bf96965",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306401280",
+              "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": null,
+              "host_organization_name": null,
+              "host_organization_lineage": [],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": "Journal of Big Data, Vol 12, Iss 1, Pp 1-23 (2025)",
+            "raw_type": "article"
+          },
+          {
+            "id": "doi:10.34734/fzj-2025-02765",
+            "doi": "https://doi.org/10.34734/fzj-2025-02765",
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.34734/fzj-2025-02765",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S7407051455",
+              "display_name": "JuSER Publikationsportal",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I171892758",
+              "host_organization_name": "Forschungszentrum J\u00fclich",
+              "host_organization_lineage": [
+                "https://openalex.org/I171892758"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false,
+            "raw_source_name": null,
+            "raw_type": "article-journal"
+          }
+        ],
+        "best_oa_location": {
+          "id": "doi:10.1186/s40537-025-01193-8",
+          "doi": "https://doi.org/10.1186/s40537-025-01193-8",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1186/s40537-025-01193-8",
+          "pdf_url": "https://journalofbigdata.springeropen.com/counter/pdf/10.1186/s40537-025-01193-8",
+          "source": {
+            "id": "https://openalex.org/S2737955091",
+            "display_name": "Journal Of Big Data",
+            "issn_l": "2196-1115",
+            "issn": [
+              "2196-1115"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "listed_in": [
+              "anvur-class-a",
+              "anvur-scientific",
+              "cwts-core",
+              "doaj",
+              "dongbi-d",
+              "jufo-1",
+              "norway-1",
+              "poland-140",
+              "russia-white-list-1",
+              "vabb-shw"
+            ],
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Big Data",
+          "raw_type": "journal-article"
+        },
+        "sustainable_development_goals": [],
+        "study_designs": [],
+        "awards": [
+          {
+            "id": "https://openalex.org/G1488936779",
+            "display_name": null,
+            "funder_award_id": "CRC-1451",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G434337789",
+            "display_name": null,
+            "funder_award_id": "HORIZON2020",
+            "funder_id": "https://openalex.org/F4320320300",
+            "funder_display_name": "European Commission"
+          },
+          {
+            "id": "https://openalex.org/G706563849",
+            "display_name": null,
+            "funder_award_id": "HBP SGA3",
+            "funder_id": "https://openalex.org/F4320320300",
+            "funder_display_name": "European Commission"
+          },
+          {
+            "id": "https://openalex.org/G7154890119",
+            "display_name": "SFB 1451: Schl\u00fcsselmechanismen normaler und krankheitsbedingt gest\u00f6rter motorischer Kontrolle",
+            "funder_award_id": "431549029",
+            "funder_id": "https://openalex.org/F4320320879",
+            "funder_display_name": "Deutsche Forschungsgemeinschaft"
+          },
+          {
+            "id": "https://openalex.org/G8767435255",
+            "display_name": "Human Brain Project Specific Grant Agreement 3",
+            "funder_award_id": "945539",
+            "funder_id": "https://openalex.org/F4320320300",
+            "funder_display_name": "European Commission"
+          }
+        ],
+        "funders": [
+          {
+            "id": "https://openalex.org/F4320320300",
+            "display_name": "European Commission",
+            "ror": "https://ror.org/00k4n6c32"
+          },
+          {
+            "id": "https://openalex.org/F4320320879",
+            "display_name": "Deutsche Forschungsgemeinschaft",
+            "ror": "https://ror.org/018mejw64"
+          },
+          {
+            "id": "https://openalex.org/F4320321114",
+            "display_name": "Bundesministerium f\u00fcr Bildung und Forschung",
+            "ror": "https://ror.org/04pz7b180"
+          },
+          {
+            "id": "https://openalex.org/F4320322434",
+            "display_name": "Max-Planck-Gesellschaft",
+            "ror": "https://ror.org/01hhn8329"
+          }
+        ],
+        "has_content": {
+          "grobid_xml": true,
+          "pdf": true
+        },
+        "content_urls": {
+          "pdf": "https://content.openalex.org/works/W4410859924.pdf",
+          "grobid_xml": "https://content.openalex.org/works/W4410859924.grobid-xml"
+        },
+        "referenced_works_count": 86,
+        "referenced_works": [
+          "https://openalex.org/W158824538",
+          "https://openalex.org/W1486658274",
+          "https://openalex.org/W1552009804",
+          "https://openalex.org/W1555759181",
+          "https://openalex.org/W1680392829",
+          "https://openalex.org/W1981251392",
+          "https://openalex.org/W1981552604",
+          "https://openalex.org/W2024729467",
+          "https://openalex.org/W2029445248",
+          "https://openalex.org/W2072876893",
+          "https://openalex.org/W2077641783",
+          "https://openalex.org/W2098740506",
+          "https://openalex.org/W2101234009",
+          "https://openalex.org/W2111902267",
+          "https://openalex.org/W2117829824",
+          "https://openalex.org/W2141007997",
+          "https://openalex.org/W2144981148",
+          "https://openalex.org/W2151432963",
+          "https://openalex.org/W2154290668",
+          "https://openalex.org/W2157755551",
+          "https://openalex.org/W2209840346",
+          "https://openalex.org/W2293040502",
+          "https://openalex.org/W2406349003",
+          "https://openalex.org/W2421101021",
+          "https://openalex.org/W2487770199",
+          "https://openalex.org/W2562251009",
+          "https://openalex.org/W2736287575",
+          "https://openalex.org/W2766099988",
+          "https://openalex.org/W2787894218",
+          "https://openalex.org/W2788572835",
+          "https://openalex.org/W2795038878",
+          "https://openalex.org/W2802642435",
+          "https://openalex.org/W2896236534",
+          "https://openalex.org/W2897042519",
+          "https://openalex.org/W2900210626",
+          "https://openalex.org/W2942047515",
+          "https://openalex.org/W2947014533",
+          "https://openalex.org/W2949222200",
+          "https://openalex.org/W2966848807",
+          "https://openalex.org/W2979650665",
+          "https://openalex.org/W2981679558",
+          "https://openalex.org/W2990091959",
+          "https://openalex.org/W2990963920",
+          "https://openalex.org/W2997591727",
+          "https://openalex.org/W2998649189",
+          "https://openalex.org/W2998701638",
+          "https://openalex.org/W3025161810",
+          "https://openalex.org/W3028493752",
+          "https://openalex.org/W3045004532",
+          "https://openalex.org/W3083804794",
+          "https://openalex.org/W3086029573",
+          "https://openalex.org/W3090528923",
+          "https://openalex.org/W3099848476",
+          "https://openalex.org/W3104128335",
+          "https://openalex.org/W3113493652",
+          "https://openalex.org/W3130390764",
+          "https://openalex.org/W3130801515",
+          "https://openalex.org/W3134939446",
+          "https://openalex.org/W3143569708",
+          "https://openalex.org/W3146796711",
+          "https://openalex.org/W3164340364",
+          "https://openalex.org/W3165292502",
+          "https://openalex.org/W3170657538",
+          "https://openalex.org/W3172351367",
+          "https://openalex.org/W3208504364",
+          "https://openalex.org/W3214734349",
+          "https://openalex.org/W3217037671",
+          "https://openalex.org/W3217314753",
+          "https://openalex.org/W4210818739",
+          "https://openalex.org/W4212863985",
+          "https://openalex.org/W4212876805",
+          "https://openalex.org/W4220751562",
+          "https://openalex.org/W4223430324",
+          "https://openalex.org/W4292121845",
+          "https://openalex.org/W4292791807",
+          "https://openalex.org/W4321073670",
+          "https://openalex.org/W4327923045",
+          "https://openalex.org/W4362673421",
+          "https://openalex.org/W4366494274",
+          "https://openalex.org/W4385576721",
+          "https://openalex.org/W4387210595",
+          "https://openalex.org/W4391520484",
+          "https://openalex.org/W4392232009",
+          "https://openalex.org/W4401455507",
+          "https://openalex.org/W4401951602",
+          "https://openalex.org/W7097712496"
+        ],
+        "related_works": [
+          "https://openalex.org/W6946542682",
+          "https://openalex.org/W7126054717",
+          "https://openalex.org/W4413358888",
+          "https://openalex.org/W4385576721",
+          "https://openalex.org/W7148832066",
+          "https://openalex.org/W7168228554",
+          "https://openalex.org/W7214120861",
+          "https://openalex.org/W7151563001"
+        ],
+        "abstract_inverted_index": {
+          "Machine": [
+            0
+          ],
+          "learning": [
+            1
+          ],
+          "(ML)": [
+            2
+          ],
+          "provides": [
+            3
+          ],
+          "powerful": [
+            4
+          ],
+          "tools": [
+            5
+          ],
+          "for": [
+            6
+          ],
+          "predictive": [
+            7
+          ],
+          "modeling.": [
+            8
+          ],
+          "ML\u2019s": [
+            9
+          ],
+          "popularity": [
+            10
+          ],
+          "stems": [
+            11
+          ],
+          "from": [
+            12,
+            25
+          ],
+          "the": [
+            13
+          ],
+          "promise": [
+            14
+          ],
+          "of": [
+            15,
+            23,
+            95,
+            98
+          ],
+          "sample-level": [
+            16
+          ],
+          "prediction": [
+            17
+          ],
+          "with": [
+            18,
+            72
+          ],
+          "applications": [
+            19
+          ],
+          "across": [
+            20
+          ],
+          "a": [
+            21,
+            90
+          ],
+          "variety": [
+            22
+          ],
+          "fields": [
+            24
+          ],
+          "physics": [
+            26
+          ],
+          "and": [
+            27,
+            36,
+            49,
+            62,
+            80,
+            93
+          ],
+          "marketing": [
+            28
+          ],
+          "to": [
+            29,
+            51,
+            53,
+            68,
+            75
+          ],
+          "healthcare.": [
+            30
+          ],
+          "However,": [
+            31
+          ],
+          "if": [
+            32
+          ],
+          "not": [
+            33
+          ],
+          "properly": [
+            34
+          ],
+          "implemented": [
+            35
+          ],
+          "evaluated,": [
+            37
+          ],
+          "ML": [
+            38,
+            82,
+            104
+          ],
+          "pipelines": [
+            39
+          ],
+          "may": [
+            40,
+            101
+          ],
+          "contain": [
+            41
+          ],
+          "leakage": [
+            42,
+            76,
+            99
+          ],
+          "typically": [
+            43
+          ],
+          "resulting": [
+            44
+          ],
+          "in": [
+            45,
+            103
+          ],
+          "overoptimistic": [
+            46
+          ],
+          "performance": [
+            47
+          ],
+          "estimates": [
+            48
+          ],
+          "failure": [
+            50
+          ],
+          "generalize": [
+            52
+          ],
+          "new": [
+            54
+          ],
+          "data.": [
+            55
+          ],
+          "This": [
+            56
+          ],
+          "can": [
+            57
+          ],
+          "have": [
+            58
+          ],
+          "severe": [
+            59
+          ],
+          "negative": [
+            60
+          ],
+          "financial": [
+            61
+          ],
+          "societal": [
+            63
+          ],
+          "implications.": [
+            64
+          ],
+          "Our": [
+            65
+          ],
+          "aim": [
+            66
+          ],
+          "is": [
+            67
+          ],
+          "expand": [
+            69
+          ],
+          "understanding": [
+            70
+          ],
+          "associated": [
+            71
+          ],
+          "causes": [
+            73
+          ],
+          "leading": [
+            74
+          ],
+          "when": [
+            77
+          ],
+          "designing,": [
+            78
+          ],
+          "implementing,": [
+            79
+          ],
+          "evaluating": [
+            81
+          ],
+          "pipelines.": [
+            83,
+            105
+          ],
+          "Illustrated": [
+            84
+          ],
+          "by": [
+            85
+          ],
+          "concrete": [
+            86
+          ],
+          "examples,": [
+            87
+          ],
+          "we": [
+            88
+          ],
+          "provide": [
+            89
+          ],
+          "comprehensive": [
+            91
+          ],
+          "overview": [
+            92
+          ],
+          "discussion": [
+            94
+          ],
+          "various": [
+            96
+          ],
+          "types": [
+            97
+          ],
+          "that": [
+            100
+          ],
+          "arise": [
+            102
+          ]
+        },
+        "cited_by_api_url": "https://api.openalex.org/works?filter=cites:W4410859924",
+        "counts_by_year": [
+          {
+            "year": 2026,
+            "cited_by_count": 128
+          },
+          {
+            "year": 2025,
+            "cited_by_count": 23
+          },
+          {
+            "year": 2024,
+            "cited_by_count": 2
+          }
+        ],
+        "updated_date": "2026-11-23T12:01:36.302904",
+        "created_date": "2025-05-30T00:00:00"
+      }
+    ],
+    "group_by": []
+  }
+}

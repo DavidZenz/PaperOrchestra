@@ -1,0 +1,65 @@
+{
+  "section_name": "Fitted Sample Error versus Held-Out Prediction Assessment",
+  "candidates": [
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Foundational paper that formalizes the conceptual and mathematical distinction between in-sample model fitting and held-out prediction assessment, establishing why evaluations must be separated from the data used to construct the predictor."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Seminal work developing sample reuse and out-of-sample validation principles to prevent circular reasoning and optimistic bias when evaluating predictive rules on the data from which they were derived."
+    },
+    {
+      "title": "Estimating the Error Rate of a Prediction Rule: Improvement on Cross-Validation",
+      "year": 1983,
+      "reason": "Introduces resampling and bootstrap assessments to formalize and quantify the optimism inherent in evaluating prediction error on the same sample used to determine model parameters."
+    },
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Provides the mathematical derivation of the optimism theorem and covariance penalty, explaining why apparent training-sample error systematically underestimates true prediction error when evaluating corrections on fitted observations."
+    },
+    {
+      "title": "Neural Networks and the Bias/Variance Dilemma",
+      "year": 1992,
+      "reason": "Presents the foundational bias-variance decomposition of mean squared error, illustrating how separating systematic prediction offset (bias) from residual variance explains why eliminating error on a finite sample does not imply generalization."
+    },
+    {
+      "title": "Submodel Selection and Evaluation in Regression: The X-Random Case",
+      "year": 1992,
+      "reason": "Analyzes the failure of naive in-sample evaluation criteria in regression settings and demonstrates the necessity of held-out resampling methods to assess true out-of-sample prediction error."
+    },
+    {
+      "title": "A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection",
+      "year": 1995,
+      "reason": "Influential study investigating the bias and variance of evaluation methods, highlighting the severe underestimation of prediction error that occurs when assessing performance on training observations."
+    },
+    {
+      "title": "Multivariable Prognostic Models: Issues in Developing Models, Evaluating Assumptions and Adequacy, and Measuring and Reducing Errors",
+      "year": 1996,
+      "reason": "Methodological survey outlining the distinction between apparent performance and optimism-corrected performance, demonstrating the pitfalls of validating predictive corrections on the derivation sample."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Synthesizes covariance penalty theory and cross-validation, establishing explicit relationships between in-sample fitted error, the degrees of freedom utilized in fitting, and held-out prediction error."
+    },
+    {
+      "title": "Bias in Error Estimation When Using Cross-Validation for Model Selection",
+      "year": 2006,
+      "reason": "Details the selection and evaluation biases that occur when observations used to make modeling choices or corrections are also used to assess performance, demonstrating the requirement for strictly held-out data."
+    },
+    {
+      "title": "A Survey of Cross-Validation Procedures for Model Selection",
+      "year": 2010,
+      "reason": "Comprehensive review paper contrasting empirical risk on fitted samples with true prediction risk, detailing the theoretical properties and limits of cross-validation estimators for out-of-sample assessment."
+    },
+    {
+      "title": "From Fixed-X to Random-X Regression: Bias-Variance Decompositions, Covariance Penalties, and Prediction Error Estimation",
+      "year": 2020,
+      "reason": "Examines the distinction between evaluating prediction error conditionally on a fixed set of observations versus assessing held-out prediction error across the broader covariate distribution via covariance penalties and bias-variance decomposition."
+    }
+  ]
+}

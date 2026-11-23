@@ -1,0 +1,75 @@
+{
+  "section_name": "Intercept Adjustment and In-Sample Error Evaluation",
+  "candidates": [
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Directly analyzes the severe downward bias of apparent (in-sample) error when a prediction rule or correction is evaluated on the exact data used to estimate it ('using data twice'), proving that zero error on estimation observations is an algebraic artifact rather than proof of generalizability."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Formalizes the optimism of in-sample error via covariance penalties, showing mathematically how fitting a parameter (such as a residual-derived scalar or intercept) inherently forces in-sample error below true expected error."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal foundational paper establishing that assessing statistical predictors on their own construction data produces an invalid estimate of prediction performance, defining the necessity of sample separation to assess genuine predictive validity."
+    },
+    {
+      "title": "Two Further Applications of a Model for Binary Regression",
+      "year": 1958,
+      "reason": "Pioneers recalibration via intercept adjustment, establishing the foundation for adjusting baseline scalar offsets while keeping underlying predictor structure fixed."
+    },
+    {
+      "title": "Regression, Prediction and Shrinkage",
+      "year": 1983,
+      "reason": "Demonstrates how in-sample parameter fitting exaggerates predictive accuracy and details prediction decay when sample-derived adjustments are applied out-of-sample, particularly in small samples."
+    },
+    {
+      "title": "Validation, calibration, revision and combination of prognostic survival models",
+      "year": 2000,
+      "reason": "Establishes the statistical framework distinguishing local sample recalibration (such as intercept/baseline adjustments) from valid generalization across target populations."
+    },
+    {
+      "title": "Internal and external validation of predictive models: A simulation study of bias and precision in small samples",
+      "year": 2003,
+      "reason": "Examines the extreme optimism of apparent in-sample validation in small finite sample sizes, explaining why evaluations restricted to derivation samples fail to guarantee external performance."
+    },
+    {
+      "title": "Updating methods improved the performance of a clinical prediction model in new patients",
+      "year": 2008,
+      "reason": "Empirically investigates intercept-only recalibration for eliminating overall offset/mean error on a specific sample and analyzes the boundary between same-sample error correction and out-of-sample transportability."
+    },
+    {
+      "title": "A calibration hierarchy for risk models was defined: from utopia to empirical data",
+      "year": 2016,
+      "reason": "Defines the calibration hierarchy, clarifying that mean calibration (adjusting the intercept/scalar to match observed sample means) only satisfies marginal zero-bias on the observed set and does not establish broader predictive validity."
+    },
+    {
+      "title": "A closed testing procedure to select an appropriate method for updating prediction models",
+      "year": 2017,
+      "reason": "Focuses specifically on intercept updating (recalibration-in-the-large) as a minimal parameter correction, formalizing the risks of in-sample overfitting during model adjustment."
+    },
+    {
+      "title": "Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors",
+      "year": 1996,
+      "reason": "Influential treatise detailing why assessing a model or adjustment on its derivation cohort yields optimistically biased error rates and clarifying why apparent accuracy cannot establish general performance."
+    },
+    {
+      "title": "Validation techniques for logistic regression models",
+      "year": 1991,
+      "reason": "Analyzes model recalibration techniques and diagnostic frameworks, emphasizing the technical distinction between in-sample apparent fit and independent validation."
+    },
+    {
+      "title": "On Measuring and Correcting the Effects of Data Mining and Model Selection",
+      "year": 1998,
+      "reason": "Introduces generalized degrees of freedom to quantify the exact downward bias on residual error incurred when adapting parameters to observed data points."
+    },
+    {
+      "title": "A new look at the statistical model identification",
+      "year": 1974,
+      "reason": "Foundational work establishing that optimizing parameter values (including scalar intercepts) on an observed sample optimistically shifts sample discrepancy by the number of fitted parameters, demonstrating why in-sample zero error cannot be equated with out-of-sample risk."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "invocation": "df3664ae18cb427aa89a37b7ef12120b",
+  "call": "d214f39e9918482099ac99b532819b69",
+  "role": "figure-critic",
+  "callsite": [
+    "paper_banana_utils.py:critique_and_revise_figure:618",
+    "plotting_agent.py:process_single_figure:127",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_residual_workflow",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "gemini-3.8-flash",
+  "config": {},
+  "search_required": false,
+  "media": [
+    {
+      "path": "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/df3664ae18cb427aa89a37b7ef12120b/attachment-0.jpg",
+      "mime_type": "image/jpeg",
+      "sha256": "dede393e724635dbba05a2265469db3c66455ffd7ea47df50507274e8ed9c76d"
+    }
+  ],
+  "images": [
+    "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/df3664ae18cb427aa89a37b7ef12120b/attachment-0.jpg"
+  ],
+  "image_sha256": {
+    "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/df3664ae18cb427aa89a37b7ef12120b/attachment-0.jpg": "dede393e724635dbba05a2265469db3c66455ffd7ea47df50507274e8ed9c76d"
+  },
+  "backend": "antigravity",
+  "transport_plan_sha256": "da5287a161643cb16db08397236600b9d9f9db0673288efd775ce31496aa2e3b",
+  "prompt_sha256": "052516aa66558bdb910e746f00c676c3fa0a4061c80d77bdd41dca9e61ff0b63",
+  "model_routing": {
+    "model": "gemini-3.8-flash",
+    "routing_role": "figure-critic",
+    "group": "figure_review",
+    "selected_by": "profile group: figure_review",
+    "backend": "antigravity",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "profile group: figure_review",
+      "model": "profile group: figure_review",
+      "effort": "profile group: figure_review"
+    }
+  }
+}

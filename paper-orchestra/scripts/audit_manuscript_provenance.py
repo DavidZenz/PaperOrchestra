@@ -284,7 +284,16 @@ def audit(output, run, trace):
                         f"Actual native worker message differs from retained raw response: {call}")
             require(original_parse(raw, original_result.get("parsed_response")) == original_result.get("parsed_response"),
                     f"Upstream manuscript parse differs from original response: {call}")
-            recomputed, details = transform_result(original_result, candidate_manifest)
+            style = request.get("revision_bibliography_style")
+            if run.get("content_revision_bibtex") and calls[call].get("routing_role") == "content-editor":
+                from orchestra_bibliography import revision_bibliography_rule
+                established = [e["audit"].get("bibliography_style") for e in trace[:end_index]
+                               if e["event"] == "bibliography_compile" and Path(e["tex"]).name == "initial_draft.tex"]
+                require(established and style and established[-1] == style
+                        and starts[end["invocation"]].get("revision_bibliography_style") == style
+                        and revision_bibliography_rule(style) in (directory / "prompt.txt").read_text(),
+                        f"Content editor lacks the established BibTeX configuration: {call}")
+            recomputed, details = transform_result(original_result, candidate_manifest, style)
             require(effective_result == recomputed and event.get("adaptation") == details,
                     f"Raw-to-effective manuscript transformation differs: {call}")
             require(call in call_ends and trace.index(call_ends[call]) > index, f"Manuscript result lacks subsequent parsed handoff: {call}")

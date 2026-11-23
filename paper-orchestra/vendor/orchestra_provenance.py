@@ -244,7 +244,7 @@ def _replace_latex(raw, effective):
     return effective
 
 
-def transform_result(result, manifest):
+def transform_result(result, manifest, bibliography_style=None):
     """Keep original formats/worklog, including the format editor's raw channel."""
     updated = copy.deepcopy(result)
     parsed = updated.get("parsed_response")
@@ -263,7 +263,11 @@ def transform_result(result, manifest):
         raw = updated.get("raw_response", "")
         match = re.search(r"```latex\s*(.*?)\s*```", raw, re.S)
         tex = match[1] if match else raw.strip()
-    effective, removed = normalize_latex(tex, manifest)
+    source = tex
+    if kind == "content" and bibliography_style:
+        from orchestra_bibliography import restore_revision_bibliography
+        source = restore_revision_bibliography(tex, bibliography_style)
+    effective, removed = normalize_latex(source, manifest) if manifest else (source, [])
     if effective == tex:
         return updated, None
     if kind == "content":
@@ -274,8 +278,11 @@ def transform_result(result, manifest):
     else:
         updated["parsed_response"]["raw_response"] = _replace_latex(updated["raw_response"], effective)
     updated["raw_response"] = _replace_latex(updated["raw_response"], effective)
-    return updated, {"kind":kind, "removed_recipes":removed,
-                     "effective_tex_sha256":hashlib.sha256(effective.encode()).hexdigest()}
+    details = {"kind":kind, "removed_recipes":removed,
+               "effective_tex_sha256":hashlib.sha256(effective.encode()).hexdigest()}
+    if source != tex:
+        details["restored_bibliography_style"] = bibliography_style
+    return updated, details
 
 
 def verify_manuscript(tex, manifest):

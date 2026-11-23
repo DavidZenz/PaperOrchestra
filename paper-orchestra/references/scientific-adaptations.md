@@ -121,3 +121,12 @@ bibliography commands in the last accepted scientific manuscript. Length or
 reference issues that require substantive edits are reported for content review
 within its existing budget. If that budget is spent, the issue remains open.
 R030 documents the allowed layout edits and the rejection evidence.
+
+## A008 — Resolve revised citations through the verified library (23 November 2026)
+
+The content editor may revise scientific prose and its citation choices through
+the existing review loop. It must resolve the chosen keys with the verified
+references.bib and the accepted BibTeX style. The user authorized restoring
+those declarations when a candidate returns a recognizable trailing inline
+list. The runtime preserves every in-text citation command and uses no metadata
+from the hand-written list. Unknown keys still fail the bibliography check.

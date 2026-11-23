@@ -139,6 +139,7 @@ def main(argv=None):
                                         else configured_default("codex")), "model_map": model_map,
                 "image_command": image_command, "status": "running"}
     manifest["bibliography_required"] = True
+    manifest["content_revision_bibtex"] = 1
     manifest["formatting_scope_required"] = True
     manifest["model_policy"] = model_policy.snapshot()
     manifest["worker_backends"] = sorted({item.get("backend", "codex") for item in model_policy.plan()})

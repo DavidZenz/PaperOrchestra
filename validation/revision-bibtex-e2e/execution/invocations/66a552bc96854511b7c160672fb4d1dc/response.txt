@@ -1,0 +1,36 @@
+```r
+library(ggplot2)
+
+df <- data.frame(
+  b   = c(0, 1.5, 3),
+  mse = c(9, 2.25, 0),
+  lab = c("9", "2.25", "0")
+)
+
+p <- ggplot(df, aes(x = b, y = mse)) +
+  geom_point(shape = 16, size = 3.2, colour = "#1F4E79") +
+  geom_text(aes(label = lab), nudge_y = 0.5, size = 3.5,
+            colour = "#1F4E79", family = "sans") +
+  scale_x_continuous(name = "Intercept correction b",
+                     breaks = c(0, 1.5, 3),
+                     labels = c("0", "1.5", "3"),
+                     limits = c(-0.25, 3.25)) +
+  scale_y_continuous(name = "Mean squared error (MSE)",
+                     breaks = c(0, 3, 6, 9),
+                     limits = c(-0.5, 10)) +
+  labs(title = "Recorded Mean Squared Error at Three Intercept Corrections") +
+  theme_classic(base_size = 10, base_family = "sans") +
+  theme(
+    plot.title         = element_text(size = 13, face = "bold", colour = "#222222", hjust = 0),
+    axis.title         = element_text(size = 12, colour = "#222222"),
+    axis.text          = element_text(size = 10, colour = "#222222"),
+    axis.line          = element_line(linewidth = 0.4, colour = "#222222"),
+    axis.ticks         = element_line(linewidth = 0.4, colour = "#222222"),
+    axis.ticks.length  = unit(2.5, "pt"),
+    panel.grid.major.y = element_line(linewidth = 0.3, colour = "#D9D9D9"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    legend.position    = "none",
+    plot.background    = element_rect(fill = "#FFFFFF", colour = NA)
+  )
+```

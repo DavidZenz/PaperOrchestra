@@ -118,6 +118,7 @@ class Runtime:
         self.manuscript_provenance = manuscript_provenance
         self.figure_provenance = None
         self.bibliography_required = bibliography_required
+        self.revision_bibliography_style = None
         self.formatting_scope_required = formatting_scope_required
 
     def event(self, kind, **fields):
@@ -239,9 +240,13 @@ class Runtime:
                 "figure_provenance_files":{
                     name:digest(directory / name)
                     for item in self.figure_provenance["figures"] for name in item["files"]}}
+        routing_role = _routing_role.get() or role
+        if routing_role == "content-editor" and self.revision_bibliography_style:
+            from orchestra_bibliography import revision_bibliography_rule
+            prompt += "\n\n" + revision_bibliography_rule(self.revision_bibliography_style)
+            provenance_fields["revision_bibliography_style"] = self.revision_bibliography_style
         if self.formatting_scope_required:
             from orchestra_formatting import FORMAT_EDITOR_RULE, FORMAT_REVIEW_RULE
-            routing_role = _routing_role.get() or role
             if routing_role == "format-editor":
                 prompt += "\n\n" + FORMAT_EDITOR_RULE
             elif routing_role == "format-reviewer":
@@ -369,18 +374,20 @@ def trace_call(function):
         runtime.event("llm_call_start", call=call, role=role, routing_role=route, figure_id=figure_context.get())
         try:
             result = function(*args, **kwargs)
-            if runtime.figure_provenance and origin()[0] in {"section-writer", "content-or-format-editor"}:
+            bibliography_style = runtime.revision_bibliography_style if route == "content-editor" else None
+            if bibliography_style or (runtime.figure_provenance and role in {"section-writer", "content-or-format-editor"}):
                 from orchestra_provenance import transform_result
                 original_path = runtime.root / "manuscripts" / f"{call}.upstream.json"
                 original_path.parent.mkdir(exist_ok=True)
                 original_path.write_text(json.dumps(result, default=str, indent=2))
-                result, details = transform_result(result, runtime.figure_provenance)
+                result, details = transform_result(result, runtime.figure_provenance, bibliography_style)
                 effective_path = runtime.root / "manuscripts" / f"{call}.effective.json"
                 effective_path.write_text(json.dumps(result, default=str, indent=2))
-                runtime.event("manuscript_result", call=call, role=origin()[0],
+                runtime.event("manuscript_result", call=call, role=role,
                               original_path=str(original_path), original_sha256=digest(original_path),
                               effective_path=str(effective_path), effective_sha256=digest(effective_path),
-                              provenance_sha256=digest(runtime.root.parent / "figure_provenance.json"),
+                              provenance_sha256=(digest(runtime.root.parent / "figure_provenance.json")
+                                                 if runtime.figure_provenance else None),
                               adaptation=details)
             path = runtime.root / "parsed" / f"{call}.json"
             path.parent.mkdir(exist_ok=True)
@@ -473,6 +480,8 @@ def instrument(base):
         def observed_compile(cwd, pdf_file, texfile_name="template", timeout=30):
             runtime = get_runtime()
             tex_path = Path(cwd) / f"{texfile_name}.tex"
+            if texfile_name == "initial_draft":
+                runtime.revision_bibliography_style = None
             def compile_start():
                 runtime.event("compile_start", tex=str(tex_path), pdf=pdf_file,
                               tex_sha256=digest(tex_path) if tex_path.is_file() else None)
@@ -484,10 +493,8 @@ def instrument(base):
                 except FormattingScopeError as exc:
                     # Retain both sources and let the original controller keep
                     # its last accepted PDF through the compile-failure branch.
-                    compile_start()
                     Path(pdf_file).unlink(missing_ok=True)
                     runtime.event("formatting_scope", tex=str(tex_path), valid=False, error=str(exc))
-                    runtime.event("compile_end", pdf=pdf_file, exists=False, sha256=None)
                     print(f" >> Formatting rejected: {exc}. Keeping the last accepted manuscript.")
                     return
                 runtime.event("formatting_scope", tex=str(tex_path), valid=True)
@@ -519,6 +526,11 @@ def instrument(base):
                 try:
                     audit = validate_manuscript(cwd, texfile_name,
                         runtime.root.parent / "literature_agent_output" / "citation_map.json", pdf_path=pdf_file)
+                    if texfile_name == "initial_draft":
+                        runtime.revision_bibliography_style = audit["bibliography_style"]
+                    elif (texfile_name.startswith("refined_paper_v") and
+                          audit["bibliography_style"] != runtime.revision_bibliography_style):
+                        raise BibliographyError("Content revision changed the verified BibTeX style")
                     runtime.event("bibliography_compile", tex=str(tex_path), audit=audit)
                 except BibliographyError as exc:
                     # Feed the original compile-failure branch; do not accept a

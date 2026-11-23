@@ -1,0 +1,34 @@
+{
+  "invocation": "e60c9d9e0aa948029a3413c94df6fd2d",
+  "call": "04c68902887742758ed882aedfb050d7",
+  "role": "figure-stylist",
+  "callsite": [
+    "paper_banana_utils.py:style_figure_content:565",
+    "plotting_agent.py:process_single_figure:97",
+    "orchestra_visuals.py:observed:196"
+  ],
+  "figure_id": "fig_residual_workflow",
+  "requested_model": "gemini-3.1-pro-preview",
+  "effective_model": "claude-haiku-5-5",
+  "config": {},
+  "search_required": false,
+  "media": [],
+  "images": [],
+  "image_sha256": {},
+  "backend": "claude-code",
+  "transport_plan_sha256": "bdf333e73250013d072db45f91216ef690e3cffe8ca09ad6526d39d38b0830b9",
+  "prompt_sha256": "223e0e7ad6e7eadb9ad18ba8307ae2623392b41c61e6a158400336cc2b9fe6fe",
+  "model_routing": {
+    "model": "claude-haiku-5-5",
+    "routing_role": "figure-stylist",
+    "group": "figure_planning",
+    "selected_by": "profile group: figure_planning",
+    "backend": "claude-code",
+    "effort": "medium",
+    "execution_selected_by": {
+      "backend": "profile group: figure_planning",
+      "model": "profile group: figure_planning",
+      "effort": "profile group: figure_planning"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\title{A Finite Intercept Correction Calculation}
+\author{Anonymous}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This teaching note connects fixed-slope intercept fitting, loss minimization, and evaluation dependencies in a hand-checkable calculation. Five synthetic observations satisfy $y=2x+3$, while the fixed predictor returns $2x$. Their residual mean and median both equal $3$. Adding this constant reproduces every supplied target; at corrections $0$, $1.5$, and $3$, the computed mean squared errors are $9$, $2.25$, and $0$. A decomposition distinguishes minimizing squared error from eliminating every error, while an absolute-error argument explains the median's role. A table, two supplied figures, and direct arithmetic checks connect the observations to the reported results.
+\end{abstract}
+
+\section{Introduction}
+
+For introductory regression instruction, this note organizes ordinary intercept-fitting algebra into a traceable workflow: identify the fitted parameter, select its loss function, compute errors, and identify the observations entering evaluation. The educational contribution is this alignment of equations, a residual-flow diagram, a numerical table, and an inspectable plotting source.
+
+The intended learning outcome is operational: a reader should reconstruct the correction and reported errors from the observation rows, explain why zero error occurs, distinguish mean correction from median correction, and trace the targets through fitting and evaluation.
+
+The supplied inputs are $x=(-2,-1,0,1,2)$, with targets $y_i=2x_i+3$ and baseline predictions $2x_i$. Every baseline residual is therefore $3$. This construction makes the condition for exact agreement visible: all five discrepancies can be removed by the same additive constant.
+
+\section{Related Work}
+
+Residual analysis examines discrepancies remaining after fitting \cite{Anscombe1963ExaminationAnalysis}; here, displaying the entire residual vector explains the error summaries. Regression-through-origin treatments discuss fitting without an intercept and associated evaluation questions \cite{Eisenhauer2003RegressionThrough}. The present calculation instead holds the slope fixed and estimates an intercept: equivalently, $2x_i$ is a known offset with coefficient fixed at one.
+
+Apparent-error analysis concerns observations used both to fit and assess a prediction rule \cite{Efron1986HowBiased}. It motivates the diagram's reuse path. Here, that path identifies exactly which targets determine each reported quantity. These connections position the exercise as a worked teaching sequence within established regression ideas.
+
+\section{Method}
+\subsection{Finite Setup and Mean-Residual Correction}
+
+Define
+\[
+\hat y_i^{(0)}=2x_i,\qquad
+r_i=y_i-\hat y_i^{(0)},\qquad
+\bar r=\frac{1}{5}\sum_{i=1}^{5}r_i,\qquad
+\hat y_i(b)=2x_i+b.
+\]
+Fitting $b$ by ordinary least squares with offset $2x_i$ means minimizing
+$\sum_i[y_i-(2x_i+b)]^2=\sum_i(r_i-b)^2$.
+Thus only the additive constant is fitted.
+
+The squared-error decomposition is
+\begin{equation}
+\frac{1}{5}\sum_{i=1}^{5}(b-r_i)^2
+=
+\frac{1}{5}\sum_{i=1}^{5}(r_i-\bar r)^2
++(b-\bar r)^2.
+\label{eq:decomposition}
+\end{equation}
+Expand $b-r_i=(b-\bar r)-(r_i-\bar r)$; the cross term vanishes because $\sum_i(r_i-\bar r)=0$.
+The unique minimizer is $b=\bar r$. The minimum is the centered squared-residual term, which is positive whenever the residuals are unequal. Removing their mean therefore removes their common component; exact agreement additionally requires every centered residual to vanish. Here, $r_i=\bar r=3$, satisfying that condition.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig_residual_workflow.jpg}
+    \caption{Dependencies in the supplied calculation. Targets and fixed predictions determine the residuals and mean correction. The dashed path traces the same observations into evaluation. Baseline residuals use $r_i=y_i-2x_i$; corrected errors use $e_i=\hat y_i-y_i$.}
+    \label{fig_residual_workflow}
+\end{figure}
+
+\subsection{Error Definitions and Reproducible Calculation}
+
+Following Figure~\ref{fig_residual_workflow}, corrected error is prediction minus target:
+\[
+e_i(b)=\hat y_i(b)-y_i=b-r_i=b-3.
+\]
+Consequently,
+\begin{align}
+\operatorname{MAE}(b)
+&=\frac{1}{5}\sum_{i=1}^{5}|e_i(b)|=|b-3|,
+\label{eq:mae}\\
+\operatorname{MSE}(b)
+&=\frac{1}{5}\sum_{i=1}^{5}e_i(b)^2=(b-3)^2.
+\label{eq:mse}
+\end{align}
+Reversing the error sign leaves both summaries unchanged.
+
+The loss determines the optimal constant. For five residuals ordered as
+$r_{(1)}\leq\cdots\leq r_{(5)}$, absolute error is minimized by the median $r_{(3)}$. To see this, pair the smallest with the largest and the next-smallest with the next-largest:
+\[
+|b-r_{(1)}|+|b-r_{(5)}|\geq r_{(5)}-r_{(1)},
+\]
+with the analogous bound for $r_{(2)},r_{(4)}$.
+At $b=r_{(3)}$, both bounds are attained and the remaining absolute error is zero. Thus the median minimizes MAE, whereas Equation~\ref{eq:decomposition} selects the mean for MSE. Both equal $3$ in the supplied residual vector.
+
+The numerical calculation uses base R \cite{Ihaka1996RLanguage}; the statistical figure uses R/ggplot2 \cite{Wickham2009LayeredGrammar}.
+
+\section{Experiments}
+\subsection{Observations and Evaluation Protocol}
+
+The fully specified observation rows are
+\[
+\begin{array}{c|rrrrr}
+x & -2 & -1 & 0 & 1 & 2\\
+y & -1 & 1 & 3 & 5 & 7\\
+2x & -4 & -2 & 0 & 2 & 4\\
+2x+3 & -1 & 1 & 3 & 5 & 7
+\end{array}
+\]
+One deterministic computation evaluates the baseline $b=0$, intermediate correction $b=1.5$, and residual-mean correction $b=3$. The same five targets determine the correction and enter every error summary. Accordingly, each reported error is an apparent error on these supplied observations.
+
+\subsection{Recorded Errors and Their Interpretation}
+
+A direct hand check starts with the observation rows: subtracting the baseline from the targets gives $(3,3,3,3,3)$, whose sum is $15$ and mean is $3$. At the three recorded corrections, the corrected-error vectors have constant entries $-3$, $-1.5$, and $0$. Taking absolute values and squares gives Table~\ref{tab_recorded_errors}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Computed errors on the five observations used to determine the correction.}
+    \label{tab_recorded_errors}
+    \begin{tabular}{@{}rrr@{}}
+        \toprule
+        Added $b$ & Mean absolute error & Mean squared error\\
+        \midrule
+        0   & 3   & 9\\
+        1.5 & 1.5 & 2.25\\
+        3   & 0   & 0\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/fig_intercept_error.jpg}
+    \caption{Recorded MSE values at $b=0$, $1.5$, and $3$, evaluated on the supplied five observations. The plot contains exactly these three labeled points.}
+    \label{fig_intercept_error}
+\end{figure}
+
+The plot source explicitly records the table's three coordinates. Agreement between those renderings is a consistency check; the arithmetic check above derives the values directly from the inputs. Equation~\ref{eq:decomposition} explains the zero minimum, while the diagram identifies the targets used to obtain and evaluate it.
+
+Reproducibility materials comprise the embedded figures and bundled source code, export wrapper, rendering metadata, and manifest identified below. Checksums identify artifact versions; the observation-based derivation provides an arithmetic check independent of the plotted coordinates.
+
+\section{Conclusion}
+
+This exercise connects a fixed-offset least-squares fit to its residual mean, distinguishes the mean and median objectives, and traces evaluation dependencies. The constant residual vector makes both optimal corrections equal $3$ and explains exact agreement. Together, the observation rows, derivation, table, figures, and source references support a checkable teaching workflow.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+% PAPER_ORCHESTRA_PROVENANCE_BEGIN
+\clearpage
+\section*{Figure source provenance}
+The files below are the exact sources that produced the embedded figure previews. Paths are relative to this manuscript's source directory. The accompanying \texttt{figure\char95{}provenance.json} records all artifact checksums.\par
+\medskip\noindent\textbf{Figure~\ref{fig_intercept_error} (\texttt{fig\char95{}intercept\char95{}error.jpg}).}\par
+\noindent R/ggplot2 source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}source.R}.\par
+\noindent Source SHA256: \texttt{68963e7e\allowbreak{}0f21eaa5\allowbreak{}7dfe9d41\allowbreak{}50f6248f\allowbreak{}d142e763\allowbreak{}e30835f3\allowbreak{}e6e8af10\allowbreak{}adc25ae2}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}render.json}.\par
+\noindent Exact export wrapper: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}worker.R}.\par
+\noindent Wrapper SHA256: \texttt{6cb2b073\allowbreak{}27277f63\allowbreak{}fafbb553\allowbreak{}cd4f1f12\allowbreak{}c0f85bec\allowbreak{}37a49f3f\allowbreak{}a765da16\allowbreak{}a26b58ba}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}intercept\char95{}error/\allowbreak{}sessionInfo.txt}.\par
+\medskip\noindent\textbf{Figure~\ref{fig_residual_workflow} (\texttt{fig\char95{}residual\char95{}workflow.jpg}).}\par
+\noindent LaTeX/TikZ source: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}source.tex}.\par
+\noindent Source SHA256: \texttt{66606680\allowbreak{}7053c57a\allowbreak{}dee8b194\allowbreak{}7e99adeb\allowbreak{}6a9369c3\allowbreak{}c53399fd\allowbreak{}76a38033\allowbreak{}1907dee2}.\par
+\noindent Rendering metadata: \texttt{figure\char95{}code/\allowbreak{}fig\char95{}residual\char95{}workflow/\allowbreak{}render.json}.\par
+% PAPER_ORCHESTRA_PROVENANCE_END
+\end{document}

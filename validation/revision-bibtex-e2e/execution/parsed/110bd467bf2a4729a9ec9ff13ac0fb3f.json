@@ -1,0 +1,70 @@
+{
+  "section_name": "In-Sample Residual Correction vs. Held-Out Evaluation",
+  "candidates": [
+    {
+      "title": "How Biased Is the Apparent Error Rate of a Prediction Rule?",
+      "year": 1986,
+      "reason": "Establishes the foundational distinction between evaluating a rule on the observations used to fit it ('apparent error') versus independent test data, proving that in-sample evaluation is inherently optimistic because the data are used twice."
+    },
+    {
+      "title": "The Estimation of Prediction Error: Covariance Penalties and Cross-Validation",
+      "year": 2004,
+      "reason": "Quantifies the mathematical optimism penalty separating in-sample residual error from expected out-of-sample prediction error, showing why zeroing residual error on the estimation sample does not imply generalization."
+    },
+    {
+      "title": "Cross-Validatory Choice and Assessment of Statistical Predictions",
+      "year": 1974,
+      "reason": "Seminal paper demonstrating that predictive assessment is invalid when conducted on the calibration sample, establishing held-out cross-validation as necessary to determine whether a rule transfers beyond its estimation data."
+    },
+    {
+      "title": "The Predictive Sample Reuse Method with Applications",
+      "year": 1975,
+      "reason": "Formalizes predictive sample reuse and held-out validation to separate descriptive sample-fitting from genuine predictive capability on unseen targets."
+    },
+    {
+      "title": "Stacked Generalization",
+      "year": 1992,
+      "reason": "Demonstrates that learning corrections or combining models on raw in-sample errors produces severe overfitting and trivial memorization, establishing data partitioning as essential for residual-based adjustments."
+    },
+    {
+      "title": "Stacked Regressions",
+      "year": 1996,
+      "reason": "Analyzes post-hoc linear corrections and model blending, proving that estimating adjustment parameters on in-sample residuals yields artificially reduced errors that do not reflect out-of-sample performance."
+    },
+    {
+      "title": "Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods",
+      "year": 1999,
+      "reason": "Analyzes post-hoc scalar adjustments (Platt scaling) and explicitly shows that fitting scalar calibration parameters on estimation data leads to extreme in-sample optimism, requiring separate held-out validation."
+    },
+    {
+      "title": "On Calibration of Modern Neural Networks",
+      "year": 2017,
+      "reason": "Investigates scalar post-hoc adjustment (temperature scaling) and shows that even single-parameter corrections must be evaluated on distinct held-out data to assess whether the correction genuinely transfers."
+    },
+    {
+      "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+      "year": 2018,
+      "reason": "Demonstrates that residual evaluation on the same observations used for estimation induces mechanical own-observation bias, establishing cross-fitting as mandatory for valid out-of-sample residual behavior."
+    },
+    {
+      "title": "Distribution-Free Predictive Inference for Regression",
+      "year": 2018,
+      "reason": "Proves that residual-based scalar corrections and predictive intervals require held-out calibration splits to guarantee valid predictive coverage on unseen inputs rather than trivial in-sample fit."
+    },
+    {
+      "title": "Cross-Validation: What Does It Estimate and How Well Does It Do It?",
+      "year": 2024,
+      "reason": "Clarifies the precise scope of sample-based error estimates, demonstrating why calculations on a fixed finite sample describe only that specific sample rather than out-of-sample predictive performance."
+    },
+    {
+      "title": "Leakage and the Reproducibility Crisis in Machine-Learning-Based Science",
+      "year": 2023,
+      "reason": "Examines data leakage where adjustment parameters are evaluated on the data used to calculate them, showing how this produces illusory performance gains that do not transfer to independent test sets."
+    },
+    {
+      "title": "Some Comments on Cp",
+      "year": 1973,
+      "reason": "Shows that minimizing or nullifying in-sample residual sum of squares is a mathematical consequence of fitting rather than an indicator of low expected prediction error on new observations."
+    }
+  ]
+}

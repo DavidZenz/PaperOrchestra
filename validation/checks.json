@@ -1,10 +1,10 @@
 {
-  "tests": 327,
-  "test_log": "validation/formatting-transport-tests.log",
+  "tests": 330,
+  "test_log": "validation/revision-bibtex-tests.log",
   "source_verification": "validation/reference-fix-upstream.json",
   "independent_checks": "validation/reference-fix-independent-checks.json",
-  "bibliography_audit": "validation/formatting-scope-e2e-bibliography.json",
-  "replay": "validation/formatting-scope-e2e-replay/replay.json",
+  "bibliography_audit": "validation/revision-bibtex-e2e-bibliography.json",
+  "replay": "validation/revision-bibtex-e2e-replay/replay.json",
   "intentional_adaptations": [
     "R027",
     "R028",
@@ -12,7 +12,9 @@
     "A006",
     "R030",
     "A007",
-    "R031"
+    "R031",
+    "R032",
+    "A008"
   ],
   "historical_completed_run": "validation/reference-fix-e2e-complete",
   "historical_final_references": 18,
@@ -20,8 +22,11 @@
   "formatting_scope_report": "validation/FORMATTING-SCOPE-AUDIT.md",
   "recovered_manuscript": "validation/formatting-recovery.json",
   "recovered_references": 42,
-  "completed_run": "validation/formatting-scope-e2e-final",
+  "completed_run": "validation/revision-bibtex-e2e",
   "live_formatting_validation": "validation/formatting-scope-e2e-checks.json",
-  "final_references": 35,
-  "all_final_reference_titles_visible": true
+  "final_references": 5,
+  "all_final_reference_titles_visible": true,
+  "prior_formatting_run": "validation/formatting-scope-e2e-final",
+  "content_revision_validation": "validation/revision-bibtex-e2e-checks.json",
+  "accepted_content_revisions": 2
 }

@@ -1,0 +1,62 @@
+```json
+{
+  "figure_and_tables": {
+    "Figure 1": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    "Figure 2": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    },
+    "Table 1": {
+      "detected_issue": "None",
+      "suggested_fix": "None"
+    }
+  },
+  "other_issues": [
+    {
+      "page": 1,
+      "element": "Page 1, bottom of page after Section 2 (Related Work)",
+      "detected_issue": "About 1.3 inches of blank space remain above the page number because Section 3 starts on page 2.",
+      "suggested_fix": "Adjust float placement of Figure 1 (for example `\\begin{figure}[tbp]`) so Section 3 text can fill the gap on page 1. Leave the break as-is if it is intentional."
+    },
+    {
+      "page": 4,
+      "element": "Page 4, top of page above Table 1",
+      "detected_issue": "Table 1 is first referenced in Section 4.2 on page 3 but is placed at the top of page 4, leaving about 1.8 inches of blank space above its caption.",
+      "suggested_fix": "Set the table float to `[tbp]` and remove any vertical spacing before the float. The table is narrower than the column, so no width change is needed."
+    },
+    {
+      "page": 4,
+      "element": "Page 4, between Table 1 and Figure 2",
+      "detected_issue": "About 1.5 inches of empty space separates Table 1 from Figure 2, while the lower part of the page is unused.",
+      "suggested_fix": "Adjust float placement for Figure 2 (for example `[tbp]`) so it fills the page without a gap after Table 1."
+    },
+    {
+      "page": 3,
+      "element": "Section 4.2, paragraph 1",
+      "detected_issue": "Figure 2 is never cited by number in the body text. Figure 1 is cited in Section 3.2 and Table 1 is cited in Section 4.2.",
+      "suggested_fix": "Unresolved: outside formatting scope. Add a sentence in Section 4.2 that cites Figure 2 by number."
+    },
+    {
+      "page": 6,
+      "element": "'Figure source provenance' section after References",
+      "detected_issue": "An appendix-style section appears after References. The guidelines state that no appendix is required and that the figure source code is retained as a separate reproducibility artifact.",
+      "suggested_fix": "Unresolved: removing or relocating this section changes content and is outside formatting scope. The author should decide whether to remove it or move it to the separate reproducibility artifact."
+    },
+    {
+      "page": 6,
+      "element": "'Figure source provenance' list, entries for Figure 2 and Figure 1",
+      "detected_issue": "The Figure 2 entry is listed before the Figure 1 entry, which is out of numerical order.",
+      "suggested_fix": "Unresolved: outside formatting scope. Reorder the entries so Figure 1 precedes Figure 2."
+    },
+    {
+      "page": 5,
+      "element": "Body text, Abstract through Conclusion (pages 1–5)",
+      "detected_issue": "The approximate prose count appears close to or above the 700–1000 word target. This is an estimate from the page images, not an exact count.",
+      "suggested_fix": "Unresolved: verify the word count. Trimming scientific prose is outside formatting scope."
+    }
+  ]
+}
+```

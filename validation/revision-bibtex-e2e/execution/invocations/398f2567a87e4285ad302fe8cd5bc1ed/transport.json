@@ -1,0 +1,35 @@
+{
+  "backend": "antigravity",
+  "mode": "acp",
+  "command": [
+    "/opt/homebrew/bin/agy",
+    "--settings",
+    "{\"agentMode\":\"\",\"toolPermission\":\"request-review\",\"permissions\":{\"deny\":[\"command(*)\",\"unsandboxed(*)\",\"write_file(*)\",\"read_file(*)\",\"execute_url(*)\",\"mcp(*)\"],\"allow\":[\"read_url(*)\"]}}",
+    "acp",
+    "--process-per-session",
+    "--sandbox",
+    "--include-default-customizations=false",
+    "--agent",
+    "paper-orchestra-isolated-worker",
+    "--disable-telemetry",
+    "--log-file",
+    "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/398f2567a87e4285ad302fe8cd5bc1ed/acp-server.log"
+  ],
+  "stdin": "Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.\n\n\n            Find 10-15 highly relevant, influential academic papers matching the search task. Do not force results; only return strictly relevant papers.\n            \n            SEARCH TASK: \"intercept adjustment\" \"in sample error\"\n            CONTEXT FOR TASK: Mission: Find narrow technical sources published through 2026-11 addressing residual-derived scalar corrections and the interpretation of evaluating a correction on its estimation observations. Use these sources to explain evaluation scope, without importing additional datasets, baseline methods, or performance results.. Hypothesis: Because the same five observations determine and evaluate b, zero corrected error describes those observations only. The supplied materials do not establish whether the correction transfers to unseen inputs or targets.\n            BROADER PROJECT PROBLEM: The teaching question is whether adding the mean residual removes the fixed offset of the supplied predictor on exactly x=[-2,-1,0,1,2] with y=2x+3. The supplied calculation answers only this finite, same-sample question; it establishes no literature gap, algorithmic novelty, benchmark advantage, or held-out performance.\n            CUTOFF DATE: Published BEFORE 2026-11\n            \n            INSTRUCTIONS:\n            1. Use Google Search to find REAL papers (ArXiv, CVPR, NeurIPS, ICML, ICLR, etc.).\n            2. Only return papers published in top-tier conferences or journals, or highly-cited works, or the exact state-of-the-art relevant to the task.\n\n            YOU MUST return the results in json format (```json content```) following this schema:\n            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}\n            \n\n[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.",
+  "env": {},
+  "images": [],
+  "acp": {
+    "config_strategy": "session-options",
+    "model": "gemini-3.8-flash",
+    "effort": "medium",
+    "model_option": "model",
+    "effort_option": "thought_level",
+    "expected_mode": "default",
+    "allowed_search_tools": [
+      "search_web"
+    ],
+    "search_evidence": "native matched search_web query/status; result body is not emitted by ACP 1.5.9",
+    "agent_file": "/Users/davidzenz/PaperOrchestra/validation/revision-bibtex-e2e/execution/invocations/398f2567a87e4285ad302fe8cd5bc1ed/.agents/agents/paper-orchestra-isolated-worker.md",
+    "agent_file_sha256": "7365b33a7432fdaeff3a9edcf9589593fac21d8f8cc87d6a549365b211adae0b"
+  }
+}

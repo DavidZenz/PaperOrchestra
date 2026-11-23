@@ -1,0 +1,18 @@
+Execute only this independent PaperOrchestra invocation. Do not delegate or run the whole pipeline. You are an already dispatched role worker; model selection is complete. Do not invoke the PaperOrchestra setup flow or ask which model to use. Use only the supplied task inputs; return its requested output format verbatim. Do not read other invocation folders. Do not write workspace files.
+
+
+            Identify the SPECIFIC academic paper described by this hint: "research paper or technical report introducing 'ggplot2'".
+            
+            CONTEXT: Must-have citation for section covering: Define mean absolute error as the sum of absolute prediction residuals divided by five, and mean squared error as the sum of squared prediction residuals divided by five. For the supplied observations, derive that the residual after correction is 3-b at each point, explaining the three logged error pairs without introducing additional measured values. State that the calculation uses base R; distinguish this calculation from the R/ggplot2 figure-generation requirement in idea.md. Describe retention of the actual downstream .R and .tex figure sources, vector PDFs, and manuscript-compatible previews as separate reproducibility artifacts. Keep the mathematical discussion confined to finite arithmetic; no separate theoretical proof section is warranted.
+            CUTOFF DATE: Published BEFORE 2026-11
+            
+            INSTRUCTIONS:
+            1. Use Google Search to find the EXACT title and year of this paper.
+            2. If the hint refers to a dataset, model architecture, or baseline (e.g., "research paper introducing..."), you MUST find the primary, original paper that introduced it.
+            3. Return EXACTLY 1 candidate paper that matches best.
+
+            YOU MUST return the results in json format (```json content```) following this schema:
+            {'$defs': {'CandidatePaper': {'properties': {'title': {'title': 'Title', 'type': 'string'}, 'year': {'title': 'Year', 'type': 'integer'}, 'reason': {'title': 'Reason', 'type': 'string'}}, 'required': ['title', 'year', 'reason'], 'title': 'CandidatePaper', 'type': 'object'}}, 'properties': {'section_name': {'title': 'Section Name', 'type': 'string'}, 'candidates': {'items': {'$ref': '#/$defs/CandidatePaper'}, 'title': 'Candidates', 'type': 'array'}}, 'required': ['section_name', 'candidates'], 'title': 'DiscoveryResult', 'type': 'object'}
+            
+
+[TRANSPORT TOOL REQUIREMENT] Use live web search for this discovery task before answering.

@@ -1,0 +1,42 @@
+{
+  "Summary": "The note examines one deterministic calculation on five points x = (-2, -1, 0, 1, 2) with y = 2x + 3 and a fixed predictor 2x. The residual is constant at 3, so its mean b = 3 is added to the predictor, giving zero in-sample error. The logged MAE and MSE at b = 0, 1.5, and 3 are (3, 9), (1.5, 2.25), and (0, 0), which follow from |3 - b| and (3 - b)^2. The paper includes an error table, two figures, a provenance section, and an extensive related-work survey. It states explicitly that the same observations determine the correction and assess it, and it makes no claim about unseen data.",
+  "Strengths": [
+    "The arithmetic is correct: the five table rows, the residual mean, the MAE and MSE identities in Eqs. (1)-(2), and the decomposition of squared error around the mean residual all check out.",
+    "The scope is stated clearly and repeatedly. The paper says that zero error is same-sample agreement and that the results provide no evidence about generalization.",
+    "The computation is fully specified and deterministic, so it is trivially reproducible.",
+    "The distinction between fitting-sample agreement and predictive error is a useful teaching point for an introductory audience."
+  ],
+  "Weaknesses": [
+    "The central result is an identity. Adding the mean of a constant residual to a predictor gives zero in-sample error by construction, so the paper offers no new method, theory, dataset, or empirical finding.",
+    "The evaluation is circular by design. There is no held-out data, no resampling, and no second dataset, so the experiment cannot distinguish between any competing approaches.",
+    "The related-work section cites about 60 references, many only loosely connected to a single-point intercept shift (for example GAMs, gradient boosting, ridge regression, conformal prediction, temperature scaling, and survival-model calibration). The citations are listed rather than used to position specific claims.",
+    "Several bibliography entries have implausible or degenerate page ranges, including [10] and [19] (291-291 and 337-337), [29] (23-23), [34] (233-233), [49] (370-370), and [38] (100804-100804). These suggest metadata errors that need checking.",
+    "The manuscript leaks workflow artifacts. The Figure 1 caption cites 'idea.md' and the Table 1 caption cites 'experimental log.md', which are not part of a publishable manuscript.",
+    "The figure provenance is given twice with inconsistent path formats ('figure code/fig intercept error/...' in the body versus 'figure_code/fig_intercept_error/...' in the appendix). The paper does not say which version is authoritative.",
+    "The paper concedes that it establishes neither a literature gap nor an algorithmic advance. That is accurate, but it means the manuscript does not meet the contribution bar for a research venue and reads more like a teaching handout."
+  ],
+  "Originality": 1,
+  "Quality": 2,
+  "Clarity": 2,
+  "Significance": 1,
+  "Questions": [
+    "What is the intended contribution beyond the stated identity, and for which venue or audience is the note written?",
+    "Would you add an evaluation that goes beyond the training sample, such as a split-sample or cross-validated version of the same correction, or a noisy synthetic example with nonconstant residuals? That would show what the in-sample zero error does not show.",
+    "Why is the related-work section so broad relative to a five-point arithmetic example? Which specific claim does each cited work support?",
+    "Please verify the bibliographic metadata for the entries with degenerate page ranges, including [10], [19], [29], [34], [38], and [49], and complete the arXiv and conference entries such as [26], [30], [40], and [51].",
+    "Please remove the 'idea.md' and 'experimental log.md' references and reconcile the two provenance sections into one authoritative version."
+  ],
+  "Limitations": [
+    "The evaluation is in-sample only. Zero error is guaranteed by construction and cannot indicate predictive accuracy.",
+    "The single noiseless five-point example does not examine variability, outliers, nonconstant residuals, or estimated slopes.",
+    "The scope is limited to an additive intercept on a fixed slope, and the paper does not discuss cases where the slope is also estimated.",
+    "There are no negative societal impacts. The main risk is that readers may take in-sample agreement as evidence of accurate prediction, which the note itself warns against but which the title and abstract could still encourage."
+  ],
+  "Ethical Concerns": false,
+  "Soundness": 3,
+  "Presentation": 2,
+  "Contribution": 1,
+  "Overall": 2,
+  "Confidence": 4,
+  "Decision": "Reject"
+}
